@@ -1396,7 +1396,7 @@ Last Updated 2016-03-07 Mon 00:14 by lengyueyang&lt;br&gt;Render by &lt;a href=&
     <link href="http://lengyueyang.github.io/2016/02/05/Archlinux%20install%20and%20configuration/"/>
     <id>http://lengyueyang.github.io/2016/02/05/Archlinux install and configuration/</id>
     <published>2016-02-05T00:00:00.000Z</published>
-    <updated>2016-05-28T06:23:02.561Z</updated>
+    <updated>2016-05-28T14:18:24.364Z</updated>
     
     <content type="html">
 
@@ -1418,6 +1418,8 @@ Last Updated 2016-03-07 Mon 00:14 by lengyueyang&lt;br&gt;Render by &lt;a href=&
 &lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/dev/sda1 to UEFI boot: ef00, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;G&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/dev/sda2 to &lt;span class=&quot;number&quot;&gt;119&lt;/span&gt;G&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mkfs.fat -F32 /dev/sda1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mkfs.ext4 /dev/sda2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/div&gt;
 
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;Select mirrorlist:
 &lt;/li&gt;
@@ -1435,10 +1437,9 @@ Last Updated 2016-03-07 Mon 00:14 by lengyueyang&lt;br&gt;Render by &lt;a href=&
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iwconfig to find the name of your wireless moudule: like wlan0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;then:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ip link set wlan0 up&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;wpa_supplicant -D nl80211,wext -i wlan0 -c &amp;lt;(wpa_passphrase &amp;quot;your_SSID&amp;quot; &amp;quot;your_key&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;dhcpcd wlan0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;now the wireless should be connected&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;/div&gt;
 
 &lt;div id=&quot;outline-container-sec-1-2&quot; class=&quot;outline-3&quot;&gt;
 &lt;h3 id=&quot;sec-1-2&quot;&gt;Basic install&lt;/h3&gt;
@@ -1654,7 +1655,7 @@ Last Updated 2016-03-07 Mon 00:14 by lengyueyang&lt;br&gt;Render by &lt;a href=&
 &lt;/div&gt;
 &lt;/div&gt;
 
-Last Updated 2016-05-28 Sat 14:23 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 24.5.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 8.2.10)
+Last Updated 2016-05-28 Sat 22:18 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 24.5.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 8.2.10)
 </content>
     
     <summary type="html">
@@ -1675,24 +1676,6 @@ Last Updated 2016-05-28 Sat 14:23 by lengyueyang&lt;br&gt;Render by &lt;a href=&
 &lt;div class=&quot;org-src-container&quot;&gt;
 
 &lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/dev/sda1 to UEFI boot: ef00, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;G&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/dev/sda2 to &lt;span class=&quot;number&quot;&gt;119&lt;/span&gt;G&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mkfs.fat -F32 /dev/sda1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mkfs.ext4 /dev/sda2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/div&gt;
-
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;Select mirrorlist:
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;org-src-container&quot;&gt;
-
-&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;nano -w /etc/pacman.d/mirrorlist add &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Server = http://mirrors.tuna.tsinghua.edu.cn/archlinux/&lt;span class=&quot;variable&quot;&gt;$repo&lt;/span&gt;/os/&lt;span class=&quot;variable&quot;&gt;$arch&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Server = http://mirrors.&lt;span class=&quot;number&quot;&gt;163&lt;/span&gt;.com/archlinux/&lt;span class=&quot;variable&quot;&gt;$repo&lt;/span&gt;/os/&lt;span class=&quot;variable&quot;&gt;$arch&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/div&gt;
-
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;Wireless network link
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;org-src-container&quot;&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iwconfig to find the name of your wireless moudule: like wlan0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;then:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ip link set wlan0 up&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;wpa_supplicant -D nl80211,wext -i wlan0 -c &amp;lt;(wpa_passphrase &amp;quot;your_SSID&amp;quot; &amp;quot;your_key&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;dhcpcd wlan0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;now the wireless should be connected&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/div&gt;
     
     </summary>

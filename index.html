@@ -1033,24 +1033,6 @@
 
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">/dev/sda1 to UEFI boot: ef00, <span class="number">1</span>G</span><br><span class="line">/dev/sda2 to <span class="number">119</span>G</span><br><span class="line">mkfs.fat -F32 /dev/sda1</span><br><span class="line">mkfs.ext4 /dev/sda2</span><br></pre></td></tr></table></figure>
 </div>
-
-<ul class="org-ul">
-<li>Select mirrorlist:
-</li>
-</ul>
-<div class="org-src-container">
-
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">nano -w /etc/pacman.d/mirrorlist add </span><br><span class="line">Server = http://mirrors.tuna.tsinghua.edu.cn/archlinux/<span class="variable">$repo</span>/os/<span class="variable">$arch</span></span><br><span class="line">Server = http://mirrors.<span class="number">163</span>.com/archlinux/<span class="variable">$repo</span>/os/<span class="variable">$arch</span></span><br></pre></td></tr></table></figure>
-</div>
-
-<ul class="org-ul">
-<li>Wireless network link
-</li>
-</ul>
-<div class="org-src-container">
-
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">iwconfig to find the name of your wireless moudule: like wlan0</span><br><span class="line">then:</span><br><span class="line">ip link set wlan0 up</span><br><span class="line">wpa_supplicant -D nl80211,wext -i wlan0 -c &lt;(wpa_passphrase &quot;your_SSID&quot; &quot;your_key&quot;)</span><br><span class="line">dhcpcd wlan0</span><br><span class="line">now the wireless should be connected</span><br></pre></td></tr></table></figure>
-</div>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/02/05/Archlinux install and configuration/#more" rel="contents">
               阅读全文 &raquo;

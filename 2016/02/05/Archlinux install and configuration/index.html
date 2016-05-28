@@ -83,7 +83,7 @@ Prepare the ISO of archlinux, and brasero it into USB flash disk
 
 
 Partiton: use cfdisk, use the UEFI install, the mkfs">
-<meta property="og:updated_time" content="2016-05-28T06:23:02.561Z">
+<meta property="og:updated_time" content="2016-05-28T14:18:24.364Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Archlinux install and configuration [Archlinux 安装和配置]">
 <meta name="twitter:description" content="Archlinux install [&amp;#x5B89;&amp;#x88C5;&amp;#x7BC7;]
@@ -394,6 +394,8 @@ Partiton: use cfdisk, use the UEFI install, the mkfs">
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">/dev/sda1 to UEFI boot: ef00, <span class="number">1</span>G</span><br><span class="line">/dev/sda2 to <span class="number">119</span>G</span><br><span class="line">mkfs.fat -F32 /dev/sda1</span><br><span class="line">mkfs.ext4 /dev/sda2</span><br></pre></td></tr></table></figure>
 </div>
 
+<a id="more"></a>
+
 <ul class="org-ul">
 <li>Select mirrorlist:
 </li>
@@ -411,10 +413,9 @@ Partiton: use cfdisk, use the UEFI install, the mkfs">
 
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">iwconfig to find the name of your wireless moudule: like wlan0</span><br><span class="line">then:</span><br><span class="line">ip link set wlan0 up</span><br><span class="line">wpa_supplicant -D nl80211,wext -i wlan0 -c &lt;(wpa_passphrase &quot;your_SSID&quot; &quot;your_key&quot;)</span><br><span class="line">dhcpcd wlan0</span><br><span class="line">now the wireless should be connected</span><br></pre></td></tr></table></figure>
 </div>
+</div>
+</div>
 
-<a id="more"></a>
-</div>
-</div>
 
 <div id="outline-container-sec-1-2" class="outline-3">
 <h3 id="sec-1-2">Basic install</h3>
@@ -630,7 +631,7 @@ Partiton: use cfdisk, use the UEFI install, the mkfs">
 </div>
 </div>
 
-Last Updated 2016-05-28 Sat 14:23 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 24.5.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 8.2.10)
+Last Updated 2016-05-28 Sat 22:18 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 24.5.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 8.2.10)
 
       
     </div>
