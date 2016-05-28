@@ -1,0 +1,1802 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>一家之言</title>
+  <subtitle>记录生活点滴, 记忆人生轨迹</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://lengyueyang.github.io/"/>
+  <updated>2016-04-25T09:11:54.009Z</updated>
+  <id>http://lengyueyang.github.io/</id>
+  
+  <author>
+    <name>冷月</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Statistics in research article: Part 1, Univariate analysis [科研文章中的统计：第一部分，单因素分析]</title>
+    <link href="http://lengyueyang.github.io/2016/04/23/Statistics%20in%20research%20article:%20Part%201,%20Univariate%20analysis/"/>
+    <id>http://lengyueyang.github.io/2016/04/23/Statistics in research article: Part 1, Univariate analysis/</id>
+    <published>2016-04-23T00:00:00.000Z</published>
+    <updated>2016-04-25T09:11:54.009Z</updated>
+    
+    <content type="html">
+
+
+&lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;&amp;#x5199;&amp;#x4F5C;&amp;#x539F;&amp;#x56E0;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x6700;&amp;#x8FD1;&amp;#x5B66;&amp;#x4E60; R &amp;#x8BED;&amp;#x8A00;&amp;#xFF0C;&amp;#x8FD9;&amp;#x7BC7;&amp;#x535A;&amp;#x5BA2;&amp;#x662F;&amp;#x5B66;&amp;#x4E60; R &amp;#x8BED;&amp;#x8A00;&amp;#x4E00;&amp;#x4E2A;&amp;#x7B80;&amp;#x5355;&amp;#x6210;&amp;#x679C;&amp;#x5C55;&amp;#x793A;&amp;#xFF0C;&amp;#x8FD9;&amp;#x662F;&amp;#x7B2C;&amp;#x4E00;&amp;#x90E8;&amp;#x5206;&amp;#xFF0C;&amp;#x5355;&amp;#x56E0;&amp;#x7D20;&amp;#x5206;&amp;#x6790;
+&lt;/li&gt;
+&lt;li&gt;&amp;#x79D1;&amp;#x7814;&amp;#x8BBA;&amp;#x6587;&amp;#x4E2D;&amp;#x7684;&amp;#x7EDF;&amp;#x8BA1;&amp;#x65B9;&amp;#x6CD5;&amp;#x5F88;&amp;#x91CD;&amp;#x8981;&amp;#xFF0C;&amp;#x5173;&amp;#x7CFB;&amp;#x5230;&amp;#x7ED3;&amp;#x679C;&amp;#x7684;&amp;#x53EF;&amp;#x4FE1;&amp;#x5EA6;&amp;#xFF0C;&amp;#x7136;&amp;#x800C;&amp;#x4E2D;&amp;#x56FD;&amp;#x53D1;&amp;#x8868;&amp;#x7684;&amp;#x5F88;&amp;#x591A;&amp;#x6587;&amp;#x7AE0;&amp;#xFF0C;&amp;#x7EDF;&amp;#x8BA1;&amp;#x8FC7;&amp;#x5173;&amp;#x7684;&amp;#x4E0D;&amp;#x591A;
+&lt;/li&gt;
+&lt;li&gt;&amp;#x672C;&amp;#x6587;&amp;#x4EE5; R &amp;#x8BED;&amp;#x8A00;&amp;#x4E3A;&amp;#x5207;&amp;#x5165;&amp;#x70B9;&amp;#xFF0C;&amp;#x4EE5;&amp;#x6211;&amp;#x81EA;&amp;#x5DF1;&amp;#x6587;&amp;#x7AE0;&amp;#x4E2D;&amp;#x7684;&amp;#x6570;&amp;#x636E;&amp;#x4E3A;&amp;#x539F;&amp;#x578B;&amp;#xFF0C;&amp;#x7B80;&amp;#x5355;&amp;#x9610;&amp;#x8FF0;&amp;#x5355;&amp;#x56E0;&amp;#x7D20;&amp;#x5206;&amp;#x6790;&amp;#x7684;&amp;#x65B9;&amp;#x6CD5;&amp;#x539F;&amp;#x7406;&amp;#x53CA;&amp;#x8FC7;&amp;#x7A0B;
+&lt;/li&gt;
+&lt;li&gt;&amp;#x6709;&amp;#x5173; R &amp;#x8BED;&amp;#x8A00;&amp;#x4ECB;&amp;#x7ECD;&amp;#x53CA;&amp;#x5B89;&amp;#x88C5;&amp;#x65B9;&amp;#x6CD5;&amp;#xFF0C;&amp;#x8BF7;&amp;#x79FB;&amp;#x6B65; R &amp;#x8BED;&amp;#x8A00;&amp;#x5B98;&amp;#x65B9;&amp;#x7F51;&lt;sup&gt;&lt;a id=&quot;fnr.1&quot; name=&quot;fnr.1&quot; class=&quot;footref&quot; href=&quot;#fn.1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&amp;#x7AD9;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-sec-2&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-2&quot;&gt;R &amp;#x5206;&amp;#x6790;&amp;#x57FA;&amp;#x672C;&amp;#x6D41;&amp;#x7A0B;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-2&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-sec-2-1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2-1&quot;&gt;&amp;#x6570;&amp;#x636E;&amp;#x5BFC;&amp;#x5165;&amp;#xFF0C;&amp;#x5728; R &amp;#x8BED;&amp;#x8A00;&amp;#x4E2D;&amp;#x5BFC;&amp;#x5165;&amp;#x6570;&amp;#x636E;&amp;#x6846;&amp;#x7528; read.table&amp;#xFF0C;&amp;#x518D;&amp;#x663E;&amp;#x793A;&amp;#x6570;&amp;#x636E;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2-1&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight r&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;F2TTC &amp;lt;- read.table(&lt;span class=&quot;string&quot;&gt;&amp;quot;file/F2TTC.csv&amp;quot;&lt;/span&gt;, header=&lt;span class=&quot;literal&quot;&gt;TRUE&lt;/span&gt;, sep=&lt;span class=&quot;string&quot;&gt;&amp;quot;,&amp;quot;&lt;/span&gt;, na.strings=&lt;span class=&quot;string&quot;&gt;&amp;quot;NA&amp;quot;&lt;/span&gt;, dec=&lt;span class=&quot;string&quot;&gt;&amp;quot;.&amp;quot;&lt;/span&gt;, strip.white=&lt;span class=&quot;literal&quot;&gt;TRUE&lt;/span&gt;, check.names = &lt;span class=&quot;literal&quot;&gt;FALSE&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;F2TTC&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#+RESULTS:
+   Sham THP 40  + Sham     IR THP 10  + IR THP 20  + IR THP 40  + IR
+1     0              0 52.860       44.503       39.304       31.750
+2     0              0 46.746       26.012       26.299       33.871
+3     0              0 54.279       36.196       35.175       32.801
+4     0              0 46.767       43.956       38.761       34.568
+5     0              0 47.651       42.660       38.844       32.157
+6     0              0 55.392       36.196       41.210       34.302
+7     0              0 51.055       43.956       19.734       23.853
+8    NA             NA 45.789       42.660       23.413       16.602
+9    NA             NA 28.584           NA           NA       18.508
+10   NA             NA 36.514           NA           NA       13.746
+11   NA             NA 38.700           NA           NA       15.606
+12   NA             NA 47.441           NA           NA        0.000
+13   NA             NA 40.071           NA           NA        0.000&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-2-2&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2-2&quot;&gt;&amp;#x68C0;&amp;#x6D4B;&amp;#x6570;&amp;#x636E;&amp;#x662F;&amp;#x5426;&amp;#x6709;&amp;#x79BB;&amp;#x7FA4;&amp;#x70B9;&amp;#x53CA;&amp;#x6570;&amp;#x636E;&amp;#x6B63;&amp;#x6001;&amp;#x6027;&amp;#x5224;&amp;#x65AD;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2-2&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x7528; reshape2 &amp;#x53D8;&amp;#x6362;&amp;#x6570;&amp;#x636E;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight r&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;library&lt;/span&gt;(reshape2)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;F2TTCR &amp;lt;- melt(F2TTC)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;names(F2TTCR)[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;] &amp;lt;- c(&lt;span class=&quot;string&quot;&gt;&amp;quot;group&amp;quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;quot;value&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;F2TTCR&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#+RESULTS:
+	    group  value
+1            Sham  0.000
+2            Sham  0.000
+3            Sham  0.000
+4            Sham  0.000
+5            Sham  0.000
+6            Sham  0.000
+7            Sham  0.000
+8            Sham     NA
+9            Sham     NA
+10           Sham     NA
+11           Sham     NA
+12           Sham     NA
+13           Sham     NA
+14 THP 40  + Sham  0.000
+15 THP 40  + Sham  0.000
+16 THP 40  + Sham  0.000
+17 THP 40  + Sham  0.000
+18 THP 40  + Sham  0.000
+19 THP 40  + Sham  0.000
+20 THP 40  + Sham  0.000
+21 THP 40  + Sham     NA
+22 THP 40  + Sham     NA
+23 THP 40  + Sham     NA
+24 THP 40  + Sham     NA
+25 THP 40  + Sham     NA
+26 THP 40  + Sham     NA
+27             IR 52.860
+28             IR 46.746
+29             IR 54.279
+30             IR 46.767
+31             IR 47.651
+32             IR 55.392
+33             IR 51.055
+34             IR 45.789
+35             IR 28.584
+36             IR 36.514
+37             IR 38.700
+38             IR 47.441
+39             IR 40.071
+40   THP 10  + IR 44.503
+41   THP 10  + IR 26.012
+42   THP 10  + IR 36.196
+43   THP 10  + IR 43.956
+44   THP 10  + IR 42.660
+45   THP 10  + IR 36.196
+46   THP 10  + IR 43.956
+47   THP 10  + IR 42.660
+48   THP 10  + IR     NA
+49   THP 10  + IR     NA
+50   THP 10  + IR     NA
+51   THP 10  + IR     NA
+52   THP 10  + IR     NA
+53   THP 20  + IR 39.304
+54   THP 20  + IR 26.299
+55   THP 20  + IR 35.175
+56   THP 20  + IR 38.761
+57   THP 20  + IR 38.844
+58   THP 20  + IR 41.210
+59   THP 20  + IR 19.734
+60   THP 20  + IR 23.413
+61   THP 20  + IR     NA
+62   THP 20  + IR     NA
+63   THP 20  + IR     NA
+64   THP 20  + IR     NA
+65   THP 20  + IR     NA
+66   THP 40  + IR 31.750
+67   THP 40  + IR 33.871
+68   THP 40  + IR 32.801
+69   THP 40  + IR 34.568
+70   THP 40  + IR 32.157
+71   THP 40  + IR 34.302
+72   THP 40  + IR 23.853
+73   THP 40  + IR 16.602
+74   THP 40  + IR 18.508
+75   THP 40  + IR 13.746
+76   THP 40  + IR 15.606
+77   THP 40  + IR  0.000
+78   THP 40  + IR  0.000&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x68C0;&amp;#x6D4B;&amp;#x6570;&amp;#x636E;&amp;#x662F;&amp;#x5426;&amp;#x6709;&amp;#x79BB;&amp;#x7FA4;&amp;#x70B9;&amp;#xFF0C;&amp;#x7528; car &amp;#x5305;&amp;#x4E2D;&amp;#x7684; outlierTest &amp;#x68C0;&amp;#x6D4B;&amp;#xFF0C;&amp;#x4E0B;&amp;#x9762;&amp;#x6570;&amp;#x636E; P &amp;gt; 0.05&amp;#xFF0C;&amp;#x8BF4;&amp;#x660E;&amp;#x6709;&amp;#x79BB;&amp;#x7FA4;&amp;#x70B9;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight r&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;library&lt;/span&gt;(car)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;F2TTCout &amp;lt;- outlierTest(lm(value ~ group, data = F2TTCR))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;F2TTCout&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#+RESULTS:
+No Studentized residuals with Bonferonni p &amp;lt; 0.05
+Largest |rstudent|:
+    rstudent unadjusted p-value Bonferonni p
+77 -3.020835          0.0039982       0.2239&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x7528; Q-Q &amp;#x56FE;&amp;#x68C0;&amp;#x9A8C;&amp;#x6B63;&amp;#x6001;&amp;#x6027;&amp;#x5047;&amp;#x8BBE;&amp;#xFF0C;&amp;#x6570;&amp;#x636E;&amp;#x662F;&amp;#x975E;&amp;#x6B63;&amp;#x6001;&amp;#x7684;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight r&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;tiff(filename = &lt;span class=&quot;string&quot;&gt;&amp;quot;qqpF2T.tif&amp;quot;&lt;/span&gt;,width = &lt;span class=&quot;number&quot;&gt;15&lt;/span&gt;,height = &lt;span class=&quot;number&quot;&gt;18&lt;/span&gt;,units =&lt;span class=&quot;string&quot;&gt;&amp;quot;cm&amp;quot;&lt;/span&gt;,compression=&lt;span class=&quot;string&quot;&gt;&amp;quot;lzw&amp;quot;&lt;/span&gt;,bg=&lt;span class=&quot;string&quot;&gt;&amp;quot;white&amp;quot;&lt;/span&gt;,res=&lt;span class=&quot;number&quot;&gt;600&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;qqPlot(lm(value ~ group, data=F2TTCR), simulate=&lt;span class=&quot;literal&quot;&gt;TRUE&lt;/span&gt;, main=&lt;span class=&quot;string&quot;&gt;&amp;quot;Q-Q Plot&amp;quot;&lt;/span&gt;, labels=&lt;span class=&quot;literal&quot;&gt;TRUE&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;dev.off()&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&quot;figure&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xrrxa.com1.z0.glb.clouddn.com/blogqqpF2T.png&quot; alt=&quot;blogqqpF2T.png&quot;&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;figure-number&quot;&gt;Figure 1:&lt;/span&gt; Q-Q &amp;#x56FE;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-2-3&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2-3&quot;&gt;&amp;#x63A5;&amp;#x4E0B;&amp;#x6765;&amp;#x5E94;&amp;#x8BE5;&amp;#x8FDB;&amp;#x884C;&amp;#x65B9;&amp;#x5DEE;&amp;#x9F50;&amp;#x6027;&amp;#x68C0;&amp;#x9A8C;&amp;#xFF0C;&amp;#x5E38;&amp;#x7528;&amp;#x65B9;&amp;#x5DEE;&amp;#x9F50;&amp;#x6027;&amp;#x68C0;&amp;#x9A8C;&amp;#x6709; leveneTest &amp;#x548C; bartlett.test &amp;#x4E24;&amp;#x79CD;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2-3&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight r&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;bartlett.test(value ~ group, data = F2TTCR)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;leveneTest(F2TTCR$value, F2TTCR$group)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#+RESULTS:
+	Bartlett test of homogeneity of variances
+data:  value by group
+Bartlett&amp;apos;s K-squared = Inf, df = 5, p-value &amp;lt; 2.2e-16
+
+Levene&amp;apos;s Test for Homogeneity of Variance (center = median)
+      Df F value    Pr(&amp;gt;F)
+group  5  5.5917 0.0003619
+      50&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-2-4&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2-4&quot;&gt;&amp;#x7531;&amp;#x4E8E;&amp;#x6211;&amp;#x4E0A;&amp;#x9762;&amp;#x6570;&amp;#x636E;&amp;#x975E;&amp;#x6B63;&amp;#x6001;&amp;#xFF0C;&amp;#x6240;&amp;#x4EE5;&amp;#x7528;&amp;#x975E;&amp;#x53C2;&amp;#x6570;&amp;#x68C0;&amp;#x9A8C;&amp;#x65B9;&amp;#x6CD5;&amp;#x68C0;&amp;#x9A8C;&amp;#x5404;&amp;#x7EC4;&amp;#x5DEE;&amp;#x5F02;&amp;#xFF0C;&amp;#x5206;&amp;#x4E24;&amp;#x90E8;&amp;#x5206;&amp;#xFF0C;&amp;#x4E00;&amp;#x662F;&amp;#x5404;&amp;#x7EC4;&amp;#x4E4B;&amp;#x95F4;&amp;#x7684;&amp;#x5DEE;&amp;#x5F02;&amp;#xFF0C;&amp;#x7528; kruskal.test&amp;#xFF0C;&amp;#x4E8C;&amp;#x662F;&amp;#x4E24;&amp;#x4E24;&amp;#x6BD4;&amp;#x8F83;&amp;#xFF0C;&amp;#x7528; posthoc.kruskal.nemenyi.test&amp;#xFF0C;&amp;#x7531;&amp;#x4E0B;&amp;#x9762;&amp;#x7ED3;&amp;#x679C;&amp;#x77E5;&amp;#x9053;&amp;#xFF0C;IR &amp;#x7EC4;&amp;#x548C; Sham &amp;#x7EC4;&amp;#x76F8;&amp;#x6BD4;&amp;#xFF0C;&amp;#x6709;&amp;#x7EDF;&amp;#x8BA1;&amp;#x5B66;&amp;#x610F;&amp;#x4E49;(P &amp;lt; 0.01)&amp;#xFF0C;&amp;#x7528;&amp;#x201C;**&amp;#x201D;&amp;#x8868;&amp;#x793A;&amp;#x5DEE;&amp;#x5F02;&amp;#xFF0C;THP 10 + IR &amp;#x7EC4;&amp;#x4E0E; Sham &amp;#x7EC4;&amp;#xFF0C;THP 40 + IR &amp;#x4E0E; IR &amp;#x7EC4;&amp;#x76F8;&amp;#x6BD4;&amp;#xFF0C;&amp;#x6709;&amp;#x7EDF;&amp;#x8BA1;&amp;#x5B66;&amp;#x610F;&amp;#x4E49;(P &amp;lt; 0.05)&amp;#xFF0C;&amp;#x7528;&amp;#x201C;*&amp;#x201D;&amp;#x8868;&amp;#x793A;&amp;#x5DEE;&amp;#x5F02;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2-4&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight r&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;kruskal.test(value ~ group, data = F2TTCR)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;library&lt;/span&gt;(PMCMR)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;F2TTCSEM &amp;lt;- posthoc.kruskal.nemenyi.test(value ~ group, data=F2TTCR, dist=&lt;span class=&quot;string&quot;&gt;&amp;quot;Chisquare&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;F2TTCSEM&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#+RESULTS:
+Kruskal-Wallis rank sum test
+
+data:  value by group
+Kruskal-Wallis chi-squared = 44.519, df = 5, p-value = 1.817e-08
+
+Pairwise comparisons using Nemenyi-test with Chi-squared        
+		       approximation for independent samples 
+data:  value by group 
+
+	       Sham   THP 40  + Sham IR     THP 10  + IR THP 20  + IR
+THP 40  + Sham 1.0000 -              -      -            -           
+IR             0.0001 0.0001         -      -            -           
+THP 10  + IR   0.0154 0.0154         0.9673 -            -           
+THP 20  + IR   0.1416 0.1416         0.5666 0.9764       -           
+THP 40  + IR   0.6422 0.6422         0.0109 0.3315       0.8559      
+P value adjustment method: none&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-2-5&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2-5&quot;&gt;&amp;#x505A;&amp;#x56FE;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2-5&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x6570;&amp;#x636E;&amp;#x5904;&amp;#x7406;&amp;#xFF0C;&amp;#x4E3A;&amp;#x505A;&amp;#x56FE;&amp;#x505A;&amp;#x51C6;&amp;#x5907;&amp;#xFF0C;&amp;#x7528; dplyr &amp;#x5305;&amp;#x8FDB;&amp;#x884C;&amp;#x6570;&amp;#x636E;&amp;#x6574;&amp;#x5408;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight r&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;library&lt;/span&gt;(plotrix)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;library&lt;/span&gt;(dplyr)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;F2T &amp;lt;- summarise(group_by(F2TTCR, group), mean=mean(value, na.rm = &lt;span class=&quot;literal&quot;&gt;TRUE&lt;/span&gt;), sem=std.error(value, na.rm=&lt;span class=&quot;literal&quot;&gt;TRUE&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;F2T &amp;lt;- mutate(F2T, sign1=c(&lt;span class=&quot;literal&quot;&gt;NA&lt;/span&gt;,&lt;span class=&quot;literal&quot;&gt;NA&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;quot;**&amp;quot;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;quot;*&amp;quot;&lt;/span&gt;,&lt;span class=&quot;literal&quot;&gt;NA&lt;/span&gt;,&lt;span class=&quot;literal&quot;&gt;NA&lt;/span&gt;), sign2=c(&lt;span class=&quot;literal&quot;&gt;NA&lt;/span&gt;,&lt;span class=&quot;literal&quot;&gt;NA&lt;/span&gt;,&lt;span class=&quot;literal&quot;&gt;NA&lt;/span&gt;,&lt;span class=&quot;literal&quot;&gt;NA&lt;/span&gt;,&lt;span class=&quot;literal&quot;&gt;NA&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;quot;*&amp;quot;&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;F2T&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#+RESULTS:
+Source: local data frame [6 x 5]
+
+	   group     mean      sem sign1 sign2
+	  (fctr)    (dbl)    (dbl) (chr) (chr)
+1           Sham  0.00000 0.000000    NA    NA
+2 THP 40  + Sham  0.00000 0.000000    NA    NA
+3             IR 45.52685 2.139659    **    NA
+4   THP 10  + IR 39.51738 2.269635     *    NA
+5   THP 20  + IR 32.84250 2.963525    NA    NA
+6   THP 40  + IR 22.13569 3.477622    NA     *&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x505A;&amp;#x56FE;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight r&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;library&lt;/span&gt;(ggplot2)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;library&lt;/span&gt;(grid)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;levels(F2T$group) &amp;lt;- gsub(&lt;span class=&quot;string&quot;&gt;&amp;quot;  &amp;quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;, levels(F2T$group))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;tiff(filename = &lt;span class=&quot;string&quot;&gt;&amp;quot;F2TTC.tif&amp;quot;&lt;/span&gt;,width = &lt;span class=&quot;number&quot;&gt;16&lt;/span&gt;,height = &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;,units =&lt;span class=&quot;string&quot;&gt;&amp;quot;cm&amp;quot;&lt;/span&gt;,compression=&lt;span class=&quot;string&quot;&gt;&amp;quot;lzw&amp;quot;&lt;/span&gt;,bg=&lt;span class=&quot;string&quot;&gt;&amp;quot;white&amp;quot;&lt;/span&gt;,res=&lt;span class=&quot;number&quot;&gt;1200&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ggplot(data=F2T,aes(x=group,y=mean,fill=group, group=&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  geom_errorbar(aes(ymin=mean,ymax=mean+sem, width = &lt;span class=&quot;number&quot;&gt;0.2&lt;/span&gt;),size=&lt;span class=&quot;number&quot;&gt;0.8&lt;/span&gt;) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  geom_bar(position=&lt;span class=&quot;string&quot;&gt;&amp;quot;stack&amp;quot;&lt;/span&gt;,stat = &lt;span class=&quot;string&quot;&gt;&amp;quot;identity&amp;quot;&lt;/span&gt;,width=&lt;span class=&quot;number&quot;&gt;0.6&lt;/span&gt;,size=&lt;span class=&quot;number&quot;&gt;0.8&lt;/span&gt;, colour=&lt;span class=&quot;string&quot;&gt;&amp;quot;black&amp;quot;&lt;/span&gt;) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  scale_fill_manual(values=c(&lt;span class=&quot;string&quot;&gt;&amp;quot;grey100&amp;quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;quot;grey75&amp;quot;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;quot;grey0&amp;quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;quot;grey90&amp;quot;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;quot;grey50&amp;quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;quot;grey30&amp;quot;&lt;/span&gt;)) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  theme_classic(base_family=&lt;span class=&quot;string&quot;&gt;&amp;quot;Times New Roman&amp;quot;&lt;/span&gt;) + scale_x_discrete(&lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  scale_y_continuous(&lt;span class=&quot;string&quot;&gt;&amp;quot;Infarct Size (%)&amp;quot;&lt;/span&gt;, expand=c(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;),limits = c(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;70.2&lt;/span&gt;), breaks=seq(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;70&lt;/span&gt;, by=&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;)) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  theme(axis.text.x = element_text(family=&lt;span class=&quot;string&quot;&gt;&amp;quot;Times New Roman&amp;quot;&lt;/span&gt;,face=&lt;span class=&quot;string&quot;&gt;&amp;quot;bold&amp;quot;&lt;/span&gt;, size=&lt;span class=&quot;number&quot;&gt;12&lt;/span&gt;), axis.text.y = element_text(family=&lt;span class=&quot;string&quot;&gt;&amp;quot;Times New Roman&amp;quot;&lt;/span&gt;,face=&lt;span class=&quot;string&quot;&gt;&amp;quot;bold&amp;quot;&lt;/span&gt;, size=&lt;span class=&quot;number&quot;&gt;12&lt;/span&gt;),axis.title.y = element_text(family=&lt;span class=&quot;string&quot;&gt;&amp;quot;Times New Roman&amp;quot;&lt;/span&gt;, face=&lt;span class=&quot;string&quot;&gt;&amp;quot;bold&amp;quot;&lt;/span&gt;, size=&lt;span class=&quot;number&quot;&gt;15&lt;/span&gt;, margin=margin(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)),axis.line = element_line(size = &lt;span class=&quot;number&quot;&gt;0.8&lt;/span&gt;),axis.ticks = element_line(size = &lt;span class=&quot;number&quot;&gt;0.8&lt;/span&gt;),axis.ticks.length=unit(&lt;span class=&quot;number&quot;&gt;0.2&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;quot;cm&amp;quot;&lt;/span&gt;), plot.margin=unit(c(&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;),&lt;span class=&quot;string&quot;&gt;&amp;quot;mm&amp;quot;&lt;/span&gt;), legend.position=&lt;span class=&quot;string&quot;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  geom_path(x=c(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;),y=c(&lt;span class=&quot;number&quot;&gt;50&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;52&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;52&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;52&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;52&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;50&lt;/span&gt;),size = &lt;span class=&quot;number&quot;&gt;0.6&lt;/span&gt;) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  geom_path(x=c(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;),y=c(&lt;span class=&quot;number&quot;&gt;54&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;56&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;56&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;56&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;56&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;54&lt;/span&gt;),size = &lt;span class=&quot;number&quot;&gt;0.6&lt;/span&gt;) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  geom_path(x=c(&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;),y=c(&lt;span class=&quot;number&quot;&gt;60&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;62&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;62&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;62&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;62&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;60&lt;/span&gt;),size = &lt;span class=&quot;number&quot;&gt;0.6&lt;/span&gt;) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  annotate(&lt;span class=&quot;string&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;,family=&lt;span class=&quot;string&quot;&gt;&amp;quot;Times New Roman&amp;quot;&lt;/span&gt;, x = &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, y = &lt;span class=&quot;number&quot;&gt;53&lt;/span&gt;, label = &lt;span class=&quot;string&quot;&gt;&amp;quot;**&amp;quot;&lt;/span&gt;,size=&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  annotate(&lt;span class=&quot;string&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;,family=&lt;span class=&quot;string&quot;&gt;&amp;quot;Times New Roman&amp;quot;&lt;/span&gt;, x = &lt;span class=&quot;number&quot;&gt;2.5&lt;/span&gt;, y=&lt;span class=&quot;number&quot;&gt;57&lt;/span&gt;, label = &lt;span class=&quot;string&quot;&gt;&amp;quot;*&amp;quot;&lt;/span&gt;,size=&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  annotate(&lt;span class=&quot;string&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;,family=&lt;span class=&quot;string&quot;&gt;&amp;quot;Times New Roman&amp;quot;&lt;/span&gt;, x = &lt;span class=&quot;number&quot;&gt;4.5&lt;/span&gt;, y = &lt;span class=&quot;number&quot;&gt;63&lt;/span&gt;, label = &lt;span class=&quot;string&quot;&gt;&amp;quot;*&amp;quot;&lt;/span&gt;,size=&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;dev.off()&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&quot;figure&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xrrxa.com1.z0.glb.clouddn.com/blogF2TTC.png&quot; alt=&quot;blogF2TTC.png&quot;&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;figure-number&quot;&gt;Figure 2:&lt;/span&gt; TTC &amp;#x7EDF;&amp;#x8BA1;&amp;#x56FE;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-sec-3&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-3&quot;&gt;&amp;#x53E6;&amp;#x5916;&amp;#x4E24;&amp;#x4E2A;&amp;#x4F8B;&amp;#x5B50;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-3&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-sec-3-1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-3-1&quot;&gt;&amp;#x975E;&amp;#x53C2;&amp;#x6570;&amp;#x68C0;&amp;#x9A8C;&amp;#xFF0C;&amp;#x591A;&amp;#x7EC4;&amp;#x4F5C;&amp;#x56FE;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-3-1&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight r&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;F2N3 &amp;lt;- read.table(&lt;span class=&quot;string&quot;&gt;&amp;quot;F2N3.csv&amp;quot;&lt;/span&gt;, header=&lt;span class=&quot;literal&quot;&gt;TRUE&lt;/span&gt;, sep=&lt;span class=&quot;string&quot;&gt;&amp;quot;,&amp;quot;&lt;/span&gt;, na.strings=&lt;span class=&quot;string&quot;&gt;&amp;quot;NA&amp;quot;&lt;/span&gt;, dec=&lt;span class=&quot;string&quot;&gt;&amp;quot;.&amp;quot;&lt;/span&gt;, strip.white=&lt;span class=&quot;literal&quot;&gt;TRUE&lt;/span&gt;, check.names = &lt;span class=&quot;literal&quot;&gt;FALSE&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;F2N24 &amp;lt;- read.table(&lt;span class=&quot;string&quot;&gt;&amp;quot;F2N24.csv&amp;quot;&lt;/span&gt;, header=&lt;span class=&quot;literal&quot;&gt;TRUE&lt;/span&gt;, sep=&lt;span class=&quot;string&quot;&gt;&amp;quot;,&amp;quot;&lt;/span&gt;, na.strings=&lt;span class=&quot;string&quot;&gt;&amp;quot;NA&amp;quot;&lt;/span&gt;, dec=&lt;span class=&quot;string&quot;&gt;&amp;quot;.&amp;quot;&lt;/span&gt;, strip.white=&lt;span class=&quot;literal&quot;&gt;TRUE&lt;/span&gt;, check.names = &lt;span class=&quot;literal&quot;&gt;FALSE&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;F2N3R &amp;lt;- melt(F2N3)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;names(F2N3R)[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;] &amp;lt;- c(&lt;span class=&quot;string&quot;&gt;&amp;quot;group&amp;quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;quot;value&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;F2N24R &amp;lt;- melt(F2N24)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;names(F2N24R)[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;] &amp;lt;- c(&lt;span class=&quot;string&quot;&gt;&amp;quot;group&amp;quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;quot;value&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;F2N3R$time &amp;lt;- rep(&lt;span class=&quot;string&quot;&gt;&amp;quot;3 h&amp;quot;&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;96&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;F2N24R$time &amp;lt;- rep(&lt;span class=&quot;string&quot;&gt;&amp;quot;24 h&amp;quot;&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;96&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;F2NR &amp;lt;- rbind(F2N3R, F2N24R)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;outlierTest(lm(value ~ group, data = F2NR))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;tiff(filename = &lt;span class=&quot;string&quot;&gt;&amp;quot;qqpF2N.tif&amp;quot;&lt;/span&gt;,width = &lt;span class=&quot;number&quot;&gt;15&lt;/span&gt;,height = &lt;span class=&quot;number&quot;&gt;18&lt;/span&gt;,units =&lt;span class=&quot;string&quot;&gt;&amp;quot;cm&amp;quot;&lt;/span&gt;,compression=&lt;span class=&quot;string&quot;&gt;&amp;quot;lzw&amp;quot;&lt;/span&gt;,bg=&lt;span class=&quot;string&quot;&gt;&amp;quot;white&amp;quot;&lt;/span&gt;,res=&lt;span class=&quot;number&quot;&gt;600&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;qqPlot(lm(value ~ group, data=F2NR), simulate=&lt;span class=&quot;literal&quot;&gt;TRUE&lt;/span&gt;, main=&lt;span class=&quot;string&quot;&gt;&amp;quot;Q-Q Plot&amp;quot;&lt;/span&gt;, labels=&lt;span class=&quot;literal&quot;&gt;TRUE&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;dev.off()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bartlett.test(value ~ group, data = F2NR)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;leveneTest(F2NR$value, F2NR$group)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;kruskal.test(value ~ group, data = F2NR)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;F2N3SEM &amp;lt;- posthoc.kruskal.nemenyi.test(value ~ group, data=F2N3R, dist=&lt;span class=&quot;string&quot;&gt;&amp;quot;Chisquare&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;F2N24SEM &amp;lt;- posthoc.kruskal.nemenyi.test(value ~ group, data=F2N24R, dist=&lt;span class=&quot;string&quot;&gt;&amp;quot;Chisquare&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;F2N &amp;lt;- summarise(group_by(F2NR, group, time), mean=mean(value, na.rm = &lt;span class=&quot;literal&quot;&gt;TRUE&lt;/span&gt;), sem=std.error(value, na.rm=&lt;span class=&quot;literal&quot;&gt;TRUE&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;F2N &amp;lt;- F2N[order(desc(F2N$time)), ]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;F2N$time &amp;lt;- factor(F2N$time,levels=unique(F2N$time))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;tiff(filename = &lt;span class=&quot;string&quot;&gt;&amp;quot;F2NSS.tif&amp;quot;&lt;/span&gt;,width = &lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;, height = &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;,units =&lt;span class=&quot;string&quot;&gt;&amp;quot;cm&amp;quot;&lt;/span&gt;,compression=&lt;span class=&quot;string&quot;&gt;&amp;quot;lzw&amp;quot;&lt;/span&gt;,bg=&lt;span class=&quot;string&quot;&gt;&amp;quot;white&amp;quot;&lt;/span&gt;,res=&lt;span class=&quot;number&quot;&gt;1200&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ggplot(data=F2N,aes(x=time,y=mean,fill=group, width=&lt;span class=&quot;number&quot;&gt;0.7&lt;/span&gt;)) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  geom_bar(position=position_dodge(width=&lt;span class=&quot;number&quot;&gt;0.8&lt;/span&gt;),stat = &lt;span class=&quot;string&quot;&gt;&amp;quot;identity&amp;quot;&lt;/span&gt;,width=&lt;span class=&quot;number&quot;&gt;0.6&lt;/span&gt;,size=&lt;span class=&quot;number&quot;&gt;0.8&lt;/span&gt;) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  geom_errorbar(aes(ymin=mean,ymax=mean+sem, width = &lt;span class=&quot;number&quot;&gt;0.2&lt;/span&gt;),position=position_dodge(width=&lt;span class=&quot;number&quot;&gt;0.8&lt;/span&gt;),size=&lt;span class=&quot;number&quot;&gt;0.8&lt;/span&gt;) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  geom_bar(position=position_dodge(width=&lt;span class=&quot;number&quot;&gt;0.8&lt;/span&gt;), colour=&lt;span class=&quot;string&quot;&gt;&amp;quot;black&amp;quot;&lt;/span&gt;,stat =&lt;span class=&quot;string&quot;&gt;&amp;quot;identity&amp;quot;&lt;/span&gt;,width=&lt;span class=&quot;number&quot;&gt;0.6&lt;/span&gt;,size=&lt;span class=&quot;number&quot;&gt;0.8&lt;/span&gt;) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  scale_fill_manual(values=c(&lt;span class=&quot;string&quot;&gt;&amp;quot;grey100&amp;quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;quot;grey75&amp;quot;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;quot;grey0&amp;quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;quot;grey90&amp;quot;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;quot;grey50&amp;quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;quot;grey30&amp;quot;&lt;/span&gt;)) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  theme_classic(base_family=&lt;span class=&quot;string&quot;&gt;&amp;quot;Times New Roman&amp;quot;&lt;/span&gt;) + scale_x_discrete(&lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  scale_y_continuous(&lt;span class=&quot;string&quot;&gt;&amp;quot;Neurological Score&amp;quot;&lt;/span&gt;, expand=c(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;),limits = c(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;20.05&lt;/span&gt;), breaks=seq(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;, by=&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;)) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  theme(axis.text.x = element_text(family=&lt;span class=&quot;string&quot;&gt;&amp;quot;Times New Roman&amp;quot;&lt;/span&gt;,face=&lt;span class=&quot;string&quot;&gt;&amp;quot;bold&amp;quot;&lt;/span&gt;, size=&lt;span class=&quot;number&quot;&gt;12&lt;/span&gt;), axis.text.y = element_text(family=&lt;span class=&quot;string&quot;&gt;&amp;quot;Times New Roman&amp;quot;&lt;/span&gt;,face=&lt;span class=&quot;string&quot;&gt;&amp;quot;bold&amp;quot;&lt;/span&gt;, size=&lt;span class=&quot;number&quot;&gt;12&lt;/span&gt;),axis.title.y = element_text(family=&lt;span class=&quot;string&quot;&gt;&amp;quot;Times New Roman&amp;quot;&lt;/span&gt;, face=&lt;span class=&quot;string&quot;&gt;&amp;quot;bold&amp;quot;&lt;/span&gt;, size=&lt;span class=&quot;number&quot;&gt;15&lt;/span&gt;, margin=margin(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)),axis.line = element_line(size = &lt;span class=&quot;number&quot;&gt;0.8&lt;/span&gt;),axis.ticks = element_line(size = &lt;span class=&quot;number&quot;&gt;0.8&lt;/span&gt;),axis.ticks.length=unit(&lt;span class=&quot;number&quot;&gt;0.2&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;quot;cm&amp;quot;&lt;/span&gt;), plot.margin=unit(c(&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;),&lt;span class=&quot;string&quot;&gt;&amp;quot;mm&amp;quot;&lt;/span&gt;), legend.title=element_blank(),legend.text = element_text(size = &lt;span class=&quot;number&quot;&gt;12&lt;/span&gt;, face = &lt;span class=&quot;string&quot;&gt;&amp;quot;bold&amp;quot;&lt;/span&gt;),legend.key.width = unit(&lt;span class=&quot;number&quot;&gt;0.8&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;quot;cm&amp;quot;&lt;/span&gt;),legend.key.height = unit(&lt;span class=&quot;number&quot;&gt;0.5&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;quot;cm&amp;quot;&lt;/span&gt;),legend.position=&lt;span class=&quot;string&quot;&gt;&amp;quot;right&amp;quot;&lt;/span&gt;) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  geom_segment(aes(x=&lt;span class=&quot;number&quot;&gt;0.67&lt;/span&gt;, y=&lt;span class=&quot;number&quot;&gt;16&lt;/span&gt;, xend=&lt;span class=&quot;number&quot;&gt;0.67&lt;/span&gt;, yend=&lt;span class=&quot;number&quot;&gt;16.5&lt;/span&gt;)) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  geom_segment(aes(x=&lt;span class=&quot;number&quot;&gt;0.67&lt;/span&gt;, y=&lt;span class=&quot;number&quot;&gt;16.5&lt;/span&gt;, xend=&lt;span class=&quot;number&quot;&gt;1.33&lt;/span&gt;, yend=&lt;span class=&quot;number&quot;&gt;16.5&lt;/span&gt;)) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  annotate(&lt;span class=&quot;string&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;,family=&lt;span class=&quot;string&quot;&gt;&amp;quot;Times New Roman&amp;quot;&lt;/span&gt;, x=&lt;span class=&quot;number&quot;&gt;0.93&lt;/span&gt;, y=&lt;span class=&quot;number&quot;&gt;17&lt;/span&gt;, label=&lt;span class=&quot;string&quot;&gt;&amp;quot;*&amp;quot;&lt;/span&gt;, size=&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  annotate(&lt;span class=&quot;string&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;,family=&lt;span class=&quot;string&quot;&gt;&amp;quot;Times New Roman&amp;quot;&lt;/span&gt;, x=&lt;span class=&quot;number&quot;&gt;1.07&lt;/span&gt;, y=&lt;span class=&quot;number&quot;&gt;17&lt;/span&gt;, label=&lt;span class=&quot;string&quot;&gt;&amp;quot;**&amp;quot;&lt;/span&gt;, size=&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  annotate(&lt;span class=&quot;string&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;,family=&lt;span class=&quot;string&quot;&gt;&amp;quot;Times New Roman&amp;quot;&lt;/span&gt;, x=&lt;span class=&quot;number&quot;&gt;1.2&lt;/span&gt;, y=&lt;span class=&quot;number&quot;&gt;17&lt;/span&gt;, label=&lt;span class=&quot;string&quot;&gt;&amp;quot;**&amp;quot;&lt;/span&gt;, size=&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  annotate(&lt;span class=&quot;string&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;,family=&lt;span class=&quot;string&quot;&gt;&amp;quot;Times New Roman&amp;quot;&lt;/span&gt;, x=&lt;span class=&quot;number&quot;&gt;1.33&lt;/span&gt;, y=&lt;span class=&quot;number&quot;&gt;17&lt;/span&gt;, label=&lt;span class=&quot;string&quot;&gt;&amp;quot;*&amp;quot;&lt;/span&gt;, size=&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  geom_segment(aes(x=&lt;span class=&quot;number&quot;&gt;1.67&lt;/span&gt;, y=&lt;span class=&quot;number&quot;&gt;16&lt;/span&gt;, xend=&lt;span class=&quot;number&quot;&gt;1.67&lt;/span&gt;, yend=&lt;span class=&quot;number&quot;&gt;16.5&lt;/span&gt;)) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  geom_segment(aes(x=&lt;span class=&quot;number&quot;&gt;1.67&lt;/span&gt;, y=&lt;span class=&quot;number&quot;&gt;16.5&lt;/span&gt;, xend=&lt;span class=&quot;number&quot;&gt;2.20&lt;/span&gt;, yend=&lt;span class=&quot;number&quot;&gt;16.5&lt;/span&gt;)) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  annotate(&lt;span class=&quot;string&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;,family=&lt;span class=&quot;string&quot;&gt;&amp;quot;Times New Roman&amp;quot;&lt;/span&gt;, x=&lt;span class=&quot;number&quot;&gt;1.93&lt;/span&gt;, y=&lt;span class=&quot;number&quot;&gt;17&lt;/span&gt;, label=&lt;span class=&quot;string&quot;&gt;&amp;quot;**&amp;quot;&lt;/span&gt;, size=&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  annotate(&lt;span class=&quot;string&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;,family=&lt;span class=&quot;string&quot;&gt;&amp;quot;Times New Roman&amp;quot;&lt;/span&gt;, x=&lt;span class=&quot;number&quot;&gt;2.07&lt;/span&gt;, y=&lt;span class=&quot;number&quot;&gt;17&lt;/span&gt;, label=&lt;span class=&quot;string&quot;&gt;&amp;quot;**&amp;quot;&lt;/span&gt;, size=&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  annotate(&lt;span class=&quot;string&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;,family=&lt;span class=&quot;string&quot;&gt;&amp;quot;Times New Roman&amp;quot;&lt;/span&gt;, x=&lt;span class=&quot;number&quot;&gt;2.2&lt;/span&gt;, y=&lt;span class=&quot;number&quot;&gt;17&lt;/span&gt;, label=&lt;span class=&quot;string&quot;&gt;&amp;quot;**&amp;quot;&lt;/span&gt;, size=&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;dev.off()&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&quot;figure&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xrrxa.com1.z0.glb.clouddn.com/blogF2NSS.png&quot; alt=&quot;blogF2NSS.png&quot;&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;figure-number&quot;&gt;Figure 3:&lt;/span&gt; &amp;#x795E;&amp;#x7ECF;&amp;#x5B66;&amp;#x8BC4;&amp;#x5206;&amp;#x7EDF;&amp;#x8BA1;&amp;#x56FE;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-3-2&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-3-2&quot;&gt;&amp;#x53C2;&amp;#x6570;&amp;#x68C0;&amp;#x9A8C;&amp;#xFF0C;&amp;#x4E00;&amp;#x7EC4;&amp;#x4F5C;&amp;#x56FE;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-3-2&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight r&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;F3Ev &amp;lt;- read.table(&lt;span class=&quot;string&quot;&gt;&amp;quot;F3Ev.csv&amp;quot;&lt;/span&gt;, header=&lt;span class=&quot;literal&quot;&gt;FALSE&lt;/span&gt;, sep=&lt;span class=&quot;string&quot;&gt;&amp;quot;,&amp;quot;&lt;/span&gt;, na.strings=&lt;span class=&quot;string&quot;&gt;&amp;quot;NA&amp;quot;&lt;/span&gt;, dec=&lt;span class=&quot;string&quot;&gt;&amp;quot;.&amp;quot;&lt;/span&gt;, strip.white=&lt;span class=&quot;literal&quot;&gt;TRUE&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;F3Ev &amp;lt;- as.data.frame(t(F3Ev))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;names(F3Ev)[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;] &amp;lt;- c(&lt;span class=&quot;string&quot;&gt;&amp;quot;Sham&amp;quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;quot;THP 40  + Sham&amp;quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;quot;IR&amp;quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;quot;THP 40  + IR&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;library&lt;/span&gt;(reshape2)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;F3EvR &amp;lt;- melt(F3Ev)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;names(F3EvR)[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;] &amp;lt;- c(&lt;span class=&quot;string&quot;&gt;&amp;quot;group&amp;quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;quot;value&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;library&lt;/span&gt;(car)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;outlierTest(lm(value ~ group, data = F3EvR))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;tiff(filename = &lt;span class=&quot;string&quot;&gt;&amp;quot;qqpF3E.tif&amp;quot;&lt;/span&gt;,width = &lt;span class=&quot;number&quot;&gt;15&lt;/span&gt;,height = &lt;span class=&quot;number&quot;&gt;18&lt;/span&gt;,units =&lt;span class=&quot;string&quot;&gt;&amp;quot;cm&amp;quot;&lt;/span&gt;,compression=&lt;span class=&quot;string&quot;&gt;&amp;quot;lzw&amp;quot;&lt;/span&gt;,bg=&lt;span class=&quot;string&quot;&gt;&amp;quot;white&amp;quot;&lt;/span&gt;,res=&lt;span class=&quot;number&quot;&gt;600&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;qqPlot(lm(value ~ group, data=F3EvR), simulate=&lt;span class=&quot;literal&quot;&gt;TRUE&lt;/span&gt;, main=&lt;span class=&quot;string&quot;&gt;&amp;quot;Q-Q Plot&amp;quot;&lt;/span&gt;, labels=&lt;span class=&quot;literal&quot;&gt;TRUE&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;dev.off()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;leveneTest(F3EvR$value, F3EvR$group)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bartlett.test(value ~ group, data = F3EvR)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;library&lt;/span&gt;(multcomp)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;F3EvOA &amp;lt;- aov(value ~ group, data=F3EvR)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;summary(F3EvOA)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;F3EvSEM &amp;lt;- summary(glht(F3EvOA, linfct = mcp(group = &lt;span class=&quot;string&quot;&gt;&amp;quot;Tukey&amp;quot;&lt;/span&gt;)))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;library&lt;/span&gt;(plotrix)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;library&lt;/span&gt;(dplyr)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;F3E &amp;lt;- summarise(group_by(F3EvR, group), mean=mean(value, na.rm = &lt;span class=&quot;literal&quot;&gt;TRUE&lt;/span&gt;), sem=std.error(value, na.rm=&lt;span class=&quot;literal&quot;&gt;TRUE&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;library&lt;/span&gt;(ggplot2)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;library&lt;/span&gt;(grid)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;levels(F3E$group) &amp;lt;- gsub(&lt;span class=&quot;string&quot;&gt;&amp;quot;  &amp;quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;, levels(F3E$group))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;tiff(filename = &lt;span class=&quot;string&quot;&gt;&amp;quot;F3Evans Blue.tif&amp;quot;&lt;/span&gt;,width = &lt;span class=&quot;number&quot;&gt;11&lt;/span&gt;,height = &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;,units =&lt;span class=&quot;string&quot;&gt;&amp;quot;cm&amp;quot;&lt;/span&gt;,compression=&lt;span class=&quot;string&quot;&gt;&amp;quot;lzw&amp;quot;&lt;/span&gt;,bg=&lt;span class=&quot;string&quot;&gt;&amp;quot;white&amp;quot;&lt;/span&gt;,res=&lt;span class=&quot;number&quot;&gt;1200&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ggplot(data=F3E,aes(x=group,y=mean,fill=group, group=&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  geom_errorbar(aes(ymin=mean,ymax=mean+sem, width = &lt;span class=&quot;number&quot;&gt;0.2&lt;/span&gt;),size=&lt;span class=&quot;number&quot;&gt;0.8&lt;/span&gt;) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  geom_bar(position=&lt;span class=&quot;string&quot;&gt;&amp;quot;stack&amp;quot;&lt;/span&gt;,stat = &lt;span class=&quot;string&quot;&gt;&amp;quot;identity&amp;quot;&lt;/span&gt;,width=&lt;span class=&quot;number&quot;&gt;0.6&lt;/span&gt;,size=&lt;span class=&quot;number&quot;&gt;0.8&lt;/span&gt;, colour=&lt;span class=&quot;string&quot;&gt;&amp;quot;black&amp;quot;&lt;/span&gt;) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  scale_fill_manual(values=c(&lt;span class=&quot;string&quot;&gt;&amp;quot;grey100&amp;quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;quot;grey75&amp;quot;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;quot;grey0&amp;quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;quot;grey30&amp;quot;&lt;/span&gt;)) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  theme_classic(base_family=&lt;span class=&quot;string&quot;&gt;&amp;quot;Times New Roman&amp;quot;&lt;/span&gt;) + scale_x_discrete(&lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  scale_y_continuous(&lt;span class=&quot;string&quot;&gt;&amp;quot;Evans Blue (ug/g)&amp;quot;&lt;/span&gt;, expand=c(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;),limits = c(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;20.05&lt;/span&gt;), breaks=seq(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;, by=&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;)) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  theme(axis.text.x = element_text(family=&lt;span class=&quot;string&quot;&gt;&amp;quot;Times New Roman&amp;quot;&lt;/span&gt;,face=&lt;span class=&quot;string&quot;&gt;&amp;quot;bold&amp;quot;&lt;/span&gt;, size=&lt;span class=&quot;number&quot;&gt;12&lt;/span&gt;), axis.text.y = element_text(family=&lt;span class=&quot;string&quot;&gt;&amp;quot;Times New Roman&amp;quot;&lt;/span&gt;,face=&lt;span class=&quot;string&quot;&gt;&amp;quot;bold&amp;quot;&lt;/span&gt;, size=&lt;span class=&quot;number&quot;&gt;12&lt;/span&gt;),axis.title.y = element_text(family=&lt;span class=&quot;string&quot;&gt;&amp;quot;Times New Roman&amp;quot;&lt;/span&gt;, face=&lt;span class=&quot;string&quot;&gt;&amp;quot;bold&amp;quot;&lt;/span&gt;, size=&lt;span class=&quot;number&quot;&gt;15&lt;/span&gt;, margin=margin(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)),axis.line = element_line(size = &lt;span class=&quot;number&quot;&gt;0.8&lt;/span&gt;),axis.ticks = element_line(size = &lt;span class=&quot;number&quot;&gt;0.8&lt;/span&gt;),axis.ticks.length=unit(&lt;span class=&quot;number&quot;&gt;0.2&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;quot;cm&amp;quot;&lt;/span&gt;), plot.margin=unit(c(&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;),&lt;span class=&quot;string&quot;&gt;&amp;quot;mm&amp;quot;&lt;/span&gt;), legend.position=&lt;span class=&quot;string&quot;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  geom_path(x=c(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;),y=c(&lt;span class=&quot;number&quot;&gt;16&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;16.5&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;16.5&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;16&lt;/span&gt;),size = &lt;span class=&quot;number&quot;&gt;0.6&lt;/span&gt;) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  geom_path(x=c(&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;),y=c(&lt;span class=&quot;number&quot;&gt;17.5&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;18&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;18&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;17.5&lt;/span&gt;),size = &lt;span class=&quot;number&quot;&gt;0.6&lt;/span&gt;) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  annotate(&lt;span class=&quot;string&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;,family=&lt;span class=&quot;string&quot;&gt;&amp;quot;Times New Roman&amp;quot;&lt;/span&gt;, x = &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, y = &lt;span class=&quot;number&quot;&gt;17&lt;/span&gt;, label = &lt;span class=&quot;string&quot;&gt;&amp;quot;**&amp;quot;&lt;/span&gt;,size=&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;) +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  annotate(&lt;span class=&quot;string&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;,family=&lt;span class=&quot;string&quot;&gt;&amp;quot;Times New Roman&amp;quot;&lt;/span&gt;, x = &lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;, y=&lt;span class=&quot;number&quot;&gt;18.5&lt;/span&gt;, label = &lt;span class=&quot;string&quot;&gt;&amp;quot;**&amp;quot;&lt;/span&gt;,size=&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;dev.off()&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&quot;figure&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xrrxa.com1.z0.glb.clouddn.com/blogF3Evans%20Blue.png&quot; alt=&quot;blogF3Evans%20Blue.png&quot;&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;figure-number&quot;&gt;Figure 4:&lt;/span&gt; Evans Blue &amp;#x7EDF;&amp;#x8BA1;&amp;#x56FE;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-4&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-4&quot;&gt;&amp;#x6CE8;&amp;#x610F;&amp;#x4E8B;&amp;#x9879;&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;footnotes&quot;&gt;
+&lt;h2 class=&quot;footnotes&quot;&gt;Footnotes: &lt;/h2&gt;
+&lt;div id=&quot;text-footnotes&quot;&gt;
+
+&lt;div class=&quot;footdef&quot;&gt;&lt;sup&gt;&lt;a id=&quot;fn.1&quot; name=&quot;fn.1&quot; class=&quot;footnum&quot; href=&quot;#fnr.1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;p class=&quot;footpara&quot;&gt;
+&lt;a href=&quot;https://www.r-project.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.r-project.org/&lt;/a&gt;
+&lt;/p&gt;&lt;/div&gt;
+
+
+&lt;/div&gt;
+&lt;/div&gt;
+Last Updated 2016-04-25 Mon 17:11 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 24.5.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 8.2.10)
+</content>
+    
+    <summary type="html">
+    
+      &lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;&amp;#x5199;&amp;#x4F5C;&amp;#x539F;&amp;#x56E0;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x6700;&amp;#x8FD1;&amp;#x5B66;&amp;#x4E60; R &amp;#x8BED;&amp;#x8A00;&amp;#xFF0C;&amp;#x8FD9;&amp;#x7BC7;&amp;#x535A;&amp;#x5BA2;&amp;#x662F;&amp;#x5B66;&amp;#x4E60; R &amp;#x8BED;&amp;#x8A00;&amp;#x4E00;&amp;#x4E2A;&amp;#x7B80;&amp;#x5355;&amp;#x6210;&amp;#x679C;&amp;#x5C55;&amp;#x793A;&amp;#xFF0C;&amp;#x8FD9;&amp;#x662F;&amp;#x7B2C;&amp;#x4E00;&amp;#x90E8;&amp;#x5206;&amp;#xFF0C;&amp;#x5355;&amp;#x56E0;&amp;#x7D20;&amp;#x5206;&amp;#x6790;
+&lt;/li&gt;
+&lt;li&gt;&amp;#x79D1;&amp;#x7814;&amp;#x8BBA;&amp;#x6587;&amp;#x4E2D;&amp;#x7684;&amp;#x7EDF;&amp;#x8BA1;&amp;#x65B9;&amp;#x6CD5;&amp;#x5F88;&amp;#x91CD;&amp;#x8981;&amp;#xFF0C;&amp;#x5173;&amp;#x7CFB;&amp;#x5230;&amp;#x7ED3;&amp;#x679C;&amp;#x7684;&amp;#x53EF;&amp;#x4FE1;&amp;#x5EA6;&amp;#xFF0C;&amp;#x7136;&amp;#x800C;&amp;#x4E2D;&amp;#x56FD;&amp;#x53D1;&amp;#x8868;&amp;#x7684;&amp;#x5F88;&amp;#x591A;&amp;#x6587;&amp;#x7AE0;&amp;#xFF0C;&amp;#x7EDF;&amp;#x8BA1;&amp;#x8FC7;&amp;#x5173;&amp;#x7684;&amp;#x4E0D;&amp;#x591A;
+&lt;/li&gt;
+&lt;li&gt;&amp;#x672C;&amp;#x6587;&amp;#x4EE5; R &amp;#x8BED;&amp;#x8A00;&amp;#x4E3A;&amp;#x5207;&amp;#x5165;&amp;#x70B9;&amp;#xFF0C;&amp;#x4EE5;&amp;#x6211;&amp;#x81EA;&amp;#x5DF1;&amp;#x6587;&amp;#x7AE0;&amp;#x4E2D;&amp;#x7684;&amp;#x6570;&amp;#x636E;&amp;#x4E3A;&amp;#x539F;&amp;#x578B;&amp;#xFF0C;&amp;#x7B80;&amp;#x5355;&amp;#x9610;&amp;#x8FF0;&amp;#x5355;&amp;#x56E0;&amp;#x7D20;&amp;#x5206;&amp;#x6790;&amp;#x7684;&amp;#x65B9;&amp;#x6CD5;&amp;#x539F;&amp;#x7406;&amp;#x53CA;&amp;#x8FC7;&amp;#x7A0B;
+&lt;/li&gt;
+&lt;li&gt;&amp;#x6709;&amp;#x5173; R &amp;#x8BED;&amp;#x8A00;&amp;#x4ECB;&amp;#x7ECD;&amp;#x53CA;&amp;#x5B89;&amp;#x88C5;&amp;#x65B9;&amp;#x6CD5;&amp;#xFF0C;&amp;#x8BF7;&amp;#x79FB;&amp;#x6B65; R &amp;#x8BED;&amp;#x8A00;&amp;#x5B98;&amp;#x65B9;&amp;#x7F51;&lt;sup&gt;&lt;a id=&quot;fnr.1&quot; name=&quot;fnr.1&quot; class=&quot;footref&quot; href=&quot;#fn.1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&amp;#x7AD9;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="RESEARCH" scheme="http://lengyueyang.github.io/categories/RESEARCH/"/>
+    
+    
+      <category term="Statistics" scheme="http://lengyueyang.github.io/tags/Statistics/"/>
+    
+      <category term="Research" scheme="http://lengyueyang.github.io/tags/Research/"/>
+    
+      <category term="R" scheme="http://lengyueyang.github.io/tags/R/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Blog with org-mode and github [用 Org-mdoe 和 github 搭建博客]</title>
+    <link href="http://lengyueyang.github.io/2016/03/11/Blog%20with%20org-mode%20and%20github/"/>
+    <id>http://lengyueyang.github.io/2016/03/11/Blog with org-mode and github/</id>
+    <published>2016-03-11T00:00:00.000Z</published>
+    <updated>2016-03-12T14:50:49.431Z</updated>
+    
+    <content type="html">
+
+
+&lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;&amp;#x5199;&amp;#x5728;&amp;#x524D;&amp;#x9762;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x957F;&amp;#x4E45;&amp;#x4EE5;&amp;#x6765;&amp;#xFF0C;&amp;#x4E00;&amp;#x76F4;&amp;#x60F3;&amp;#x5EFA;&amp;#x7ACB;&amp;#x81EA;&amp;#x5DF1;&amp;#x7684;&amp;#x535A;&amp;#x5BA2;&amp;#xFF0C;&amp;#x4ECA;&amp;#x5E74;&amp;#x5F00;&amp;#x59CB;&amp;#x5B66;&amp;#x4E60; Emacs&amp;#xFF0C;&amp;#x5076;&amp;#x9047;&amp;#x51E0;&amp;#x4F4D;&amp;#x5927;&amp;#x795E;&amp;#x7528; Hexo &amp;#x5EFA;&amp;#x7ACB;&amp;#x535A;&amp;#x5BA2;&amp;#xFF0C;&amp;#x4E8E;&amp;#x662F;&amp;#x4E5F;&amp;#x52A8;&amp;#x624B;&amp;#x642D;&amp;#x5EFA;&amp;#x81EA;&amp;#x5DF1;&amp;#x7684;&amp;#x535A;&amp;#x5BA2;&amp;#xFF0C;&amp;#x8BB0;&amp;#x5F55;&amp;#x5B66;&amp;#x4E60;&amp;#x8FC7;&amp;#x7A0B;&amp;#xFF0C;&amp;#x8BB0;&amp;#x5F55;&amp;#x5411;&amp;#x6570;&amp;#x636E;&amp;#x79D1;&amp;#x5B66;&amp;#x8F6C;&amp;#x578B;&amp;#x5B66;&amp;#x4E60;&amp;#x70B9;&amp;#x6EF4;
+&lt;/li&gt;
+&lt;li&gt;&amp;#x672C;&amp;#x6587;&amp;#x7B80;&amp;#x8FF0;&amp;#x7528; Org-mode &amp;#x5199;&amp;#x535A;&amp;#x5BA2;&amp;#xFF0C;&amp;#x901A;&amp;#x8FC7; Hexo &amp;#x642D;&amp;#x5EFA;&amp;#x535A;&amp;#x5BA2;&amp;#x7684;&amp;#x8FC7;&amp;#x7A0B;&amp;#xFF0C;&amp;#x6211;&amp;#x7684;&amp;#x535A;&amp;#x5BA2;&amp;#x89C1;&lt;a href=&quot;http://lengyueyang.github.io/&quot;&gt;&amp;#x4E00;&amp;#x5BB6;&amp;#x4E4B;&amp;#x8A00;&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-2&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-2&quot;&gt;&amp;#x7528; Hexo &amp;#x642D;&amp;#x5EFA;&amp;#x535A;&amp;#x5BA2;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-2&quot;&gt;
+&lt;p&gt;
+&amp;#x4E3B;&amp;#x8981;&amp;#x53C2;&amp;#x7167; CKJOKER&lt;sup&gt;&lt;a id=&quot;fnr.1&quot; name=&quot;fnr.1&quot; class=&quot;footref&quot; href=&quot;#fn.1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&amp;#x548C;&amp;#x5C81;&amp;#x6708;&amp;#x5982;&amp;#x6B4C;&lt;sup&gt;&lt;a id=&quot;fnr.2&quot; name=&quot;fnr.2&quot; class=&quot;footref&quot; href=&quot;#fn.2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&amp;#x53CA;&amp;#x6F20;&amp;#x7136;&lt;sup&gt;&lt;a id=&quot;fnr.3&quot; name=&quot;fnr.3&quot; class=&quot;footref&quot; href=&quot;#fn.3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&amp;#x7684;&amp;#x535A;&amp;#x5BA2;
+&lt;/p&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x6211;&amp;#x672C;&amp;#x4EBA;&amp;#x7528; Archlinux&amp;#xFF0C;&amp;#x5148;&amp;#x5B89;&amp;#x88C5; npm&amp;#xFF0C;&amp;#x518D;&amp;#x901A;&amp;#x8FC7; npm &amp;#x5B89;&amp;#x88C5; hexo
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo pacman -S npm&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mkdir hexo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm install -g hexo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm install -g hexo-cli&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo init&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo install&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+&amp;#x8FD9;&amp;#x65F6;&amp;#x5019;&amp;#x5728;&amp;#x6D4F;&amp;#x89C8;&amp;#x5668;&amp;#x4E2D;&amp;#x6253;&amp;#x5F00; &lt;a href=&quot;http://0.0.0.0:4000/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://0.0.0.0:4000/&lt;/a&gt; &amp;#x5E94;&amp;#x8BE5;&amp;#x80FD;&amp;#x770B;&amp;#x5230;&amp;#x6548;&amp;#x679C;&amp;#x5982;&amp;#x56FE;&amp;#x6240;&amp;#x793A;
+&lt;img src=&quot;http://7xrrxa.com1.z0.glb.clouddn.com/hexo_start.png&quot; alt=&quot;hexo_start.png&quot;&gt;
+&lt;/p&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x5B89;&amp;#x88C5; hexo &amp;#x7684;&amp;#x4E00;&amp;#x4E9B;&amp;#x63D2;&amp;#x4EF6;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-generator-index --save&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-generator-archive --save&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-generator-category --save&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-generator-tag --save&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-server --save&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-deployer-git --save&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-deployer-heroku --save&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-deployer-rsync --save&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-deployer-openshift --save&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-renderer-marked@&lt;span class=&quot;number&quot;&gt;0.2&lt;/span&gt; --save&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-renderer-stylus@&lt;span class=&quot;number&quot;&gt;0.2&lt;/span&gt; --save&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-generator-feed@&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; --save&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-generator-sitemap@&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-3&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-3&quot;&gt;&amp;#x535A;&amp;#x5BA2;&amp;#x6E90;&amp;#x4EE3;&amp;#x7801;&amp;#x6258;&amp;#x7BA1;&amp;#x5230; Github &amp;#x4E0A;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-3&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x5EFA;&amp;#x7ACB; Github &amp;#x8D26;&amp;#x53F7;&amp;#xFF0C;&amp;#x8BBE;&amp;#x7F6E;&amp;#x672C;&amp;#x5730; SSH&amp;#xFF0C;&amp;#x4E0E; Github &amp;#x8FDE;&amp;#x63A5;
+&lt;/li&gt;
+&lt;li&gt;&amp;#x4FEE;&amp;#x6539; _config.yml&amp;#xFF0C;&amp;#x589E;&amp;#x52A0;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;deploy:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;type&lt;/span&gt;: git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;repo: git@github.com:xxx/xxx.github.io.git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;branch: master&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+&amp;#x53CA;&amp;#x6839;&amp;#x636E;&amp;#x53C2;&amp;#x8003;&amp;#x4FEE;&amp;#x6539;&amp;#x5176;&amp;#x4ED6;&amp;#x914D;&amp;#x7F6E;
+&lt;/p&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x4F7F;&amp;#x7528; Next &amp;#x4E3B;&amp;#x9898;&amp;#xFF0C;&amp;#x6839;&amp;#x636E;&amp;#x914D;&amp;#x7F6E;&amp;#x6587;&amp;#x4EF6;&amp;#x8BF4;&amp;#x660E;&amp;#x914D;&amp;#x7F6E;&amp;#x81EA;&amp;#x5DF1;&amp;#x7684;&amp;#x535A;&amp;#x5BA2;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git &lt;span class=&quot;built_in&quot;&gt;clone&lt;/span&gt; https://github.com/iissnan/hexo-theme-next themes/next&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&amp;#x6253;&amp;#x5F00;&amp;#x81EA;&amp;#x5DF1;&amp;#x7684;&amp;#x535A;&amp;#x5BA2;&amp;#xFF0C;&amp;#x4FEE;&amp;#x6539;&amp;#x7F8E;&amp;#x5316;&amp;#x76F8;&amp;#x5E94;&amp;#x9009;&amp;#x9879;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo clean&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo g&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo g&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-4&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-4&quot;&gt;&amp;#x7528; Org-mode &amp;#x5199;&amp;#x535A;&amp;#x5BA2;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-4&quot;&gt;
+&lt;p&gt;
+&amp;#x4E3B;&amp;#x8981;&amp;#x53C2;&amp;#x7167; CodeFalling&lt;sup&gt;&lt;a id=&quot;fnr.4&quot; name=&quot;fnr.4&quot; class=&quot;footref&quot; href=&quot;#fn.4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&amp;#x548C; zilongshanren&lt;sup&gt;&lt;a id=&quot;fnr.5&quot; name=&quot;fnr.5&quot; class=&quot;footref&quot; href=&quot;#fn.5&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;
+&lt;/p&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x7528;&lt;a href=&quot;https://github.com/CodeFalling/blog-admin&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;blog-admin&lt;/a&gt; &amp;#x505A;&amp;#x524D;&amp;#x7AEF;&amp;#xFF0C;&amp;#x53C2;&amp;#x7167;&amp;#x6587;&amp;#x4EF6;&amp;#x8BF4;&amp;#x660E;&amp;#x914D;&amp;#x7F6E;
+&lt;/li&gt;
+&lt;li&gt;&amp;#x7528;&lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; &amp;#x5C06;&amp;#x5199;&amp;#x597D;&amp;#x7684;.org &amp;#x6587;&amp;#x4EF6;&amp;#x8F6C;&amp;#x5316;&amp;#x6210; hexo &amp;#x8BC6;&amp;#x522B;&amp;#x7684; md &amp;#x6587;&amp;#x4EF6;&amp;#x5E76;&amp;#x53D1;&amp;#x5E03;
+&lt;/li&gt;
+&lt;li&gt;&amp;#x53C2;&amp;#x7167; CodeFalling &amp;#x548C; zilongshanren &amp;#x7684; github &amp;#x7684; Spacemacs &amp;#x79C1;&amp;#x4EBA;&amp;#x914D;&amp;#x7F6E;&amp;#x66F4;&amp;#x6539;&amp;#x81EA;&amp;#x5DF1;&amp;#x7684;&amp;#x914D;&amp;#x7F6E;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-sec-5&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-5&quot;&gt;&amp;#x4E00;&amp;#x4E9B;&amp;#x95EE;&amp;#x9898;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-5&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-sec-5-1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-5-1&quot;&gt;Org-mode &amp;#x56FE;&amp;#x7247;&amp;#x63D2;&amp;#x5165;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-5-1&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x5B89;&amp;#x88C5;&lt;a href=&quot;https://github.com/CodeFalling/hexo-asset-image&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-asset-image&lt;/a&gt;&amp;#xFF0C; &amp;#x5B89;&amp;#x88C5;&amp;#x540E;&amp;#x5728;.md &amp;#x6587;&amp;#x4EF6;&amp;#x4E2D;&amp;#x63D2;&amp;#x5165;&amp;#x56FE;&amp;#x7247;&amp;#x6CA1;&amp;#x6709;&amp;#x95EE;&amp;#x9898;&amp;#xFF0C;&amp;#x5728; org &amp;#x4E2D;&amp;#x63D2;&amp;#x5165;&amp;#x6709;&amp;#x95EE;&amp;#x9898;
+&lt;/li&gt;
+&lt;li&gt;Org &amp;#x4E2D;&amp;#x63D2;&amp;#x5165;&amp;#x56FE;&amp;#x7247;&amp;#x6216;&amp;#x8005;&amp;#x94FE;&amp;#x63A5;&amp;#x683C;&amp;#x5F0F;&amp;#x5982;&amp;#x4E0B;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[[file:filedir/file OR html adress]]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x6539;&amp;#x53D8;&amp;#x56FE;&amp;#x7247;&amp;#x5927;&amp;#x5C0F;&amp;#xFF0C;&amp;#x4F4D;&amp;#x7F6E;&amp;#xFF0C;&amp;#x52A0;&amp;#x5165;&amp;#x56FE;&amp;#x7247;&amp;#x8BF4;&amp;#x660E;&amp;#x53EF;&amp;#x589E;&amp;#x52A0;&amp;#x4EE5;&amp;#x4E0B;&amp;#x4EE3;&amp;#x7801;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#+CAPTION: title with figure number
+#+ATTR_HTML: :width 200px :align left :title The tile of picture without figure number&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;footnotes&quot;&gt;
+&lt;h2 class=&quot;footnotes&quot;&gt;Footnotes: &lt;/h2&gt;
+&lt;div id=&quot;text-footnotes&quot;&gt;
+
+&lt;div class=&quot;footdef&quot;&gt;&lt;sup&gt;&lt;a id=&quot;fn.1&quot; name=&quot;fn.1&quot; class=&quot;footnum&quot; href=&quot;#fnr.1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;p class=&quot;footpara&quot;&gt;
+&lt;a href=&quot;https://ckjoker.github.io/2015/01/27/Linux-github-hexo-blog/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://ckjoker.github.io/2015/01/27/Linux-github-hexo-blog/&lt;/a&gt;
+&lt;/p&gt;&lt;/div&gt;
+
+&lt;div class=&quot;footdef&quot;&gt;&lt;sup&gt;&lt;a id=&quot;fn.2&quot; name=&quot;fn.2&quot; class=&quot;footnum&quot; href=&quot;#fnr.2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; &lt;p class=&quot;footpara&quot;&gt;
+&lt;a href=&quot;http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/&lt;/a&gt;
+&lt;/p&gt;&lt;/div&gt;
+
+&lt;div class=&quot;footdef&quot;&gt;&lt;sup&gt;&lt;a id=&quot;fn.3&quot; name=&quot;fn.3&quot; class=&quot;footnum&quot; href=&quot;#fnr.3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; &lt;p class=&quot;footpara&quot;&gt;
+&lt;a href=&quot;http://mritd.me/2015/12/31/Github-%E6%90%AD%E5%BB%BA-Hexo-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://mritd.me/2015/12/31/Github-%E6%90%AD%E5%BB%BA-Hexo-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/&lt;/a&gt;
+&lt;/p&gt;&lt;/div&gt;
+
+&lt;div class=&quot;footdef&quot;&gt;&lt;sup&gt;&lt;a id=&quot;fn.4&quot; name=&quot;fn.4&quot; class=&quot;footnum&quot; href=&quot;#fnr.4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; &lt;p class=&quot;footpara&quot;&gt;
+&lt;a href=&quot;https://github.com/CodeFalling&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/CodeFalling&lt;/a&gt;
+&lt;/p&gt;&lt;/div&gt;
+
+&lt;div class=&quot;footdef&quot;&gt;&lt;sup&gt;&lt;a id=&quot;fn.5&quot; name=&quot;fn.5&quot; class=&quot;footnum&quot; href=&quot;#fnr.5&quot;&gt;5&lt;/a&gt;&lt;/sup&gt; &lt;p class=&quot;footpara&quot;&gt;
+&lt;a href=&quot;https://github.com/zilongshanren&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/zilongshanren&lt;/a&gt;
+&lt;/p&gt;&lt;/div&gt;
+
+
+&lt;/div&gt;
+&lt;/div&gt;
+Last Updated 2016-03-12 Sat 14:50 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 24.5.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 8.2.10)
+</content>
+    
+    <summary type="html">
+    
+      &lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;&amp;#x5199;&amp;#x5728;&amp;#x524D;&amp;#x9762;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x957F;&amp;#x4E45;&amp;#x4EE5;&amp;#x6765;&amp;#xFF0C;&amp;#x4E00;&amp;#x76F4;&amp;#x60F3;&amp;#x5EFA;&amp;#x7ACB;&amp;#x81EA;&amp;#x5DF1;&amp;#x7684;&amp;#x535A;&amp;#x5BA2;&amp;#xFF0C;&amp;#x4ECA;&amp;#x5E74;&amp;#x5F00;&amp;#x59CB;&amp;#x5B66;&amp;#x4E60; Emacs&amp;#xFF0C;&amp;#x5076;&amp;#x9047;&amp;#x51E0;&amp;#x4F4D;&amp;#x5927;&amp;#x795E;&amp;#x7528; Hexo &amp;#x5EFA;&amp;#x7ACB;&amp;#x535A;&amp;#x5BA2;&amp;#xFF0C;&amp;#x4E8E;&amp;#x662F;&amp;#x4E5F;&amp;#x52A8;&amp;#x624B;&amp;#x642D;&amp;#x5EFA;&amp;#x81EA;&amp;#x5DF1;&amp;#x7684;&amp;#x535A;&amp;#x5BA2;&amp;#xFF0C;&amp;#x8BB0;&amp;#x5F55;&amp;#x5B66;&amp;#x4E60;&amp;#x8FC7;&amp;#x7A0B;&amp;#xFF0C;&amp;#x8BB0;&amp;#x5F55;&amp;#x5411;&amp;#x6570;&amp;#x636E;&amp;#x79D1;&amp;#x5B66;&amp;#x8F6C;&amp;#x578B;&amp;#x5B66;&amp;#x4E60;&amp;#x70B9;&amp;#x6EF4;
+&lt;/li&gt;
+&lt;li&gt;&amp;#x672C;&amp;#x6587;&amp;#x7B80;&amp;#x8FF0;&amp;#x7528; Org-mode &amp;#x5199;&amp;#x535A;&amp;#x5BA2;&amp;#xFF0C;&amp;#x901A;&amp;#x8FC7; Hexo &amp;#x642D;&amp;#x5EFA;&amp;#x535A;&amp;#x5BA2;&amp;#x7684;&amp;#x8FC7;&amp;#x7A0B;&amp;#xFF0C;&amp;#x6211;&amp;#x7684;&amp;#x535A;&amp;#x5BA2;&amp;#x89C1;&lt;a href=&quot;http://lengyueyang.github.io/&quot;&gt;&amp;#x4E00;&amp;#x5BB6;&amp;#x4E4B;&amp;#x8A00;&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
+    
+    
+      <category term="Blog" scheme="http://lengyueyang.github.io/tags/Blog/"/>
+    
+      <category term="Github" scheme="http://lengyueyang.github.io/tags/Github/"/>
+    
+      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
+    
+      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Use org-mode to make slide [用 org-mode 做幻灯]</title>
+    <link href="http://lengyueyang.github.io/2016/03/04/Use%20org-mode%20to%20make%20presentation/"/>
+    <id>http://lengyueyang.github.io/2016/03/04/Use org-mode to make presentation/</id>
+    <published>2016-03-04T00:00:00.000Z</published>
+    <updated>2016-03-07T00:14:46.087Z</updated>
+    
+    <content type="html">
+
+&lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;&amp;#x7F18;&amp;#x7531;&amp;#xFF1A;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x4E4B;&amp;#x524D;&amp;#x505A;&amp;#x5E7B;&amp;#x706F;&amp;#x4E00;&amp;#x76F4;&amp;#x7528; powerpoint&amp;#xFF0C;&amp;#x53D7;&amp;#x9650;&amp;#x4E8E;&amp;#x5404;&amp;#x79CD;&amp;#x683C;&amp;#x5F0F;&amp;#x8C03;&amp;#x6574;&amp;#xFF0C;&amp;#x4E4B;&amp;#x540E;&amp;#x63A5;&amp;#x89E6;&amp;#x5230;&amp;#x4E86; latex&amp;#xFF0C;&amp;#x5F00;&amp;#x59CB;&amp;#x7528; beamer &amp;#x505A;&amp;#x5E7B;&amp;#x706F;
+&lt;/li&gt;
+&lt;li&gt;&amp;#x6700;&amp;#x8FD1;&amp;#x8FF7;&amp;#x604B;&amp;#x4E0A;&amp;#x4E86; Reproducible Research&amp;#xFF0C;&amp;#x7528; org-mode &amp;#x8FDB;&amp;#x884C;&amp;#x65F6;&amp;#x95F4;&amp;#x7BA1;&amp;#x7406;&amp;#x3001;&amp;#x5199; blog&amp;#xFF0C;&amp;#x6070;&amp;#x5DE7;&amp;#x6700;&amp;#x8FD1;&amp;#x9700;&amp;#x8981;&amp;#x505A;&amp;#x5E7B;&amp;#x706F;&amp;#xFF0C;&amp;#x672C;&amp;#x6587;&amp;#x8BB0;&amp;#x5F55;&amp;#x7528; org-mode &amp;#x8FDB;&amp;#x884C;&amp;#x5199;&amp;#x505A;&amp;#x5E7B;&amp;#x706F;&amp;#x7684;&amp;#x8FC7;&amp;#x7A0B;&amp;#x4EE5;&amp;#x53CA;&amp;#x6CE8;&amp;#x610F;&amp;#x4E8B;&amp;#x9879;,&amp;#x672C;&amp;#x6587;&amp;#x793A;&amp;#x4F8B;&amp;#x89C1;&lt;a href=&quot;https://github.com/lengyueyang/org-beamer&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;org-beamer&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-sec-2&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-2&quot;&gt;&amp;#x914D;&amp;#x7F6E;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-2&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Org-mode &amp;#x505A;&amp;#x5E7B;&amp;#x706F;&amp;#x5B9E;&amp;#x9645;&amp;#x4E0A;&amp;#x662F;&amp;#x7528; org-mode &amp;#x5199;&amp;#x505A;&amp;#xFF0C;&amp;#x8F6C;&amp;#x6362;&amp;#x6210; latex &amp;#x7684; beamer&amp;#xFF0C;&amp;#x9274;&amp;#x4E8E;&amp;#x4EE5;&amp;#x540E;&amp;#x53EF;&amp;#x80FD;&amp;#x4F1A;&amp;#x7528;&amp;#x5230;&amp;#x4E2D;&amp;#x6587;&amp;#xFF0C;&amp;#x56E0;&amp;#x6B64;&amp;#x7528; xelatex &amp;#x7F16;&amp;#x8BD1; tex &amp;#x6587;&amp;#x4EF6;
+&lt;/li&gt;
+&lt;li&gt;&amp;#x5BFC;&amp;#x51FA;&amp;#x5FEB;&amp;#x6377;&amp;#x952E;&amp;#xFF1A;SPC e l P&amp;#xFF0C;&amp;#x66F4;&amp;#x6539; tex &amp;#x9ED8;&amp;#x8BA4;&amp;#x7F16;&amp;#x8BD1;&amp;#x5F15;&amp;#x64CE;&amp;#xFF0C;&amp;#x6211;&amp;#x5B89;&amp;#x88C5;&amp;#x7684;&amp;#x662F; Tex live &amp;#x7248;&amp;#x672C;&amp;#xFF0C;&amp;#x5B89;&amp;#x88C5;&amp;#x8BE6;&amp;#x60C5;&amp;#x89C1;&lt;sup&gt;&lt;a id=&quot;fnr.1&quot; name=&quot;fnr.1&quot; class=&quot;footref&quot; href=&quot;#fn.1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&amp;#xFF0C;&amp;#x66F4;&amp;#x6539;&amp;#x5F15;&amp;#x64CE;&amp;#x53EF;&amp;#x53C2;&amp;#x7167;&lt;sup&gt;&lt;a id=&quot;fnr.2&quot; name=&quot;fnr.2&quot; class=&quot;footref&quot; href=&quot;#fn.2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; (&amp;#x6211;&amp;#x7684;&amp;#x5E94;&amp;#x8BE5;&amp;#x662F;&amp;#x66F4;&amp;#x6539; latexmk.pl &amp;#x6587;&amp;#x4EF6;&amp;#x4E2D;&amp;#x7684; pdflatex &amp;#x4E3A; xelatex&amp;#xFF0C;&amp;#x8FD9;&amp;#x4E00;&amp;#x6B65;&amp;#x8BB0;&amp;#x4E0D;&amp;#x6E05;&amp;#x695A;&amp;#x4E86;)
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-sec-3&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-3&quot;&gt;Org-mode &amp;#x505A;&amp;#x5E7B;&amp;#x706F;&amp;#x8FC7;&amp;#x7A0B;&amp;#x7B80;&amp;#x4ECB;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-3&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-sec-3-1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-3-1&quot;&gt;Org-mode Beamer &amp;#x6A21;&amp;#x5F0F;&amp;#x8BBE;&amp;#x7F6E;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-3-1&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#+TITLE:  Multiple therapeutic effects of progranulin on experimental acute ischaemic stroke
+#+AUTHOR: Xiaowei Mao
+#+EMAIL:  maoweirm@126.com
+#+BEAMER_HEADER: \date[March 4$^{th}$, 2016]{March 4$^{th}$, 2016 \\ \vskip 0.5cm \scriptsize{Brain. 2015 Jul;138(Pt 7):1932-48.}}
+#+BEAMER_HEADER: \title[Progranulin on ischemic stroke]{Multiple therapeutic effects of progranulin on experimental acute ischaemic stroke}
+#+BEAMER_HEADER: \institute[Pharmaron]{Pharmacology, Pharmaron} 
+#+OPTIONS: H:2 num:t toc:1 \n:nil @:t ::t |:t ^:t -:t f:t *:t &amp;lt;:t
+#+OPTIONS: TeX:t LaTeX:nil skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+startup: beamer
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [bigger]
+#+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
+#+BEAMER_FRAME_LEVEL: 2
+#+LaTeX_HEADER: \usetheme{CambridgeUS}
+#+LaTeX_HEADER: \AtBeginSection{\begin{frame}{Outline}   \tableofcontents[currentsection] \end{frame} }
+#+LaTeX_HEADER: \setbeamertemplate{navigation symbols}{}
+#+LaTeX_HEADER: \renewcommand\maketitle{\frame[plain]{\titlepage}}
+#+LaTeX_HEADER: \usepackage{fontspec}
+#+LaTeX_HEADER: \usepackage{xeCJK}
+#+LaTeX_HEADER: \setmainfont{Times New Roman}
+#+LaTeX_HEADER: \setsansfont{Arial}
+#+LaTeX_HEADER: \setmonofont{Courier Std}
+#+LaTeX_HEADER: \setCJKmainfont[BoldFont={ },ItalicFont={ }]{WenQuanYi Micro Hei}
+#+LaTeX_HEADER: \setCJKsansfont{WenQuanYi Micro Hei}
+#+LaTeX_HEADER: \setCJKmonofont{WenQuanYi Micro Hei Mono} 
+#+LaTeX_HEADER: \graphicspath{pic file folder}
+#+BEAMER_HEADER: %\logo{\includegraphics[height=5mm]{logo.png}}
+#+LaTeX_HEADER: \usepackage[backend = biber, natbib=true, style = science, sorting = none]{biblatex}
+#+LaTeX_HEADER: \addbibresource{Pharmaron.bib}
+#+LaTeX_HEADER: \AtBeginBibliography{\footnotesize}
+#+LaTeX_HEADER: \setbeamertemplate{bibliography item}[text]
+#+LaTeX_HEADER: \usepackage[none]{hyphenat}
+#+LaTeX_HEADER: \usepackage[abs]{overpic}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x5728;&amp;#x5E7B;&amp;#x706F;&amp;#x9996;&amp;#x9875;&amp;#x53CA;&amp;#x9875;&amp;#x811A;&amp;#x77ED;&amp;#x6807;&amp;#x9898;&amp;#x3001;&amp;#x65F6;&amp;#x95F4;&amp;#x4EE5;&amp;#x53CA;&amp;#x7CFB;&amp;#x6240;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#+BEAMER_HEADER: \date[March 4$^{th}$, 2016]{March 4$^{th}$, 2016 \\ \vskip 0.5cm \scriptsize{Brain. 2015 Jul;138(Pt 7):1932-48.}}
+#+BEAMER_HEADER: \title[Progranulin on ischemic stroke]{Multiple therapeutic effects of progranulin on experimental acute ischaemic stroke}
+#+BEAMER_HEADER: \institute[Pharmaron]{Pharmacology, Pharmaron}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x5E38;&amp;#x89C4;&amp;#x8BBE;&amp;#x7F6E;&amp;#xFF0C;&amp;#x6CE8;&amp;#x610F; H&amp;#xFF1A;2 &amp;#x8868;&amp;#x793A;&amp;#x76EE;&amp;#x5F55;&amp;#x4E24;&amp;#x5C42;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#+OPTIONS: H:2 num:t toc:1 \n:nil @:t ::t |:t ^:t -:t f:t *:t &amp;lt;:t
+#+OPTIONS: TeX:t LaTeX:nil skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+startup: beamer
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [bigger]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Beamer &amp;#x4E3B;&amp;#x9898;&amp;#x9009;&amp;#x62E9;&amp;#xFF0C;&amp;#x5728;&amp;#x6BCF;&amp;#x4E2A; section &amp;#x4E4B;&amp;#x524D;&amp;#x52A0;&amp;#x5165;&amp;#x8FD9;&amp;#x4E2A; section &amp;#x7684;&amp;#x76EE;&amp;#x5F55;&amp;#xFF0C;&amp;#x6807;&amp;#x9898;&amp;#x9875;&amp;#x53BB;&amp;#x6389;&amp;#x9875;&amp;#x7709;&amp;#x548C;&amp;#x9875;&amp;#x811A;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#+LaTeX_HEADER: \usetheme{CambridgeUS}
+#+LaTeX_HEADER: \AtBeginSection{\begin{frame}{Outline}   \tableofcontents[currentsection] \end{frame} }
+#+LaTeX_HEADER: \setbeamertemplate{navigation symbols}{}
+#+LaTeX_HEADER: \renewcommand\maketitle{\frame[plain]{\titlepage}}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x8BBE;&amp;#x7F6E;&amp;#x5B57;&amp;#x4F53;&amp;#xFF0C;&amp;#x7528; fontspec &amp;#x548C; xeCJK &amp;#x5305;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#+LaTeX_HEADER: \usepackage{fontspec}
+#+LaTeX_HEADER: \usepackage{xeCJK}
+#+LaTeX_HEADER: \setmainfont{Times New Roman}
+#+LaTeX_HEADER: \setsansfont{Arial}
+#+LaTeX_HEADER: \setmonofont{Courier Std}
+#+LaTeX_HEADER: \setCJKmainfont[BoldFont={ },ItalicFont={ }]{WenQuanYi Micro Hei}
+#+LaTeX_HEADER: \setCJKsansfont{WenQuanYi Micro Hei}
+#+LaTeX_HEADER: \setCJKmonofont{WenQuanYi Micro Hei Mono}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x9ED8;&amp;#x8BA4;&amp;#x63D2;&amp;#x5165;&amp;#x56FE;&amp;#x7247;&amp;#x4F4D;&amp;#x7F6E;:
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#+LaTeX_HEADER: \graphicspath{pic file folder}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x53C2;&amp;#x8003;&amp;#x6587;&amp;#x732E;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#+BEAMER_HEADER: %\logo{\includegraphics[height=5mm]{logo.png}}
+#+LaTeX_HEADER: \usepackage[backend = biber, natbib=true, style = science, sorting = none]{biblatex}
+#+LaTeX_HEADER: \addbibresource{Pharmaron.bib}
+#+LaTeX_HEADER: \AtBeginBibliography{\footnotesize}
+#+LaTeX_HEADER: \setbeamertemplate{bibliography item}[text]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x53D6;&amp;#x6D88;&amp;#x65AD;&amp;#x8BCD;&amp;#xFF0C;overpic &amp;#x5305;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#+LaTeX_HEADER: \usepackage[none]{hyphenat}
+#+LaTeX_HEADER: \usepackage[abs]{overpic}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-3-2&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-3-2&quot;&gt;&amp;#x63D2;&amp;#x5165;&amp;#x5C0F;&amp;#x6807;&amp;#x9898;&amp;#x53CA;&amp;#x5206;&amp;#x9875;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-3-2&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;*** A block                                                           :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.6
+:END:
+- A stroke is a medical emergency in which the blood supply to any portion of the brain is interrupted or reduced.
+\vspace{0.5cm}
+- Alternative names: Cerebrovascular accident/ disease (CVA), Cerebral infarction, Cerebral hemorrhage.
+*** picture                                                         :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
+\includegraphics[width=4.5cm]{b1} \newline
+\centering \scriptsize{The Circle of Willis Anatomy}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-3-3&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-3-3&quot;&gt;&amp;#x63D2;&amp;#x5165;&amp;#x591A;&amp;#x5F20;&amp;#x56FE;&amp;#x7247;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-3-3&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;\begin{overpic}[height=6cm, width=12cm]{b2}
+\put(20,0){\visible&amp;lt;2&amp;gt;{\includegraphics[height=6cm, width=5.5cm]{b6}}}
+\put(200,0){\visible&amp;lt;2&amp;gt;{\includegraphics[height=6cm, width=4.5cm]{b3}}}
+\put(0,0){\visible&amp;lt;4&amp;gt;{\includegraphics[height=6cm, width=6.5cm]{b4}}}
+\put(172,0){\visible&amp;lt;4&amp;gt;{\includegraphics[height=6cm, width=6cm]{b5}}}
+\end{overpic}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-3-4&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-3-4&quot;&gt;&amp;#x63D2;&amp;#x5165; block&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-3-4&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;***                                                                 :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.6
+:END:
+\includegraphics[height=5cm,width=\textwidth]{b10}
+*** \pause \small Stroke therapeutic strategy                 :B_block:BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.4
+:BEAMER_env: block
+:END:
+\begin{itemize}
+\item \footnotesize Broaden the therapeutic time window
+\begin{itemize}
+ \item \scriptsize The new thrombolytics
+ \item \scriptsize Neuroprotection agents-\emph{\textbf{progranulin}}
+\end{itemize}
+\item \footnotesize Therapy is recovery stage
+\begin{itemize}
+ \item \scriptsize Neuroprotection agents
+ \item \scriptsize Stem cell therapy
+ \item \scriptsize Chinese traditional medicine
+ \item \scriptsize Acupuncture
+ \item \scriptsize ......
+\end{itemize}
+\end{itemize}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-3-5&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-3-5&quot;&gt;&amp;#x63D2;&amp;#x5165;&amp;#x53C2;&amp;#x8003;&amp;#x6587;&amp;#x732E;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-3-5&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;** References
+\tiny
+\cite{moretti2015neuroprotection} \cite{george2015novel} \cite{butcher2010acute} \cite{hacke2008thrombolysis} \cite{kanazawa2011biochemical} \cite{kanazawa2011inhibition} \cite{nguyen2013progranulin} \cite{o20061}
+\printbibliography[heading = none]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-4&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-4&quot;&gt;&amp;#x4E00;&amp;#x4E9B;&amp;#x95EE;&amp;#x9898;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-4&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-sec-4-1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-4-1&quot;&gt;&amp;#x53C2;&amp;#x8003;&amp;#x6587;&amp;#x732E;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-4-1&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x9ED8;&amp;#x8BA4;&amp;#x7F16;&amp;#x8BD1;&amp;#x5FEB;&amp;#x6377;&amp;#x952E;&amp;#x4E0D;&amp;#x80FD;&amp;#x7F16;&amp;#x8BD1;&amp;#x53C2;&amp;#x8003;&amp;#x6587;&amp;#x732E;&amp;#xFF0C;&amp;#x5728;&amp;#x914D;&amp;#x7F6E;&amp;#x6587;&amp;#x4EF6;&amp;#x4E2D;&amp;#x52A0;&amp;#x5165;&amp;#x4E00;&amp;#x4E0B;&amp;#x4EE3;&amp;#x7801;&amp;#x5373;&amp;#x53EF;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight lisp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;setq&lt;/span&gt; org-latex-pdf-process&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;quoted&quot;&gt;&amp;apos;(&lt;span class=&quot;string&quot;&gt;&amp;quot;xelatex -interaction nonstopmode -output-directory %o %f&amp;quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;biber %b&amp;quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;xelatex -interaction nonstopmode -output-directory %o %f&amp;quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;xelatex -interaction nonstopmode -output-directory %o %f&amp;quot;&lt;/span&gt;)&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x6539;&amp;#x53D8;&amp;#x53C2;&amp;#x8003;&amp;#x6587;&amp;#x732E;&amp;#x5B57;&amp;#x4F53;&amp;#x5927;&amp;#x5C0F;,&amp;#x52A0;&amp;#x5165;&amp;#x4E00;&amp;#x4E0B;&amp;#x4EE3;&amp;#x7801;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;\AtBeginBibliography{\tiny}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-4-2&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-4-2&quot;&gt;&amp;#x811A;&amp;#x6CE8;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-4-2&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x5982;&amp;#x679C;&amp;#x6587;&amp;#x7AE0;&amp;#x67D0;&amp;#x4E00;&amp;#x9875;&amp;#x6709;&amp;#x811A;&amp;#x6CE8;&amp;#xFF0C;&amp;#x63D2;&amp;#x5165;\footfullcite{&amp;#x811A;&amp;#x6CE8;&amp;#x5185;&amp;#x5BB9;}&amp;#x5373;&amp;#x53EF;
+&lt;/li&gt;
+&lt;li&gt;&amp;#x5982;&amp;#x679C;&amp;#x811A;&amp;#x6CE8;&amp;#x8FDE;&amp;#x7EED;&amp;#xFF0C;&amp;#x5373;&amp;#x63D2;&amp;#x5165;&amp;#x53C2;&amp;#x8003;&amp;#x6587;&amp;#x732E; 4-6&amp;#xFF0C;&amp;#x6216; 2,3&amp;#xFF0C;&amp;#x5E76;&amp;#x4E14;&amp;#x540C;&amp;#x4E00;&amp;#x9875;&amp;#x63D2;&amp;#x5165;&amp;#x4E24;&amp;#x4E2A;&amp;#x76F8;&amp;#x540C;&amp;#x811A;&amp;#x6CE8;,&amp;#x53EF;&amp;#x53C2;&amp;#x8003;&amp;#x4EE3;&amp;#x7801;&amp;#x89C1;&lt;sup&gt;&lt;a id=&quot;fnr.3&quot; name=&quot;fnr.3&quot; class=&quot;footref&quot; href=&quot;#fn.3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;, &amp;#x4E5F;&amp;#x53EF;&amp;#x5728;&amp;#x6211;&amp;#x7684; github &amp;#x4E0B;&amp;#x8F7D;&lt;a href=&quot;https://github.com/lengyueyang/org-beamer/blob/master/footnoteref.sty&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;footnoteref&lt;/a&gt;&amp;#xFF0C;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+&amp;#x7528;\usepackage{footnoteref}
+&lt;/p&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x6539;&amp;#x53D8;&amp;#x811A;&amp;#x6CE8;&amp;#x5B57;&amp;#x4F53;&amp;#x5927;&amp;#x5C0F;&amp;#xFF0C;&amp;#x52A0;&amp;#x5165;&amp;#x4E00;&amp;#x4E0B;&amp;#x4EE3;&amp;#x7801;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;\renewcommand{\footnotesize}{\tiny}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;footnotes&quot;&gt;
+&lt;h2 class=&quot;footnotes&quot;&gt;Footnotes: &lt;/h2&gt;
+&lt;div id=&quot;text-footnotes&quot;&gt;
+
+&lt;div class=&quot;footdef&quot;&gt;&lt;sup&gt;&lt;a id=&quot;fn.1&quot; name=&quot;fn.1&quot; class=&quot;footnum&quot; href=&quot;#fnr.1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;p class=&quot;footpara&quot;&gt;
+&lt;a href=&quot;http://attach3.bdwm.net/attach/boards/MathTools/M.1435670549.A/pkuthss-bootstrap-0.1.4.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://attach3.bdwm.net/attach/boards/MathTools/M.1435670549.A/pkuthss-bootstrap-0.1.4.pdf&lt;/a&gt;
+&lt;/p&gt;&lt;/div&gt;
+
+&lt;div class=&quot;footdef&quot;&gt;&lt;sup&gt;&lt;a id=&quot;fn.2&quot; name=&quot;fn.2&quot; class=&quot;footnum&quot; href=&quot;#fnr.2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; &lt;p class=&quot;footpara&quot;&gt;
+&lt;a href=&quot;http://kieranhealy.org/blog/archives/2011/01/21/exporting-org-mode-to-pdf-via-xelatex/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://kieranhealy.org/blog/archives/2011/01/21/exporting-org-mode-to-pdf-via-xelatex/&lt;/a&gt;
+&lt;/p&gt;&lt;/div&gt;
+
+&lt;div class=&quot;footdef&quot;&gt;&lt;sup&gt;&lt;a id=&quot;fn.3&quot; name=&quot;fn.3&quot; class=&quot;footnum&quot; href=&quot;#fnr.3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; &lt;p class=&quot;footpara&quot;&gt;
+&lt;a href=&quot;http://tex.stackexchange.com/questions/35673/biblatex-is-there-a-command-analogous-to-ifciteseen-but-within-one-page&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://tex.stackexchange.com/questions/35673/biblatex-is-there-a-command-analogous-to-ifciteseen-but-within-one-page&lt;/a&gt;
+&lt;/p&gt;&lt;/div&gt;
+
+
+&lt;/div&gt;
+&lt;/div&gt;
+Last Updated 2016-03-07 Mon 00:14 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 24.5.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 8.2.10)
+</content>
+    
+    <summary type="html">
+    
+      &lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;&amp;#x7F18;&amp;#x7531;&amp;#xFF1A;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x4E4B;&amp;#x524D;&amp;#x505A;&amp;#x5E7B;&amp;#x706F;&amp;#x4E00;&amp;#x76F4;&amp;#x7528; powerpoint&amp;#xFF0C;&amp;#x53D7;&amp;#x9650;&amp;#x4E8E;&amp;#x5404;&amp;#x79CD;&amp;#x683C;&amp;#x5F0F;&amp;#x8C03;&amp;#x6574;&amp;#xFF0C;&amp;#x4E4B;&amp;#x540E;&amp;#x63A5;&amp;#x89E6;&amp;#x5230;&amp;#x4E86; latex&amp;#xFF0C;&amp;#x5F00;&amp;#x59CB;&amp;#x7528; beamer &amp;#x505A;&amp;#x5E7B;&amp;#x706F;
+&lt;/li&gt;
+&lt;li&gt;&amp;#x6700;&amp;#x8FD1;&amp;#x8FF7;&amp;#x604B;&amp;#x4E0A;&amp;#x4E86; Reproducible Research&amp;#xFF0C;&amp;#x7528; org-mode &amp;#x8FDB;&amp;#x884C;&amp;#x65F6;&amp;#x95F4;&amp;#x7BA1;&amp;#x7406;&amp;#x3001;&amp;#x5199; blog&amp;#xFF0C;&amp;#x6070;&amp;#x5DE7;&amp;#x6700;&amp;#x8FD1;&amp;#x9700;&amp;#x8981;&amp;#x505A;&amp;#x5E7B;&amp;#x706F;&amp;#xFF0C;&amp;#x672C;&amp;#x6587;&amp;#x8BB0;&amp;#x5F55;&amp;#x7528; org-mode &amp;#x8FDB;&amp;#x884C;&amp;#x5199;&amp;#x505A;&amp;#x5E7B;&amp;#x706F;&amp;#x7684;&amp;#x8FC7;&amp;#x7A0B;&amp;#x4EE5;&amp;#x53CA;&amp;#x6CE8;&amp;#x610F;&amp;#x4E8B;&amp;#x9879;,&amp;#x672C;&amp;#x6587;&amp;#x793A;&amp;#x4F8B;&amp;#x89C1;&lt;a href=&quot;https://github.com/lengyueyang/org-beamer&quot;&gt;org-beamer&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
+    
+    
+      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
+    
+      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
+    
+      <category term="Beamer" scheme="http://lengyueyang.github.io/tags/Beamer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Use org-mode to GTD [用 org-mode 做时间管理 ]</title>
+    <link href="http://lengyueyang.github.io/2016/02/28/Use%20org-mode%20to%20GTD/"/>
+    <id>http://lengyueyang.github.io/2016/02/28/Use org-mode to GTD/</id>
+    <published>2016-02-28T00:00:00.000Z</published>
+    <updated>2016-04-05T15:07:28.271Z</updated>
+    
+    <content type="html">
+
+
+&lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;&amp;#x5199;&amp;#x5728;&amp;#x524D;&amp;#x9762;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x6700;&amp;#x8FD1;&amp;#x51C6;&amp;#x5907;&amp;#x5B66;&amp;#x4E60; R &amp;#x548C; Python &amp;#x8BED;&amp;#x8A00;&amp;#xFF0C;&amp;#x6BD4;&amp;#x8F83;&amp;#x4E86;&amp;#x5F88;&amp;#x591A;&amp;#x7F16;&amp;#x8F91;&amp;#x5668;&amp;#xFF0C;&amp;#x6700;&amp;#x7EC8;&amp;#x9009;&amp;#x62E9;&amp;#x4E86; Emacs&amp;#xFF0C;&amp;#x770B;&amp;#x5230;&amp;#x77E5;&amp;#x4E4E;&amp;#x4E0A;&amp;#x5F88;&amp;#x591A;&amp;#x5927;&amp;#x795E;&amp;#x63A8;&amp;#x8350; Spacemacs&amp;#xFF0C;&amp;#x51C6;&amp;#x5907;&amp;#x7528; Spacemacs &amp;#x7F16;&amp;#x5199;&amp;#x7A0B;&amp;#x5E8F;, &amp;#x540C;&amp;#x65F6;&amp;#x5EFA;&amp;#x7ACB;&amp;#x535A;&amp;#x5BA2;&amp;#xFF0C;&amp;#x8BB0;&amp;#x5F55;&amp;#x5B66;&amp;#x4E60;&amp;#x8FC7;&amp;#x7A0B;&amp;#x3002; 
+&lt;/li&gt;
+&lt;li&gt;&amp;#x9996;&amp;#x5148;&amp;#x63A5;&amp;#x89E6;&amp;#x4E86; Org-mode&amp;#xFF0C;&amp;#x7528; org-mode &amp;#x505A;&amp;#x65F6;&amp;#x95F4;&amp;#x7BA1;&amp;#x7406;&amp;#xFF0C;&amp;#x672C;&amp;#x6587;&amp;#x7B80;&amp;#x8FF0;&amp;#x6211;&amp;#x7528; org-mode &amp;#x505A;&amp;#x65F6;&amp;#x95F4;&amp;#x7BA1;&amp;#x7406;&amp;#x7684;&amp;#x6D41;&amp;#x7A0B;&amp;#x4EE5;&amp;#x53CA;&amp;#x914D;&amp;#x7F6E;&amp;#x3002;
+&lt;/li&gt;
+&lt;li&gt;&amp;#x5728;&amp;#x7528; org-mode &amp;#x4E4B;&amp;#x524D;&amp;#xFF0C;&amp;#x5E94;&amp;#x8BE5;&amp;#x6709;&amp;#x4E00;&amp;#x4E9B; Spacemacs &amp;#x53CA; Org-mode &amp;#x7684;&amp;#x4F7F;&amp;#x7528;&amp;#x7ECF;&amp;#x9A8C;&amp;#xFF08;&amp;#x53C2;&amp;#x89C1;&lt;a href=&quot;https://github.com/syl20bnr/spacemacs/blob/master/layers/org/README.org#element-insertion&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;pacemacs Keybinding&lt;/a&gt;&amp;#x548C;&lt;a href=&quot;http://www.gnu.org/software/emacs/manual/html_mono/org.html#Outlines&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org Mode Manual&lt;/a&gt;)&amp;#x3002;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-sec-2&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-2&quot;&gt;&amp;#x6211;&amp;#x7684; org-mode &amp;#x5DE5;&amp;#x4F5C;&amp;#x6D41;&amp;#x7A0B;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-2&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-sec-2-1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2-1&quot;&gt;&amp;#x5EFA;&amp;#x7ACB;&amp;#x81EA;&amp;#x5DF1;&amp;#x7684; GTD &amp;#x6587;&amp;#x4EF6;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2-1&quot;&gt;
+&lt;p&gt;
+&amp;#x53EF;&amp;#x4EE5;&amp;#x53C2;&amp;#x7167;&lt;sup&gt;&lt;a id=&quot;fnr.1&quot; name=&quot;fnr.1&quot; class=&quot;footref&quot; href=&quot;#fn.1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;, &lt;/sup&gt;&lt;sup&gt;&lt;a id=&quot;fnr.2&quot; name=&quot;fnr.2&quot; class=&quot;footref&quot; href=&quot;#fn.2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;,&amp;#x6211;&amp;#x81EA;&amp;#x5DF1;&amp;#x7684; org &amp;#x5927;&amp;#x7EB2;&amp;#x5982;&amp;#x4E0B;&amp;#xFF1A;
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight r&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#+STARTUP: overview&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#+TAGS: INFORMATICS(i) STATISTICS(s) COMPUTER(c) READING(r) PRIVATE(p) EMACS(e) MEETING(m) BLOG(g) LIFE(l)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#+STARTUP: hidestars&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;* TASKS&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:PROPERTIES:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:CATEGORY: Tasks&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:END:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# For one tasks&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;** Spacemacs                                                          :EMACS:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;** Org-mode                                                           :EMACS:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;** Python                                                       :INFORMATICS:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;** R language                                                    :STATISTICS:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;** Reading                                                          :READING:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;* Calendar&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:PROPERTIES:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:CATEGORY: Calendar&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:END:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# For appointments&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;** Daily Tasks&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;** Inbox&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;** Quick Notes&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;** Blog Ideas                                                         :BLOG:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;** &lt;span class=&quot;number&quot;&gt;2016&lt;/span&gt;                                                            :PRIVATE:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;* Projects&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:PROPERTIES:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:CATEGORY: Projects&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:END:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# With each project under it-each having their tasks (and subtasks) benath&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;* Someday/Maybe&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:PROPERTIES:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:CATEGORY: Someday/Maybe&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:END:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# For tasks that may be doon at some point&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;** Computer System                                                :COMPUTER:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;*** Tiling window manager&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Awesome-Lua/Qtile-Python/i3-C written&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;* Financial&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:PROPERTIES:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:CATEGORY: Financial&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:END:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# For all tasks related to money, bills, salart, band and so on.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;* Habits&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:PROPERTIES:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:CATEGORY: Habits&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:ARCHIVE_TIME: &lt;span class=&quot;number&quot;&gt;2016&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;06&lt;/span&gt; Wed &lt;span class=&quot;number&quot;&gt;00&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;11&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:ARCHIVE_FILE: ~/Emacs-lengyue/GTD-lengyue/GTD-lengyue.org&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:ARCHIVE_CATEGORY: Habits&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:END:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# For all the recurring tasks I want to keep to doing, and track with org-habit model.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;, ** Myself habits                                                   :PRIVATE:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;, *** Exercise                                                                &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;**** TODO First &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; six-pack abs&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;** GTD refile                                                      :PRIVATE:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;*** TODO The Schedule of Monthly&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;SCHEDULED: &amp;lt;&lt;span class=&quot;number&quot;&gt;2016&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;03&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;01&lt;/span&gt; Tue &lt;span class=&quot;number&quot;&gt;22&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;00&lt;/span&gt; +1m&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:PROPERTIES:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:LAST_REPEAT: [&lt;span class=&quot;number&quot;&gt;2016&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;02&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;16&lt;/span&gt; Tue &lt;span class=&quot;number&quot;&gt;00&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;13&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:END:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:LOGBOOK:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- State &lt;span class=&quot;string&quot;&gt;&amp;quot;DONE&amp;quot;&lt;/span&gt;       from &lt;span class=&quot;string&quot;&gt;&amp;quot;TODO&amp;quot;&lt;/span&gt;       [&lt;span class=&quot;number&quot;&gt;2016&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;02&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;16&lt;/span&gt; Tue &lt;span class=&quot;number&quot;&gt;00&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;13&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:END:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;*** TODO Review Monthly &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;SCHEDULED: &amp;lt;&lt;span class=&quot;number&quot;&gt;2016&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;03&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;02&lt;/span&gt; Wed &lt;span class=&quot;number&quot;&gt;22&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt; +1m&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:PROPERTIES:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:LAST_REPEAT: [&lt;span class=&quot;number&quot;&gt;2016&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;31&lt;/span&gt; Sun &lt;span class=&quot;number&quot;&gt;23&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;40&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:END:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:LOGBOOK:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- State &lt;span class=&quot;string&quot;&gt;&amp;quot;CANCELLED&amp;quot;&lt;/span&gt;  from &lt;span class=&quot;string&quot;&gt;&amp;quot;TODO&amp;quot;&lt;/span&gt;       [&lt;span class=&quot;number&quot;&gt;2016&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;31&lt;/span&gt; Sun &lt;span class=&quot;number&quot;&gt;23&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;40&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:END:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;*** TODO Review Weekly&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:LOGBOOK:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- State &lt;span class=&quot;string&quot;&gt;&amp;quot;DONE&amp;quot;&lt;/span&gt;       from &lt;span class=&quot;string&quot;&gt;&amp;quot;TODO&amp;quot;&lt;/span&gt;       [&lt;span class=&quot;number&quot;&gt;2016&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;02&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;21&lt;/span&gt; Sun &lt;span class=&quot;number&quot;&gt;21&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;56&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- State &lt;span class=&quot;string&quot;&gt;&amp;quot;CANCELLED&amp;quot;&lt;/span&gt;  from &lt;span class=&quot;string&quot;&gt;&amp;quot;TODO&amp;quot;&lt;/span&gt;       [&lt;span class=&quot;number&quot;&gt;2016&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;02&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;14&lt;/span&gt; Sun &lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;42&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- State &lt;span class=&quot;string&quot;&gt;&amp;quot;CANCELLED&amp;quot;&lt;/span&gt;  from &lt;span class=&quot;string&quot;&gt;&amp;quot;TODO&amp;quot;&lt;/span&gt;       [&lt;span class=&quot;number&quot;&gt;2016&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;02&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;11&lt;/span&gt; Thu &lt;span class=&quot;number&quot;&gt;09&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;59&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- State &lt;span class=&quot;string&quot;&gt;&amp;quot;CANCELLED&amp;quot;&lt;/span&gt;  from &lt;span class=&quot;string&quot;&gt;&amp;quot;TODO&amp;quot;&lt;/span&gt;       [&lt;span class=&quot;number&quot;&gt;2016&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;31&lt;/span&gt; Sun &lt;span class=&quot;number&quot;&gt;23&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;40&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- State &lt;span class=&quot;string&quot;&gt;&amp;quot;CANCELLED&amp;quot;&lt;/span&gt;  from &lt;span class=&quot;string&quot;&gt;&amp;quot;TODO&amp;quot;&lt;/span&gt;       [&lt;span class=&quot;number&quot;&gt;2016&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;25&lt;/span&gt; Mon &lt;span class=&quot;number&quot;&gt;22&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- State &lt;span class=&quot;string&quot;&gt;&amp;quot;CANCELLED&amp;quot;&lt;/span&gt;  from &lt;span class=&quot;string&quot;&gt;&amp;quot;TODO&amp;quot;&lt;/span&gt;       [&lt;span class=&quot;number&quot;&gt;2016&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;13&lt;/span&gt; Wed &lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;34&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- State &lt;span class=&quot;string&quot;&gt;&amp;quot;CANCELLED&amp;quot;&lt;/span&gt;  from &lt;span class=&quot;string&quot;&gt;&amp;quot;TODO&amp;quot;&lt;/span&gt;       [&lt;span class=&quot;number&quot;&gt;2016&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;13&lt;/span&gt; Wed &lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;34&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;CLOCK: [&lt;span class=&quot;number&quot;&gt;2016&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;04&lt;/span&gt; Mon &lt;span class=&quot;number&quot;&gt;23&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;03&lt;/span&gt;]--[&lt;span class=&quot;number&quot;&gt;2016&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;05&lt;/span&gt; Tue &lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;34&lt;/span&gt;] =&amp;gt; &lt;span class=&quot;number&quot;&gt;21&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;31&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- State &lt;span class=&quot;string&quot;&gt;&amp;quot;CANCELLED&amp;quot;&lt;/span&gt;  from &lt;span class=&quot;string&quot;&gt;&amp;quot;TODO&amp;quot;&lt;/span&gt;       [&lt;span class=&quot;number&quot;&gt;2016&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;04&lt;/span&gt; Mon &lt;span class=&quot;number&quot;&gt;22&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;41&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;:END:&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;TASKS &amp;#x7528;&amp;#x4E8E;&amp;#x8BB0;&amp;#x5F55;&amp;#x9636;&amp;#x6BB5;&amp;#x6027;&amp;#x5B66;&amp;#x4E60;&amp;#x8BA1;&amp;#x5212;&amp;#x4E0E;&amp;#x751F;&amp;#x6D3B;&amp;#x8BA1;&amp;#x5212;
+&lt;/li&gt;
+&lt;li&gt;Calendar &amp;#x6BCF;&amp;#x5929;&amp;#x8BA1;&amp;#x5212;&amp;#xFF0C;&amp;#x535A;&amp;#x5BA2;&amp;#xFF0C;&amp;#x65E5;&amp;#x5E38;&amp;#x6536;&amp;#x96C6;&amp;#x8D44;&amp;#x6599;&amp;#x7B49;
+&lt;/li&gt;
+&lt;li&gt;Projects &amp;#x5927;&amp;#x7684;&amp;#x9879;&amp;#x76EE;
+&lt;/li&gt;
+&lt;li&gt;Someday/Maybe &amp;#x53EF;&amp;#x80FD;&amp;#x672A;&amp;#x6765;&amp;#x8981;&amp;#x505A;&amp;#x7684;&amp;#x4E8B;&amp;#x60C5;
+&lt;/li&gt;
+&lt;li&gt;Financial &amp;#x4E0E; money &amp;#x76F8;&amp;#x5173;&amp;#x7684;&amp;#x4E1C;&amp;#x897F;
+&lt;/li&gt;
+&lt;li&gt;Habits &amp;#x81EA;&amp;#x5DF1;&amp;#x7684;&amp;#x4E60;&amp;#x60EF;&amp;#xFF1A;&amp;#x5982;&amp;#x953B;&amp;#x70BC;&amp;#xFF0C;&amp;#x6BCF;&amp;#x6708;&amp;#x7684;&amp;#x4E60;&amp;#x60EF;&amp;#xFF0C;&amp;#x91CD;&amp;#x8981;&amp;#x7684;&amp;#x8282;&amp;#x65E5;&amp;#x7B49;&amp;#x7B49;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-2-2&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2-2&quot;&gt;&amp;#x8BBE;&amp;#x7F6E;&amp;#x6BCF;&amp;#x4E2A;&amp;#x4EFB;&amp;#x52A1;&amp;#x7684;&amp;#x72B6;&amp;#x6001;&amp;#xFF0C;tags &amp;#x548C; priorities&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2-2&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-sec-2-2-1&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;sec-2-2-1&quot;&gt;&amp;#x8BBE;&amp;#x7F6E;&amp;#x4EFB;&amp;#x52A1;&amp;#x72B6;&amp;#x6001;&amp;#xFF0C;&amp;#x6211;&amp;#x7528;&amp;#x4EE5;&amp;#x4E0B; todo tiems&amp;#xFF0C;&amp;#x53C2;&amp;#x8003;&lt;sup&gt;&lt;a id=&quot;fnr.3&quot; name=&quot;fnr.3&quot; class=&quot;footref&quot; href=&quot;#fn.3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-2-2-1&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight lisp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;sequence&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;TODO(t)&amp;quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;NEXT(n)&amp;quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;|&amp;quot;&lt;/span&gt;  &lt;span class=&quot;string&quot;&gt;&amp;quot;DONE(d)&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;sequence&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;WAITING(w@/!)&amp;quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;SOMEDAY(s)&amp;quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;|&amp;quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;HOLD(h@/!)&amp;quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;CANCELLED(c@/!)&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;sequence&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;INBOX(i)&amp;quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;|&amp;quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;NOTE(e)&amp;quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;PHONE(p)&amp;quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;MEETING(m)&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;sequence&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;REPORT(r)&amp;quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;BUG(b)&amp;quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;KNOWNCAUSE(k)&amp;quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;|&amp;quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;FIXED(f)&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x6BCF;&amp;#x4E2A; TODO &amp;#x4EFB;&amp;#x52A1;&amp;#x6709; TODO &amp;#x548C; DONE &amp;#x4E24;&amp;#x79CD;&amp;#x72B6;&amp;#x6001;&amp;#xFF0C;NEXT &amp;#x53EA;&amp;#x51FA;&amp;#x73B0;&amp;#x5728; Project &amp;#x4E2D;
+&lt;/li&gt;
+&lt;li&gt;WAITING &amp;#x9002;&amp;#x7528;&amp;#x4E8E;&amp;#x6682;&amp;#x505C;&amp;#x4E00;&amp;#x6BB5;&amp;#x65F6;&amp;#x95F4;&amp;#x7684;&amp;#x4EFB;&amp;#x52A1;&amp;#xFF0C;SOMEDAY &amp;#x662F;&amp;#x672A;&amp;#x6765;&amp;#x67D0;&amp;#x4E00;&amp;#x5929;&amp;#x4F1A;&amp;#x5B89;&amp;#x6392;&amp;#x7684;&amp;#x5DE5;&amp;#x505A;
+&lt;/li&gt;
+&lt;li&gt;HOLD &amp;#x5B9A;&amp;#x4E49;&amp;#x4E3A;&amp;#x539F;&amp;#x6765;&amp;#x8BA1;&amp;#x5212;&amp;#x505A;&amp;#x7684;&amp;#x5DF2;&amp;#x7ECF; SCHELUDE &amp;#x7684; TODO &amp;#x5DE5;&amp;#x4F5C;&amp;#xFF0C;&amp;#x7531;&amp;#x4E8E;&amp;#x67D0;&amp;#x79CD;&amp;#x539F;&amp;#x56E0;&amp;#x4EE5;&amp;#x540E;&amp;#x518D;&amp;#x505A;&amp;#xFF0C;&amp;#x9632;&amp;#x6B62;&amp;#x5176;&amp;#x5728; Agenda &amp;#x4E2D;&amp;#x51FA;&amp;#x73B0;
+&lt;/li&gt;
+&lt;li&gt;CANCELLED &amp;#x662F;&amp;#x53D6;&amp;#x6D88;&amp;#x7684;&amp;#x4EFB;&amp;#x52A1;
+&lt;/li&gt;
+&lt;li&gt;INBOX &amp;#x662F;&amp;#x6536;&amp;#x96C6;&amp;#x7684;&amp;#x8D44;&amp;#x6599;&amp;#xFF0C;&amp;#x5F85;&amp;#x6574;&amp;#x7406;&amp;#x7684;&amp;#x4E1C;&amp;#x897F;&amp;#xFF0C;&amp;#x6BCF;&amp;#x5468; refile&amp;#xFF0C;&amp;#x800C; NOTE &amp;#x662F;&amp;#x5373;&amp;#x5174;&amp;#x60F3;&amp;#x6CD5;&amp;#xFF1A;&amp;#x5934;&amp;#x8111;&amp;#x98CE;&amp;#x66B4;
+&lt;/li&gt;
+&lt;li&gt;PHONE &amp;#x548C; MEETING &amp;#x662F;&amp;#x8BB0;&amp;#x5F55;&amp;#x5B8C;&amp;#x6210;&amp;#x4E8B;&amp;#x4EF6;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-sec-2-3&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2-3&quot;&gt;&amp;#x8BBE;&amp;#x7F6E;&amp;#x4EFB;&amp;#x52A1;&amp;#x65F6;&amp;#x95F4;&amp;#xFF0C;&amp;#x8BA1;&amp;#x5212;&amp;#x548C;&amp;#x622A;&amp;#x6B62;&amp;#x65F6;&amp;#x95F4;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2-3&quot;&gt;
+&lt;p&gt;
+&amp;#x8BE6;&amp;#x60C5;&amp;#x53EF;&amp;#x89C1;&lt;sup&gt;&lt;a id=&quot;fnr.4&quot; name=&quot;fnr.4&quot; class=&quot;footref&quot; href=&quot;#fn.4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-sec-2-4&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2-4&quot;&gt;&amp;#x6267;&amp;#x884C;&amp;#x8BA1;&amp;#x5212;&amp;#xFF0C;&amp;#x5FC5;&amp;#x8981;&amp;#x65F6;&amp;#x8BB0;&amp;#x5F55;&amp;#x6BCF;&amp;#x4E2A;&amp;#x4EFB;&amp;#x52A1;&amp;#x7684;&amp;#x65F6;&amp;#x95F4;&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-sec-2-5&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2-5&quot;&gt;&amp;#x5468;&amp;#x56DE;&amp;#x987E;&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;footnotes&quot;&gt;
+&lt;h2 class=&quot;footnotes&quot;&gt;Footnotes: &lt;/h2&gt;
+&lt;div id=&quot;text-footnotes&quot;&gt;
+
+&lt;div class=&quot;footdef&quot;&gt;&lt;sup&gt;&lt;a id=&quot;fn.1&quot; name=&quot;fn.1&quot; class=&quot;footnum&quot; href=&quot;#fnr.1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;p class=&quot;footpara&quot;&gt;
+&lt;a href=&quot;http://orgmode.org/worg/org-gtd-etc.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://orgmode.org/worg/org-gtd-etc.html&lt;/a&gt;
+&lt;/p&gt;&lt;/div&gt;
+
+&lt;div class=&quot;footdef&quot;&gt;&lt;sup&gt;&lt;a id=&quot;fn.2&quot; name=&quot;fn.2&quot; class=&quot;footnum&quot; href=&quot;#fnr.2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; &lt;p class=&quot;footpara&quot;&gt;
+&lt;a href=&quot;http://members.optusnet.com.au/~charles57/GTD/gtd_workflow.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://members.optusnet.com.au/~charles57/GTD/gtd_workflow.html&lt;/a&gt;
+&lt;/p&gt;&lt;/div&gt;
+
+&lt;div class=&quot;footdef&quot;&gt;&lt;sup&gt;&lt;a id=&quot;fn.3&quot; name=&quot;fn.3&quot; class=&quot;footnum&quot; href=&quot;#fnr.3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; &lt;p class=&quot;footpara&quot;&gt;
+&lt;a href=&quot;http://doc.norang.ca/org-mode.html#HowToUseThisDocument&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://doc.norang.ca/org-mode.html#HowToUseThisDocument&lt;/a&gt;
+&lt;/p&gt;&lt;/div&gt;
+
+&lt;div class=&quot;footdef&quot;&gt;&lt;sup&gt;&lt;a id=&quot;fn.4&quot; name=&quot;fn.4&quot; class=&quot;footnum&quot; href=&quot;#fnr.4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; &lt;p class=&quot;footpara&quot;&gt;
+&lt;a href=&quot;http://orgmode.org/manual/Dates-and-times.html#Dates-and-times&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://orgmode.org/manual/Dates-and-times.html#Dates-and-times&lt;/a&gt;
+&lt;/p&gt;&lt;/div&gt;
+
+
+&lt;/div&gt;
+&lt;/div&gt;
+Last Updated 2016-04-05 Tue 23:07 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 24.5.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 8.2.10)
+</content>
+    
+    <summary type="html">
+    
+      &lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;&amp;#x5199;&amp;#x5728;&amp;#x524D;&amp;#x9762;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&amp;#x6700;&amp;#x8FD1;&amp;#x51C6;&amp;#x5907;&amp;#x5B66;&amp;#x4E60; R &amp;#x548C; Python &amp;#x8BED;&amp;#x8A00;&amp;#xFF0C;&amp;#x6BD4;&amp;#x8F83;&amp;#x4E86;&amp;#x5F88;&amp;#x591A;&amp;#x7F16;&amp;#x8F91;&amp;#x5668;&amp;#xFF0C;&amp;#x6700;&amp;#x7EC8;&amp;#x9009;&amp;#x62E9;&amp;#x4E86; Emacs&amp;#xFF0C;&amp;#x770B;&amp;#x5230;&amp;#x77E5;&amp;#x4E4E;&amp;#x4E0A;&amp;#x5F88;&amp;#x591A;&amp;#x5927;&amp;#x795E;&amp;#x63A8;&amp;#x8350; Spacemacs&amp;#xFF0C;&amp;#x51C6;&amp;#x5907;&amp;#x7528; Spacemacs &amp;#x7F16;&amp;#x5199;&amp;#x7A0B;&amp;#x5E8F;, &amp;#x540C;&amp;#x65F6;&amp;#x5EFA;&amp;#x7ACB;&amp;#x535A;&amp;#x5BA2;&amp;#xFF0C;&amp;#x8BB0;&amp;#x5F55;&amp;#x5B66;&amp;#x4E60;&amp;#x8FC7;&amp;#x7A0B;&amp;#x3002; 
+&lt;/li&gt;
+&lt;li&gt;&amp;#x9996;&amp;#x5148;&amp;#x63A5;&amp;#x89E6;&amp;#x4E86; Org-mode&amp;#xFF0C;&amp;#x7528; org-mode &amp;#x505A;&amp;#x65F6;&amp;#x95F4;&amp;#x7BA1;&amp;#x7406;&amp;#xFF0C;&amp;#x672C;&amp;#x6587;&amp;#x7B80;&amp;#x8FF0;&amp;#x6211;&amp;#x7528; org-mode &amp;#x505A;&amp;#x65F6;&amp;#x95F4;&amp;#x7BA1;&amp;#x7406;&amp;#x7684;&amp;#x6D41;&amp;#x7A0B;&amp;#x4EE5;&amp;#x53CA;&amp;#x914D;&amp;#x7F6E;&amp;#x3002;
+&lt;/li&gt;
+&lt;li&gt;&amp;#x5728;&amp;#x7528; org-mode &amp;#x4E4B;&amp;#x524D;&amp;#xFF0C;&amp;#x5E94;&amp;#x8BE5;&amp;#x6709;&amp;#x4E00;&amp;#x4E9B; Spacemacs &amp;#x53CA; Org-mode &amp;#x7684;&amp;#x4F7F;&amp;#x7528;&amp;#x7ECF;&amp;#x9A8C;&amp;#xFF08;&amp;#x53C2;&amp;#x89C1;&lt;a href=&quot;https://github.com/syl20bnr/spacemacs/blob/master/layers/org/README.org#element-insertion&quot;&gt;pacemacs Keybinding&lt;/a&gt;&amp;#x548C;&lt;a href=&quot;http://www.gnu.org/software/emacs/manual/html_mono/org.html#Outlines&quot;&gt;Org Mode Manual&lt;/a&gt;)&amp;#x3002;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
+    
+    
+      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
+    
+      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
+    
+      <category term="GTD" scheme="http://lengyueyang.github.io/tags/GTD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spacemacs Learning [Spacemacs 学习]</title>
+    <link href="http://lengyueyang.github.io/2016/02/14/Spacemacs%20Learning/"/>
+    <id>http://lengyueyang.github.io/2016/02/14/Spacemacs Learning/</id>
+    <published>2016-02-14T00:00:00.000Z</published>
+    <updated>2016-03-07T00:14:05.047Z</updated>
+    
+    <content type="html">
+
+
+&lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;Useful keybinding&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-sec-1-1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-1-1&quot;&gt;Memory&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-1-1&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;SPC f s Save a buffer
+&lt;/li&gt;
+&lt;li&gt;SPC f S Save all opened buffers
+&lt;/li&gt;
+&lt;li&gt;SPC b b Open or switch a buffer with helm
+&lt;/li&gt;
+&lt;li&gt;SPC T h Select a theme using a helm buffer
+&lt;/li&gt;
+&lt;li&gt;SPC f/p t To toggle the Neotree buffer press (project)
+&lt;/li&gt;
+&lt;li&gt;SPC h b Open the bookmark
+&lt;/li&gt;
+&lt;li&gt;SPC h l Resume the last helm buffers
+&lt;/li&gt;
+&lt;li&gt;SPC s L Focus the last converted search buffer
+&lt;/li&gt;
+&lt;li&gt;F3 In a helm buffer, convert a helm search buffer into a regular buffer
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-sec-2&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-2&quot;&gt;The Emacs Evil Tutor&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-2&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-sec-2-1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2-1&quot;&gt;LESSON 1&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2-1&quot;&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;The cursor is moved using either the arrow keys or the hjkl keys.
+h (left)        j (down)       k (up)            l (right)
+&lt;/li&gt;
+
+&lt;li&gt;To exit Emacs type:  &amp;lt;ESC&amp;gt; :qa! &amp;lt;ENTER&amp;gt;  to trash all changes.
+OR type:  &amp;lt;ESC&amp;gt; :wqa &amp;lt;ENTER&amp;gt;  to save the changes.
+&lt;/li&gt;
+
+&lt;li&gt;Ctrl + f Page Down
+Ctrl + b Page Up
+&lt;/li&gt;
+
+&lt;li&gt;0 Cursor to the beginging of the line
+$ Cursor to the end of the line
+&lt;/li&gt;
+
+&lt;li&gt;G Cursor to the last of the file
+nG Cursor to the n line of the file
+gg Cursor to the begin of the file, like 1G
+&lt;p&gt;
+:[Enter] followed by a line number and moves to that line number.
+N[Enter] Curosr to the N line
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;
+NOTE: Pressing &amp;lt;ESC&amp;gt; will place you in normal state or will cancel
+      an unwanted and partially completed command.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id=&quot;outline-container-sec-2-2&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2-2&quot;&gt;LESSON 2&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2-2&quot;&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;x/X To delete a character under/before the cursor in normal state type
+&lt;/li&gt;
+
+&lt;li&gt;To delete a whole line type:  dd
+&lt;/li&gt;
+
+&lt;li&gt;The format for a command in normal state is:
+
+&lt;p&gt;
+  [number]  command  object    OR    command  [number]  object
+where:
+  number - is how many times to repeat the command
+  command - is what to do, such as  d  for delete
+  object - is what the command should act upon, such as  w  for word,
+           $  for &amp;quot;to the end of line&amp;quot;, etc.
+&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;d1G, dG, d0, d$
+&lt;/li&gt;
+
+&lt;li&gt;yy Copy the line of cursokr
+nyy Copy the n line data
+&lt;/li&gt;
+
+&lt;li&gt;y1G, yG, y0, y$
+&lt;/li&gt;
+
+&lt;li&gt;p/P Paste the data from the next/before line
+&lt;/li&gt;
+
+&lt;li&gt;To undo previous actions, type:  u
+To undo the undo&amp;apos;s type:  CTRL-R
+Repeat the last opeartion: .
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id=&quot;outline-container-sec-2-3&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2-3&quot;&gt;LESSON 3&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2-3&quot;&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;To replace text that has already been deleted, type  p  this puts the
+deleted text AFTER the cursor (if a line was deleted it will go on the
+line below the cursor).
+&lt;/li&gt;
+
+&lt;li&gt;To replace the character under the cursor, type  r  and then the
+character which will replace the original.
+&lt;/li&gt;
+
+&lt;li&gt;The change command allows you to change the specified object from the
+cursor to the end of the object.  eg. Type  cw  to change from the
+cursor to the end of the word,  c$  to change to the end of a line.
+&lt;/li&gt;
+
+&lt;li&gt;The format for change is:
+[number]  c  object    OR    c  [number]  object
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id=&quot;outline-container-sec-2-4&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2-4&quot;&gt;LESSON 4&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2-4&quot;&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;Typing  /  followed by a phrase searches FORWARD for the phrase.
+Typing  ?  followed by a phrase searches BACKWARD for the phrase.
+After a search type  n  to find the next occurrence in the same direction
+or  N  to search in the opposite direction.
+&lt;/li&gt;
+
+&lt;li&gt;Typing  %  while the cursor is on a  (,),[,],{, or }  locates its
+matching pair.
+&lt;/li&gt;
+
+&lt;li&gt;To substitute new for the first old on a line type  :s/old/new
+To substitute new for all &amp;apos;old&amp;apos;s on a line type     :s/old/new/g
+To substitute phrases between two line #&amp;apos;s type     :#,#s/old/new/g
+To substitute all occurrences in the file type      :%s/old/new/g
+To ask for confirmation each time add &amp;apos;c&amp;apos;           :%s/old/new/gc
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id=&quot;outline-container-sec-2-5&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2-5&quot;&gt;LESSON 5&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2-5&quot;&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;:!command  executes an external command.
+
+&lt;p&gt;
+Some useful examples are:
+&lt;/p&gt;
+&lt;p&gt;
+:!ls  or  :!dir                 -  shows a directory listing.
+&lt;/p&gt;
+&lt;p&gt;
+:!rm  or  :!del FILENAME        -  removes file FILENAME.
+&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;:w FILENAME  writes the current buffer to disk with file name FILENAME.
+&lt;/li&gt;
+
+&lt;li&gt;:#,#w FILENAME  saves the lines # through # in file FILENAME.
+&lt;/li&gt;
+
+&lt;li&gt;:r FILENAME  retrieves disk file FILENAME and inserts it into the
+current buffer following the cursor position.
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id=&quot;outline-container-sec-2-6&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2-6&quot;&gt;LESSON 6&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2-6&quot;&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;Typing  o   opens a line BELOW the cursor and places the cursor on the open
+line in insert state.
+Typing a capital  O  opens the line ABOVE the line the cursor is on.
+&lt;/li&gt;
+
+&lt;li&gt;Type an  a  to insert text AFTER the character the cursor is on.
+Typing a capital  A  automatically appends text to the end of the line.
+&lt;/li&gt;
+
+&lt;li&gt;i/I Insert text at the character/Not blank
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-sec-3&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-3&quot;&gt;Python and R programming environment configuration&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-3&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-sec-3-1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-3-1&quot;&gt;Python&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-3-1&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Configure the auto-complete mode as the spacemacs layer: auto-complete
+&lt;/li&gt;
+&lt;li&gt;Replace the keybinding SPC m s i to &amp;apos;run python&amp;apos; in file package.el within python layer
+&lt;/li&gt;
+&lt;li&gt;Add the following confirmation to .spacemacs
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight lisp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;add-hook&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;inferior-python-mode-hook&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;flycheck-mode&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;add-hook&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;inferior-python-mode-hook&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;flyspell-mode&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-sec-3-2&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-3-2&quot;&gt;R&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-3-2&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Add the following confirmation to .spacemacs
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight lisp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;add-hook&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;R-mode-hook&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;smartparens-mode&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;add-hook&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;R-mode-hook&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;flycheck-mode&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;add-hook&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;R-mode-hook&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;flyspell-mode&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;add-hook&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;org-mode-hook&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;smartparens-mode&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;add-hook&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;inferior-ess-mode-hook&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;company-mode&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;add-hook&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;inferior-ess-mode-hook&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;smartparens-mode&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;add-hook&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;inferior-ess-mode-hook&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;flycheck-mode&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;add-hook&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;inferior-ess-mode-hook&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;flyspell-mode&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;For the R auto complete: after open the R file, then C-c C-c, reopen the R file 
+&lt;/li&gt;
+&lt;li&gt;When insert src-block with org heading, add a , before the heading, to avoid mistake
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+Last Updated 2016-03-07 Mon 00:14 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 24.5.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 8.2.10)
+</content>
+    
+    <summary type="html">
+    
+      &lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;Useful keybinding&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-sec-1-1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-1-1&quot;&gt;Memory&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-1-1&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;SPC f s Save a buffer
+&lt;/li&gt;
+&lt;li&gt;SPC f S Save all opened buffers
+&lt;/li&gt;
+&lt;li&gt;SPC b b Open or switch a buffer with helm
+&lt;/li&gt;
+&lt;li&gt;SPC T h Select a theme using a helm buffer
+&lt;/li&gt;
+&lt;li&gt;SPC f/p t To toggle the Neotree buffer press (project)
+&lt;/li&gt;
+&lt;li&gt;SPC h b Open the bookmark
+&lt;/li&gt;
+&lt;li&gt;SPC h l Resume the last helm buffers
+&lt;/li&gt;
+&lt;li&gt;SPC s L Focus the last converted search buffer
+&lt;/li&gt;
+&lt;li&gt;F3 In a helm buffer, convert a helm search buffer into a regular buffer
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
+    
+    
+      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
+    
+      <category term="Spacemacs" scheme="http://lengyueyang.github.io/tags/Spacemacs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Archlinux install and configuration [Archlinux 安装和配置]</title>
+    <link href="http://lengyueyang.github.io/2016/02/05/Archlinux%20install%20and%20configuration/"/>
+    <id>http://lengyueyang.github.io/2016/02/05/Archlinux install and configuration/</id>
+    <published>2016-02-05T00:00:00.000Z</published>
+    <updated>2016-05-28T06:23:02.561Z</updated>
+    
+    <content type="html">
+
+&lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;Archlinux install [&amp;#x5B89;&amp;#x88C5;&amp;#x7BC7;]&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-sec-1-1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-1-1&quot;&gt;Prepare for the installation&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-1-1&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Prepare the ISO of archlinux, and brasero it into USB flash disk
+&lt;/li&gt;
+
+&lt;li&gt;Partiton: use cfdisk, use the UEFI install, the mkfs
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/dev/sda1 to UEFI boot: ef00, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;G&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/dev/sda2 to &lt;span class=&quot;number&quot;&gt;119&lt;/span&gt;G&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mkfs.fat -F32 /dev/sda1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mkfs.ext4 /dev/sda2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Select mirrorlist:
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;nano -w /etc/pacman.d/mirrorlist add &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Server = http://mirrors.tuna.tsinghua.edu.cn/archlinux/&lt;span class=&quot;variable&quot;&gt;$repo&lt;/span&gt;/os/&lt;span class=&quot;variable&quot;&gt;$arch&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Server = http://mirrors.&lt;span class=&quot;number&quot;&gt;163&lt;/span&gt;.com/archlinux/&lt;span class=&quot;variable&quot;&gt;$repo&lt;/span&gt;/os/&lt;span class=&quot;variable&quot;&gt;$arch&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Wireless network link
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iwconfig to find the name of your wireless moudule: like wlan0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;then:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ip link set wlan0 up&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;wpa_supplicant -D nl80211,wext -i wlan0 -c &amp;lt;(wpa_passphrase &amp;quot;your_SSID&amp;quot; &amp;quot;your_key&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;dhcpcd wlan0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;now the wireless should be connected&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-1-2&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-1-2&quot;&gt;Basic install&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-1-2&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Mount the partition
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;muont /dev/sda2 /mnt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mkdir -p /mnt/boot/EFI&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mount /dev/sda1 /mnt/boot/EFI&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Bbasic system install
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pacstrap /mnt base base-devel&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Generate the fstab
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;genfstab -p /mnt &amp;gt;&amp;gt; /mnt/etc/fstab&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Went into the new system and update the system
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;arch-chroot /mnt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nano /etc/loacle.gen  en.us &amp;amp; en.cn &lt;span class=&quot;comment&quot;&gt;# remove#&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;locale-gen&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nano /etc/locale.gen    &lt;span class=&quot;comment&quot;&gt;# &amp;#x53CD;&amp;#x6CE8;&amp;#x91CA;&amp;#x9700;&amp;#x8981;&amp;#x7684; locale&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;locale-gen    &lt;span class=&quot;comment&quot;&gt;# &amp;#x751F;&amp;#x6210; locale&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;echo&lt;/span&gt; LANG=&amp;lt;locale&amp;gt;  &amp;gt; /etc/locale.conf &lt;span class=&quot;comment&quot;&gt;# &amp;#x8BBE;&amp;#x7F6E;&amp;#x9ED8;&amp;#x8BA4; locale&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ln &lt;span class=&quot;operator&quot;&gt;-s&lt;/span&gt; /usr/share/zoneinfo/Asia/Shanghai /etc/localtime&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hwclock --systohc --utc&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Add passwd and users
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;echo&lt;/span&gt; yourname &amp;gt; /etc/hostname&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nano /etc/hosts&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;passwd &lt;span class=&quot;number&quot;&gt;111111&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;times&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;useradd -m -g users &lt;span class=&quot;operator&quot;&gt;-s&lt;/span&gt; /bin/bash name&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;passwd name &lt;span class=&quot;number&quot;&gt;111111&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;times&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nano -w /etc/sudos add line name ALL=(ALL) ALL&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Grub installation
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# pacman -S dosfstools grub efibootmgr&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=arch_grub --recheck&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# grub-mkconfig -o /boot/grub/grub.cfg&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Install X windows and gnome
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pacman -S alsa-utils xorg-server xorg-xinit xorg-server-utils&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pacman -S xf86-video-intel xf86-input-synaptics&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pacman -S gnome gnome-extra&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;systemctl &lt;span class=&quot;built_in&quot;&gt;enable&lt;/span&gt; gdm.service&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;systemctl &lt;span class=&quot;built_in&quot;&gt;enable&lt;/span&gt; NetworkManager.service&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;exit&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;umount /mnt/boot/EFI&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;umount /mnt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;reboot&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-sec-1-3&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-1-3&quot;&gt;Software install&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-1-3&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Yaourt installation
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo nano -w /etc/pacman.conf&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;remove &lt;span class=&quot;comment&quot;&gt;# before mutilib&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;add  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[archlinuxfr] &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Server = http://repo.archlinux.fr/&lt;span class=&quot;variable&quot;&gt;$arch&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; the last line&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;exit&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo pacman -Syyuu&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Software installation
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo pacman -S yaourt emacs gnome-tweak-tool firefox libreoffice clementine vlc smplayer vim gimp shotwell blender impressive r osdlyrics stardict gnome-search-tool dropbox&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;yaourt wqy-microhei mendeleydesktop  wps acroread acroread-chinese-fonts texstudio&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pacman codecs (nedded)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Install textlive as the peking BBS
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-2&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-2&quot;&gt;Configuration [&amp;#x914D;&amp;#x7F6E;&amp;#x7BC7;]&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-2&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-sec-2-1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2-1&quot;&gt;Fcitx&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2-1&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo pacman -S fcitx fcitx-im fcitx-configtool ibus&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo cp /usr/bin/ibus-daemon /usr/bin/ibus-daemon.cp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo rm -rf /usr/bin/ibus-daemon&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo gsettings &lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt; org.gnome.settings-daemon.plugins.keyboard active &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo nano -w .xprofile add&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt; GTK_IM_MODULE=fcitx&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt; QT_IM_MODULE=fcitx&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt; XMODIFIERS=&lt;span class=&quot;string&quot;&gt;&amp;quot;@im=fcitx&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;yaourt fcitx-googlepinyin fcitx-sogoupinyin&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-2-2&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2-2&quot;&gt;Web to hidden&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2-2&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yaourt lantern&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Add new firefox autoproxy server&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;127.0&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;0.1&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;8787&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo systemctl &lt;span class=&quot;built_in&quot;&gt;enable&lt;/span&gt; lantern.service&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-2-3&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2-3&quot;&gt;Startdict&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2-3&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo pacman -S startdict&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cp dict /usr/share/stardict/dic&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cp WyabdcRealPeopleTTS /usr/share/WyabdcRealPeopleTTS&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cp startdict config /home&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-2-4&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2-4&quot;&gt;Samba&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2-4&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cp /etc/samba/smb.conf.default /etc/samba/smb.conf&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo systemctl &lt;span class=&quot;built_in&quot;&gt;enable&lt;/span&gt;/start smbd.service nmbd.service&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo systemctl start/&lt;span class=&quot;built_in&quot;&gt;enable&lt;/span&gt; cups&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;add printer&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-2-5&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2-5&quot;&gt;Bumblebee&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2-5&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo pacman -S bumblebee mesa nvidia nvidia-settings xf86-video-intel&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo gpasswd &lt;span class=&quot;operator&quot;&gt;-a&lt;/span&gt; user bumblebee&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo systemctl &lt;span class=&quot;built_in&quot;&gt;enable&lt;/span&gt; bumblebeed.service&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-2-6&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2-6&quot;&gt;Firefox&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2-6&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cp config&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rm .mozilla/Firefox/&lt;span class=&quot;number&quot;&gt;9999&lt;/span&gt;/.parentlock&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(bookmaker add-ons: noscript autopager autoproxy stumbleupon deafaultzoom xnot instantfox flashlock videodownloadhelper greasemonkey allsidebar downloadstatbar zotero firegesture)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-2-7&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2-7&quot;&gt;Dnsmasq: maybe out of data&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2-7&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo gedit /etc/NetworkManager/dispatcher.d/localhost-prepend&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;add&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;shebang&quot;&gt;#!/bin/bash                                       &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Prepend localhost to resolv.conf for dnsmasq&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; [[ ! $(grep &lt;span class=&quot;number&quot;&gt;127.0&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;0.1&lt;/span&gt; /etc/resolv.conf) ]]; &lt;span class=&quot;keyword&quot;&gt;then&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  sed -i &lt;span class=&quot;string&quot;&gt;&amp;apos;1s|^|nameserver 127.0.0.1\n|&amp;apos;&lt;/span&gt; /etc/resolv.conf&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;fi&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo chmod +x /etc/NetworkManager/dispatcher.d/localhost-prepend&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-3&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-3&quot;&gt;Questions [&amp;#x95EE;&amp;#x9898;&amp;#x7BC7;]&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-3&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-sec-3-1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-3-1&quot;&gt;GNOME3.6 &amp;#x6587;&amp;#x4EF6;&amp;#x5939;&amp;#x9ED8;&amp;#x8BA4;&amp;#x6253;&amp;#x5F00;&amp;#x65B9;&amp;#x5F0F;&amp;#x5173;&amp;#x8054;&amp;#x95EE;&amp;#x9898;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-3-1&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Edit /usr/share/applications/audacious.desktop &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;and remove following line:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;MimeType=inode/directory;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo nano /usr/share/applications/mimeinfo.cache&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo gedit /usr/share/applications/mimeinfo.cache&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-3-2&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-3-2&quot;&gt;Add module auto&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-3-2&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo gedit /etc/modules-load.d/virtio-net.conf&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#Load &amp;apos;virtio-net.ko&amp;apos; at boot.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;virtio-net&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-3-3&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-3-3&quot;&gt;LIWORD start fonts problem&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-3-3&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo gedit /etc/fonts/conf.d/&lt;span class=&quot;number&quot;&gt;65&lt;/span&gt;-nonlatin.conf&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;save &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;then&lt;/span&gt; open LIWORD is ok.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-3-4&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-3-4&quot;&gt;Emacs fcitx&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-3-4&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo nano -w .bashrc add&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt; GTK_IM_MODULE=fcitx&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt; QT_IM_MODULE=fcitx&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt; XMODIFIERS=&lt;span class=&quot;string&quot;&gt;&amp;quot;@im=fcitx&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+Last Updated 2016-05-28 Sat 14:23 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 24.5.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 8.2.10)
+</content>
+    
+    <summary type="html">
+    
+      &lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;Archlinux install [&amp;#x5B89;&amp;#x88C5;&amp;#x7BC7;]&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-sec-1-1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-1-1&quot;&gt;Prepare for the installation&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-1-1&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Prepare the ISO of archlinux, and brasero it into USB flash disk
+&lt;/li&gt;
+
+&lt;li&gt;Partiton: use cfdisk, use the UEFI install, the mkfs
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/dev/sda1 to UEFI boot: ef00, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;G&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/dev/sda2 to &lt;span class=&quot;number&quot;&gt;119&lt;/span&gt;G&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mkfs.fat -F32 /dev/sda1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mkfs.ext4 /dev/sda2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Select mirrorlist:
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;nano -w /etc/pacman.d/mirrorlist add &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Server = http://mirrors.tuna.tsinghua.edu.cn/archlinux/&lt;span class=&quot;variable&quot;&gt;$repo&lt;/span&gt;/os/&lt;span class=&quot;variable&quot;&gt;$arch&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Server = http://mirrors.&lt;span class=&quot;number&quot;&gt;163&lt;/span&gt;.com/archlinux/&lt;span class=&quot;variable&quot;&gt;$repo&lt;/span&gt;/os/&lt;span class=&quot;variable&quot;&gt;$arch&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Wireless network link
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;iwconfig to find the name of your wireless moudule: like wlan0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;then:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ip link set wlan0 up&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;wpa_supplicant -D nl80211,wext -i wlan0 -c &amp;lt;(wpa_passphrase &amp;quot;your_SSID&amp;quot; &amp;quot;your_key&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;dhcpcd wlan0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;now the wireless should be connected&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="LINUX" scheme="http://lengyueyang.github.io/categories/LINUX/"/>
+    
+    
+      <category term="Linux" scheme="http://lengyueyang.github.io/tags/Linux/"/>
+    
+      <category term="Archlinux" scheme="http://lengyueyang.github.io/tags/Archlinux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Org-mode test</title>
+    <link href="http://lengyueyang.github.io/2016/01/30/Org-mode%20test/"/>
+    <id>http://lengyueyang.github.io/2016/01/30/Org-mode test/</id>
+    <published>2016-01-30T00:00:00.000Z</published>
+    <updated>2016-03-05T19:18:43.465Z</updated>
+    
+    <content type="html">
+
+&lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;Orgmode&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-sec-1-1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-1-1&quot;&gt;Why orgmode&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-1-1&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;consol.log(&lt;span class=&quot;string&quot;&gt;&amp;quot;hello&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-sec-1-2&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-1-2&quot;&gt;Insert html&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-1-2&quot;&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+Last Updated 2016-03-05 Sat 19:18 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 24.5.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 8.2.10)
+</content>
+    
+    <summary type="html">
+    
+      &lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;Orgmode&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-sec-1-1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-1-1&quot;&gt;Why orgmode&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-1-1&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;consol.log(&lt;span class=&quot;string&quot;&gt;&amp;quot;hello&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-sec-1-2&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-1-2&quot;&gt;Insert html&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-1-2&quot;&gt;
+    
+    </summary>
+    
+      <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
+    
+    
+      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
+    
+      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://lengyueyang.github.io/2016/01/01/hello-world/"/>
+    <id>http://lengyueyang.github.io/2016/01/01/hello-world/</id>
+    <published>2015-12-31T16:00:00.000Z</published>
+    <updated>2016-03-11T23:39:28.379Z</updated>
+    
+    <content type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;#+BEGIN_HTML&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;#+END_HTML&lt;br&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Run-server&quot;&gt;&lt;a href=&quot;#Run-server&quot; class=&quot;headerlink&quot; title=&quot;Run server&quot;&gt;&lt;/a&gt;Run server&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/server.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Server&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Generate-static-files&quot;&gt;&lt;a href=&quot;#Generate-static-files&quot; class=&quot;headerlink&quot; title=&quot;Generate static files&quot;&gt;&lt;/a&gt;Generate static files&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/generating.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Generating&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Deploy-to-remote-sites&quot;&gt;&lt;a href=&quot;#Deploy-to-remote-sites&quot; class=&quot;headerlink&quot; title=&quot;Deploy to remote sites&quot;&gt;&lt;/a&gt;Deploy to remote sites&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/deployment.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Deployment&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;#+BEGIN_HTML&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Hexo" scheme="http://lengyueyang.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+</feed>
