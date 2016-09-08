@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lengyueyang.github.io/"/>
-  <updated>2016-04-25T09:11:54.009Z</updated>
+  <updated>2016-09-08T01:40:40.597Z</updated>
   <id>http://lengyueyang.github.io/</id>
   
   <author>
@@ -14,6 +14,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>读《南渡北归》有感</title>
+    <link href="http://lengyueyang.github.io/2016/09/08/%E8%AF%BB%E3%80%8A%E5%8D%97%E6%B8%A1%E5%8C%97%E5%BD%92%E3%80%8B%E6%9C%89%E6%84%9F/"/>
+    <id>http://lengyueyang.github.io/2016/09/08/读《南渡北归》有感/</id>
+    <published>2016-09-08T00:00:00.000Z</published>
+    <updated>2016-09-08T01:40:40.597Z</updated>
+    
+    <content type="html">
+
+
+&lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;&amp;#x5F15;&amp;#x5B50;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
+&lt;p&gt;
+&amp;#x597D;&amp;#x4E45;&amp;#x6CA1;&amp;#x6709;&amp;#x8BFB;&amp;#x4E66;&amp;#x8D77;&amp;#x9E21;&amp;#x76AE;&amp;#x7599;&amp;#x7629;&amp;#x7684;&amp;#x611F;&amp;#x89C9;&amp;#x4E86;&amp;#xFF0C;&amp;#x4ECA;&amp;#x5929;&amp;#x65E9;&amp;#x4E0A;&amp;#x5728;&amp;#x5730;&amp;#x94C1;&amp;#x770B;&amp;#x300A;&amp;#x5357;&amp;#x6E21;&amp;#x5317;&amp;#x5F52;&amp;#x300B;&amp;#xFF0C;&amp;#x770B;&amp;#x5230; 1937 &amp;#x5E74;&amp;#x5362;&amp;#x6C9F;&amp;#x6865;&amp;#x4E8B;&amp;#x53D8;&amp;#x524D;&amp;#x540E;&amp;#xFF0C;&amp;#x53D1;&amp;#x73B0;&amp;#x81EA;&amp;#x5DF1;&amp;#x5BD2;&amp;#x6BDB;&amp;#x7AD6;&amp;#x7ACB;&amp;#xFF0C;&amp;#x4E45;&amp;#x8FDD;&amp;#x7684;&amp;#x5185;&amp;#x5FC3;&amp;#x70ED;&amp;#x8840;&amp;#x60C5;&amp;#x6000;&amp;#x88AB;&amp;#x5E26;&amp;#x52A8;&amp;#x8D77;&amp;#x6765;&amp;#x4E86;&amp;#x3002;
+&lt;/p&gt;
+
+&lt;p&gt;
+&amp;#x601D;&amp;#x7EEA;&amp;#x826F;&amp;#x4E45;&amp;#xFF0C;&amp;#x5E94;&amp;#x8BE5;&amp;#x5199;&amp;#x4E00;&amp;#x7BC7;&amp;#x8BFB;&amp;#x540E;&amp;#x611F;&amp;#xFF0C;&amp;#x4EE5;&amp;#x540E;&amp;#x517B;&amp;#x6210;&amp;#x8BFB;&amp;#x4E66;&amp;#x548C;&amp;#x5B66;&amp;#x4E60;&amp;#x7684;&amp;#x4E60;&amp;#x60EF;&amp;#xFF0C;&amp;#x4ECE;&amp;#x6574;&amp;#x5929;&amp;#x770B;&amp;#x89C6;&amp;#x9891;&amp;#x52A8;&amp;#x6F2B;&amp;#x7684;&amp;#x65E0;&amp;#x804A;&amp;#x751F;&amp;#x6D3B;&amp;#x4E2D;&amp;#x89E3;&amp;#x8131;&amp;#x51FA;&amp;#x6765;&amp;#x3002;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+Last Updated 2016-09-08 Thu 09:40 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 24.5.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 8.2.10)
+</content>
+    
+    <summary type="html">
+    
+      
+
+
+&lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;&amp;#x5F15;&amp;#x5B50;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
+&lt;p&gt;
+&amp;#
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Statistics in research article: Part 1, Univariate analysis [科研文章中的统计：第一部分，单因素分析]</title>
@@ -568,13 +610,13 @@ Last Updated 2016-03-12 Sat 14:50 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Blog" scheme="http://lengyueyang.github.io/tags/Blog/"/>
-    
-      <category term="Github" scheme="http://lengyueyang.github.io/tags/Github/"/>
+      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
     
       <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
     
-      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
+      <category term="Blog" scheme="http://lengyueyang.github.io/tags/Blog/"/>
+    
+      <category term="Github" scheme="http://lengyueyang.github.io/tags/Github/"/>
     
   </entry>
   
@@ -922,9 +964,9 @@ Last Updated 2016-03-07 Mon 00:14 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
-    
       <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
+    
+      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
     
       <category term="Beamer" scheme="http://lengyueyang.github.io/tags/Beamer/"/>
     
@@ -1073,9 +1115,9 @@ Last Updated 2016-04-05 Tue 23:07 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
-    
       <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
+    
+      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
     
       <category term="GTD" scheme="http://lengyueyang.github.io/tags/GTD/"/>
     
@@ -1744,9 +1786,9 @@ Last Updated 2016-03-05 Sat 19:18 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
-    
       <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
+    
+      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
     
   </entry>
   
