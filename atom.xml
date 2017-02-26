@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lengyueyang.github.io/"/>
-  <updated>2017-02-26T13:53:59.773Z</updated>
+  <updated>2017-02-26T14:46:52.794Z</updated>
   <id>http://lengyueyang.github.io/</id>
   
   <author>
@@ -16,39 +16,517 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>use mu4e to email</title>
-    <link href="http://lengyueyang.github.io/2017/02/26/use%20mu4e%20to%20email/"/>
-    <id>http://lengyueyang.github.io/2017/02/26/use mu4e to email/</id>
+    <title>Use Mu4e to manage email [用 mu4e 管理邮件]</title>
+    <link href="http://lengyueyang.github.io/2017/02/26/Use%20Mu4e%20to%20manage%20email/"/>
+    <id>http://lengyueyang.github.io/2017/02/26/Use Mu4e to manage email/</id>
     <published>2017-02-26T00:00:00.000Z</published>
-    <updated>2017-02-26T13:53:59.773Z</updated>
+    <updated>2017-02-26T14:46:52.794Z</updated>
     
     <content type="html">
 
 
 &lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;sec-1&quot;&gt;ssss&lt;/h2&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;&amp;#x6982;&amp;#x8FF0;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
+&lt;p&gt;
+&amp;#x7528; offlineimap &amp;#x6536;&amp;#x53D6;&amp;#x90AE;&amp;#x4EF6;&amp;#xFF0C;&amp;#x7528; mu4e &amp;#x5728; emacs &amp;#x4E2D;&amp;#x7BA1;&amp;#x7406;&amp;#x90AE;&amp;#x4EF6;&amp;#xFF0C;&amp;#x672C;&amp;#x6559;&amp;#x7A0B;&amp;#x914D;&amp;#x7F6E;&amp;#x591A;&amp;#x8D26;&amp;#x6237;&amp;#x3002;
+&lt;/p&gt;
+
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 
-Last Updated 2017-02-26 Sun 21:53 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 25.1.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 8.2.10)
+&lt;div id=&quot;outline-container-sec-2&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-2&quot;&gt;offlineimap &amp;#x8BBE;&amp;#x7F6E;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-2&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-sec-2-1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2-1&quot;&gt;&amp;#x5B89;&amp;#x88C5; offlineimap&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2-1&quot;&gt;
+&lt;p&gt;
+&amp;#x672C;&amp;#x4EBA;&amp;#x7528; archlinux&amp;#xFF0C;&amp;#x76F4;&amp;#x63A5; &lt;code&gt;sudo pacman -S offlineimap&lt;/code&gt; &amp;#x5373;&amp;#x53EF;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-2-2&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2-2&quot;&gt;&amp;#x914D;&amp;#x7F6E; offlineimap&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2-2&quot;&gt;
+&lt;p&gt;
+&amp;#x5728; home &amp;#x76EE;&amp;#x5F55;&amp;#x4E0B;&amp;#x5EFA;&amp;#x7ACB; .offlineimaprc &amp;#x6587;&amp;#x4EF6;&amp;#xFF0C;&amp;#x52A0;&amp;#x5165;&amp;#x4EE5;&amp;#x4E0B;&amp;#x4EE3;&amp;#x7801;
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# -*- mode: python2 -*-&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[general]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# accounts = Gmail, Foxmail, Lengyue-163&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;accounts = Gmail, Foxmail&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;maxsyncaccounts = &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pythonfile = ~/.offlineimap.py&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[Account Gmail]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;localrepository = Gmail-Local&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;remoterepository = Gmail-Remote&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[Repository Gmail-Local]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;type = Maildir&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;localfolders = ~/Documents/Mu4e/Gmail&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[Repository Gmail-Remote]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;type = Gmail&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;auth_mechanisms = LOGIN&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;remotehost = imap.gmail.com&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;remoteuser = xxxxx@gmail.com&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;remotepass = xxxxx&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ssl = true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sslcacertfile = /etc/ssl/certs/ca-certificates.crt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nametrans = &lt;span class=&quot;keyword&quot;&gt;lambda&lt;/span&gt; foldername: foldername.decode(&lt;span class=&quot;string&quot;&gt;&amp;apos;imap4-utf-7&amp;apos;&lt;/span&gt;).encode(&lt;span class=&quot;string&quot;&gt;&amp;apos;utf-8&amp;apos;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;folderfilter = &lt;span class=&quot;keyword&quot;&gt;lambda&lt;/span&gt; folder: &lt;span class=&quot;keyword&quot;&gt;not&lt;/span&gt; re.search(&lt;span class=&quot;string&quot;&gt;&amp;apos;(^Spam$|All)&amp;apos;&lt;/span&gt;, folder)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;maxconnections = &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;realdelete = yes&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[Account Foxmail]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;localrepository = Foxmail-Local&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;remoterepository = Foxmail-Remote&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[Repository Foxmail-Local]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;type = Maildir&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;localfolders = ~/Documents/Mu4e/Foxmail&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[Repository Foxmail-Remote]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;type = IMAP&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;remotehost = imap.qq.com&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;remoteuser = xxxxx@qq.com&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;remotepass = xxxxx&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ssl = true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sslcacertfile = /etc/ssl/certs/ca-certificates.crt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nametrans = &lt;span class=&quot;keyword&quot;&gt;lambda&lt;/span&gt; foldername: foldername.decode(&lt;span class=&quot;string&quot;&gt;&amp;apos;imap4-utf-7&amp;apos;&lt;/span&gt;).encode(&lt;span class=&quot;string&quot;&gt;&amp;apos;utf-8&amp;apos;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;folderfilter = &lt;span class=&quot;keyword&quot;&gt;lambda&lt;/span&gt; foldername: foldername &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; [&lt;span class=&quot;string&quot;&gt;&amp;apos;INBOX&amp;apos;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;apos;Drafts&amp;apos;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;apos;Sent Messages&amp;apos;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;apos;Deleted Messages&amp;apos;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;maxconnections = &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;realdelete = no&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+&amp;#x8BBE;&amp;#x7F6E; gmail &amp;#x548C; qq &amp;#x4E24;&amp;#x4E2A;&amp;#x8D26;&amp;#x6237;&amp;#xFF0C;&amp;#x6309;&amp;#x7167;&amp;#x4E0A;&amp;#x9762;&amp;#x914D;&amp;#x7F6E;&amp;#xFF0C;&amp;#x90AE;&amp;#x7BB1;&amp;#x548C;&amp;#x5BC6;&amp;#x7801;&amp;#x6539;&amp;#x6210;&amp;#x81EA;&amp;#x5DF1;&amp;#x7684;(&amp;#x9996;&amp;#x5148;&amp;#x5F00;&amp;#x901A; gmail &amp;#x548C; qq &amp;#x90AE;&amp;#x7BB1;&amp;#x7684; imap &amp;#x529F;&amp;#x80FD;&amp;#xFF0C;&amp;#x8BBE;&amp;#x7F6E;&amp;#x6388;&amp;#x6743;&amp;#x7801;&amp;#xFF0C;&amp;#x53EF;&amp;#x53C2;&amp;#x7167;&amp;#x540E;&amp;#x9762;&amp;#x53C2;&amp;#x8003;&amp;#x8D44;&amp;#x6599;)&amp;#x3002;
+&amp;#x5176;&amp;#x4E2D;&amp;#xFF0C;&amp;#x6BD4;&amp;#x8F83;&amp;#x91CD;&amp;#x8981;&amp;#x7684;&amp;#x6709;&amp;#x4EE5;&amp;#x4E0B;&amp;#x51E0;&amp;#x9879;
+&lt;code&gt;localfolders&lt;/code&gt; &amp;#x662F;&amp;#x4E0B;&amp;#x8F7D;&amp;#x90AE;&amp;#x4EF6;&amp;#x7684;&amp;#x4F4D;&amp;#x7F6E;
+&lt;code&gt;nametrans = lambda foldername: foldername.decode(&amp;apos;imap4-utf-7&amp;apos;).encode(&amp;apos;utf-8&amp;apos;)&lt;/code&gt; &amp;#x9632;&amp;#x6B62;&amp;#x4E2D;&amp;#x6587;&amp;#x4E71;&amp;#x7801;
+&lt;code&gt;folderfilter = lambda foldername: foldername in [&amp;apos;INBOX&amp;apos;,&amp;apos;Drafts&amp;apos;, &amp;apos;Sent Messages&amp;apos;, &amp;apos;Deleted Messages&amp;apos;]&lt;/code&gt; &amp;#x9009;&amp;#x62E9;&amp;#x81EA;&amp;#x5DF1;&amp;#x540C;&amp;#x6B65;&amp;#x7684;&amp;#x6587;&amp;#x4EF6;&amp;#x5939;
+&lt;code&gt;folderfilter = lambda folder: not re.search(&amp;apos;(^Spam$|All)&amp;apos;, folder)&lt;/code&gt; &amp;#x4E0D;&amp;#x9009;&amp;#x62E9; Spam &amp;#x548C;&amp;#x6709; All &amp;#x5B57;&amp;#x6837;&amp;#x7684;&amp;#x6587;&amp;#x4EF6;&amp;#x5939;&amp;#x540C;&amp;#x6B65; 2
+&lt;/p&gt;
+
+&lt;p&gt;
+&amp;#x540C;&amp;#x65F6;&amp;#xFF0C;&amp;#x5728; home &amp;#x76EE;&amp;#x5F55;&amp;#x4E0B;&amp;#x5BB6;&amp;#x91CC; .offlineimap.py &amp;#x6587;&amp;#x4EF6;&amp;#xFF0C;&amp;#x52A0;&amp;#x5165;&amp;#x4EE5;&amp;#x4E0B;&amp;#x5185;&amp;#x5BB9;&amp;#xFF0C;&amp;#x9632;&amp;#x6B62;&amp;#x4E71;&amp;#x7801;
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#!/usr/bin/env python2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; binascii&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; codecs&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; sys&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;reload(sys)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sys.setdefaultencoding(&lt;span class=&quot;string&quot;&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;modified_base64&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(s)&lt;/span&gt;:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    s = s.encode(&lt;span class=&quot;string&quot;&gt;&amp;apos;utf-16be&amp;apos;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; binascii.b2a_base64(s).rstrip(&lt;span class=&quot;string&quot;&gt;&amp;apos;\n=&amp;apos;&lt;/span&gt;).replace(&lt;span class=&quot;string&quot;&gt;&amp;apos;/&amp;apos;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;apos;,&amp;apos;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;doB64&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(_in, r)&lt;/span&gt;:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; _in:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	r.append(&lt;span class=&quot;string&quot;&gt;&amp;apos;&amp;amp;%s-&amp;apos;&lt;/span&gt; % modified_base64(&lt;span class=&quot;string&quot;&gt;&amp;apos;&amp;apos;&lt;/span&gt;.join(_in)))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;del&lt;/span&gt; _in[:]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;encoder&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(s)&lt;/span&gt;:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    r = []&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    _in = []&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; c &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; s:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	ordC = ord(c)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0x20&lt;/span&gt; &amp;lt;= ordC &amp;lt;= &lt;span class=&quot;number&quot;&gt;0x25&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0x27&lt;/span&gt; &amp;lt;= ordC &amp;lt;= &lt;span class=&quot;number&quot;&gt;0x7e&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	    doB64(_in, r)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	    r.append(c)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;elif&lt;/span&gt; c == &lt;span class=&quot;string&quot;&gt;&amp;apos;&amp;amp;&amp;apos;&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	    doB64(_in, r)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	    r.append(&lt;span class=&quot;string&quot;&gt;&amp;apos;&amp;amp;-&amp;apos;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	    _in.append(c)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    doB64(_in, r)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; (str(&lt;span class=&quot;string&quot;&gt;&amp;apos;&amp;apos;&lt;/span&gt;.join(r)), len(s))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# decoding&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;modified_unbase64&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(s)&lt;/span&gt;:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    b = binascii.a2b_base64(s.replace(&lt;span class=&quot;string&quot;&gt;&amp;apos;,&amp;apos;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;apos;/&amp;apos;&lt;/span&gt;) + &lt;span class=&quot;string&quot;&gt;&amp;apos;===&amp;apos;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; unicode(b, &lt;span class=&quot;string&quot;&gt;&amp;apos;utf-16be&amp;apos;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;decoder&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(s)&lt;/span&gt;:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    r = []&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    decode = []&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; c &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; s:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; c == &lt;span class=&quot;string&quot;&gt;&amp;apos;&amp;amp;&amp;apos;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;not&lt;/span&gt; decode:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	    decode.append(&lt;span class=&quot;string&quot;&gt;&amp;apos;&amp;amp;&amp;apos;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;elif&lt;/span&gt; c == &lt;span class=&quot;string&quot;&gt;&amp;apos;-&amp;apos;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;and&lt;/span&gt; decode:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; len(decode) == &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		r.append(&lt;span class=&quot;string&quot;&gt;&amp;apos;&amp;amp;&amp;apos;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	    &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		r.append(modified_unbase64(&lt;span class=&quot;string&quot;&gt;&amp;apos;&amp;apos;&lt;/span&gt;.join(decode[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;:])))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	    decode = []&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;elif&lt;/span&gt; decode:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	    decode.append(c)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	    r.append(c)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; decode:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	r.append(modified_unbase64(&lt;span class=&quot;string&quot;&gt;&amp;apos;&amp;apos;&lt;/span&gt;.join(decode[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;:])))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    bin_str = &lt;span class=&quot;string&quot;&gt;&amp;apos;&amp;apos;&lt;/span&gt;.join(r)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; (bin_str, len(s))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;StreamReader&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(codecs.StreamReader)&lt;/span&gt;:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;decode&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(self, s, errors=&lt;span class=&quot;string&quot;&gt;&amp;apos;strict&amp;apos;&lt;/span&gt;)&lt;/span&gt;:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; decoder(s)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;StreamWriter&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(codecs.StreamWriter)&lt;/span&gt;:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;decode&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(self, s, errors=&lt;span class=&quot;string&quot;&gt;&amp;apos;strict&amp;apos;&lt;/span&gt;)&lt;/span&gt;:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; encoder(s)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;imap4_utf_7&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(name)&lt;/span&gt;:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; name == &lt;span class=&quot;string&quot;&gt;&amp;apos;imap4-utf-7&amp;apos;&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; (encoder, decoder, StreamReader, StreamWriter)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;codecs.register(imap4_utf_7)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-2-3&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-2-3&quot;&gt;&amp;#x7528; offlineimap &amp;#x4E0B;&amp;#x8F7D;&amp;#x90AE;&amp;#x4EF6;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-2-3&quot;&gt;
+&lt;p&gt;
+&amp;#x5728;&amp;#x7EC8;&amp;#x7AEF;&amp;#x7528;&amp;#x8FD0;&amp;#x884C;&amp;#x547D;&amp;#x4EE4; &lt;code&gt;offlineimap&lt;/code&gt; &amp;#xFF0C;&amp;#x4E0B;&amp;#x8F7D;&amp;#x90AE;&amp;#x4EF6;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-3&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-3&quot;&gt;Mu4e &amp;#x8BBE;&amp;#x7F6E;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-3&quot;&gt;
+&lt;p&gt;
+&amp;#x6211;&amp;#x7528; spacemacs&amp;#xFF0C;&amp;#x5148;&amp;#x5C06; mu4e layer &amp;#x52A0;&amp;#x5165; spaemacs &amp;#x914D;&amp;#x7F6E;&amp;#x6587;&amp;#x4EF6;&amp;#x4E2D;&amp;#xFF0C;&amp;#x542F;&amp;#x7528; mu4e layer&amp;#x3002;
+&lt;/p&gt;
+
+&lt;p&gt;
+&amp;#x5B89;&amp;#x88C5; mu4e &amp;#x662F; mu &amp;#x8F6F;&amp;#x4EF6;&amp;#x7684;&amp;#x4E00;&amp;#x90E8;&amp;#x5206;&amp;#xFF0C;&amp;#x56E0;&amp;#x6B64;&amp;#x5B89;&amp;#x88C5; mu &amp;#x8F6F;&amp;#x4EF6;(yaourt mu)&amp;#x3002;
+&lt;/p&gt;
+
+&lt;p&gt;
+&amp;#x5B89;&amp;#x88C5;&amp;#x5B8C;&amp;#x6210;&amp;#x4E4B;&amp;#x540E;&amp;#xFF0C;&amp;#x5EFA;&amp;#x7ACB;&amp;#x7D22;&amp;#x5F15;&amp;#xFF0C;&amp;#x5728;&amp;#x7EC8;&amp;#x7AEF;&amp;#x8FD0;&amp;#x884C; &lt;code&gt;mu index --rebuild --maildir=~/Documents/Mu4e&lt;/code&gt; &amp;#xFF0C;&amp;#x6587;&amp;#x4EF6;&amp;#x5939;&amp;#x7684;&amp;#x4F4D;&amp;#x7F6E;&amp;#x6839;&amp;#x636E;&amp;#x81EA;&amp;#x5DF1;&amp;#x7684;&amp;#x66F4;&amp;#x6539;&amp;#x3002;
+&lt;/p&gt;
+
+&lt;p&gt;
+&amp;#x5728; spacemacs &amp;#x7684;&amp;#x914D;&amp;#x7F6E;&amp;#x6587;&amp;#x4EF6;&amp;#x4E2D;&amp;#x52A0;&amp;#x5165;&amp;#x4EE5;&amp;#x4E0B;&amp;#x4EE3;&amp;#x7801;&amp;#xFF0C;&amp;#x6CE8;&amp;#x610F;&amp;#xFF1A;&amp;#x6839;&amp;#x636E;&amp;#x81EA;&amp;#x5DF1;&amp;#x7684;&amp;#x90AE;&amp;#x7BB1;&amp;#x4E2A;&amp;#x6570;&amp;#x7B49;&amp;#x66F4;&amp;#x6539;&amp;#x76F8;&amp;#x5E94;&amp;#x4F4D;&amp;#x7F6E;&amp;#x5373;&amp;#x53EF;&amp;#x3002;
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight lisp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;add-to-load-path&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;~/.spacemacs.d/package/mu4e&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;mu4e&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;setq&lt;/span&gt; mu4e-account-alist&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;quoted&quot;&gt;&amp;apos;((&lt;span class=&quot;string&quot;&gt;&amp;quot;Gmail&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	 ;; Under each account, set the account-specific variables you want.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	 (mu4e-sent-messages-behavior delete)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	 (mu4e-sent-folder &lt;span class=&quot;string&quot;&gt;&amp;quot;/Gmail/[Gmail].Sent Mail&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	 (mu4e-drafts-folder &lt;span class=&quot;string&quot;&gt;&amp;quot;/Gmail/[Gmail].Drafts&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	 (user-mail-address &lt;span class=&quot;string&quot;&gt;&amp;quot;xxxxx@gmail.com&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	 (user-full-name &lt;span class=&quot;string&quot;&gt;&amp;quot;xxxxx&amp;quot;&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	(&lt;span class=&quot;string&quot;&gt;&amp;quot;Foxmail&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	 (mu4e-sent-messages-behavior sent)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	 (mu4e-sent-folder &lt;span class=&quot;string&quot;&gt;&amp;quot;/Foxmail/Sent Messages&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	 (mu4e-drafts-folder &lt;span class=&quot;string&quot;&gt;&amp;quot;/Foxmail/Drafts&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	 (user-mail-address &lt;span class=&quot;string&quot;&gt;&amp;quot;xxxxx@foxmail.com&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	 (user-full-name &lt;span class=&quot;string&quot;&gt;&amp;quot;xxxxx&amp;quot;&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	;; (&lt;span class=&quot;string&quot;&gt;&amp;quot;Lengyue-163&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	;;  (mu4e-sent-messages-behavior sent)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	;;  (mu4e-sent-folder &lt;span class=&quot;string&quot;&gt;&amp;quot;/Lengyue-163/Sent Items&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	;;  (mu4e-drafts-folder &lt;span class=&quot;string&quot;&gt;&amp;quot;/Lengyue-163/Drafts&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	;;  (user-mail-address &lt;span class=&quot;string&quot;&gt;&amp;quot;zanghuahong@163.com&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	;;  (user-full-name &lt;span class=&quot;string&quot;&gt;&amp;quot;Mao Xiaowei&amp;quot;&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       )&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;mu4e/mail-account-reset&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;;;; Set up some common mu4e variables&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;setq&lt;/span&gt; mu4e-maildir &lt;span class=&quot;string&quot;&gt;&amp;quot;~/Documents/Mu4e&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      mu4e-trash-folder &lt;span class=&quot;string&quot;&gt;&amp;quot;/Gmail/Trash&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      mu4e-refile-folder &lt;span class=&quot;string&quot;&gt;&amp;quot;/Gmail/Archive&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;comment&quot;&gt;;; mu4e-get-mail-command &amp;quot;mbsync -a&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      mu4e-update-interval &lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      mu4e-compose-signature-auto-include &lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      mu4e-view-show-images &lt;span class=&quot;literal&quot;&gt;t&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      mu4e-view-show-addresses &lt;span class=&quot;literal&quot;&gt;t&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;;;; Mail directory shortcuts&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;setq&lt;/span&gt; mu4e-maildir-shortcuts&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;quoted&quot;&gt;&amp;apos;(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	(&lt;span class=&quot;string&quot;&gt;&amp;quot;/Foxmail/INBOX&amp;quot;&lt;/span&gt; . ?f)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	(&lt;span class=&quot;string&quot;&gt;&amp;quot;/Foxmail/Drafts&amp;quot;&lt;/span&gt; . ?d)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	(&lt;span class=&quot;string&quot;&gt;&amp;quot;/Foxmail/Sent Messages&amp;quot;&lt;/span&gt; . ?s)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	(&lt;span class=&quot;string&quot;&gt;&amp;quot;/Gmail/INBOX&amp;quot;&lt;/span&gt; . ?g)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	;; (&lt;span class=&quot;string&quot;&gt;&amp;quot;/Gmail/[Gmail].All Mail&amp;quot;&lt;/span&gt; . ?a)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	(&lt;span class=&quot;string&quot;&gt;&amp;quot;/Gmail/[Gmail].Drafts&amp;quot;&lt;/span&gt; . ?r)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	(&lt;span class=&quot;string&quot;&gt;&amp;quot;/Gmail/[Gmail].Sent Mail&amp;quot;&lt;/span&gt; . ?m)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	(&lt;span class=&quot;string&quot;&gt;&amp;quot;/Gmail/[Gmail].Trash&amp;quot;&lt;/span&gt; . ?&lt;span class=&quot;literal&quot;&gt;t&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	;; (&lt;span class=&quot;string&quot;&gt;&amp;quot;/Lengyue-163/INBOX&amp;quot;&lt;/span&gt; . ?i)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	)&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;;;; Bookmarks&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;setq&lt;/span&gt; mu4e-bookmarks&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;quoted&quot;&gt;`((&lt;span class=&quot;string&quot;&gt;&amp;quot;flag:unread AND NOT flag:trashed&amp;quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;Unread messages&amp;quot;&lt;/span&gt; ?u)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	(&lt;span class=&quot;string&quot;&gt;&amp;quot;date:today..now&amp;quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;Today&amp;apos;s messages&amp;quot;&lt;/span&gt; ?&lt;span class=&quot;literal&quot;&gt;t&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	(&lt;span class=&quot;string&quot;&gt;&amp;quot;date:7d..now&amp;quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;Last 7 days&amp;quot;&lt;/span&gt; ?w)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	(&lt;span class=&quot;string&quot;&gt;&amp;quot;mime:image/*&amp;quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;Messages with images&amp;quot;&lt;/span&gt; ?p)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	(,(mapconcat &amp;apos;identity&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		     (mapcar&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		      (lambda (maildir)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			(concat &lt;span class=&quot;string&quot;&gt;&amp;quot;maildir:&amp;quot;&lt;/span&gt; (car maildir)))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		      mu4e-maildir-shortcuts) &lt;span class=&quot;string&quot;&gt;&amp;quot; OR &amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	 &lt;span class=&quot;string&quot;&gt;&amp;quot;All inboxes&amp;quot;&lt;/span&gt; ?i))&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;setq&lt;/span&gt; mu4e-enable-notifications &lt;span class=&quot;literal&quot;&gt;t&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;with-eval-after-load&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;mu4e-alert&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;;; Enable Desktop notifications&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;;; (mu4e-alert-set-default-style &amp;apos;notifications)) ; For linux&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;mu4e-alert-set-default-style&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;libnotify&lt;/span&gt;)&lt;/span&gt;)&lt;/span&gt;  &lt;span class=&quot;comment&quot;&gt;; Alternative for linux&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;;; (mu4e-alert-set-default-style &amp;apos;notifier))   ; For Mac OSX (through the&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;					&lt;span class=&quot;comment&quot;&gt;; terminal notifier app)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;;; (mu4e-alert-set-default-style &amp;apos;growl))      ; Alternative for Mac OSX&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;setq&lt;/span&gt; mu4e-enable-mode-line &lt;span class=&quot;literal&quot;&gt;t&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;setq&lt;/span&gt; mu4e-get-mail-command &lt;span class=&quot;string&quot;&gt;&amp;quot;offlineimap&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;;; Fetch mail in 60 sec interval&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;setq&lt;/span&gt; mu4e-update-interval &lt;span class=&quot;number&quot;&gt;60&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;mu4e-contrib&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;setq&lt;/span&gt; mu4e-html2text-command &lt;span class=&quot;quoted&quot;&gt;&amp;apos;mu4e-shr2text&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;;; try to emulate some of the eww key-bindings&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;add-hook&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;mu4e-view-mode-hook&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	  &lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;list&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	    &lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;local-set-key&lt;/span&gt; &lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;kbd&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;lt;tab&amp;gt;&amp;quot;&lt;/span&gt;)&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;shr-next-link&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	    &lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;local-set-key&lt;/span&gt; &lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;kbd&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;lt;backtab&amp;gt;&amp;quot;&lt;/span&gt;)&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;shr-previous-link&lt;/span&gt;)&lt;/span&gt;)&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;;; something about ourselves&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;smtpmail&lt;/span&gt;)&lt;/span&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;setq&lt;/span&gt; user-mail-address &lt;span class=&quot;string&quot;&gt;&amp;quot;xxxxx@foxmail.com&amp;quot;&lt;/span&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      user-full-name &lt;span class=&quot;string&quot;&gt;&amp;quot;xxxxx&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      smtpmail-stream-type &lt;span class=&quot;quoted&quot;&gt;&amp;apos;starttls&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      starttls-use-gnutls &lt;span class=&quot;literal&quot;&gt;t&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      mu4e-compose-signature  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;concat&lt;/span&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       &lt;span class=&quot;string&quot;&gt;&amp;quot;xxxx\n&amp;quot;&lt;/span&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       &lt;span class=&quot;string&quot;&gt;&amp;quot;Blog: http://lengyueyang.github.io\n&amp;quot;&lt;/span&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       &lt;span class=&quot;string&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;)&lt;/span&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      mu4e-compose-signature-auto-include &lt;span class=&quot;literal&quot;&gt;t&lt;/span&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      )&lt;/span&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;setq&lt;/span&gt; send-mail-function            &lt;span class=&quot;quoted&quot;&gt;&amp;apos;smtpmail-send-it&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      message-send-mail-function    &lt;span class=&quot;quoted&quot;&gt;&amp;apos;smtpmail-send-it&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      smtpmail-auth-credentials     &lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;expand-file-name&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;~/.authinfo&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      smtpmail-stream-type          &lt;span class=&quot;quoted&quot;&gt;&amp;apos;tls&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      smtpmail-smtp-server          &lt;span class=&quot;string&quot;&gt;&amp;quot;smtp.qq.com&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      smtpmail-smtp-service         &lt;span class=&quot;number&quot;&gt;465&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      smtpmail-smtp-user &lt;span class=&quot;string&quot;&gt;&amp;quot;xxxxx@qq.com&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;setq&lt;/span&gt; message-kill-buffer-on-exit &lt;span class=&quot;literal&quot;&gt;t&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;;; save attachment to my desktop (this can also be a function)  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;setq&lt;/span&gt; mu4e-attachment-dir &lt;span class=&quot;string&quot;&gt;&amp;quot;/home/lengyue/Documents/Mu4e/Attachment&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-3-1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-3-1&quot;&gt;&amp;#x51E0;&amp;#x70B9;&amp;#x8BF4;&amp;#x660E;&amp;#xFF1A;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-3-1&quot;&gt;
+&lt;p&gt;
+mu &amp;#x66F4;&amp;#x65B0;&amp;#x540E;&amp;#xFF0C;&amp;#x53D1;&amp;#x73B0;&amp;#x7CFB;&amp;#x7EDF;&amp;#x4E0D;&amp;#x80FD;&amp;#x81EA;&amp;#x5DF1;&amp;#x627E;&amp;#x5230; mu4e &amp;#x6587;&amp;#x4EF6;&amp;#x5939;&amp;#xFF0C;&amp;#x56E0;&amp;#x6B64;&amp;#x624B;&amp;#x52A8;&amp;#x94FE;&amp;#x63A5;
+&lt;code&gt;(add-to-load-path &amp;quot;~/.spacemacs.d/package/mu4e&amp;quot;)&lt;/code&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+contact &amp;#x5185;&amp;#x5BB9;&amp;#x662F;&amp;#x81EA;&amp;#x5DF1;&amp;#x7684;&amp;#x90AE;&amp;#x4EF6;&amp;#x7B7E;&amp;#x540D;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-4&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-4&quot;&gt;Mu4e &amp;#x7B80;&amp;#x5355;&amp;#x4F7F;&amp;#x7528;&amp;#x5C0F;&amp;#x7ED3;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-4&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-sec-4-1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-4-1&quot;&gt;Keybindings to remember of Mu4e&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-4-1&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-sec-4-1-1&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;sec-4-1-1&quot;&gt;&lt;code&gt;offlineimap&lt;/code&gt; and &lt;code&gt;mu index --maildir=~/Documents/Mu4e&lt;/code&gt;&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-sec-4-1-2&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;sec-4-1-2&quot;&gt;Main view-Default bindings&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-4-1-2&quot;&gt;
+&lt;p&gt;
+R: Reply      s: search            .: raw view (toggle)
+F: Forward    j: jump-to-maildir   q: quit
+C: Compose    b: bookmark-search
+E: Edit       B: edit bookmark-search
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-4-1-3&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;sec-4-1-3&quot;&gt;Headers menu in the emacs menu bar&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-4-1-3&quot;&gt;
+&lt;p&gt;
+key          description
+&lt;/p&gt;
+
+&lt;p&gt;
+n,p          view the next, previous message
+],[          move to the next, previous unread message
+y            select the message view (if it&amp;apos;s visible)
+RET          open the message at point in the message view
+&lt;/p&gt;
+
+&lt;p&gt;
+searching
+&lt;/p&gt;
+
+&lt;p&gt;
+s            search
+S            edit last query
+/            narrow the search
+b            search bookmark
+B            edit bookmark before search
+j            jump to maildir
+M-left,\     previous query
+M-right      next query
+&lt;/p&gt;
+
+&lt;p&gt;
+O            change sort order
+P            toggle threading
+Q            toggle full-search
+V            toggle skip-duplicates
+W            toggle include-related
+&lt;/p&gt;
+
+&lt;p&gt;
+marking
+&lt;/p&gt;
+
+&lt;p&gt;
+d            mark for moving to the trash folder
+=            mark for removing trash flag (&amp;apos;untrash&amp;apos;)
+DEL,D        mark for complete deletion
+m            mark for moving to another maildir folder
+r            mark for refiling
++,-          mark for flagging/unflagging
+?,!          mark message as unread, read
+&lt;/p&gt;
+
+&lt;p&gt;
+u            unmark message at point
+U            unmark &lt;b&gt;all&lt;/b&gt; messages
+&lt;/p&gt;
+
+&lt;p&gt;
+%            mark based on a regular expression
+T,t          mark whole thread, subthread
+&lt;/p&gt;
+
+&lt;p&gt;
+&amp;lt;insert&amp;gt;,*   mark for &amp;apos;something&amp;apos; (decide later)
+&lt;/p&gt;
+&lt;p&gt;
+x            execute actions for the marked messages
+&lt;/p&gt;
+
+&lt;p&gt;
+composition
+&lt;/p&gt;
+
+&lt;p&gt;
+R,F,C        reply/forward/compose
+E            edit (only allowed for draft messages)
+&lt;/p&gt;
+
+
+&lt;p&gt;
+misc
+&lt;/p&gt;
+
+&lt;p&gt;
+;            switch focus
+a            execute some custom action on a header
+&lt;/p&gt;
+&lt;table border=&quot;2&quot; cellspacing=&quot;0&quot; cellpadding=&quot;6&quot; rules=&quot;groups&quot; frame=&quot;hsides&quot;&gt;
+
+
+&lt;colgroup&gt;
+&lt;col class=&quot;left&quot;&gt;
+&lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td class=&quot;left&quot;&gt;pipe message through shell command&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;
+C-+,C&amp;#x2013;      increase / decrease the number of headers shown
+H            get help
+C-S-u        update mail &amp;amp; reindex
+q            leave the headers buffer
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-4-1-4&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;sec-4-1-4&quot;&gt;Message View&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-4-1-4&quot;&gt;
+&lt;p&gt;
+key          description
+&lt;/p&gt;
+
+&lt;p&gt;
+n,p          view the next, previous message
+],[          move to the next, previous unread message
+y            select the headers view (if it&amp;apos;s visible)
+&lt;/p&gt;
+
+&lt;p&gt;
+RET          scroll down
+M-RET        open URL at point / attachment at point
+&lt;/p&gt;
+
+&lt;p&gt;
+SPC          scroll down, if at end, move to next message
+S-SPC        scroll up
+&lt;/p&gt;
+
+&lt;p&gt;
+searching
+&lt;/p&gt;
+
+&lt;p&gt;
+s            search
+e            edit last query
+/            narrow the search
+b            search bookmark
+B            edit bookmark before search
+j            jump to maildir
+&lt;/p&gt;
+
+&lt;p&gt;
+M-left       previous query
+M-right      next query
+&lt;/p&gt;
+
+&lt;p&gt;
+marking
+&lt;/p&gt;
+
+&lt;p&gt;
+d            mark for moving to the trash folder
+=            mark for removing trash flag (&amp;apos;untrash&amp;apos;)
+DEL,D        mark for complete deletion
+m            mark for moving to another maildir folder
+r            mark for refiling
++,-          mark for flagging/unflagging
+&lt;/p&gt;
+
+&lt;p&gt;
+u            unmark message at point
+U            unmark &lt;b&gt;all&lt;/b&gt; messages
+&lt;/p&gt;
+
+&lt;p&gt;
+%            mark based on a regular expression
+T,t          mark whole thread, subthread
+&lt;/p&gt;
+
+&lt;p&gt;
+&amp;lt;insert&amp;gt;,*   mark for &amp;apos;something&amp;apos; (decide later)
+&lt;/p&gt;
+&lt;p&gt;
+x            execute actions for the marked messages
+&lt;/p&gt;
+
+&lt;p&gt;
+composition
+&lt;/p&gt;
+
+&lt;p&gt;
+R,F,C        reply/forward/compose
+E            edit (only allowed for draft messages)
+&lt;/p&gt;
+
+&lt;p&gt;
+actions
+&lt;/p&gt;
+
+&lt;p&gt;
+g            go to (visit) numbered URL (using `browse-url&amp;apos;)
+(or: &amp;lt;mouse-1&amp;gt; or M-RET with point on url)
+C-u g visits multiple URLs
+f            fetch (download )the numbered URL.
+C-u f fetches multiple URLs
+k            save the numbered URL in the kill-ring.
+C-u k saves multiple URLs
+&lt;/p&gt;
+
+&lt;p&gt;
+e            extract (save) attachment (asks for number)
+(or: &amp;lt;mouse-2&amp;gt; or S-RET with point on attachment)
+C-u e extracts multiple attachments
+o            open attachment (asks for number)
+(or: &amp;lt;mouse-1&amp;gt; or M-RET with point on attachment)
+&lt;/p&gt;
+
+&lt;p&gt;
+a            execute some custom action on the message
+A            execute some custom action on an attachment
+&lt;/p&gt;
+
+&lt;p&gt;
+misc
+&lt;/p&gt;
+
+&lt;p&gt;
+;            switch focus
+c            copy address at point (with C-u copy long version)
+&lt;/p&gt;
+
+&lt;p&gt;
+h            toggle between html/text (if available)
+w            toggle line wrapping
+&lt;/p&gt;
+&lt;p&gt;
+v            show details about the cryptographic signature
+&lt;/p&gt;
+
+&lt;p&gt;
+.            show the raw message view. &amp;apos;q&amp;apos; takes you back.
+C-+,C&amp;#x2013;      increase / decrease the number of headers shown
+H            get help
+C-S-u        update mail &amp;amp; reindex
+q            leave the message view
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-4-1-5&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;sec-4-1-5&quot;&gt;Attachment actions&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-4-1-5&quot;&gt;
+&lt;p&gt;
+Similarly, there is mu4e-view-attachment-action (A) for actions on attachments, which you can specify with mu4e-view-attachment-actions.
+&lt;/p&gt;
+
+&lt;p&gt;
+mu4e predefines a number of attachment-actions:
+&lt;/p&gt;
+
+&lt;p&gt;
+open-with (w): open the attachment with some arbitrary program. For example, suppose you have received a message with a picture attachment; then, A w 1 RET gimp RET opens that attachment in The Gimp
+pipe (|: process the attachment with some Unix shell-pipe and see the results. Suppose you receive a patch file, and would like to get an overview of the changes, using the diffstat program. You can use something like: A | 1 RET diffstat -b RET.
+emacs (e): open the attachment in your running emacs. For example, if you receive some text file you&amp;#x2019;d like to open in emacs: A e 1 RET.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-4-1-6&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;sec-4-1-6&quot;&gt;Editor view&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-4-1-6&quot;&gt;
+&lt;p&gt;
+key          description
+&lt;/p&gt;
+
+&lt;p&gt;
+C-c C-c      send message
+C-c C-d      save to drafts and leave
+C-c C-k      kill the message buffer (the message remains in the draft folder)
+C-c C-a      attach a file (pro-tip: drag &amp;amp; drop works as well)
+&lt;/p&gt;
+
+&lt;p&gt;
+(mu4e-specific)
+C-S-u        update mail &amp;amp; reindex
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-4-1-7&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;sec-4-1-7&quot;&gt;What to mark for&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-4-1-7&quot;&gt;
+&lt;p&gt;
+mu4e supports a number of marks:
+&lt;/p&gt;
+
+&lt;p&gt;
+mark for/as   keybinding  | description
+&lt;/p&gt;
+
+&lt;p&gt;
+&amp;apos;something&amp;apos;  *, &amp;lt;insert&amp;gt; | mark now, decide later
+delete        D, &amp;lt;delete&amp;gt; | delete
+flag          +           | mark as &amp;apos;flagged&amp;apos; (&amp;apos;starred&amp;apos;)
+move          m           | move to some maildir
+read          !           | mark as read
+refile        r           | mark for refiling
+trash         d           | move to the trash folder
+untrash       =           | remove &amp;apos;trash&amp;apos; flag
+unflag        -           | remove &amp;apos;flagged&amp;apos; mark
+unmark        u           | remove mark at point
+unmark all    U           | remove all marks
+unread        ?           | marks as unread
+action        a           | apply some action
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-4-2&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-4-2&quot;&gt;&amp;#x5176;&amp;#x4ED6;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-4-2&quot;&gt;
+&lt;p&gt;
+&amp;#x82E5;&amp;#x53C2;&amp;#x8003;&amp;#x914D;&amp;#x7F6E;&amp;#x6709;&amp;#x95EE;&amp;#x9898;&amp;#xFF0C;&amp;#x8BF7;&amp;#x79FB;&amp;#x6B65;&amp;#x5B98;&amp;#x7F51;&amp;#x6216;&amp;#x540E;&amp;#x9762;&amp;#x53C2;&amp;#x8003;&amp;#x8D44;&amp;#x6599;&amp;#xFF0C;&amp;#x6216;&amp;#x90AE;&amp;#x4EF6;&amp;#x8054;&amp;#x7CFB;&amp;#x6211;&amp;#xFF0C;&amp;#x968F;&amp;#x65F6;&amp;#x6B22;&amp;#x8FCE; &amp;#x1F60D;&amp;#x3002;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id=&quot;outline-container-sec-5&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-5&quot;&gt;&amp;#x53C2;&amp;#x8003;&amp;#x8D44;&amp;#x6599;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-5&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/larstvei/dot-emacs&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;larstvei/dot-emacs: My Emacs configurations written in Org mode&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://wenshanren.org/?p=111&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;mu4e: an E-mail Client for Emacs | &amp;#x8089;&amp;#x5C71;&amp;#x535A;&amp;#x5BA2; (Wenshan&amp;apos;s Blog)&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://coldnew.github.io/blog/2016/01-02_mu4e/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&amp;#x5728; emacs &amp;#x4E0B;&amp;#x4F7F;&amp;#x7528; mu4e &amp;#x6536;&amp;#x767C;&amp;#x90F5;&amp;#x4EF6; | coldnew&amp;apos;s blog&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/csfreebird/article/details/52973188&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;spacemacs email layer - &amp;#x535A;&amp;#x5BA2;&amp;#x9891;&amp;#x9053; - CSDN.NET&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/howardabrams/dot-files/blob/master/emacs-mail.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;dot-files/emacs-mail.org at master &amp;#xB7; howardabrams/dot-files&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://guso.ml/search?q=offlinemap+%E5%A4%9A%E5%B8%90%E6%88%B7&amp;amp;prmd=ivns&amp;amp;ei=pVc8WPPzNsv0vgTT2pn4Cw&amp;amp;start=10&amp;amp;sa=N&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;offlinemap &amp;#x591A;&amp;#x5E10;&amp;#x6237; - Google &amp;#x641C;&amp;#x7D22;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/syl20bnr/spacemacs/tree/master/layers/+email/mu4e&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;spacemacs/layers/+email/mu4e at master &amp;#xB7; syl20bnr/spacemacs&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.djcbsoftware.nl/code/mu/mu4e/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Mu4e 0.9.16 user manual: Top&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/lujun9972/emacs-document/blob/master/org-mode/%E7%94%A8org-mime%E5%9C%A8org-mode%E4%B8%AD%E5%8F%91%E9%80%81html%E9%82%AE%E4%BB%B6.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;emacs-document/&amp;#x7528; org-mime &amp;#x5728; org-mode &amp;#x4E2D;&amp;#x53D1;&amp;#x9001; html &amp;#x90AE;&amp;#x4EF6;.org at master &amp;#xB7; lujun9972/emacs-document&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://emacs.lujianmei.com/03-For-an-editor/init-mu4e.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Mu4e &amp;#x90AE;&amp;#x4EF6;&amp;#x7BA1;&amp;#x7406; &amp;#xB7; &amp;#x8C01;&amp;#x8BF4; Emacs &amp;#x4E0D;&amp;#x597D;&amp;#x73A9;&amp;#xFF1F;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.bagualu.net/wordpress/archives/6555&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;emacs &amp;#x4E2D;&amp;#x7684; email &amp;#x5BA2;&amp;#x6237;&amp;#x7AEF; mu4e | &amp;#x730E;&amp;#x6570;&amp;#x535A;&amp;#x5BA2;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/syl20bnr/spacemacs/tree/master/layers/+email/gnus#org-mime-in-org-layer&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;spacemacs/layers/+email/gnus at master &amp;#xB7; syl20bnr/spacemacs&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+Last Updated 2017-02-26 Sun 22:46 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 25.1.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 8.2.10)
 </content>
     
     <summary type="html">
     
-      
-
-
-&lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;sec-1&quot;&gt;ssss&lt;/h2&gt;
-&lt;/div&gt;
-
-Last Updated 2017-02-26 Sun 21:53 by lengyueyang&lt;br
+      &lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;&amp;#x6982;&amp;#x8FF0;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
+&lt;p&gt;
+&amp;#x7528; offlineimap &amp;#x6536;&amp;#x53D6;&amp;#x90AE;&amp;#x4EF6;&amp;#xFF0C;&amp;#x7528; mu4e &amp;#x5728; emacs &amp;#x4E2D;&amp;#x7BA1;&amp;#x7406;&amp;#x90AE;&amp;#x4EF6;&amp;#xFF0C;&amp;#x672C;&amp;#x6559;&amp;#x7A0B;&amp;#x914D;&amp;#x7F6E;&amp;#x591A;&amp;#x8D26;&amp;#x6237;&amp;#x3002;
+&lt;/p&gt;
     
     </summary>
     
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="mu4e" scheme="http://lengyueyang.github.io/tags/mu4e/"/>
+      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
+    
+      <category term="Mu4e" scheme="http://lengyueyang.github.io/tags/Mu4e/"/>
+    
+      <category term="Offlineimap" scheme="http://lengyueyang.github.io/tags/Offlineimap/"/>
     
   </entry>
   
