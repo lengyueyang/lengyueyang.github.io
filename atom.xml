@@ -568,13 +568,13 @@ Last Updated 2016-03-12 Sat 22:50 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
-    
-      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
-    
       <category term="Blog" scheme="http://lengyueyang.github.io/tags/Blog/"/>
     
       <category term="Github" scheme="http://lengyueyang.github.io/tags/Github/"/>
+    
+      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
+    
+      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
     
   </entry>
   
@@ -922,9 +922,9 @@ Last Updated 2016-03-07 Mon 08:14 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
-    
       <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
+    
+      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
     
       <category term="Beamer" scheme="http://lengyueyang.github.io/tags/Beamer/"/>
     
@@ -1073,9 +1073,9 @@ Last Updated 2016-04-05 Tue 23:07 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
-    
       <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
+    
+      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
     
       <category term="GTD" scheme="http://lengyueyang.github.io/tags/GTD/"/>
     
@@ -1694,7 +1694,7 @@ Last Updated 2016-05-28 Sat 22:18 by lengyueyang&lt;br&gt;Render by &lt;a href=&
     <link href="http://lengyueyang.github.io/2016/01/30/Org-mode%20test/"/>
     <id>http://lengyueyang.github.io/2016/01/30/Org-mode test/</id>
     <published>2016-01-30T00:00:00.000Z</published>
-    <updated>2016-03-05T19:18:43.465Z</updated>
+    <updated>2016-11-12T13:56:49.730Z</updated>
     
     <content type="html">
 
@@ -1718,7 +1718,7 @@ Last Updated 2016-05-28 Sat 22:18 by lengyueyang&lt;br&gt;Render by &lt;a href=&
 &lt;/div&gt;
 &lt;/div&gt;
 
-Last Updated 2016-03-06 Sun 03:18 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 25.1.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 8.2.10)
+Last Updated 2016-11-12 Sat 21:56 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 25.1.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 8.2.10)
 </content>
     
     <summary type="html">
@@ -1744,9 +1744,9 @@ Last Updated 2016-03-06 Sun 03:18 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
-    
       <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
+    
+      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
     
   </entry>
   
