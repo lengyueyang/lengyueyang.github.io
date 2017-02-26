@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lengyueyang.github.io/"/>
-  <updated>2016-04-25T09:11:54.009Z</updated>
+  <updated>2017-02-26T13:53:59.773Z</updated>
   <id>http://lengyueyang.github.io/</id>
   
   <author>
@@ -14,6 +14,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>use mu4e to email</title>
+    <link href="http://lengyueyang.github.io/2017/02/26/use%20mu4e%20to%20email/"/>
+    <id>http://lengyueyang.github.io/2017/02/26/use mu4e to email/</id>
+    <published>2017-02-26T00:00:00.000Z</published>
+    <updated>2017-02-26T13:53:59.773Z</updated>
+    
+    <content type="html">
+
+
+&lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;ssss&lt;/h2&gt;
+&lt;/div&gt;
+
+Last Updated 2017-02-26 Sun 21:53 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 25.1.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 8.2.10)
+</content>
+    
+    <summary type="html">
+    
+      
+
+
+&lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;ssss&lt;/h2&gt;
+&lt;/div&gt;
+
+Last Updated 2017-02-26 Sun 21:53 by lengyueyang&lt;br
+    
+    </summary>
+    
+      <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
+    
+    
+      <category term="mu4e" scheme="http://lengyueyang.github.io/tags/mu4e/"/>
+    
+  </entry>
   
   <entry>
     <title>Statistics in research article: Part 1, Univariate analysis [科研文章中的统计：第一部分，单因素分析]</title>
@@ -568,13 +605,13 @@ Last Updated 2016-03-12 Sat 22:50 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Blog" scheme="http://lengyueyang.github.io/tags/Blog/"/>
-    
-      <category term="Github" scheme="http://lengyueyang.github.io/tags/Github/"/>
+      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
     
       <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
     
-      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
+      <category term="Blog" scheme="http://lengyueyang.github.io/tags/Blog/"/>
+    
+      <category term="Github" scheme="http://lengyueyang.github.io/tags/Github/"/>
     
   </entry>
   
@@ -922,9 +959,9 @@ Last Updated 2016-03-07 Mon 08:14 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
-    
       <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
+    
+      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
     
       <category term="Beamer" scheme="http://lengyueyang.github.io/tags/Beamer/"/>
     
@@ -1073,9 +1110,9 @@ Last Updated 2016-04-05 Tue 23:07 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
-    
       <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
+    
+      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
     
       <category term="GTD" scheme="http://lengyueyang.github.io/tags/GTD/"/>
     
@@ -1744,9 +1781,9 @@ Last Updated 2016-11-12 Sat 21:56 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
-    
       <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
+    
+      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
     
   </entry>
   
