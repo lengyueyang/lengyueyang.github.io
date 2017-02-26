@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lengyueyang.github.io/"/>
-  <updated>2017-02-26T14:46:52.794Z</updated>
+  <updated>2017-02-26T14:56:41.121Z</updated>
   <id>http://lengyueyang.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://lengyueyang.github.io/2017/02/26/Use%20Mu4e%20to%20manage%20email/"/>
     <id>http://lengyueyang.github.io/2017/02/26/Use Mu4e to manage email/</id>
     <published>2017-02-26T00:00:00.000Z</published>
-    <updated>2017-02-26T14:46:52.794Z</updated>
+    <updated>2017-02-26T14:56:41.121Z</updated>
     
     <content type="html">
 
@@ -62,15 +62,27 @@
 
 &lt;p&gt;
 &amp;#x8BBE;&amp;#x7F6E; gmail &amp;#x548C; qq &amp;#x4E24;&amp;#x4E2A;&amp;#x8D26;&amp;#x6237;&amp;#xFF0C;&amp;#x6309;&amp;#x7167;&amp;#x4E0A;&amp;#x9762;&amp;#x914D;&amp;#x7F6E;&amp;#xFF0C;&amp;#x90AE;&amp;#x7BB1;&amp;#x548C;&amp;#x5BC6;&amp;#x7801;&amp;#x6539;&amp;#x6210;&amp;#x81EA;&amp;#x5DF1;&amp;#x7684;(&amp;#x9996;&amp;#x5148;&amp;#x5F00;&amp;#x901A; gmail &amp;#x548C; qq &amp;#x90AE;&amp;#x7BB1;&amp;#x7684; imap &amp;#x529F;&amp;#x80FD;&amp;#xFF0C;&amp;#x8BBE;&amp;#x7F6E;&amp;#x6388;&amp;#x6743;&amp;#x7801;&amp;#xFF0C;&amp;#x53EF;&amp;#x53C2;&amp;#x7167;&amp;#x540E;&amp;#x9762;&amp;#x53C2;&amp;#x8003;&amp;#x8D44;&amp;#x6599;)&amp;#x3002;
-&amp;#x5176;&amp;#x4E2D;&amp;#xFF0C;&amp;#x6BD4;&amp;#x8F83;&amp;#x91CD;&amp;#x8981;&amp;#x7684;&amp;#x6709;&amp;#x4EE5;&amp;#x4E0B;&amp;#x51E0;&amp;#x9879;
+&amp;#x5176;&amp;#x4E2D;&amp;#xFF0C;&amp;#x6BD4;&amp;#x8F83;&amp;#x91CD;&amp;#x8981;&amp;#x7684;&amp;#x6709;&amp;#x4EE5;&amp;#x4E0B;&amp;#x51E0;&amp;#x9879;:
+&lt;/p&gt;
+
+&lt;p&gt;
 &lt;code&gt;localfolders&lt;/code&gt; &amp;#x662F;&amp;#x4E0B;&amp;#x8F7D;&amp;#x90AE;&amp;#x4EF6;&amp;#x7684;&amp;#x4F4D;&amp;#x7F6E;
+&lt;/p&gt;
+
+&lt;p&gt;
 &lt;code&gt;nametrans = lambda foldername: foldername.decode(&amp;apos;imap4-utf-7&amp;apos;).encode(&amp;apos;utf-8&amp;apos;)&lt;/code&gt; &amp;#x9632;&amp;#x6B62;&amp;#x4E2D;&amp;#x6587;&amp;#x4E71;&amp;#x7801;
+&lt;/p&gt;
+
+&lt;p&gt;
 &lt;code&gt;folderfilter = lambda foldername: foldername in [&amp;apos;INBOX&amp;apos;,&amp;apos;Drafts&amp;apos;, &amp;apos;Sent Messages&amp;apos;, &amp;apos;Deleted Messages&amp;apos;]&lt;/code&gt; &amp;#x9009;&amp;#x62E9;&amp;#x81EA;&amp;#x5DF1;&amp;#x540C;&amp;#x6B65;&amp;#x7684;&amp;#x6587;&amp;#x4EF6;&amp;#x5939;
+&lt;/p&gt;
+
+&lt;p&gt;
 &lt;code&gt;folderfilter = lambda folder: not re.search(&amp;apos;(^Spam$|All)&amp;apos;, folder)&lt;/code&gt; &amp;#x4E0D;&amp;#x9009;&amp;#x62E9; Spam &amp;#x548C;&amp;#x6709; All &amp;#x5B57;&amp;#x6837;&amp;#x7684;&amp;#x6587;&amp;#x4EF6;&amp;#x5939;&amp;#x540C;&amp;#x6B65; 2
 &lt;/p&gt;
 
 &lt;p&gt;
-&amp;#x540C;&amp;#x65F6;&amp;#xFF0C;&amp;#x5728; home &amp;#x76EE;&amp;#x5F55;&amp;#x4E0B;&amp;#x5BB6;&amp;#x91CC; .offlineimap.py &amp;#x6587;&amp;#x4EF6;&amp;#xFF0C;&amp;#x52A0;&amp;#x5165;&amp;#x4EE5;&amp;#x4E0B;&amp;#x5185;&amp;#x5BB9;&amp;#xFF0C;&amp;#x9632;&amp;#x6B62;&amp;#x4E71;&amp;#x7801;
+&amp;#x540C;&amp;#x65F6;&amp;#xFF0C;&amp;#x5728; home &amp;#x76EE;&amp;#x5F55;&amp;#x4E0B;&amp;#x5BB6;&amp;#x91CC; &lt;code&gt;.offlineimap.py&lt;/code&gt; &amp;#x6587;&amp;#x4EF6;&amp;#xFF0C;&amp;#x52A0;&amp;#x5165;&amp;#x4EE5;&amp;#x4E0B;&amp;#x5185;&amp;#x5BB9;&amp;#xFF0C;&amp;#x9632;&amp;#x6B62;&amp;#x4E71;&amp;#x7801;
 &lt;/p&gt;
 
 &lt;div class=&quot;org-src-container&quot;&gt;
@@ -144,8 +156,14 @@ contact &amp;#x5185;&amp;#x5BB9;&amp;#x662F;&amp;#x81EA;&amp;#x5DF1;&amp;#x7684;
 &lt;div class=&quot;outline-text-4&quot; id=&quot;text-4-1-2&quot;&gt;
 &lt;p&gt;
 R: Reply      s: search            .: raw view (toggle)
+&lt;/p&gt;
+
+&lt;p&gt;
 F: Forward    j: jump-to-maildir   q: quit
 C: Compose    b: bookmark-search
+&lt;/p&gt;
+
+&lt;p&gt;
 E: Edit       B: edit bookmark-search
 &lt;/p&gt;
 &lt;/div&gt;
@@ -160,10 +178,20 @@ key          description
 
 &lt;p&gt;
 n,p          view the next, previous message
+&lt;/p&gt;
+
+&lt;p&gt;
 ],[          move to the next, previous unread message
+&lt;/p&gt;
+
+&lt;p&gt;
 y            select the message view (if it&amp;apos;s visible)
+&lt;/p&gt;
+
+&lt;p&gt;
 RET          open the message at point in the message view
 &lt;/p&gt;
+
 
 &lt;p&gt;
 searching
@@ -171,20 +199,53 @@ searching
 
 &lt;p&gt;
 s            search
+&lt;/p&gt;
+
+&lt;p&gt;
 S            edit last query
+&lt;/p&gt;
+
+&lt;p&gt;
 /            narrow the search
+&lt;/p&gt;
+
+&lt;p&gt;
 b            search bookmark
+&lt;/p&gt;
+
+&lt;p&gt;
 B            edit bookmark before search
+&lt;/p&gt;
+
+&lt;p&gt;
 j            jump to maildir
+&lt;/p&gt;
+
+&lt;p&gt;
 M-left,\     previous query
+&lt;/p&gt;
+
+&lt;p&gt;
 M-right      next query
 &lt;/p&gt;
 
 &lt;p&gt;
 O            change sort order
+&lt;/p&gt;
+
+&lt;p&gt;
 P            toggle threading
+&lt;/p&gt;
+
+&lt;p&gt;
 Q            toggle full-search
+&lt;/p&gt;
+
+&lt;p&gt;
 V            toggle skip-duplicates
+&lt;/p&gt;
+
+&lt;p&gt;
 W            toggle include-related
 &lt;/p&gt;
 
@@ -194,27 +255,52 @@ marking
 
 &lt;p&gt;
 d            mark for moving to the trash folder
+&lt;/p&gt;
+
+&lt;p&gt;
 =            mark for removing trash flag (&amp;apos;untrash&amp;apos;)
+&lt;/p&gt;
+
+&lt;p&gt;
 DEL,D        mark for complete deletion
+&lt;/p&gt;
+
+&lt;p&gt;
 m            mark for moving to another maildir folder
+&lt;/p&gt;
+
+&lt;p&gt;
 r            mark for refiling
+&lt;/p&gt;
+
+&lt;p&gt;
 +,-          mark for flagging/unflagging
+&lt;/p&gt;
+
+&lt;p&gt;
 ?,!          mark message as unread, read
 &lt;/p&gt;
 
 &lt;p&gt;
 u            unmark message at point
+&lt;/p&gt;
+
+&lt;p&gt;
 U            unmark &lt;b&gt;all&lt;/b&gt; messages
 &lt;/p&gt;
 
 &lt;p&gt;
 %            mark based on a regular expression
+&lt;/p&gt;
+
+&lt;p&gt;
 T,t          mark whole thread, subthread
 &lt;/p&gt;
 
 &lt;p&gt;
 &amp;lt;insert&amp;gt;,*   mark for &amp;apos;something&amp;apos; (decide later)
 &lt;/p&gt;
+
 &lt;p&gt;
 x            execute actions for the marked messages
 &lt;/p&gt;
@@ -225,6 +311,9 @@ composition
 
 &lt;p&gt;
 R,F,C        reply/forward/compose
+&lt;/p&gt;
+
+&lt;p&gt;
 E            edit (only allowed for draft messages)
 &lt;/p&gt;
 
@@ -233,10 +322,15 @@ E            edit (only allowed for draft messages)
 misc
 &lt;/p&gt;
 
+
 &lt;p&gt;
 ;            switch focus
+&lt;/p&gt;
+
+&lt;p&gt;
 a            execute some custom action on a header
 &lt;/p&gt;
+
 &lt;table border=&quot;2&quot; cellspacing=&quot;0&quot; cellpadding=&quot;6&quot; rules=&quot;groups&quot; frame=&quot;hsides&quot;&gt;
 
 
@@ -249,14 +343,25 @@ a            execute some custom action on a header
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+
 &lt;p&gt;
 C-+,C&amp;#x2013;      increase / decrease the number of headers shown
+&lt;/p&gt;
+
+&lt;p&gt;
 H            get help
+&lt;/p&gt;
+
+&lt;p&gt;
 C-S-u        update mail &amp;amp; reindex
+&lt;/p&gt;
+
+&lt;p&gt;
 q            leave the headers buffer
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 
 &lt;div id=&quot;outline-container-sec-4-1-4&quot; class=&quot;outline-4&quot;&gt;
 &lt;h4 id=&quot;sec-4-1-4&quot;&gt;Message View&lt;/h4&gt;
@@ -267,17 +372,29 @@ key          description
 
 &lt;p&gt;
 n,p          view the next, previous message
+&lt;/p&gt;
+
+&lt;p&gt;
 ],[          move to the next, previous unread message
+&lt;/p&gt;
+
+&lt;p&gt;
 y            select the headers view (if it&amp;apos;s visible)
 &lt;/p&gt;
 
 &lt;p&gt;
 RET          scroll down
+&lt;/p&gt;
+
+&lt;p&gt;
 M-RET        open URL at point / attachment at point
 &lt;/p&gt;
 
 &lt;p&gt;
 SPC          scroll down, if at end, move to next message
+&lt;/p&gt;
+
+&lt;p&gt;
 S-SPC        scroll up
 &lt;/p&gt;
 
@@ -287,15 +404,33 @@ searching
 
 &lt;p&gt;
 s            search
+&lt;/p&gt;
+
+&lt;p&gt;
 e            edit last query
+&lt;/p&gt;
+
+&lt;p&gt;
 /            narrow the search
+&lt;/p&gt;
+
+&lt;p&gt;
 b            search bookmark
+&lt;/p&gt;
+
+&lt;p&gt;
 B            edit bookmark before search
+&lt;/p&gt;
+
+&lt;p&gt;
 j            jump to maildir
 &lt;/p&gt;
 
 &lt;p&gt;
 M-left       previous query
+&lt;/p&gt;
+
+&lt;p&gt;
 M-right      next query
 &lt;/p&gt;
 
@@ -305,26 +440,48 @@ marking
 
 &lt;p&gt;
 d            mark for moving to the trash folder
+&lt;/p&gt;
+
+&lt;p&gt;
 =            mark for removing trash flag (&amp;apos;untrash&amp;apos;)
+&lt;/p&gt;
+
+&lt;p&gt;
 DEL,D        mark for complete deletion
+&lt;/p&gt;
+
+&lt;p&gt;
 m            mark for moving to another maildir folder
+&lt;/p&gt;
+
+&lt;p&gt;
 r            mark for refiling
+&lt;/p&gt;
+
+&lt;p&gt;
 +,-          mark for flagging/unflagging
 &lt;/p&gt;
 
 &lt;p&gt;
 u            unmark message at point
+&lt;/p&gt;
+
+&lt;p&gt;
 U            unmark &lt;b&gt;all&lt;/b&gt; messages
 &lt;/p&gt;
 
 &lt;p&gt;
 %            mark based on a regular expression
+&lt;/p&gt;
+
+&lt;p&gt;
 T,t          mark whole thread, subthread
 &lt;/p&gt;
 
 &lt;p&gt;
 &amp;lt;insert&amp;gt;,*   mark for &amp;apos;something&amp;apos; (decide later)
 &lt;/p&gt;
+
 &lt;p&gt;
 x            execute actions for the marked messages
 &lt;/p&gt;
@@ -335,6 +492,9 @@ composition
 
 &lt;p&gt;
 R,F,C        reply/forward/compose
+&lt;/p&gt;
+
+&lt;p&gt;
 E            edit (only allowed for draft messages)
 &lt;/p&gt;
 
@@ -344,24 +504,57 @@ actions
 
 &lt;p&gt;
 g            go to (visit) numbered URL (using `browse-url&amp;apos;)
+&lt;/p&gt;
+
+&lt;p&gt;
 (or: &amp;lt;mouse-1&amp;gt; or M-RET with point on url)
+&lt;/p&gt;
+
+&lt;p&gt;
 C-u g visits multiple URLs
+&lt;/p&gt;
+
+&lt;p&gt;
 f            fetch (download )the numbered URL.
+&lt;/p&gt;
+
+&lt;p&gt;
 C-u f fetches multiple URLs
+&lt;/p&gt;
+
+&lt;p&gt;
 k            save the numbered URL in the kill-ring.
+&lt;/p&gt;
+
+&lt;p&gt;
 C-u k saves multiple URLs
 &lt;/p&gt;
 
 &lt;p&gt;
 e            extract (save) attachment (asks for number)
+&lt;/p&gt;
+
+&lt;p&gt;
 (or: &amp;lt;mouse-2&amp;gt; or S-RET with point on attachment)
+&lt;/p&gt;
+
+&lt;p&gt;
 C-u e extracts multiple attachments
+&lt;/p&gt;
+
+&lt;p&gt;
 o            open attachment (asks for number)
+&lt;/p&gt;
+
+&lt;p&gt;
 (or: &amp;lt;mouse-1&amp;gt; or M-RET with point on attachment)
 &lt;/p&gt;
 
 &lt;p&gt;
 a            execute some custom action on the message
+&lt;/p&gt;
+
+&lt;p&gt;
 A            execute some custom action on an attachment
 &lt;/p&gt;
 
@@ -371,22 +564,41 @@ misc
 
 &lt;p&gt;
 ;            switch focus
+&lt;/p&gt;
+
+&lt;p&gt;
 c            copy address at point (with C-u copy long version)
 &lt;/p&gt;
 
 &lt;p&gt;
 h            toggle between html/text (if available)
+&lt;/p&gt;
+
+&lt;p&gt;
 w            toggle line wrapping
 &lt;/p&gt;
+
 &lt;p&gt;
 v            show details about the cryptographic signature
 &lt;/p&gt;
 
 &lt;p&gt;
 .            show the raw message view. &amp;apos;q&amp;apos; takes you back.
+&lt;/p&gt;
+
+&lt;p&gt;
 C-+,C&amp;#x2013;      increase / decrease the number of headers shown
+&lt;/p&gt;
+
+&lt;p&gt;
 H            get help
+&lt;/p&gt;
+
+&lt;p&gt;
 C-S-u        update mail &amp;amp; reindex
+&lt;/p&gt;
+
+&lt;p&gt;
 q            leave the message view
 &lt;/p&gt;
 &lt;/div&gt;
@@ -420,13 +632,26 @@ key          description
 
 &lt;p&gt;
 C-c C-c      send message
-C-c C-d      save to drafts and leave
-C-c C-k      kill the message buffer (the message remains in the draft folder)
-C-c C-a      attach a file (pro-tip: drag &amp;amp; drop works as well)
 &lt;/p&gt;
 
 &lt;p&gt;
+C-c C-d      save to drafts and leave
+&lt;/p&gt;
+
+&lt;p&gt;
+C-c C-k      kill the message buffer (the message remains in the draft folder)
+&lt;/p&gt;
+
+&lt;p&gt;
+C-c C-a      attach a file (pro-tip: drag &amp;amp; drop works as well)
+&lt;/p&gt;
+
+
+&lt;p&gt;
 (mu4e-specific)
+&lt;/p&gt;
+
+&lt;p&gt;
 C-S-u        update mail &amp;amp; reindex
 &lt;/p&gt;
 &lt;/div&gt;
@@ -445,17 +670,53 @@ mark for/as   keybinding  | description
 
 &lt;p&gt;
 &amp;apos;something&amp;apos;  *, &amp;lt;insert&amp;gt; | mark now, decide later
+&lt;/p&gt;
+
+&lt;p&gt;
 delete        D, &amp;lt;delete&amp;gt; | delete
+&lt;/p&gt;
+
+&lt;p&gt;
 flag          +           | mark as &amp;apos;flagged&amp;apos; (&amp;apos;starred&amp;apos;)
+&lt;/p&gt;
+
+&lt;p&gt;
 move          m           | move to some maildir
+&lt;/p&gt;
+
+&lt;p&gt;
 read          !           | mark as read
+&lt;/p&gt;
+
+&lt;p&gt;
 refile        r           | mark for refiling
+&lt;/p&gt;
+
+&lt;p&gt;
 trash         d           | move to the trash folder
+&lt;/p&gt;
+
+&lt;p&gt;
 untrash       =           | remove &amp;apos;trash&amp;apos; flag
+&lt;/p&gt;
+
+&lt;p&gt;
 unflag        -           | remove &amp;apos;flagged&amp;apos; mark
+&lt;/p&gt;
+
+&lt;p&gt;
 unmark        u           | remove mark at point
+&lt;/p&gt;
+
+&lt;p&gt;
 unmark all    U           | remove all marks
+&lt;/p&gt;
+
+&lt;p&gt;
 unread        ?           | marks as unread
+&lt;/p&gt;
+
+&lt;p&gt;
 action        a           | apply some action
 &lt;/p&gt;
 &lt;/div&gt;
@@ -471,6 +732,7 @@ action        a           | apply some action
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 
 
 &lt;div id=&quot;outline-container-sec-5&quot; class=&quot;outline-2&quot;&gt;
@@ -505,7 +767,7 @@ action        a           | apply some action
 &lt;/div&gt;
 &lt;/div&gt;
 
-Last Updated 2017-02-26 Sun 22:46 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 25.1.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 8.2.10)
+Last Updated 2017-02-26 Sun 22:56 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 25.1.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 8.2.10)
 </content>
     
     <summary type="html">
