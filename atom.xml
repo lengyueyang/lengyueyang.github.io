@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>一家之言</title>
-  <subtitle>记录生活点滴, 记忆人生轨迹</subtitle>
+  <title>深度识医</title>
+  <subtitle>究天人之际  成一家之言</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lengyueyang.github.io/"/>
@@ -9,7 +9,7 @@
   <id>http://lengyueyang.github.io/</id>
   
   <author>
-    <name>冷月</name>
+    <name>冷月阳</name>
     
   </author>
   
