@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>深度识医</title>
-  <subtitle>究天人之际  成一家之言</subtitle>
+  <subtitle>究天人之际    成一家之言</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lengyueyang.github.io/"/>
@@ -1345,13 +1345,13 @@ Last Updated 2016-03-12 Sat 22:50 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Blog" scheme="http://lengyueyang.github.io/tags/Blog/"/>
-    
-      <category term="Github" scheme="http://lengyueyang.github.io/tags/Github/"/>
+      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
     
       <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
     
-      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
+      <category term="Blog" scheme="http://lengyueyang.github.io/tags/Blog/"/>
+    
+      <category term="Github" scheme="http://lengyueyang.github.io/tags/Github/"/>
     
   </entry>
   
@@ -1699,9 +1699,9 @@ Last Updated 2016-03-07 Mon 08:14 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
-    
       <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
+    
+      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
     
       <category term="Beamer" scheme="http://lengyueyang.github.io/tags/Beamer/"/>
     
@@ -1850,9 +1850,9 @@ Last Updated 2016-04-05 Tue 23:07 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
-    
       <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
+    
+      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
     
       <category term="GTD" scheme="http://lengyueyang.github.io/tags/GTD/"/>
     
@@ -2521,9 +2521,9 @@ Last Updated 2016-11-12 Sat 21:56 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
-    
       <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
+    
+      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
     
   </entry>
   
