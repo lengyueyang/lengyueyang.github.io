@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Emacs,Spacemacs," />
+  <meta name="keywords" content="Spaceacs,lengyueyang,Configuration," />
 
 
 
@@ -86,58 +86,28 @@
 
 
 
-<meta name="description" content="Useful keybinding
+<meta name="description" content="Introduction: Emacs Configuration in an Org File
 
 
-Memory
-
-
-SPC f s Save a buffer
-
-SPC f S Save all opened buffers
-
-SPC b b Open or switch a buffer with helm
-
-SPC T h Select a theme using a helm buffer
-
-SPC f/p t To toggle the Neo">
+I used spacemacs recently, org-mode is my favourite package of emacs, 
+I use org-mode to GTD, write slide and documents, so I want to use org-mod">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spacemacs Learning [Spacemacs 学习]">
-<meta property="og:url" content="http://lengyueyang.github.io/2016/02/14/Spacemacs Learning/index.html">
+<meta property="og:title" content="A simple introduction of lengyueyang's spacemacs configration[个人 spacemacs 配置简介]">
+<meta property="og:url" content="http://lengyueyang.github.io/2017/03/26/A simple introduction of lengyueyang's spacemacs configration[个人spacemacs配置简介]/index.html">
 <meta property="og:site_name" content="深度识医">
-<meta property="og:description" content="Useful keybinding
+<meta property="og:description" content="Introduction: Emacs Configuration in an Org File
 
 
-Memory
-
-
-SPC f s Save a buffer
-
-SPC f S Save all opened buffers
-
-SPC b b Open or switch a buffer with helm
-
-SPC T h Select a theme using a helm buffer
-
-SPC f/p t To toggle the Neo">
-<meta property="og:updated_time" content="2016-03-07T00:14:05.047Z">
+I used spacemacs recently, org-mode is my favourite package of emacs, 
+I use org-mode to GTD, write slide and documents, so I want to use org-mod">
+<meta property="og:updated_time" content="2017-03-26T14:40:10.797Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spacemacs Learning [Spacemacs 学习]">
-<meta name="twitter:description" content="Useful keybinding
+<meta name="twitter:title" content="A simple introduction of lengyueyang's spacemacs configration[个人 spacemacs 配置简介]">
+<meta name="twitter:description" content="Introduction: Emacs Configuration in an Org File
 
 
-Memory
-
-
-SPC f s Save a buffer
-
-SPC f S Save all opened buffers
-
-SPC b b Open or switch a buffer with helm
-
-SPC T h Select a theme using a helm buffer
-
-SPC f/p t To toggle the Neo">
+I used spacemacs recently, org-mode is my favourite package of emacs, 
+I use org-mode to GTD, write slide and documents, so I want to use org-mod">
 
 
 
@@ -158,10 +128,10 @@ SPC f/p t To toggle the Neo">
 
 
 
-  <link rel="canonical" href="http://lengyueyang.github.io/2016/02/14/Spacemacs Learning/"/>
+  <link rel="canonical" href="http://lengyueyang.github.io/2017/03/26/A simple introduction of lengyueyang's spacemacs configration[个人spacemacs配置简介]/"/>
 
 
-  <title> Spacemacs Learning [Spacemacs 学习] | 深度识医 </title>
+  <title> A simple introduction of lengyueyang's spacemacs configration[个人 spacemacs 配置简介] | 深度识医 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -337,7 +307,7 @@ SPC f/p t To toggle the Neo">
             
             
               
-                Spacemacs Learning [Spacemacs 学习]
+                A simple introduction of lengyueyang's spacemacs configration[个人 spacemacs 配置简介]
               
             
           </h1>
@@ -349,8 +319,8 @@ SPC f/p t To toggle the Neo">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-14T08:00:00+08:00" content="2016-02-14">
-              2016-02-14
+            <time itemprop="dateCreated" datetime="2017-03-26T08:00:00+08:00" content="2017-03-26">
+              2017-03-26
             </time>
           </span>
 
@@ -385,8 +355,8 @@ SPC f/p t To toggle the Neo">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/14/Spacemacs Learning/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/14/Spacemacs Learning/" itemprop="commentsCount"></span>
+                <a href="/2017/03/26/A simple introduction of lengyueyang's spacemacs configration[个人spacemacs配置简介]/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/26/A simple introduction of lengyueyang's spacemacs configration[个人spacemacs配置简介]/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -413,263 +383,214 @@ SPC f/p t To toggle the Neo">
 
 
 <div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">Useful keybinding</h2>
+<h2 id="sec-1">Introduction: Emacs Configuration in an Org File</h2>
 <div class="outline-text-2" id="text-1">
-</div><div id="outline-container-sec-1-1" class="outline-3">
-<h3 id="sec-1-1">Memory</h3>
+<p>
+I used spacemacs recently, org-mode is my favourite package of emacs, 
+I use org-mode to GTD, write slide and documents, so I want to use org-mode to 
+manager may own configuration of emacs beyond spacemacs.
+</p>
+
+<p>
+After searched in google and with my research, I found the way below,
+I want to manager my own emacs configuration from now (<span class="timestamp-wrapper"><span class="timestamp">[2016-11-07 Mon 21:00]</span></span>).
+</p>
+
+<p>
+You could found my org config file in <a href="https://github.com/lengyueyang/spacemacs-lengyue" target="_blank" rel="external">https://github.com/lengyueyang/spacemacs-lengyue</a>
+</p>
+</div>
+
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1">Custom.el setup</h3>
 <div class="outline-text-3" id="text-1-1">
-<ul class="org-ul">
-<li>SPC f s Save a buffer
-</li>
-<li>SPC f S Save all opened buffers
-</li>
-<li>SPC b b Open or switch a buffer with helm
-</li>
-<li>SPC T h Select a theme using a helm buffer
-</li>
-<li>SPC f/p t To toggle the Neotree buffer press (project)
-</li>
-<li>SPC h b Open the bookmark
-</li>
-<li>SPC h l Resume the last helm buffers
-</li>
-<li>SPC s L Focus the last converted search buffer
-</li>
-<li>F3 In a helm buffer, convert a helm search buffer into a regular buffer
-</li>
-</ul>
-<a id="more"></a>
+<p>
+In order to reduce the size of <code>init.el</code> in <code>.spacemacs</code> folder, create a <code>custom.el</code> file
+in <code>.spaceamcs</code> folder, then add the flowing code to the end the <code>init.el</code>, and copy the
+same location code to <code>custom.el</code> at the same time.
+</p>
+
+<p>
+<b><i>Don&apos;t export this code, so use example</i></b>
+</p>
+
+<pre class="example">
+(setq custom-file (expand-file-name &quot;custom.el&quot; dotspacemacs-directory))
+(load custom-file &apos;no-error &apos;no-message)
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2">Org-mode to customize emacs configuration</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Add the follow code to <code>.inti.el</code> part <code>defun dotspacemacs/user-config ()</code>
+</p>
+
+<p>
+<b><i>Don&apos;t export this code, so use example</i></b>
+</p>
+
+<pre class="example">
+(require &apos;ob-tangle)
+(org-babel-load-file
+  (expand-file-name &quot;lengyueyang.org&quot;
+                    dotspacemacs-directory))
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3">Req-package</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+<a href="https://github.com/edvorg/req-package" target="_blank" rel="external">req-package</a> is a wrapper on top of <a href="https://github.com/jwiegley/use-package" target="_blank" rel="external">use-package</a>, a package dependency management
+tool. The documentation for <code>use-package</code> is immensely helpful for figuring out
+how to describe package dependencies and settings. <code>req-package</code> adds the
+<code>:require</code> keyword which allows us to define dependencies between related
+packages.
+</p>
+</div>
+
+<div id="outline-container-sec-1-3-1" class="outline-4">
+<h4 id="sec-1-3-1">Initialize req-package</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+With the preceding process complete, we just need to add the following
+line to our init file to begin using <code>req-package</code>:
+</p>
+
+<div class="org-src-container">
+
+<figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line"><span class="list">(<span class="keyword">require</span> <span class="quoted">&apos;req-package</span>)</span></span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
+
+<div id="outline-container-sec-1-3-2" class="outline-4">
+<h4 id="sec-1-3-2">Start loading packages in right order</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<p>
+To start loading packages in right order, we need to added following in the last
+of emacs config.
+</p>
+
+<div class="org-src-container">
+
+<figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line"><span class="list">(<span class="keyword">req-package-finish</span>)</span></span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+
 <div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2">The Emacs Evil Tutor</h2>
+<h2 id="sec-2">Keybinding</h2>
 <div class="outline-text-2" id="text-2">
-</div><div id="outline-container-sec-2-1" class="outline-3">
-<h3 id="sec-2-1">LESSON 1</h3>
+<p>
+Global keybindings of emacs but for specific customization with keybinding, like some
+org related keybindings in Org-mode configuration part.
+</p>
+</div>
+
+<div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1">F2 to open my init file</h3>
 <div class="outline-text-3" id="text-2-1">
-<ol class="org-ol">
-<li>The cursor is moved using either the arrow keys or the hjkl keys.
-h (left)        j (down)       k (up)            l (right)
-</li>
+<div class="org-src-container">
 
-<li>To exit Emacs type:  &lt;ESC&gt; :qa! &lt;ENTER&gt;  to trash all changes.
-OR type:  &lt;ESC&gt; :wqa &lt;ENTER&gt;  to save the changes.
-</li>
-
-<li>Ctrl + f Page Down
-Ctrl + b Page Up
-</li>
-
-<li>0 Cursor to the beginging of the line
-$ Cursor to the end of the line
-</li>
-
-<li>G Cursor to the last of the file
-nG Cursor to the n line of the file
-gg Cursor to the begin of the file, like 1G
-<p>
-:[Enter] followed by a line number and moves to that line number.
-N[Enter] Curosr to the N line
-</p>
-</li>
-</ol>
-
-<p>
-NOTE: Pressing &lt;ESC&gt; will place you in normal state or will cancel
-      an unwanted and partially completed command.
-</p>
+<figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line"><span class="list">(<span class="keyword">defun</span> open-my-init-file<span class="list">()</span></span><br><span class="line">  <span class="list">(<span class="keyword">interactive</span>)</span></span><br><span class="line">  <span class="list">(<span class="keyword">find-file</span> <span class="string">&quot;~/.spacemacs.d/lengyueyang.org&quot;</span>)</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="list">(<span class="keyword">global-set-key</span> <span class="list">(<span class="keyword">kbd</span> <span class="string">&quot;&lt;f2&gt;&quot;</span>)</span> <span class="quoted">&apos;open-my-init-file</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">spacemacs/set-leader-keys</span> <span class="string">&quot;oo&quot;</span> <span class="quoted">&apos;open-my-init-file</span>)</span></span><br></pre></td></tr></table></figure>
 </div>
 </div>
-
+</div>
 
 <div id="outline-container-sec-2-2" class="outline-3">
-<h3 id="sec-2-2">LESSON 2</h3>
+<h3 id="sec-2-2">F3 to open stardict</h3>
 <div class="outline-text-3" id="text-2-2">
-<ol class="org-ol">
-<li>x/X To delete a character under/before the cursor in normal state type
-</li>
+<div class="org-src-container">
 
-<li>To delete a whole line type:  dd
-</li>
-
-<li>The format for a command in normal state is:
-
-<p>
-  [number]  command  object    OR    command  [number]  object
-where:
-  number - is how many times to repeat the command
-  command - is what to do, such as  d  for delete
-  object - is what the command should act upon, such as  w  for word,
-           $  for &quot;to the end of line&quot;, etc.
-</p>
-</li>
-
-<li>d1G, dG, d0, d$
-</li>
-
-<li>yy Copy the line of cursokr
-nyy Copy the n line data
-</li>
-
-<li>y1G, yG, y0, y$
-</li>
-
-<li>p/P Paste the data from the next/before line
-</li>
-
-<li>To undo previous actions, type:  u
-To undo the undo&apos;s type:  CTRL-R
-Repeat the last opeartion: .
-</li>
-</ol>
+<figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line"><span class="list">(<span class="keyword">require</span> <span class="quoted">&apos;chinese-yasdcv</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">define-key</span> global-map <span class="list">(<span class="keyword">kbd</span> <span class="string">&quot;&lt;f3&gt;&quot;</span>)</span> <span class="quoted">&apos;youdao-dictionary-search-at-point+</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="list">(<span class="keyword">spacemacs/declare-prefix</span> <span class="string">&quot;ok&quot;</span> <span class="string">&quot;Keybindings&quot;</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">spacemacs/set-leader-keys</span> <span class="string">&quot;oky&quot;</span> <span class="quoted">&apos;yasdcv-translate-at-point</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="list">(<span class="keyword">spacemacs/set-leader-keys</span> <span class="string">&quot;oks&quot;</span> <span class="quoted">&apos;youdao-dictionary-search-from-input</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">spacemacs/set-leader-keys</span> <span class="string">&quot;oki&quot;</span> <span class="quoted">&apos;youdao-dictionary-search-at-point+</span>)</span></span><br></pre></td></tr></table></figure>
 </div>
 </div>
-
+</div>
 
 <div id="outline-container-sec-2-3" class="outline-3">
-<h3 id="sec-2-3">LESSON 3</h3>
+<h3 id="sec-2-3">F8 to checkout the spelling of words</h3>
 <div class="outline-text-3" id="text-2-3">
-<ol class="org-ol">
-<li>To replace text that has already been deleted, type  p  this puts the
-deleted text AFTER the cursor (if a line was deleted it will go on the
-line below the cursor).
-</li>
+<div class="org-src-container">
 
-<li>To replace the character under the cursor, type  r  and then the
-character which will replace the original.
-</li>
-
-<li>The change command allows you to change the specified object from the
-cursor to the end of the object.  eg. Type  cw  to change from the
-cursor to the end of the word,  c$  to change to the end of a line.
-</li>
-
-<li>The format for change is:
-[number]  c  object    OR    c  [number]  object
-</li>
-</ol>
+<figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line"><span class="list">(<span class="keyword">define-key</span> global-map <span class="list">(<span class="keyword">kbd</span> <span class="string">&quot;&lt;f8&gt;&quot;</span>)</span> <span class="quoted">&apos;flyspell-correct-previous-word-generic</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">spacemacs/set-leader-keys</span> <span class="string">&quot;okf&quot;</span> <span class="quoted">&apos;flyspell-correct-previous-word-generic</span>)</span></span><br></pre></td></tr></table></figure>
 </div>
 </div>
-
+</div>
 
 <div id="outline-container-sec-2-4" class="outline-3">
-<h3 id="sec-2-4">LESSON 4</h3>
+<h3 id="sec-2-4">Org-iswitch</h3>
 <div class="outline-text-3" id="text-2-4">
-<ol class="org-ol">
-<li>Typing  /  followed by a phrase searches FORWARD for the phrase.
-Typing  ?  followed by a phrase searches BACKWARD for the phrase.
-After a search type  n  to find the next occurrence in the same direction
-or  N  to search in the opposite direction.
-</li>
+<div class="org-src-container">
 
-<li>Typing  %  while the cursor is on a  (,),[,],{, or }  locates its
-matching pair.
-</li>
-
-<li>To substitute new for the first old on a line type  :s/old/new
-To substitute new for all &apos;old&apos;s on a line type     :s/old/new/g
-To substitute phrases between two line #&apos;s type     :#,#s/old/new/g
-To substitute all occurrences in the file type      :%s/old/new/g
-To ask for confirmation each time add &apos;c&apos;           :%s/old/new/gc
-</li>
-</ol>
+<figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line"><span class="list">(<span class="keyword">spacemacs/set-leader-keys</span> <span class="string">&quot;oa&quot;</span> <span class="quoted">&apos;org-agenda-list</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">global-set-key</span> <span class="list">(<span class="keyword">kbd</span> <span class="string">&quot;C-c b&quot;</span>)</span> <span class="quoted">&apos;org-iswitchb</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">spacemacs/set-leader-keys</span> <span class="string">&quot;okb&quot;</span> <span class="quoted">&apos;org-iswitchb</span>)</span></span><br></pre></td></tr></table></figure>
 </div>
 </div>
-
+</div>
 
 <div id="outline-container-sec-2-5" class="outline-3">
-<h3 id="sec-2-5">LESSON 5</h3>
+<h3 id="sec-2-5">Bookmark keybindings reconfiguration</h3>
 <div class="outline-text-3" id="text-2-5">
-<ol class="org-ol">
-<li>:!command  executes an external command.
+<div class="org-src-container">
 
-<p>
-Some useful examples are:
-</p>
-<p>
-:!ls  or  :!dir                 -  shows a directory listing.
-</p>
-<p>
-:!rm  or  :!del FILENAME        -  removes file FILENAME.
-</p>
-</li>
-
-<li>:w FILENAME  writes the current buffer to disk with file name FILENAME.
-</li>
-
-<li>:#,#w FILENAME  saves the lines # through # in file FILENAME.
-</li>
-
-<li>:r FILENAME  retrieves disk file FILENAME and inserts it into the
-current buffer following the cursor position.
-</li>
-</ol>
-</div>
-</div>
-
-
-<div id="outline-container-sec-2-6" class="outline-3">
-<h3 id="sec-2-6">LESSON 6</h3>
-<div class="outline-text-3" id="text-2-6">
-<ol class="org-ol">
-<li>Typing  o   opens a line BELOW the cursor and places the cursor on the open
-line in insert state.
-Typing a capital  O  opens the line ABOVE the line the cursor is on.
-</li>
-
-<li>Type an  a  to insert text AFTER the character the cursor is on.
-Typing a capital  A  automatically appends text to the end of the line.
-</li>
-
-<li>i/I Insert text at the character/Not blank
-</li>
-</ol>
+<figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line"><span class="list">(<span class="keyword">spacemacs/declare-prefix</span> <span class="string">&quot;om&quot;</span> <span class="string">&quot;Bookmark&quot;</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">spacemacs/set-leader-keys</span> <span class="string">&quot;oms&quot;</span> <span class="quoted">&apos;bookmark-set</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">spacemacs/set-leader-keys</span> <span class="string">&quot;omr&quot;</span> <span class="quoted">&apos;bookmark-rename</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">spacemacs/set-leader-keys</span> <span class="string">&quot;omd&quot;</span> <span class="quoted">&apos;bookmark-delete</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">spacemacs/set-leader-keys</span> <span class="string">&quot;omj&quot;</span> <span class="quoted">&apos;counsel-bookmark</span>)</span></span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
+</div>
+
 <div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3">Python and R programming environment configuration</h2>
+<h2 id="sec-3">Reference</h2>
 <div class="outline-text-2" id="text-3">
-</div><div id="outline-container-sec-3-1" class="outline-3">
-<h3 id="sec-3-1">Python</h3>
-<div class="outline-text-3" id="text-3-1">
-<ul class="org-ul">
-<li>Configure the auto-complete mode as the spacemacs layer: auto-complete
-</li>
-<li>Replace the keybinding SPC m s i to &apos;run python&apos; in file package.el within python layer
-</li>
-<li>Add the following confirmation to .spacemacs
-<div class="org-src-container">
+<p>
+Following link is refrence for my emac config.
+</p>
 
-<figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line"><span class="list">(<span class="keyword">add-hook</span> <span class="quoted">&apos;inferior-python-mode-hook</span> <span class="quoted">&apos;flycheck-mode</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">add-hook</span> <span class="quoted">&apos;inferior-python-mode-hook</span> <span class="quoted">&apos;flyspell-mode</span>)</span></span><br></pre></td></tr></table></figure>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-sec-3-2" class="outline-3">
-<h3 id="sec-3-2">R</h3>
-<div class="outline-text-3" id="text-3-2">
-<ul class="org-ul">
-<li>Add the following confirmation to .spacemacs
-</li>
-</ul>
-<div class="org-src-container">
+<p>
+<code>[1]</code> <a href="https://github.com/r0man/.emacs.d/blob/master/init.el.org" target="_blank" rel="external">https://github.com/r0man/.emacs.d/blob/master/init.el.org</a>
+</p>
 
-<figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line"><span class="list">(<span class="keyword">add-hook</span> <span class="quoted">&apos;R-mode-hook</span> <span class="quoted">&apos;smartparens-mode</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">add-hook</span> <span class="quoted">&apos;R-mode-hook</span> <span class="quoted">&apos;flycheck-mode</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">add-hook</span> <span class="quoted">&apos;R-mode-hook</span> <span class="quoted">&apos;flyspell-mode</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">add-hook</span> <span class="quoted">&apos;org-mode-hook</span> <span class="quoted">&apos;smartparens-mode</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">add-hook</span> <span class="quoted">&apos;inferior-ess-mode-hook</span> <span class="quoted">&apos;company-mode</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">add-hook</span> <span class="quoted">&apos;inferior-ess-mode-hook</span> <span class="quoted">&apos;smartparens-mode</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">add-hook</span> <span class="quoted">&apos;inferior-ess-mode-hook</span> <span class="quoted">&apos;flycheck-mode</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">add-hook</span> <span class="quoted">&apos;inferior-ess-mode-hook</span> <span class="quoted">&apos;flyspell-mode</span>)</span></span><br></pre></td></tr></table></figure>
-</div>
-<ul class="org-ul">
-<li>For the R auto complete: after open the R file, then C-c C-c, reopen the R file 
-</li>
-<li>When insert src-block with org heading, add a , before the heading, to avoid mistake
-</li>
-</ul>
-</div>
+<p>
+<code>[2]</code> <a href="https://github.com/bodil/emacs.d" target="_blank" rel="external">https://github.com/bodil/emacs.d</a>
+</p>
+
+<p>
+<code>[3]</code> <a href="https://github.com/mgalgs/.emacs.d" target="_blank" rel="external">https://github.com/mgalgs/.emacs.d</a>
+</p>
+
+<p>
+<code>[4]</code> <a href="https://raw.githubusercontent.com/sbisaacson/literate-emacs/master/README.org" target="_blank" rel="external">https://raw.githubusercontent.com/sbisaacson/literate-emacs/master/README.org</a>
+</p>
+
+<p>
+<code>[5]</code> <a href="https://github.com/jhenahan/emacs.d/blob/master/emacs-init.org" target="_blank" rel="external">https://github.com/jhenahan/emacs.d/blob/master/emacs-init.org</a>
+</p>
+
+<p>
+<code>[6]</code> <a href="https://ryuslash.org/dotfiles/emacs/init.html" target="_blank" rel="external">https://ryuslash.org/dotfiles/emacs/init.html</a>
+</p>
+
+<p>
+<code>[7]</code> <a href="http://www.wisdomandwonder.com/wordpress/wp-content/uploads/2014/03/C3F.org_.txt" target="_blank" rel="external">http://www.wisdomandwonder.com/wordpress/wp-content/uploads/2014/03/C3F.org_.txt</a>
+</p>
+
+<p>
+<code>[8]</code> <a href="https://github.com/howardabrams/dot-files" target="_blank" rel="external">https://github.com/howardabrams/dot-files</a>
+</p>
+
+<p>
+<code>[9]</code> <a href="https://github.com/coldnew/coldnew-spacemacs" target="_blank" rel="external">https://github.com/coldnew/coldnew-spacemacs</a>
+</p>
 </div>
 </div>
 
-Last Updated 2016-03-07 Mon 08:14 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.1.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 8.2.10)
+Last Updated 2017-03-26 Sun 22:40 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.1.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 8.2.10)
 
       
     </div>
@@ -692,9 +613,11 @@ Last Updated 2016-03-07 Mon 08:14 by lengyueyang<br>Render by <a href="https://g
       
         <div class="post-tags">
           
-            <a href="/tags/Emacs/" rel="tag">#Emacs</a>
+            <a href="/tags/Spaceacs/" rel="tag">#Spaceacs</a>
           
-            <a href="/tags/Spacemacs/" rel="tag">#Spacemacs</a>
+            <a href="/tags/lengyueyang/" rel="tag">#lengyueyang</a>
+          
+            <a href="/tags/Configuration/" rel="tag">#Configuration</a>
           
         </div>
       
@@ -703,17 +626,13 @@ Last Updated 2016-03-07 Mon 08:14 by lengyueyang<br>Render by <a href="https://g
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/05/Archlinux install and configuration/" rel="next" title="Archlinux install and configuration [Archlinux 安装和配置]">
-                <i class="fa fa-chevron-left"></i> Archlinux install and configuration [Archlinux 安装和配置]
+              <a href="/2017/03/15/房子，北京/" rel="next" title="房子，北京">
+                <i class="fa fa-chevron-left"></i> 房子，北京
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/02/28/Use org-mode to GTD/" rel="prev" title="Use org-mode to GTD [用 org-mode 做时间管理 ]">
-                Use org-mode to GTD [用 org-mode 做时间管理 ] <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -728,10 +647,10 @@ Last Updated 2016-03-07 Mon 08:14 by lengyueyang<br>Render by <a href="https://g
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/02/14/Spacemacs Learning/"
-     data-title="Spacemacs Learning [Spacemacs 学习]"
+        <div class="ds-share flat" data-thread-key="2017/03/26/A simple introduction of lengyueyang's spacemacs configration[个人spacemacs配置简介]/"
+     data-title="A simple introduction of lengyueyang's spacemacs configration[个人 spacemacs 配置简介]"
      data-content=""
-     data-url="http://lengyueyang.github.io/2016/02/14/Spacemacs Learning/">
+     data-url="http://lengyueyang.github.io/2017/03/26/A simple introduction of lengyueyang's spacemacs configration[个人spacemacs配置简介]/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -758,8 +677,8 @@ Last Updated 2016-03-07 Mon 08:14 by lengyueyang<br>Render by <a href="https://g
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/02/14/Spacemacs Learning/"
-           data-title="Spacemacs Learning [Spacemacs 学习]" data-url="http://lengyueyang.github.io/2016/02/14/Spacemacs Learning/">
+      <div class="ds-thread" data-thread-key="2017/03/26/A simple introduction of lengyueyang's spacemacs configration[个人spacemacs配置简介]/"
+           data-title="A simple introduction of lengyueyang's spacemacs configration[个人 spacemacs 配置简介]" data-url="http://lengyueyang.github.io/2017/03/26/A simple introduction of lengyueyang's spacemacs configration[个人spacemacs配置简介]/">
       </div>
     
   </div>
@@ -926,7 +845,7 @@ Last Updated 2016-03-07 Mon 08:14 by lengyueyang<br>Render by <a href="https://g
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-1"><span class="nav-number">1.</span> <span class="nav-text">Useful keybinding</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-1"><span class="nav-number">1.1.</span> <span class="nav-text">Memory</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-2"><span class="nav-number">2.</span> <span class="nav-text">The Emacs Evil Tutor</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-2-1"><span class="nav-number">2.1.</span> <span class="nav-text">LESSON 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-2-2"><span class="nav-number">2.2.</span> <span class="nav-text">LESSON 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-2-3"><span class="nav-number">2.3.</span> <span class="nav-text">LESSON 3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-2-4"><span class="nav-number">2.4.</span> <span class="nav-text">LESSON 4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-2-5"><span class="nav-number">2.5.</span> <span class="nav-text">LESSON 5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-2-6"><span class="nav-number">2.6.</span> <span class="nav-text">LESSON 6</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-3"><span class="nav-number">3.</span> <span class="nav-text">Python and R programming environment configuration</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-3-1"><span class="nav-number">3.1.</span> <span class="nav-text">Python</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-3-2"><span class="nav-number">3.2.</span> <span class="nav-text">R</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-1"><span class="nav-number">1.</span> <span class="nav-text">Introduction: Emacs Configuration in an Org File</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-1"><span class="nav-number">1.1.</span> <span class="nav-text">Custom.el setup</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-2"><span class="nav-number">1.2.</span> <span class="nav-text">Org-mode to customize emacs configuration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-3"><span class="nav-number">1.3.</span> <span class="nav-text">Req-package</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-3-1"><span class="nav-number">1.3.1.</span> <span class="nav-text">Initialize req-package</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-3-2"><span class="nav-number">1.3.2.</span> <span class="nav-text">Start loading packages in right order</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-2"><span class="nav-number">2.</span> <span class="nav-text">Keybinding</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-2-1"><span class="nav-number">2.1.</span> <span class="nav-text">F2 to open my init file</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-2-2"><span class="nav-number">2.2.</span> <span class="nav-text">F3 to open stardict</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-2-3"><span class="nav-number">2.3.</span> <span class="nav-text">F8 to checkout the spelling of words</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-2-4"><span class="nav-number">2.4.</span> <span class="nav-text">Org-iswitch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-2-5"><span class="nav-number">2.5.</span> <span class="nav-text">Bookmark keybindings reconfiguration</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-3"><span class="nav-number">3.</span> <span class="nav-text">Reference</span></a></li></ol></div>
             
           </div>
         </section>
