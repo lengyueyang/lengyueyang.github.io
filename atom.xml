@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lengyueyang.github.io/"/>
-  <updated>2017-03-26T15:04:11.355Z</updated>
+  <updated>2017-03-26T15:05:41.895Z</updated>
   <id>http://lengyueyang.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://lengyueyang.github.io/2017/03/26/A%20simple%20introduction%20of%20lengyueyang's%20spacemacs%20configration%5B%E4%B8%AA%E4%BA%BAspacemacs%E9%85%8D%E7%BD%AE%E7%AE%80%E4%BB%8B%5D/"/>
     <id>http://lengyueyang.github.io/2017/03/26/A simple introduction of lengyueyang's spacemacs configration[个人spacemacs配置简介]/</id>
     <published>2017-03-26T00:00:00.000Z</published>
-    <updated>2017-03-26T15:04:11.355Z</updated>
+    <updated>2017-03-26T15:05:41.895Z</updated>
     
     <content type="html">
 
@@ -33,6 +33,7 @@ I used spacemacs recently, org-mode is my favourite package of emacs,
 I use org-mode to GTD, write slide and documents, so I want to use org-mode to 
 manager may own configuration of emacs beyond spacemacs.
 &lt;/p&gt;
+
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;p&gt;
 After searched in google and with my research, I found the way below,
@@ -1139,7 +1140,7 @@ Following link is refrence for my emac config.
 &lt;/div&gt;
 &lt;/div&gt;
 
-Last Updated 2017-03-26 Sun 23:04 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 25.1.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 8.2.10)
+Last Updated 2017-03-26 Sun 23:05 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 25.1.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 8.2.10)
 </content>
     
     <summary type="html">
@@ -2584,13 +2585,13 @@ Last Updated 2016-03-12 Sat 22:50 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
-    
-      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
-    
       <category term="Blog" scheme="http://lengyueyang.github.io/tags/Blog/"/>
     
       <category term="Github" scheme="http://lengyueyang.github.io/tags/Github/"/>
+    
+      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
+    
+      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
     
   </entry>
   
@@ -2938,9 +2939,9 @@ Last Updated 2016-03-07 Mon 08:14 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
-    
       <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
+    
+      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
     
       <category term="Beamer" scheme="http://lengyueyang.github.io/tags/Beamer/"/>
     
@@ -3089,9 +3090,9 @@ Last Updated 2016-04-05 Tue 23:07 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
-    
       <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
+    
+      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
     
       <category term="GTD" scheme="http://lengyueyang.github.io/tags/GTD/"/>
     
@@ -3760,9 +3761,9 @@ Last Updated 2016-11-12 Sat 21:56 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
-    
       <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
+    
+      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
     
   </entry>
   
