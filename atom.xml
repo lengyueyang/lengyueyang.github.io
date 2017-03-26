@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lengyueyang.github.io/"/>
-  <updated>2017-03-26T14:51:29.814Z</updated>
+  <updated>2017-03-26T14:53:25.974Z</updated>
   <id>http://lengyueyang.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://lengyueyang.github.io/2017/03/26/A%20simple%20introduction%20of%20lengyueyang's%20spacemacs%20configration%5B%E4%B8%AA%E4%BA%BAspacemacs%E9%85%8D%E7%BD%AE%E7%AE%80%E4%BB%8B%5D/"/>
     <id>http://lengyueyang.github.io/2017/03/26/A simple introduction of lengyueyang's spacemacs configration[个人spacemacs配置简介]/</id>
     <published>2017-03-26T00:00:00.000Z</published>
-    <updated>2017-03-26T14:51:29.814Z</updated>
+    <updated>2017-03-26T14:53:25.974Z</updated>
     
     <content type="html">
 
@@ -643,6 +643,36 @@ Changed the org-agenda font size with the below link methods
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-5-6&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-5-6&quot;&gt;Org-ispell&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-5-6&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight lisp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;defun&lt;/span&gt; lengyueyang/org-ispell &lt;span class=&quot;list&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;string&quot;&gt;&amp;quot;Configure `ispell-skip-region-alist&amp;apos; for `org-mode&amp;apos;.&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;make-local-variable&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;ispell-skip-region-alist&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;add-to-list&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;ispell-skip-region-alist&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;(org-property-drawer-re)&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;add-to-list&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;ispell-skip-region-alist&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;(&lt;span class=&quot;string&quot;&gt;&amp;quot;~&amp;quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;~&amp;quot;&lt;/span&gt;)&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;add-to-list&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;ispell-skip-region-alist&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;(&lt;span class=&quot;string&quot;&gt;&amp;quot;=&amp;quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;=&amp;quot;&lt;/span&gt;)&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;add-to-list&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;ispell-skip-region-alist&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;(&lt;span class=&quot;string&quot;&gt;&amp;quot;^#\\+BEGIN_SRC&amp;quot;&lt;/span&gt; . &lt;span class=&quot;string&quot;&gt;&amp;quot;^#\\+END_SRC&amp;quot;&lt;/span&gt;)&lt;/span&gt;)&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;add-hook&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;org-mode-hook&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;#&amp;apos;lengyueyang/org-ispell&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-5-7&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-5-7&quot;&gt;Org bullets customization&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-5-7&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight lisp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;defun&lt;/span&gt; lengyueyang/post-init-org-bullets &lt;span class=&quot;list&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;setq&lt;/span&gt; org-bullets-bullet-list &lt;span class=&quot;quoted&quot;&gt;&amp;apos;(&lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;#x2630;&amp;quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;#x2637;&amp;quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;#x22D7;&amp;quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;#x21C0;&amp;quot;&lt;/span&gt;)&lt;/span&gt;)&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;add-hook&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;org-mode-hook&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;#&amp;apos;lengyueyang/post-init-org-bullets&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-sec-5-8&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-5-8&quot;&gt;Org-notify&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-5-8&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;figure class=&quot;highlight lisp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;org-notify&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;org-notify-start&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;list&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;org-notify-add&lt;/span&gt; &lt;span class=&quot;quoted&quot;&gt;&amp;apos;appt&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;quoted&quot;&gt;&amp;apos;(&lt;span class=&quot;keyword&quot;&gt;:time&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;-1s&amp;quot;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;:period&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;20s&amp;quot;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;:duration&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;:actions&lt;/span&gt; (-message -ding))&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;quoted&quot;&gt;&amp;apos;(&lt;span class=&quot;keyword&quot;&gt;:time&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;15m&amp;quot;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;:period&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;2m&amp;quot;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;:duration&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;:actions&lt;/span&gt; -notify)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;quoted&quot;&gt;&amp;apos;(&lt;span class=&quot;keyword&quot;&gt;:time&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;2h&amp;quot;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;:period&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;10m&amp;quot;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;:actions&lt;/span&gt; -message)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;quoted&quot;&gt;&amp;apos;(&lt;span class=&quot;keyword&quot;&gt;:time&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;3d&amp;quot;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;:period&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;12h&amp;quot;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;:actions&lt;/span&gt; -message)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;quoted&quot;&gt;&amp;apos;(&lt;span class=&quot;keyword&quot;&gt;:time&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;7d&amp;quot;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;:period&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;24h&amp;quot;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;:actions&lt;/span&gt; -message)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;quoted&quot;&gt;&amp;apos;(&lt;span class=&quot;keyword&quot;&gt;:time&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;30d&amp;quot;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;:actions&lt;/span&gt; -email)&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div id=&quot;outline-container-sec-6&quot; class=&quot;outline-2&quot;&gt;
@@ -985,7 +1015,7 @@ Following link is refrence for my emac config.
 &lt;/div&gt;
 &lt;/div&gt;
 
-Last Updated 2017-03-26 Sun 22:51 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 25.1.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 8.2.10)
+Last Updated 2017-03-26 Sun 22:53 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 25.1.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 8.2.10)
 </content>
     
     <summary type="html">
