@@ -413,9 +413,9 @@
         
 
 
-<div id="outline-container-org01fc49b" class="outline-2">
-<h2 id="org01fc49b">写作原因</h2>
-<div class="outline-text-2" id="text-org01fc49b">
+<div id="outline-container-org1dd3d47" class="outline-2">
+<h2 id="org1dd3d47">写作原因</h2>
+<div class="outline-text-2" id="text-org1dd3d47">
 <ul class="org-ul">
 <li>最近学习 R 语言，这篇博客是学习 R 语言一个简单成果展示，这是第一部分，单因素分析</li>
 <li>科研论文中的统计方法很重要，关系到结果的可信度，然而中国发表的很多文章，统计过关的不多</li>
@@ -427,12 +427,12 @@
 </div>
 </div>
 
-<div id="outline-container-orgcc21e8f" class="outline-2">
-<h2 id="orgcc21e8f">R 分析基本流程</h2>
-<div class="outline-text-2" id="text-orgcc21e8f">
-</div><div id="outline-container-org58472de" class="outline-3">
-<h3 id="org58472de">数据导入，在 R 语言中导入数据框用 read.table，再显示数据</h3>
-<div class="outline-text-3" id="text-org58472de">
+<div id="outline-container-orga8c0cff" class="outline-2">
+<h2 id="orga8c0cff">R 分析基本流程</h2>
+<div class="outline-text-2" id="text-orga8c0cff">
+</div><div id="outline-container-orgaea0652" class="outline-3">
+<h3 id="orgaea0652">数据导入，在 R 语言中导入数据框用 read.table，再显示数据</h3>
+<div class="outline-text-3" id="text-orgaea0652">
 <div class="org-src-container">
 <figure class="highlight r"><table><tr><td class="code"><pre><span class="line">F2TTC &amp;lt;- read.table(<span class="string">"file/F2TTC.csv"</span>, header=<span class="literal">TRUE</span>, sep=<span class="string">","</span>, na.strings=<span class="string">"NA"</span>, dec=<span class="string">"."</span>, strip.white=<span class="literal">TRUE</span>, check.names = <span class="literal">FALSE</span>)</span><br><span class="line">F2TTC</span><br></pre></td></tr></table></figure>
 </div>
@@ -443,9 +443,9 @@
 </div>
 </div>
 
-<div id="outline-container-orgbd7f486" class="outline-3">
-<h3 id="orgbd7f486">检测数据是否有离群点及数据正态性判断</h3>
-<div class="outline-text-3" id="text-orgbd7f486">
+<div id="outline-container-orgea9ecea" class="outline-3">
+<h3 id="orgea9ecea">检测数据是否有离群点及数据正态性判断</h3>
+<div class="outline-text-3" id="text-orgea9ecea">
 <ul class="org-ul">
 <li>用 reshape2 变换数据</li>
 </ul>
@@ -484,9 +484,9 @@
 </div>
 </div>
 
-<div id="outline-container-org36a8f61" class="outline-3">
-<h3 id="org36a8f61">接下来应该进行方差齐性检验，常用方差齐性检验有 leveneTest 和 bartlett.test 两种</h3>
-<div class="outline-text-3" id="text-org36a8f61">
+<div id="outline-container-org7447763" class="outline-3">
+<h3 id="org7447763">接下来应该进行方差齐性检验，常用方差齐性检验有 leveneTest 和 bartlett.test 两种</h3>
+<div class="outline-text-3" id="text-org7447763">
 <div class="org-src-container">
 <figure class="highlight r"><table><tr><td class="code"><pre><span class="line">bartlett.test(value ~ group, data = F2TTCR)</span><br><span class="line">leveneTest(F2TTCR$value, F2TTCR$group)</span><br></pre></td></tr></table></figure>
 </div>
@@ -497,9 +497,9 @@
 </div>
 </div>
 
-<div id="outline-container-orgda9a07f" class="outline-3">
-<h3 id="orgda9a07f">由于我上面数据非正态，所以用非参数检验方法检验各组差异，分两部分，一是各组之间的差异，用 kruskal.test，二是两两比较，用 posthoc.kruskal.nemenyi.test，由下面结果知道，IR 组和 Sham 组相比，有统计学意义(P &lt; 0.01)，用“**”表示差异，THP 10 + IR 组与 Sham 组，THP 40 + IR 与 IR 组相比，有统计学意义(P &lt; 0.05)，用“*”表示差异</h3>
-<div class="outline-text-3" id="text-orgda9a07f">
+<div id="outline-container-orga20b0f3" class="outline-3">
+<h3 id="orga20b0f3">由于我上面数据非正态，所以用非参数检验方法检验各组差异，分两部分，一是各组之间的差异，用 kruskal.test，二是两两比较，用 posthoc.kruskal.nemenyi.test，由下面结果知道，IR 组和 Sham 组相比，有统计学意义(P &lt; 0.01)，用“**”表示差异，THP 10 + IR 组与 Sham 组，THP 40 + IR 与 IR 组相比，有统计学意义(P &lt; 0.05)，用“*”表示差异</h3>
+<div class="outline-text-3" id="text-orga20b0f3">
 <div class="org-src-container">
 <figure class="highlight r"><table><tr><td class="code"><pre><span class="line">kruskal.test(value ~ group, data = F2TTCR)</span><br><span class="line"><span class="keyword">library</span>(PMCMR)</span><br><span class="line">F2TTCSEM &amp;lt;- posthoc.kruskal.nemenyi.test(value ~ group, data=F2TTCR, dist=<span class="string">"Chisquare"</span>)</span><br><span class="line">F2TTCSEM</span><br></pre></td></tr></table></figure>
 </div>
@@ -510,9 +510,9 @@
 </div>
 </div>
 
-<div id="outline-container-org048a8e0" class="outline-3">
-<h3 id="org048a8e0">做图</h3>
-<div class="outline-text-3" id="text-org048a8e0">
+<div id="outline-container-org5505cfc" class="outline-3">
+<h3 id="org5505cfc">做图</h3>
+<div class="outline-text-3" id="text-org5505cfc">
 <ul class="org-ul">
 <li>数据处理，为做图做准备，用 dplyr 包进行数据整合</li>
 </ul>
@@ -540,12 +540,12 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org9c02fa7" class="outline-2">
-<h2 id="org9c02fa7">另外两个例子</h2>
-<div class="outline-text-2" id="text-org9c02fa7">
-</div><div id="outline-container-orgee95fb8" class="outline-3">
-<h3 id="orgee95fb8">非参数检验，多组作图</h3>
-<div class="outline-text-3" id="text-orgee95fb8">
+<div id="outline-container-org6cc648d" class="outline-2">
+<h2 id="org6cc648d">另外两个例子</h2>
+<div class="outline-text-2" id="text-org6cc648d">
+</div><div id="outline-container-org91dbca6" class="outline-3">
+<h3 id="org91dbca6">非参数检验，多组作图</h3>
+<div class="outline-text-3" id="text-org91dbca6">
 <div class="org-src-container">
 <figure class="highlight r"><table><tr><td class="code"><pre><span class="line">F2N3 &amp;lt;- read.table(<span class="string">"F2N3.csv"</span>, header=<span class="literal">TRUE</span>, sep=<span class="string">","</span>, na.strings=<span class="string">"NA"</span>, dec=<span class="string">"."</span>, strip.white=<span class="literal">TRUE</span>, check.names = <span class="literal">FALSE</span>)</span><br><span class="line">F2N24 &amp;lt;- read.table(<span class="string">"F2N24.csv"</span>, header=<span class="literal">TRUE</span>, sep=<span class="string">","</span>, na.strings=<span class="string">"NA"</span>, dec=<span class="string">"."</span>, strip.white=<span class="literal">TRUE</span>, check.names = <span class="literal">FALSE</span>)</span><br><span class="line">F2N3R &amp;lt;- melt(F2N3)</span><br><span class="line">names(F2N3R)[<span class="number">1</span>:<span class="number">2</span>] &amp;lt;- c(<span class="string">"group"</span>, <span class="string">"value"</span>)</span><br><span class="line">F2N24R &amp;lt;- melt(F2N24)</span><br><span class="line">names(F2N24R)[<span class="number">1</span>:<span class="number">2</span>] &amp;lt;- c(<span class="string">"group"</span>, <span class="string">"value"</span>)</span><br><span class="line">F2N3R$time &amp;lt;- rep(<span class="string">"3 h"</span>,<span class="number">96</span>)</span><br><span class="line">F2N24R$time &amp;lt;- rep(<span class="string">"24 h"</span>,<span class="number">96</span>)</span><br><span class="line">F2NR &amp;lt;- rbind(F2N3R, F2N24R)</span><br><span class="line">outlierTest(lm(value ~ group, data = F2NR))</span><br><span class="line">tiff(filename = <span class="string">"qqpF2N.tif"</span>,width = <span class="number">15</span>,height = <span class="number">18</span>,units =<span class="string">"cm"</span>,compression=<span class="string">"lzw"</span>,bg=<span class="string">"white"</span>,res=<span class="number">600</span>)</span><br><span class="line">qqPlot(lm(value ~ group, data=F2NR), simulate=<span class="literal">TRUE</span>, main=<span class="string">"Q-Q Plot"</span>, labels=<span class="literal">TRUE</span>)</span><br><span class="line">dev.off()</span><br><span class="line">bartlett.test(value ~ group, data = F2NR)</span><br><span class="line">leveneTest(F2NR$value, F2NR$group)</span><br><span class="line">kruskal.test(value ~ group, data = F2NR)</span><br><span class="line">F2N3SEM &amp;lt;- posthoc.kruskal.nemenyi.test(value ~ group, data=F2N3R, dist=<span class="string">"Chisquare"</span>)</span><br><span class="line">F2N24SEM &amp;lt;- posthoc.kruskal.nemenyi.test(value ~ group, data=F2N24R, dist=<span class="string">"Chisquare"</span>)</span><br><span class="line">F2N &amp;lt;- summarise(group_by(F2NR, group, time), mean=mean(value, na.rm = <span class="literal">TRUE</span>), sem=std.error(value, na.rm=<span class="literal">TRUE</span>))</span><br><span class="line">F2N &amp;lt;- F2N[order(desc(F2N$time)), ]</span><br><span class="line">F2N$time &amp;lt;- factor(F2N$time,levels=unique(F2N$time))</span><br><span class="line">tiff(filename = <span class="string">"F2NSS.tif"</span>,width = <span class="number">20</span>, height = <span class="number">10</span>,units =<span class="string">"cm"</span>,compression=<span class="string">"lzw"</span>,bg=<span class="string">"white"</span>,res=<span class="number">1200</span>)</span><br><span class="line">ggplot(data=F2N,aes(x=time,y=mean,fill=group, width=<span class="number">0.7</span>)) +</span><br><span class="line">  geom_bar(position=position_dodge(width=<span class="number">0.8</span>),stat = <span class="string">"identity"</span>,width=<span class="number">0.6</span>,size=<span class="number">0.8</span>) +</span><br><span class="line">  geom_errorbar(aes(ymin=mean,ymax=mean+sem, width = <span class="number">0.2</span>),position=position_dodge(width=<span class="number">0.8</span>),size=<span class="number">0.8</span>) +</span><br><span class="line">  geom_bar(position=position_dodge(width=<span class="number">0.8</span>), colour=<span class="string">"black"</span>,stat =<span class="string">"identity"</span>,width=<span class="number">0.6</span>,size=<span class="number">0.8</span>) +</span><br><span class="line">  scale_fill_manual(values=c(<span class="string">"grey100"</span>, <span class="string">"grey75"</span>,<span class="string">"grey0"</span>, <span class="string">"grey90"</span>,<span class="string">"grey50"</span>, <span class="string">"grey30"</span>)) +</span><br><span class="line">  theme_classic(base_family=<span class="string">"Times New Roman"</span>) + scale_x_discrete(<span class="string">""</span>) +</span><br><span class="line">  scale_y_continuous(<span class="string">"Neurological Score"</span>, expand=c(<span class="number">0</span>,<span class="number">0</span>),limits = c(<span class="number">0</span>, <span class="number">20.05</span>), breaks=seq(<span class="number">0</span>,<span class="number">20</span>, by=<span class="number">5</span>)) +</span><br><span class="line">  theme(axis.text.x = element_text(family=<span class="string">"Times New Roman"</span>,face=<span class="string">"bold"</span>, size=<span class="number">12</span>), axis.text.y = element_text(family=<span class="string">"Times New Roman"</span>,face=<span class="string">"bold"</span>, size=<span class="number">12</span>),axis.title.y = element_text(family=<span class="string">"Times New Roman"</span>, face=<span class="string">"bold"</span>, size=<span class="number">15</span>, margin=margin(<span class="number">0</span>,<span class="number">10</span>,<span class="number">0</span>,<span class="number">0</span>)),axis.line = element_line(size = <span class="number">0.8</span>),axis.ticks = element_line(size = <span class="number">0.8</span>),axis.ticks.length=unit(<span class="number">0.2</span>,<span class="string">"cm"</span>), plot.margin=unit(c(<span class="number">5</span>,<span class="number">5</span>,<span class="number">0</span>,<span class="number">5</span>),<span class="string">"mm"</span>), legend.title=element_blank(),legend.text = element_text(size = <span class="number">12</span>, face = <span class="string">"bold"</span>),legend.key.width = unit(<span class="number">0.8</span>, <span class="string">"cm"</span>),legend.key.height = unit(<span class="number">0.5</span>, <span class="string">"cm"</span>),legend.position=<span class="string">"right"</span>) +</span><br><span class="line">  geom_segment(aes(x=<span class="number">0.67</span>, y=<span class="number">16</span>, xend=<span class="number">0.67</span>, yend=<span class="number">16.5</span>)) +</span><br><span class="line">  geom_segment(aes(x=<span class="number">0.67</span>, y=<span class="number">16.5</span>, xend=<span class="number">1.33</span>, yend=<span class="number">16.5</span>)) +</span><br><span class="line">  annotate(<span class="string">"text"</span>,family=<span class="string">"Times New Roman"</span>, x=<span class="number">0.93</span>, y=<span class="number">17</span>, label=<span class="string">"*"</span>, size=<span class="number">5</span>) +</span><br><span class="line">  annotate(<span class="string">"text"</span>,family=<span class="string">"Times New Roman"</span>, x=<span class="number">1.07</span>, y=<span class="number">17</span>, label=<span class="string">"**"</span>, size=<span class="number">5</span>) +</span><br><span class="line">  annotate(<span class="string">"text"</span>,family=<span class="string">"Times New Roman"</span>, x=<span class="number">1.2</span>, y=<span class="number">17</span>, label=<span class="string">"**"</span>, size=<span class="number">5</span>) +</span><br><span class="line">  annotate(<span class="string">"text"</span>,family=<span class="string">"Times New Roman"</span>, x=<span class="number">1.33</span>, y=<span class="number">17</span>, label=<span class="string">"*"</span>, size=<span class="number">5</span>) +</span><br><span class="line">  geom_segment(aes(x=<span class="number">1.67</span>, y=<span class="number">16</span>, xend=<span class="number">1.67</span>, yend=<span class="number">16.5</span>)) +</span><br><span class="line">  geom_segment(aes(x=<span class="number">1.67</span>, y=<span class="number">16.5</span>, xend=<span class="number">2.20</span>, yend=<span class="number">16.5</span>)) +</span><br><span class="line">  annotate(<span class="string">"text"</span>,family=<span class="string">"Times New Roman"</span>, x=<span class="number">1.93</span>, y=<span class="number">17</span>, label=<span class="string">"**"</span>, size=<span class="number">5</span>) +</span><br><span class="line">  annotate(<span class="string">"text"</span>,family=<span class="string">"Times New Roman"</span>, x=<span class="number">2.07</span>, y=<span class="number">17</span>, label=<span class="string">"**"</span>, size=<span class="number">5</span>) +</span><br><span class="line">  annotate(<span class="string">"text"</span>,family=<span class="string">"Times New Roman"</span>, x=<span class="number">2.2</span>, y=<span class="number">17</span>, label=<span class="string">"**"</span>, size=<span class="number">5</span>)</span><br><span class="line">dev.off()</span><br></pre></td></tr></table></figure>
 </div>
@@ -559,9 +559,9 @@
 </div>
 </div>
 
-<div id="outline-container-org4b327f9" class="outline-3">
-<h3 id="org4b327f9">参数检验，一组作图</h3>
-<div class="outline-text-3" id="text-org4b327f9">
+<div id="outline-container-org72d24d8" class="outline-3">
+<h3 id="org72d24d8">参数检验，一组作图</h3>
+<div class="outline-text-3" id="text-org72d24d8">
 <div class="org-src-container">
 <figure class="highlight r"><table><tr><td class="code"><pre><span class="line">F3Ev &amp;lt;- read.table(<span class="string">"F3Ev.csv"</span>, header=<span class="literal">FALSE</span>, sep=<span class="string">","</span>, na.strings=<span class="string">"NA"</span>, dec=<span class="string">"."</span>, strip.white=<span class="literal">TRUE</span>)</span><br><span class="line">F3Ev &amp;lt;- as.data.frame(t(F3Ev))</span><br><span class="line">names(F3Ev)[<span class="number">1</span>:<span class="number">4</span>] &amp;lt;- c(<span class="string">"Sham"</span>, <span class="string">"THP 40  + Sham"</span>, <span class="string">"IR"</span>, <span class="string">"THP 40  + IR"</span>)</span><br><span class="line"><span class="keyword">library</span>(reshape2)</span><br><span class="line">F3EvR &amp;lt;- melt(F3Ev)</span><br><span class="line">names(F3EvR)[<span class="number">1</span>:<span class="number">2</span>] &amp;lt;- c(<span class="string">"group"</span>, <span class="string">"value"</span>)</span><br><span class="line"><span class="keyword">library</span>(car)</span><br><span class="line">outlierTest(lm(value ~ group, data = F3EvR))</span><br><span class="line">tiff(filename = <span class="string">"qqpF3E.tif"</span>,width = <span class="number">15</span>,height = <span class="number">18</span>,units =<span class="string">"cm"</span>,compression=<span class="string">"lzw"</span>,bg=<span class="string">"white"</span>,res=<span class="number">600</span>)</span><br><span class="line">qqPlot(lm(value ~ group, data=F3EvR), simulate=<span class="literal">TRUE</span>, main=<span class="string">"Q-Q Plot"</span>, labels=<span class="literal">TRUE</span>)</span><br><span class="line">dev.off()</span><br><span class="line">leveneTest(F3EvR$value, F3EvR$group)</span><br><span class="line">bartlett.test(value ~ group, data = F3EvR)</span><br><span class="line"><span class="keyword">library</span>(multcomp)</span><br><span class="line">F3EvOA &amp;lt;- aov(value ~ group, data=F3EvR)</span><br><span class="line">summary(F3EvOA)</span><br><span class="line">F3EvSEM &amp;lt;- summary(glht(F3EvOA, linfct = mcp(group = <span class="string">"Tukey"</span>)))</span><br><span class="line"><span class="keyword">library</span>(plotrix)</span><br><span class="line"><span class="keyword">library</span>(dplyr)</span><br><span class="line">F3E &amp;lt;- summarise(group_by(F3EvR, group), mean=mean(value, na.rm = <span class="literal">TRUE</span>), sem=std.error(value, na.rm=<span class="literal">TRUE</span>))</span><br><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line"><span class="keyword">library</span>(grid)</span><br><span class="line">levels(F3E$group) &amp;lt;- gsub(<span class="string">"  "</span>, <span class="string">"\n"</span>, levels(F3E$group))</span><br><span class="line">tiff(filename = <span class="string">"F3Evans Blue.tif"</span>,width = <span class="number">11</span>,height = <span class="number">10</span>,units =<span class="string">"cm"</span>,compression=<span class="string">"lzw"</span>,bg=<span class="string">"white"</span>,res=<span class="number">1200</span>)</span><br><span class="line">ggplot(data=F3E,aes(x=group,y=mean,fill=group, group=<span class="number">1</span>)) +</span><br><span class="line">  geom_errorbar(aes(ymin=mean,ymax=mean+sem, width = <span class="number">0.2</span>),size=<span class="number">0.8</span>) +</span><br><span class="line">  geom_bar(position=<span class="string">"stack"</span>,stat = <span class="string">"identity"</span>,width=<span class="number">0.6</span>,size=<span class="number">0.8</span>, colour=<span class="string">"black"</span>) +</span><br><span class="line">  scale_fill_manual(values=c(<span class="string">"grey100"</span>, <span class="string">"grey75"</span>,<span class="string">"grey0"</span>, <span class="string">"grey30"</span>)) +</span><br><span class="line">  theme_classic(base_family=<span class="string">"Times New Roman"</span>) + scale_x_discrete(<span class="string">""</span>) +</span><br><span class="line">  scale_y_continuous(<span class="string">"Evans Blue (ug/g)"</span>, expand=c(<span class="number">0</span>,<span class="number">0</span>),limits = c(<span class="number">0</span>, <span class="number">20.05</span>), breaks=seq(<span class="number">0</span>,<span class="number">20</span>, by=<span class="number">5</span>)) +</span><br><span class="line">  theme(axis.text.x = element_text(family=<span class="string">"Times New Roman"</span>,face=<span class="string">"bold"</span>, size=<span class="number">12</span>), axis.text.y = element_text(family=<span class="string">"Times New Roman"</span>,face=<span class="string">"bold"</span>, size=<span class="number">12</span>),axis.title.y = element_text(family=<span class="string">"Times New Roman"</span>, face=<span class="string">"bold"</span>, size=<span class="number">15</span>, margin=margin(<span class="number">0</span>,<span class="number">10</span>,<span class="number">0</span>,<span class="number">0</span>)),axis.line = element_line(size = <span class="number">0.8</span>),axis.ticks = element_line(size = <span class="number">0.8</span>),axis.ticks.length=unit(<span class="number">0.2</span>,<span class="string">"cm"</span>), plot.margin=unit(c(<span class="number">5</span>,<span class="number">5</span>,<span class="number">0</span>,<span class="number">5</span>),<span class="string">"mm"</span>), legend.position=<span class="string">"none"</span>) +</span><br><span class="line">  geom_path(x=c(<span class="number">1</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">3</span>),y=c(<span class="number">16</span>, <span class="number">16.5</span>, <span class="number">16.5</span>, <span class="number">16</span>),size = <span class="number">0.6</span>) +</span><br><span class="line">  geom_path(x=c(<span class="number">3</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">4</span>),y=c(<span class="number">17.5</span>,<span class="number">18</span>,<span class="number">18</span>,<span class="number">17.5</span>),size = <span class="number">0.6</span>) +</span><br><span class="line">  annotate(<span class="string">"text"</span>,family=<span class="string">"Times New Roman"</span>, x = <span class="number">2</span>, y = <span class="number">17</span>, label = <span class="string">"**"</span>,size=<span class="number">5</span>) +</span><br><span class="line">  annotate(<span class="string">"text"</span>,family=<span class="string">"Times New Roman"</span>, x = <span class="number">3.5</span>, y=<span class="number">18.5</span>, label = <span class="string">"**"</span>,size=<span class="number">5</span>)</span><br><span class="line">dev.off()</span><br></pre></td></tr></table></figure>
 </div>
@@ -576,8 +576,8 @@
 </div>
 </div>
 
-<div id="outline-container-org07b6fa7" class="outline-2">
-<h2 id="org07b6fa7">注意事项</h2>
+<div id="outline-container-org2a19d18" class="outline-2">
+<h2 id="org2a19d18">注意事项</h2>
 </div>
 <div id="footnotes">
 <h2 class="footnotes">Footnotes: </h2>
@@ -867,7 +867,7 @@ Last Updated 2017-04-08 Sat 11:28 by lengyueyang<br>Render by <a href="https://g
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#org01fc49b"><span class="nav-number">1.</span> <span class="nav-text">写作原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orgcc21e8f"><span class="nav-number">2.</span> <span class="nav-text">R 分析基本流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org58472de"><span class="nav-number">2.1.</span> <span class="nav-text">数据导入，在 R 语言中导入数据框用 read.table，再显示数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orgbd7f486"><span class="nav-number">2.2.</span> <span class="nav-text">检测数据是否有离群点及数据正态性判断</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org36a8f61"><span class="nav-number">2.3.</span> <span class="nav-text">接下来应该进行方差齐性检验，常用方差齐性检验有 leveneTest 和 bartlett.test 两种</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orgda9a07f"><span class="nav-number">2.4.</span> <span class="nav-text">由于我上面数据非正态，所以用非参数检验方法检验各组差异，分两部分，一是各组之间的差异，用 kruskal.test，二是两两比较，用 posthoc.kruskal.nemenyi.test，由下面结果知道，IR 组和 Sham 组相比，有统计学意义(P < 0.01)，用“**”表示差异，THP 10 + IR 组与 Sham 组，THP 40 + IR 与 IR 组相比，有统计学意义(P < 0.05)，用“*”表示差异</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org048a8e0"><span class="nav-number">2.5.</span> <span class="nav-text">做图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org9c02fa7"><span class="nav-number">3.</span> <span class="nav-text">另外两个例子</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#orgee95fb8"><span class="nav-number">3.1.</span> <span class="nav-text">非参数检验，多组作图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org4b327f9"><span class="nav-number">3.2.</span> <span class="nav-text">参数检验，一组作图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org07b6fa7"><span class="nav-number">4.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">Footnotes: </span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#org1dd3d47"><span class="nav-number">1.</span> <span class="nav-text">写作原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orga8c0cff"><span class="nav-number">2.</span> <span class="nav-text">R 分析基本流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#orgaea0652"><span class="nav-number">2.1.</span> <span class="nav-text">数据导入，在 R 语言中导入数据框用 read.table，再显示数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orgea9ecea"><span class="nav-number">2.2.</span> <span class="nav-text">检测数据是否有离群点及数据正态性判断</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org7447763"><span class="nav-number">2.3.</span> <span class="nav-text">接下来应该进行方差齐性检验，常用方差齐性检验有 leveneTest 和 bartlett.test 两种</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orga20b0f3"><span class="nav-number">2.4.</span> <span class="nav-text">由于我上面数据非正态，所以用非参数检验方法检验各组差异，分两部分，一是各组之间的差异，用 kruskal.test，二是两两比较，用 posthoc.kruskal.nemenyi.test，由下面结果知道，IR 组和 Sham 组相比，有统计学意义(P < 0.01)，用“**”表示差异，THP 10 + IR 组与 Sham 组，THP 40 + IR 与 IR 组相比，有统计学意义(P < 0.05)，用“*”表示差异</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org5505cfc"><span class="nav-number">2.5.</span> <span class="nav-text">做图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org6cc648d"><span class="nav-number">3.</span> <span class="nav-text">另外两个例子</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org91dbca6"><span class="nav-number">3.1.</span> <span class="nav-text">非参数检验，多组作图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org72d24d8"><span class="nav-number">3.2.</span> <span class="nav-text">参数检验，一组作图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org2a19d18"><span class="nav-number">4.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">Footnotes: </span></a></li></ol></div>
             
 
           </div>
