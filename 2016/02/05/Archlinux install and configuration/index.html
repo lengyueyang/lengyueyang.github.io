@@ -5,16 +5,19 @@
   
 
 
-<html class="theme-next pisces use-motion">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
 
 
 
@@ -63,7 +66,7 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
@@ -86,49 +89,24 @@
 
 
 
-<meta name="description" content="Archlinux install [&amp;#x5B89;&amp;#x88C5;&amp;#x7BC7;]
-
-
-Prepare for the installation
-
-
-Prepare the ISO of archlinux, and brasero it into USB flash disk
-
-
-Partiton: use cfdisk, use the UEFI install, the mkfs">
+<meta name="description" content="Archlinux install [安装篇]   Prepare for the installation   Prepare the ISO of archlinux, and brasero it into USB flash disk  Partiton: use cfdisk, use the UEFI install, the mkfs   /dev/sda1 to UEFI b">
+<meta name="keywords" content="Linux,Archlinux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Archlinux install and configuration [Archlinux 安装和配置]">
 <meta property="og:url" content="http://lengyueyang.github.io/2016/02/05/Archlinux install and configuration/index.html">
 <meta property="og:site_name" content="深度识医">
-<meta property="og:description" content="Archlinux install [&amp;#x5B89;&amp;#x88C5;&amp;#x7BC7;]
-
-
-Prepare for the installation
-
-
-Prepare the ISO of archlinux, and brasero it into USB flash disk
-
-
-Partiton: use cfdisk, use the UEFI install, the mkfs">
+<meta property="og:description" content="Archlinux install [安装篇]   Prepare for the installation   Prepare the ISO of archlinux, and brasero it into USB flash disk  Partiton: use cfdisk, use the UEFI install, the mkfs   /dev/sda1 to UEFI b">
 <meta property="og:updated_time" content="2016-05-28T14:18:24.364Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Archlinux install and configuration [Archlinux 安装和配置]">
-<meta name="twitter:description" content="Archlinux install [&amp;#x5B89;&amp;#x88C5;&amp;#x7BC7;]
-
-
-Prepare for the installation
-
-
-Prepare the ISO of archlinux, and brasero it into USB flash disk
-
-
-Partiton: use cfdisk, use the UEFI install, the mkfs">
+<meta name="twitter:description" content="Archlinux install [安装篇]   Prepare for the installation   Prepare the ISO of archlinux, and brasero it into USB flash disk  Partiton: use cfdisk, use the UEFI install, the mkfs   /dev/sda1 to UEFI b">
 
 
 
-<script type="text/javascript" id="hexo.configuration">
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
+    root: '/',
     scheme: 'Pisces',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
@@ -136,22 +114,33 @@ Partiton: use cfdisk, use the UEFI install, the mkfs">
     duoshuo: {
       userId: '0',
       author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
     }
   };
 </script>
 
 
 
-
   <link rel="canonical" href="http://lengyueyang.github.io/2016/02/05/Archlinux install and configuration/"/>
+
+
+
 
 
   <title> Archlinux install and configuration [Archlinux 安装和配置] | 深度识医 </title>
 </head>
 
-<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
+
+
 
 
 
@@ -159,11 +148,13 @@ Partiton: use cfdisk, use the UEFI install, the mkfs">
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?03623c427d40ea3a0d397622146ba575";
+      hm.src = "https://hm.baidu.com/hm.js?03623c427d40ea3a0d397622146ba575";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
   </script>
+
+
 
 
 
@@ -177,29 +168,33 @@ Partiton: use cfdisk, use the UEFI install, the mkfs">
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">深度识医</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">深度识医</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">究天人之际    成一家之言</p>
+      
   </div>
-  <p class="site-subtitle">究天人之际    成一家之言</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -212,6 +207,8 @@ Partiton: use cfdisk, use the UEFI install, the mkfs">
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
             首页
           </a>
         </li>
@@ -219,6 +216,8 @@ Partiton: use cfdisk, use the UEFI install, the mkfs">
         
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
             分类
           </a>
@@ -228,6 +227,8 @@ Partiton: use cfdisk, use the UEFI install, the mkfs">
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
             归档
           </a>
         </li>
@@ -235,6 +236,8 @@ Partiton: use cfdisk, use the UEFI install, the mkfs">
         
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -244,6 +247,8 @@ Partiton: use cfdisk, use the UEFI install, the mkfs">
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
             关于
           </a>
         </li>
@@ -251,6 +256,8 @@ Partiton: use cfdisk, use the UEFI install, the mkfs">
         
         <li class="menu-item menu-item-commonweal">
           <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
             
             公益404
           </a>
@@ -262,6 +269,8 @@ Partiton: use cfdisk, use the UEFI install, the mkfs">
           
             <a href="javascript:;" class="st-search-show-outputs">
           
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
             搜索
           </a>
@@ -291,6 +300,8 @@ Partiton: use cfdisk, use the UEFI install, the mkfs">
     </div>
   
 </nav>
+
+
 
  </div>
     </header>
@@ -371,7 +382,7 @@ Partiton: use cfdisk, use the UEFI install, the mkfs">
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
                 <a href="/2016/02/05/Archlinux install and configuration/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/05/Archlinux install and configuration/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/05/Archlinux install and configuration/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -396,262 +407,230 @@ Partiton: use cfdisk, use the UEFI install, the mkfs">
       
         
 
-<div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">Archlinux install [&#x5B89;&#x88C5;&#x7BC7;]</h2>
-<div class="outline-text-2" id="text-1">
-</div><div id="outline-container-sec-1-1" class="outline-3">
-<h3 id="sec-1-1">Prepare for the installation</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-org7df1124" class="outline-2">
+<h2 id="org7df1124">Archlinux install [安装篇]</h2>
+<div class="outline-text-2" id="text-org7df1124">
+</div><div id="outline-container-org81264f4" class="outline-3">
+<h3 id="org81264f4">Prepare for the installation</h3>
+<div class="outline-text-3" id="text-org81264f4">
 <ul class="org-ul">
-<li>Prepare the ISO of archlinux, and brasero it into USB flash disk
-</li>
+<li>Prepare the ISO of archlinux, and brasero it into USB flash disk</li>
 
-<li>Partiton: use cfdisk, use the UEFI install, the mkfs
-</li>
+<li>Partiton: use cfdisk, use the UEFI install, the mkfs</li>
 </ul>
 <div class="org-src-container">
-
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">/dev/sda1 to UEFI boot: ef00, <span class="number">1</span>G</span><br><span class="line">/dev/sda2 to <span class="number">119</span>G</span><br><span class="line">mkfs.fat -F32 /dev/sda1</span><br><span class="line">mkfs.ext4 /dev/sda2</span><br></pre></td></tr></table></figure>
 </div>
 
-<a id="more"></a>
+<div class="HTML">
+<p>
+&lt;!&#x2013;more&#x2013;&gt;
+</p>
+
+</div>
 
 <ul class="org-ul">
-<li>Select mirrorlist:
-</li>
+<li>Select mirrorlist:</li>
 </ul>
 <div class="org-src-container">
-
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">nano -w /etc/pacman.d/mirrorlist add </span><br><span class="line">Server = http://mirrors.tuna.tsinghua.edu.cn/archlinux/<span class="variable">$repo</span>/os/<span class="variable">$arch</span></span><br><span class="line">Server = http://mirrors.<span class="number">163</span>.com/archlinux/<span class="variable">$repo</span>/os/<span class="variable">$arch</span></span><br></pre></td></tr></table></figure>
 </div>
 
 <ul class="org-ul">
-<li>Wireless network link
-</li>
+<li>Wireless network link</li>
 </ul>
 <div class="org-src-container">
-
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">iwconfig to find the name of your wireless moudule: like wlan0</span><br><span class="line">then:</span><br><span class="line">ip link set wlan0 up</span><br><span class="line">wpa_supplicant -D nl80211,wext -i wlan0 -c &lt;(wpa_passphrase &quot;your_SSID&quot; &quot;your_key&quot;)</span><br><span class="line">dhcpcd wlan0</span><br><span class="line">now the wireless should be connected</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">iwconfig to find the name of your wireless moudule: like wlan0</span><br><span class="line">then:</span><br><span class="line">ip link set wlan0 up</span><br><span class="line">wpa_supplicant -D nl80211,wext -i wlan0 -c &amp;lt;(wpa_passphrase "your_SSID" "your_key")</span><br><span class="line">dhcpcd wlan0</span><br><span class="line">now the wireless should be connected</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
 
-<div id="outline-container-sec-1-2" class="outline-3">
-<h3 id="sec-1-2">Basic install</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-orgbb34b4b" class="outline-3">
+<h3 id="orgbb34b4b">Basic install</h3>
+<div class="outline-text-3" id="text-orgbb34b4b">
 <ul class="org-ul">
-<li>Mount the partition
-</li>
+<li>Mount the partition</li>
 </ul>
 <div class="org-src-container">
-
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">muont /dev/sda2 /mnt</span><br><span class="line">mkdir -p /mnt/boot/EFI</span><br><span class="line">mount /dev/sda1 /mnt/boot/EFI</span><br></pre></td></tr></table></figure>
 </div>
 
 <ul class="org-ul">
-<li>Bbasic system install
-</li>
+<li>Bbasic system install</li>
 </ul>
 <div class="org-src-container">
-
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">pacstrap /mnt base base-devel</span><br></pre></td></tr></table></figure>
 </div>
 
 <ul class="org-ul">
-<li>Generate the fstab
-</li>
+<li>Generate the fstab</li>
 </ul>
 <div class="org-src-container">
-
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">genfstab -p /mnt &gt;&gt; /mnt/etc/fstab</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">genfstab -p /mnt &amp;gt;&amp;gt; /mnt/etc/fstab</span><br></pre></td></tr></table></figure>
 </div>
 
 <ul class="org-ul">
-<li>Went into the new system and update the system
-</li>
+<li>Went into the new system and update the system</li>
 </ul>
 <div class="org-src-container">
-
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">arch-chroot /mnt</span><br><span class="line">nano /etc/loacle.gen  en.us &amp; en.cn <span class="comment"># remove#</span></span><br><span class="line">locale-gen</span><br><span class="line">nano /etc/locale.gen    <span class="comment"># &#x53CD;&#x6CE8;&#x91CA;&#x9700;&#x8981;&#x7684; locale</span></span><br><span class="line">locale-gen    <span class="comment"># &#x751F;&#x6210; locale</span></span><br><span class="line"><span class="built_in">echo</span> LANG=&lt;locale&gt;  &gt; /etc/locale.conf <span class="comment"># &#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4; locale</span></span><br><span class="line">ln <span class="operator">-s</span> /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</span><br><span class="line">hwclock --systohc --utc</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">arch-chroot /mnt</span><br><span class="line">nano /etc/loacle.gen  en.us &amp;amp; en.cn <span class="comment"># remove#</span></span><br><span class="line">locale-gen</span><br><span class="line">nano /etc/locale.gen    <span class="comment"># &amp;#21453;&amp;#27880;&amp;#37322;&amp;#38656;&amp;#35201;&amp;#30340; locale</span></span><br><span class="line">locale-gen    <span class="comment"># &amp;#29983;&amp;#25104; locale</span></span><br><span class="line"><span class="built_in">echo</span> LANG=&amp;lt;locale&amp;gt;  &amp;gt; /etc/locale.conf <span class="comment"># &amp;#35774;&amp;#32622;&amp;#40664;&amp;#35748; locale</span></span><br><span class="line">ln <span class="operator">-s</span> /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</span><br><span class="line">hwclock --systohc --utc</span><br></pre></td></tr></table></figure>
 </div>
 
 <ul class="org-ul">
-<li>Add passwd and users
-</li>
+<li>Add passwd and users</li>
 </ul>
 <div class="org-src-container">
-
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> yourname &gt; /etc/hostname</span><br><span class="line">nano /etc/hosts</span><br><span class="line">passwd <span class="number">111111</span>(<span class="number">2</span> <span class="built_in">times</span>)</span><br><span class="line">useradd -m -g users <span class="operator">-s</span> /bin/bash name</span><br><span class="line">passwd name <span class="number">111111</span>(<span class="number">2</span> <span class="built_in">times</span>)</span><br><span class="line">nano -w /etc/sudos add line name ALL=(ALL) ALL</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> yourname &amp;gt; /etc/hostname</span><br><span class="line">nano /etc/hosts</span><br><span class="line">passwd <span class="number">111111</span>(<span class="number">2</span> <span class="built_in">times</span>)</span><br><span class="line">useradd -m -g users <span class="operator">-s</span> /bin/bash name</span><br><span class="line">passwd name <span class="number">111111</span>(<span class="number">2</span> <span class="built_in">times</span>)</span><br><span class="line">nano -w /etc/sudos add line name ALL=(ALL) ALL</span><br></pre></td></tr></table></figure>
 </div>
 
 <ul class="org-ul">
-<li>Grub installation
-</li>
+<li>Grub installation</li>
 </ul>
 <div class="org-src-container">
-
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># pacman -S dosfstools grub efibootmgr</span></span><br><span class="line"><span class="comment"># grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=arch_grub --recheck</span></span><br><span class="line"><span class="comment"># grub-mkconfig -o /boot/grub/grub.cfg</span></span><br></pre></td></tr></table></figure>
 </div>
 
 <ul class="org-ul">
-<li>Install X windows and gnome
-</li>
+<li>Install X windows and gnome</li>
 </ul>
 <div class="org-src-container">
-
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">pacman -S alsa-utils xorg-server xorg-xinit xorg-server-utils</span><br><span class="line">pacman -S xf86-video-intel xf86-input-synaptics</span><br><span class="line">pacman -S gnome gnome-extra</span><br><span class="line">systemctl <span class="built_in">enable</span> gdm.service</span><br><span class="line">systemctl <span class="built_in">enable</span> NetworkManager.service</span><br><span class="line"><span class="built_in">exit</span> </span><br><span class="line">umount /mnt/boot/EFI</span><br><span class="line">umount /mnt</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-sec-1-3" class="outline-3">
-<h3 id="sec-1-3">Software install</h3>
-<div class="outline-text-3" id="text-1-3">
+<div id="outline-container-orgf2f3d49" class="outline-3">
+<h3 id="orgf2f3d49">Software install</h3>
+<div class="outline-text-3" id="text-orgf2f3d49">
 <ul class="org-ul">
-<li>Yaourt installation
-</li>
+<li>Yaourt installation</li>
 </ul>
 <div class="org-src-container">
-
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo nano -w /etc/pacman.conf</span><br><span class="line">remove <span class="comment"># before mutilib</span></span><br><span class="line">add  </span><br><span class="line">[archlinuxfr] </span><br><span class="line">Server = http://repo.archlinux.fr/<span class="variable">$arch</span></span><br><span class="line"><span class="keyword">in</span> the last line</span><br><span class="line"><span class="keyword">then</span> <span class="built_in">exit</span></span><br><span class="line">sudo pacman -Syyuu</span><br></pre></td></tr></table></figure>
 </div>
 
 <ul class="org-ul">
-<li>Software installation
-</li>
+<li>Software installation</li>
 </ul>
 <div class="org-src-container">
-
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo pacman -S yaourt emacs gnome-tweak-tool firefox libreoffice clementine vlc smplayer vim gimp shotwell blender impressive r osdlyrics stardict gnome-search-tool dropbox</span><br><span class="line">yaourt wqy-microhei mendeleydesktop  wps acroread acroread-chinese-fonts texstudio</span><br><span class="line">pacman codecs (nedded)</span><br></pre></td></tr></table></figure>
 </div>
 
 <ul class="org-ul">
-<li>Install textlive as the peking BBS
-</li>
+<li>Install textlive as the peking BBS</li>
 </ul>
 </div>
 </div>
 </div>
 
-<div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2">Configuration [&#x914D;&#x7F6E;&#x7BC7;]</h2>
-<div class="outline-text-2" id="text-2">
-</div><div id="outline-container-sec-2-1" class="outline-3">
-<h3 id="sec-2-1">Fcitx</h3>
-<div class="outline-text-3" id="text-2-1">
+<div id="outline-container-orgc8c619c" class="outline-2">
+<h2 id="orgc8c619c">Configuration [配置篇]</h2>
+<div class="outline-text-2" id="text-orgc8c619c">
+</div><div id="outline-container-org58f2974" class="outline-3">
+<h3 id="org58f2974">Fcitx</h3>
+<div class="outline-text-3" id="text-org58f2974">
 <div class="org-src-container">
-
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo pacman -S fcitx fcitx-im fcitx-configtool ibus</span><br><span class="line">sudo cp /usr/bin/ibus-daemon /usr/bin/ibus-daemon.cp</span><br><span class="line">sudo rm -rf /usr/bin/ibus-daemon</span><br><span class="line">sudo gsettings <span class="built_in">set</span> org.gnome.settings-daemon.plugins.keyboard active <span class="literal">false</span></span><br><span class="line">sudo nano -w .xprofile add</span><br><span class="line"><span class="built_in">export</span> GTK_IM_MODULE=fcitx</span><br><span class="line"><span class="built_in">export</span> QT_IM_MODULE=fcitx</span><br><span class="line"><span class="built_in">export</span> XMODIFIERS=<span class="string">&quot;@im=fcitx&quot;</span></span><br><span class="line">yaourt fcitx-googlepinyin fcitx-sogoupinyin</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo pacman -S fcitx fcitx-im fcitx-configtool ibus</span><br><span class="line">sudo cp /usr/bin/ibus-daemon /usr/bin/ibus-daemon.cp</span><br><span class="line">sudo rm -rf /usr/bin/ibus-daemon</span><br><span class="line">sudo gsettings <span class="built_in">set</span> org.gnome.settings-daemon.plugins.keyboard active <span class="literal">false</span></span><br><span class="line">sudo nano -w .xprofile add</span><br><span class="line"><span class="built_in">export</span> GTK_IM_MODULE=fcitx</span><br><span class="line"><span class="built_in">export</span> QT_IM_MODULE=fcitx</span><br><span class="line"><span class="built_in">export</span> XMODIFIERS=<span class="string">"@im=fcitx"</span></span><br><span class="line">yaourt fcitx-googlepinyin fcitx-sogoupinyin</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-sec-2-2" class="outline-3">
-<h3 id="sec-2-2">Web to hidden</h3>
-<div class="outline-text-3" id="text-2-2">
+<div id="outline-container-org6ce5f40" class="outline-3">
+<h3 id="org6ce5f40">Web to hidden</h3>
+<div class="outline-text-3" id="text-org6ce5f40">
 <div class="org-src-container">
-
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">yaourt lantern</span><br><span class="line">Add new firefox autoproxy server</span><br><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span> <span class="number">8787</span></span><br><span class="line">sudo systemctl <span class="built_in">enable</span> lantern.service</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-sec-2-3" class="outline-3">
-<h3 id="sec-2-3">Startdict</h3>
-<div class="outline-text-3" id="text-2-3">
+<div id="outline-container-orgcb45bf0" class="outline-3">
+<h3 id="orgcb45bf0">Startdict</h3>
+<div class="outline-text-3" id="text-orgcb45bf0">
 <div class="org-src-container">
-
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo pacman -S startdict</span><br><span class="line">cp dict /usr/share/stardict/dic</span><br><span class="line">cp WyabdcRealPeopleTTS /usr/share/WyabdcRealPeopleTTS</span><br><span class="line">cp startdict config /home</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-sec-2-4" class="outline-3">
-<h3 id="sec-2-4">Samba</h3>
-<div class="outline-text-3" id="text-2-4">
+<div id="outline-container-org7e2cdd9" class="outline-3">
+<h3 id="org7e2cdd9">Samba</h3>
+<div class="outline-text-3" id="text-org7e2cdd9">
 <div class="org-src-container">
-
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">cp /etc/samba/smb.conf.default /etc/samba/smb.conf</span><br><span class="line">sudo systemctl <span class="built_in">enable</span>/start smbd.service nmbd.service</span><br><span class="line">sudo systemctl start/<span class="built_in">enable</span> cups</span><br><span class="line">add printer</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-sec-2-5" class="outline-3">
-<h3 id="sec-2-5">Bumblebee</h3>
-<div class="outline-text-3" id="text-2-5">
+<div id="outline-container-org99ce711" class="outline-3">
+<h3 id="org99ce711">Bumblebee</h3>
+<div class="outline-text-3" id="text-org99ce711">
 <div class="org-src-container">
-
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo pacman -S bumblebee mesa nvidia nvidia-settings xf86-video-intel</span><br><span class="line">sudo gpasswd <span class="operator">-a</span> user bumblebee</span><br><span class="line">sudo systemctl <span class="built_in">enable</span> bumblebeed.service</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-sec-2-6" class="outline-3">
-<h3 id="sec-2-6">Firefox</h3>
-<div class="outline-text-3" id="text-2-6">
+<div id="outline-container-orge2e5d22" class="outline-3">
+<h3 id="orge2e5d22">Firefox</h3>
+<div class="outline-text-3" id="text-orge2e5d22">
 <div class="org-src-container">
-
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">cp config</span><br><span class="line">rm .mozilla/Firefox/<span class="number">9999</span>/.parentlock</span><br><span class="line">(bookmaker add-ons: noscript autopager autoproxy stumbleupon deafaultzoom xnot instantfox flashlock videodownloadhelper greasemonkey allsidebar downloadstatbar zotero firegesture)</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-sec-2-7" class="outline-3">
-<h3 id="sec-2-7">Dnsmasq: maybe out of data</h3>
-<div class="outline-text-3" id="text-2-7">
+<div id="outline-container-org76bfd36" class="outline-3">
+<h3 id="org76bfd36">Dnsmasq: maybe out of data</h3>
+<div class="outline-text-3" id="text-org76bfd36">
 <div class="org-src-container">
-
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo gedit /etc/NetworkManager/dispatcher.d/localhost-prepend</span><br><span class="line">add</span><br><span class="line"><span class="shebang">#!/bin/bash                                       </span></span><br><span class="line"><span class="comment"># Prepend localhost to resolv.conf for dnsmasq</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [[ ! $(grep <span class="number">127.0</span>.<span class="number">0.1</span> /etc/resolv.conf) ]]; <span class="keyword">then</span></span><br><span class="line">  sed -i <span class="string">&apos;1s|^|nameserver 127.0.0.1\n|&apos;</span> /etc/resolv.conf</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line">sudo chmod +x /etc/NetworkManager/dispatcher.d/localhost-prepend</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo gedit /etc/NetworkManager/dispatcher.d/localhost-prepend</span><br><span class="line">add</span><br><span class="line"><span class="shebang">#!/bin/bash                                       </span></span><br><span class="line"><span class="comment"># Prepend localhost to resolv.conf for dnsmasq</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [[ ! $(grep <span class="number">127.0</span>.<span class="number">0.1</span> /etc/resolv.conf) ]]; <span class="keyword">then</span></span><br><span class="line">  sed -i <span class="string">'1s|^|nameserver 127.0.0.1\n|'</span> /etc/resolv.conf</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line">sudo chmod +x /etc/NetworkManager/dispatcher.d/localhost-prepend</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3">Questions [&#x95EE;&#x9898;&#x7BC7;]</h2>
-<div class="outline-text-2" id="text-3">
-</div><div id="outline-container-sec-3-1" class="outline-3">
-<h3 id="sec-3-1">GNOME3.6 &#x6587;&#x4EF6;&#x5939;&#x9ED8;&#x8BA4;&#x6253;&#x5F00;&#x65B9;&#x5F0F;&#x5173;&#x8054;&#x95EE;&#x9898;</h3>
-<div class="outline-text-3" id="text-3-1">
+<div id="outline-container-orgc0c30ab" class="outline-2">
+<h2 id="orgc0c30ab">Questions [问题篇]</h2>
+<div class="outline-text-2" id="text-orgc0c30ab">
+</div><div id="outline-container-org380c454" class="outline-3">
+<h3 id="org380c454">GNOME3.6 文件夹默认打开方式关联问题</h3>
+<div class="outline-text-3" id="text-org380c454">
 <div class="org-src-container">
-
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">Edit /usr/share/applications/audacious.desktop </span><br><span class="line">and remove following line:</span><br><span class="line">MimeType=inode/directory;</span><br><span class="line">sudo nano /usr/share/applications/mimeinfo.cache</span><br><span class="line">sudo gedit /usr/share/applications/mimeinfo.cache</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-sec-3-2" class="outline-3">
-<h3 id="sec-3-2">Add module auto</h3>
-<div class="outline-text-3" id="text-3-2">
+<div id="outline-container-org0d7f2a4" class="outline-3">
+<h3 id="org0d7f2a4">Add module auto</h3>
+<div class="outline-text-3" id="text-org0d7f2a4">
 <div class="org-src-container">
-
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo gedit /etc/modules-load.d/virtio-net.conf</span><br><span class="line"><span class="comment">#Load &apos;virtio-net.ko&apos; at boot.</span></span><br><span class="line">virtio-net</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo gedit /etc/modules-load.d/virtio-net.conf</span><br><span class="line"><span class="comment">#Load 'virtio-net.ko' at boot.</span></span><br><span class="line">virtio-net</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-sec-3-3" class="outline-3">
-<h3 id="sec-3-3">LIWORD start fonts problem</h3>
-<div class="outline-text-3" id="text-3-3">
+<div id="outline-container-orgc78f18b" class="outline-3">
+<h3 id="orgc78f18b">LIWORD start fonts problem</h3>
+<div class="outline-text-3" id="text-orgc78f18b">
 <div class="org-src-container">
-
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo gedit /etc/fonts/conf.d/<span class="number">65</span>-nonlatin.conf</span><br><span class="line">save </span><br><span class="line"><span class="keyword">then</span> open LIWORD is ok.</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-sec-3-4" class="outline-3">
-<h3 id="sec-3-4">Emacs fcitx</h3>
-<div class="outline-text-3" id="text-3-4">
+<div id="outline-container-orgaad622a" class="outline-3">
+<h3 id="orgaad622a">Emacs fcitx</h3>
+<div class="outline-text-3" id="text-orgaad622a">
 <div class="org-src-container">
-
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo nano -w .bashrc add</span><br><span class="line"><span class="built_in">export</span> GTK_IM_MODULE=fcitx</span><br><span class="line"><span class="built_in">export</span> QT_IM_MODULE=fcitx</span><br><span class="line"><span class="built_in">export</span> XMODIFIERS=<span class="string">&quot;@im=fcitx&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo nano -w .bashrc add</span><br><span class="line"><span class="built_in">export</span> GTK_IM_MODULE=fcitx</span><br><span class="line"><span class="built_in">export</span> QT_IM_MODULE=fcitx</span><br><span class="line"><span class="built_in">export</span> XMODIFIERS=<span class="string">"@im=fcitx"</span></span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 </div>
 
-Last Updated 2016-05-28 Sat 22:18 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.1.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 8.2.10)
+Last Updated 2016-05-28 Sat 22:18 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.1.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 9.0.5)
 
       
     </div>
@@ -659,6 +638,11 @@ Last Updated 2016-05-28 Sat 22:18 by lengyueyang<br>Render by <a href="https://g
     <div>
       
         
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/gongzhonghao.jpg" alt="冷月阳 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您扫一扫上面的微信公众号，订阅我的博客！</div>
+</div>
+
 
       
     </div>
@@ -666,6 +650,27 @@ Last Updated 2016-05-28 Sat 22:18 by lengyueyang<br>Render by <a href="https://g
     <div>
       
         
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/weixin.jpg" alt="冷月阳 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/zhifubao.jpg" alt="冷月阳 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
 
       
     </div>
@@ -685,16 +690,16 @@ Last Updated 2016-05-28 Sat 22:18 by lengyueyang<br>Render by <a href="https://g
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/30/Org-mode test/" rel="next" title="Org-mode test">
-                <i class="fa fa-chevron-left"></i> Org-mode test
+              <a href="/2016/02/14/Spacemacs Learning/" rel="next" title="Spacemacs Learning [Spacemacs 学习]">
+                <i class="fa fa-chevron-left"></i> Spacemacs Learning [Spacemacs 学习]
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/02/14/Spacemacs Learning/" rel="prev" title="Spacemacs Learning [Spacemacs 学习]">
-                Spacemacs Learning [Spacemacs 学习] <i class="fa fa-chevron-right"></i>
+              <a href="/2016/01/30/Org-mode test/" rel="prev" title="Org-mode test">
+                Org-mode test <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -710,25 +715,6 @@ Last Updated 2016-05-28 Sat 22:18 by lengyueyang<br>Render by <a href="https://g
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/02/05/Archlinux install and configuration/"
-     data-title="Archlinux install and configuration [Archlinux 安装和配置]"
-     data-content=""
-     data-url="http://lengyueyang.github.io/2016/02/05/Archlinux install and configuration/">
-  <div class="ds-share-inline">
-    <ul  class="ds-share-icons-16">
-
-      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
-      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
-      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
-      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
-      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-
-    </ul>
-    <div class="ds-share-icons-more">
-    </div>
-  </div>
-</div>
-      
     </div>
   </div>
 
@@ -739,10 +725,6 @@ Last Updated 2016-05-28 Sat 22:18 by lengyueyang<br>Render by <a href="https://g
 
           
   <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/02/05/Archlinux install and configuration/"
-           data-title="Archlinux install and configuration [Archlinux 安装和配置]" data-url="http://lengyueyang.github.io/2016/02/05/Archlinux install and configuration/">
-      </div>
     
   </div>
 
@@ -775,34 +757,43 @@ Last Updated 2016-05-28 Sat 22:18 by lengyueyang<br>Render by <a href="https://g
         </ul>
       
 
-      <section class="site-overview sidebar-panel ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
                alt="冷月阳" />
           <p class="site-author-name" itemprop="name">冷月阳</p>
-          <p class="site-description motion-element" itemprop="description">静静思考   感悟人生</p>
+           
+              <p class="site-description motion-element" itemprop="description">静静思考   感悟人生</p>
+          
         </div>
         <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">11</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
 
           
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
             <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">5</span>
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
           
 
           
+            
+            
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
+              <a href="/tags/index.html">
                 <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">标签</span>
               </a>
@@ -899,19 +890,29 @@ Last Updated 2016-05-28 Sat 22:18 by lengyueyang<br>Render by <a href="https://g
           </div>
         
 
+        
+
+
       </section>
 
       
+      <!--noindex-->
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
+
             
               
             
+
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-1"><span class="nav-number">1.</span> <span class="nav-text">Archlinux install [安装篇]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-1"><span class="nav-number">1.1.</span> <span class="nav-text">Prepare for the installation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-2"><span class="nav-number">1.2.</span> <span class="nav-text">Basic install</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-3"><span class="nav-number">1.3.</span> <span class="nav-text">Software install</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-2"><span class="nav-number">2.</span> <span class="nav-text">Configuration [配置篇]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-2-1"><span class="nav-number">2.1.</span> <span class="nav-text">Fcitx</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-2-2"><span class="nav-number">2.2.</span> <span class="nav-text">Web to hidden</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-2-3"><span class="nav-number">2.3.</span> <span class="nav-text">Startdict</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-2-4"><span class="nav-number">2.4.</span> <span class="nav-text">Samba</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-2-5"><span class="nav-number">2.5.</span> <span class="nav-text">Bumblebee</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-2-6"><span class="nav-number">2.6.</span> <span class="nav-text">Firefox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-2-7"><span class="nav-number">2.7.</span> <span class="nav-text">Dnsmasq: maybe out of data</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-3"><span class="nav-number">3.</span> <span class="nav-text">Questions [问题篇]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-3-1"><span class="nav-number">3.1.</span> <span class="nav-text">GNOME3.6 文件夹默认打开方式关联问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-3-2"><span class="nav-number">3.2.</span> <span class="nav-text">Add module auto</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-3-3"><span class="nav-number">3.3.</span> <span class="nav-text">LIWORD start fonts problem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-3-4"><span class="nav-number">3.4.</span> <span class="nav-text">Emacs fcitx</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#org7df1124"><span class="nav-number">1.</span> <span class="nav-text">Archlinux install [安装篇]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org81264f4"><span class="nav-number">1.1.</span> <span class="nav-text">Prepare for the installation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orgbb34b4b"><span class="nav-number">1.2.</span> <span class="nav-text">Basic install</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orgf2f3d49"><span class="nav-number">1.3.</span> <span class="nav-text">Software install</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orgc8c619c"><span class="nav-number">2.</span> <span class="nav-text">Configuration [配置篇]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org58f2974"><span class="nav-number">2.1.</span> <span class="nav-text">Fcitx</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org6ce5f40"><span class="nav-number">2.2.</span> <span class="nav-text">Web to hidden</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orgcb45bf0"><span class="nav-number">2.3.</span> <span class="nav-text">Startdict</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org7e2cdd9"><span class="nav-number">2.4.</span> <span class="nav-text">Samba</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org99ce711"><span class="nav-number">2.5.</span> <span class="nav-text">Bumblebee</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orge2e5d22"><span class="nav-number">2.6.</span> <span class="nav-text">Firefox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org76bfd36"><span class="nav-number">2.7.</span> <span class="nav-text">Dnsmasq: maybe out of data</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orgc0c30ab"><span class="nav-number">3.</span> <span class="nav-text">Questions [问题篇]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org380c454"><span class="nav-number">3.1.</span> <span class="nav-text">GNOME3.6 文件夹默认打开方式关联问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org0d7f2a4"><span class="nav-number">3.2.</span> <span class="nav-text">Add module auto</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orgc78f18b"><span class="nav-number">3.3.</span> <span class="nav-text">LIWORD start fonts problem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orgaad622a"><span class="nav-number">3.4.</span> <span class="nav-text">Emacs fcitx</span></a></li></ol></li></ol></div>
             
+
           </div>
         </section>
+      <!--/noindex-->
+      
+
       
 
     </div>
@@ -985,9 +986,13 @@ Last Updated 2016-05-28 Sat 22:18 by lengyueyang<br>Render by <a href="https://g
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
   
@@ -1007,6 +1012,9 @@ Last Updated 2016-05-28 Sat 22:18 by lengyueyang<br>Render by <a href="https://g
 
 
   
+
+
+
 
 
 
@@ -1063,28 +1071,15 @@ Last Updated 2016-05-28 Sat 22:18 by lengyueyang<br>Render by <a href="https://g
 
   
 
-  
-    
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"lengyueyang"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
 
   
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
-  
+
+
+
+
+
+
+
 
 
 
@@ -1092,16 +1087,20 @@ Last Updated 2016-05-28 Sat 22:18 by lengyueyang<br>Render by <a href="https://g
 
 
   
-  
+
+
+
+
 
   
 
   
 
   
-
   
 
+
+  
 
 </body>
 </html>

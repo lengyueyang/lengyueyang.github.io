@@ -5,16 +5,19 @@
   
 
 
-<html class="theme-next pisces use-motion">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
 
 
 
@@ -63,7 +66,7 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
@@ -99,9 +102,10 @@
 
 
 
-<script type="text/javascript" id="hexo.configuration">
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
+    root: '/',
     scheme: 'Pisces',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
@@ -109,28 +113,39 @@
     duoshuo: {
       userId: '0',
       author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
     }
   };
 </script>
 
 
 
-
   <link rel="canonical" href="http://lengyueyang.github.io/tags/"/>
+
+
+
 
 
   <title>
   
 
   
-    标签 | 深度识医
+    tags | 深度识医
   
 </title>
 </head>
 
-<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
+
+
 
 
 
@@ -138,11 +153,13 @@
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?03623c427d40ea3a0d397622146ba575";
+      hm.src = "https://hm.baidu.com/hm.js?03623c427d40ea3a0d397622146ba575";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
   </script>
+
+
 
 
 
@@ -156,29 +173,33 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container sidebar-position-left  ">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">深度识医</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">深度识医</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">究天人之际    成一家之言</p>
+      
   </div>
-  <p class="site-subtitle">究天人之际    成一家之言</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -191,6 +212,8 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
             首页
           </a>
         </li>
@@ -198,6 +221,8 @@
         
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
             分类
           </a>
@@ -207,6 +232,8 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
             归档
           </a>
         </li>
@@ -214,6 +241,8 @@
         
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -223,6 +252,8 @@
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
             关于
           </a>
         </li>
@@ -230,6 +261,8 @@
         
         <li class="menu-item menu-item-commonweal">
           <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
             
             公益404
           </a>
@@ -241,6 +274,8 @@
           
             <a href="javascript:;" class="st-search-show-outputs">
           
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
             搜索
           </a>
@@ -271,6 +306,8 @@
   
 </nav>
 
+
+
  </div>
     </header>
 
@@ -281,6 +318,14 @@
             
 
   <div id="posts" class="posts-expand">
+  <header class="post-header">
+
+	<h1 class="post-title" itemprop="name headline">tags</h1>
+
+
+
+</header>
+
     
     
       <div class="tag-cloud">
@@ -288,7 +333,7 @@
             目前共计 21 个标签
         </div>
         <div class="tag-cloud-tags">
-          <a href="/tags/Archlinux/" style="font-size: 12px; color: #ccc">Archlinux</a> <a href="/tags/Beamer/" style="font-size: 12px; color: #ccc">Beamer</a> <a href="/tags/Blog/" style="font-size: 12px; color: #ccc">Blog</a> <a href="/tags/Configuration/" style="font-size: 12px; color: #ccc">Configuration</a> <a href="/tags/Emacs/" style="font-size: 30px; color: #111">Emacs</a> <a href="/tags/GTD/" style="font-size: 12px; color: #ccc">GTD</a> <a href="/tags/Github/" style="font-size: 12px; color: #ccc">Github</a> <a href="/tags/Hexo/" style="font-size: 12px; color: #ccc">Hexo</a> <a href="/tags/House/" style="font-size: 12px; color: #ccc">House</a> <a href="/tags/Life/" style="font-size: 12px; color: #ccc">Life</a> <a href="/tags/Linux/" style="font-size: 12px; color: #ccc">Linux</a> <a href="/tags/Mu4e/" style="font-size: 12px; color: #ccc">Mu4e</a> <a href="/tags/Offlineimap/" style="font-size: 12px; color: #ccc">Offlineimap</a> <a href="/tags/Org-mode/" style="font-size: 21px; color: #6f6f6f">Org-mode</a> <a href="/tags/R/" style="font-size: 12px; color: #ccc">R</a> <a href="/tags/Research/" style="font-size: 12px; color: #ccc">Research</a> <a href="/tags/Spaceacs/" style="font-size: 12px; color: #ccc">Spaceacs</a> <a href="/tags/Spacemacs/" style="font-size: 12px; color: #ccc">Spacemacs</a> <a href="/tags/Statistics/" style="font-size: 12px; color: #ccc">Statistics</a> <a href="/tags/lengyueyang/" style="font-size: 12px; color: #ccc">lengyueyang</a>
+          <a href="/tags/Archlinux/" style="font-size: 12px; color: #ccc">Archlinux</a> <a href="/tags/Beamer/" style="font-size: 12px; color: #ccc">Beamer</a> <a href="/tags/Blog/" style="font-size: 12px; color: #ccc">Blog</a> <a href="/tags/Configuration/" style="font-size: 12px; color: #ccc">Configuration</a> <a href="/tags/Emacs/" style="font-size: 30px; color: #111">Emacs</a> <a href="/tags/GTD/" style="font-size: 12px; color: #ccc">GTD</a> <a href="/tags/Github/" style="font-size: 12px; color: #ccc">Github</a> <a href="/tags/Hexo/" style="font-size: 12px; color: #ccc">Hexo</a> <a href="/tags/House/" style="font-size: 12px; color: #ccc">House</a> <a href="/tags/Life/" style="font-size: 12px; color: #ccc">Life</a> <a href="/tags/Linux/" style="font-size: 12px; color: #ccc">Linux</a> <a href="/tags/Mu4e/" style="font-size: 12px; color: #ccc">Mu4e</a> <a href="/tags/Offlineimap/" style="font-size: 12px; color: #ccc">Offlineimap</a> <a href="/tags/Org-mode/" style="font-size: 24px; color: #4f4f4f">Org-mode</a> <a href="/tags/R/" style="font-size: 12px; color: #ccc">R</a> <a href="/tags/Research/" style="font-size: 12px; color: #ccc">Research</a> <a href="/tags/Spaceacs/" style="font-size: 12px; color: #ccc">Spaceacs</a> <a href="/tags/Spacemacs/" style="font-size: 12px; color: #ccc">Spacemacs</a> <a href="/tags/Statistics/" style="font-size: 18px; color: #8e8e8e">Statistics</a> <a href="/tags/lengyueyang/" style="font-size: 12px; color: #ccc">lengyueyang</a>
         </div>
       </div>
     
@@ -320,34 +365,43 @@
 
       
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
                alt="冷月阳" />
           <p class="site-author-name" itemprop="name">冷月阳</p>
-          <p class="site-description motion-element" itemprop="description">静静思考   感悟人生</p>
+           
+              <p class="site-description motion-element" itemprop="description">静静思考   感悟人生</p>
+          
         </div>
         <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">11</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
 
           
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
             <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">5</span>
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
           
 
           
+            
+            
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
+              <a href="/tags/index.html">
                 <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">标签</span>
               </a>
@@ -444,7 +498,12 @@
           </div>
         
 
+        
+
+
       </section>
+
+      
 
       
 
@@ -519,9 +578,13 @@
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
   
@@ -541,6 +604,9 @@
 
 
   
+
+
+
 
 
 
@@ -593,28 +659,15 @@
 
   
 
-  
-    
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"lengyueyang"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
 
   
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
-  
+
+
+
+
+
+
+
 
 
 
@@ -622,16 +675,20 @@
 
 
   
-  
+
+
+
+
 
   
 
   
 
   
-
   
 
+
+  
 
 </body>
 </html>

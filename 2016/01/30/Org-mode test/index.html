@@ -5,16 +5,19 @@
   
 
 
-<html class="theme-next pisces use-motion">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
 
 
 
@@ -63,12 +66,12 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Org-mode,Emacs," />
+  <meta name="keywords" content="Emacs,Org-mode," />
 
 
 
@@ -86,58 +89,24 @@
 
 
 
-<meta name="description" content="Orgmode
-
-
-Why orgmode
-
-
-
-consol.log(&amp;quot;hello&amp;quot;);
-
-
-
-
-Insert html">
+<meta name="description" content="Orgmode   Why orgmode   consol.log(&quot;hello&quot;);     Insert html    &amp;lt;!&amp;#x2013;more&amp;#x2013;&amp;gt;        Last Updated 2016-11-12 Sat 21:56 by lengyueyangRender by hexo-renderer-org with Emacs 25.1.1 (O">
+<meta name="keywords" content="Emacs,Org-mode">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Org-mode test">
 <meta property="og:url" content="http://lengyueyang.github.io/2016/01/30/Org-mode test/index.html">
 <meta property="og:site_name" content="深度识医">
-<meta property="og:description" content="Orgmode
-
-
-Why orgmode
-
-
-
-consol.log(&amp;quot;hello&amp;quot;);
-
-
-
-
-Insert html">
+<meta property="og:description" content="Orgmode   Why orgmode   consol.log(&quot;hello&quot;);     Insert html    &amp;lt;!&amp;#x2013;more&amp;#x2013;&amp;gt;        Last Updated 2016-11-12 Sat 21:56 by lengyueyangRender by hexo-renderer-org with Emacs 25.1.1 (O">
 <meta property="og:updated_time" content="2016-11-12T13:56:49.730Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Org-mode test">
-<meta name="twitter:description" content="Orgmode
-
-
-Why orgmode
+<meta name="twitter:description" content="Orgmode   Why orgmode   consol.log(&quot;hello&quot;);     Insert html    &amp;lt;!&amp;#x2013;more&amp;#x2013;&amp;gt;        Last Updated 2016-11-12 Sat 21:56 by lengyueyangRender by hexo-renderer-org with Emacs 25.1.1 (O">
 
 
 
-consol.log(&amp;quot;hello&amp;quot;);
-
-
-
-
-Insert html">
-
-
-
-<script type="text/javascript" id="hexo.configuration">
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
+    root: '/',
     scheme: 'Pisces',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
@@ -145,22 +114,33 @@ Insert html">
     duoshuo: {
       userId: '0',
       author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
     }
   };
 </script>
 
 
 
-
   <link rel="canonical" href="http://lengyueyang.github.io/2016/01/30/Org-mode test/"/>
+
+
+
 
 
   <title> Org-mode test | 深度识医 </title>
 </head>
 
-<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
+
+
 
 
 
@@ -168,11 +148,13 @@ Insert html">
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?03623c427d40ea3a0d397622146ba575";
+      hm.src = "https://hm.baidu.com/hm.js?03623c427d40ea3a0d397622146ba575";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
   </script>
+
+
 
 
 
@@ -186,29 +168,33 @@ Insert html">
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">深度识医</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">深度识医</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">究天人之际    成一家之言</p>
+      
   </div>
-  <p class="site-subtitle">究天人之际    成一家之言</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -221,6 +207,8 @@ Insert html">
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
             首页
           </a>
         </li>
@@ -228,6 +216,8 @@ Insert html">
         
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
             分类
           </a>
@@ -237,6 +227,8 @@ Insert html">
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
             归档
           </a>
         </li>
@@ -244,6 +236,8 @@ Insert html">
         
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -253,6 +247,8 @@ Insert html">
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
             关于
           </a>
         </li>
@@ -260,6 +256,8 @@ Insert html">
         
         <li class="menu-item menu-item-commonweal">
           <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
             
             公益404
           </a>
@@ -271,6 +269,8 @@ Insert html">
           
             <a href="javascript:;" class="st-search-show-outputs">
           
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
             搜索
           </a>
@@ -300,6 +300,8 @@ Insert html">
     </div>
   
 </nav>
+
+
 
  </div>
     </header>
@@ -380,7 +382,7 @@ Insert html">
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
                 <a href="/2016/01/30/Org-mode test/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/30/Org-mode test/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/30/Org-mode test/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -405,34 +407,31 @@ Insert html">
       
         
 
-<div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">Orgmode</h2>
-<div class="outline-text-2" id="text-1">
-</div><div id="outline-container-sec-1-1" class="outline-3">
-<h3 id="sec-1-1">Why orgmode</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-org1ec02e5" class="outline-2">
+<h2 id="org1ec02e5">Orgmode</h2>
+<div class="outline-text-2" id="text-org1ec02e5">
+</div><div id="outline-container-org60bfb6a" class="outline-3">
+<h3 id="org60bfb6a">Why orgmode</h3>
+<div class="outline-text-3" id="text-org60bfb6a">
 <div class="org-src-container">
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">consol.log(<span class="string">"hello"</span>);</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-org844b3da" class="outline-3">
+<h3 id="org844b3da">Insert html</h3>
+<div class="outline-text-3" id="text-org844b3da">
+<div class="HTML">
+<p>
+&lt;!&#x2013;more&#x2013;&gt;
+</p>
 
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">consol.log(<span class="string">&quot;hello&quot;</span>);</span><br></pre></td></tr></table></figure>
 </div>
-</div>
-</div>
-<div id="outline-container-sec-1-2" class="outline-3">
-<h3 id="sec-1-2">Insert html</h3>
-<div class="outline-text-3" id="text-1-2">
-<a id="more"></a>
 </div>
 </div>
 </div>
 
-Last Updated 2016-11-12 Sat 21:56 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.1.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 8.2.10)
-
-      
-    </div>
-
-    <div>
-      
-        
+Last Updated 2016-11-12 Sat 21:56 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.1.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 9.0.5)
 
       
     </div>
@@ -440,6 +439,39 @@ Last Updated 2016-11-12 Sat 21:56 by lengyueyang<br>Render by <a href="https://g
     <div>
       
         
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/gongzhonghao.jpg" alt="冷月阳 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您扫一扫上面的微信公众号，订阅我的博客！</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/weixin.jpg" alt="冷月阳 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/zhifubao.jpg" alt="冷月阳 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
 
       
     </div>
@@ -448,9 +480,9 @@ Last Updated 2016-11-12 Sat 21:56 by lengyueyang<br>Render by <a href="https://g
       
         <div class="post-tags">
           
-            <a href="/tags/Org-mode/" rel="tag">#Org-mode</a>
-          
             <a href="/tags/Emacs/" rel="tag">#Emacs</a>
+          
+            <a href="/tags/Org-mode/" rel="tag">#Org-mode</a>
           
         </div>
       
@@ -459,16 +491,16 @@ Last Updated 2016-11-12 Sat 21:56 by lengyueyang<br>Render by <a href="https://g
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/01/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2016/02/05/Archlinux install and configuration/" rel="next" title="Archlinux install and configuration [Archlinux 安装和配置]">
+                <i class="fa fa-chevron-left"></i> Archlinux install and configuration [Archlinux 安装和配置]
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/02/05/Archlinux install and configuration/" rel="prev" title="Archlinux install and configuration [Archlinux 安装和配置]">
-                Archlinux install and configuration [Archlinux 安装和配置] <i class="fa fa-chevron-right"></i>
+              <a href="/2016/01/01/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -484,25 +516,6 @@ Last Updated 2016-11-12 Sat 21:56 by lengyueyang<br>Render by <a href="https://g
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/01/30/Org-mode test/"
-     data-title="Org-mode test"
-     data-content=""
-     data-url="http://lengyueyang.github.io/2016/01/30/Org-mode test/">
-  <div class="ds-share-inline">
-    <ul  class="ds-share-icons-16">
-
-      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
-      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
-      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
-      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
-      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-
-    </ul>
-    <div class="ds-share-icons-more">
-    </div>
-  </div>
-</div>
-      
     </div>
   </div>
 
@@ -513,10 +526,6 @@ Last Updated 2016-11-12 Sat 21:56 by lengyueyang<br>Render by <a href="https://g
 
           
   <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/01/30/Org-mode test/"
-           data-title="Org-mode test" data-url="http://lengyueyang.github.io/2016/01/30/Org-mode test/">
-      </div>
     
   </div>
 
@@ -549,34 +558,43 @@ Last Updated 2016-11-12 Sat 21:56 by lengyueyang<br>Render by <a href="https://g
         </ul>
       
 
-      <section class="site-overview sidebar-panel ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
                alt="冷月阳" />
           <p class="site-author-name" itemprop="name">冷月阳</p>
-          <p class="site-description motion-element" itemprop="description">静静思考   感悟人生</p>
+           
+              <p class="site-description motion-element" itemprop="description">静静思考   感悟人生</p>
+          
         </div>
         <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">11</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
 
           
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
             <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">5</span>
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
           
 
           
+            
+            
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
+              <a href="/tags/index.html">
                 <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">标签</span>
               </a>
@@ -673,19 +691,29 @@ Last Updated 2016-11-12 Sat 21:56 by lengyueyang<br>Render by <a href="https://g
           </div>
         
 
+        
+
+
       </section>
 
       
+      <!--noindex-->
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
+
             
               
             
+
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-1"><span class="nav-number">1.</span> <span class="nav-text">Orgmode</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-1"><span class="nav-number">1.1.</span> <span class="nav-text">Why orgmode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-2"><span class="nav-number">1.2.</span> <span class="nav-text">Insert html</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#org1ec02e5"><span class="nav-number">1.</span> <span class="nav-text">Orgmode</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org60bfb6a"><span class="nav-number">1.1.</span> <span class="nav-text">Why orgmode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org844b3da"><span class="nav-number">1.2.</span> <span class="nav-text">Insert html</span></a></li></ol></li></ol></div>
             
+
           </div>
         </section>
+      <!--/noindex-->
+      
+
       
 
     </div>
@@ -759,9 +787,13 @@ Last Updated 2016-11-12 Sat 21:56 by lengyueyang<br>Render by <a href="https://g
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
   
@@ -781,6 +813,9 @@ Last Updated 2016-11-12 Sat 21:56 by lengyueyang<br>Render by <a href="https://g
 
 
   
+
+
+
 
 
 
@@ -837,28 +872,15 @@ Last Updated 2016-11-12 Sat 21:56 by lengyueyang<br>Render by <a href="https://g
 
   
 
-  
-    
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"lengyueyang"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
 
   
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
-  
+
+
+
+
+
+
+
 
 
 
@@ -866,16 +888,20 @@ Last Updated 2016-11-12 Sat 21:56 by lengyueyang<br>Render by <a href="https://g
 
 
   
-  
+
+
+
+
 
   
 
   
 
   
-
   
 
+
+  
 
 </body>
 </html>

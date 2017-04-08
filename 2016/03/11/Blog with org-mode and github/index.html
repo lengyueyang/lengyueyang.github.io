@@ -5,16 +5,19 @@
   
 
 
-<html class="theme-next pisces use-motion">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
 
 
 
@@ -63,12 +66,12 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Blog,Github,Org-mode,Emacs," />
+  <meta name="keywords" content="Emacs,Org-mode,Blog,Github," />
 
 
 
@@ -86,33 +89,26 @@
 
 
 
-<meta name="description" content="&amp;#x5199;&amp;#x5728;&amp;#x524D;&amp;#x9762;
-
-
-&amp;#x957F;&amp;#x4E45;&amp;#x4EE5;&amp;#x6765;&amp;#xFF0C;&amp;#x4E00;&amp;#x76F4;&amp;#x60F3;&amp;#x5EFA;&amp;#x7ACB;&amp;#x81EA;&amp;#x5DF1;&amp;#x7684;&amp;#x535A;&amp;#x5BA2;&amp;#xFF0C;&amp;#x4ECA;&amp;#x5E74;&amp;#x5F00;&amp;#x59CB;&amp;#x5">
+<meta name="description" content="写在前面   长久以来，一直想建立自己的博客，今年开始学习 Emacs，偶遇几位大神用 Hexo 建立博客，于是也动手搭建自己的博客，记录学习过程，记录向数据科学转型学习点滴 本文简述用 Org-mode 写博客，通过 Hexo 搭建博客的过程，我的博客见一家之言    &amp;lt;!&amp;#x2013;more&amp;#x2013;&amp;gt;        用 Hexo 搭建博客   主要参照 CKJO">
+<meta name="keywords" content="Emacs,Org-mode,Blog,Github">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Blog with org-mode and github [用 Org-mdoe 和 github 搭建博客]">
 <meta property="og:url" content="http://lengyueyang.github.io/2016/03/11/Blog with org-mode and github/index.html">
 <meta property="og:site_name" content="深度识医">
-<meta property="og:description" content="&amp;#x5199;&amp;#x5728;&amp;#x524D;&amp;#x9762;
-
-
-&amp;#x957F;&amp;#x4E45;&amp;#x4EE5;&amp;#x6765;&amp;#xFF0C;&amp;#x4E00;&amp;#x76F4;&amp;#x60F3;&amp;#x5EFA;&amp;#x7ACB;&amp;#x81EA;&amp;#x5DF1;&amp;#x7684;&amp;#x535A;&amp;#x5BA2;&amp;#xFF0C;&amp;#x4ECA;&amp;#x5E74;&amp;#x5F00;&amp;#x59CB;&amp;#x5">
+<meta property="og:description" content="写在前面   长久以来，一直想建立自己的博客，今年开始学习 Emacs，偶遇几位大神用 Hexo 建立博客，于是也动手搭建自己的博客，记录学习过程，记录向数据科学转型学习点滴 本文简述用 Org-mode 写博客，通过 Hexo 搭建博客的过程，我的博客见一家之言    &amp;lt;!&amp;#x2013;more&amp;#x2013;&amp;gt;        用 Hexo 搭建博客   主要参照 CKJO">
 <meta property="og:image" content="http://7xrrxa.com1.z0.glb.clouddn.com/hexo_start.png">
 <meta property="og:updated_time" content="2016-03-12T14:50:49.431Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Blog with org-mode and github [用 Org-mdoe 和 github 搭建博客]">
-<meta name="twitter:description" content="&amp;#x5199;&amp;#x5728;&amp;#x524D;&amp;#x9762;
-
-
-&amp;#x957F;&amp;#x4E45;&amp;#x4EE5;&amp;#x6765;&amp;#xFF0C;&amp;#x4E00;&amp;#x76F4;&amp;#x60F3;&amp;#x5EFA;&amp;#x7ACB;&amp;#x81EA;&amp;#x5DF1;&amp;#x7684;&amp;#x535A;&amp;#x5BA2;&amp;#xFF0C;&amp;#x4ECA;&amp;#x5E74;&amp;#x5F00;&amp;#x59CB;&amp;#x5">
+<meta name="twitter:description" content="写在前面   长久以来，一直想建立自己的博客，今年开始学习 Emacs，偶遇几位大神用 Hexo 建立博客，于是也动手搭建自己的博客，记录学习过程，记录向数据科学转型学习点滴 本文简述用 Org-mode 写博客，通过 Hexo 搭建博客的过程，我的博客见一家之言    &amp;lt;!&amp;#x2013;more&amp;#x2013;&amp;gt;        用 Hexo 搭建博客   主要参照 CKJO">
 <meta name="twitter:image" content="http://7xrrxa.com1.z0.glb.clouddn.com/hexo_start.png">
 
 
 
-<script type="text/javascript" id="hexo.configuration">
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
+    root: '/',
     scheme: 'Pisces',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
@@ -120,22 +116,33 @@
     duoshuo: {
       userId: '0',
       author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
     }
   };
 </script>
 
 
 
-
   <link rel="canonical" href="http://lengyueyang.github.io/2016/03/11/Blog with org-mode and github/"/>
+
+
+
 
 
   <title> Blog with org-mode and github [用 Org-mdoe 和 github 搭建博客] | 深度识医 </title>
 </head>
 
-<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
+
+
 
 
 
@@ -143,11 +150,13 @@
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?03623c427d40ea3a0d397622146ba575";
+      hm.src = "https://hm.baidu.com/hm.js?03623c427d40ea3a0d397622146ba575";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
   </script>
+
+
 
 
 
@@ -161,29 +170,33 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">深度识医</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">深度识医</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">究天人之际    成一家之言</p>
+      
   </div>
-  <p class="site-subtitle">究天人之际    成一家之言</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -196,6 +209,8 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
             首页
           </a>
         </li>
@@ -203,6 +218,8 @@
         
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
             分类
           </a>
@@ -212,6 +229,8 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
             归档
           </a>
         </li>
@@ -219,6 +238,8 @@
         
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -228,6 +249,8 @@
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
             关于
           </a>
         </li>
@@ -235,6 +258,8 @@
         
         <li class="menu-item menu-item-commonweal">
           <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
             
             公益404
           </a>
@@ -246,6 +271,8 @@
           
             <a href="javascript:;" class="st-search-show-outputs">
           
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
             搜索
           </a>
@@ -275,6 +302,8 @@
     </div>
   
 </nav>
+
+
 
  </div>
     </header>
@@ -355,7 +384,7 @@
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
                 <a href="/2016/03/11/Blog with org-mode and github/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/11/Blog with org-mode and github/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/11/Blog with org-mode and github/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -381,125 +410,118 @@
         
 
 
-<div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">&#x5199;&#x5728;&#x524D;&#x9762;</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-org9e2e00d" class="outline-2">
+<h2 id="org9e2e00d">写在前面</h2>
+<div class="outline-text-2" id="text-org9e2e00d">
 <ul class="org-ul">
-<li>&#x957F;&#x4E45;&#x4EE5;&#x6765;&#xFF0C;&#x4E00;&#x76F4;&#x60F3;&#x5EFA;&#x7ACB;&#x81EA;&#x5DF1;&#x7684;&#x535A;&#x5BA2;&#xFF0C;&#x4ECA;&#x5E74;&#x5F00;&#x59CB;&#x5B66;&#x4E60; Emacs&#xFF0C;&#x5076;&#x9047;&#x51E0;&#x4F4D;&#x5927;&#x795E;&#x7528; Hexo &#x5EFA;&#x7ACB;&#x535A;&#x5BA2;&#xFF0C;&#x4E8E;&#x662F;&#x4E5F;&#x52A8;&#x624B;&#x642D;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;&#x535A;&#x5BA2;&#xFF0C;&#x8BB0;&#x5F55;&#x5B66;&#x4E60;&#x8FC7;&#x7A0B;&#xFF0C;&#x8BB0;&#x5F55;&#x5411;&#x6570;&#x636E;&#x79D1;&#x5B66;&#x8F6C;&#x578B;&#x5B66;&#x4E60;&#x70B9;&#x6EF4;
-</li>
-<li>&#x672C;&#x6587;&#x7B80;&#x8FF0;&#x7528; Org-mode &#x5199;&#x535A;&#x5BA2;&#xFF0C;&#x901A;&#x8FC7; Hexo &#x642D;&#x5EFA;&#x535A;&#x5BA2;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x6211;&#x7684;&#x535A;&#x5BA2;&#x89C1;<a href="http://lengyueyang.github.io/">&#x4E00;&#x5BB6;&#x4E4B;&#x8A00;</a>
-</li>
+<li>长久以来，一直想建立自己的博客，今年开始学习 Emacs，偶遇几位大神用 Hexo 建立博客，于是也动手搭建自己的博客，记录学习过程，记录向数据科学转型学习点滴</li>
+<li>本文简述用 Org-mode 写博客，通过 Hexo 搭建博客的过程，我的博客见<a href="http://lengyueyang.github.io/">一家之言</a></li>
 </ul>
-<a id="more"></a>
+<div class="HTML">
+<p>
+&lt;!&#x2013;more&#x2013;&gt;
+</p>
+
+</div>
 </div>
 </div>
 
-<div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2">&#x7528; Hexo &#x642D;&#x5EFA;&#x535A;&#x5BA2;</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-orgdac7feb" class="outline-2">
+<h2 id="orgdac7feb">用 Hexo 搭建博客</h2>
+<div class="outline-text-2" id="text-orgdac7feb">
 <p>
-&#x4E3B;&#x8981;&#x53C2;&#x7167; CKJOKER<sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup>&#x548C;&#x5C81;&#x6708;&#x5982;&#x6B4C;<sup><a id="fnr.2" name="fnr.2" class="footref" href="#fn.2">2</a></sup>&#x53CA;&#x6F20;&#x7136;<sup><a id="fnr.3" name="fnr.3" class="footref" href="#fn.3">3</a></sup>&#x7684;&#x535A;&#x5BA2;
+主要参照 CKJOKER<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>和岁月如歌<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>及漠然<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup>的博客
 </p>
 <ul class="org-ul">
-<li>&#x6211;&#x672C;&#x4EBA;&#x7528; Archlinux&#xFF0C;&#x5148;&#x5B89;&#x88C5; npm&#xFF0C;&#x518D;&#x901A;&#x8FC7; npm &#x5B89;&#x88C5; hexo
+<li><p>
+我本人用 Archlinux，先安装 npm，再通过 npm 安装 hexo
+</p>
 <div class="org-src-container">
-
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo pacman -S npm</span><br><span class="line">mkdir hexo</span><br><span class="line">npm install -g hexo</span><br><span class="line">npm install -g hexo-cli</span><br><span class="line">hexo init</span><br><span class="line">hexo install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-</div>
-</li>
+</div></li>
 </ul>
 <p>
-&#x8FD9;&#x65F6;&#x5019;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x6253;&#x5F00; <a href="http://0.0.0.0:4000/" target="_blank" rel="external">http://0.0.0.0:4000/</a> &#x5E94;&#x8BE5;&#x80FD;&#x770B;&#x5230;&#x6548;&#x679C;&#x5982;&#x56FE;&#x6240;&#x793A;
+这时候在浏览器中打开 <a href="http://0.0.0.0:4000/" target="_blank" rel="external">http://0.0.0.0:4000/</a> 应该能看到效果如图所示
 <img src="http://7xrrxa.com1.z0.glb.clouddn.com/hexo_start.png" alt="hexo_start.png">
 </p>
 
 <ul class="org-ul">
-<li>&#x5B89;&#x88C5; hexo &#x7684;&#x4E00;&#x4E9B;&#x63D2;&#x4EF6;
+<li><p>
+安装 hexo 的一些插件
+</p>
 
 <div class="org-src-container">
-
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-archive --save</span><br><span class="line">npm install hexo-generator-category --save</span><br><span class="line">npm install hexo-generator-tag --save</span><br><span class="line">npm install hexo-server --save</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">npm install hexo-deployer-heroku --save</span><br><span class="line">npm install hexo-deployer-rsync --save</span><br><span class="line">npm install hexo-deployer-openshift --save</span><br><span class="line">npm install hexo-renderer-marked@<span class="number">0.2</span> --save</span><br><span class="line">npm install hexo-renderer-stylus@<span class="number">0.2</span> --save</span><br><span class="line">npm install hexo-generator-feed@<span class="number">1</span> --save</span><br><span class="line">npm install hexo-generator-sitemap@<span class="number">1</span> --save</span><br></pre></td></tr></table></figure>
-</div>
-</li>
+</div></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3">&#x535A;&#x5BA2;&#x6E90;&#x4EE3;&#x7801;&#x6258;&#x7BA1;&#x5230; Github &#x4E0A;</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-orgc90f83d" class="outline-2">
+<h2 id="orgc90f83d">博客源代码托管到 Github 上</h2>
+<div class="outline-text-2" id="text-orgc90f83d">
 <ul class="org-ul">
-<li>&#x5EFA;&#x7ACB; Github &#x8D26;&#x53F7;&#xFF0C;&#x8BBE;&#x7F6E;&#x672C;&#x5730; SSH&#xFF0C;&#x4E0E; Github &#x8FDE;&#x63A5;
-</li>
-<li>&#x4FEE;&#x6539; _config.yml&#xFF0C;&#x589E;&#x52A0;
+<li>建立 Github 账号，设置本地 SSH，与 Github 连接</li>
+<li><p>
+修改 _config.yml，增加
+</p>
 <div class="org-src-container">
-
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line"><span class="built_in">type</span>: git</span><br><span class="line">repo: git@github.com:xxx/xxx.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
-</div>
-</li>
+</div></li>
 </ul>
 <p>
-&#x53CA;&#x6839;&#x636E;&#x53C2;&#x8003;&#x4FEE;&#x6539;&#x5176;&#x4ED6;&#x914D;&#x7F6E;
+及根据参考修改其他配置
 </p>
 <ul class="org-ul">
-<li>&#x4F7F;&#x7528; Next &#x4E3B;&#x9898;&#xFF0C;&#x6839;&#x636E;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8BF4;&#x660E;&#x914D;&#x7F6E;&#x81EA;&#x5DF1;&#x7684;&#x535A;&#x5BA2;
+<li><p>
+使用 Next 主题，根据配置文件说明配置自己的博客
+</p>
 
 <div class="org-src-container">
-
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-</div>
-</li>
-<li>&#x6253;&#x5F00;&#x81EA;&#x5DF1;&#x7684;&#x535A;&#x5BA2;&#xFF0C;&#x4FEE;&#x6539;&#x7F8E;&#x5316;&#x76F8;&#x5E94;&#x9009;&#x9879;
+</div></li>
+<li><p>
+打开自己的博客，修改美化相应选项
+</p>
 
 <div class="org-src-container">
-
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-</div>
-</li>
+</div></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-4" class="outline-2">
-<h2 id="sec-4">&#x7528; Org-mode &#x5199;&#x535A;&#x5BA2;</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-org261c9a0" class="outline-2">
+<h2 id="org261c9a0">用 Org-mode 写博客</h2>
+<div class="outline-text-2" id="text-org261c9a0">
 <p>
-&#x4E3B;&#x8981;&#x53C2;&#x7167; CodeFalling<sup><a id="fnr.4" name="fnr.4" class="footref" href="#fn.4">4</a></sup>&#x548C; zilongshanren<sup><a id="fnr.5" name="fnr.5" class="footref" href="#fn.5">5</a></sup>
+主要参照 CodeFalling<sup><a id="fnr.4" class="footref" href="#fn.4">4</a></sup>和 zilongshanren<sup><a id="fnr.5" class="footref" href="#fn.5">5</a></sup>
 </p>
 <ul class="org-ul">
-<li>&#x7528;<a href="https://github.com/CodeFalling/blog-admin" target="_blank" rel="external">blog-admin</a> &#x505A;&#x524D;&#x7AEF;&#xFF0C;&#x53C2;&#x7167;&#x6587;&#x4EF6;&#x8BF4;&#x660E;&#x914D;&#x7F6E;
-</li>
-<li>&#x7528;<a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> &#x5C06;&#x5199;&#x597D;&#x7684;.org &#x6587;&#x4EF6;&#x8F6C;&#x5316;&#x6210; hexo &#x8BC6;&#x522B;&#x7684; md &#x6587;&#x4EF6;&#x5E76;&#x53D1;&#x5E03;
-</li>
-<li>&#x53C2;&#x7167; CodeFalling &#x548C; zilongshanren &#x7684; github &#x7684; Spacemacs &#x79C1;&#x4EBA;&#x914D;&#x7F6E;&#x66F4;&#x6539;&#x81EA;&#x5DF1;&#x7684;&#x914D;&#x7F6E;
-</li>
+<li>用<a href="https://github.com/CodeFalling/blog-admin" target="_blank" rel="external">blog-admin</a> 做前端，参照文件说明配置</li>
+<li>用<a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> 将写好的.org 文件转化成 hexo 识别的 md 文件并发布</li>
+<li>参照 CodeFalling 和 zilongshanren 的 github 的 Spacemacs 私人配置更改自己的配置</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-5" class="outline-2">
-<h2 id="sec-5">&#x4E00;&#x4E9B;&#x95EE;&#x9898;</h2>
-<div class="outline-text-2" id="text-5">
-</div><div id="outline-container-sec-5-1" class="outline-3">
-<h3 id="sec-5-1">Org-mode &#x56FE;&#x7247;&#x63D2;&#x5165;</h3>
-<div class="outline-text-3" id="text-5-1">
+<div id="outline-container-org6e3b0c8" class="outline-2">
+<h2 id="org6e3b0c8">一些问题</h2>
+<div class="outline-text-2" id="text-org6e3b0c8">
+</div><div id="outline-container-org0199e66" class="outline-3">
+<h3 id="org0199e66">Org-mode 图片插入</h3>
+<div class="outline-text-3" id="text-org0199e66">
 <ul class="org-ul">
-<li>&#x5B89;&#x88C5;<a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="external">hexo-asset-image</a>&#xFF0C; &#x5B89;&#x88C5;&#x540E;&#x5728;.md &#x6587;&#x4EF6;&#x4E2D;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x5728; org &#x4E2D;&#x63D2;&#x5165;&#x6709;&#x95EE;&#x9898;
-</li>
-<li>Org &#x4E2D;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x6216;&#x8005;&#x94FE;&#x63A5;&#x683C;&#x5F0F;&#x5982;&#x4E0B;
-</li>
+<li>安装<a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="external">hexo-asset-image</a>， 安装后在.md 文件中插入图片没有问题，在 org 中插入有问题</li>
+<li>Org 中插入图片或者链接格式如下</li>
 </ul>
 <div class="org-src-container">
-
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">[[file:filedir/file OR html adress]]</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">file:filedir/file OR html adress</span><br></pre></td></tr></table></figure>
 </div>
 <ul class="org-ul">
-<li>&#x6539;&#x53D8;&#x56FE;&#x7247;&#x5927;&#x5C0F;&#xFF0C;&#x4F4D;&#x7F6E;&#xFF0C;&#x52A0;&#x5165;&#x56FE;&#x7247;&#x8BF4;&#x660E;&#x53EF;&#x589E;&#x52A0;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;
-</li>
+<li>改变图片大小，位置，加入图片说明可增加以下代码</li>
 </ul>
 <div class="org-src-container">
-
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">#+CAPTION: title with figure number
-#+ATTR_HTML: :width 200px :align left :title The tile of picture without figure number</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">#+CAPTION: title with figure number&#10;#+ATTR_HTML: :width 200px :align left :title The tile of picture without figure number</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
@@ -508,30 +530,30 @@
 <h2 class="footnotes">Footnotes: </h2>
 <div id="text-footnotes">
 
-<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
 <a href="https://ckjoker.github.io/2015/01/27/Linux-github-hexo-blog/" target="_blank" rel="external">https://ckjoker.github.io/2015/01/27/Linux-github-hexo-blog/</a>
-</p></div>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.2" name="fn.2" class="footnum" href="#fnr.2">2</a></sup> <p class="footpara">
-<a href="http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/" target="_blank" rel="external">http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/</a>
-</p></div>
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
+<a href="http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/" target="_blank" rel="external">http://lovenight.github.io/2015/11/10/Hexo-3-1-1-静态博客搭建指南/</a>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.3" name="fn.3" class="footnum" href="#fnr.3">3</a></sup> <p class="footpara">
-<a href="http://mritd.me/2015/12/31/Github-%E6%90%AD%E5%BB%BA-Hexo-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external">http://mritd.me/2015/12/31/Github-%E6%90%AD%E5%BB%BA-Hexo-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</a>
-</p></div>
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3">3</a></sup> <div class="footpara"><p class="footpara">
+<a href="http://mritd.me/2015/12/31/Github-%E6%90%AD%E5%BB%BA-Hexo-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external">http://mritd.me/2015/12/31/Github-搭建-Hexo-静态博客/</a>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.4" name="fn.4" class="footnum" href="#fnr.4">4</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4">4</a></sup> <div class="footpara"><p class="footpara">
 <a href="https://github.com/CodeFalling" target="_blank" rel="external">https://github.com/CodeFalling</a>
-</p></div>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.5" name="fn.5" class="footnum" href="#fnr.5">5</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.5" class="footnum" href="#fnr.5">5</a></sup> <div class="footpara"><p class="footpara">
 <a href="https://github.com/zilongshanren" target="_blank" rel="external">https://github.com/zilongshanren</a>
-</p></div>
+</p></div></div>
 
 
 </div>
 </div>
-Last Updated 2016-03-12 Sat 22:50 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.1.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 8.2.10)
+Last Updated 2016-03-12 Sat 22:50 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.1.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 9.0.5)
 
       
     </div>
@@ -539,6 +561,11 @@ Last Updated 2016-03-12 Sat 22:50 by lengyueyang<br>Render by <a href="https://g
     <div>
       
         
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/gongzhonghao.jpg" alt="冷月阳 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您扫一扫上面的微信公众号，订阅我的博客！</div>
+</div>
+
 
       
     </div>
@@ -546,6 +573,27 @@ Last Updated 2016-03-12 Sat 22:50 by lengyueyang<br>Render by <a href="https://g
     <div>
       
         
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/weixin.jpg" alt="冷月阳 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/zhifubao.jpg" alt="冷月阳 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
 
       
     </div>
@@ -554,13 +602,13 @@ Last Updated 2016-03-12 Sat 22:50 by lengyueyang<br>Render by <a href="https://g
       
         <div class="post-tags">
           
-            <a href="/tags/Blog/" rel="tag">#Blog</a>
-          
-            <a href="/tags/Github/" rel="tag">#Github</a>
+            <a href="/tags/Emacs/" rel="tag">#Emacs</a>
           
             <a href="/tags/Org-mode/" rel="tag">#Org-mode</a>
           
-            <a href="/tags/Emacs/" rel="tag">#Emacs</a>
+            <a href="/tags/Blog/" rel="tag">#Blog</a>
+          
+            <a href="/tags/Github/" rel="tag">#Github</a>
           
         </div>
       
@@ -569,16 +617,16 @@ Last Updated 2016-03-12 Sat 22:50 by lengyueyang<br>Render by <a href="https://g
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/04/Use org-mode to make presentation/" rel="next" title="Use org-mode to make slide [用 org-mode 做幻灯]">
-                <i class="fa fa-chevron-left"></i> Use org-mode to make slide [用 org-mode 做幻灯]
+              <a href="/2016/04/23/Statistics in research article: Part 1, Univariate analysis/" rel="next" title="Statistics in research article: Part 1, Univariate analysis [科研文章中的统计：第一部分，单因素分析]">
+                <i class="fa fa-chevron-left"></i> Statistics in research article: Part 1, Univariate analysis [科研文章中的统计：第一部分，单因素分析]
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/04/23/Statistics in research article: Part 1, Univariate analysis/" rel="prev" title="Statistics in research article: Part 1, Univariate analysis [科研文章中的统计：第一部分，单因素分析]">
-                Statistics in research article: Part 1, Univariate analysis [科研文章中的统计：第一部分，单因素分析] <i class="fa fa-chevron-right"></i>
+              <a href="/2016/03/04/Use org-mode to make presentation/" rel="prev" title="Use org-mode to make slide [用 org-mode 做幻灯]">
+                Use org-mode to make slide [用 org-mode 做幻灯] <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -594,25 +642,6 @@ Last Updated 2016-03-12 Sat 22:50 by lengyueyang<br>Render by <a href="https://g
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/03/11/Blog with org-mode and github/"
-     data-title="Blog with org-mode and github [用 Org-mdoe 和 github 搭建博客]"
-     data-content=""
-     data-url="http://lengyueyang.github.io/2016/03/11/Blog with org-mode and github/">
-  <div class="ds-share-inline">
-    <ul  class="ds-share-icons-16">
-
-      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
-      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
-      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
-      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
-      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-
-    </ul>
-    <div class="ds-share-icons-more">
-    </div>
-  </div>
-</div>
-      
     </div>
   </div>
 
@@ -623,10 +652,6 @@ Last Updated 2016-03-12 Sat 22:50 by lengyueyang<br>Render by <a href="https://g
 
           
   <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/03/11/Blog with org-mode and github/"
-           data-title="Blog with org-mode and github [用 Org-mdoe 和 github 搭建博客]" data-url="http://lengyueyang.github.io/2016/03/11/Blog with org-mode and github/">
-      </div>
     
   </div>
 
@@ -659,34 +684,43 @@ Last Updated 2016-03-12 Sat 22:50 by lengyueyang<br>Render by <a href="https://g
         </ul>
       
 
-      <section class="site-overview sidebar-panel ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
                alt="冷月阳" />
           <p class="site-author-name" itemprop="name">冷月阳</p>
-          <p class="site-description motion-element" itemprop="description">静静思考   感悟人生</p>
+           
+              <p class="site-description motion-element" itemprop="description">静静思考   感悟人生</p>
+          
         </div>
         <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">11</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
 
           
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
             <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">5</span>
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
           
 
           
+            
+            
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
+              <a href="/tags/index.html">
                 <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">标签</span>
               </a>
@@ -783,19 +817,29 @@ Last Updated 2016-03-12 Sat 22:50 by lengyueyang<br>Render by <a href="https://g
           </div>
         
 
+        
+
+
       </section>
 
       
+      <!--noindex-->
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
+
             
               
             
+
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-1"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-2"><span class="nav-number">2.</span> <span class="nav-text">用 Hexo 搭建博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-3"><span class="nav-number">3.</span> <span class="nav-text">博客源代码托管到 Github 上</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-4"><span class="nav-number">4.</span> <span class="nav-text">用 Org-mode 写博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-5"><span class="nav-number">5.</span> <span class="nav-text">一些问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-5-1"><span class="nav-number">5.1.</span> <span class="nav-text">Org-mode 图片插入</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">6.</span> <span class="nav-text">Footnotes: </span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#org9e2e00d"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orgdac7feb"><span class="nav-number">2.</span> <span class="nav-text">用 Hexo 搭建博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orgc90f83d"><span class="nav-number">3.</span> <span class="nav-text">博客源代码托管到 Github 上</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org261c9a0"><span class="nav-number">4.</span> <span class="nav-text">用 Org-mode 写博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org6e3b0c8"><span class="nav-number">5.</span> <span class="nav-text">一些问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org0199e66"><span class="nav-number">5.1.</span> <span class="nav-text">Org-mode 图片插入</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">6.</span> <span class="nav-text">Footnotes: </span></a></li></ol></div>
             
+
           </div>
         </section>
+      <!--/noindex-->
+      
+
       
 
     </div>
@@ -869,9 +913,13 @@ Last Updated 2016-03-12 Sat 22:50 by lengyueyang<br>Render by <a href="https://g
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
   
@@ -891,6 +939,9 @@ Last Updated 2016-03-12 Sat 22:50 by lengyueyang<br>Render by <a href="https://g
 
 
   
+
+
+
 
 
 
@@ -947,28 +998,15 @@ Last Updated 2016-03-12 Sat 22:50 by lengyueyang<br>Render by <a href="https://g
 
   
 
-  
-    
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"lengyueyang"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
 
   
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
-  
+
+
+
+
+
+
+
 
 
 
@@ -976,16 +1014,20 @@ Last Updated 2016-03-12 Sat 22:50 by lengyueyang<br>Render by <a href="https://g
 
 
   
-  
+
+
+
+
 
   
 
   
 
   
-
   
 
+
+  
 
 </body>
 </html>
