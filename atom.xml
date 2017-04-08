@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lengyueyang.github.io/"/>
-  <updated>2017-04-08T04:01:27.260Z</updated>
+  <updated>2017-04-08T04:03:07.015Z</updated>
   <id>http://lengyueyang.github.io/</id>
   
   <author>
@@ -20,14 +20,14 @@
     <link href="http://lengyueyang.github.io/2017/04/08/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%A6%82%E7%8E%87/"/>
     <id>http://lengyueyang.github.io/2017/04/08/数据科学-数学和统计-概率论与数理统计-事件的概率/</id>
     <published>2017-04-08T00:00:00.000Z</published>
-    <updated>2017-04-08T04:01:27.260Z</updated>
+    <updated>2017-04-08T04:03:07.015Z</updated>
     
     <content type="html">
 
 
-&lt;div id=&quot;outline-container-orgc4c6330&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgc4c6330&quot;&gt;概述&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgc4c6330&quot;&gt;
+&lt;div id=&quot;outline-container-org700e9a8&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org700e9a8&quot;&gt;概述&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org700e9a8&quot;&gt;
 &lt;p&gt;
 概率论与数理统计的学习部分用以下书籍
 &lt;/p&gt;
@@ -35,25 +35,27 @@
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;陈希儒, (2009). 概率论与数理统计. : 中国科技大学出版社.&lt;/li&gt;
 &lt;li&gt;陈希儒, 倪. (2009). 数理统计学教程. : 中国科技大学出版社.&lt;/li&gt;
-&lt;li&gt;高惠璇, (2005). 应用多元统计分析. : 北京大学出版社.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;
+高惠璇, (2005). 应用多元统计分析. : 北京大学出版社. 
+&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id=&quot;outline-container-orgf029b90&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgf029b90&quot;&gt;事件的概率&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgf029b90&quot;&gt;
+&lt;div id=&quot;outline-container-orga99200b&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orga99200b&quot;&gt;事件的概率&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orga99200b&quot;&gt;
 &lt;p&gt;
 &lt;a href=&quot;http://blog.csdn.net/zhang22huan/article/details/8457037&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/zhang22huan/article/details/8457037&lt;/a&gt;
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org3fb1c9c&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org3fb1c9c&quot;&gt;概率是什么&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org3fb1c9c&quot;&gt;
-&lt;/div&gt;&lt;div id=&quot;outline-container-org2aec7e0&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org2aec7e0&quot;&gt;主观概率&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org2aec7e0&quot;&gt;
+&lt;div id=&quot;outline-container-orgc9cad31&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgc9cad31&quot;&gt;概率是什么&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgc9cad31&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-orgf35ed4b&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orgf35ed4b&quot;&gt;主观概率&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgf35ed4b&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;主观概率含义：为根据其经验和知识及利害关系的一种心态或倾向性，许多决策都包含个人判断成分，即主观概率&lt;/li&gt;
 &lt;li&gt;主观概率特点：不是在坚实的客观理由基础上为人们所公认；但不能从科学角度简单的全盘否定，（a）该概念有广泛的生活基础；（b）可能反映认识主体的一种倾向性，而有其社会意义；（c）在涉及利益得失的决策中，处于不同地位和掌握情报多少不同的人，对某事件可能性大小要参照这些情况及可能的后果去做衡量&lt;/li&gt;
@@ -61,9 +63,9 @@
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org7c5ce03&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org7c5ce03&quot;&gt;试验与事件&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org7c5ce03&quot;&gt;
+&lt;div id=&quot;outline-container-orgc05bcb0&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orgc05bcb0&quot;&gt;试验与事件&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgc05bcb0&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;试验：人为主动&lt;/li&gt;
 &lt;li&gt;事件：统计学中所说的事件不是已经发生了的事情，而是某种(或某些)情况下的“陈述”，也可能不发生，发生与否，需要到有关“试验”有了结果之后才能知晓。&lt;/li&gt;
@@ -73,9 +75,9 @@
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org155118e&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org155118e&quot;&gt;古典概率&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org155118e&quot;&gt;
+&lt;div id=&quot;outline-container-org30146ec&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org30146ec&quot;&gt;古典概率&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org30146ec&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;定义&lt;/li&gt;
 &lt;/ul&gt;
@@ -95,9 +97,9 @@ P(E) = M/N
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgde91ebc&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;orgde91ebc&quot;&gt;概率的统计学定义&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgde91ebc&quot;&gt;
+&lt;div id=&quot;outline-container-orga3e0925&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orga3e0925&quot;&gt;概率的统计学定义&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orga3e0925&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;实用角度：通过实验去估计时间概率的方法&lt;/li&gt;
 &lt;li&gt;定义：通常，把事件 E 的概率定义为具有如下性质的一个数 p：当把试验重复时，E 的频率在 p 的附近摆动，且当重复次数增大时，摆动越来越小，或者说，概率就是当试验次数无限增大时频率的极限。&lt;/li&gt;
@@ -106,9 +108,9 @@ P(E) = M/N
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgbfc8f3a&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;orgbfc8f3a&quot;&gt;概率的公理化定义&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgbfc8f3a&quot;&gt;
+&lt;div id=&quot;outline-container-org6fabff8&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org6fabff8&quot;&gt;概率的公理化定义&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org6fabff8&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;1993 年前苏联大数学家柯尔莫哥洛夫实现概率论的公理化&lt;/li&gt;
 &lt;li&gt;柯氏公理体系：
@@ -125,12 +127,12 @@ P(E) = M/N
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgd2cbf30&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgd2cbf30&quot;&gt;古典概率的计算&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgd2cbf30&quot;&gt;
-&lt;/div&gt;&lt;div id=&quot;outline-container-org7b048e4&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org7b048e4&quot;&gt;排列组合的几个简单公式&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org7b048e4&quot;&gt;
+&lt;div id=&quot;outline-container-orgd270de5&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgd270de5&quot;&gt;古典概率的计算&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgd270de5&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-org34d6889&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org34d6889&quot;&gt;排列组合的几个简单公式&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org34d6889&quot;&gt;
 &lt;p&gt;
 古典概率归结为计算两个数 M 和 N，这种计算大多涉及排列组合
 &lt;/p&gt;
@@ -143,9 +145,9 @@ P(E) = M/N
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org2538634&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org2538634&quot;&gt;古典概率计算举例&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org2538634&quot;&gt;
+&lt;div id=&quot;outline-container-orgc03d016&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orgc03d016&quot;&gt;古典概率计算举例&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgc03d016&quot;&gt;
 &lt;p&gt;
 古典概率的计算需要根据具体题目，利用捆绑法、插孔法等，这里强调一点，n 个人排成一列的排列数时 \(n!\) 个，而排成一个圆圈则时 \((n-1)!\)
 &lt;/p&gt;
@@ -153,21 +155,21 @@ P(E) = M/N
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org368807e&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org368807e&quot;&gt;事件的运算、条件概率与独立性&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org368807e&quot;&gt;
-&lt;/div&gt;&lt;div id=&quot;outline-container-orgc8e8af9&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;orgc8e8af9&quot;&gt;事件的蕴含、包含和相等&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgc8e8af9&quot;&gt;
+&lt;div id=&quot;outline-container-orgddf45f4&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgddf45f4&quot;&gt;事件的运算、条件概率与独立性&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgddf45f4&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-org63efca5&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org63efca5&quot;&gt;事件的蕴含、包含和相等&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org63efca5&quot;&gt;
 &lt;p&gt;
 在同一试验下的两事件 A 和 B，如果当 A 发生时 B 必发生，则称 A 蕴含 B，或者说 B 包含 A，记作$A ⊂ B$；若 A，B 互相蕴含，则称 A，B 两事件相等，记为 \(A = B\)
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org66783af&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org66783af&quot;&gt;事件的互斥和对立&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org66783af&quot;&gt;
+&lt;div id=&quot;outline-container-orgc4b6438&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orgc4b6438&quot;&gt;事件的互斥和对立&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgc4b6438&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;互斥：两事件不在同一次试验中发生，则称它们是互斥的。如果一些事件中的任意两个都互斥，则称这些事件是两两互斥的，简称互斥&lt;/li&gt;
 &lt;li&gt;对立：是互斥事件的一种重要情况，若 A 为一事件，则 B={A 不发生}，为 A 的对立事件，记为\(\bar{A}\)&lt;/li&gt;
@@ -175,9 +177,9 @@ P(E) = M/N
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgc19138a&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;orgc19138a&quot;&gt;事件的和（并）&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgc19138a&quot;&gt;
+&lt;div id=&quot;outline-container-orgddc7de1&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orgddc7de1&quot;&gt;事件的和（并）&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgddc7de1&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;定义一个事件：指出它何时发生，何时不发生&lt;/li&gt;
 &lt;li&gt;事件的和：设有两事件 A，B，则定义事件 C={A 发生，或 B 发生}={A，B 至少一个发生}为事件 A 和事件 B 的和&lt;/li&gt;
@@ -186,9 +188,9 @@ P(E) = M/N
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org50b9392&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org50b9392&quot;&gt;概率的加法定理&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org50b9392&quot;&gt;
+&lt;div id=&quot;outline-container-orgec9e9ce&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orgec9e9ce&quot;&gt;概率的加法定理&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgec9e9ce&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;若干个互斥事件之和的概率，等于各事件的概率之和，即&lt;/li&gt;
 &lt;/ul&gt;
@@ -203,9 +205,9 @@ P(A_1 + A_2 + \dots + A_n) = P(A_1) + P(A_2) + \dots + P(A_n)
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgd223311&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;orgd223311&quot;&gt;事件的积（交）、事件的差&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgd223311&quot;&gt;
+&lt;div id=&quot;outline-container-org3fe3e4e&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org3fe3e4e&quot;&gt;事件的积（交）、事件的差&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org3fe3e4e&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;事件的积：设有两事件 A，B，则定义事件 C={A，B 都发生}为两事件之积&lt;/li&gt;
 &lt;li&gt;事件的差：事件 A 和事件 B 的差 A-B = {A 发生，B 不发生}&lt;/li&gt;
@@ -215,9 +217,9 @@ P(A_1 + A_2 + \dots + A_n) = P(A_1) + P(A_2) + \dots + P(A_n)
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgd8cee1c&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;orgd8cee1c&quot;&gt;条件概率&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgd8cee1c&quot;&gt;
+&lt;div id=&quot;outline-container-org892f7d1&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org892f7d1&quot;&gt;条件概率&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org892f7d1&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;无条件概率定义：不加入其他条件或假定所计算出的概率&lt;/li&gt;
 &lt;li&gt;条件概率定义：在附加一定条件下所计算的概率。附加条件形式可归结为“已知某时间发生了”。设有两事件 A，B，而 P(B)非 0，则“在给定 B 发生的条件下 A 的条件概率” ，记为$P(A|B)$，定义为&lt;/li&gt;
@@ -228,14 +230,14 @@ P(A|B) = P(AB)/P(B)
 \]
 &lt;/p&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;条件概率的计算：利用定义(&lt;a href=&quot;#orgd95fefd&quot;&gt;1&lt;/a&gt;)；直接从加入条件后改变了的情况计算&lt;/li&gt;
+&lt;li&gt;条件概率的计算：利用定义(&lt;a href=&quot;#org2c6c43b&quot;&gt;1&lt;/a&gt;)；直接从加入条件后改变了的情况计算&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgdf22301&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;orgdf22301&quot;&gt;事件的独立性，概率乘法定理&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgdf22301&quot;&gt;
+&lt;div id=&quot;outline-container-orgc26eb6c&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orgc26eb6c&quot;&gt;事件的独立性，概率乘法定理&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgc26eb6c&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;独立性定义：两件事情 A，B 若满足$P(AB) = P(A)P(B)$，则称 A，B 独立&lt;/li&gt;
 &lt;li&gt;概率乘法定理：两独立事件之积的概率等于其各自概率之积，即&lt;/li&gt;
@@ -268,9 +270,9 @@ P(A_1A_2\dots A_n) = P(A_1)P(A_2)\dots P(A_n)
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgaf92167&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;orgaf92167&quot;&gt;全概率公式与贝叶斯公式&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgaf92167&quot;&gt;
+&lt;div id=&quot;outline-container-org66483e5&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org66483e5&quot;&gt;全概率公式与贝叶斯公式&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org66483e5&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;完备时间群：设$B&lt;sub&gt;1&lt;/sub&gt;, B&lt;sub&gt;2&lt;/sub&gt;, &amp;hellip;$为有限或无限个事件，他们两辆互斥且每次试验中至少发生一个，可以用下列式子表示 $B&lt;sub&gt;iB&lt;/sub&gt;&lt;sub&gt;j&lt;/sub&gt; = ∅$，$B&lt;sub&gt;1&lt;/sub&gt; + B&lt;sub&gt;2&lt;/sub&gt; + &amp;hellip; = Ω$，把具有这些性质的一组事件称为一个“完备事件群”&lt;/li&gt;
 &lt;li&gt;全概率公式：由原因推导结果，考虑一事件 A，因 Ω 是必然事件，有$A = AΩ = AB&lt;sub&gt;1&lt;/sub&gt; + AB&lt;sub&gt;2&lt;/sub&gt; + &amp;hellip;$，再由条件概率的定义，有$P(AB&lt;sub&gt;i&lt;/sub&gt;) = P(B&lt;sub&gt;i&lt;/sub&gt;)P(A|B&lt;sub&gt;i&lt;/sub&gt;)$，带入上式，得到，&lt;/li&gt;
@@ -296,15 +298,15 @@ P(B_i|A) = P(B_iA)/P(A) = P(AB_i)/P(AB) = P(B_i)P(A|B_i)/\sum_jP(B_j)P(A|B_j)
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org2adc4b9&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org2adc4b9&quot;&gt;例题&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org2adc4b9&quot;&gt;
+&lt;div id=&quot;outline-container-org475251c&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org475251c&quot;&gt;例题&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org475251c&quot;&gt;
 &lt;p&gt;
 题目 1  假定某种病菌在全人口的带菌率为 10%，又在检测时，带菌者呈阳、阴性反应的概率为 0.95 和 0.05，而不带菌者呈阳、阴性反应的概率则为 0.01 和 0.99。今某人独立地检测三次，发现 2 次呈阳性反应、1 次阴性反应。求“该人为带菌者”的概率是多少? 
 &lt;/p&gt;
 
 &lt;p&gt;
-解答：假设事件$A&lt;sub&gt;1&lt;/sub&gt;$为带菌，事件$A&lt;sub&gt;2&lt;/sub&gt;$为不带菌，事件$B&lt;sub&gt;1&lt;/sub&gt;$为试验测定为阳性，事件$B&lt;sub&gt;2&lt;/sub&gt;$为试验测定为阴性，事件$C$是做三次重复试验，则由题目可知，$P(A&lt;sub&gt;1&lt;/sub&gt;) = 0.1$，$P(B&lt;sub&gt;1&lt;/sub&gt;|A&lt;sub&gt;1&lt;/sub&gt;) = 0.95$，$P(B&lt;sub&gt;2&lt;/sub&gt;|A&lt;sub&gt;1&lt;/sub&gt;) = 0.05\[P(B_1|A_2) = 0.01\]P(B&lt;sub&gt;2&lt;/sub&gt;|A&lt;sub&gt;2&lt;/sub&gt;) = 0.99$，而且$A&lt;sub&gt;1&lt;/sub&gt;$和$A&lt;sub&gt;2&lt;/sub&gt;$，$B&lt;sub&gt;1&lt;/sub&gt;$和$B&lt;sub&gt;2&lt;/sub&gt;$都分别组成一个完备事件群，于是，根据全概率公式(&lt;a href=&quot;#orgfaa621b&quot;&gt;1&lt;/a&gt;)可知，\[P(B_1) = P(B_1A_1) + P(B_1A_2) = P(A_1)P(B_1|A_1) + P(A_2)P(B_1|A_2) = 0.1*0.95 + 0.9*0.01 = 0.104\]  \[P(C|A_1) = P(B_1B_1B_2|A_1) = \binom{3}{2}*0.95^2*(1-0.95) = 0.135375\]  \[P(C|A_2) = P(B_1B_1B_2|A_2) = \binom{3}{2}*0.01^2*(1-0.01) = 0.000297\]  于是，我们要求的值$P(A&lt;sub&gt;1&lt;/sub&gt;|C)$即：\[P(A_1|C) = P(A_1)P(C|A_1)/(P(A_1)P(C|A_1)+ P(A_2)P(C|A_2)) = 0.1*0.135375/(0.1*0.135375 + 0.9*0.000297) = 0.981\]
+解答：假设事件$A&lt;sub&gt;1&lt;/sub&gt;$为带菌，事件$A&lt;sub&gt;2&lt;/sub&gt;$为不带菌，事件$B&lt;sub&gt;1&lt;/sub&gt;$为试验测定为阳性，事件$B&lt;sub&gt;2&lt;/sub&gt;$为试验测定为阴性，事件$C$是做三次重复试验，则由题目可知，$P(A&lt;sub&gt;1&lt;/sub&gt;) = 0.1$，$P(B&lt;sub&gt;1&lt;/sub&gt;|A&lt;sub&gt;1&lt;/sub&gt;) = 0.95$，$P(B&lt;sub&gt;2&lt;/sub&gt;|A&lt;sub&gt;1&lt;/sub&gt;) = 0.05\[P(B_1|A_2) = 0.01\]P(B&lt;sub&gt;2&lt;/sub&gt;|A&lt;sub&gt;2&lt;/sub&gt;) = 0.99$，而且$A&lt;sub&gt;1&lt;/sub&gt;$和$A&lt;sub&gt;2&lt;/sub&gt;$，$B&lt;sub&gt;1&lt;/sub&gt;$和$B&lt;sub&gt;2&lt;/sub&gt;$都分别组成一个完备事件群，于是，根据全概率公式(&lt;a href=&quot;#orgc85ad78&quot;&gt;1&lt;/a&gt;)可知，\[P(B_1) = P(B_1A_1) + P(B_1A_2) = P(A_1)P(B_1|A_1) + P(A_2)P(B_1|A_2) = 0.1*0.95 + 0.9*0.01 = 0.104\]  \[P(C|A_1) = P(B_1B_1B_2|A_1) = \binom{3}{2}*0.95^2*(1-0.95) = 0.135375\]  \[P(C|A_2) = P(B_1B_1B_2|A_2) = \binom{3}{2}*0.01^2*(1-0.01) = 0.000297\]  于是，我们要求的值$P(A&lt;sub&gt;1&lt;/sub&gt;|C)$即：\[P(A_1|C) = P(A_1)P(C|A_1)/(P(A_1)P(C|A_1)+ P(A_2)P(C|A_2)) = 0.1*0.135375/(0.1*0.135375 + 0.9*0.000297) = 0.981\]
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -318,18 +320,24 @@ P(B_i|A) = P(B_iA)/P(A) = P(AB_i)/P(AB) = P(B_i)P(A|B_i)/\sum_jP(B_j)P(A|B_j)
 &lt;/div&gt;
 &lt;/div&gt;
 
-Last Updated 2017-04-08 Sat 12:01 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 25.1.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 9.0.5)
+Last Updated 2017-04-08 Sat 12:03 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 25.1.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 9.0.5)
 </content>
     
     <summary type="html">
     
-      
+      &lt;div id=&quot;outline-container-org700e9a8&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org700e9a8&quot;&gt;概述&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org700e9a8&quot;&gt;
+&lt;p&gt;
+概率论与数理统计的学习部分用以下书籍
+&lt;/p&gt;
 
-
-&lt;div id=&quot;outline-container-orgc4c6330&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgc4c6330&quot;&gt;概述&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgc4c6330&quot;&gt;
-&lt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;陈希儒, (2009). 概率论与数理统计. : 中国科技大学出版社.&lt;/li&gt;
+&lt;li&gt;陈希儒, 倪. (2009). 数理统计学教程. : 中国科技大学出版社.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;
+高惠璇, (2005). 应用多元统计分析. : 北京大学出版社. 
+&lt;/p&gt;
     
     </summary>
     
@@ -2642,11 +2650,11 @@ Last Updated 2017-04-08 Sat 11:27 by lengyueyang&lt;br&gt;Render by &lt;a href=&
     
       <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
     
+      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
+    
       <category term="Blog" scheme="http://lengyueyang.github.io/tags/Blog/"/>
     
       <category term="Github" scheme="http://lengyueyang.github.io/tags/Github/"/>
-    
-      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
     
   </entry>
   
@@ -3258,9 +3266,9 @@ Last Updated 2017-04-08 Sat 11:27 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Spacemacs" scheme="http://lengyueyang.github.io/tags/Spacemacs/"/>
-    
       <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
+    
+      <category term="Spacemacs" scheme="http://lengyueyang.github.io/tags/Spacemacs/"/>
     
   </entry>
   
