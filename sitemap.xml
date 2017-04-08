@@ -2,23 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://lengyueyang.github.io/2017/04/08/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%A6%82%E7%8E%87/</loc>
+    <loc>http://lengyueyang.github.io/2017/04/08/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%A6%82%E7%8E%87/</loc>
     
-    <lastmod>2017-04-08T02:46:09.687Z</lastmod>
+    <lastmod>2017-04-08T04:01:27.260Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://lengyueyang.github.io/2017/03/26/A%20simple%20introduction%20of%20lengyueyang's%20spacemacs%20configration%5B%E4%B8%AA%E4%BA%BAspacemacs%E9%85%8D%E7%BD%AE%E7%AE%80%E4%BB%8B%5D/</loc>
     
-    <lastmod>2017-04-08T02:30:25.867Z</lastmod>
+    <lastmod>2017-04-08T03:29:11.333Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://lengyueyang.github.io/2017/03/15/%E6%88%BF%E5%AD%90%EF%BC%8C%E5%8C%97%E4%BA%AC/</loc>
     
-    <lastmod>2017-03-15T02:05:10.120Z</lastmod>
+    <lastmod>2017-04-08T03:28:51.479Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lengyueyang.github.io/2017/02/26/Use%20Mu4e%20to%20manage%20email/</loc>
+    
+    <lastmod>2017-04-08T03:28:37.965Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lengyueyang.github.io/2016/04/23/Statistics%20in%20research%20article:%20Part%201,%20Univariate%20analysis/</loc>
+    
+    <lastmod>2017-04-08T03:28:08.798Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lengyueyang.github.io/2016/03/11/Blog%20with%20org-mode%20and%20github/</loc>
+    
+    <lastmod>2017-04-08T03:27:50.004Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lengyueyang.github.io/2016/02/28/Use%20org-mode%20to%20GTD/</loc>
+    
+    <lastmod>2017-04-08T03:27:25.823Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lengyueyang.github.io/2016/02/14/Spacemacs%20Learning/</loc>
+    
+    <lastmod>2017-04-08T03:27:21.960Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lengyueyang.github.io/2016/03/04/Use%20org-mode%20to%20make%20presentation/</loc>
+    
+    <lastmod>2017-04-08T03:27:12.573Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lengyueyang.github.io/2016/02/05/Archlinux%20install%20and%20configuration/</loc>
+    
+    <lastmod>2017-04-08T03:26:15.275Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lengyueyang.github.io/2016/01/01/hello-world/</loc>
+    
+    <lastmod>2017-04-08T03:16:49.978Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lengyueyang.github.io/2016/01/30/Org-mode%20test/</loc>
+    
+    <lastmod>2017-04-08T03:13:53.531Z</lastmod>
     
   </url>
   
@@ -30,72 +93,9 @@
   </url>
   
   <url>
-    <loc>http://lengyueyang.github.io/2017/02/26/Use%20Mu4e%20to%20manage%20email/</loc>
-    
-    <lastmod>2017-02-26T14:56:41.121Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lengyueyang.github.io/2016/01/30/Org-mode%20test/</loc>
-    
-    <lastmod>2016-11-12T13:56:49.730Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lengyueyang.github.io/2016/02/05/Archlinux%20install%20and%20configuration/</loc>
-    
-    <lastmod>2016-05-28T14:18:24.364Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lengyueyang.github.io/2016/04/23/Statistics%20in%20research%20article:%20Part%201,%20Univariate%20analysis/</loc>
-    
-    <lastmod>2016-04-25T09:11:54.009Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lengyueyang.github.io/2016/02/28/Use%20org-mode%20to%20GTD/</loc>
-    
-    <lastmod>2016-04-05T15:07:28.271Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lengyueyang.github.io/2016/03/11/Blog%20with%20org-mode%20and%20github/</loc>
-    
-    <lastmod>2016-03-12T14:50:49.431Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lengyueyang.github.io/2016/01/01/hello-world/</loc>
-    
-    <lastmod>2016-03-11T23:39:28.379Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://lengyueyang.github.io/404.html</loc>
     
     <lastmod>2016-03-07T00:23:44.014Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lengyueyang.github.io/2016/03/04/Use%20org-mode%20to%20make%20presentation/</loc>
-    
-    <lastmod>2016-03-07T00:14:46.087Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lengyueyang.github.io/2016/02/14/Spacemacs%20Learning/</loc>
-    
-    <lastmod>2016-03-07T00:14:05.047Z</lastmod>
     
   </url>
   

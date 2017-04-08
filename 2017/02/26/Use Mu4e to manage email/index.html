@@ -5,9 +5,9 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -89,17 +89,17 @@
 
 
 
-<meta name="description" content="概述   用 offlineimap 收取邮件，用 mu4e 在 emacs 中管理邮件，本教程配置多账户。     &amp;lt;!&amp;#x2013;more&amp;#x2013;&amp;gt;        offlineimap 设置   安装 offlineimap   本人用 archlinux，直接 sudo pacman -S offlineimap 即可      配置 offlineimap">
+<meta name="description" content="概述   用 offlineimap 收取邮件，用 mu4e 在 emacs 中管理邮件，本教程配置多账户。">
 <meta name="keywords" content="Emacs,Mu4e,Offlineimap">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Use Mu4e to manage email [用 mu4e 管理邮件]">
 <meta property="og:url" content="http://lengyueyang.github.io/2017/02/26/Use Mu4e to manage email/index.html">
 <meta property="og:site_name" content="深度识医">
-<meta property="og:description" content="概述   用 offlineimap 收取邮件，用 mu4e 在 emacs 中管理邮件，本教程配置多账户。     &amp;lt;!&amp;#x2013;more&amp;#x2013;&amp;gt;        offlineimap 设置   安装 offlineimap   本人用 archlinux，直接 sudo pacman -S offlineimap 即可      配置 offlineimap">
-<meta property="og:updated_time" content="2017-02-26T14:56:41.121Z">
+<meta property="og:description" content="概述   用 offlineimap 收取邮件，用 mu4e 在 emacs 中管理邮件，本教程配置多账户。">
+<meta property="og:updated_time" content="2017-04-08T03:28:37.965Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Use Mu4e to manage email [用 mu4e 管理邮件]">
-<meta name="twitter:description" content="概述   用 offlineimap 收取邮件，用 mu4e 在 emacs 中管理邮件，本教程配置多账户。     &amp;lt;!&amp;#x2013;more&amp;#x2013;&amp;gt;        offlineimap 设置   安装 offlineimap   本人用 archlinux，直接 sudo pacman -S offlineimap 即可      配置 offlineimap">
+<meta name="twitter:description" content="概述   用 offlineimap 收取邮件，用 mu4e 在 emacs 中管理邮件，本教程配置多账户。">
 
 
 
@@ -107,7 +107,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
+    scheme: 'Mist',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
@@ -133,7 +133,7 @@
 
 
 
-  <title> Use Mu4e to manage email [用 mu4e 管理邮件] | 深度识医 </title>
+  <title> Use Mu4e to manage email [用 mu4e 管理邮件] | 深度识医 </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -144,7 +144,7 @@
 
 
 
-  <script type="text/javascript">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><script type="text/javascript">
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
@@ -408,37 +408,32 @@
         
 
 
-<div id="outline-container-org6474993" class="outline-2">
-<h2 id="org6474993">概述</h2>
-<div class="outline-text-2" id="text-org6474993">
+<div id="outline-container-orgb78ef92" class="outline-2">
+<h2 id="orgb78ef92">概述</h2>
+<div class="outline-text-2" id="text-orgb78ef92">
 <p>
 用 offlineimap 收取邮件，用 mu4e 在 emacs 中管理邮件，本教程配置多账户。
 </p>
 
-<div class="HTML">
-<p>
-&lt;!&#x2013;more&#x2013;&gt;
-</p>
-
-</div>
+<a id="more"></a>
 </div>
 </div>
 
-<div id="outline-container-org1b44212" class="outline-2">
-<h2 id="org1b44212">offlineimap 设置</h2>
-<div class="outline-text-2" id="text-org1b44212">
-</div><div id="outline-container-orgf39ab9e" class="outline-3">
-<h3 id="orgf39ab9e">安装 offlineimap</h3>
-<div class="outline-text-3" id="text-orgf39ab9e">
+<div id="outline-container-org2a69d23" class="outline-2">
+<h2 id="org2a69d23">offlineimap 设置</h2>
+<div class="outline-text-2" id="text-org2a69d23">
+</div><div id="outline-container-org19fbe7e" class="outline-3">
+<h3 id="org19fbe7e">安装 offlineimap</h3>
+<div class="outline-text-3" id="text-org19fbe7e">
 <p>
 本人用 archlinux，直接 <code>sudo pacman -S offlineimap</code> 即可
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgd8f75d2" class="outline-3">
-<h3 id="orgd8f75d2">配置 offlineimap</h3>
-<div class="outline-text-3" id="text-orgd8f75d2">
+<div id="outline-container-org7af88c2" class="outline-3">
+<h3 id="org7af88c2">配置 offlineimap</h3>
+<div class="outline-text-3" id="text-org7af88c2">
 <p>
 在 home 目录下建立 .offlineimaprc 文件，加入以下代码
 </p>
@@ -478,9 +473,9 @@
 </div>
 </div>
 
-<div id="outline-container-org760baa1" class="outline-3">
-<h3 id="org760baa1">用 offlineimap 下载邮件</h3>
-<div class="outline-text-3" id="text-org760baa1">
+<div id="outline-container-org93915b4" class="outline-3">
+<h3 id="org93915b4">用 offlineimap 下载邮件</h3>
+<div class="outline-text-3" id="text-org93915b4">
 <p>
 在终端用运行命令 <code>offlineimap</code> ，下载邮件
 </p>
@@ -488,9 +483,9 @@
 </div>
 </div>
 
-<div id="outline-container-org15c7dd6" class="outline-2">
-<h2 id="org15c7dd6">Mu4e 设置</h2>
-<div class="outline-text-2" id="text-org15c7dd6">
+<div id="outline-container-org191926b" class="outline-2">
+<h2 id="org191926b">Mu4e 设置</h2>
+<div class="outline-text-2" id="text-org191926b">
 <p>
 我用 spacemacs，先将 mu4e layer 加入 spaemacs 配置文件中，启用 mu4e layer。
 </p>
@@ -512,9 +507,9 @@
 </div>
 </div>
 
-<div id="outline-container-org7e96aa4" class="outline-3">
-<h3 id="org7e96aa4">几点说明：</h3>
-<div class="outline-text-3" id="text-org7e96aa4">
+<div id="outline-container-org745342f" class="outline-3">
+<h3 id="org745342f">几点说明：</h3>
+<div class="outline-text-3" id="text-org745342f">
 <p>
 mu 更新后，发现系统不能自己找到 mu4e 文件夹，因此手动链接
 <code>(add-to-load-path "~/.spacemacs.d/package/mu4e")</code>
@@ -527,18 +522,18 @@ contact 内容是自己的邮件签名
 </div>
 </div>
 
-<div id="outline-container-org55aceeb" class="outline-2">
-<h2 id="org55aceeb">Mu4e 简单使用小结</h2>
-<div class="outline-text-2" id="text-org55aceeb">
-</div><div id="outline-container-org7160d19" class="outline-3">
-<h3 id="org7160d19">Keybindings to remember of Mu4e</h3>
-<div class="outline-text-3" id="text-org7160d19">
-</div><div id="outline-container-orgcecb851" class="outline-4">
-<h4 id="orgcecb851"><code>offlineimap</code> and <code>mu index --maildir=~/Documents/Mu4e</code></h4>
+<div id="outline-container-org9675291" class="outline-2">
+<h2 id="org9675291">Mu4e 简单使用小结</h2>
+<div class="outline-text-2" id="text-org9675291">
+</div><div id="outline-container-org02b43a4" class="outline-3">
+<h3 id="org02b43a4">Keybindings to remember of Mu4e</h3>
+<div class="outline-text-3" id="text-org02b43a4">
+</div><div id="outline-container-org7790cdf" class="outline-4">
+<h4 id="org7790cdf"><code>offlineimap</code> and <code>mu index --maildir=~/Documents/Mu4e</code></h4>
 </div>
-<div id="outline-container-orgad25f2d" class="outline-4">
-<h4 id="orgad25f2d">Main view-Default bindings</h4>
-<div class="outline-text-4" id="text-orgad25f2d">
+<div id="outline-container-org1ed1678" class="outline-4">
+<h4 id="org1ed1678">Main view-Default bindings</h4>
+<div class="outline-text-4" id="text-org1ed1678">
 <p>
 R: Reply      s: search            .: raw view (toggle)
 </p>
@@ -554,9 +549,9 @@ E: Edit       B: edit bookmark-search
 </div>
 </div>
 
-<div id="outline-container-org60692fd" class="outline-4">
-<h4 id="org60692fd">Headers menu in the emacs menu bar</h4>
-<div class="outline-text-4" id="text-org60692fd">
+<div id="outline-container-orgab08f2b" class="outline-4">
+<h4 id="orgab08f2b">Headers menu in the emacs menu bar</h4>
+<div class="outline-text-4" id="text-orgab08f2b">
 <p>
 key          description
 </p>
@@ -748,9 +743,9 @@ q            leave the headers buffer
 </div>
 
 
-<div id="outline-container-org471828c" class="outline-4">
-<h4 id="org471828c">Message View</h4>
-<div class="outline-text-4" id="text-org471828c">
+<div id="outline-container-orge6ddcd0" class="outline-4">
+<h4 id="orge6ddcd0">Message View</h4>
+<div class="outline-text-4" id="text-orge6ddcd0">
 <p>
 key          description
 </p>
@@ -989,9 +984,9 @@ q            leave the message view
 </div>
 </div>
 
-<div id="outline-container-orgb8d5c3d" class="outline-4">
-<h4 id="orgb8d5c3d">Attachment actions</h4>
-<div class="outline-text-4" id="text-orgb8d5c3d">
+<div id="outline-container-org714ea0e" class="outline-4">
+<h4 id="org714ea0e">Attachment actions</h4>
+<div class="outline-text-4" id="text-org714ea0e">
 <p>
 Similarly, there is mu4e-view-attachment-action (A) for actions on attachments, which you can specify with mu4e-view-attachment-actions.
 </p>
@@ -1008,9 +1003,9 @@ emacs (e): open the attachment in your running emacs. For example, if you receiv
 </div>
 </div>
 
-<div id="outline-container-org5b7746e" class="outline-4">
-<h4 id="org5b7746e">Editor view</h4>
-<div class="outline-text-4" id="text-org5b7746e">
+<div id="outline-container-orgcd335d9" class="outline-4">
+<h4 id="orgcd335d9">Editor view</h4>
+<div class="outline-text-4" id="text-orgcd335d9">
 <p>
 key          description
 </p>
@@ -1042,9 +1037,9 @@ C-S-u        update mail &amp; reindex
 </div>
 </div>
 
-<div id="outline-container-org10ea880" class="outline-4">
-<h4 id="org10ea880">What to mark for</h4>
-<div class="outline-text-4" id="text-org10ea880">
+<div id="outline-container-org022c139" class="outline-4">
+<h4 id="org022c139">What to mark for</h4>
+<div class="outline-text-4" id="text-org022c139">
 <p>
 mu4e supports a number of marks:
 </p>
@@ -1108,9 +1103,9 @@ action        a           | apply some action
 </div>
 </div>
 
-<div id="outline-container-org80dec1d" class="outline-3">
-<h3 id="org80dec1d">其他</h3>
-<div class="outline-text-3" id="text-org80dec1d">
+<div id="outline-container-org095e08a" class="outline-3">
+<h3 id="org095e08a">其他</h3>
+<div class="outline-text-3" id="text-org095e08a">
 <p>
 若参考配置有问题，请移步官网或后面参考资料，或邮件联系我，随时欢迎 😍。
 </p>
@@ -1120,9 +1115,9 @@ action        a           | apply some action
 
 
 
-<div id="outline-container-orgc777ad1" class="outline-2">
-<h2 id="orgc777ad1">参考资料</h2>
-<div class="outline-text-2" id="text-orgc777ad1">
+<div id="outline-container-org4661530" class="outline-2">
+<h2 id="org4661530">参考资料</h2>
+<div class="outline-text-2" id="text-org4661530">
 <ul class="org-ul">
 <li><a href="https://github.com/larstvei/dot-emacs" target="_blank" rel="external">larstvei/dot-emacs: My Emacs configurations written in Org mode</a></li>
 <li><a href="http://wenshanren.org/?p=111" target="_blank" rel="external">mu4e: an E-mail Client for Emacs | 肉山博客 (Wenshan's Blog)</a></li>
@@ -1140,7 +1135,7 @@ action        a           | apply some action
 </div>
 </div>
 
-Last Updated 2017-02-26 Sun 22:56 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.1.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 9.0.5)
+Last Updated 2017-04-08 Sat 11:28 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.1.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 9.0.5)
 
       
     </div>
@@ -1417,7 +1412,7 @@ Last Updated 2017-02-26 Sun 22:56 by lengyueyang<br>Render by <a href="https://g
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#org6474993"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org1b44212"><span class="nav-number">2.</span> <span class="nav-text">offlineimap 设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#orgf39ab9e"><span class="nav-number">2.1.</span> <span class="nav-text">安装 offlineimap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orgd8f75d2"><span class="nav-number">2.2.</span> <span class="nav-text">配置 offlineimap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org760baa1"><span class="nav-number">2.3.</span> <span class="nav-text">用 offlineimap 下载邮件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org15c7dd6"><span class="nav-number">3.</span> <span class="nav-text">Mu4e 设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org7e96aa4"><span class="nav-number">3.1.</span> <span class="nav-text">几点说明：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org55aceeb"><span class="nav-number">4.</span> <span class="nav-text">Mu4e 简单使用小结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org7160d19"><span class="nav-number">4.1.</span> <span class="nav-text">Keybindings to remember of Mu4e</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#orgcecb851"><span class="nav-number">4.1.1.</span> <span class="nav-text">offlineimap and mu index --maildir=~/Documents/Mu4e</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#orgad25f2d"><span class="nav-number">4.1.2.</span> <span class="nav-text">Main view-Default bindings</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#org60692fd"><span class="nav-number">4.1.3.</span> <span class="nav-text">Headers menu in the emacs menu bar</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#org471828c"><span class="nav-number">4.1.4.</span> <span class="nav-text">Message View</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#orgb8d5c3d"><span class="nav-number">4.1.5.</span> <span class="nav-text">Attachment actions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#org5b7746e"><span class="nav-number">4.1.6.</span> <span class="nav-text">Editor view</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#org10ea880"><span class="nav-number">4.1.7.</span> <span class="nav-text">What to mark for</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org80dec1d"><span class="nav-number">4.2.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orgc777ad1"><span class="nav-number">5.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#orgb78ef92"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org2a69d23"><span class="nav-number">2.</span> <span class="nav-text">offlineimap 设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org19fbe7e"><span class="nav-number">2.1.</span> <span class="nav-text">安装 offlineimap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org7af88c2"><span class="nav-number">2.2.</span> <span class="nav-text">配置 offlineimap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org93915b4"><span class="nav-number">2.3.</span> <span class="nav-text">用 offlineimap 下载邮件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org191926b"><span class="nav-number">3.</span> <span class="nav-text">Mu4e 设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org745342f"><span class="nav-number">3.1.</span> <span class="nav-text">几点说明：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org9675291"><span class="nav-number">4.</span> <span class="nav-text">Mu4e 简单使用小结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org02b43a4"><span class="nav-number">4.1.</span> <span class="nav-text">Keybindings to remember of Mu4e</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#org7790cdf"><span class="nav-number">4.1.1.</span> <span class="nav-text">offlineimap and mu index --maildir=~/Documents/Mu4e</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#org1ed1678"><span class="nav-number">4.1.2.</span> <span class="nav-text">Main view-Default bindings</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#orgab08f2b"><span class="nav-number">4.1.3.</span> <span class="nav-text">Headers menu in the emacs menu bar</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#orge6ddcd0"><span class="nav-number">4.1.4.</span> <span class="nav-text">Message View</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#org714ea0e"><span class="nav-number">4.1.5.</span> <span class="nav-text">Attachment actions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#orgcd335d9"><span class="nav-number">4.1.6.</span> <span class="nav-text">Editor view</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#org022c139"><span class="nav-number">4.1.7.</span> <span class="nav-text">What to mark for</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org095e08a"><span class="nav-number">4.2.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org4661530"><span class="nav-number">5.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
@@ -1470,7 +1465,7 @@ Last Updated 2017-02-26 Sun 22:56 by lengyueyang<br>Render by <a href="https://g
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Mist
   </a>
 </div>
 
@@ -1561,13 +1556,6 @@ Last Updated 2017-02-26 Sun 22:56 by lengyueyang<br>Render by <a href="https://g
   
   
 
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
-
-
-
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
@@ -1577,7 +1565,24 @@ Last Updated 2017-02-26 Sun 22:56 by lengyueyang<br>Render by <a href="https://g
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="custom_mathjax_source">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 
 
 
