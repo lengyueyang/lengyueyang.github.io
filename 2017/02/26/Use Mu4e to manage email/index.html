@@ -408,9 +408,9 @@
         
 
 
-<div id="outline-container-orgd9ca4c9" class="outline-2">
-<h2 id="orgd9ca4c9">概述</h2>
-<div class="outline-text-2" id="text-orgd9ca4c9">
+<div id="outline-container-org4110d0c" class="outline-2">
+<h2 id="org4110d0c">概述</h2>
+<div class="outline-text-2" id="text-org4110d0c">
 <p>
 用 offlineimap 收取邮件，用 mu4e 在 emacs 中管理邮件，本教程配置多账户。
 </p>
@@ -419,27 +419,27 @@
 </div>
 </div>
 
-<div id="outline-container-orgc6769f1" class="outline-2">
-<h2 id="orgc6769f1">offlineimap 设置</h2>
-<div class="outline-text-2" id="text-orgc6769f1">
-</div><div id="outline-container-orgfe41760" class="outline-3">
-<h3 id="orgfe41760">安装 offlineimap</h3>
-<div class="outline-text-3" id="text-orgfe41760">
+<div id="outline-container-org5258205" class="outline-2">
+<h2 id="org5258205">offlineimap 设置</h2>
+<div class="outline-text-2" id="text-org5258205">
+</div><div id="outline-container-org6bbe33b" class="outline-3">
+<h3 id="org6bbe33b">安装 offlineimap</h3>
+<div class="outline-text-3" id="text-org6bbe33b">
 <p>
 本人用 archlinux，直接 <code>sudo pacman -S offlineimap</code> 即可
 </p>
 </div>
 </div>
 
-<div id="outline-container-orga7dcdcf" class="outline-3">
-<h3 id="orga7dcdcf">配置 offlineimap</h3>
-<div class="outline-text-3" id="text-orga7dcdcf">
+<div id="outline-container-orgfa733fc" class="outline-3">
+<h3 id="orgfa733fc">配置 offlineimap</h3>
+<div class="outline-text-3" id="text-orgfa733fc">
 <p>
 在 home 目录下建立 .offlineimaprc 文件，加入以下代码
 </p>
 
 <div class="org-src-container">
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- mode: python2 -*-</span></span><br><span class="line">[general]</span><br><span class="line"><span class="comment"># accounts = Gmail, Foxmail, Lengyue-163</span></span><br><span class="line">accounts = Gmail, Foxmail</span><br><span class="line">maxsyncaccounts = <span class="number">2</span></span><br><span class="line">pythonfile = ~/.offlineimap.py</span><br><span class="line"></span><br><span class="line">[Account Gmail]</span><br><span class="line">localrepository = Gmail-Local</span><br><span class="line">remoterepository = Gmail-Remote</span><br><span class="line"></span><br><span class="line">[Repository Gmail-Local]</span><br><span class="line">type = Maildir</span><br><span class="line">localfolders = ~/Documents/Mu4e/Gmail</span><br><span class="line"></span><br><span class="line">[Repository Gmail-Remote]</span><br><span class="line">type = Gmail</span><br><span class="line">auth_mechanisms = LOGIN</span><br><span class="line">remotehost = imap.gmail.com</span><br><span class="line">remoteuser = xxxxx@gmail.com</span><br><span class="line">remotepass = xxxxx</span><br><span class="line">ssl = true</span><br><span class="line">sslcacertfile = /etc/ssl/certs/ca-certificates.crt</span><br><span class="line">nametrans = <span class="keyword">lambda</span> foldername: foldername.decode(<span class="string">'imap4-utf-7'</span>).encode(<span class="string">'utf-8'</span>)</span><br><span class="line">folderfilter = <span class="keyword">lambda</span> folder: <span class="keyword">not</span> re.search(<span class="string">'(^Spam$|All)'</span>, folder)</span><br><span class="line">maxconnections = <span class="number">2</span></span><br><span class="line">realdelete = yes</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[Account Foxmail]</span><br><span class="line">localrepository = Foxmail-Local</span><br><span class="line">remoterepository = Foxmail-Remote</span><br><span class="line"></span><br><span class="line">[Repository Foxmail-Local]</span><br><span class="line">type = Maildir</span><br><span class="line">localfolders = ~/Documents/Mu4e/Foxmail</span><br><span class="line"></span><br><span class="line">[Repository Foxmail-Remote]</span><br><span class="line">type = IMAP</span><br><span class="line">remotehost = imap.qq.com</span><br><span class="line">remoteuser = xxxxx@qq.com</span><br><span class="line">remotepass = xxxxx</span><br><span class="line">ssl = true</span><br><span class="line">sslcacertfile = /etc/ssl/certs/ca-certificates.crt</span><br><span class="line">nametrans = <span class="keyword">lambda</span> foldername: foldername.decode(<span class="string">'imap4-utf-7'</span>).encode(<span class="string">'utf-8'</span>)</span><br><span class="line">folderfilter = <span class="keyword">lambda</span> foldername: foldername <span class="keyword">in</span> [<span class="string">'INBOX'</span>,<span class="string">'Drafts'</span>, <span class="string">'Sent Messages'</span>, <span class="string">'Deleted Messages'</span>]</span><br><span class="line">maxconnections = <span class="number">2</span></span><br><span class="line">realdelete = no</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- mode: python2 -*-</span></span><br><span class="line">[general]</span><br><span class="line"><span class="comment"># accounts = Gmail, Foxmail, Lengyue-163</span></span><br><span class="line">accounts = Gmail, Foxmail</span><br><span class="line">maxsyncaccounts = <span class="number">2</span></span><br><span class="line">pythonfile = ~/.offlineimap.py</span><br><span class="line"></span><br><span class="line">[Account Gmail]</span><br><span class="line">localrepository = Gmail-Local</span><br><span class="line">remoterepository = Gmail-Remote</span><br><span class="line"></span><br><span class="line">[Repository Gmail-Local]</span><br><span class="line">type = Maildir</span><br><span class="line">localfolders = ~/Documents/Mu4e/Gmail</span><br><span class="line"></span><br><span class="line">[Repository Gmail-Remote]</span><br><span class="line">type = Gmail</span><br><span class="line">auth_mechanisms = LOGIN</span><br><span class="line">remotehost = imap.gmail.com</span><br><span class="line">remoteuser = xxxxx@gmail.com</span><br><span class="line">remotepass = xxxxx</span><br><span class="line">ssl = true</span><br><span class="line">sslcacertfile = /etc/ssl/certs/ca-certificates.crt</span><br><span class="line">nametrans = <span class="keyword">lambda</span> foldername: foldername.decode(<span class="string">'imap4-utf-7'</span>).encode(<span class="string">'utf-8'</span>)</span><br><span class="line">folderfilter = <span class="keyword">lambda</span> folder: <span class="keyword">not</span> re.search(<span class="string">'(^Spam$|All)'</span>, folder)</span><br><span class="line">maxconnections = <span class="number">2</span></span><br><span class="line">realdelete = yes</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[Account Foxmail]</span><br><span class="line">localrepository = Foxmail-Local</span><br><span class="line">remoterepository = Foxmail-Remote</span><br><span class="line"></span><br><span class="line">[Repository Foxmail-Local]</span><br><span class="line">type = Maildir</span><br><span class="line">localfolders = ~/Documents/Mu4e/Foxmail</span><br><span class="line"></span><br><span class="line">[Repository Foxmail-Remote]</span><br><span class="line">type = IMAP</span><br><span class="line">remotehost = imap.qq.com</span><br><span class="line">remoteuser = xxxxx@qq.com</span><br><span class="line">remotepass = xxxxx</span><br><span class="line">ssl = true</span><br><span class="line">sslcacertfile = /etc/ssl/certs/ca-certificates.crt</span><br><span class="line">nametrans = <span class="keyword">lambda</span> foldername: foldername.decode(<span class="string">'imap4-utf-7'</span>).encode(<span class="string">'utf-8'</span>)</span><br><span class="line">folderfilter = <span class="keyword">lambda</span> foldername: foldername <span class="keyword">in</span> [<span class="string">'INBOX'</span>,<span class="string">'Drafts'</span>, <span class="string">'Sent Messages'</span>, <span class="string">'Deleted Messages'</span>]</span><br><span class="line">maxconnections = <span class="number">2</span></span><br><span class="line">realdelete = no</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 </div>
 
 <p>
@@ -473,9 +473,9 @@
 </div>
 </div>
 
-<div id="outline-container-org840261d" class="outline-3">
-<h3 id="org840261d">用 offlineimap 下载邮件</h3>
-<div class="outline-text-3" id="text-org840261d">
+<div id="outline-container-org9ecd135" class="outline-3">
+<h3 id="org9ecd135">用 offlineimap 下载邮件</h3>
+<div class="outline-text-3" id="text-org9ecd135">
 <p>
 在终端用运行命令 <code>offlineimap</code> ，下载邮件
 </p>
@@ -483,9 +483,9 @@
 </div>
 </div>
 
-<div id="outline-container-org8ce5bfa" class="outline-2">
-<h2 id="org8ce5bfa">Mu4e 设置</h2>
-<div class="outline-text-2" id="text-org8ce5bfa">
+<div id="outline-container-orgda5e9a9" class="outline-2">
+<h2 id="orgda5e9a9">Mu4e 设置</h2>
+<div class="outline-text-2" id="text-orgda5e9a9">
 <p>
 我用 spacemacs，先将 mu4e layer 加入 spaemacs 配置文件中，启用 mu4e layer。
 </p>
@@ -503,13 +503,13 @@
 </p>
 
 <div class="org-src-container">
-<figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line"><span class="list">(<span class="keyword">add-to-load-path</span> <span class="string">"~/.spacemacs.d/package/mu4e"</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="list">(<span class="keyword">require</span> <span class="quoted">'mu4e</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="list">(<span class="keyword">setq</span> mu4e-account-alist</span><br><span class="line">      <span class="quoted">'((<span class="string">"Gmail"</span></span><br><span class="line">         ;; Under each account, set the account-specific variables you want.</span><br><span class="line">         (mu4e-sent-messages-behavior delete)</span><br><span class="line">         (mu4e-sent-folder <span class="string">"/Gmail/[Gmail].Sent Mail"</span>)</span><br><span class="line">         (mu4e-drafts-folder <span class="string">"/Gmail/[Gmail].Drafts"</span>)</span><br><span class="line">         (user-mail-address <span class="string">"xxxxx@gmail.com"</span>)</span><br><span class="line">         (user-full-name <span class="string">"xxxxx"</span>))</span><br><span class="line">        (<span class="string">"Foxmail"</span></span><br><span class="line">         (mu4e-sent-messages-behavior sent)</span><br><span class="line">         (mu4e-sent-folder <span class="string">"/Foxmail/Sent Messages"</span>)</span><br><span class="line">         (mu4e-drafts-folder <span class="string">"/Foxmail/Drafts"</span>)</span><br><span class="line">         (user-mail-address <span class="string">"xxxxx@foxmail.com"</span>)</span><br><span class="line">         (user-full-name <span class="string">"xxxxx"</span>))</span><br><span class="line">        ;; (<span class="string">"Lengyue-163"</span></span><br><span class="line">        ;;  (mu4e-sent-messages-behavior sent)</span><br><span class="line">        ;;  (mu4e-sent-folder <span class="string">"/Lengyue-163/Sent Items"</span>)</span><br><span class="line">        ;;  (mu4e-drafts-folder <span class="string">"/Lengyue-163/Drafts"</span>)</span><br><span class="line">        ;;  (user-mail-address <span class="string">"zanghuahong@163.com"</span>)</span><br><span class="line">        ;;  (user-full-name <span class="string">"Mao Xiaowei"</span>))</span><br><span class="line">       )</span></span><br><span class="line">)</span></span><br><span class="line"></span><br><span class="line"><span class="list">(<span class="keyword">mu4e/mail-account-reset</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">;;; Set up some common mu4e variables</span></span><br><span class="line"><span class="list">(<span class="keyword">setq</span> mu4e-maildir <span class="string">"~/Documents/Mu4e"</span></span><br><span class="line">      mu4e-trash-folder <span class="string">"/Gmail/Trash"</span></span><br><span class="line">      mu4e-refile-folder <span class="string">"/Gmail/Archive"</span></span><br><span class="line">      <span class="comment">;; mu4e-get-mail-command "mbsync -a"</span></span><br><span class="line">      mu4e-update-interval <span class="literal">nil</span></span><br><span class="line">      mu4e-compose-signature-auto-include <span class="literal">nil</span></span><br><span class="line">      mu4e-view-show-images <span class="literal">t</span></span><br><span class="line">      mu4e-view-show-addresses <span class="literal">t</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">;;; Mail directory shortcuts</span></span><br><span class="line"><span class="list">(<span class="keyword">setq</span> mu4e-maildir-shortcuts</span><br><span class="line">      <span class="quoted">'(</span><br><span class="line">        (<span class="string">"/Foxmail/INBOX"</span> . ?f)</span><br><span class="line">        (<span class="string">"/Foxmail/Drafts"</span> . ?d)</span><br><span class="line">        (<span class="string">"/Foxmail/Sent Messages"</span> . ?s)</span><br><span class="line">        (<span class="string">"/Gmail/INBOX"</span> . ?g)</span><br><span class="line">        ;; (<span class="string">"/Gmail/[Gmail].All Mail"</span> . ?a)</span><br><span class="line">        (<span class="string">"/Gmail/[Gmail].Drafts"</span> . ?r)</span><br><span class="line">        (<span class="string">"/Gmail/[Gmail].Sent Mail"</span> . ?m)</span><br><span class="line">        (<span class="string">"/Gmail/[Gmail].Trash"</span> . ?<span class="literal">t</span>)</span><br><span class="line">        ;; (<span class="string">"/Lengyue-163/INBOX"</span> . ?i)</span><br><span class="line">        )</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">;;; Bookmarks</span></span><br><span class="line"><span class="list">(<span class="keyword">setq</span> mu4e-bookmarks</span><br><span class="line">      <span class="quoted">`((<span class="string">"flag:unread AND NOT flag:trashed"</span> <span class="string">"Unread messages"</span> ?u)</span><br><span class="line">        (<span class="string">"date:today..now"</span> <span class="string">"Today's messages"</span> ?<span class="literal">t</span>)</span><br><span class="line">        (<span class="string">"date:7d..now"</span> <span class="string">"Last 7 days"</span> ?w)</span><br><span class="line">        (<span class="string">"mime:image/*"</span> <span class="string">"Messages with images"</span> ?p)</span><br><span class="line">        (,(mapconcat 'identity</span><br><span class="line">                     (mapcar</span><br><span class="line">                      (lambda (maildir)</span><br><span class="line">                        (concat <span class="string">"maildir:"</span> (car maildir)))</span><br><span class="line">                      mu4e-maildir-shortcuts) <span class="string">" OR "</span>)</span><br><span class="line">         <span class="string">"All inboxes"</span> ?i))</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="list">(<span class="keyword">setq</span> mu4e-enable-notifications <span class="literal">t</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="list">(<span class="keyword">with-eval-after-load</span> <span class="quoted">'mu4e-alert</span></span><br><span class="line">  <span class="comment">;; Enable Desktop notifications</span></span><br><span class="line">  <span class="comment">;; (mu4e-alert-set-default-style 'notifications)) ; For linux</span></span><br><span class="line">  <span class="list">(<span class="keyword">mu4e-alert-set-default-style</span> <span class="quoted">'libnotify</span>)</span>)</span>  <span class="comment">; Alternative for linux</span></span><br><span class="line">  <span class="comment">;; (mu4e-alert-set-default-style 'notifier))   ; For Mac OSX (through the</span></span><br><span class="line">                                        <span class="comment">; terminal notifier app)</span></span><br><span class="line"><span class="comment">;; (mu4e-alert-set-default-style 'growl))      ; Alternative for Mac OSX</span></span><br><span class="line"></span><br><span class="line"><span class="list">(<span class="keyword">setq</span> mu4e-enable-mode-line <span class="literal">t</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="list">(<span class="keyword">setq</span> mu4e-get-mail-command <span class="string">"offlineimap"</span>)</span></span><br><span class="line"><span class="comment">;; Fetch mail in 60 sec interval</span></span><br><span class="line"><span class="list">(<span class="keyword">setq</span> mu4e-update-interval <span class="number">60</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="list">(<span class="keyword">require</span> <span class="quoted">'mu4e-contrib</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">setq</span> mu4e-html2text-command <span class="quoted">'mu4e-shr2text</span>)</span></span><br><span class="line"><span class="comment">;; try to emulate some of the eww key-bindings</span></span><br><span class="line"><span class="list">(<span class="keyword">add-hook</span> <span class="quoted">'mu4e-view-mode-hook</span></span><br><span class="line">          <span class="list">(<span class="keyword">lambda</span> <span class="list">()</span></span><br><span class="line">            <span class="list">(<span class="keyword">local-set-key</span> <span class="list">(<span class="keyword">kbd</span> <span class="string">"&amp;lt;tab&amp;gt;"</span>)</span> <span class="quoted">'shr-next-link</span>)</span></span><br><span class="line">            <span class="list">(<span class="keyword">local-set-key</span> <span class="list">(<span class="keyword">kbd</span> <span class="string">"&amp;lt;backtab&amp;gt;"</span>)</span> <span class="quoted">'shr-previous-link</span>)</span>)</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">;; something about ourselves</span></span><br><span class="line"><span class="list">(<span class="keyword">require</span> <span class="quoted">'smtpmail</span>)</span>  </span><br><span class="line"><span class="list">(<span class="keyword">setq</span> user-mail-address <span class="string">"xxxxx@foxmail.com"</span>  </span><br><span class="line">      user-full-name <span class="string">"xxxxx"</span></span><br><span class="line">      smtpmail-stream-type <span class="quoted">'starttls</span></span><br><span class="line">      starttls-use-gnutls <span class="literal">t</span></span><br><span class="line">      mu4e-compose-signature  </span><br><span class="line">      <span class="list">(<span class="keyword">concat</span>  </span><br><span class="line">       <span class="string">"xxxx\n"</span>  </span><br><span class="line">       <span class="string">"Blog: http://lengyueyang.github.io\n"</span>  </span><br><span class="line">       <span class="string">"\n"</span>)</span>  </span><br><span class="line">      mu4e-compose-signature-auto-include <span class="literal">t</span>  </span><br><span class="line">      )</span>  </span><br><span class="line"></span><br><span class="line"><span class="list">(<span class="keyword">setq</span> send-mail-function            <span class="quoted">'smtpmail-send-it</span></span><br><span class="line">      message-send-mail-function    <span class="quoted">'smtpmail-send-it</span></span><br><span class="line">      smtpmail-auth-credentials     <span class="list">(<span class="keyword">expand-file-name</span> <span class="string">"~/.authinfo"</span>)</span></span><br><span class="line">      smtpmail-stream-type          <span class="quoted">'tls</span></span><br><span class="line">      smtpmail-smtp-server          <span class="string">"smtp.qq.com"</span></span><br><span class="line">      smtpmail-smtp-service         <span class="number">465</span></span><br><span class="line">      smtpmail-smtp-user <span class="string">"xxxxx@qq.com"</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="list">(<span class="keyword">setq</span> message-kill-buffer-on-exit <span class="literal">t</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">;; save attachment to my desktop (this can also be a function)  </span></span><br><span class="line"><span class="list">(<span class="keyword">setq</span> mu4e-attachment-dir <span class="string">"/home/lengyue/Documents/Mu4e/Attachment"</span>)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line"><span class="list">(<span class="keyword">add-to-load-path</span> <span class="string">"~/.spacemacs.d/package/mu4e"</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="list">(<span class="keyword">require</span> <span class="quoted">'mu4e</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="list">(<span class="keyword">setq</span> mu4e-account-alist</span><br><span class="line">      <span class="quoted">'((<span class="string">"Gmail"</span></span><br><span class="line">         ;; Under each account, set the account-specific variables you want.</span><br><span class="line">         (mu4e-sent-messages-behavior delete)</span><br><span class="line">         (mu4e-sent-folder <span class="string">"/Gmail/[Gmail].Sent Mail"</span>)</span><br><span class="line">         (mu4e-drafts-folder <span class="string">"/Gmail/[Gmail].Drafts"</span>)</span><br><span class="line">         (user-mail-address <span class="string">"xxxxx@gmail.com"</span>)</span><br><span class="line">         (user-full-name <span class="string">"xxxxx"</span>))</span><br><span class="line">        (<span class="string">"Foxmail"</span></span><br><span class="line">         (mu4e-sent-messages-behavior sent)</span><br><span class="line">         (mu4e-sent-folder <span class="string">"/Foxmail/Sent Messages"</span>)</span><br><span class="line">         (mu4e-drafts-folder <span class="string">"/Foxmail/Drafts"</span>)</span><br><span class="line">         (user-mail-address <span class="string">"xxxxx@foxmail.com"</span>)</span><br><span class="line">         (user-full-name <span class="string">"xxxxx"</span>))</span><br><span class="line">        ;; (<span class="string">"Lengyue-163"</span></span><br><span class="line">        ;;  (mu4e-sent-messages-behavior sent)</span><br><span class="line">        ;;  (mu4e-sent-folder <span class="string">"/Lengyue-163/Sent Items"</span>)</span><br><span class="line">        ;;  (mu4e-drafts-folder <span class="string">"/Lengyue-163/Drafts"</span>)</span><br><span class="line">        ;;  (user-mail-address <span class="string">"zanghuahong@163.com"</span>)</span><br><span class="line">        ;;  (user-full-name <span class="string">"Mao Xiaowei"</span>))</span><br><span class="line">       )</span></span><br><span class="line">)</span></span><br><span class="line"></span><br><span class="line"><span class="list">(<span class="keyword">mu4e/mail-account-reset</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">;;; Set up some common mu4e variables</span></span><br><span class="line"><span class="list">(<span class="keyword">setq</span> mu4e-maildir <span class="string">"~/Documents/Mu4e"</span></span><br><span class="line">      mu4e-trash-folder <span class="string">"/Gmail/Trash"</span></span><br><span class="line">      mu4e-refile-folder <span class="string">"/Gmail/Archive"</span></span><br><span class="line">      <span class="comment">;; mu4e-get-mail-command "mbsync -a"</span></span><br><span class="line">      mu4e-update-interval <span class="literal">nil</span></span><br><span class="line">      mu4e-compose-signature-auto-include <span class="literal">nil</span></span><br><span class="line">      mu4e-view-show-images <span class="literal">t</span></span><br><span class="line">      mu4e-view-show-addresses <span class="literal">t</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">;;; Mail directory shortcuts</span></span><br><span class="line"><span class="list">(<span class="keyword">setq</span> mu4e-maildir-shortcuts</span><br><span class="line">      <span class="quoted">'(</span><br><span class="line">        (<span class="string">"/Foxmail/INBOX"</span> . ?f)</span><br><span class="line">        (<span class="string">"/Foxmail/Drafts"</span> . ?d)</span><br><span class="line">        (<span class="string">"/Foxmail/Sent Messages"</span> . ?s)</span><br><span class="line">        (<span class="string">"/Gmail/INBOX"</span> . ?g)</span><br><span class="line">        ;; (<span class="string">"/Gmail/[Gmail].All Mail"</span> . ?a)</span><br><span class="line">        (<span class="string">"/Gmail/[Gmail].Drafts"</span> . ?r)</span><br><span class="line">        (<span class="string">"/Gmail/[Gmail].Sent Mail"</span> . ?m)</span><br><span class="line">        (<span class="string">"/Gmail/[Gmail].Trash"</span> . ?<span class="literal">t</span>)</span><br><span class="line">        ;; (<span class="string">"/Lengyue-163/INBOX"</span> . ?i)</span><br><span class="line">        )</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">;;; Bookmarks</span></span><br><span class="line"><span class="list">(<span class="keyword">setq</span> mu4e-bookmarks</span><br><span class="line">      <span class="quoted">`((<span class="string">"flag:unread AND NOT flag:trashed"</span> <span class="string">"Unread messages"</span> ?u)</span><br><span class="line">        (<span class="string">"date:today..now"</span> <span class="string">"Today's messages"</span> ?<span class="literal">t</span>)</span><br><span class="line">        (<span class="string">"date:7d..now"</span> <span class="string">"Last 7 days"</span> ?w)</span><br><span class="line">        (<span class="string">"mime:image/*"</span> <span class="string">"Messages with images"</span> ?p)</span><br><span class="line">        (,(mapconcat 'identity</span><br><span class="line">                     (mapcar</span><br><span class="line">                      (lambda (maildir)</span><br><span class="line">                        (concat <span class="string">"maildir:"</span> (car maildir)))</span><br><span class="line">                      mu4e-maildir-shortcuts) <span class="string">" OR "</span>)</span><br><span class="line">         <span class="string">"All inboxes"</span> ?i))</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="list">(<span class="keyword">setq</span> mu4e-enable-notifications <span class="literal">t</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="list">(<span class="keyword">with-eval-after-load</span> <span class="quoted">'mu4e-alert</span></span><br><span class="line">  <span class="comment">;; Enable Desktop notifications</span></span><br><span class="line">  <span class="comment">;; (mu4e-alert-set-default-style 'notifications)) ; For linux</span></span><br><span class="line">  <span class="list">(<span class="keyword">mu4e-alert-set-default-style</span> <span class="quoted">'libnotify</span>)</span>)</span>  <span class="comment">; Alternative for linux</span></span><br><span class="line">  <span class="comment">;; (mu4e-alert-set-default-style 'notifier))   ; For Mac OSX (through the</span></span><br><span class="line">                                        <span class="comment">; terminal notifier app)</span></span><br><span class="line"><span class="comment">;; (mu4e-alert-set-default-style 'growl))      ; Alternative for Mac OSX</span></span><br><span class="line"></span><br><span class="line"><span class="list">(<span class="keyword">setq</span> mu4e-enable-mode-line <span class="literal">t</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="list">(<span class="keyword">setq</span> mu4e-get-mail-command <span class="string">"offlineimap"</span>)</span></span><br><span class="line"><span class="comment">;; Fetch mail in 60 sec interval</span></span><br><span class="line"><span class="list">(<span class="keyword">setq</span> mu4e-update-interval <span class="number">60</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="list">(<span class="keyword">require</span> <span class="quoted">'mu4e-contrib</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">setq</span> mu4e-html2text-command <span class="quoted">'mu4e-shr2text</span>)</span></span><br><span class="line"><span class="comment">;; try to emulate some of the eww key-bindings</span></span><br><span class="line"><span class="list">(<span class="keyword">add-hook</span> <span class="quoted">'mu4e-view-mode-hook</span></span><br><span class="line">          <span class="list">(<span class="keyword">lambda</span> <span class="list">()</span></span><br><span class="line">            <span class="list">(<span class="keyword">local-set-key</span> <span class="list">(<span class="keyword">kbd</span> <span class="string">"&amp;lt;tab&amp;gt;"</span>)</span> <span class="quoted">'shr-next-link</span>)</span></span><br><span class="line">            <span class="list">(<span class="keyword">local-set-key</span> <span class="list">(<span class="keyword">kbd</span> <span class="string">"&amp;lt;backtab&amp;gt;"</span>)</span> <span class="quoted">'shr-previous-link</span>)</span>)</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">;; something about ourselves</span></span><br><span class="line"><span class="list">(<span class="keyword">require</span> <span class="quoted">'smtpmail</span>)</span>  </span><br><span class="line"><span class="list">(<span class="keyword">setq</span> user-mail-address <span class="string">"xxxxx@foxmail.com"</span>  </span><br><span class="line">      user-full-name <span class="string">"xxxxx"</span></span><br><span class="line">      smtpmail-stream-type <span class="quoted">'starttls</span></span><br><span class="line">      starttls-use-gnutls <span class="literal">t</span></span><br><span class="line">      mu4e-compose-signature  </span><br><span class="line">      <span class="list">(<span class="keyword">concat</span>  </span><br><span class="line">       <span class="string">"xxxx\n"</span>  </span><br><span class="line">       <span class="string">"Blog: http://lengyueyang.github.io\n"</span>  </span><br><span class="line">       <span class="string">"\n"</span>)</span>  </span><br><span class="line">      mu4e-compose-signature-auto-include <span class="literal">t</span>  </span><br><span class="line">      )</span>  </span><br><span class="line"></span><br><span class="line"><span class="list">(<span class="keyword">setq</span> send-mail-function            <span class="quoted">'smtpmail-send-it</span></span><br><span class="line">      message-send-mail-function    <span class="quoted">'smtpmail-send-it</span></span><br><span class="line">      smtpmail-auth-credentials     <span class="list">(<span class="keyword">expand-file-name</span> <span class="string">"~/.authinfo"</span>)</span></span><br><span class="line">      smtpmail-stream-type          <span class="quoted">'tls</span></span><br><span class="line">      smtpmail-smtp-server          <span class="string">"smtp.qq.com"</span></span><br><span class="line">      smtpmail-smtp-service         <span class="number">465</span></span><br><span class="line">      smtpmail-smtp-user <span class="string">"xxxxx@qq.com"</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="list">(<span class="keyword">setq</span> message-kill-buffer-on-exit <span class="literal">t</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">;; save attachment to my desktop (this can also be a function)  </span></span><br><span class="line"><span class="list">(<span class="keyword">setq</span> mu4e-attachment-dir <span class="string">"/home/lengyue/Documents/Mu4e/Attachment"</span>)</span>  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
 </div>
 </div>
 
-<div id="outline-container-org30ea2ab" class="outline-3">
-<h3 id="org30ea2ab">几点说明：</h3>
-<div class="outline-text-3" id="text-org30ea2ab">
+<div id="outline-container-org55a776e" class="outline-3">
+<h3 id="org55a776e">几点说明：</h3>
+<div class="outline-text-3" id="text-org55a776e">
 <p>
 mu 更新后，发现系统不能自己找到 mu4e 文件夹，因此手动链接
 <code>(add-to-load-path "~/.spacemacs.d/package/mu4e")</code>
@@ -522,18 +522,18 @@ contact 内容是自己的邮件签名
 </div>
 </div>
 
-<div id="outline-container-org2e0a71d" class="outline-2">
-<h2 id="org2e0a71d">Mu4e 简单使用小结</h2>
-<div class="outline-text-2" id="text-org2e0a71d">
-</div><div id="outline-container-orgcff9c13" class="outline-3">
-<h3 id="orgcff9c13">Keybindings to remember of Mu4e</h3>
-<div class="outline-text-3" id="text-orgcff9c13">
-</div><div id="outline-container-orgd0e5022" class="outline-4">
-<h4 id="orgd0e5022"><code>offlineimap</code> and <code>mu index --maildir=~/Documents/Mu4e</code></h4>
+<div id="outline-container-org052c5a8" class="outline-2">
+<h2 id="org052c5a8">Mu4e 简单使用小结</h2>
+<div class="outline-text-2" id="text-org052c5a8">
+</div><div id="outline-container-orgaae806b" class="outline-3">
+<h3 id="orgaae806b">Keybindings to remember of Mu4e</h3>
+<div class="outline-text-3" id="text-orgaae806b">
+</div><div id="outline-container-org1d3cbd4" class="outline-4">
+<h4 id="org1d3cbd4"><code>offlineimap</code> and <code>mu index --maildir=~/Documents/Mu4e</code></h4>
 </div>
-<div id="outline-container-orgd694130" class="outline-4">
-<h4 id="orgd694130">Main view-Default bindings</h4>
-<div class="outline-text-4" id="text-orgd694130">
+<div id="outline-container-orgc1687d2" class="outline-4">
+<h4 id="orgc1687d2">Main view-Default bindings</h4>
+<div class="outline-text-4" id="text-orgc1687d2">
 <p>
 R: Reply      s: search            .: raw view (toggle)
 </p>
@@ -549,9 +549,9 @@ E: Edit       B: edit bookmark-search
 </div>
 </div>
 
-<div id="outline-container-org2916d38" class="outline-4">
-<h4 id="org2916d38">Headers menu in the emacs menu bar</h4>
-<div class="outline-text-4" id="text-org2916d38">
+<div id="outline-container-org03ee26d" class="outline-4">
+<h4 id="org03ee26d">Headers menu in the emacs menu bar</h4>
+<div class="outline-text-4" id="text-org03ee26d">
 <p>
 key          description
 </p>
@@ -743,9 +743,9 @@ q            leave the headers buffer
 </div>
 
 
-<div id="outline-container-org2258dec" class="outline-4">
-<h4 id="org2258dec">Message View</h4>
-<div class="outline-text-4" id="text-org2258dec">
+<div id="outline-container-org1ddbd95" class="outline-4">
+<h4 id="org1ddbd95">Message View</h4>
+<div class="outline-text-4" id="text-org1ddbd95">
 <p>
 key          description
 </p>
@@ -984,9 +984,9 @@ q            leave the message view
 </div>
 </div>
 
-<div id="outline-container-org9ddfef2" class="outline-4">
-<h4 id="org9ddfef2">Attachment actions</h4>
-<div class="outline-text-4" id="text-org9ddfef2">
+<div id="outline-container-orge24f170" class="outline-4">
+<h4 id="orge24f170">Attachment actions</h4>
+<div class="outline-text-4" id="text-orge24f170">
 <p>
 Similarly, there is mu4e-view-attachment-action (A) for actions on attachments, which you can specify with mu4e-view-attachment-actions.
 </p>
@@ -1003,9 +1003,9 @@ emacs (e): open the attachment in your running emacs. For example, if you receiv
 </div>
 </div>
 
-<div id="outline-container-org414b79b" class="outline-4">
-<h4 id="org414b79b">Editor view</h4>
-<div class="outline-text-4" id="text-org414b79b">
+<div id="outline-container-orgf842b3d" class="outline-4">
+<h4 id="orgf842b3d">Editor view</h4>
+<div class="outline-text-4" id="text-orgf842b3d">
 <p>
 key          description
 </p>
@@ -1037,9 +1037,9 @@ C-S-u        update mail &amp; reindex
 </div>
 </div>
 
-<div id="outline-container-orgc0efc78" class="outline-4">
-<h4 id="orgc0efc78">What to mark for</h4>
-<div class="outline-text-4" id="text-orgc0efc78">
+<div id="outline-container-orgf99a946" class="outline-4">
+<h4 id="orgf99a946">What to mark for</h4>
+<div class="outline-text-4" id="text-orgf99a946">
 <p>
 mu4e supports a number of marks:
 </p>
@@ -1103,9 +1103,9 @@ action        a           | apply some action
 </div>
 </div>
 
-<div id="outline-container-orgf8c09b4" class="outline-3">
-<h3 id="orgf8c09b4">其他</h3>
-<div class="outline-text-3" id="text-orgf8c09b4">
+<div id="outline-container-orgefa95ae" class="outline-3">
+<h3 id="orgefa95ae">其他</h3>
+<div class="outline-text-3" id="text-orgefa95ae">
 <p>
 若参考配置有问题，请移步官网或后面参考资料，或邮件联系我，随时欢迎 😍。
 </p>
@@ -1115,9 +1115,9 @@ action        a           | apply some action
 
 
 
-<div id="outline-container-org9686970" class="outline-2">
-<h2 id="org9686970">参考资料</h2>
-<div class="outline-text-2" id="text-org9686970">
+<div id="outline-container-org7efc5e6" class="outline-2">
+<h2 id="org7efc5e6">参考资料</h2>
+<div class="outline-text-2" id="text-org7efc5e6">
 <ul class="org-ul">
 <li><a href="https://github.com/larstvei/dot-emacs" target="_blank" rel="external">larstvei/dot-emacs: My Emacs configurations written in Org mode</a></li>
 <li><a href="http://wenshanren.org/?p=111" target="_blank" rel="external">mu4e: an E-mail Client for Emacs | 肉山博客 (Wenshan's Blog)</a></li>
@@ -1135,7 +1135,7 @@ action        a           | apply some action
 </div>
 </div>
 
-Last Updated 2017-04-08 Sat 11:28 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.1.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 9.0.5)
+Last Updated 2017-04-08 Sat 11:28 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.2.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 9.0.7)
 
       
     </div>
@@ -1279,7 +1279,7 @@ Last Updated 2017-04-08 Sat 11:28 by lengyueyang<br>Render by <a href="https://g
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1412,7 +1412,7 @@ Last Updated 2017-04-08 Sat 11:28 by lengyueyang<br>Render by <a href="https://g
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#orgd9ca4c9"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orgc6769f1"><span class="nav-number">2.</span> <span class="nav-text">offlineimap 设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#orgfe41760"><span class="nav-number">2.1.</span> <span class="nav-text">安装 offlineimap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orga7dcdcf"><span class="nav-number">2.2.</span> <span class="nav-text">配置 offlineimap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org840261d"><span class="nav-number">2.3.</span> <span class="nav-text">用 offlineimap 下载邮件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org8ce5bfa"><span class="nav-number">3.</span> <span class="nav-text">Mu4e 设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org30ea2ab"><span class="nav-number">3.1.</span> <span class="nav-text">几点说明：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org2e0a71d"><span class="nav-number">4.</span> <span class="nav-text">Mu4e 简单使用小结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#orgcff9c13"><span class="nav-number">4.1.</span> <span class="nav-text">Keybindings to remember of Mu4e</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#orgd0e5022"><span class="nav-number">4.1.1.</span> <span class="nav-text">offlineimap and mu index --maildir=~/Documents/Mu4e</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#orgd694130"><span class="nav-number">4.1.2.</span> <span class="nav-text">Main view-Default bindings</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#org2916d38"><span class="nav-number">4.1.3.</span> <span class="nav-text">Headers menu in the emacs menu bar</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#org2258dec"><span class="nav-number">4.1.4.</span> <span class="nav-text">Message View</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#org9ddfef2"><span class="nav-number">4.1.5.</span> <span class="nav-text">Attachment actions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#org414b79b"><span class="nav-number">4.1.6.</span> <span class="nav-text">Editor view</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#orgc0efc78"><span class="nav-number">4.1.7.</span> <span class="nav-text">What to mark for</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orgf8c09b4"><span class="nav-number">4.2.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org9686970"><span class="nav-number">5.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#org4110d0c"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org5258205"><span class="nav-number">2.</span> <span class="nav-text">offlineimap 设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org6bbe33b"><span class="nav-number">2.1.</span> <span class="nav-text">安装 offlineimap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orgfa733fc"><span class="nav-number">2.2.</span> <span class="nav-text">配置 offlineimap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org9ecd135"><span class="nav-number">2.3.</span> <span class="nav-text">用 offlineimap 下载邮件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orgda5e9a9"><span class="nav-number">3.</span> <span class="nav-text">Mu4e 设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org55a776e"><span class="nav-number">3.1.</span> <span class="nav-text">几点说明：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org052c5a8"><span class="nav-number">4.</span> <span class="nav-text">Mu4e 简单使用小结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#orgaae806b"><span class="nav-number">4.1.</span> <span class="nav-text">Keybindings to remember of Mu4e</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#org1d3cbd4"><span class="nav-number">4.1.1.</span> <span class="nav-text">offlineimap and mu index --maildir=~/Documents/Mu4e</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#orgc1687d2"><span class="nav-number">4.1.2.</span> <span class="nav-text">Main view-Default bindings</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#org03ee26d"><span class="nav-number">4.1.3.</span> <span class="nav-text">Headers menu in the emacs menu bar</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#org1ddbd95"><span class="nav-number">4.1.4.</span> <span class="nav-text">Message View</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#orge24f170"><span class="nav-number">4.1.5.</span> <span class="nav-text">Attachment actions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#orgf842b3d"><span class="nav-number">4.1.6.</span> <span class="nav-text">Editor view</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#orgf99a946"><span class="nav-number">4.1.7.</span> <span class="nav-text">What to mark for</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orgefa95ae"><span class="nav-number">4.2.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org7efc5e6"><span class="nav-number">5.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>

@@ -407,12 +407,12 @@
       
         
 
-<div id="outline-container-org2b32086" class="outline-2">
-<h2 id="org2b32086">Archlinux install [安装篇]</h2>
-<div class="outline-text-2" id="text-org2b32086">
-</div><div id="outline-container-org9869f25" class="outline-3">
-<h3 id="org9869f25">Prepare for the installation</h3>
-<div class="outline-text-3" id="text-org9869f25">
+<div id="outline-container-orge83fafb" class="outline-2">
+<h2 id="orge83fafb">Archlinux install [安装篇]</h2>
+<div class="outline-text-2" id="text-orge83fafb">
+</div><div id="outline-container-orgdf9a074" class="outline-3">
+<h3 id="orgdf9a074">Prepare for the installation</h3>
+<div class="outline-text-3" id="text-orgdf9a074">
 <ul class="org-ul">
 <li>Prepare the ISO of archlinux, and brasero it into USB flash disk</li>
 
@@ -441,9 +441,9 @@
 </div>
 
 
-<div id="outline-container-org3fa52c5" class="outline-3">
-<h3 id="org3fa52c5">Basic install</h3>
-<div class="outline-text-3" id="text-org3fa52c5">
+<div id="outline-container-org71e1b00" class="outline-3">
+<h3 id="org71e1b00">Basic install</h3>
+<div class="outline-text-3" id="text-org71e1b00">
 <ul class="org-ul">
 <li>Mount the partition</li>
 </ul>
@@ -494,9 +494,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org13e6890" class="outline-3">
-<h3 id="org13e6890">Software install</h3>
-<div class="outline-text-3" id="text-org13e6890">
+<div id="outline-container-org08f9bc1" class="outline-3">
+<h3 id="org08f9bc1">Software install</h3>
+<div class="outline-text-3" id="text-org08f9bc1">
 <ul class="org-ul">
 <li>Yaourt installation</li>
 </ul>
@@ -518,66 +518,66 @@
 </div>
 </div>
 
-<div id="outline-container-orga137f6e" class="outline-2">
-<h2 id="orga137f6e">Configuration [配置篇]</h2>
-<div class="outline-text-2" id="text-orga137f6e">
-</div><div id="outline-container-orgdbf033b" class="outline-3">
-<h3 id="orgdbf033b">Fcitx</h3>
-<div class="outline-text-3" id="text-orgdbf033b">
+<div id="outline-container-org456b5fd" class="outline-2">
+<h2 id="org456b5fd">Configuration [配置篇]</h2>
+<div class="outline-text-2" id="text-org456b5fd">
+</div><div id="outline-container-org242ce6a" class="outline-3">
+<h3 id="org242ce6a">Fcitx</h3>
+<div class="outline-text-3" id="text-org242ce6a">
 <div class="org-src-container">
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo pacman -S fcitx fcitx-im fcitx-configtool ibus</span><br><span class="line">sudo cp /usr/bin/ibus-daemon /usr/bin/ibus-daemon.cp</span><br><span class="line">sudo rm -rf /usr/bin/ibus-daemon</span><br><span class="line">sudo gsettings <span class="built_in">set</span> org.gnome.settings-daemon.plugins.keyboard active <span class="literal">false</span></span><br><span class="line">sudo nano -w .xprofile add</span><br><span class="line"><span class="built_in">export</span> GTK_IM_MODULE=fcitx</span><br><span class="line"><span class="built_in">export</span> QT_IM_MODULE=fcitx</span><br><span class="line"><span class="built_in">export</span> XMODIFIERS=<span class="string">"@im=fcitx"</span></span><br><span class="line">yaourt fcitx-googlepinyin fcitx-sogoupinyin</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org65b6176" class="outline-3">
-<h3 id="org65b6176">Web to hidden</h3>
-<div class="outline-text-3" id="text-org65b6176">
+<div id="outline-container-org63b0c96" class="outline-3">
+<h3 id="org63b0c96">Web to hidden</h3>
+<div class="outline-text-3" id="text-org63b0c96">
 <div class="org-src-container">
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">yaourt lantern</span><br><span class="line">Add new firefox autoproxy server</span><br><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span> <span class="number">8787</span></span><br><span class="line">sudo systemctl <span class="built_in">enable</span> lantern.service</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org2e079bf" class="outline-3">
-<h3 id="org2e079bf">Startdict</h3>
-<div class="outline-text-3" id="text-org2e079bf">
+<div id="outline-container-org1a4aea6" class="outline-3">
+<h3 id="org1a4aea6">Startdict</h3>
+<div class="outline-text-3" id="text-org1a4aea6">
 <div class="org-src-container">
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo pacman -S startdict</span><br><span class="line">cp dict /usr/share/stardict/dic</span><br><span class="line">cp WyabdcRealPeopleTTS /usr/share/WyabdcRealPeopleTTS</span><br><span class="line">cp startdict config /home</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org9d66b4f" class="outline-3">
-<h3 id="org9d66b4f">Samba</h3>
-<div class="outline-text-3" id="text-org9d66b4f">
+<div id="outline-container-org23ce699" class="outline-3">
+<h3 id="org23ce699">Samba</h3>
+<div class="outline-text-3" id="text-org23ce699">
 <div class="org-src-container">
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">cp /etc/samba/smb.conf.default /etc/samba/smb.conf</span><br><span class="line">sudo systemctl <span class="built_in">enable</span>/start smbd.service nmbd.service</span><br><span class="line">sudo systemctl start/<span class="built_in">enable</span> cups</span><br><span class="line">add printer</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org821fd4a" class="outline-3">
-<h3 id="org821fd4a">Bumblebee</h3>
-<div class="outline-text-3" id="text-org821fd4a">
+<div id="outline-container-org832abc4" class="outline-3">
+<h3 id="org832abc4">Bumblebee</h3>
+<div class="outline-text-3" id="text-org832abc4">
 <div class="org-src-container">
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo pacman -S bumblebee mesa nvidia nvidia-settings xf86-video-intel</span><br><span class="line">sudo gpasswd <span class="operator">-a</span> user bumblebee</span><br><span class="line">sudo systemctl <span class="built_in">enable</span> bumblebeed.service</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org682bda2" class="outline-3">
-<h3 id="org682bda2">Firefox</h3>
-<div class="outline-text-3" id="text-org682bda2">
+<div id="outline-container-org8518723" class="outline-3">
+<h3 id="org8518723">Firefox</h3>
+<div class="outline-text-3" id="text-org8518723">
 <div class="org-src-container">
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">cp config</span><br><span class="line">rm .mozilla/Firefox/<span class="number">9999</span>/.parentlock</span><br><span class="line">(bookmaker add-ons: noscript autopager autoproxy stumbleupon deafaultzoom xnot instantfox flashlock videodownloadhelper greasemonkey allsidebar downloadstatbar zotero firegesture)</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org88e2af4" class="outline-3">
-<h3 id="org88e2af4">Dnsmasq: maybe out of data</h3>
-<div class="outline-text-3" id="text-org88e2af4">
+<div id="outline-container-org862eb8b" class="outline-3">
+<h3 id="org862eb8b">Dnsmasq: maybe out of data</h3>
+<div class="outline-text-3" id="text-org862eb8b">
 <div class="org-src-container">
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo gedit /etc/NetworkManager/dispatcher.d/localhost-prepend</span><br><span class="line">add</span><br><span class="line"><span class="shebang">#!/bin/bash                                       </span></span><br><span class="line"><span class="comment"># Prepend localhost to resolv.conf for dnsmasq</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [[ ! $(grep <span class="number">127.0</span>.<span class="number">0.1</span> /etc/resolv.conf) ]]; <span class="keyword">then</span></span><br><span class="line">  sed -i <span class="string">'1s|^|nameserver 127.0.0.1\n|'</span> /etc/resolv.conf</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line">sudo chmod +x /etc/NetworkManager/dispatcher.d/localhost-prepend</span><br></pre></td></tr></table></figure>
 </div>
@@ -585,39 +585,39 @@
 </div>
 </div>
 
-<div id="outline-container-org890010d" class="outline-2">
-<h2 id="org890010d">Questions [问题篇]</h2>
-<div class="outline-text-2" id="text-org890010d">
-</div><div id="outline-container-org776b97f" class="outline-3">
-<h3 id="org776b97f">GNOME3.6 文件夹默认打开方式关联问题</h3>
-<div class="outline-text-3" id="text-org776b97f">
+<div id="outline-container-org66cffc3" class="outline-2">
+<h2 id="org66cffc3">Questions [问题篇]</h2>
+<div class="outline-text-2" id="text-org66cffc3">
+</div><div id="outline-container-orgda98a59" class="outline-3">
+<h3 id="orgda98a59">GNOME3.6 文件夹默认打开方式关联问题</h3>
+<div class="outline-text-3" id="text-orgda98a59">
 <div class="org-src-container">
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">Edit /usr/share/applications/audacious.desktop </span><br><span class="line">and remove following line:</span><br><span class="line">MimeType=inode/directory;</span><br><span class="line">sudo nano /usr/share/applications/mimeinfo.cache</span><br><span class="line">sudo gedit /usr/share/applications/mimeinfo.cache</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org2b4a5f4" class="outline-3">
-<h3 id="org2b4a5f4">Add module auto</h3>
-<div class="outline-text-3" id="text-org2b4a5f4">
+<div id="outline-container-org61a9bbf" class="outline-3">
+<h3 id="org61a9bbf">Add module auto</h3>
+<div class="outline-text-3" id="text-org61a9bbf">
 <div class="org-src-container">
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo gedit /etc/modules-load.d/virtio-net.conf</span><br><span class="line"><span class="comment">#Load 'virtio-net.ko' at boot.</span></span><br><span class="line">virtio-net</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgf64fe45" class="outline-3">
-<h3 id="orgf64fe45">LIWORD start fonts problem</h3>
-<div class="outline-text-3" id="text-orgf64fe45">
+<div id="outline-container-orgc816b40" class="outline-3">
+<h3 id="orgc816b40">LIWORD start fonts problem</h3>
+<div class="outline-text-3" id="text-orgc816b40">
 <div class="org-src-container">
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo gedit /etc/fonts/conf.d/<span class="number">65</span>-nonlatin.conf</span><br><span class="line">save </span><br><span class="line"><span class="keyword">then</span> open LIWORD is ok.</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org409bcbc" class="outline-3">
-<h3 id="org409bcbc">Emacs fcitx</h3>
-<div class="outline-text-3" id="text-org409bcbc">
+<div id="outline-container-orgd085211" class="outline-3">
+<h3 id="orgd085211">Emacs fcitx</h3>
+<div class="outline-text-3" id="text-orgd085211">
 <div class="org-src-container">
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo nano -w .bashrc add</span><br><span class="line"><span class="built_in">export</span> GTK_IM_MODULE=fcitx</span><br><span class="line"><span class="built_in">export</span> QT_IM_MODULE=fcitx</span><br><span class="line"><span class="built_in">export</span> XMODIFIERS=<span class="string">"@im=fcitx"</span></span><br></pre></td></tr></table></figure>
 </div>
@@ -625,7 +625,7 @@
 </div>
 </div>
 
-Last Updated 2017-04-08 Sat 11:26 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.1.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 9.0.5)
+Last Updated 2017-04-08 Sat 11:26 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.2.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 9.0.7)
 
       
     </div>
@@ -767,7 +767,7 @@ Last Updated 2017-04-08 Sat 11:26 by lengyueyang<br>Render by <a href="https://g
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -900,7 +900,7 @@ Last Updated 2017-04-08 Sat 11:26 by lengyueyang<br>Render by <a href="https://g
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#org2b32086"><span class="nav-number">1.</span> <span class="nav-text">Archlinux install [安装篇]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org9869f25"><span class="nav-number">1.1.</span> <span class="nav-text">Prepare for the installation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org3fa52c5"><span class="nav-number">1.2.</span> <span class="nav-text">Basic install</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org13e6890"><span class="nav-number">1.3.</span> <span class="nav-text">Software install</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orga137f6e"><span class="nav-number">2.</span> <span class="nav-text">Configuration [配置篇]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#orgdbf033b"><span class="nav-number">2.1.</span> <span class="nav-text">Fcitx</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org65b6176"><span class="nav-number">2.2.</span> <span class="nav-text">Web to hidden</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org2e079bf"><span class="nav-number">2.3.</span> <span class="nav-text">Startdict</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org9d66b4f"><span class="nav-number">2.4.</span> <span class="nav-text">Samba</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org821fd4a"><span class="nav-number">2.5.</span> <span class="nav-text">Bumblebee</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org682bda2"><span class="nav-number">2.6.</span> <span class="nav-text">Firefox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org88e2af4"><span class="nav-number">2.7.</span> <span class="nav-text">Dnsmasq: maybe out of data</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org890010d"><span class="nav-number">3.</span> <span class="nav-text">Questions [问题篇]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org776b97f"><span class="nav-number">3.1.</span> <span class="nav-text">GNOME3.6 文件夹默认打开方式关联问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org2b4a5f4"><span class="nav-number">3.2.</span> <span class="nav-text">Add module auto</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orgf64fe45"><span class="nav-number">3.3.</span> <span class="nav-text">LIWORD start fonts problem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org409bcbc"><span class="nav-number">3.4.</span> <span class="nav-text">Emacs fcitx</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#orge83fafb"><span class="nav-number">1.</span> <span class="nav-text">Archlinux install [安装篇]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#orgdf9a074"><span class="nav-number">1.1.</span> <span class="nav-text">Prepare for the installation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org71e1b00"><span class="nav-number">1.2.</span> <span class="nav-text">Basic install</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org08f9bc1"><span class="nav-number">1.3.</span> <span class="nav-text">Software install</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org456b5fd"><span class="nav-number">2.</span> <span class="nav-text">Configuration [配置篇]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org242ce6a"><span class="nav-number">2.1.</span> <span class="nav-text">Fcitx</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org63b0c96"><span class="nav-number">2.2.</span> <span class="nav-text">Web to hidden</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org1a4aea6"><span class="nav-number">2.3.</span> <span class="nav-text">Startdict</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org23ce699"><span class="nav-number">2.4.</span> <span class="nav-text">Samba</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org832abc4"><span class="nav-number">2.5.</span> <span class="nav-text">Bumblebee</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org8518723"><span class="nav-number">2.6.</span> <span class="nav-text">Firefox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org862eb8b"><span class="nav-number">2.7.</span> <span class="nav-text">Dnsmasq: maybe out of data</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org66cffc3"><span class="nav-number">3.</span> <span class="nav-text">Questions [问题篇]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#orgda98a59"><span class="nav-number">3.1.</span> <span class="nav-text">GNOME3.6 文件夹默认打开方式关联问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org61a9bbf"><span class="nav-number">3.2.</span> <span class="nav-text">Add module auto</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orgc816b40"><span class="nav-number">3.3.</span> <span class="nav-text">LIWORD start fonts problem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orgd085211"><span class="nav-number">3.4.</span> <span class="nav-text">Emacs fcitx</span></a></li></ol></li></ol></div>
             
 
           </div>

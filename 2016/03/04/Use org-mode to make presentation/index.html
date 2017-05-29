@@ -407,9 +407,9 @@
       
         
 
-<div id="outline-container-org9544670" class="outline-2">
-<h2 id="org9544670">缘由：</h2>
-<div class="outline-text-2" id="text-org9544670">
+<div id="outline-container-orgd329a71" class="outline-2">
+<h2 id="orgd329a71">缘由：</h2>
+<div class="outline-text-2" id="text-orgd329a71">
 <ul class="org-ul">
 <li>之前做幻灯一直用 powerpoint，受限于各种格式调整，之后接触到了 latex，开始用 beamer 做幻灯</li>
 <li>最近迷恋上了 Reproducible Research，用 org-mode 进行时间管理、写 blog，恰巧最近需要做幻灯，本文记录用 org-mode 进行写做幻灯的过程以及注意事项,本文示例见<a href="https://github.com/lengyueyang/org-beamer" target="_blank" rel="external">org-beamer</a></li>
@@ -419,21 +419,21 @@
 </div>
 </div>
 
-<div id="outline-container-orgb98c851" class="outline-2">
-<h2 id="orgb98c851">配置</h2>
-<div class="outline-text-2" id="text-orgb98c851">
+<div id="outline-container-org2d07598" class="outline-2">
+<h2 id="org2d07598">配置</h2>
+<div class="outline-text-2" id="text-org2d07598">
 <ul class="org-ul">
 <li>Org-mode 做幻灯实际上是用 org-mode 写做，转换成 latex 的 beamer，鉴于以后可能会用到中文，因此用 xelatex 编译 tex 文件</li>
 <li>导出快捷键：SPC e l P，更改 tex 默认编译引擎，我安装的是 Tex live 版本，安装详情见<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>，更改引擎可参照<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup> (我的应该是更改 latexmk.pl 文件中的 pdflatex 为 xelatex，这一步记不清楚了)</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org0f24b4a" class="outline-2">
-<h2 id="org0f24b4a">Org-mode 做幻灯过程简介</h2>
-<div class="outline-text-2" id="text-org0f24b4a">
-</div><div id="outline-container-orgbf7d214" class="outline-3">
-<h3 id="orgbf7d214">Org-mode Beamer 模式设置</h3>
-<div class="outline-text-3" id="text-orgbf7d214">
+<div id="outline-container-org7fa68f1" class="outline-2">
+<h2 id="org7fa68f1">Org-mode 做幻灯过程简介</h2>
+<div class="outline-text-2" id="text-org7fa68f1">
+</div><div id="outline-container-orgc3fd08b" class="outline-3">
+<h3 id="orgc3fd08b">Org-mode Beamer 模式设置</h3>
+<div class="outline-text-3" id="text-orgc3fd08b">
 <div class="org-src-container">
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">#+TITLE:  Multiple therapeutic effects of progranulin on experimental acute ischaemic stroke&#10;#+AUTHOR: Xiaowei Mao&#10;#+EMAIL:  maoweirm@126.com&#10;#+BEAMER_HEADER: \date[March 4$^{th}$, 2016]{March 4$^{th}$, 2016 \\ \vskip 0.5cm \scriptsize{Brain. 2015 Jul;138(Pt 7):1932-48.}}&#10;#+BEAMER_HEADER: \title[Progranulin on ischemic stroke]{Multiple therapeutic effects of progranulin on experimental acute ischaemic stroke}&#10;#+BEAMER_HEADER: \institute[Pharmaron]{Pharmacology, Pharmaron} &#10;#+OPTIONS: H:2 num:t toc:1 \n:nil @:t ::t |:t ^:t -:t f:t *:t &#38;lt;:t&#10;#+OPTIONS: TeX:t LaTeX:nil skip:nil d:nil todo:t pri:nil tags:not-in-toc&#10;#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js&#10;#+EXPORT_SELECT_TAGS: export&#10;#+EXPORT_EXCLUDE_TAGS: noexport&#10;#+startup: beamer&#10;#+LaTeX_CLASS: beamer&#10;#+LaTeX_CLASS_OPTIONS: [bigger]&#10;#+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)&#10;#+BEAMER_FRAME_LEVEL: 2&#10;#+LaTeX_HEADER: \usetheme{CambridgeUS}&#10;#+LaTeX_HEADER: \AtBeginSection{\begin{frame}{Outline}   \tableofcontents[currentsection] \end{frame} }&#10;#+LaTeX_HEADER: \setbeamertemplate{navigation symbols}{}&#10;#+LaTeX_HEADER: \renewcommand\maketitle{\frame[plain]{\titlepage}}&#10;#+LaTeX_HEADER: \usepackage{fontspec}&#10;#+LaTeX_HEADER: \usepackage{xeCJK}&#10;#+LaTeX_HEADER: \setmainfont{Times New Roman}&#10;#+LaTeX_HEADER: \setsansfont{Arial}&#10;#+LaTeX_HEADER: \setmonofont{Courier Std}&#10;#+LaTeX_HEADER: \setCJKmainfont[BoldFont={ },ItalicFont={ }]{WenQuanYi Micro Hei}&#10;#+LaTeX_HEADER: \setCJKsansfont{WenQuanYi Micro Hei}&#10;#+LaTeX_HEADER: \setCJKmonofont{WenQuanYi Micro Hei Mono} &#10;#+LaTeX_HEADER: \graphicspath{pic file folder}&#10;#+BEAMER_HEADER: %\logo{\includegraphics[height=5mm]{logo.png}}&#10;#+LaTeX_HEADER: \usepackage[backend = biber, natbib=true, style = science, sorting = none]{biblatex}&#10;#+LaTeX_HEADER: \addbibresource{Pharmaron.bib}&#10;#+LaTeX_HEADER: \AtBeginBibliography{\footnotesize}&#10;#+LaTeX_HEADER: \setbeamertemplate{bibliography item}[text]&#10;#+LaTeX_HEADER: \usepackage[none]{hyphenat}&#10;#+LaTeX_HEADER: \usepackage[abs]{overpic}</span><br></pre></td></tr></table></figure>
 </div>
@@ -442,7 +442,7 @@
 <li>在幻灯首页及页脚短标题、时间以及系所</li>
 </ul>
 <div class="org-src-container">
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">#+BEAMER_HEADER: \date[March 4$^{th}$, 2016]{March 4$^{th}$, 2016 \\ \vskip 0.5cm \scriptsize{Brain. 2015 Jul;138(Pt 7):1932-48.}}&#10;#+BEAMER_HEADER: \title[Progranulin on ischemic stroke]{Multiple therapeutic effects of progranulin on experimental acute ischaemic stroke}&#10;#+BEAMER_HEADER: \institute[Pharmaron]{Pharmacology, Pharmaron}</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">#+BEAMER_HEADER: \date[March 4$^{th}$, 2016]{March 4$^{th}$, 2016 \\ \vskip 0.5cm \scriptsize{Brain. 2015 Jul;138(Pt 7):1932-48.}}&#10;#+BEAMER_HEADER: \title[Progranulin on ischemic stroke]{Multiple therapeutic effects of progranulin on experimental acute ischaemic stroke}&#10;#+BEAMER_HEADER: \institute[Pharmaron]{Pharmacology, Pharmaron} &#10;</span><br></pre></td></tr></table></figure>
 </div>
 
 <ul class="org-ul">
@@ -463,7 +463,7 @@
 <li>设置字体，用 fontspec 和 xeCJK 包</li>
 </ul>
 <div class="org-src-container">
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">#+LaTeX_HEADER: \usepackage{fontspec}&#10;#+LaTeX_HEADER: \usepackage{xeCJK}&#10;#+LaTeX_HEADER: \setmainfont{Times New Roman}&#10;#+LaTeX_HEADER: \setsansfont{Arial}&#10;#+LaTeX_HEADER: \setmonofont{Courier Std}&#10;#+LaTeX_HEADER: \setCJKmainfont[BoldFont={ },ItalicFont={ }]{WenQuanYi Micro Hei}&#10;#+LaTeX_HEADER: \setCJKsansfont{WenQuanYi Micro Hei}&#10;#+LaTeX_HEADER: \setCJKmonofont{WenQuanYi Micro Hei Mono}</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">#+LaTeX_HEADER: \usepackage{fontspec}&#10;#+LaTeX_HEADER: \usepackage{xeCJK}&#10;#+LaTeX_HEADER: \setmainfont{Times New Roman}&#10;#+LaTeX_HEADER: \setsansfont{Arial}&#10;#+LaTeX_HEADER: \setmonofont{Courier Std}&#10;#+LaTeX_HEADER: \setCJKmainfont[BoldFont={ },ItalicFont={ }]{WenQuanYi Micro Hei}&#10;#+LaTeX_HEADER: \setCJKsansfont{WenQuanYi Micro Hei}&#10;#+LaTeX_HEADER: \setCJKmonofont{WenQuanYi Micro Hei Mono} </span><br></pre></td></tr></table></figure>
 </div>
 
 
@@ -490,36 +490,36 @@
 </div>
 </div>
 
-<div id="outline-container-org93ab42e" class="outline-3">
-<h3 id="org93ab42e">插入小标题及分页</h3>
-<div class="outline-text-3" id="text-org93ab42e">
+<div id="outline-container-orga528bf9" class="outline-3">
+<h3 id="orga528bf9">插入小标题及分页</h3>
+<div class="outline-text-3" id="text-orga528bf9">
 <div class="org-src-container">
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">*** A block                                                           :BMCOL:&#10;:PROPERTIES:&#10;:BEAMER_col: 0.6&#10;:END:&#10;- A stroke is a medical emergency in which the blood supply to any portion of the brain is interrupted or reduced.&#10;\vspace{0.5cm}&#10;- Alternative names: Cerebrovascular accident/ disease (CVA), Cerebral infarction, Cerebral hemorrhage.&#10;*** picture                                                         :BMCOL:&#10;:PROPERTIES:&#10;:BEAMER_col: 0.4&#10;:END:&#10;\includegraphics[width=4.5cm]{b1} \newline&#10;\centering \scriptsize{The Circle of Willis Anatomy}</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org17f9c92" class="outline-3">
-<h3 id="org17f9c92">插入多张图片</h3>
-<div class="outline-text-3" id="text-org17f9c92">
+<div id="outline-container-org3109cfd" class="outline-3">
+<h3 id="org3109cfd">插入多张图片</h3>
+<div class="outline-text-3" id="text-org3109cfd">
 <div class="org-src-container">
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">\begin{overpic}[height=6cm, width=12cm]{b2}&#10;\put(20,0){\visible&#38;lt;2&#38;gt;{\includegraphics[height=6cm, width=5.5cm]{b6}}}&#10;\put(200,0){\visible&#38;lt;2&#38;gt;{\includegraphics[height=6cm, width=4.5cm]{b3}}}&#10;\put(0,0){\visible&#38;lt;4&#38;gt;{\includegraphics[height=6cm, width=6.5cm]{b4}}}&#10;\put(172,0){\visible&#38;lt;4&#38;gt;{\includegraphics[height=6cm, width=6cm]{b5}}}&#10;\end{overpic}</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgf802c31" class="outline-3">
-<h3 id="orgf802c31">插入 block</h3>
-<div class="outline-text-3" id="text-orgf802c31">
+<div id="outline-container-orga30676d" class="outline-3">
+<h3 id="orga30676d">插入 block</h3>
+<div class="outline-text-3" id="text-orga30676d">
 <div class="org-src-container">
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">***                                                                 :BMCOL:&#10;:PROPERTIES:&#10;:BEAMER_col: 0.6&#10;:END:&#10;\includegraphics[height=5cm,width=\textwidth]{b10}&#10;*** \pause \small Stroke therapeutic strategy                 :B_block:BMCOL:&#10;:PROPERTIES:&#10;:BEAMER_col: 0.4&#10;:BEAMER_env: block&#10;:END:&#10;\begin{itemize}&#10;\item \footnotesize Broaden the therapeutic time window&#10;\begin{itemize}&#10; \item \scriptsize The new thrombolytics&#10; \item \scriptsize Neuroprotection agents-\emph{\textbf{progranulin}}&#10;\end{itemize}&#10;\item \footnotesize Therapy is recovery stage&#10;\begin{itemize}&#10; \item \scriptsize Neuroprotection agents&#10; \item \scriptsize Stem cell therapy&#10; \item \scriptsize Chinese traditional medicine&#10; \item \scriptsize Acupuncture&#10; \item \scriptsize ......&#10;\end{itemize}&#10;\end{itemize}</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org8d76909" class="outline-3">
-<h3 id="org8d76909">插入参考文献</h3>
-<div class="outline-text-3" id="text-org8d76909">
+<div id="outline-container-org2531dfa" class="outline-3">
+<h3 id="org2531dfa">插入参考文献</h3>
+<div class="outline-text-3" id="text-org2531dfa">
 <div class="org-src-container">
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">** References&#10;\tiny&#10;\cite{moretti2015neuroprotection} \cite{george2015novel} \cite{butcher2010acute} \cite{hacke2008thrombolysis} \cite{kanazawa2011biochemical} \cite{kanazawa2011inhibition} \cite{nguyen2013progranulin} \cite{o20061}&#10;\printbibliography[heading = none]</span><br></pre></td></tr></table></figure>
 </div>
@@ -527,12 +527,12 @@
 </div>
 </div>
 
-<div id="outline-container-org4ba80ce" class="outline-2">
-<h2 id="org4ba80ce">一些问题</h2>
-<div class="outline-text-2" id="text-org4ba80ce">
-</div><div id="outline-container-org24d398f" class="outline-3">
-<h3 id="org24d398f">参考文献</h3>
-<div class="outline-text-3" id="text-org24d398f">
+<div id="outline-container-org8df79e7" class="outline-2">
+<h2 id="org8df79e7">一些问题</h2>
+<div class="outline-text-2" id="text-org8df79e7">
+</div><div id="outline-container-orgd4b755d" class="outline-3">
+<h3 id="orgd4b755d">参考文献</h3>
+<div class="outline-text-3" id="text-orgd4b755d">
 <ul class="org-ul">
 <li>默认编译快捷键不能编译参考文献，在配置文件中加入一下代码即可</li>
 </ul>
@@ -553,9 +553,9 @@
 </div>
 </div>
 
-<div id="outline-container-orgfb33ffd" class="outline-3">
-<h3 id="orgfb33ffd">脚注</h3>
-<div class="outline-text-3" id="text-orgfb33ffd">
+<div id="outline-container-orgc8129c8" class="outline-3">
+<h3 id="orgc8129c8">脚注</h3>
+<div class="outline-text-3" id="text-orgc8129c8">
 <ul class="org-ul">
 <li>如果文章某一页有脚注，插入\footfullcite{脚注内容}即可</li>
 <li>如果脚注连续，即插入参考文献 4-6，或 2,3，并且同一页插入两个相同脚注,可参考代码见<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup>, 也可在我的 github 下载<a href="https://github.com/lengyueyang/org-beamer/blob/master/footnoteref.sty" target="_blank" rel="external">footnoteref</a>，</li>
@@ -594,7 +594,7 @@
 
 </div>
 </div>
-Last Updated 2017-04-08 Sat 11:27 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.1.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 9.0.5)
+Last Updated 2017-04-08 Sat 11:27 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.2.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 9.0.7)
 
       
     </div>
@@ -738,7 +738,7 @@ Last Updated 2017-04-08 Sat 11:27 by lengyueyang<br>Render by <a href="https://g
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -871,7 +871,7 @@ Last Updated 2017-04-08 Sat 11:27 by lengyueyang<br>Render by <a href="https://g
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#org9544670"><span class="nav-number">1.</span> <span class="nav-text">缘由：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orgb98c851"><span class="nav-number">2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org0f24b4a"><span class="nav-number">3.</span> <span class="nav-text">Org-mode 做幻灯过程简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#orgbf7d214"><span class="nav-number">3.1.</span> <span class="nav-text">Org-mode Beamer 模式设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org93ab42e"><span class="nav-number">3.2.</span> <span class="nav-text">插入小标题及分页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org17f9c92"><span class="nav-number">3.3.</span> <span class="nav-text">插入多张图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orgf802c31"><span class="nav-number">3.4.</span> <span class="nav-text">插入 block</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org8d76909"><span class="nav-number">3.5.</span> <span class="nav-text">插入参考文献</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org4ba80ce"><span class="nav-number">4.</span> <span class="nav-text">一些问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org24d398f"><span class="nav-number">4.1.</span> <span class="nav-text">参考文献</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orgfb33ffd"><span class="nav-number">4.2.</span> <span class="nav-text">脚注</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">Footnotes: </span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#orgd329a71"><span class="nav-number">1.</span> <span class="nav-text">缘由：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org2d07598"><span class="nav-number">2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org7fa68f1"><span class="nav-number">3.</span> <span class="nav-text">Org-mode 做幻灯过程简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#orgc3fd08b"><span class="nav-number">3.1.</span> <span class="nav-text">Org-mode Beamer 模式设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orga528bf9"><span class="nav-number">3.2.</span> <span class="nav-text">插入小标题及分页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org3109cfd"><span class="nav-number">3.3.</span> <span class="nav-text">插入多张图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orga30676d"><span class="nav-number">3.4.</span> <span class="nav-text">插入 block</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org2531dfa"><span class="nav-number">3.5.</span> <span class="nav-text">插入参考文献</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org8df79e7"><span class="nav-number">4.</span> <span class="nav-text">一些问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#orgd4b755d"><span class="nav-number">4.1.</span> <span class="nav-text">参考文献</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orgc8129c8"><span class="nav-number">4.2.</span> <span class="nav-text">脚注</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">Footnotes: </span></a></li></ol></div>
             
 
           </div>
