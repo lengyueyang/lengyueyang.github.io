@@ -334,844 +334,6 @@
             
               
                 
-                <a class="post-title-link" href="/2017/05/29/数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布/" itemprop="url">
-                  数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-05-29T08:00:00+08:00" content="2017-05-29">
-              2017-05-29
-            </time>
-          </span>
-
-          
-
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/DATA-SCIENTIST/" itemprop="url" rel="index">
-                    <span itemprop="name">DATA SCIENTIST</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2017/05/29/数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/05/29/数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-
-
-
-<div id="outline-container-org68e5844" class="outline-2">
-<h2 id="org68e5844">随机变量及其概率分布</h2>
-<div class="outline-text-2" id="text-org68e5844">
-</div><div id="outline-container-orgb1559ee" class="outline-3">
-<h3 id="orgb1559ee">一维随机变量</h3>
-<div class="outline-text-3" id="text-orgb1559ee">
-</div><div id="outline-container-org57a7350" class="outline-4">
-<h4 id="org57a7350">随机变量的概念</h4>
-<div class="outline-text-4" id="text-org57a7350">
-<p>
-随机变量的定义：“其值随机会而定”的变量，是试验结果的函数
-</p>
-
-<p>
-随机变量的反面为确定性变量，其取值遵循某种严格的规律的变量；
-</p>
-
-<p>
-随机事件与随机变量的关系：前者从静态观点来研究随机现象，后者从动态观点，随机变量(向量)的研究，是概率论的中心内容
-</p>
-
-<p>
-随机变量的分类（按其可能取的值的全体的性质）：离散型随机变量（只能取有限个值）和连续性随机变量（取值充满某一个区间，数学上抽象的情况）
-</p>
-
-<p>
-随机变量的研究：取值、取各种值的概率
-</p>
-</div>
-</div>
-
-<div id="outline-container-org0698cb7" class="outline-4">
-<h4 id="org0698cb7">离散型随机变量的分布及其例子</h4>
-<div class="outline-text-4" id="text-org0698cb7">
-\begin{de}[离散型随机变量概率函数的定义]
-\end{de}
-<p>
-设 X 为离散型随机变量，其全部可能值为 \(\lbrace a_1, a_2, \dots \rbrace \) ，则下式称为为随机变量的概率函数
-</p>
-\begin{equation}
-p_i = P(X = a_i) \qquad (i = 1, 2, \dots )
-\end{equation}
-<p>
-显然，有 \(p_i \geqslant 0 , p_1 + p_2 + \dots = 1\)
-</p>
-
-\begin{de}[随机变量分布函数定义]
-\end{de}
-<p>
-设 X 为一随机变量，则函数 P(公式见下)称为 X 的分布函数
-</p>
-\begin{equation}
-F(x) = P(X \leqslant x) = F(x) (-\infty < x < ∞) = \sum_{\lbrace i|a_i ⩽ x \rbrace }p_i
-\end{equation}
-
-<p>
-离散型随机变量的概率函数和分布函数的关系：等价，知道其一即可知道另一个
-</p>
-
-<p>
-随机变量的分布函数\(F(x)\)的性质：
-</p>
-<ul class="org-ul">
-<li>\(F(x)\) 是单调非降: 当 \(x_1 ⩽ x_2\) 时，有 \(F(x_1) ⩽ F(x_2)\)</li>
-<li>当 \(x → \infty\)时， \(F(x) → 1\) ; \(x → - \infty\)时， \(F(x) → 0\)</li>
-</ul>
-</div>
-
-<ul class="org-ul"><li><a id="orgfbeca98"></a>离散性随机变量分布-二项分布<br><div class="outline-text-5" id="text-orgfbeca98">
-\begin{de}[二项分布定义]
-\end{de}
-<p>
-设某事件 A 在一次试验中发生的概率为 p, 先将这个试验独立的重复 n 次，以 X 记作 A 在 n 次试验中发生的次数，n 可取 \(0, 1, \dots ,n\) 等值，如 X 遵从下式，则称 X 所遵从的概率分布为二项分布，并常记为 \(B(n, p)\) ，记为 \(X \sim B(n, p)\)
-</p>
-\begin{equation}
-p_i = P(X = i) = b(i; n; p) = \binom{n}{i}p_i(1-p)^{n-p}
-\end{equation}
-
-<p>
-二项分布的条件：各次试验的条件是稳定的；各次试验的独立性
-</p>
-</div></li>
-
-<li><a id="org3c4805b"></a>离散性随机变量分布-泊松分布<br><div class="outline-text-5" id="text-org3c4805b">
-\begin{de}[泊松分布定义]
-\end{de}
-<p>
-随机变量 X 的可能取值为 \(0, 1, 2 \dots\) , 且概率分布如下式，则称 X 服从泊松分布，常记为 \(X \sim P(λ)\)  
-</p>
-\begin{equation}
-P(X = i) = e^{-λ}λ^i \divslash i! 
-\end{equation}
-
-<p>
-波瓦松分布出现场合：表示在一定时间和空间内出现的事件个数
-</p>
-
-<p>
-二项分布和波瓦松分布的关系：波瓦松分布可作为二项分布的极限而得到，若 X 服从 \(B(n, p)\) ，其中 n 很大，p 很小而 np 不太大时，则 X 的分布接近于参数为 np 的波瓦松分布
-</p>
-</div></li>
-
-<li><a id="orge557e06"></a>离散性随机变量分布-超几何分布<br><div class="outline-text-5" id="text-orge557e06">
-\begin{de}[超几何分布定义]
-\end{de}
-<p>
-随机变量 X 记为从 N 个产品里随机抽出 n 个里面所含废品数(废品总数为 M)，若 X 满足下式，则称 X 服从超级和分布
-</p>
-\begin{equation}
-  P(X = m) = \binom{M}{m} \binom{N-M}{n-m} \xsol \binom{N}{n} 
-\end{equation}
-
-<p>
-在本例中，当 n 固定时, \(M \devslash N = p\) 固定，当 \(N → ∞\) 时，X 近似服从二项分布 \(B(n, p)\)
-</p>
-</div></li>
-
-<li><a id="org427fd93"></a>离散性随机变量分布-负二项分布<br><div class="outline-text-5" id="text-org427fd93">
-\begin{de}[负二项分布定义]
-\end{de}
-<p>
-负二项分布是定下废品个数 r，把总抽样次数减去 r 作为变量，概率分布如下式，则称 X 服从负二项分布  
-</p>
-\begin{equation}
-  P(X = i) = b(r-1; i+r-1, p)p = \binom{i+r-1}{r-1}p^r(1-p)^i \qquad (i = 0, 1, 2, \dots) 
-\end{equation}
-
-<p>
-当 \(r = 1\) 时，<a href="#org4086f22">1</a> 概率 \(p, p(1-p), p(1-p)^2, \dots\) 呈公比为 1-p 的几何级数，因此，称之为几何分布
-</p>
-</div></li></ul>
-</div>
-
-<div id="outline-container-org61810c0" class="outline-4">
-<h4 id="org61810c0">连续性随机变量的分布及其例子</h4>
-<div class="outline-text-4" id="text-org61810c0">
-\begin{de}[连续性随机变量概率密度函数定义]
-\end{de}
-<p>
-设连续型随机变量 X 有概率分布函数 F(x)，则概率分布函数的导数 \(f(x) = F'(x)\) 称为 X 的概率密度函数
-</p>
-
-<p>
-连续型随机变量 X 概率密度函数的三条基本性质：
-</p>
-<ul class="org-ul">
-<li>\(f(x) ⩾ 0 \)</li>
-<li>\(\int_{-\infty}^\infty dx = 1\)</li>
-<li>对任何常数 \(a < b\) , 有 \[P(a ⩽ X ⩽ b) = F(b) - F(a) = ∫_a^bf(x)\] 微积分基本定理</li>
-</ul>
-</div>
-
-<ul class="org-ul"><li><a id="orge70c9b0"></a>连续性随机变量分布-正态分布<br><div class="outline-text-5" id="text-orge70c9b0">
-\begin{de}[正态分布定义]
-\end{de}
-<p>
-如果一个随机变量具有下式的概率密度函数，称 X 为正太随机变量，并记为 \(X \sim N(μ, σ)\) , &mu; 和 σ 都是常数，μ 可以取任何常数，而 \(0 < σ^2 < ∞\) .
-</p>
-\begin{equation}
-f(x) = \frac{1}{\sqrt{2\pi}\sigma}exp(-\frac{(x-\mu)^2}{2\sigma^2})
-\end{equation}
-
-<p>
-两个重要的积分例子 
-</p>
-<ul class="org-ul">
-<li>\(I = \int_{-∞}^\infty exp(-\frac{t^2}{2}dt = \sqrt{2\pi}\) ,具体证明可以考虑 \(I^2 = 2\pi\)</li>
-<li>\(I = \int_{-∞}^\infty t^2exp(-\frac{t^2}{2})dt = \sqrt{2\pi}\) ,用分部积分可得到</li>
-</ul>
-
-\begin{de}[标准正态分布]
-\end{de}
-<p>
-若正太分布当 \(\mu = 0\) , \(σ^2 =1\) 时，称下式为正太分布 \(N(0, 1)\) 的密度函数, \\(N(0, 1)\) 称为标准正太分布
-</p>
-\begin{equation}
-f(x) = \frac{1}{\sqrt{2\pi}}exp(-\frac{x^2}{2})
-\end{equation}
-
-<p>
-一般在概率论中，正太分布的密度函数和分布函数分别记为 \(\phi(x)\) (或 手写的 \(\varphi(x)\)), \(Φ(x)\)
-</p>
-</div></li>
-
-<li><a id="orgcdc0cfa"></a>连续性随机变量分布-指数分布<br><div class="outline-text-5" id="text-orgcdc0cfa">
-\begin{de}[指数分布定义]
-\end{de}
-<p>
-若随机变量 X 有以下概率密度函数，则称 X 服从指数分布，其中 \(λ > 0\) 为参数
-</p>
-\begin{equation}
-f(x) = \left\{\begin{array}{ll}
-               λe^{-λx}, & if \quad x > 0 \\
-               0,    & if \quad \(x ⩽ 0\)
-              \end{array} \right.
-\end{equation}
-
-<p>
-变量 X 的分布函数 F(x) 见下式，指数分布最常见的一个场合是寿命分布， \(λ^{-1}\) 就是平均寿命 
-</p>
-\begin{equation}
-F(x) = P(X ⩽ x) = \int_{-∞}^xf(t)dt = \left\{\begin{array}{ll}
-                                       0,    & if \quad \(x ⩽ 0\) \\
-                                       1 - e^{-λx}, & if \quad x > 0 
-                                      \end{array}\right
-\end{equation}
-</div></li>
-
-<li><a id="org22f1583"></a>连续性随机变量分布-威布尔分布<br><div class="outline-text-5" id="text-org22f1583">
-\begin{de}[威布尔分布]
-\end{de}
-<p>
-若随机变量 X 有以下概率密度函数，则称 X 服从威布尔分布，其中 \(λ > 0\) , \(m > 0\) 是常数
-</p>
-\begin{equation}
-f(x) = \left\{\begin{array}{ll}
-               λαe^{-λx^\alpha}, & if \quad x > 0 \\
-               0,    & if \quad \(x ⩽ 0\)
-              \end{array} \right.
-\end{equation}
-
-<p>
-变量 X 的分布函数 F(x) 见下式
-</p>
-\begin{equation}
-F(x) = P(X ⩽ x) = \int_{-∞}^xf(t)dt = \left\{\begin{array}{ll}
-                                       0,    & if \quad \(x ⩽ 0\) \\
-                                       1 - e^{-λx^\alpha}, & if \quad x > 0 
-                                      \end{array}\right
-\end{equation}
-
-<p>
-指数分布是威布尔分布当 \(α = 1\) 时的特例，威布尔分布考虑 λ 随事件变化而变化
-</p>
-</div></li>
-
-<li><a id="org8413036"></a>连续性随机变量分布-均匀分布<br><div class="outline-text-5" id="text-org8413036">
-\begin{de}[均匀分布定义]
-\end{de}
-<p>
-若随机变量 X 有以下概率密度函数，则称 X 服从区间 \([a, b]\) 上的均匀分布，常记为 \(X \sim R(a, b)\)
-</p>
-\begin{equation}
-f(x) = \left\{\begin{array}{ll}
-               1 ∕ (b-a) , & if \quad \(a ⩽ x ⩽ b\) \\
-               0,    & others
-              \end{array} \right.
-\end{equation}
-
-<p>
-变量 X 的均匀分布函数 F(x) 见下式 
-</p>
-\begin{equation}
-F(x) = P(X ⩽ x) = \int_{-∞}^xf(t)dt = \left\{\begin{array}{ll}
-                                       0, & if \quad \(x ⩽ a\) \\
-                                       (x - a) ∕ (b-a), & if \quad \(a ⩽ x ⩽ b\) \\
-                                       1^{}, & if \quad x > b 
-                                      \end{array}\right
-\end{equation}
-</div></li></ul>
-</div>
-</div>
-
-<div id="outline-container-org921f1ea" class="outline-3">
-<h3 id="org921f1ea">多维随机变量（随机向量）</h3>
-<div class="outline-text-3" id="text-org921f1ea">
-</div><div id="outline-container-orgf6fd89a" class="outline-4">
-<h4 id="orgf6fd89a">离散型随机向量的分布</h4>
-<div class="outline-text-4" id="text-orgf6fd89a">
-\begin{de}[多维离散型随机向量概率函数定义]
-\end{de}
-<p>
-以 \(\lbrace a_{i1}, a_{i2}, \dots \rbrace \) 记 \(X_i\) 的全部可能取值 \((i = 1, 2, \dots)\) , 则事件 \(\lbrace X_1 = a_{1j_1}, X_2 = a_{2j_2}, \dots , X_n = a_{nj_n}\rbrace \) 的概率如下式所示，称为随机向量 \(X = (X_1, X_2, \dots , X_n)\) 的概率函数。
-</p>
-\begin{equation}
-\begin{split}
-p(j_1, j_2, \dots ,j_n) &= P(X_1 = a_{1j_1}, X_2 = a_{2j_2}, \dots , X_n = a_{}_{nj_n})  \\
-&(j_1, j_2, \dots , J_n = 1, 2, \dots)
-\end{split}
-\end{equation}
-
-<p>
-概率函数(<a href="#orga59a422">1</a>)应满足一下条件
-</p>
-<ul class="org-ul">
-<li>\(p(j_1, j_2, \dots ,j_n) \geqslant 0 \)</li>
-<li>\(\sum_{j_n }\sum_{j_2} \dots \sum_{j_1} p(j_1, j_2, \dots ,j_n) = 1\)</li>
-</ul>
-</div>
-
-<ul class="org-ul"><li><a id="orgbd57637"></a>多项分布<br><div class="outline-text-5" id="text-orgbd57637">
-\begin{de}[多项分布定义]
-\end{de}
-<p>
-设 \(A_1, A_2, \dots , A_n\) 组成一个完备事件群，先对立重复试验 N 次，以 \(X_i\) 记在这 N 次试验中事件　\(A_i\) 事件发生的次数 \((i = 1, \dots , n)\) ,则 \(X = (X_1, X_2, \dots , X_n)\) 为一个 n 维随机向量，它的取值范围是： \(X_1, X_2, \dots , X_n\) 都是非负整数，且其和为 N，X 的概率分布即为多项分布，记为 \(M(N; p_1, p_2, \dots , p_n)\), 概率函数见下式
-</p>
-\begin{equation}
-\begin{split}
-P(X_1 = k_1_{}, X_2 = k_2&, \dots , X_n = k_n_{}_{}) = \frac{N!}{k_1!k_2! \dots k_n!} p_1^k_1p_2^k_2 \dots p_n^k_n \\
-  (k_i ⩾ 0, \quad & k_1 + k_2 + \dots + k_n = N)
-\end{split}
-\end{equation}
-
-<p>
-多项分布是最重要的离散性多项分布，当一个总体按照某种属性分成几类时，就会涉及多项分布，如一种疾病可以按照严重程度分级，一种产品可以分成一等、二等、三等品等
-</p>
-</div></li></ul>
-</div>
-
-<div id="outline-container-orga93f79f" class="outline-4">
-<h4 id="orga93f79f">连续型随机向量的分布</h4>
-<div class="outline-text-4" id="text-orga93f79f">
-\begin{de}[多维连续随机向量密度函数定义]
-\end{de}
-<p>
-\(X = (X_1, X_2, \dots , X_n)\) 是一个 n 维随机向量，若 \(f(x_1, x_2, \dots , x_n)\) 是定义在 \(\BbbR^n\) 上的非负函数，使对 \(\BbbR^n\) 中的任何几何 A，有下式成立，则称 f 是 X 的(概率)密度函数
-</p>
-\begin{equation}
-  P(X \in A) = \underbrace{\int \dots \int}_A f(x_1, x_2, \dots , x_n)dx_1 \dots dx_n
-\end{equation}
-<p>
-如果把 A 取成全空间 \(\BbbR^n\) ,则 \(\lbrace X \in A \rbrace \) 是必然事件，其概率为 1，因此有 \[\underbrace{\int \dots \int}_A f(x_1, x_2, \dots , x_n)dx_1 \dots dx_n = 1\]
-</p>
-</div>
-
-<ul class="org-ul"><li><a id="orge5f31bb"></a>二维均匀分布<br><div class="outline-text-5" id="text-orge5f31bb">
-\begin{de}[二维均匀分布定义]
-\end{de}
-<p>
-若随机变量 X 有以下概率密度函数，则称 X 服从区间是二维均匀分布
-</p>
-\begin{equation}
-f(x_1, x_2) = \left\{\begin{array}{ll}
-               1 ∕ (b-a)(d-c) , & if \quad \(a ⩽ x_1 ⩽ b\) \(and\) \(c ⩽ x_2 ⩽ d\) \\
-               0,    & others
-              \end{array} \right.
-\end{equation}
-</div></li>
-
-<li><a id="org64a8d0b"></a>二维正太分布<br><div class="outline-text-5" id="text-org64a8d0b">
-\begin{de}[二维正态分布定义]
-\end{de}
-<p>
-如果一个随机变量具有下式的概率密度函数，称 X 为二维正态随机变量，并记为 \(X \sim N(a, b, σ_1^2, σ_2^2, \rho)\) , \(a, b, σ_1, σ_2\) 是这个分布的参数，其取值范围为：
- \[- ∞ < a, b < ∞, σ_1 >0, σ_2 >0, -1 < \rho < 1\]
-</p>
-\begin{equation}
-f(x_1, x_2) = (2\pi σ_1σ_2\sqrt{1-\rho^2})^{-1} exp\left[-\frac{1}{2(1-\rho^2)} \left( \frac{(x_1 - a)^2}{\sigma_1^2} + \frac{2\rho(x_1 - a)(x_2 - b)}{\sigma_1σ_2} + \frac{(x_2 - b)^2}{\sigma_2^2}\right)\right]
-\end{equation}
-
-<p>
-注意项：（a）连续型随机变量是有密度函数的随机变量；（b）各分量为一维连续型随机变量的随机向量并不一定是连续型随机变量；（c）可用概率分布函数去描述多维随机向量的概率分布
-</p>
-</div></li></ul>
-</div>
-
-<div id="outline-container-org6f26b28" class="outline-4">
-<h4 id="org6f26b28">边缘分布</h4>
-<div class="outline-text-4" id="text-org6f26b28">
-\begin{de}[边缘分布定义]
-\end{de}
-<p>
-\(X = (X_1, X_2, \dots , X_n)\) 是一个 n 维随机向量，X 有 n 维分布 F，X 的每一个分量 \(X_i\) 都是一维随机向量，他们各自的分布 \(F_i \quad (i = 1, \dots , n)\) 都是一维分布，称为随机向量 X 或分布 F 的 “边缘分布”
-</p>
-
-<p>
-边缘分布完全由原分布确定
-</p>
-
-<p>
-离散型随机向量的边缘分布的计算：
-</p>
-<ul class="org-ul">
-<li>分别计算行和和列和，再求</li>
-<li>多项分布的边缘分布密度，\(X_n\) 的分布是二项分布 \(B(N, p_n)\)</li>
-</ul>
-
-<p>
-连续型随机向量的边缘分布：
-</p>
-\begin{equation}
-  f_1(x_1) = \int_{-\infty}^\infty \dots \int_{-\infty}^\infty f(x_1, x_2, \dots , x_n) dx_2 \dots dx_n
-\end{equation}
-<p>
-二维正态分布 \(X \sim N(a, b, σ_1^2, σ_2^2, \rho)\) 的边缘分布密度是一维正态分布 \(X \sim N(a, σ_1^2)\) 和 \(X \sim N(b, σ_2^2)\)
-</p>
-
-<p>
-边缘分布要点：
-</p>
-<ul class="org-ul">
-<li>已知某随机向量的分布可推导其任一分量的（边缘）分布</li>
-<li>已知某随机向量的各分量的分布，也推导不出该随机向量的分布，因为边缘分布只考虑随机向量的某一分量的情况，未涉及他们之间的关系，而该关系包含的该随机向量的分布中</li>
-<li>边缘分布也可以不只是单个的</li>
-</ul>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org9a57be5" class="outline-3">
-<h3 id="org9a57be5">条件概率分布与随机变量的独立性</h3>
-<div class="outline-text-3" id="text-org9a57be5">
-</div><div id="outline-container-orgf50d441" class="outline-4">
-<h4 id="orgf50d441">条件概率分布的概念</h4>
-<div class="outline-text-4" id="text-orgf50d441">
-<p>
-一般形式：设有两个随机变量（向量）X，Y，在给定了 Y 取某个或某些值的条件下，去求 X 的条件分布
-</p>
-</div>
-</div>
-
-<div id="outline-container-org5971516" class="outline-4">
-<h4 id="org5971516">离散型随机变量的条件概率分布</h4>
-<div class="outline-text-4" id="text-org5971516">
-\begin{equation}
-P(X_1 = a_i | X_2 = b_j) = p_{ij}\sum_kp_{kj} \quad (i = 1, 2, \dots)
-\end{equation}
-
-<p>
-多项分布 \(M(N; p_1, p_2, \dots , p_n)\) 在 \(X_2 = k_2\) 条件下， \(X_1\) 的条件分布就是二项分布 \(B(N-k_2, p_1(1-p_2))\)
-</p>
-</div>
-</div>
-
-<div id="outline-container-org407680b" class="outline-4">
-<h4 id="org407680b">连续型随机变量的条件分布</h4>
-<div class="outline-text-4" id="text-org407680b">
-\begin{equation}
-\begin{split}
-  P(X_1 ⩽ x_1, a ⩽ X_2 ⩽ b) = \int_{-\infty}^{x_1}dt_1\int_a^bf(t_1, t_2)dt_2\xsol \int_a^bf_2(t_2)dt_2 \\
-  f(x_1, x_2) = f_2(x_2)f_1(x_1|x_2) \\
-  f(x_1, x_2) = f_1(x_1)f_2(x_2|x_1) \\
-  f(x_1, x_2, \dots , x_n) = g(x_1, x_2, \dots , x_k)h(x_{k+1}, \dots , x_n|x_1, \dots , x_k)
-\end{split}
-\end{equation}
-
-<p>
-二维正态分布的条件密度
-</p>
-\begin{equation}
-f(x_2, x_1) = (2\pi σ_2\sqrt{1-\rho^2})^{-1} exp\left[-\frac{(x_2 - (b + \rho \sigma_2\sigma_1^{-1}(x_1 - a)))}{2(1-\rho^2)σ_2^2}\right]
-\end{equation}
-<p>
-这是正太分布 \(N(b + \rho \sigma_2\sigma_1^{-1}(x_1 - a), (1-\rho^2)σ_2^2)\) ,可见正太变量的条件分布仍是正态分布，可以看出 &rho; 刻画了 \(X_1, X_2\) 之间的关系
-</p>
-
-\begin{equation}
-  f_1(x_1) = \int_{-\infty}^{\infty}f(x_1, x_2)dx_2 = \int_{-\infty}^{\infty}f(x_1 | x_2)f_2(x_2)dx_2
-\end{equation}
-</div>
-</div>
-
-<div id="outline-container-org6e43200" class="outline-4">
-<h4 id="org6e43200">随机变量的独立性</h4>
-<div class="outline-text-4" id="text-org6e43200">
-\begin{de}[随机变量独立性定义]
-\end{de}
-<p>
-n 维随机向量 \(X = (X_1, X_2, \dots , X_n)\) 的联合概率密度函数为 \(f(x_1, \dots , x_n)\) ,而 \(X_i\) 的边缘密度为 \(f_i(x_i) (i = 1, 2, \dots ,n)\) ,如满足下式则称变量 \(X_1, X_2, \dots , X_n\) 相互独立，简称独立 
-</p>
-\begin{equation}
-f(x_1, x_2, \dots ,x_n) = f_1(x_1)\dots f(x_n)
-\end{equation}
-
-\begin{thm}[连续随机变量独立性定理]
-\end{thm}
-<p>
-如果连续变量 \(X_1, X_2, \dots , X_n\) 独立，则对任何 \(a_i < b_i\) ,由 \(A_i = \lbrace a_1 ⩽ X_i ⩽ b_i \rbrace , (i = 1, 2, \dots)\) 定义的 n 个事件 \(A_1, \dots ,A_n\) 也独立；反之，若对任何 \(a_i < b_i\) ，事件 \(A_1, \dots ,A_n\) 独立，则变量 \(X_1, X_2, \dots , X_n\) 也独立
-</p>
-
-\begin{thm}[连续随机变量独立性定理二]
-\end{thm}
-<p>
-若连续随机向量 \((X_1, \dots , X_n)\) 的概率密度函数 \(f(x_1, \dots ,x_n)\) 可以表示为 n 个函数 \(g_1, \dots , g_n\) 之积，其中， \(g_i\) 只依赖于 \(x_i\) ，即 \[f(x_1, \dots ,x_n) = g_1(x_1) \dots g_n(x_n)\] ,则称 \((X_1, \dots , X_n)\) 独立，且 \(X_i\) 的边缘密度函数 \(f_i(x_i)\) 和 \(g_i(x_i)\) 只相差一个常数因子
-</p>
-
-\begin{thm}[连续随机变量独立性定理三]
-\end{thm}
-<p>
-若连续随机向量 \((X_1, \dots , X_n)\) 相互独立，而 \[Y_1 = g_1(X_1, \dots ,X_m) , \quad Y_2 = g_2(X_{m+1}, \dots ,X_n)\] ,则 \(Y_1\) 与 \(Y_2\) 独立
-</p>
-
-\begin{de}[离散型随机变量独立性定义]
-\end{de}
-<p>
-\((X_1, \dots , X_n)\) 都是离散随机变量，对任何常数 \(a_1, a_2, \dots, a_n\) 下式都成立，则称 \((X_1, \dots , X_n)\) 独立
-</p>
-\begin{equation}
-P(X_1 = a, \dots ,X_n = a_n) = P(X_1 = a_1) \dots P(X_n = a_n)
-\end{equation}
-
-<p>
-连续性随机变量的三条定理适用于离散数学随机变量
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org0871e08" class="outline-3">
-<h3 id="org0871e08">随机变量的函数的概率分布</h3>
-<div class="outline-text-3" id="text-org0871e08">
-</div><div id="outline-container-org3d4d83b" class="outline-4">
-<h4 id="org3d4d83b">离散型分布的情况</h4>
-<div class="outline-text-4" id="text-org3d4d83b">
-<p>
-用概率概率思维解决问题：
-</p>
-<ul class="org-ul">
-<li>多项分布： 设 \((X_1, X_2, \dots , X_n)\) 服从多项分布 \(M(N; p_1, \dots , p_n) \quad (n ⩾ 3)\) ,则 \(Y = X_1 + X_2\) 服从二项分布 \(B(N, p_1 + p_2)\) ，可以从公式去计算，也可以从概率角度去理解，多项分布定义 n 个事件 \(A_1, A_2, \dots , A_n\) , \(X_1, X_2, \dots , X_n\) 分别是他们在 N 次试验中发生的次数，先记  \(A = A_1 + A_2\) ,则事件 \(A, A_3, \dots , A_n\) 仍然构成一个万别事件群，其概率分别为 \(p_1 + p_2, p_3, \dots , p_n\) ，记 \(Y = X_1 + X_2\) ，则  \((Y, X_3, \dots , X_n)\) 构成多项分布 \(B(N, p_1 + p_2, p_3, \dots , p_n)\) ，而 Y 成为这个多项分布的一个边缘分布，可得上述结论</li>
-<li>二项分布: 设 \(X_1\) 和 \(X_2\) ，分别服从二项分布 \(B(n_1, p)\) 和 \(B(n_2, p)\) ，则 \(Y = X_1 + X_2\) 服从二项分布 \(B(n_1 + p_2, p)\)</li>
-<li>波松分布: 设 \(X_1\) 和 \(X_2\) ，分别服从泊松分布 \(P(λ_1)\) 和 \(P(λ_2)\) ，则 \(Y = X_1 + X_2\) 服从泊松分布 \(P(λ_1 + λ_2)\)</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-org1982a03" class="outline-4">
-<h4 id="org1982a03">连续型分布的情况：一般讨论</h4>
-<div class="outline-text-4" id="text-org1982a03">
-\begin{de}[单变量函数的密度函数]
-\end{de}
-<p>
-设 X 有密度函数 f(x)，\(Y = g(X)\) ,其反函数 \(X = h(Y)\) 存在，且 h 的导数 \(h'\) 存在，则 Y 的密度函数如下式
-</p>
-\begin{equation}
-l(y) = f(h(y))|h'(y)|
-\end{equation}
-
-\begin{de}[二变量函数的密度函数]
-\end{de}
-<p>
-设 \(X_1, X_2\) 有密度函数 \(f(x_1, x_2)\) ，\(Y_1, Y_2\) 都是 \(X_1, X_2\) 的函数： \[Y_1 = g_1(X_1, X_2), \quad Y_2 = g_2(X_1, X_2)\] ,其反函数 \[X_1 = h_1(Y_1, Y_2), \quad X_2 = h_2(Y_1, Y_2)\] 存在，又假定 \(g_1, g_2\) 都有一阶连续偏导数， \(h_1, h_2\) 也有连续偏导数，在一一对应变换的情况下，雅可比行列式如下式，则 \((Y_1, Y_2)\) 的密度函数见下式 
-</p>
-\begin{equation*}
-\symbf{J}(y_1, y_2) = \left|\begin{array}{ll}
-               {\partial h_1} \divslash {\partial y_1} & \quad {\partial h_1} \divslash {\partial y_2} \\
-               {\partial h_2} \divslash {\partial y_2} & \quad {\partial h_2} \divslash {\partial y_2}
-              \end{array} \right|
-\end{equation*}
-\begin{equation}
-l(y_1, y_2) = f(h_1(y_1, y_2), h_2(y_1, y_2))|\symbf{J}(y_1, y_2)|
-\end{equation}
-
-\begin{de}[多变量函数的密度函数]
-\end{de}
-<p>
-设 \(X_1, \dots , X_2\) 有密度函数 \(f(x_1, \dots , x_2)\) ，\(Y_1, Y_2, \dots , Y_n\) 都是 \(X_1, X_2, \dots ,X_n\) 的函数： \[Y_i = g_i(X_1, X_2, \dots, X_n) \quad (i = 1, \dots, n)\] ,其反函数 \[X_i = h_i(Y_1, Y_2, \dots , Y_n) \quad (i = 1, \dots ,n)\] 存在，又假定 \(g_1, g_2, \dots ,g_n\) 都有一阶连续偏导数， \(h_1, h_2, \dots , h_n\) 也有连续偏导数，在一一对应变换的情况下，雅可比行列式如下式，则 \((Y_1, Y_2, \dots , Y_n)\) 的密度函数见下式 
-</p>
-\begin{equation*}
-\symbf{J}(y_1, y_2, \dots , y_n) = \left|\begin{array}{lll}
-                                 {\partial h_1} \divslash {\partial y_1} & \quad \dots & \quad {\partial h_1} \divslash {\partial y_2} \\
-                                 \vdots                    & \quad   & \quad ⋮                         \\
-                                 {\partial h_2} \divslash {\partial y_2} & \quad \dots & \quad {\partial h_2} \divslash {\partial y_2} \\
-                               \end{array} \right|
-\end{equation*}
-\begin{equation}
-l(y_1, y_2, \dots , y_n) = f(h_1(y_1, y_2, \dots ,y_n), \dots , h_n(y_1, y_2, \dots , y_n))|\symbf{J}(y_1, y_2, \dots ,y_n)|
-\end{equation}
-</div>
-</div>
-
-<div id="outline-container-org5b6f54b" class="outline-4">
-<h4 id="org5b6f54b">随机变量和的密度函数</h4>
-<div class="outline-text-4" id="text-org5b6f54b">
-\begin{de}[二维随机变量和密度函数]
-\end{de}
-<p>
-设 \((X_1, X_2)\) 的联合密度函数为 \(f(x_1, x_2)\) , 则 \(Y = X_1 + X_2\) 的密度函数如下式
-</p>
-\begin{equation}
-  l(y) = \int_{-\infty}^\infty f(y-x, x)dx = \int_{-\infty}^\infty f(x, y-x)dx
-\end{equation}
-<p>
-若 \(X_1\) 与 \(X_2\) 独立，则
-</p>
-\begin{equation*}
-  l(y) = \int_{-\infty}^\infty f_1(y-x)f_2(x)dx = \int_{-\infty}^\infty f_1(x)f_2(y-x)dx
-\end{equation*}
-
-\begin{de}[正态分布和密度函数]
-\end{de}
-<p>
-设 \((X_1, X_2)\) 分别服从正太分布 \(N(\mu_1, \sigma_1^2), N(\mu_2, σ_2^2)\) ,则 \(Y = X_1 + X_2\) 服从二维正太分布 \(N(u_1 + \mu_2, σ_1^2 + σ_2^2 + 2\rho\sigma_1\sigma_2)\) , \(Y = X_1 + X_2\) 的密度函数如下式
-</p>
-\begin{equation}
-l(y) = \frac{1}{\sqrt{2\pi(σ_1^2 + σ_2^2 + 2\rho\sigma_1\sigma_2)}}exp\left[-\frac{(y-\mu_1 -\mu_2)^2}{2(σ_1^2 + σ_2^2 + 2\rho\sigma_1\sigma_2)}\right]
-\end{equation}
-
-<p>
-由(<a href="#orgf51533b">1</a>)可以看出，若 Y 服从正太分布，则 Y 可以表示成两个随机变量 \(X_1, X_2\) 之和，且 \(X_1, X_2\) 也必须服从正太分布，这个性质称为 “正态分布的再生性” ，显然对多个变量上式仍成立。
-</p>
-
-<p>
-两个重要的函数： <a href="#org6b17ca8">\(Γ\) 函数</a> 和 <a href="#org5c2fb9c">\(\Beta\) 函数</a> 公式
-</p>
-\begin{equation}
-\Gamma(x) = \int_0^\infty e^{ - t}t^{x - 1}dt \quad (x > 0)
-\end{equation}
-\begin{equation}
-\Beta(x, y) = \int_0^1 t^{x - 1} (1-t)^{y-1} dt \quad (x, y > 0)
-\end{equation}
-
-<p>
-由 <a href="#org6b17ca8">\(Γ\) 函数</a> 和 <a href="#org5c2fb9c">\(\Beta\) 函数</a> 公式，可以计算出下面结论
-</p>
-\begin{equation}
-\begin{split}
-& Γ(1) = 1 \\
-& Γ(1/2) = \sqrt{\pi} \\
-& Γ(n) = (n-1)! \\
-& Γ(n/2) = 1*3*5\dots*(n-2)*2^{-(n-1)/2}\sqrt{\pi} \\
-& F(x + 1) = x\Gamma(x) \\
-& \Beta(x, y) = \Gamma(x)\Gamma(y) \divslash \Gamma(x, y)
-\end{split}
-\end{equation}
-</div>
-
-<ul class="org-ul"><li><a id="org09c53d7"></a>卡方分布<br><div class="outline-text-5" id="text-org09c53d7">
-\begin{de}[卡方分布定义]
-\end{de}
-<p>
-若 \(X_1, X_2, \dots , X_n\) 相互独立，都服从正太分布 \(N(0, 1)\) ,则 \(Y = X_1^2 + \dots + X_n^2\) 服从自由度为 n 的卡方分布 \(\chi_n^2\) ,其密度函数见下式
-</p>
-\begin{equation}
-k_n (x) = \left\{\begin{array}{ll}
-               \frac{1}{Γ(2/n)2^{n/2}}e^{-x/2} x^{(n-2)/2} & \quad if x > 0 \\
-               0 & \quad if x ⩽ 0
-              \end{array} \right
-\end{equation}
-
-<p>
-上式(<a href="#orgc05842d">1</a>)称为自由度为 n 的皮尔逊卡方密度，相应的分布称为卡方分布
-</p>
-
-<p>
-卡方分布的性质：
-</p>
-<ul class="org-ul">
-<li>设 \(X_1, X_2\) 独立， \(X_1 \sim \chi_m^2, \, X_2 \sim \chi_n^2\) ,则  \(X_1 + X_2 \sim \chi_{m+n}^2\)</li>
-<li>若 \(X_1, \dots , X_n\) 独立，且都服从指数分布(<a href="#orgbd42826">1</a>) ,则 \[X = 2λ(X_1 + X_2 + \dots + X_n) \sim \chi_{2n}^n\]</li>
-</ul>
-</div></li></ul>
-</div>
-
-<div id="outline-container-org245f410" class="outline-4">
-<h4 id="org245f410">随机变量商的密度函数</h4>
-<div class="outline-text-4" id="text-org245f410">
-\begin{de}[随机变量商密度函数]
-\end{de}
-<p>
-设 \((X_1, X_2)\) 的联合密度函数为 \(f(x_1, x_2)\) , 则 \(Y = X_2/X_1\) 的密度函数如下式
-</p>
-\begin{equation}
-  l(y) = \int_0^\infty x_1f(x_1, x_1y)dx_1
-\end{equation}
-<p>
-若 \(X_1\) 与 \(X_2\) 独立，则
-</p>
-\begin{equation*}
-  l(y) = \int_0^\infty x_1f_1(x_1)f_2(x_1y)dx_1
-\end{equation*}
-</div>
-
-<ul class="org-ul"><li><a id="orga23bf35"></a>t 分布<br><div class="outline-text-5" id="text-orga23bf35">
-\begin{de}[t 分布定义]
-\end{de}
-<p>
-若 \(X_1, X_2\) 独立，都服从分布 \(X_1 \sim \chi_n^2, \, X_2 \sim N(0, 1)\) ,则 \(Y = X_2 ∕ \sqrt{X_1/n}\) 服从自由度为 n 的 t 分布 \(t_n, \quad Y \sim t_n\) ,其密度函数见下式
-</p>
-\begin{equation}
-  t_n (y) =  \frac{Γ(n + 1)/2}{Γ(n/2)\sqrt{2\pi{}}}\left( 1 + \frac{y^2}{n} \right)^{-\frac{(n+1}{2}}\Gamma\left(\frac{(n+1)}{2} \right)
-\end{equation}
-
-<p>
-当自由度 n 很大时，t 分布接近于正态分布
-</p>
-</div></li>
-
-<li><a id="orgb6f19ba"></a>F 分布<br><div class="outline-text-5" id="text-orgb6f19ba">
-\begin{de}[F 分布定义]
-\end{de}
-<p>
-若 \(X_1, X_2\) 独立，都服从卡方分布 \(X_1 \sim \chi_n^2, \, X_2 \sim \chi_m^2\) ,则 \(Y = m^{-1}X_2 ∕ (n^{-1}X_1)\) 服从自由度为 \(m, n\) 的 F 分布 \(Y \sim F_{mn}\) ,其密度函数见下式
-</p>
-\begin{equation}
-  f_{mn}(y) =  m^{m/2}n^{n/2} \frac{Γ((m + n)/2)}{Γ(m/2)Γ(n/2)} y^{m/2-1} (my + n)^{-(m+n)/2} 
-\end{equation}
-</div></li>
-
-<li><a id="org24777fe"></a>统计上的三大分布应用性质<br><div class="outline-text-5" id="text-org24777fe">
-<ul class="org-ul">
-<li>设 \(X_1, \dots , X_n\) 独立同分布，有公共的正态分布 \(N(\mu, σ^2)\) ,记 \(\overbar{X} = (X_1 + \dots + X_n)/n, \, S^2 = \sum_{i=1}^n (X_i - \overbar{X})^2/(n-1)\) ，则 \[(n-1)S^2 ∕σ^2 = \sum_{i=1}^n (X_i - \overbar{X})^2 ∕σ^2 \sim \chi_{n-1}^2\]</li>
-<li>\(X_1, \dots , X_n\) 假定同上，则 \[\sqrt{n}(\overbar{X} - \mu) ∕S \sim t_{n-1}\]</li>
-<li>设 \(X_1, \dots , X_n\) , \(Y_1, \dots , Y_m\) 独立，\(X_i\) 有公共的正态分布 \(N(\mu_1, σ_1^2)\) , \(Y_i\) 有公共的正态分布 \(N(\mu_2, σ_2^2)\) ,则 \[ \left[\sum_{j=1}^n (Y_j - \overbar{Y})^2 ∕(σ_2^2(m-1))\right] \xsol \left[\sum_{i=1}^n (X_i - \overbar{X})^2 ∕(σ_1^2(n-1))\right] \sim F_{m-1, n-1} \] 若 \(σ_1^2 = σ_2^2\) 则 \(N(\mu_2, σ_2^2)\) ,则 \[\left\sqrt{\frac{nm(n+m-2)}{n+m}}[(\overbar{X} \minus \overbar{Y}) - (\mu_1 \minus \mu_2)] ∕\left[\sum_{i=1}^n (X_i - \overbar{X})^2 \minus \sum_{j=1}^n (Y_j - \overbar{Y})^2\right] \sim t_{n+m-2} \]</li>
-</ul>
-</div></li></ul>
-</div>
-</div>
-
-<div id="outline-container-orgefc7428" class="outline-3">
-<h3 id="orgefc7428">例题</h3>
-</div>
-<div id="outline-container-orgf6e46d7" class="outline-3">
-<h3 id="orgf6e46d7">参考网页</h3>
-<div class="outline-text-3" id="text-orgf6e46d7">
-<p>
-<a href="http://blog.csdn.net/zhang22huan/article/details/8546822" target="_blank" rel="external">http://blog.csdn.net/zhang22huan/article/details/8546822</a>
-</p>
-</div>
-</div>
-</div>
-
-Last Updated 2017-05-29 Mon 22:30 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.2.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 9.0.7)
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2017/05/29/数据科学-数学和统计-概率论与数理统计-随机变量的数字特征/" itemprop="url">
                   数据科学-数学和统计-概率论与数理统计-随机变量的数字特征
                 </a>
@@ -1244,434 +406,165 @@ Last Updated 2017-05-29 Mon 22:30 by lengyueyang<br>Render by <a href="https://g
 
       
         
-          
-            
-
-
-
-<div id="outline-container-orgfed9cfc" class="outline-2">
-<h2 id="orgfed9cfc">随机变量的数字特征</h2>
-<div class="outline-text-2" id="text-orgfed9cfc">
-</div><div id="outline-container-orgcb1e17b" class="outline-3">
-<h3 id="orgcb1e17b">数学期望（均值）与中位数</h3>
-<div class="outline-text-3" id="text-orgcb1e17b">
-</div><div id="outline-container-orgf741855" class="outline-4">
-<h4 id="orgf741855">数学期望的定义</h4>
-<div class="outline-text-4" id="text-orgf741855">
+          <div id="outline-container-org39b36f0" class="outline-2">
+<h2 id="org39b36f0">随机变量的数字特征</h2>
+<div class="outline-text-2" id="text-org39b36f0">
+</div><div id="outline-container-org147ef38" class="outline-3">
+<h3 id="org147ef38">数学期望（均值）与中位数</h3>
+<div class="outline-text-3" id="text-org147ef38">
+</div><div id="outline-container-org95628d2" class="outline-4">
+<h4 id="org95628d2">数学期望的定义</h4>
+<div class="outline-text-4" id="text-org95628d2">
 \begin{de}[离散型随机变量数学期望]
 \end{de}
 <p>
 设离散型随机变量 X 只取有限个可能值 \(a_1, \dots , \a_n\) , 其概率分布 \(P(X = a_i) = p_i \, (i = 1, \dots ,m)\) ,则 X 的数学期望记作 \(E(X) or EX\) 定义为 \[E(X) = a_1p_1 + \dots + a_np_n\] ,若 n 取无限个值，若下式收敛，则称其为 X 的数学期望，数学期望也常称为平均，这里平均是加权平均
 </p>
-\begin{equation}
-E(X) = \sum_{i = 1}^\infty a_ip_i
-\end{equation}
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/05/29/数据科学-数学和统计-概率论与数理统计-随机变量的数字特征/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
 
-\begin{de}[连续性随机变量数学期望]
-\end{de}
-<p>
-连续型随机变量 X 的密度函数是 \(f(x)\) ， 如果下式收敛，则称 \(E(X)\) 为 X 的数学期望
-</p>
-\begin{equation}
-  E(X) = \int_{-\infty}^\infty xf(x) dx
-\end{equation}
+    <div>
+      
+    </div>
 
-<p>
-几个重要分布的数学期望
-</p>
-<ul class="org-ul">
-<li>泊松分布的数学期望 是 λ (指定时间内发生时间的平均次数)</li>
-<li>二项分布的数学期望 是 np</li>
-<li>负二项分布的数学期望是 \(r(1-p)p\)</li>
-<li>均匀分布的数学期望是 \(\frac{a+b}{2}\)</li>
-<li>指数分布的数学期望是 \(λ^{-1}\) (在寿命分析中是平均寿命)</li>
-<li>正太分布的数学期望是 μ</li>
-</ul>
+    <div>
+      
+    </div>
 
-<p>
-数学期望由随机变量的分布完全决定，但在某些问题中，难于决定某些变量的分布如何，但有相当的根据（经验或理论）对期望值提出一些假定甚至有不少的了解；当需要通过观察或试验取得数据已经行估计时，估计随机变量的数字特征要比估计其分布容易且确切
-</p>
+    <footer class="post-footer">
+      
 
-<p>
-在理论和应用中重要原因：本身含义；具备的良好性质，如工人的工资，容易知道其均值，单分布未知
-</p>
-</div>
-</div>
+      
 
-<div id="outline-container-org3299db7" class="outline-4">
-<h4 id="org3299db7">数学期望的性质</h4>
-<div class="outline-text-4" id="text-org3299db7">
-\begin{thm}[数学期望性质-1]
-\end{thm}
-<p>
-若随机变量 \(X_1, \dots , X_n\) 的数学期望存在，则其和的期望等于各变量的期望之和，如下式
-</p>
-\begin{equation}
-E(X_1 + \dots + X_n) = E(X_1) + \dots + E(X_n)
-\end{equation}
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
 
-\begin{thm}[数学期望性质-2]
-\end{thm}
-<p>
-若独立随机变量 \(X_1, \dots , X_n\) 的数学期望存在，则其积的期望等于各变量的期望之积，如下式
-</p>
-\begin{equation}
-E(X_1 \dots X_n) = E(X_1)  \dots  E(X_n)
-\end{equation}
 
-\begin{thm}[数学期望性质-3]
-\end{thm}
-<p>
-若随机变量 X 为离散型，有分布 \(P(X = a_i) = p_i \quad (i = 1, \dots , n)\) ,或者为连续型，有概率密度函数 \(f(x)\) ,则有下式
-</p>
-\begin{equation}
-E(g(X)) = \sum_ig(a_i)p_i \quad (if \sum_ig(a_i)p_i < ∞)
-\end{equation}
-\begin{equation}
-  E(g(X)) = \int_{-\infty}^\infty g(x)f(x)dx \quad (if \int_{-\infty}^\infty |g(x)|f(x)dx < \infty)
-\end{equation}
+    
+      
 
-<p>
-统计三大分布的期望：
-</p>
-<ul class="org-ul">
-<li>\(X \sim \chi_n^2, \, E(X) = n\)</li>
-<li>\(X \sim t_n, \, E(X) = 0 \quad (n > 1)\)</li>
-<li>\(X \sim F_{m,n}, \, E(X) = n(n-2) \quad (n >2)\)</li>
-</ul>
-</div>
-</div>
+  
+  
 
-<div id="outline-container-org3f7b6d6" class="outline-4">
-<h4 id="org3f7b6d6">条件数学期望（条件均值）</h4>
-<div class="outline-text-4" id="text-org3f7b6d6">
-<p>
-条件数学期望公式
-</p>
-\begin{equation}
-E(Y|x) = \int_{-\infty}^\infty yf(y|x)dy
-\end{equation}
+  
+  
+  
 
-<p>
-意义：反映了随着 X 取值 x 的变化，Y 的平均变化情况如何，如对 \((X, Y) \sim N(a, b, σ_1^2, σ_2^2, \rho)\) ,在给定 \(X = x\) 条件下的正态分布为 \(N(b + \rho \sigma_2\sigma_1^{-1}(x_1 - a), (1-\rho^2)σ_2^2)\) ，故 \[E(Y|x) = b + \rho \sigma_2\sigma_1^{-1}(x_1 - a)\]
-</p>
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
 
-<p>
-期望的条件数学期望公式
-</p>
-\begin{equation}
-\begin{split}
-E(Y) = \int_{-\infty}^\infty E(Y|x)f_1(x)dx \\
-E(Y) = \int_{-\infty}^\infty g(x)f_1(x)dx \quad (g(x) = E(Y|x)) \\
-E(Y) = E[E(Y|x)]
-\end{split}
-\end{equation}
+    
+      <header class="post-header">
 
-<p>
-上述最后一个式子可以叙述为：一个变量 Y 的期望，等于其条件期望的期望(离散、连续)
-</p>
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/29/数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布/" itemprop="url">
+                  数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布
+                </a>
+              
+            
+          </h1>
+        
 
-<p>
-在统计学上，常把条件期望 \(E(Y|x)\) 作为 x 的函数，称为 Y 对 X 的“回归函数”，“回归分析”即关于回归函数的统计研究
-</p>
-
-<p>
-变量 Y 的（无条件）期望 = Y 的无条件期望 \(E(Y|x)\) 对 x 取加权平均，x 的权与变量 X 在 x 点的概率密度称比例
-</p>
-</div>
-</div>
-
-<div id="outline-container-org947c07c" class="outline-4">
-<h4 id="org947c07c">中位数</h4>
-<div class="outline-text-4" id="text-org947c07c">
-\begin{de}[中位数定义]
-\end{de}
-<p>
-设连续随机变量 X 的分布函数为 \(F(x)\) ,则满足下式的数 m 称为 X 或者分布 F 的中位数
-</p>
-\begin{equation}
-P(X ⩽ m) = F(m) = 1/2
-\end{equation}
-
-<p>
-和数学期望一样，中位数用于刻画一个随机变量 X 的平均取值的数学特征
-</p>
-
-<p>
-与数学期望相比的优点：受个别特大或特小值的影响很小；中位数总存在
-</p>
-
-<p>
-在理论和应用中数学期望重要性超过中位数的原因：均值有很多优良的性质；中位数不唯一且离散型变量中位数不完全符合“中位”含义
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org51c4c67" class="outline-3">
-<h3 id="org51c4c67">方差与钜</h3>
-<div class="outline-text-3" id="text-org51c4c67">
-</div><div id="outline-container-org94c18b3" class="outline-4">
-<h4 id="org94c18b3">方差和标准差</h4>
-<div class="outline-text-4" id="text-org94c18b3">
-\begin{de}[方差定义]
-\end{de}
-<p>
-X 为随机变量，其分布为 F，则 \(Var(X)\)(见下式) 称为 X(或分布 F)的方差，其平方根(取正值)称为标准差
-</p>
-\begin{equation}
-Var(X) = E(X - EX)^2 = E(X^2) - (EX)^2
-\end{equation}
-
-<p>
-方差的数学性质：
-</p>
-\begin{thm}[方差的数学性质-1]
-\end{thm}
-<ul class="org-ul">
-<li>常数的方差是 0</li>
-<li>若 c 为常数，则 \(Var(X + c) = Var(X)\)</li>
-<li>若 c 为常数，则 \(Var(cX) = c^2Var(X)\)</li>
-</ul>
-\begin{thm}[方差的数学性质-2]
-\end{thm}
-<p>
-独立随机变量之和的方差等于各变量的方差之和，公式如下
-</p>
-\begin{equation}
-Var(X_1 + \dots + X_n) = Var(X_1) + \dots + Var(X_n)
-\end{equation}
-
-<p>
-方差是刻画随机变量在其中心附近散布程度的数字特征之一
-</p>
-
-<p>
-平均绝对差是刻画随机变量散布度的数字特征之一
-</p>
-
-<p>
-几个重要分布的数学期望
-</p>
-<ul class="org-ul">
-<li>泊松分布的数学方差是 λ (指定时间内发生时间的平均次数)</li>
-<li>二项分布的数学方差是 \(np(1-p)\)</li>
-<li>均匀分布的数学方差是 \(\frac{(b-a)^2}{12}\)</li>
-<li>指数分布的数学方差是 \(λ^{-2}\)</li>
-<li>正太分布的数学方差是 \(σ^2\)</li>
-</ul>
-
-<p>
-统计三大分布的期望：
-</p>
-<ul class="org-ul">
-<li>\(X \sim \chi_n^2, \, var(X) = 2n\)</li>
-<li>\(X \sim t_n, \, Var(X) = n ∕ (n-2) \quad (n > 2)\)</li>
-<li>\(X \sim F_{m,n}, \, Var(X) = 2n^2(m+n-2) ∕ [m(n-2)^2(n-4)] \quad (n > 4)\)</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-org0d286a3" class="outline-4">
-<h4 id="org0d286a3">钜</h4>
-<div class="outline-text-4" id="text-org0d286a3">
-\begin{de}[矩定义]
-\end{de}
-<p>
-设 X 为随机变量，c 为常数，k 为正整数，则量 \(E[(X-c)^k]\) 称为 X 关于 c 点的 k 阶矩
-</p>
-
-<p>
-矩比较重要的性质
-</p>
-<ul class="org-ul">
-<li>\(c = 0\) ， \(α^k = E(X^k)\) 称为 X 的 k 阶原点矩</li>
-<li>\(c = E(X)\) ， \(\mu^k = E[(X-EX)^k]\) 称为 X 的 k 阶中心距</li>
-</ul>
-
-<p>
-一阶原点矩为期望；一阶中心距为 0；二阶中心距为方差
-</p>
-
-<p>
-统计学上，高于 4 阶的钜极少使用
-</p>
-
-<p>
-三阶中心距：
-衡量分布是否有偏：对称为 0；大于 0 为正偏或右偏；小于 0 为负偏或左偏
-偏度系数为 \(\beta_1\) ，则
-</p>
-\begin{equation}
-\beta_1 = u_3 ∕ u_2^(3/2)
-\end{equation}
-
-<p>
-四阶中心距：
-衡量分布（密度）在均值附近的陡峭程度如何。越陡峭值越小
-峰度系数为 \(\beta_2\) 则
-</p>
-\begin{equation}
-\beta_2 = u_4 ∕ u_2^2
-\end{equation}
-</div>
-</div>
-</div>
-
-<div id="outline-container-org834a360" class="outline-3">
-<h3 id="org834a360">协方差与相关系数</h3>
-<div class="outline-text-3" id="text-org834a360">
-\begin{de}[协方差定义]
-\end{de}
-<p>
-设 \(X, Y\) 是二维随机变量，X，Y 本身都是一维随机变量，记 \[E(X) = m_1, E(Y) = m_2, Var(X) = σ_1^2, var(Y) = σ_2^2\] , 则称 \(E[(X-m_1)(Y-m_2)]\) 为 \(X, Y\) 的协方差，记为 \(Cov(X, Y)\) ，有 \(Cov(X, Y) = Cov(Y, X)\) ，且有 \[Cov(c_1X + c_2, c_3Y +c_4) = c_1c_3Cov(X, Y)\] , \[Cov(X, Y) = E(XY) - m_1m_2\]
-</p>
-
-\begin{thm}[协方差性质]
-\end{thm}
-<ul class="org-ul">
-<li>若 X，Y 独立，则 \(Cov(X, Y) = 0\)</li>
-<li>\([Cov(X, Y)]^2 ⩽ σ_1^2σ_2^2\) , 等号成立当且仅当 X，Y 之间有严格的线性关系(即：存在常数 a，b 使得 Y=a+bX)</li>
-</ul>
-
-<p>
-协方差意义：多维随机变量的数字特征，反应分量之间的关系
-</p>
-
-\begin{de}[相关系数定义]
-\end{de}
-<p>
-设 \(X, Y\) 是二维随机变量，X，Y 本身都是一维随机变量，记 \[E(X) = m_1, E(Y) = m_2, Var(X) = σ_1^2, var(Y) = σ_2^2\] , 则称 \(Cov(X, Y) ∕ (σ_1σ_2)\) 为 \(X, Y\) 的相关系数，并记为 \(Corr(X, Y)\)
-</p>
-
-\begin{thm}[相关系数性质]
-\end{thm}
-<ul class="org-ul">
-<li>若 X，Y 独立，则 \(Corr(X, Y) = 0\)</li>
-<li>\(|Corr(X, Y)]| ⩽ 1\) , 等号成立当且仅当 X，Y 之间有严格的线性关系(即：存在常数 a，b 使得 Y=a+bX)</li>
-</ul>
-
-<p>
-相关系数意义：标准尺度下的协方差
-</p>
-
-<p>
-不相关和独立间的关系：Corr(X,Y)=0，表示 X 和 Y 不相关，X 和 Y 相关不一定独立，但独立一定相关
-</p>
-
-<p>
-相关系数也称为线性相关系数。若 0<abs(cov(x,y))<1，则表示：x,y 之间有一定程度的线性关系而非严格的线性关系="" <="" p="">
-
-<p>
-“线性相关”的最小二乘解释： 由 \[m_2 = bm_1 + a, b = σ_1^{-1}\sigma_2Corr(X, Y)\]
-</p>
-
-<p>
-二维正态分布的相关系数特性：
-</p>
-<ul class="org-ul">
-<li>若 \((X, Y)\) 为二维正态分布，则允许用任何函数 M(X) 去逼近 Y，所得到的结果与线性逼近结果类似，而线性逼近的程度完全取决于相关系数</li>
-<li>若 \((X, Y)\) 为二维正态分布，由  \(Corr(X, Y) = 0\) 可以推出 X，Y 独立，即在这种情况下，独立与相关等同</li>
-</ul>
-</abs(cov(x,y))<1，则表示：x,y></p></div>
-</div>
-
-<div id="outline-container-orgbca2058" class="outline-3">
-<h3 id="orgbca2058">大数定理和中心极限定理</h3>
-<div class="outline-text-3" id="text-orgbca2058">
-</div><div id="outline-container-orgd05db81" class="outline-4">
-<h4 id="orgd05db81">大数定理</h4>
-<div class="outline-text-4" id="text-orgd05db81">
-\begin{thm}[大数定理定义]
-\end{thm}
-<p>
-设 \(X_1, X_2, \dots , X_n\) 是独立同分布的随机变量，记他们的公共均值为 a，又设他们的方差存在并记为 \(σ^2\) , 则对任意给定的 \(ε > 0\) , 有下式成立，指出了 “当 n 很大时， \(\overbar(X)\) 接近于 a”，在概率论中叫做 " \(\overbar(X)\) 依概率收敛于 a"
-</p>
-\begin{equation}
-  \lim_{n\to\infty} P(|\overbar(X) - a| \geqslant \varepsilon) = 0
-\end{equation}
-<p>
-上式一个重要的推广是伯努利大数定理，即 “频率收敛于概率”，公式如下
-</p>
-\begin{equation}
-  \lim_{n\to\infty} P(p_n - p| \geqslant \varepsilon) = 0
-\end{equation}
-
-<p>
-大数定理的证明需要用到马尔科夫不等式和切比雪夫不等式，如下
-若 Y 为只能取非负值的随机变量， \(Var(Y)\) 存在，则对仍给常数 \(ε > 0\) , 有
-</p>
-
-<p>
-马尔科夫不等式
-</p>
-\begin{equation}
-P(Y ⩾ ε) ⩽ E(Y) ∕ ε
-\end{equation}
-<p>
-切比雪夫不等式
-</p>
-\begin{equation}
-P(|Y-EY| ⩾ ε) ⩽ Var(Y) ∕ ε^2
-\end{equation}
-</div>
-</div>
-
-<div id="outline-container-orgc009d4e" class="outline-4">
-<h4 id="orgc009d4e">中心极限定理</h4>
-<div class="outline-text-4" id="text-orgc009d4e">
-\begin{thm}[林徳伯格定理]
-\end{thm}
-<p>
-设 \(X_1, X_2, \dots , X_n\) 为独立同分布的随机变量， \(E(X_i) = a_i, Var(X_i) = σ^2 (σ^2 > 0)\) , 则对任何实数 x，有下式成立，其中 \(\Phi(x)\) 是标准正态分布 \(N(0, 1)\) 的分布函数
-</p>
-\begin{equation}
-  \lim_{n\to\infty} P\left( \frac{1}{\sqrt{n}σ}(X_1 + \dots + X_n - na) \leqslant x \right) = \Phi(x)
-\end{equation}
-<p>
-虽则在一般情况很难求出 \(X_1, X_2, \dots , X_n\) 的分布的确切形式，但当 n 很大时，可通过正态分布求其近似值
-</p>
-
-\begin{thm}[棣莫弗-拉普拉斯定理
-\end{thm}
-<p>
-设 \(X_1, X_2, \dots , X_n\) 为独立同分布的随机变量， \(X_i\) 的分布是 \[P(X_i =1) = p, \quda P(X_i = 0) = 1-p \quad (0<p<1)\] ,="" 则对任何实数="" x，有下式成立，其中="" \(\phi(x)\)="" 是标准正态分布="" \(n(0,="" 1)\)="" 的分布函数="" <="" p="">
-\begin{equation}
-  \lim_{n\to\infty} P\left( \frac{1}{\sqrt{np(1-p)}}(X_1 + \dots + X_n - np) \leqslant x \right) = \Phi(x)
-\end{equation}
-
-<p>
-<a href="#orgca69594">棣莫弗-拉普拉斯定理</a> 是 <a href="#org7e82c02">林徳伯格定理</a> 的特例，是用正态分布去逼近二项分布(当 p 固定，n 很大时，np 值很大)，也可以用泊松分布去逼近二项分布(p 很小，np = λ 不太大时)，二者相同点是 n 值很大
-</p>
-
-<p>
-若 \(t_1, t_2\) 是两个正整数， \(t_1 < t_2\) ， 则当 n 相当大时，按照 <a href="#orga1416c5">1</a> ，近似有 \[P(t_1 ⩽ X_1 + \dots + X_n ⩽ t_2) = Φ(y_2) - \Phi(y_1)\] 其中 \[y_i = (t_i - np) ∕ \sqrt{np(1-p) \quad (i = 1, 2)}\]
-若将 \(y_1, y_2\) 修正为 \[y_1 = \left( t_1 - \frac{1}{2} -np\right) ⧸ \sqrt{np(1-p)}\]   \[y_2 = \left( t_2 + \frac{1}{2} -np\right) ⧸ \sqrt{np(1-p)}\] 再利用公式，则可提高精度
-</p>
-
-<p>
-中心极限定理的推广方向：独立不同分布情形；非独立情形；由中心极限定理引起的误差；大偏差问题
-</p>
-</p<1)\]></p></div>
-</div>
-</div>
-
-<div id="outline-container-org75437c4" class="outline-3">
-<h3 id="org75437c4">例题</h3>
-</div>
-<div id="outline-container-org34aa077" class="outline-3">
-<h3 id="org34aa077">参考网页</h3>
-<div class="outline-text-3" id="text-org34aa077">
-<p>
-<a href="http://blog.csdn.net/zhang22huan/article/details/8631101" target="_blank" rel="external">http://blog.csdn.net/zhang22huan/article/details/8631101</a>
-</p>
-</div>
-</div>
-</div>
-
-Last Updated 2017-05-29 Mon 22:36 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.2.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 9.0.7)
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-05-29T08:00:00+08:00" content="2017-05-29">
+              2017-05-29
+            </time>
+          </span>
 
           
+
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/DATA-SCIENTIST/" itemprop="url" rel="index">
+                    <span itemprop="name">DATA SCIENTIST</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/05/29/数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/05/29/数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <div id="outline-container-org0ed070f" class="outline-2">
+<h2 id="org0ed070f">随机变量及其概率分布</h2>
+<div class="outline-text-2" id="text-org0ed070f">
+</div><div id="outline-container-orgb0b82d3" class="outline-3">
+<h3 id="orgb0b82d3">一维随机变量</h3>
+<div class="outline-text-3" id="text-orgb0b82d3">
+</div><div id="outline-container-org24734f0" class="outline-4">
+<h4 id="org24734f0">随机变量的概念</h4>
+<div class="outline-text-4" id="text-org24734f0">
+<p>
+随机变量的定义：“其值随机会而定”的变量，是试验结果的函数
+</p>
+
+<p>
+随机变量的反面为确定性变量，其取值遵循某种严格的规律的变量；
+</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/05/29/数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
