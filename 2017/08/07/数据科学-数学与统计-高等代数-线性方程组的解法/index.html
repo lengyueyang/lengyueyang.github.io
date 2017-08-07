@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Emacs,Org-mode," />
+  <meta name="keywords" content="Linear algebra," />
 
 
 
@@ -89,17 +89,17 @@
 
 
 
-<meta name="description" content="Orgmode   Why orgmode   consol.log(&quot;hello&quot;);     Insert html">
-<meta name="keywords" content="Emacs,Org-mode">
+<meta name="description" content="概述   高等代数的学习部分用以下书籍    邱维声, (2010). 高等代数. : 清华大学出版社. Hom, R. A. (2014). 矩阵分析. : 机械工业出版社.  张贤达, (2013). 矩阵分析与应用. : 清华大学出版社.">
+<meta name="keywords" content="Linear algebra">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Org-mode test">
-<meta property="og:url" content="http://lengyueyang.github.io/2016/01/30/Org-mode test/index.html">
+<meta property="og:title" content="数据科学-数学与统计-高等代数-线性方程组的解法">
+<meta property="og:url" content="http://lengyueyang.github.io/2017/08/07/数据科学-数学与统计-高等代数-线性方程组的解法/index.html">
 <meta property="og:site_name" content="深度识医">
-<meta property="og:description" content="Orgmode   Why orgmode   consol.log(&quot;hello&quot;);     Insert html">
-<meta property="og:updated_time" content="2017-04-08T03:13:53.532Z">
+<meta property="og:description" content="概述   高等代数的学习部分用以下书籍    邱维声, (2010). 高等代数. : 清华大学出版社. Hom, R. A. (2014). 矩阵分析. : 机械工业出版社.  张贤达, (2013). 矩阵分析与应用. : 清华大学出版社.">
+<meta property="og:updated_time" content="2017-08-07T14:16:17.741Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Org-mode test">
-<meta name="twitter:description" content="Orgmode   Why orgmode   consol.log(&quot;hello&quot;);     Insert html">
+<meta name="twitter:title" content="数据科学-数学与统计-高等代数-线性方程组的解法">
+<meta name="twitter:description" content="概述   高等代数的学习部分用以下书籍    邱维声, (2010). 高等代数. : 清华大学出版社. Hom, R. A. (2014). 矩阵分析. : 机械工业出版社.  张贤达, (2013). 矩阵分析与应用. : 清华大学出版社.">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://lengyueyang.github.io/2016/01/30/Org-mode test/"/>
+  <link rel="canonical" href="http://lengyueyang.github.io/2017/08/07/数据科学-数学与统计-高等代数-线性方程组的解法/"/>
 
 
 
 
 
-  <title> Org-mode test | 深度识医 </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> 数据科学-数学与统计-高等代数-线性方程组的解法 | 深度识医 </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -333,7 +333,7 @@
             
             
               
-                Org-mode test
+                数据科学-数学与统计-高等代数-线性方程组的解法
               
             
           </h1>
@@ -345,8 +345,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-01-30T08:00:00+08:00" content="2016-01-30">
-              2016-01-30
+            <time itemprop="dateCreated" datetime="2017-08-07T08:00:00+08:00" content="2017-08-07">
+              2017-08-07
             </time>
           </span>
 
@@ -365,8 +365,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/EMACS/" itemprop="url" rel="index">
-                    <span itemprop="name">EMACS</span>
+                  <a href="/categories/DATA-SCIENTIST/" itemprop="url" rel="index">
+                    <span itemprop="name">DATA SCIENTIST</span>
                   </a>
                 </span>
 
@@ -381,8 +381,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/30/Org-mode test/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/30/Org-mode test/" itemprop="commentsCount"></span>
+                <a href="/2017/08/07/数据科学-数学与统计-高等代数-线性方程组的解法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/08/07/数据科学-数学与统计-高等代数-线性方程组的解法/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -407,26 +407,146 @@
       
         
 
-<div id="outline-container-org3ffb3a0" class="outline-2">
-<h2 id="org3ffb3a0">Orgmode</h2>
-<div class="outline-text-2" id="text-org3ffb3a0">
-</div><div id="outline-container-org579bc3a" class="outline-3">
-<h3 id="org579bc3a">Why orgmode</h3>
-<div class="outline-text-3" id="text-org579bc3a">
-<div class="org-src-container">
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">consol.log(<span class="string">"hello"</span>);</span><br></pre></td></tr></table></figure>
-</div>
-</div>
-</div>
-<div id="outline-container-org8961a2d" class="outline-3">
-<h3 id="org8961a2d">Insert html</h3>
-<div class="outline-text-3" id="text-org8961a2d">
+
+<div id="outline-container-orgdeb5bf1" class="outline-2">
+<h2 id="orgdeb5bf1">概述</h2>
+<div class="outline-text-2" id="text-orgdeb5bf1">
+<p>
+高等代数的学习部分用以下书籍
+</p>
+
+<p>
+邱维声, (2010). 高等代数. : 清华大学出版社.
+Hom, R. A. (2014). 矩阵分析. : 机械工业出版社. 
+张贤达, (2013). 矩阵分析与应用. : 清华大学出版社.
+</p>
 <a id="more"></a>
+</div>
+</div>
+<div id="outline-container-org9dcb325" class="outline-2">
+<h2 id="org9dcb325">线性方程组的解法</h2>
+<div class="outline-text-2" id="text-org9dcb325">
+</div><div id="outline-container-orgb2bf5b7" class="outline-3">
+<h3 id="orgb2bf5b7">解线性方差组的矩阵消元法</h3>
+<div class="outline-text-3" id="text-orgb2bf5b7">
+<p>
+左端都是未知量 \(x_1, x_2, \dots , x_n\) 的一次其次式，右端是常数的方程组称为线性方程组，每个未知量前面的数称为系数，右端的项称为常数项。为了书写简便，对于一个线性方程组，可以只写出它的系数和常数项，并且把它们按照原来的次序排成一张表，这张表称为线性方程组的 <b>增广矩阵</b> ，只列出系数的的表称为方程组的系数矩阵。
+</p>
+
+<p>
+含 n 个未知量的线性方程组称为 <b>n 元线性方程组</b> ，它的一般形式如下，其中， \(a_{11}, a_{12}, \dots, a_{sn}\) 是系数， \(b_1, b_2, \dots, b_s\) 是常数项，方程的个数 s 与未知量的个数 n 可以相等，也可以不等。
+</p>
+\begin{equation}
+\left\{
+\begin{split}
+&a_{11}x_1 + a_{12}x_2 + \dots + a_{1n}x_n = b_1&, \\
+&a_{21}x_1 + a_{22}x_2 + \dots + a_{2n}x_n = b_2&, \\ 
+&\dots  &, \\
+&a_{s1}x_1 + a_{s2}x_2 + \dots + a_{sn}x_n = b_s&,
+\end{split}
+\right
+\end{equation}
+
+<p>
+对于线性方程组(<a href="#orgb3b58b7">1</a>)，如果 \(x_1, x_2, \dots , x_n\) 分别用数 \(c_1, c_2, \dots , c_n\) 代入后，每个方程变成恒等式，称 n 元有序数组 \((c_1, c_2, \dots , c_n)\) 是线性方程组(<a href="#orgb3b58b7">1</a>) 的 <b>一个解</b> ，其所有解组成的集合称为这个方程组的 <b>解集</b> 。
+</p>
+
+<p>
+线性方程组的初等变换：1，把一个方程的倍数加到另外一个方程上；2，互换两个方程的位置；3，用一个非零数乘某一个方程；经过一系列初等变换成的简化阶梯形方程组与原线性方程组同解。
+</p>
+
+\begin{de}[矩阵定义]
+\end{de}
+<p>
+由 \(s \cdot m\) 个数排成 s 行、m 列的一张表，称为一个 \(s \times m\) <b>矩阵</b> ，其中的每一个数称为这个矩阵的一个元素，第 i 行与第 j 列交叉的位置，称为矩阵的 \((i, j)\) 元.
+</p>
+
+<p>
+元素全为 0 的矩阵称为零矩阵，简记作 0，s 行 m 列的零矩阵记作 \(0_{s \times m}\) , 如果一个矩阵的行数和列数相等, 则乘它为方阵, m 行 m 列的矩阵也称为 m 级矩阵. 矩阵通常用大写字母 A 表示, 一个  \(s \times m\) 的矩阵可以简单记作  \(A(i, j)\) , 如果矩阵 A 的 \((i, j)\) 元是 \(a_{ij}\) ,可以记作 \(A = a_{ij}\).
+</p>
+
+<p>
+矩阵的求解过程: 先将增广矩阵变化成阶梯形矩阵, 其特点是: 元素全为 0 的行(称为零行)在下方(如果有零行的话), 元素不为 0 的行(称为非零行), 从左边数起第一个不为 0 的元素(称为主元), 他们的列指标随着行指标的递增而严格增大. 之后再将阶梯形矩阵转化成简化阶梯形矩阵, 其特点是: 是阶梯形矩阵, 每个非零行主元都是 1, 每个主元所在的列其余元素都是 0.
+</p>
+
+\begin{thm}[阶梯形矩阵定理]
+\end{thm}
+<p>
+任意一个矩阵都可以经过一系列的初等行变换化成阶梯形矩阵.
+</p>
+
+\begin{cor}[阶梯形矩阵推论]
+\end{cor}
+<p>
+任意一个矩阵都可以经过一系列的初等行变换化成简化阶梯形矩阵.
+</p>
+
+<p>
+线性方程组的解的情况：将线性方程组的的增广矩阵经初等行变换化成简化阶梯型矩阵，如果相应的阶梯型方程组出现 \(0 = d (d ≠ 0)\) 这样的方程，则原方程组无解；如果非零行的个数等于方程组未知量的个数, 则原方程组有唯一解, 如果非零行的个数小于未知量的个数, 则原方程有无群多个解.
+</p>
+
+<div class="org-src-container">
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">digraph graphname {&#10;  graph [ dpi = 300 ]; &#10;  node [color=Blue, fontcolor=Blacd, fontsize=16, shape=box]&#10;&#10;  A [label=&#34;&#38;#32447;&#38;#24615;&#38;#26041;&#38;#31243;&#38;#32452;&#38;#30340;&#38;#22686;&#38;#24191;&#38;#30697;&#38;#38453;&#34;];&#10;  B [label = &#34;&#38;#38454;&#38;#26799;&#38;#22411;&#38;#30697;&#38;#38453;&#34;];&#10;  C [label = &#34;&#38;#20889;&#38;#20986;&#38;#38454;&#38;#26799;&#38;#22411;&#38;#26041;&#38;#31243;&#38;#32452;&#34;];&#10;  D [label = &#34;&#38;#31616;&#38;#21270;&#38;#34892;&#38;#38454;&#38;#26799;&#38;#24418;&#38;#30697;&#38;#38453;&#34;];&#10;  E [label = &#34;&#38;#27714;&#38;#35299;&#34;];&#10;  F [label = &#34;&#38;#20889;&#38;#20986;&#38;#35299;&#34;];&#10;&#10;  A -&#38;gt; B [label = &#34; &#38;#30697;&#38;#38453;&#38;#30340;&#38;#21021;&#38;#31561;&#38;#34892;&#38;#21464;&#38;#25442;&#34;];&#10;  B -&#38;gt; C [label = &#34; &#38;#25110;&#38;#32773;&#34;];&#10;  B -&#38;gt; D [label = &#34; &#38;#30697;&#38;#38453;&#38;#30340;&#38;#21021;&#38;#31561;&#38;#34892;&#38;#21464;&#38;#25442;&#34;];&#10;  C -&#38;gt; E;&#10;  D -&#38;gt; F;&#10;&#10;}&#10;</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-Last Updated 2017-04-08 Sat 11:13 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.2.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 9.0.7)
+<div id="outline-container-org5622ba0" class="outline-3">
+<h3 id="org5622ba0">线性方程组的解的情况及其判别准则</h3>
+<div class="outline-text-3" id="text-org5622ba0">
+\begin{thm}[高斯(Gauss)-约当(Jordan)算法定理]
+\end{thm}
+<p>
+系数和常数项为有理数(或实数, 或复数)的 n 元线性方程组的解法有三种情况: 无解, 有唯一解, 有无群多个解. 把 n 元线性方程组的增广矩阵经过初等行变换化成阶梯形矩阵, 如果相应的阶梯型方程组出现 "0=d(其中 d 是非零数)" 这种方程, 那么原方程组无解, 否则, 无解. 当有解时, 如果阶梯形矩阵的非零行数目 r 等于未知量数目 n, 那么原方程组有唯一解; 如果 r<n, 那么原方程组有无群多个解.="" <="" p="">
+
+<p>
+如果一个线性方程组有解, 称它是相容的, 否则, 是不相容的. 常数项全为 0 的线性方程组称为 <b>齐次线性方程组</b>. \(0, 0, \cdots, 0\) 是齐次线性方程组的一个解, 称为 <b>零解</b>; 其余的解称为非零解. 如果一个齐次线性方程组有非零解, 那么它有无穷多个解.
+</p>
+
+\begin{cor}[高斯(Gauss)-约当(Jordan)算法定理推论一]
+\end{cor}
+<p>
+n 元齐次线性方程组有非零解的充要条件是: 它的系数矩阵经过初等行变换化成阶梯形矩阵中, 非零行的数目 \(r < n\).
+</p>
+
+\begin{cor}[高斯(Gauss)-约当(Jordan)算法定理推论二]
+\end{cor}
+<p>
+n 元齐次线性方程组如果方程的数目 s 小于未知量的个数 n, 那么它一定有非零解.
+</p>
+
+
+<div class="org-src-container">
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">digraph graphname {&#10;  graph [ dpi = 300 ]; &#10;  node [color=Blue, fontcolor=Blacd, fontsize=16, shape=box]&#10;&#10;  A [label=&#34;&#38;#32447;&#38;#24615;&#38;#26041;&#38;#31243;&#38;#32452;&#38;#30340;&#38;#22686;&#38;#24191;&#38;#30697;&#38;#38453;&#34;];&#10;  B [label = &#34;&#38;#38454;&#38;#26799;&#38;#22411;&#38;#30697;&#38;#38453;&#34;];&#10;  C [label = &#34;&#38;#30456;&#38;#24212;&#38;#30340;&#38;#38454;&#38;#26799;&#38;#22411;&#38;#26041;&#38;#31243;&#38;#32452;&#38;#20986;&#38;#29616; \n '0=d(&#38;#20854;&#38;#20013; d &#38;#19981;&#38;#31561;&#38;#20110; 0)'&#34;];&#10;  D [label = &#34;&#38;#21407;&#38;#26041;&#38;#31243;&#38;#32452;&#38;#26080;&#38;#35299;&#34;];&#10;  E [label = &#34;&#38;#21021;&#38;#31561;&#38;#34892;&#38;#21464;&#38;#25442;&#34;];&#10;  F [label = &#34;&#38;#31616;&#38;#21270;&#38;#34892;&#38;#38454;&#38;#26799;&#38;#22411;&#38;#30697;&#38;#38453;&#34;];&#10;  G [label = &#34;&#38;#38750;&#38;#38646;&#38;#34892;&#38;#25968;&#38;#30446;=&#38;#26410;&#38;#30693;&#38;#37327;&#38;#25968;&#38;#30446;?&#34;];&#10;  H [label = &#34;&#38;#21407;&#38;#26041;&#38;#31243;&#38;#32452;&#38;#26377;&#38;#21807;&#38;#19968;&#38;#35299; \n &#38;#21487;&#38;#31435;&#38;#21363;&#38;#20889;&#38;#20986;&#38;#35299;&#34;];&#10;  I [label = &#34;&#38;#26377;&#38;#26080;&#38;#32676;&#38;#22810;&#38;#20010;&#38;#35299;, \n &#38;#21487;&#38;#20889;&#38;#20986;&#38;#19968;&#38;#33324;&#38;#35299;&#34;];&#10;&#10;  A -&#38;gt; B [label = &#34; &#38;#30697;&#38;#38453;&#38;#30340;&#38;#21021;&#38;#31561;&#38;#34892;&#38;#21464;&#38;#25442;&#34;];&#10;  B -&#38;gt; C ;&#10;  B -&#38;gt; E;&#10;  C -&#38;gt; D [label = &#34; &#38;#26159;&#34;];&#10;  C -&#38;gt; E [label = &#34; &#38;#21542;&#34;];&#10;  E -&#38;gt; F;&#10;  F -&#38;gt; G;&#10;  G -&#38;gt; H [label = &#34; &#38;#26159;&#34;];&#10;  G -&#38;gt; I [label = &#34; &#38;#21542;&#34;];&#10;&#10;}&#10;</span><br></pre></td></tr></table></figure>
+</div>
+</n,></p></div>
+</div>
+
+<div id="outline-container-org8b214a6" class="outline-3">
+<h3 id="org8b214a6">数域</h3>
+<div class="outline-text-3" id="text-org8b214a6">
+\begin{de}[数域定义]
+\end{de}
+<p>
+复数集的一个子集 K 如果满足下式, 则称 K 为一个 <b>数域</b>.
+</p>
+\begin{flalign*}
+\begin{split}
+\qquad (1)\ & 0,1 \in K \\
+\qquad (2)\ & a,b \in K ⟹ a \pm b, ab \in K, \\
+     & a,b \in K, and \, b \ne 0 ⟹ \frac{a}{b} \in K. \\
+\end{split}&
+\end{flalign*}
+
+
+<p>
+有理数集 Q, 实数集 R 和复数集 C 都是术语, 整数集 Z 不是数域, 有理数域是最小的数域.
+</p>
+</div>
+</div>
+</div>
+
+Last Updated 2017-08-07 Mon 22:16 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.2.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 9.0.9)
 
       
     </div>
@@ -475,9 +595,7 @@ Last Updated 2017-04-08 Sat 11:13 by lengyueyang<br>Render by <a href="https://g
       
         <div class="post-tags">
           
-            <a href="/tags/Emacs/" rel="tag">#Emacs</a>
-          
-            <a href="/tags/Org-mode/" rel="tag">#Org-mode</a>
+            <a href="/tags/Linear-algebra/" rel="tag">#Linear algebra</a>
           
         </div>
       
@@ -486,16 +604,12 @@ Last Updated 2017-04-08 Sat 11:13 by lengyueyang<br>Render by <a href="https://g
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/05/Archlinux install and configuration/" rel="next" title="Archlinux install and configuration [Archlinux 安装和配置]">
-                <i class="fa fa-chevron-left"></i> Archlinux install and configuration [Archlinux 安装和配置]
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/01/01/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/29/数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布/" rel="prev" title="数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布">
+                数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -701,7 +815,7 @@ Last Updated 2017-04-08 Sat 11:13 by lengyueyang<br>Render by <a href="https://g
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#org3ffb3a0"><span class="nav-number">1.</span> <span class="nav-text">Orgmode</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org579bc3a"><span class="nav-number">1.1.</span> <span class="nav-text">Why orgmode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org8961a2d"><span class="nav-number">1.2.</span> <span class="nav-text">Insert html</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#orgdeb5bf1"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org9dcb325"><span class="nav-number">2.</span> <span class="nav-text">线性方程组的解法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#orgb2bf5b7"><span class="nav-number">2.1.</span> <span class="nav-text">解线性方差组的矩阵消元法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org5622ba0"><span class="nav-number">2.2.</span> <span class="nav-text">线性方程组的解的情况及其判别准则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org8b214a6"><span class="nav-number">2.3.</span> <span class="nav-text">数域</span></a></li></ol></li></ol></div>
             
 
           </div>
