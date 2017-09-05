@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lengyueyang.github.io/"/>
-  <updated>2017-08-07T14:16:17.741Z</updated>
+  <updated>2017-09-05T14:27:51.781Z</updated>
   <id>http://lengyueyang.github.io/</id>
   
   <author>
@@ -14,6 +14,436 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据科学-数学与统计-高等代数-行列式</title>
+    <link href="http://lengyueyang.github.io/2017/09/05/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-%E8%A1%8C%E5%88%97%E5%BC%8F/"/>
+    <id>http://lengyueyang.github.io/2017/09/05/数据科学-数学与统计-高等代数-行列式/</id>
+    <published>2017-09-05T00:00:00.000Z</published>
+    <updated>2017-09-05T14:27:51.781Z</updated>
+    
+    <content type="html">
+
+
+&lt;div id=&quot;outline-container-org3d322be&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org3d322be&quot;&gt;行列式&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org3d322be&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-org04e3d5d&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org04e3d5d&quot;&gt;n 元排列&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org04e3d5d&quot;&gt;
+&lt;p&gt;
+n 个不同正整数的一个全排列称为 &lt;b&gt;n 元排列&lt;/b&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+在 n 元排列 \(a_1, a_2, ⋯, a_n\) 中, 任取一对数 \(a_i,a_j(i &lt; j)\), 如果 \(a_i &lt; a_j\), 那么这一对数构成一个 &lt;b&gt;顺序&lt;/b&gt;, 否则, 这对数构成一个 &lt;b&gt;逆序&lt;/b&gt;. 一个 n 元排列中逆序的总数称为 &lt;b&gt;逆序数&lt;/b&gt;, 记作 \(τ(a_1a_2⋯a_n)\).
+&lt;/p&gt;
+
+&lt;p&gt;
+逆序数为奇数的排列称为 &lt;b&gt;奇排列&lt;/b&gt;, 逆序数为偶数的排列称为 &lt;b&gt;偶排列&lt;/b&gt;. 将一个排列中的两个数字互换, 其余数字位置不变的变换称为一个 &lt;b&gt;对换&lt;/b&gt;.
+&lt;/p&gt;
+
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+\begin{thm}[n 元排列定理-1]
+\end{thm}
+&lt;p&gt;
+对换改变 n 元排列的奇偶性.
+&lt;/p&gt;
+
+\begin{thm}[n 元排列定理-2]
+\end{thm}
+&lt;p&gt;
+任一 n 元排列与排列 \(123⋯n\) 可以经过一系列对换互变, 并且所做对换次数与这个 n 元排列有相同的奇偶性.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-orgb728538&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgb728538&quot;&gt;n 阶行列式的定义&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgb728538&quot;&gt;
+\begin{de}[n 阶行列式完全展开式定义]
+\end{de}
+&lt;p&gt;
+n 阶行列式
+&lt;/p&gt;
+\begin{equation*}
+\left|
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; $a_{1n} \\
+&amp; a_{21} \quad &amp; a_{22} \quad &amp; \cdots \quad &amp; a_{2n} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{n1} \quad &amp; a_{n2} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right|
+\end{equation*}
+&lt;p&gt;
+是 \(n!\) 项的代数和, 其中每一项都是位于不同行、不同列的 n 个元素的乘积, 把这 n 个元素以行指标为自然序列排好位置, 当列指标排列是偶排列时, 该项带正号; 是奇排列时, 该项带负号, 即
+&lt;/p&gt;
+\begin{equation}
+\left|
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; a_{1n} \\
+&amp; a_{21} \quad &amp; a_{22} \quad &amp; \cdots \quad &amp; a_{2n} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{n1} \quad &amp; a_{n2} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right| = \sum_{j_1j_2 \cdots j_n}(-1)^{\tau (j_1j_2 \cdots j_n)}a_{1j_1}a_{2j_2} \cdots a_{nj_n}
+\end{equation}
+&lt;p&gt;
+其中 \(j_1j_2 ⋯ j_n\) 是 n 元排列, (&lt;a href=&quot;#org42fb4a7&quot;&gt;1&lt;/a&gt;)式称为 n 阶行列式的 &lt;b&gt;完全展开式&lt;/b&gt; .
+&lt;/p&gt;
+
+&lt;p&gt;
+令
+&lt;/p&gt;
+\begin{equation}
+A = \left\{
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; $a_{1n} \\
+&amp; a_{21} \quad &amp; a_{22} \quad &amp; \cdots \quad &amp; a_{2n} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{n1} \quad &amp; a_{n2} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right\}
+\end{equation}
+&lt;p&gt;
+则 n 阶行列式 (&lt;a href=&quot;#org42fb4a7&quot;&gt;1&lt;/a&gt;)也称为 n 级矩阵 A 的行列式, 简记作 \(|A|\)或者\(det\,A\).
+&lt;/p&gt;
+
+&lt;p&gt;
+主对角线下方元素全为 0 的 n 阶行列式称为 &lt;b&gt;上三角形行列式&lt;/b&gt;, n 阶上三角形行列式的值等于它主对角线上 n 个元素的乘积.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org5491494&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org5491494&quot;&gt;行列式的性质&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org5491494&quot;&gt;
+\begin{proposition}[行列式性质-1]
+\end{proposition}
+&lt;p&gt;
+行列互换, 行列式值不变, 即
+&lt;/p&gt;
+\begin{equation}
+\left|
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; a_{1n} \\
+&amp; a_{21} \quad &amp; a_{22} \quad &amp; \cdots \quad &amp; a_{2n} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{n1} \quad &amp; a_{n2} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right| = \left|
+\begin{split}
+&amp; a_{11} \quad &amp; a_{21} \quad &amp; \cdots \quad &amp; a_{n1} \\
+&amp; a_{12} \quad &amp; a_{22} \quad &amp; \cdots \quad &amp; a_{n2} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{1n} \quad &amp; a_{2n} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right|
+\end{equation}
+
+\begin{proposition}[行列式性质-2]
+\end{proposition}
+&lt;p&gt;
+行列式一行的公因子可以提出去, 即
+&lt;/p&gt;
+\begin{equation}
+\left|
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; a_{1n} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; ka_{i1} \quad &amp; ka_{i2} \quad &amp; \cdots \quad &amp; ka_{in} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{n1} \quad &amp; a_{n2} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right| = k \left|
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; a_{1n} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{i1} \quad &amp; a_{i2} \quad &amp; \cdots \quad &amp; a_{in} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{n1} \quad &amp; a_{n2} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right|
+\end{equation}
+
+\begin{proposition}[行列式性质-3]
+\end{proposition}
+&lt;p&gt;
+行列式中若有某一行是两组数的和, 则次行列式等于两个行列式的和, 这两个行列式的这一行分别是第一组数和第二组数, 而其余各行与原来行列式的相应各行相同. 即
+&lt;/p&gt;
+\begin{equation}
+\left|
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; a_{1n} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; b_1 + c_1 \quad &amp; b_2 + c_2 \quad &amp; \cdots \quad &amp; b_n + c_n \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{n1} \quad &amp; a_{n2} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right| = \left|
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; a_{1n} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; b_1 \quad &amp; b_2 \quad &amp; \cdots \quad &amp; b_n \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{n1} \quad &amp; a_{n2} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right| + \left|
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; a_{1n} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; c_1 \quad &amp; c_2 \quad &amp; \cdots \quad &amp; c_n \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{n1} \quad &amp; a_{n2} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right|
+\end{equation}
+
+\begin{proposition}[行列式性质-4]
+\end{proposition}
+&lt;p&gt;
+两行互换, 行列式反号. 即
+&lt;/p&gt;
+\begin{equation}
+\left|
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; a_{1n} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{i1} \quad &amp; a_{i2} \quad &amp; \cdots \quad &amp; a_{in} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{k1} \quad &amp; a_{k2} \quad &amp; \cdots \quad &amp; a_{kn} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{n1} \quad &amp; a_{n2} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right| =  \left|
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; a_{1n} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{k1} \quad &amp; a_{k2} \quad &amp; \cdots \quad &amp; a_{kn} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{i1} \quad &amp; a_{i2} \quad &amp; \cdots \quad &amp; a_{in} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{n1} \quad &amp; a_{n2} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right|
+\end{equation}
+
+\begin{proposition}[行列式性质-5]
+\end{proposition}
+&lt;p&gt;
+两行相同, 行列式为 0.
+&lt;/p&gt;
+
+\begin{proposition}[行列式性质-6]
+\end{proposition}
+&lt;p&gt;
+两行成比例, 行列式为 0.
+&lt;/p&gt;
+
+\begin{proposition}[行列式性质-7]
+\end{proposition}
+&lt;p&gt;
+把一行的倍数加到另一行上, 行列式的值不变. 即
+&lt;/p&gt;
+\begin{equation}
+\left|
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; a_{1n} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{i1} \quad &amp; a_{i2} \quad &amp; \cdots \quad &amp; a_{in} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{k1} + la_{i1} \quad &amp; a_{k2}  + la_{i2} \quad &amp; \cdots \quad &amp; a_{kn} + la_{in}  \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{n1} \quad &amp; a_{n2} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right| =  \left|
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; a_{1n} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{i1} \quad &amp; a_{i2} \quad &amp; \cdots \quad &amp; a_{in} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{k1} \quad &amp; a_{k2} \quad &amp; \cdots \quad &amp; a_{kn} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{n1} \quad &amp; a_{n2} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right|
+\end{equation}
+
+
+&lt;div class=&quot;figure&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;./MSimg/MS-3-3-3-1.png&quot; alt=&quot;MS-3-3-3-1.png&quot;&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;figure-number&quot;&gt;Figure 1: &lt;/span&gt;行列式性质图&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id=&quot;outline-container-org6df78c7&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org6df78c7&quot;&gt;行列式按一行(列)展开&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org6df78c7&quot;&gt;
+\begin{de}[余子式与代数余子式定义]
+\end{de}
+&lt;p&gt;
+n 阶行列式 \(|A|\) 中, 划去第 i 行和第 j 列, 剩下的元素按原来次序组成 \(n-1\) 阶行列式称为矩阵 A 的 \((i, j)\) 元的 &lt;b&gt;余子式&lt;/b&gt;, 记作 \(M_{ij}\). 令 \(A_{ij}=(-1^{i+j}M_{ij})\), 称 \(A_{ij}\) 是 A 的 \((i, j)\) 元的 &lt;b&gt;代数余子式&lt;/b&gt;.
+&lt;/p&gt;
+
+\begin{thm}[n 阶行列式行展开定理]
+\end{thm}
+&lt;p&gt;
+n 阶行列式 \(|A|\) 等于它的第 i 行元素与自己的代数余子式的乘积之和, 即
+&lt;/p&gt;
+\begin{equation}
+  |A| = a_{i1}A_{i1} + a_{i2}A_{i2} + \cdots + a_{in}A_{in} = \sum_{j=1}^n a_{ij}A_{ij}
+\end{equation}
+&lt;p&gt;
+其中 \(i \in {1,2,⋯,n}\), (&lt;a href=&quot;#orgd51c4b6&quot;&gt;1&lt;/a&gt;) 称为 n 阶行列式按第 i 行的展开式.
+&lt;/p&gt;
+
+\begin{thm}[n 阶行列式列展开定理]
+\end{thm}
+&lt;p&gt;
+n 阶行列式 \(|A|\) 等于它的第 j 列元素与自己的代数余子式的乘积之和, 即
+&lt;/p&gt;
+\begin{equation}
+  |A| = a_{1j}A_{1j} + a_{2j}A_{2j} + \cdots + a_{nj}A_{nj} = \sum_{l=1}^n a_{lj}A_{lj}
+\end{equation}
+&lt;p&gt;
+其中 \(i \in {1,2,⋯,n}\), (&lt;a href=&quot;#orgd51c4b6&quot;&gt;1&lt;/a&gt;) 称为 n 阶行列式按第 j 列的展开式.
+&lt;/p&gt;
+
+\begin{thm}[n 阶行列式展开定理-3]
+\end{thm}
+&lt;p&gt;
+n 阶行列式 \(|A|\) 等于它的第 i 行元素与第 k 行(\(k \neq i\)) 相应元素的代数余子式的乘积之和等于 0, 即
+&lt;/p&gt;
+\begin{equation}
+  a_{i1}A_{k1} + a_{i2}A_{k2} + \cdots + a_{in}A_{kn} = 0
+\end{equation}
+
+\begin{thm}[n 阶行列式展开定理-4]
+\end{thm}
+&lt;p&gt;
+n 阶行列式 \(|A|\) 等于它的第 j 列元素与第 l 列(\(l \neq j\)) 相应元素的代数余子式的乘积之和等于 0, 即
+&lt;/p&gt;
+\begin{equation}
+a_{1j}A_{1l} + a_{2j}A_{2l} + \cdots + a_{nj}A_{nl} = 0
+\end{equation}
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+
+&lt;div id=&quot;outline-container-org2722867&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org2722867&quot;&gt;克莱姆法则(Cramer)&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org2722867&quot;&gt;
+\begin{thm}[克莱姆法则定理-1]
+\end{thm}
+&lt;p&gt;
+数域 K 上的 n 元线性方程组有唯一解的充分必要条件是它的系数行列式不等于 0.
+&lt;/p&gt;
+
+&lt;p&gt;
+n 级矩阵的初等行变换不改变他们行列式的非零性质.
+&lt;/p&gt;
+
+\begin{cor}[克莱姆法则定理-1 推论]
+\end{cor}
+&lt;p&gt;
+数域 K 上 n 个方程的 n 元齐次线性方程组只有零解的充分必要条件是它的系数行列式不等于 0.
+&lt;/p&gt;
+
+\begin{thm}[克莱姆法则定理-2]
+\end{thm}
+&lt;p&gt;
+n 个方程的 n 元线性方程组的系数行列式 \(|A| ≠ 0\) 时, 它的唯一解是
+\[
+\left ( \frac{|B_1|}{|A|},  \frac{|B_2|}{|A|}, ⋯,  \frac{|B_n|}{|A|} \right)
+\]
+&lt;/p&gt;
+
+&lt;p&gt;
+定理 1 的充分性和定理 2 合起来称为 &lt;b&gt;克莱姆(Cramer)法则&lt;/b&gt;.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id=&quot;outline-container-org821ae54&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org821ae54&quot;&gt;行列式按 k 行(列)展开&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org821ae54&quot;&gt;
+\begin{de}[k 阶子式定义]
+\end{de}
+&lt;p&gt;
+n 阶行列式 \(|A|\) 中任意取定 k 行, k 列 \(1 \le k &lt; n\), 位于这些行和列的交叉处的 \(k^2\) 个元素按照原来的派发组成的 k 阶行列式, 称为 \(|A|\) 的一个 &lt;b&gt;k 阶子式&lt;/b&gt;. 取定 \(|A|\) 的第 \(i_1, i_2, ⋯, i_k(i_1 &lt; i_2 &lt; ⋯ &lt;i_k)\) 行,=&quot;&quot; 第=&quot;&quot; \(j_1,=&quot;&quot; j_2,=&quot;&quot; ⋯,=&quot;&quot; j_k(j_1=&quot;&quot; &lt;=&quot;&quot; j_2=&quot;&quot; ⋯=&quot;&quot; &lt;j_k)\)=&quot;&quot; 列,=&quot;&quot; 所得到的=&quot;&quot; k=&quot;&quot; 阶子式记作=&quot;&quot; p=&quot;&quot;&gt;
+\begin{equation}
+A \left(
+\begin{split}
+i_1&amp;, i_2, ⋯, i_k \\
+j_1&amp;, j_2, ⋯, j_k
+\end{split}
+\right)
+\end{equation}
+&lt;p&gt;
+划去这个 k 阶子式所在的行和列, 剩下的元素按原来的排法组成 \((n-k)\) 的行列式, 称为 子式 (&lt;a href=&quot;#org9899fa9&quot;&gt;1&lt;/a&gt;) 的余子式.
+&lt;/p&gt;
+
+\begin{thm}[Laplace 定理]
+\end{thm}
+&lt;p&gt;
+在 n 阶行列式 \(|A|\) 中, 取定第 \(i_1, i_2, ⋯, i_k(i_1 &lt; i_2 &lt; ⋯ &lt;i_k)\) 行,=&quot;&quot; 则这=&quot;&quot; k=&quot;&quot; 行元素形成的所有=&quot;&quot; 阶子式与他们的代数余子式的乘积之和等于=&quot;&quot; \(|a|\),=&quot;&quot; 即=&quot;&quot; &lt;=&quot;&quot; p=&quot;&quot;&gt;
+\begin{equation}
+  |A| = \sum_{1 \leqslant j_1 &lt; \cdots &lt; j_k \leqslant n} A \left(
+\begin{split}
+i_1, i_2, ⋯, i_k \\
+j_1, j_2, ⋯, j_k \\
+\end{split}
+\right) 
+(-1)^{(i_1+ \cdots +i_k) + (j_1 + \cdots + j_k)} A \left(
+\begin{split}
+i_1^{&#39;}, i_2^{&#39;},  ⋯ , i_k^{&#39;} \\
+j_1^{&#39;}, j_2^{&#39;},  ⋯ , j_k^{&#39;} \\
+\end{split}
+\right)
+\end{equation}
+&lt;/i_k)\)&gt;&lt;/p&gt;&lt;/i_k)\)&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+Last Updated 2017-09-05 Tue 22:27 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 25.2.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 9.0.10)
+</content>
+    
+    <summary type="html">
+    
+      &lt;div id=&quot;outline-container-org3d322be&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org3d322be&quot;&gt;行列式&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org3d322be&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-org04e3d5d&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org04e3d5d&quot;&gt;n 元排列&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org04e3d5d&quot;&gt;
+&lt;p&gt;
+n 个不同正整数的一个全排列称为 &lt;b&gt;n 元排列&lt;/b&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+在 n 元排列 \(a_1, a_2, ⋯, a_n\) 中, 任取一对数 \(a_i,a_j(i &lt; j)\), 如果 \(a_i &lt; a_j\), 那么这一对数构成一个 &lt;b&gt;顺序&lt;/b&gt;, 否则, 这对数构成一个 &lt;b&gt;逆序&lt;/b&gt;. 一个 n 元排列中逆序的总数称为 &lt;b&gt;逆序数&lt;/b&gt;, 记作 \(τ(a_1a_2⋯a_n)\).
+&lt;/p&gt;
+
+&lt;p&gt;
+逆序数为奇数的排列称为 &lt;b&gt;奇排列&lt;/b&gt;, 逆序数为偶数的排列称为 &lt;b&gt;偶排列&lt;/b&gt;. 将一个排列中的两个数字互换, 其余数字位置不变的变换称为一个 &lt;b&gt;对换&lt;/b&gt;.
+&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="DATA SCIENTIST" scheme="http://lengyueyang.github.io/categories/DATA-SCIENTIST/"/>
+    
+    
+      <category term="Linear algebra" scheme="http://lengyueyang.github.io/tags/Linear-algebra/"/>
+    
+  </entry>
   
   <entry>
     <title>数据科学-数学与统计-高等代数-线性方程组的解法</title>
@@ -188,469 +618,6 @@ Hom, R. A. (2014). 矩阵分析. : 机械工业出版社.
     
     
       <category term="Linear algebra" scheme="http://lengyueyang.github.io/tags/Linear-algebra/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据科学-数学和统计-概率论与数理统计-随机变量的数字特征</title>
-    <link href="http://lengyueyang.github.io/2017/05/29/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81/"/>
-    <id>http://lengyueyang.github.io/2017/05/29/数据科学-数学和统计-概率论与数理统计-随机变量的数字特征/</id>
-    <published>2017-05-29T00:00:00.000Z</published>
-    <updated>2017-08-07T14:18:34.720Z</updated>
-    
-    <content type="html">
-
-
-
-&lt;div id=&quot;outline-container-orgcffb922&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgcffb922&quot;&gt;随机变量的数字特征&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgcffb922&quot;&gt;
-&lt;/div&gt;&lt;div id=&quot;outline-container-org615367c&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org615367c&quot;&gt;数学期望（均值）与中位数&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org615367c&quot;&gt;
-&lt;/div&gt;&lt;div id=&quot;outline-container-org8fc6114&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org8fc6114&quot;&gt;数学期望的定义&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org8fc6114&quot;&gt;
-\begin{de}[离散型随机变量数学期望]
-\end{de}
-&lt;p&gt;
-设离散型随机变量 X 只取有限个可能值 \(a_1, \dots , a_n\) , 其概率分布 \(P(X = a_i) = p_i \, (i = 1, \dots ,m)\) ,则 X 的数学期望记作 \(E(X) or EX\) 定义为 \[E(X) = a_1p_1 + \dots + a_np_n\] ,若 n 取无限个值，若下式收敛，则称其为 X 的数学期望，数学期望也常称为平均，这里平均是加权平均
-&lt;/p&gt;
-
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-
-\begin{equation}
-E(X) = \sum_{i = 1}^\infty a_ip_i
-\end{equation}
-
-\begin{de}[连续性随机变量数学期望]
-\end{de}
-&lt;p&gt;
-连续型随机变量 X 的密度函数是 \(f(x)\) ， 如果下式收敛，则称 \(E(X)\) 为 X 的数学期望
-&lt;/p&gt;
-\begin{equation}
-  E(X) = \int_{-\infty}^\infty xf(x) dx
-\end{equation}
-
-&lt;p&gt;
-几个重要分布的数学期望
-&lt;/p&gt;
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;泊松分布的数学期望 是 λ (指定时间内发生时间的平均次数)&lt;/li&gt;
-&lt;li&gt;二项分布的数学期望 是 np&lt;/li&gt;
-&lt;li&gt;负二项分布的数学期望是 \(r(1-p)p\)&lt;/li&gt;
-&lt;li&gt;均匀分布的数学期望是 \(\frac{a+b}{2}\)&lt;/li&gt;
-&lt;li&gt;指数分布的数学期望是 \(λ^{-1}\) (在寿命分析中是平均寿命)&lt;/li&gt;
-&lt;li&gt;正太分布的数学期望是 μ&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;
-数学期望由随机变量的分布完全决定，但在某些问题中，难于决定某些变量的分布如何，但有相当的根据（经验或理论）对期望值提出一些假定甚至有不少的了解；当需要通过观察或试验取得数据已经行估计时，估计随机变量的数字特征要比估计其分布容易且确切
-&lt;/p&gt;
-
-&lt;p&gt;
-在理论和应用中重要原因：本身含义；具备的良好性质，如工人的工资，容易知道其均值，单分布未知
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;outline-container-org605569c&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org605569c&quot;&gt;数学期望的性质&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org605569c&quot;&gt;
-\begin{thm}[数学期望性质-1]
-\end{thm}
-&lt;p&gt;
-若随机变量 \(X_1, \dots , X_n\) 的数学期望存在，则其和的期望等于各变量的期望之和，如下式
-&lt;/p&gt;
-\begin{equation}
-E(X_1 + \dots + X_n) = E(X_1) + \dots + E(X_n)
-\end{equation}
-
-\begin{thm}[数学期望性质-2]
-\end{thm}
-&lt;p&gt;
-若独立随机变量 \(X_1, \dots , X_n\) 的数学期望存在，则其积的期望等于各变量的期望之积，如下式
-&lt;/p&gt;
-\begin{equation}
-E(X_1 \dots X_n) = E(X_1)  \dots  E(X_n)
-\end{equation}
-
-\begin{thm}[数学期望性质-3]
-\end{thm}
-&lt;p&gt;
-若随机变量 X 为离散型，有分布 \(P(X = a_i) = p_i \quad (i = 1, \dots , n)\) ,或者为连续型，有概率密度函数 \(f(x)\) ,则有下式
-&lt;/p&gt;
-\begin{equation}
-E(g(X)) = \sum_ig(a_i)p_i \quad (if \sum_ig(a_i)p_i &lt; ∞)
-\end{equation}
-\begin{equation}
-  E(g(X)) = \int_{-\infty}^\infty g(x)f(x)dx \quad (if \int_{-\infty}^\infty |g(x)|f(x)dx &lt; \infty)
-\end{equation}
-
-&lt;p&gt;
-统计三大分布的期望：
-&lt;/p&gt;
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;\(X \sim \chi_n^2, \, E(X) = n\)&lt;/li&gt;
-&lt;li&gt;\(X \sim t_n, \, E(X) = 0 \quad (n &gt; 1)\)&lt;/li&gt;
-&lt;li&gt;\(X \sim F_{m,n}, \, E(X) = n(n-2) \quad (n &gt;2)\)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;outline-container-orgc063c42&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;orgc063c42&quot;&gt;条件数学期望（条件均值）&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgc063c42&quot;&gt;
-&lt;p&gt;
-条件数学期望公式
-&lt;/p&gt;
-\begin{equation}
-E(Y|x) = \int_{-\infty}^\infty yf(y|x)dy
-\end{equation}
-
-&lt;p&gt;
-意义：反映了随着 X 取值 x 的变化，Y 的平均变化情况如何，如对 \((X, Y) \sim N(a, b, σ_1^2, σ_2^2, \rho)\) ,在给定 \(X = x\) 条件下的正态分布为 \(N(b + \rho \sigma_2\sigma_1^{-1}(x_1 - a), (1-\rho^2)σ_2^2)\) ，故 \[E(Y|x) = b + \rho \sigma_2\sigma_1^{-1}(x_1 - a)\]
-&lt;/p&gt;
-
-&lt;p&gt;
-期望的条件数学期望公式
-&lt;/p&gt;
-\begin{equation}
-\begin{split}
-E(Y) = \int_{-\infty}^\infty E(Y|x)f_1(x)dx \\
-E(Y) = \int_{-\infty}^\infty g(x)f_1(x)dx \quad (g(x) = E(Y|x)) \\
-E(Y) = E[E(Y|x)]
-\end{split}
-\end{equation}
-
-&lt;p&gt;
-上述最后一个式子可以叙述为：一个变量 Y 的期望，等于其条件期望的期望(离散、连续)
-&lt;/p&gt;
-
-&lt;p&gt;
-在统计学上，常把条件期望 \(E(Y|x)\) 作为 x 的函数，称为 Y 对 X 的“回归函数”，“回归分析”即关于回归函数的统计研究
-&lt;/p&gt;
-
-&lt;p&gt;
-变量 Y 的（无条件）期望 = Y 的无条件期望 \(E(Y|x)\) 对 x 取加权平均，x 的权与变量 X 在 x 点的概率密度称比例
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;outline-container-org97f0bce&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org97f0bce&quot;&gt;中位数&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org97f0bce&quot;&gt;
-\begin{de}[中位数定义]
-\end{de}
-&lt;p&gt;
-设连续随机变量 X 的分布函数为 \(F(x)\) ,则满足下式的数 m 称为 X 或者分布 F 的中位数
-&lt;/p&gt;
-\begin{equation}
-P(X ⩽ m) = F(m) = 1/2
-\end{equation}
-
-&lt;p&gt;
-和数学期望一样，中位数用于刻画一个随机变量 X 的平均取值的数学特征
-&lt;/p&gt;
-
-&lt;p&gt;
-与数学期望相比的优点：受个别特大或特小值的影响很小；中位数总存在
-&lt;/p&gt;
-
-&lt;p&gt;
-在理论和应用中数学期望重要性超过中位数的原因：均值有很多优良的性质；中位数不唯一且离散型变量中位数不完全符合“中位”含义
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;outline-container-org8af648b&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org8af648b&quot;&gt;方差与钜&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org8af648b&quot;&gt;
-&lt;/div&gt;&lt;div id=&quot;outline-container-org7173c39&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org7173c39&quot;&gt;方差和标准差&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org7173c39&quot;&gt;
-\begin{de}[方差定义]
-\end{de}
-&lt;p&gt;
-X 为随机变量，其分布为 F，则 \(Var(X)\)(见下式) 称为 X(或分布 F)的方差，其平方根(取正值)称为标准差
-&lt;/p&gt;
-\begin{equation}
-Var(X) = E(X - EX)^2 = E(X^2) - (EX)^2
-\end{equation}
-
-&lt;p&gt;
-方差的数学性质：
-&lt;/p&gt;
-\begin{thm}[方差的数学性质-1]
-\end{thm}
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;常数的方差是 0&lt;/li&gt;
-&lt;li&gt;若 c 为常数，则 \(Var(X + c) = Var(X)\)&lt;/li&gt;
-&lt;li&gt;若 c 为常数，则 \(Var(cX) = c^2Var(X)\)&lt;/li&gt;
-&lt;/ul&gt;
-\begin{thm}[方差的数学性质-2]
-\end{thm}
-&lt;p&gt;
-独立随机变量之和的方差等于各变量的方差之和，公式如下
-&lt;/p&gt;
-\begin{equation}
-Var(X_1 + \dots + X_n) = Var(X_1) + \dots + Var(X_n)
-\end{equation}
-
-&lt;p&gt;
-方差是刻画随机变量在其中心附近散布程度的数字特征之一
-&lt;/p&gt;
-
-&lt;p&gt;
-平均绝对差是刻画随机变量散布度的数字特征之一
-&lt;/p&gt;
-
-&lt;p&gt;
-几个重要分布的数学期望
-&lt;/p&gt;
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;泊松分布的数学方差是 λ (指定时间内发生时间的平均次数)&lt;/li&gt;
-&lt;li&gt;二项分布的数学方差是 \(np(1-p)\)&lt;/li&gt;
-&lt;li&gt;均匀分布的数学方差是 \(\frac{(b-a)^2}{12}\)&lt;/li&gt;
-&lt;li&gt;指数分布的数学方差是 \(λ^{-2}\)&lt;/li&gt;
-&lt;li&gt;正太分布的数学方差是 \(σ^2\)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;
-统计三大分布的期望：
-&lt;/p&gt;
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;\(X \sim \chi_n^2, \, var(X) = 2n\)&lt;/li&gt;
-&lt;li&gt;\(X \sim t_n, \, Var(X) = n ∕ (n-2) \quad (n &gt; 2)\)&lt;/li&gt;
-&lt;li&gt;\(X \sim F_{m,n}, \, Var(X) = 2n^2(m+n-2) ∕ [m(n-2)^2(n-4)] \quad (n &gt; 4)\)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;outline-container-org07bf0de&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org07bf0de&quot;&gt;钜&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org07bf0de&quot;&gt;
-\begin{de}[矩定义]
-\end{de}
-&lt;p&gt;
-设 X 为随机变量，c 为常数，k 为正整数，则量 \(E[(X-c)^k]\) 称为 X 关于 c 点的 k 阶矩
-&lt;/p&gt;
-
-&lt;p&gt;
-矩比较重要的性质
-&lt;/p&gt;
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;\(c = 0\) ， \(α^k = E(X^k)\) 称为 X 的 k 阶原点矩&lt;/li&gt;
-&lt;li&gt;\(c = E(X)\) ， \(\mu^k = E[(X-EX)^k]\) 称为 X 的 k 阶中心距&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;
-一阶原点矩为期望；一阶中心距为 0；二阶中心距为方差
-&lt;/p&gt;
-
-&lt;p&gt;
-统计学上，高于 4 阶的钜极少使用
-&lt;/p&gt;
-
-&lt;p&gt;
-三阶中心距：
-衡量分布是否有偏：对称为 0；大于 0 为正偏或右偏；小于 0 为负偏或左偏
-偏度系数为 \(\beta_1\) ，则
-&lt;/p&gt;
-\begin{equation}
-\beta_1 = u_3 ∕ u_2^(3/2)
-\end{equation}
-
-&lt;p&gt;
-四阶中心距：
-衡量分布（密度）在均值附近的陡峭程度如何。越陡峭值越小
-峰度系数为 \(\beta_2\) 则
-&lt;/p&gt;
-\begin{equation}
-\beta_2 = u_4 ∕ u_2^2
-\end{equation}
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;outline-container-org053764e&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org053764e&quot;&gt;协方差与相关系数&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org053764e&quot;&gt;
-\begin{de}[协方差定义]
-\end{de}
-&lt;p&gt;
-设 \(X, Y\) 是二维随机变量，X，Y 本身都是一维随机变量，记 \[E(X) = m_1, E(Y) = m_2, Var(X) = σ_1^2, var(Y) = σ_2^2\] , 则称 \(E[(X-m_1)(Y-m_2)]\) 为 \(X, Y\) 的协方差，记为 \(Cov(X, Y)\) ，有 \(Cov(X, Y) = Cov(Y, X)\) ，且有 \[Cov(c_1X + c_2, c_3Y +c_4) = c_1c_3Cov(X, Y)\] , \[Cov(X, Y) = E(XY) - m_1m_2\]
-&lt;/p&gt;
-
-\begin{thm}[协方差性质]
-\end{thm}
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;若 X，Y 独立，则 \(Cov(X, Y) = 0\)&lt;/li&gt;
-&lt;li&gt;\([Cov(X, Y)]^2 ⩽ σ_1^2σ_2^2\) , 等号成立当且仅当 X，Y 之间有严格的线性关系(即：存在常数 a，b 使得 Y=a+bX)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;
-协方差意义：多维随机变量的数字特征，反应分量之间的关系
-&lt;/p&gt;
-
-\begin{de}[相关系数定义]
-\end{de}
-&lt;p&gt;
-设 \(X, Y\) 是二维随机变量，X，Y 本身都是一维随机变量，记 \[E(X) = m_1, E(Y) = m_2, Var(X) = σ_1^2, var(Y) = σ_2^2\] , 则称 \(Cov(X, Y) ∕ (σ_1σ_2)\) 为 \(X, Y\) 的相关系数，并记为 \(Corr(X, Y)\)
-&lt;/p&gt;
-
-\begin{thm}[相关系数性质]
-\end{thm}
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;若 X，Y 独立，则 \(Corr(X, Y) = 0\)&lt;/li&gt;
-&lt;li&gt;\(|Corr(X, Y)]| ⩽ 1\) , 等号成立当且仅当 X，Y 之间有严格的线性关系(即：存在常数 a，b 使得 Y=a+bX)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;
-相关系数意义：标准尺度下的协方差
-&lt;/p&gt;
-
-&lt;p&gt;
-不相关和独立间的关系：Corr(X,Y)=0，表示 X 和 Y 不相关，X 和 Y 相关不一定独立，但独立一定相关
-&lt;/p&gt;
-
-&lt;p&gt;
-相关系数也称为线性相关系数。若 0&lt;abs(cov(x,y))&lt;1，则表示：x,y 之间有一定程度的线性关系而非严格的线性关系=&quot;&quot; &lt;=&quot;&quot; p=&quot;&quot;&gt;
-
-&lt;p&gt;
-“线性相关”的最小二乘解释： 由 \[m_2 = bm_1 + a, b = σ_1^{-1}\sigma_2Corr(X, Y)\]
-&lt;/p&gt;
-
-&lt;p&gt;
-二维正态分布的相关系数特性：
-&lt;/p&gt;
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;若 \((X, Y)\) 为二维正态分布，则允许用任何函数 M(X) 去逼近 Y，所得到的结果与线性逼近结果类似，而线性逼近的程度完全取决于相关系数&lt;/li&gt;
-&lt;li&gt;若 \((X, Y)\) 为二维正态分布，由  \(Corr(X, Y) = 0\) 可以推出 X，Y 独立，即在这种情况下，独立与相关等同&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/abs(cov(x,y))&lt;1，则表示：x,y&gt;&lt;/p&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;outline-container-org7115bbc&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org7115bbc&quot;&gt;大数定理和中心极限定理&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org7115bbc&quot;&gt;
-&lt;/div&gt;&lt;div id=&quot;outline-container-org0e1a73a&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org0e1a73a&quot;&gt;大数定理&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org0e1a73a&quot;&gt;
-\begin{thm}[大数定理定义]
-\end{thm}
-&lt;p&gt;
-设 \(X_1, X_2, \dots , X_n\) 是独立同分布的随机变量，记他们的公共均值为 a，又设他们的方差存在并记为 \(σ^2\) , 则对任意给定的 \(ε &gt; 0\) , 有下式成立，指出了 “当 n 很大时， \(\overbar(X)\) 接近于 a”，在概率论中叫做 &quot; \(\overbar(X)\) 依概率收敛于 a&quot;
-&lt;/p&gt;
-\begin{equation}
-  \lim_{n\to\infty} P(|\overbar(X) - a| \geqslant \varepsilon) = 0
-\end{equation}
-&lt;p&gt;
-上式一个重要的推广是伯努利大数定理，即 “频率收敛于概率”，公式如下
-&lt;/p&gt;
-\begin{equation}
-  \lim_{n\to\infty} P(p_n - p| \geqslant \varepsilon) = 0
-\end{equation}
-
-&lt;p&gt;
-大数定理的证明需要用到马尔科夫不等式和切比雪夫不等式，如下
-若 Y 为只能取非负值的随机变量， \(Var(Y)\) 存在，则对仍给常数 \(ε &gt; 0\) , 有
-&lt;/p&gt;
-
-&lt;p&gt;
-马尔科夫不等式
-&lt;/p&gt;
-\begin{equation}
-P(Y ⩾ ε) ⩽ E(Y) ∕ ε
-\end{equation}
-&lt;p&gt;
-切比雪夫不等式
-&lt;/p&gt;
-\begin{equation}
-P(|Y-EY| ⩾ ε) ⩽ Var(Y) ∕ ε^2
-\end{equation}
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;outline-container-orga0b68e6&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;orga0b68e6&quot;&gt;中心极限定理&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orga0b68e6&quot;&gt;
-\begin{thm}[林徳伯格定理]
-\end{thm}
-&lt;p&gt;
-设 \(X_1, X_2, \dots , X_n\) 为独立同分布的随机变量， \(E(X_i) = a_i, Var(X_i) = σ^2 (σ^2 &gt; 0)\) , 则对任何实数 x，有下式成立，其中 \(\Phi(x)\) 是标准正态分布 \(N(0, 1)\) 的分布函数
-&lt;/p&gt;
-\begin{equation}
-  \lim_{n\to\infty} P\left( \frac{1}{\sqrt{n}σ}(X_1 + \dots + X_n - na) \leqslant x \right) = \Phi(x)
-\end{equation}
-&lt;p&gt;
-虽则在一般情况很难求出 \(X_1, X_2, \dots , X_n\) 的分布的确切形式，但当 n 很大时，可通过正态分布求其近似值
-&lt;/p&gt;
-
-\begin{thm}[棣莫弗-拉普拉斯定理
-\end{thm}
-&lt;p&gt;
-设 \(X_1, X_2, \dots , X_n\) 为独立同分布的随机变量， \(X_i\) 的分布是 \[P(X_i =1) = p, \quda P(X_i = 0) = 1-p \quad (0&lt;p&lt;1)\] ,=&quot;&quot; 则对任何实数=&quot;&quot; x，有下式成立，其中=&quot;&quot; \(\phi(x)\)=&quot;&quot; 是标准正态分布=&quot;&quot; \(n(0,=&quot;&quot; 1)\)=&quot;&quot; 的分布函数=&quot;&quot; &lt;=&quot;&quot; p=&quot;&quot;&gt;
-\begin{equation}
-  \lim_{n\to\infty} P\left( \frac{1}{\sqrt{np(1-p)}}(X_1 + \dots + X_n - np) \leqslant x \right) = \Phi(x)
-\end{equation}
-
-&lt;p&gt;
-&lt;a href=&quot;#orgd95330d&quot;&gt;棣莫弗-拉普拉斯定理&lt;/a&gt; 是 &lt;a href=&quot;#orgc5dbd8a&quot;&gt;林徳伯格定理&lt;/a&gt; 的特例，是用正态分布去逼近二项分布(当 p 固定，n 很大时，np 值很大)，也可以用泊松分布去逼近二项分布(p 很小，np = λ 不太大时)，二者相同点是 n 值很大
-&lt;/p&gt;
-
-&lt;p&gt;
-若 \(t_1, t_2\) 是两个正整数， \(t_1 &lt; t_2\) ， 则当 n 相当大时，按照 &lt;a href=&quot;#orgf2308f0&quot;&gt;1&lt;/a&gt; ，近似有 \[P(t_1 ⩽ X_1 + \dots + X_n ⩽ t_2) = Φ(y_2) - \Phi(y_1)\] 其中 \[y_i = (t_i - np) ∕ \sqrt{np(1-p) \quad (i = 1, 2)}\]
-若将 \(y_1, y_2\) 修正为 \[y_1 = \left( t_1 - \frac{1}{2} -np\right) ⧸ \sqrt{np(1-p)}\]   \[y_2 = \left( t_2 + \frac{1}{2} -np\right) ⧸ \sqrt{np(1-p)}\] 再利用公式，则可提高精度
-&lt;/p&gt;
-
-&lt;p&gt;
-中心极限定理的推广方向：独立不同分布情形；非独立情形；由中心极限定理引起的误差；大偏差问题
-&lt;/p&gt;
-&lt;/p&lt;1)\]&gt;&lt;/p&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;outline-container-orgbde50fd&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgbde50fd&quot;&gt;例题&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-org4ddb555&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org4ddb555&quot;&gt;参考网页&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org4ddb555&quot;&gt;
-&lt;p&gt;
-&lt;a href=&quot;http://blog.csdn.net/zhang22huan/article/details/8631101&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/zhang22huan/article/details/8631101&lt;/a&gt;
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-Last Updated 2017-08-07 Mon 22:18 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 25.2.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 9.0.9)
-</content>
-    
-    <summary type="html">
-    
-      &lt;div id=&quot;outline-container-orgcffb922&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgcffb922&quot;&gt;随机变量的数字特征&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgcffb922&quot;&gt;
-&lt;/div&gt;&lt;div id=&quot;outline-container-org615367c&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org615367c&quot;&gt;数学期望（均值）与中位数&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org615367c&quot;&gt;
-&lt;/div&gt;&lt;div id=&quot;outline-container-org8fc6114&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org8fc6114&quot;&gt;数学期望的定义&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org8fc6114&quot;&gt;
-\begin{de}[离散型随机变量数学期望]
-\end{de}
-&lt;p&gt;
-设离散型随机变量 X 只取有限个可能值 \(a_1, \dots , a_n\) , 其概率分布 \(P(X = a_i) = p_i \, (i = 1, \dots ,m)\) ,则 X 的数学期望记作 \(E(X) or EX\) 定义为 \[E(X) = a_1p_1 + \dots + a_np_n\] ,若 n 取无限个值，若下式收敛，则称其为 X 的数学期望，数学期望也常称为平均，这里平均是加权平均
-&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="DATA SCIENTIST" scheme="http://lengyueyang.github.io/categories/DATA-SCIENTIST/"/>
-    
-    
-      <category term="Statistics" scheme="http://lengyueyang.github.io/tags/Statistics/"/>
     
   </entry>
   
@@ -1398,6 +1365,470 @@ Last Updated 2017-07-10 Mon 13:28 by lengyueyang&lt;br&gt;Render by &lt;a href=&
 
 &lt;p&gt;
 随机变量的反面为确定性变量，其取值遵循某种严格的规律的变量；
+&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="DATA SCIENTIST" scheme="http://lengyueyang.github.io/categories/DATA-SCIENTIST/"/>
+    
+    
+      <category term="Statistics" scheme="http://lengyueyang.github.io/tags/Statistics/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据科学-数学和统计-概率论与数理统计-随机变量的数字特征</title>
+    <link href="http://lengyueyang.github.io/2017/05/29/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81/"/>
+    <id>http://lengyueyang.github.io/2017/05/29/数据科学-数学和统计-概率论与数理统计-随机变量的数字特征/</id>
+    <published>2017-05-29T00:00:00.000Z</published>
+    <updated>2017-08-07T14:18:34.720Z</updated>
+    
+    <content type="html">
+
+
+
+&lt;div id=&quot;outline-container-orgcffb922&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgcffb922&quot;&gt;随机变量的数字特征&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgcffb922&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-org615367c&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org615367c&quot;&gt;数学期望（均值）与中位数&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org615367c&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-org8fc6114&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org8fc6114&quot;&gt;数学期望的定义&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org8fc6114&quot;&gt;
+\begin{de}[离散型随机变量数学期望]
+\end{de}
+&lt;p&gt;
+设离散型随机变量 X 只取有限个可能值 \(a_1, \dots , a_n\) , 其概率分布 \(P(X = a_i) = p_i \, (i = 1, \dots ,m)\) ,则 X 的数学期望记作 \(E(X) or EX\) 定义为 \[E(X) = a_1p_1 + \dots + a_np_n\] ,若 n 取无限个值，若下式收敛，则称其为 X 的数学期望，数学期望也常称为平均，这里平均是加权平均
+&lt;/p&gt;
+
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+\begin{equation}
+E(X) = \sum_{i = 1}^\infty a_ip_i
+\end{equation}
+
+\begin{de}[连续性随机变量数学期望]
+\end{de}
+&lt;p&gt;
+连续型随机变量 X 的密度函数是 \(f(x)\) ， 如果下式收敛，则称 \(E(X)\) 为 X 的数学期望
+&lt;/p&gt;
+\begin{equation}
+  E(X) = \int_{-\infty}^\infty xf(x) dx
+\end{equation}
+
+&lt;p&gt;
+几个重要分布的数学期望
+&lt;/p&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;泊松分布的数学期望 是 λ (指定时间内发生时间的平均次数)&lt;/li&gt;
+&lt;li&gt;二项分布的数学期望 是 np&lt;/li&gt;
+&lt;li&gt;负二项分布的数学期望是 \(r(1-p)p\)&lt;/li&gt;
+&lt;li&gt;均匀分布的数学期望是 \(\frac{a+b}{2}\)&lt;/li&gt;
+&lt;li&gt;指数分布的数学期望是 \(λ^{-1}\) (在寿命分析中是平均寿命)&lt;/li&gt;
+&lt;li&gt;正太分布的数学期望是 μ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+数学期望由随机变量的分布完全决定，但在某些问题中，难于决定某些变量的分布如何，但有相当的根据（经验或理论）对期望值提出一些假定甚至有不少的了解；当需要通过观察或试验取得数据已经行估计时，估计随机变量的数字特征要比估计其分布容易且确切
+&lt;/p&gt;
+
+&lt;p&gt;
+在理论和应用中重要原因：本身含义；具备的良好性质，如工人的工资，容易知道其均值，单分布未知
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org605569c&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org605569c&quot;&gt;数学期望的性质&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org605569c&quot;&gt;
+\begin{thm}[数学期望性质-1]
+\end{thm}
+&lt;p&gt;
+若随机变量 \(X_1, \dots , X_n\) 的数学期望存在，则其和的期望等于各变量的期望之和，如下式
+&lt;/p&gt;
+\begin{equation}
+E(X_1 + \dots + X_n) = E(X_1) + \dots + E(X_n)
+\end{equation}
+
+\begin{thm}[数学期望性质-2]
+\end{thm}
+&lt;p&gt;
+若独立随机变量 \(X_1, \dots , X_n\) 的数学期望存在，则其积的期望等于各变量的期望之积，如下式
+&lt;/p&gt;
+\begin{equation}
+E(X_1 \dots X_n) = E(X_1)  \dots  E(X_n)
+\end{equation}
+
+\begin{thm}[数学期望性质-3]
+\end{thm}
+&lt;p&gt;
+若随机变量 X 为离散型，有分布 \(P(X = a_i) = p_i \quad (i = 1, \dots , n)\) ,或者为连续型，有概率密度函数 \(f(x)\) ,则有下式
+&lt;/p&gt;
+\begin{equation}
+E(g(X)) = \sum_ig(a_i)p_i \quad (if \sum_ig(a_i)p_i &lt; ∞)
+\end{equation}
+\begin{equation}
+  E(g(X)) = \int_{-\infty}^\infty g(x)f(x)dx \quad (if \int_{-\infty}^\infty |g(x)|f(x)dx &lt; \infty)
+\end{equation}
+
+&lt;p&gt;
+统计三大分布的期望：
+&lt;/p&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;\(X \sim \chi_n^2, \, E(X) = n\)&lt;/li&gt;
+&lt;li&gt;\(X \sim t_n, \, E(X) = 0 \quad (n &gt; 1)\)&lt;/li&gt;
+&lt;li&gt;\(X \sim F_{m,n}, \, E(X) = n(n-2) \quad (n &gt;2)\)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-orgc063c42&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orgc063c42&quot;&gt;条件数学期望（条件均值）&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgc063c42&quot;&gt;
+&lt;p&gt;
+条件数学期望公式
+&lt;/p&gt;
+\begin{equation}
+E(Y|x) = \int_{-\infty}^\infty yf(y|x)dy
+\end{equation}
+
+&lt;p&gt;
+意义：反映了随着 X 取值 x 的变化，Y 的平均变化情况如何，如对 \((X, Y) \sim N(a, b, σ_1^2, σ_2^2, \rho)\) ,在给定 \(X = x\) 条件下的正态分布为 \(N(b + \rho \sigma_2\sigma_1^{-1}(x_1 - a), (1-\rho^2)σ_2^2)\) ，故 \[E(Y|x) = b + \rho \sigma_2\sigma_1^{-1}(x_1 - a)\]
+&lt;/p&gt;
+
+&lt;p&gt;
+期望的条件数学期望公式
+&lt;/p&gt;
+\begin{equation}
+\begin{split}
+E(Y) = \int_{-\infty}^\infty E(Y|x)f_1(x)dx \\
+E(Y) = \int_{-\infty}^\infty g(x)f_1(x)dx \quad (g(x) = E(Y|x)) \\
+E(Y) = E[E(Y|x)]
+\end{split}
+\end{equation}
+
+&lt;p&gt;
+上述最后一个式子可以叙述为：一个变量 Y 的期望，等于其条件期望的期望(离散、连续)
+&lt;/p&gt;
+
+&lt;p&gt;
+在统计学上，常把条件期望 \(E(Y|x)\) 作为 x 的函数，称为 Y 对 X 的“回归函数”，“回归分析”即关于回归函数的统计研究
+&lt;/p&gt;
+
+&lt;p&gt;
+变量 Y 的（无条件）期望 = Y 的无条件期望 \(E(Y|x)\) 对 x 取加权平均，x 的权与变量 X 在 x 点的概率密度称比例
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org97f0bce&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org97f0bce&quot;&gt;中位数&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org97f0bce&quot;&gt;
+\begin{de}[中位数定义]
+\end{de}
+&lt;p&gt;
+设连续随机变量 X 的分布函数为 \(F(x)\) ,则满足下式的数 m 称为 X 或者分布 F 的中位数
+&lt;/p&gt;
+\begin{equation}
+P(X ⩽ m) = F(m) = 1/2
+\end{equation}
+
+&lt;p&gt;
+和数学期望一样，中位数用于刻画一个随机变量 X 的平均取值的数学特征
+&lt;/p&gt;
+
+&lt;p&gt;
+与数学期望相比的优点：受个别特大或特小值的影响很小；中位数总存在
+&lt;/p&gt;
+
+&lt;p&gt;
+在理论和应用中数学期望重要性超过中位数的原因：均值有很多优良的性质；中位数不唯一且离散型变量中位数不完全符合“中位”含义
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org8af648b&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org8af648b&quot;&gt;方差与钜&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org8af648b&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-org7173c39&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org7173c39&quot;&gt;方差和标准差&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org7173c39&quot;&gt;
+\begin{de}[方差定义]
+\end{de}
+&lt;p&gt;
+X 为随机变量，其分布为 F，则 \(Var(X)\)(见下式) 称为 X(或分布 F)的方差，其平方根(取正值)称为标准差
+&lt;/p&gt;
+\begin{equation}
+Var(X) = E(X - EX)^2 = E(X^2) - (EX)^2
+\end{equation}
+
+&lt;p&gt;
+方差的数学性质：
+&lt;/p&gt;
+\begin{thm}[方差的数学性质-1]
+\end{thm}
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;常数的方差是 0&lt;/li&gt;
+&lt;li&gt;若 c 为常数，则 \(Var(X + c) = Var(X)\)&lt;/li&gt;
+&lt;li&gt;若 c 为常数，则 \(Var(cX) = c^2Var(X)\)&lt;/li&gt;
+&lt;/ul&gt;
+\begin{thm}[方差的数学性质-2]
+\end{thm}
+&lt;p&gt;
+独立随机变量之和的方差等于各变量的方差之和，公式如下
+&lt;/p&gt;
+\begin{equation}
+Var(X_1 + \dots + X_n) = Var(X_1) + \dots + Var(X_n)
+\end{equation}
+
+&lt;p&gt;
+方差是刻画随机变量在其中心附近散布程度的数字特征之一
+&lt;/p&gt;
+
+&lt;p&gt;
+平均绝对差是刻画随机变量散布度的数字特征之一
+&lt;/p&gt;
+
+&lt;p&gt;
+几个重要分布的数学期望
+&lt;/p&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;泊松分布的数学方差是 λ (指定时间内发生时间的平均次数)&lt;/li&gt;
+&lt;li&gt;二项分布的数学方差是 \(np(1-p)\)&lt;/li&gt;
+&lt;li&gt;均匀分布的数学方差是 \(\frac{(b-a)^2}{12}\)&lt;/li&gt;
+&lt;li&gt;指数分布的数学方差是 \(λ^{-2}\)&lt;/li&gt;
+&lt;li&gt;正太分布的数学方差是 \(σ^2\)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+统计三大分布的期望：
+&lt;/p&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;\(X \sim \chi_n^2, \, var(X) = 2n\)&lt;/li&gt;
+&lt;li&gt;\(X \sim t_n, \, Var(X) = n ∕ (n-2) \quad (n &gt; 2)\)&lt;/li&gt;
+&lt;li&gt;\(X \sim F_{m,n}, \, Var(X) = 2n^2(m+n-2) ∕ [m(n-2)^2(n-4)] \quad (n &gt; 4)\)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org07bf0de&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org07bf0de&quot;&gt;钜&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org07bf0de&quot;&gt;
+\begin{de}[矩定义]
+\end{de}
+&lt;p&gt;
+设 X 为随机变量，c 为常数，k 为正整数，则量 \(E[(X-c)^k]\) 称为 X 关于 c 点的 k 阶矩
+&lt;/p&gt;
+
+&lt;p&gt;
+矩比较重要的性质
+&lt;/p&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;\(c = 0\) ， \(α^k = E(X^k)\) 称为 X 的 k 阶原点矩&lt;/li&gt;
+&lt;li&gt;\(c = E(X)\) ， \(\mu^k = E[(X-EX)^k]\) 称为 X 的 k 阶中心距&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+一阶原点矩为期望；一阶中心距为 0；二阶中心距为方差
+&lt;/p&gt;
+
+&lt;p&gt;
+统计学上，高于 4 阶的钜极少使用
+&lt;/p&gt;
+
+&lt;p&gt;
+三阶中心距：
+衡量分布是否有偏：对称为 0；大于 0 为正偏或右偏；小于 0 为负偏或左偏
+偏度系数为 \(\beta_1\) ，则
+&lt;/p&gt;
+\begin{equation}
+\beta_1 = u_3 ∕ u_2^(3/2)
+\end{equation}
+
+&lt;p&gt;
+四阶中心距：
+衡量分布（密度）在均值附近的陡峭程度如何。越陡峭值越小
+峰度系数为 \(\beta_2\) 则
+&lt;/p&gt;
+\begin{equation}
+\beta_2 = u_4 ∕ u_2^2
+\end{equation}
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org053764e&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org053764e&quot;&gt;协方差与相关系数&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org053764e&quot;&gt;
+\begin{de}[协方差定义]
+\end{de}
+&lt;p&gt;
+设 \(X, Y\) 是二维随机变量，X，Y 本身都是一维随机变量，记 \[E(X) = m_1, E(Y) = m_2, Var(X) = σ_1^2, var(Y) = σ_2^2\] , 则称 \(E[(X-m_1)(Y-m_2)]\) 为 \(X, Y\) 的协方差，记为 \(Cov(X, Y)\) ，有 \(Cov(X, Y) = Cov(Y, X)\) ，且有 \[Cov(c_1X + c_2, c_3Y +c_4) = c_1c_3Cov(X, Y)\] , \[Cov(X, Y) = E(XY) - m_1m_2\]
+&lt;/p&gt;
+
+\begin{thm}[协方差性质]
+\end{thm}
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;若 X，Y 独立，则 \(Cov(X, Y) = 0\)&lt;/li&gt;
+&lt;li&gt;\([Cov(X, Y)]^2 ⩽ σ_1^2σ_2^2\) , 等号成立当且仅当 X，Y 之间有严格的线性关系(即：存在常数 a，b 使得 Y=a+bX)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+协方差意义：多维随机变量的数字特征，反应分量之间的关系
+&lt;/p&gt;
+
+\begin{de}[相关系数定义]
+\end{de}
+&lt;p&gt;
+设 \(X, Y\) 是二维随机变量，X，Y 本身都是一维随机变量，记 \[E(X) = m_1, E(Y) = m_2, Var(X) = σ_1^2, var(Y) = σ_2^2\] , 则称 \(Cov(X, Y) ∕ (σ_1σ_2)\) 为 \(X, Y\) 的相关系数，并记为 \(Corr(X, Y)\)
+&lt;/p&gt;
+
+\begin{thm}[相关系数性质]
+\end{thm}
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;若 X，Y 独立，则 \(Corr(X, Y) = 0\)&lt;/li&gt;
+&lt;li&gt;\(|Corr(X, Y)]| ⩽ 1\) , 等号成立当且仅当 X，Y 之间有严格的线性关系(即：存在常数 a，b 使得 Y=a+bX)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+相关系数意义：标准尺度下的协方差
+&lt;/p&gt;
+
+&lt;p&gt;
+不相关和独立间的关系：Corr(X,Y)=0，表示 X 和 Y 不相关，X 和 Y 相关不一定独立，但独立一定相关
+&lt;/p&gt;
+
+&lt;p&gt;
+相关系数也称为线性相关系数。若 0&amp;lt;abs(Cov(X,Y))&amp;lt;1，则表示：X,Y 之间有一定程度的线性关系而非严格的线性关系
+&lt;/p&gt;
+
+&lt;p&gt;
+“线性相关”的最小二乘解释： 由 \[m_2 = bm_1 + a, b = σ_1^{-1}\sigma_2Corr(X, Y)\]
+&lt;/p&gt;
+
+&lt;p&gt;
+二维正态分布的相关系数特性：
+&lt;/p&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;若 \((X, Y)\) 为二维正态分布，则允许用任何函数 M(X) 去逼近 Y，所得到的结果与线性逼近结果类似，而线性逼近的程度完全取决于相关系数&lt;/li&gt;
+&lt;li&gt;若 \((X, Y)\) 为二维正态分布，由  \(Corr(X, Y) = 0\) 可以推出 X，Y 独立，即在这种情况下，独立与相关等同&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org7115bbc&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org7115bbc&quot;&gt;大数定理和中心极限定理&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org7115bbc&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-org0e1a73a&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org0e1a73a&quot;&gt;大数定理&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org0e1a73a&quot;&gt;
+\begin{thm}[大数定理定义]
+\end{thm}
+&lt;p&gt;
+设 \(X_1, X_2, \dots , X_n\) 是独立同分布的随机变量，记他们的公共均值为 a，又设他们的方差存在并记为 \(σ^2\) , 则对任意给定的 \(ε &gt; 0\) , 有下式成立，指出了 “当 n 很大时， \(\overbar(X)\) 接近于 a”，在概率论中叫做 &quot; \(\overbar(X)\) 依概率收敛于 a&quot;
+&lt;/p&gt;
+\begin{equation}
+  \lim_{n\to\infty} P(|\overbar(X) - a| \geqslant \varepsilon) = 0
+\end{equation}
+&lt;p&gt;
+上式一个重要的推广是伯努利大数定理，即 “频率收敛于概率”，公式如下
+&lt;/p&gt;
+\begin{equation}
+  \lim_{n\to\infty} P(p_n - p| \geqslant \varepsilon) = 0
+\end{equation}
+
+&lt;p&gt;
+大数定理的证明需要用到马尔科夫不等式和切比雪夫不等式，如下
+若 Y 为只能取非负值的随机变量， \(Var(Y)\) 存在，则对仍给常数 \(ε &gt; 0\) , 有
+&lt;/p&gt;
+
+&lt;p&gt;
+马尔科夫不等式
+&lt;/p&gt;
+\begin{equation}
+P(Y ⩾ ε) ⩽ E(Y) ∕ ε
+\end{equation}
+&lt;p&gt;
+切比雪夫不等式
+&lt;/p&gt;
+\begin{equation}
+P(|Y-EY| ⩾ ε) ⩽ Var(Y) ∕ ε^2
+\end{equation}
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-orga0b68e6&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orga0b68e6&quot;&gt;中心极限定理&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orga0b68e6&quot;&gt;
+\begin{thm}[林徳伯格定理]
+\end{thm}
+&lt;p&gt;
+设 \(X_1, X_2, \dots , X_n\) 为独立同分布的随机变量， \(E(X_i) = a_i, Var(X_i) = σ^2 (σ^2 &gt; 0)\) , 则对任何实数 x，有下式成立，其中 \(\Phi(x)\) 是标准正态分布 \(N(0, 1)\) 的分布函数
+&lt;/p&gt;
+\begin{equation}
+  \lim_{n\to\infty} P\left( \frac{1}{\sqrt{n}σ}(X_1 + \dots + X_n - na) \leqslant x \right) = \Phi(x)
+\end{equation}
+&lt;p&gt;
+虽则在一般情况很难求出 \(X_1, X_2, \dots , X_n\) 的分布的确切形式，但当 n 很大时，可通过正态分布求其近似值
+&lt;/p&gt;
+
+\begin{thm}[棣莫弗-拉普拉斯定理
+\end{thm}
+&lt;p&gt;
+设 \(X_1, X_2, \dots , X_n\) 为独立同分布的随机变量， \(X_i\) 的分布是 \[P(X_i =1) = p, \quda P(X_i = 0) = 1-p \quad (0&lt;p&lt;1)\] ,=&quot;&quot; 则对任何实数=&quot;&quot; x，有下式成立，其中=&quot;&quot; \(\phi(x)\)=&quot;&quot; 是标准正态分布=&quot;&quot; \(n(0,=&quot;&quot; 1)\)=&quot;&quot; 的分布函数=&quot;&quot; &lt;=&quot;&quot; p=&quot;&quot;&gt;
+\begin{equation}
+  \lim_{n\to\infty} P\left( \frac{1}{\sqrt{np(1-p)}}(X_1 + \dots + X_n - np) \leqslant x \right) = \Phi(x)
+\end{equation}
+
+&lt;p&gt;
+&lt;a href=&quot;#orgd95330d&quot;&gt;棣莫弗-拉普拉斯定理&lt;/a&gt; 是 &lt;a href=&quot;#orgc5dbd8a&quot;&gt;林徳伯格定理&lt;/a&gt; 的特例，是用正态分布去逼近二项分布(当 p 固定，n 很大时，np 值很大)，也可以用泊松分布去逼近二项分布(p 很小，np = λ 不太大时)，二者相同点是 n 值很大
+&lt;/p&gt;
+
+&lt;p&gt;
+若 \(t_1, t_2\) 是两个正整数， \(t_1 &lt; t_2\) ， 则当 n 相当大时，按照 &lt;a href=&quot;#orgf2308f0&quot;&gt;1&lt;/a&gt; ，近似有 \[P(t_1 ⩽ X_1 + \dots + X_n ⩽ t_2) = Φ(y_2) - \Phi(y_1)\] 其中 \[y_i = (t_i - np) ∕ \sqrt{np(1-p) \quad (i = 1, 2)}\]
+若将 \(y_1, y_2\) 修正为 \[y_1 = \left( t_1 - \frac{1}{2} -np\right) ⧸ \sqrt{np(1-p)}\]   \[y_2 = \left( t_2 + \frac{1}{2} -np\right) ⧸ \sqrt{np(1-p)}\] 再利用公式，则可提高精度
+&lt;/p&gt;
+
+&lt;p&gt;
+中心极限定理的推广方向：独立不同分布情形；非独立情形；由中心极限定理引起的误差；大偏差问题
+&lt;/p&gt;
+&lt;/p&lt;1)\]&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-orgbde50fd&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgbde50fd&quot;&gt;例题&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org4ddb555&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org4ddb555&quot;&gt;参考网页&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org4ddb555&quot;&gt;
+&lt;p&gt;
+&lt;a href=&quot;http://blog.csdn.net/zhang22huan/article/details/8631101&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/zhang22huan/article/details/8631101&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+Last Updated 2017-08-07 Mon 22:18 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 25.2.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 9.0.9)
+</content>
+    
+    <summary type="html">
+    
+      &lt;div id=&quot;outline-container-orgcffb922&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgcffb922&quot;&gt;随机变量的数字特征&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgcffb922&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-org615367c&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org615367c&quot;&gt;数学期望（均值）与中位数&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org615367c&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-org8fc6114&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org8fc6114&quot;&gt;数学期望的定义&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org8fc6114&quot;&gt;
+\begin{de}[离散型随机变量数学期望]
+\end{de}
+&lt;p&gt;
+设离散型随机变量 X 只取有限个可能值 \(a_1, \dots , a_n\) , 其概率分布 \(P(X = a_i) = p_i \, (i = 1, \dots ,m)\) ,则 X 的数学期望记作 \(E(X) or EX\) 定义为 \[E(X) = a_1p_1 + \dots + a_np_n\] ,若 n 取无限个值，若下式收敛，则称其为 X 的数学期望，数学期望也常称为平均，这里平均是加权平均
 &lt;/p&gt;
     
     </summary>
