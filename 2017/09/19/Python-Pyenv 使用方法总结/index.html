@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Emacs,Spacemacs," />
+  <meta name="keywords" content="Python,Pyenv," />
 
 
 
@@ -89,17 +89,17 @@
 
 
 
-<meta name="description" content="Useful keybinding   Memory   SPC f s Save a buffer SPC f S Save all opened buffers SPC b b Open or switch a buffer with helm SPC T h Select a theme using a helm buffer SPC f/p t To toggle the Neotree">
-<meta name="keywords" content="Emacs,Spacemacs">
+<meta name="description" content="Pyenv 简介   在使用 python 进行编程时, 经常遇到多个编程环境共存问题. pyenv 可以很好的解决这个问题, 本教程根据是学习使用 pyenv 的记录.">
+<meta name="keywords" content="Python,Pyenv">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spacemacs Learning [Spacemacs 学习]">
-<meta property="og:url" content="http://lengyueyang.github.io/2016/02/14/Spacemacs Learning/index.html">
+<meta property="og:title" content="Python-Pyenv 使用方法总结">
+<meta property="og:url" content="http://lengyueyang.github.io/2017/09/19/Python-Pyenv 使用方法总结/index.html">
 <meta property="og:site_name" content="深度识医">
-<meta property="og:description" content="Useful keybinding   Memory   SPC f s Save a buffer SPC f S Save all opened buffers SPC b b Open or switch a buffer with helm SPC T h Select a theme using a helm buffer SPC f/p t To toggle the Neotree">
-<meta property="og:updated_time" content="2017-04-08T03:27:21.960Z">
+<meta property="og:description" content="Pyenv 简介   在使用 python 进行编程时, 经常遇到多个编程环境共存问题. pyenv 可以很好的解决这个问题, 本教程根据是学习使用 pyenv 的记录.">
+<meta property="og:updated_time" content="2017-09-19T08:07:09.142Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spacemacs Learning [Spacemacs 学习]">
-<meta name="twitter:description" content="Useful keybinding   Memory   SPC f s Save a buffer SPC f S Save all opened buffers SPC b b Open or switch a buffer with helm SPC T h Select a theme using a helm buffer SPC f/p t To toggle the Neotree">
+<meta name="twitter:title" content="Python-Pyenv 使用方法总结">
+<meta name="twitter:description" content="Pyenv 简介   在使用 python 进行编程时, 经常遇到多个编程环境共存问题. pyenv 可以很好的解决这个问题, 本教程根据是学习使用 pyenv 的记录.">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://lengyueyang.github.io/2016/02/14/Spacemacs Learning/"/>
+  <link rel="canonical" href="http://lengyueyang.github.io/2017/09/19/Python-Pyenv 使用方法总结/"/>
 
 
 
 
 
-  <title> Spacemacs Learning [Spacemacs 学习] | 深度识医 </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> Python-Pyenv 使用方法总结 | 深度识医 </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -333,7 +333,7 @@
             
             
               
-                Spacemacs Learning [Spacemacs 学习]
+                Python-Pyenv 使用方法总结
               
             
           </h1>
@@ -345,8 +345,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-14T08:00:00+08:00" content="2016-02-14">
-              2016-02-14
+            <time itemprop="dateCreated" datetime="2017-09-19T08:00:00+08:00" content="2017-09-19">
+              2017-09-19
             </time>
           </span>
 
@@ -365,8 +365,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/EMACS/" itemprop="url" rel="index">
-                    <span itemprop="name">EMACS</span>
+                  <a href="/categories/PYTHON/" itemprop="url" rel="index">
+                    <span itemprop="name">PYTHON</span>
                   </a>
                 </span>
 
@@ -381,8 +381,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/14/Spacemacs Learning/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/14/Spacemacs Learning/" itemprop="commentsCount"></span>
+                <a href="/2017/09/19/Python-Pyenv 使用方法总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/09/19/Python-Pyenv 使用方法总结/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -408,222 +408,115 @@
         
 
 
-<div id="outline-container-org336eb97" class="outline-2">
-<h2 id="org336eb97">Useful keybinding</h2>
-<div class="outline-text-2" id="text-org336eb97">
-</div><div id="outline-container-orgc5c0088" class="outline-3">
-<h3 id="orgc5c0088">Memory</h3>
-<div class="outline-text-3" id="text-orgc5c0088">
-<ul class="org-ul">
-<li>SPC f s Save a buffer</li>
-<li>SPC f S Save all opened buffers</li>
-<li>SPC b b Open or switch a buffer with helm</li>
-<li>SPC T h Select a theme using a helm buffer</li>
-<li>SPC f/p t To toggle the Neotree buffer press (project)</li>
-<li>SPC h b Open the bookmark</li>
-<li>SPC h l Resume the last helm buffers</li>
-<li>SPC s L Focus the last converted search buffer</li>
-<li>F3 In a helm buffer, convert a helm search buffer into a regular buffer</li>
-</ul>
+<div id="outline-container-orgfb11d30" class="outline-2">
+<h2 id="orgfb11d30">Pyenv 简介</h2>
+<div class="outline-text-2" id="text-orgfb11d30">
+<p>
+在使用 python 进行编程时, 经常遇到多个编程环境共存问题. pyenv 可以很好的解决这个问题, 本教程根据是学习使用 pyenv 的记录.
+</p>
 
 <a id="more"></a>
 </div>
 </div>
-</div>
 
-<div id="outline-container-org30b9e05" class="outline-2">
-<h2 id="org30b9e05">The Emacs Evil Tutor</h2>
-<div class="outline-text-2" id="text-org30b9e05">
-</div><div id="outline-container-orgb1bc3b3" class="outline-3">
-<h3 id="orgb1bc3b3">LESSON 1</h3>
-<div class="outline-text-3" id="text-orgb1bc3b3">
-<ol class="org-ol">
-<li>The cursor is moved using either the arrow keys or the hjkl keys.
-h (left)        j (down)       k (up)            l (right)</li>
-
-<li>To exit Emacs type:  &lt;ESC&gt; :qa! &lt;ENTER&gt;  to trash all changes.
-OR type:  &lt;ESC&gt; :wqa &lt;ENTER&gt;  to save the changes.</li>
-
-<li>Ctrl + f Page Down
-Ctrl + b Page Up</li>
-
-<li>0 Cursor to the beginging of the line
-$ Cursor to the end of the line</li>
-
-<li>G Cursor to the last of the file
-nG Cursor to the n line of the file
-gg Cursor to the begin of the file, like 1G
-:[Enter] followed by a line number and moves to that line number.
-N[Enter] Curosr to the N line</li>
-</ol>
-
-<p>
-NOTE: Pressing &lt;ESC&gt; will place you in normal state or will cancel
-      an unwanted and partially completed command.
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-org07407db" class="outline-3">
-<h3 id="org07407db">LESSON 2</h3>
-<div class="outline-text-3" id="text-org07407db">
-<ol class="org-ol">
-<li>x/X To delete a character under/before the cursor in normal state type</li>
-
-<li>To delete a whole line type:  dd</li>
-
-<li><p>
-The format for a command in normal state is:
-</p>
-
-<p>
-  [number]  command  object    OR    command  [number]  object
-where:
-  number - is how many times to repeat the command
-  command - is what to do, such as  d  for delete
-  object - is what the command should act upon, such as  w  for word,
-	   $  for "to the end of line", etc.
-</p></li>
-
-<li>d1G, dG, d0, d$</li>
-
-<li>yy Copy the line of cursokr
-nyy Copy the n line data</li>
-
-<li>y1G, yG, y0, y$</li>
-
-<li>p/P Paste the data from the next/before line</li>
-
-<li>To undo previous actions, type:  u
-To undo the undo's type:  CTRL-R
-Repeat the last opeartion: .</li>
-</ol>
-</div>
-</div>
-
-
-<div id="outline-container-org07b89eb" class="outline-3">
-<h3 id="org07b89eb">LESSON 3</h3>
-<div class="outline-text-3" id="text-org07b89eb">
-<ol class="org-ol">
-<li>To replace text that has already been deleted, type  p  this puts the
-deleted text AFTER the cursor (if a line was deleted it will go on the
-line below the cursor).</li>
-
-<li>To replace the character under the cursor, type  r  and then the
-character which will replace the original.</li>
-
-<li>The change command allows you to change the specified object from the
-cursor to the end of the object.  eg. Type  cw  to change from the
-cursor to the end of the word,  c$  to change to the end of a line.</li>
-
-<li>The format for change is:
-[number]  c  object    OR    c  [number]  object</li>
-</ol>
-</div>
-</div>
-
-
-<div id="outline-container-org840e066" class="outline-3">
-<h3 id="org840e066">LESSON 4</h3>
-<div class="outline-text-3" id="text-org840e066">
-<ol class="org-ol">
-<li>Typing  /  followed by a phrase searches FORWARD for the phrase.
-Typing  ?  followed by a phrase searches BACKWARD for the phrase.
-After a search type  n  to find the next occurrence in the same direction
-or  N  to search in the opposite direction.</li>
-
-<li>Typing  %  while the cursor is on a  (,),[,],{, or }  locates its
-matching pair.</li>
-
-<li>To substitute new for the first old on a line type  :s/old/new
-To substitute new for all 'old's on a line type     :s/old/new/g
-To substitute phrases between two line #'s type     :#,#s/old/new/g
-To substitute all occurrences in the file type      :%s/old/new/g
-To ask for confirmation each time add 'c'           :%s/old/new/gc</li>
-</ol>
-</div>
-</div>
-
-
-<div id="outline-container-orged05c17" class="outline-3">
-<h3 id="orged05c17">LESSON 5</h3>
-<div class="outline-text-3" id="text-orged05c17">
-<ol class="org-ol">
-<li><p>
-:!command  executes an external command.
-</p>
-
-<p>
-Some useful examples are:
-    :!ls  or  :!dir                 -  shows a directory listing.
-    :!rm  or  :!del FILENAME        -  removes file FILENAME.
-</p></li>
-
-<li>:w FILENAME  writes the current buffer to disk with file name FILENAME.</li>
-
-<li>:#,#w FILENAME  saves the lines # through # in file FILENAME.</li>
-
-<li>:r FILENAME  retrieves disk file FILENAME and inserts it into the
-current buffer following the cursor position.</li>
-</ol>
-</div>
-</div>
-
-
-<div id="outline-container-orgb6e80cd" class="outline-3">
-<h3 id="orgb6e80cd">LESSON 6</h3>
-<div class="outline-text-3" id="text-orgb6e80cd">
-<ol class="org-ol">
-<li>Typing  o   opens a line BELOW the cursor and places the cursor on the open
-line in insert state.
-Typing a capital  O  opens the line ABOVE the line the cursor is on.</li>
-
-<li>Type an  a  to insert text AFTER the character the cursor is on.
-Typing a capital  A  automatically appends text to the end of the line.</li>
-
-<li>i/I Insert text at the character/Not blank</li>
-</ol>
-</div>
-</div>
-</div>
-<div id="outline-container-org9488001" class="outline-2">
-<h2 id="org9488001">Python and R programming environment configuration</h2>
-<div class="outline-text-2" id="text-org9488001">
-</div><div id="outline-container-org30e80c0" class="outline-3">
-<h3 id="org30e80c0">Python</h3>
-<div class="outline-text-3" id="text-org30e80c0">
-<ul class="org-ul">
-<li>Configure the auto-complete mode as the spacemacs layer: auto-complete</li>
-<li>Replace the keybinding SPC m s i to 'run python' in file package.el within python layer</li>
-<li><p>
-Add the following confirmation to .spacemacs
-</p>
+<div id="outline-container-org14295aa" class="outline-2">
+<h2 id="org14295aa">安装</h2>
+<div class="outline-text-2" id="text-org14295aa">
 <div class="org-src-container">
-<figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line"><span class="list">(<span class="keyword">add-hook</span> <span class="quoted">'inferior-python-mode-hook</span> <span class="quoted">'flycheck-mode</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">add-hook</span> <span class="quoted">'inferior-python-mode-hook</span> <span class="quoted">'flyspell-mode</span>)</span></span><br></pre></td></tr></table></figure>
-</div></li>
-</ul>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">yaourt pyenv</span><br><span class="line">yaourt pyenv-virtualenv</span><br></pre></td></tr></table></figure>
 </div>
-</div>
-<div id="outline-container-org0a6e4d2" class="outline-3">
-<h3 id="org0a6e4d2">R</h3>
-<div class="outline-text-3" id="text-org0a6e4d2">
-<ul class="org-ul">
-<li>Add the following confirmation to .spacemacs</li>
-</ul>
+
+<p>
+archlinux 系统安装上面命令直接安装, 其他版本可也从源中或者源代码安装.
+</p>
+
+<p>
+安装完成后，pyenv 命令还没有加进系统的环境变量，需要将如下内容加到 ~/.zshrc 中，然后执行 source ~/.zshrc 
+</p>
+
 <div class="org-src-container">
-<figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line"><span class="list">(<span class="keyword">add-hook</span> <span class="quoted">'R-mode-hook</span> <span class="quoted">'smartparens-mode</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">add-hook</span> <span class="quoted">'R-mode-hook</span> <span class="quoted">'flycheck-mode</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">add-hook</span> <span class="quoted">'R-mode-hook</span> <span class="quoted">'flyspell-mode</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">add-hook</span> <span class="quoted">'org-mode-hook</span> <span class="quoted">'smartparens-mode</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">add-hook</span> <span class="quoted">'inferior-ess-mode-hook</span> <span class="quoted">'company-mode</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">add-hook</span> <span class="quoted">'inferior-ess-mode-hook</span> <span class="quoted">'smartparens-mode</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">add-hook</span> <span class="quoted">'inferior-ess-mode-hook</span> <span class="quoted">'flycheck-mode</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">add-hook</span> <span class="quoted">'inferior-ess-mode-hook</span> <span class="quoted">'flyspell-mode</span>)</span></span><br></pre></td></tr></table></figure>
-</div>
-<ul class="org-ul">
-<li>For the R auto complete: after open the R file, then C-c C-c, reopen the R file</li>
-<li>When insert src-block with org heading, add a , before the heading, to avoid mistake</li>
-</ul>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> PYENV_ROOT=<span class="string">"<span class="variable">$HOME</span>/.pyenv"</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$PYENV_ROOT</span>/bin:<span class="variable">$PATH</span>"</span></span><br><span class="line"><span class="built_in">eval</span> <span class="string">"<span class="variable">$(pyenv init -)</span>"</span></span><br><span class="line"><span class="built_in">eval</span> <span class="string">"<span class="variable">$(pyenv virtualenv-init -)</span>"</span></span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-Last Updated 2017-04-08 Sat 11:27 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.2.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 9.0.7)
+
+<div id="outline-container-orgbfd0013" class="outline-2">
+<h2 id="orgbfd0013">Pyenv 基本操作</h2>
+<div class="outline-text-2" id="text-orgbfd0013">
+<div class="org-src-container">
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">pyenv versions</span><br><span class="line"></span><br><span class="line">* system (<span class="built_in">set</span> by /home/lengyue/.python-version)</span><br><span class="line"><span class="number">2.7</span>.<span class="number">13</span></span><br><span class="line"><span class="number">3.5</span>.<span class="number">2</span></span><br><span class="line"><span class="comment"># &#26597;&#30475;&#30446;&#21069;&#25152;&#26377;&#29256;&#26412;&#30340; python</span></span><br><span class="line"></span><br><span class="line">pyenv version</span><br><span class="line"><span class="comment"># &#26597;&#30475;&#24403;&#21069;&#29256;&#26412;&#30340; python</span></span><br><span class="line"></span><br><span class="line">pyenv global system/<span class="number">3.5</span>.<span class="number">2</span></span><br><span class="line"><span class="comment"># &#35774;&#32622;&#20840;&#23616;&#30340; python &#29615;&#22659;</span></span><br><span class="line"></span><br><span class="line">pyenv <span class="built_in">local</span> system/<span class="number">3.5</span>.<span class="number">2</span></span><br><span class="line"><span class="comment"># &#35774;&#32622;&#23616;&#37096;&#30340; python &#29615;&#22659;, local &#20248;&#20808;&#32423;&#39640;&#20110; global</span></span><br><span class="line"></span><br><span class="line">pyenv <span class="built_in">local</span> --unset</span><br><span class="line"><span class="comment"># &#37325;&#32622; local &#29615;&#22659;</span></span><br><span class="line"></span><br><span class="line">pyenv shell system/<span class="number">3.5</span>.<span class="number">2</span></span><br><span class="line"><span class="comment"># &#35774;&#32622; shell &#30340; python &#29615;&#22659;, shell &#29615;&#22659;&#21448;&#26377;&#38480;&#20110; local</span></span><br><span class="line"></span><br><span class="line">pyenv shell --unset</span><br><span class="line"><span class="comment"># &#37325;&#32622; shell python &#29615;&#22659;</span></span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org855be3d" class="outline-2">
+<h2 id="org855be3d">安装不同版本 python</h2>
+<div class="outline-text-2" id="text-org855be3d">
+<div class="org-src-container">
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">pyenv install --list</span><br><span class="line"><span class="comment"># pyenv &#25903;&#25345;&#30340;&#25152;&#26377; python &#21015;&#34920;</span></span><br><span class="line"></span><br><span class="line">pyenv install <span class="number">3.5</span>.<span class="number">2</span></span><br><span class="line"><span class="comment"># &#23433;&#35013;&#29305;&#23450;&#29256;&#26412;&#30340; python</span></span><br><span class="line"></span><br><span class="line">pyenv uninstall <span class="number">3.5</span>.<span class="number">2</span></span><br><span class="line"><span class="comment"># &#21368;&#36733;&#29305;&#23450;&#29256;&#26412;&#30340; python</span></span><br><span class="line"></span><br><span class="line">pyenv <span class="built_in">rehash</span></span><br><span class="line"><span class="comment"># refresh database</span></span><br></pre></td></tr></table></figure>
+</div>
+
+<p>
+安装特定版本 python 出现错误: ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib
+按照下帖解决, 用如下命令
+</p>
+<ul class="org-ul">
+<li><a href="https://stackoverflow.com/questions/43976068/compiling-python-via-pyenv-on-archlinux-but-missing-openssl" target="_blank" rel="external">Compiling Python via Pyenv on Archlinux but missing OpenSSL - Stack Overflow</a></li>
+</ul>
+
+<div class="org-src-container">
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">CFLAGS=-I/usr/include/openssl-<span class="number">1.0</span> \</span><br><span class="line">LDFLAGS=-L/usr/lib64/openssl-<span class="number">1.0</span> \</span><br><span class="line">pyenv install <span class="number">3.5</span>.<span class="number">2</span></span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc19cc88" class="outline-2">
+<h2 id="orgc19cc88">Pyenv-virtualenv python 不同项目虚拟环境的搭建</h2>
+<div class="outline-text-2" id="text-orgc19cc88">
+<p>
+利用 pyenv-virtualenv 就可以管理多个依赖库环境
+</p>
+
+<div class="org-src-container">
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">pyenv virtualenv PYTHON_VERSION PROJECT_NAME</span><br><span class="line"><span class="comment"># &#21019;&#24314;&#26032;&#30340;&#29615;&#22659;,&#20301;&#20110; ~/.pyenv/versions/, &#20854;&#20013;&#65292;PYTHON_VERSION &#26159;&#20855;&#20307;&#30340; Python &#29256;&#26412;&#21495;&#65292;</span></span><br><span class="line"><span class="comment"># &#20363;&#22914;&#65292;3.6.0&#65292;PROJECT_NAME &#26159;&#25105;&#20204;&#33258;&#23450;&#20041;&#30340;&#39033;&#30446;&#21517;&#31216;&#12290;&#27604;&#36739;&#22909;&#30340;&#23454;&#36341;&#26041;&#24335;&#26159;&#65292;</span></span><br><span class="line"><span class="comment"># &#22312; PROJECT_NAME &#20063;&#24102;&#19978; Python &#30340;&#29256;&#26412;&#21495;&#65292;&#20197;&#20415;&#20110;&#35782;&#21035;&#12290;&#29616;&#20551;&#35774;&#25105;&#20204;&#26377; XDiff &#36825;&#20040;&#19968;&#20010;&#39033;&#30446;&#65292;</span></span><br><span class="line"><span class="comment"># &#24819;&#38024;&#23545; Python 2.7.13 &#21644; Python 3.6.0 &#20998;&#21035;&#21019;&#24314;&#19968;&#20010;&#34394;&#25311;&#29615;&#22659;&#65292;&#37027;&#23601;&#21487;&#20197;&#20381;&#27425;&#25191;&#34892;&#22914;&#19979;&#21629;&#20196;&#12290;</span></span><br><span class="line"></span><br><span class="line">pyenv virtualenv <span class="number">3.6</span>.<span class="number">0</span> py36_XDiff</span><br><span class="line">pyenv virtualenv <span class="number">2.7</span>.<span class="number">13</span> py27_XDiff</span><br><span class="line"></span><br><span class="line">pyenv virtualenvs</span><br><span class="line"><span class="comment"># &#21019;&#24314;&#23436;&#25104;&#21518;&#65292;&#36890;&#36807;&#25191;&#34892; pyenv virtualenvs &#21629;&#20196;&#65292;&#23601;&#21487;&#20197;&#30475;&#21040;&#26412;&#22320;&#25152;&#26377;&#30340;&#39033;&#30446;&#29615;&#22659;</span></span><br><span class="line"></span><br><span class="line">pyenv activate py36_XDiff</span><br><span class="line"><span class="comment"># &#20999;&#25442;&#21040;&#26032;&#30340;&#29615;&#22659;</span></span><br><span class="line"></span><br><span class="line">pyenv deactivate</span><br><span class="line"><span class="comment"># &#36864;&#22238;&#21040;&#31995;&#32479;&#29615;&#22659;</span></span><br><span class="line"></span><br><span class="line">pyenv uninstall py36_XDiff</span><br><span class="line"><span class="comment"># Removing the directories in $(pyenv root)/versions and</span></span><br><span class="line"><span class="comment"># $(pyenv root)/versions/{version}/envs will delete the virtualenv</span></span><br><span class="line"><span class="comment"># uninstall &#30340;&#21629;&#20196;&#19981;&#33021;&#23436;&#20840;&#21368;&#36733;&#23436;, &#21487;&#20197;&#20351;&#29992;&#21024;&#38500;&#30340;&#26041;&#24335;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgb868614" class="outline-2">
+<h2 id="orgb868614">项目实践举例</h2>
+<div class="outline-text-2" id="text-orgb868614">
+<p>
+假设现在有一个项目同时尝试 python 3.5.2 和 3.3.2 进行编写, 流程如下.
+</p>
+
+
+<div class="org-src-container">
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ./Downloads</span><br><span class="line"><span class="comment"># &#36827;&#20837;&#30446;&#24405;</span></span><br><span class="line"></span><br><span class="line">mkdir Mao &amp; <span class="built_in">cd</span> Mao</span><br><span class="line"><span class="comment"># &#21019;&#24314;&#39033;&#30446;&#30446;&#24405;&#24182;&#36827;&#20837;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># &#25509;&#19979;&#26469;&#26377;&#20004;&#31181;&#26041;&#27861;, &#19968;&#31181;&#29992; local &#21464;&#37327;, &#21478;&#19968;&#31181;&#29992; virtualenv &#26041;&#24335;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># local &#21464;&#37327;&#27861;</span></span><br><span class="line"></span><br><span class="line">pyenv <span class="built_in">local</span> <span class="number">3.5</span>.<span class="number">2</span> &amp; pip install package</span><br><span class="line"><span class="comment"># &#36827;&#20837; 3.5.2 &#30340;&#29615;&#22659;, &#24182;&#23433;&#35013;&#24517;&#35201;&#30340;&#36719;&#20214;&#21253;, &#36827;&#34892;&#27979;&#35797;</span></span><br><span class="line"></span><br><span class="line">pyenv <span class="built_in">local</span> <span class="number">3.3</span>.<span class="number">2</span> &amp; pip install package</span><br><span class="line"><span class="comment"># &#36827;&#20837; 3.3.2 &#30340;&#29615;&#22659;, &#24182;&#23433;&#35013;&#24517;&#35201;&#30340;&#36719;&#20214;&#21253;, &#36827;&#34892;&#27979;&#35797;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># virtualenv &#27861;</span></span><br><span class="line"></span><br><span class="line">pyenv virtualenv <span class="number">3.6</span>.<span class="number">0</span> py36_Mao</span><br><span class="line">pyenv virtualenv <span class="number">2.7</span>.<span class="number">13</span> py33_Mao</span><br><span class="line"><span class="comment"># &#21019;&#24314;&#20004;&#20010;&#34394;&#25311;&#29615;&#22659;</span></span><br><span class="line"></span><br><span class="line">pyenv activate py35_Mao</span><br><span class="line"><span class="comment"># &#36827;&#20837; 3.5 &#29615;&#22659;&#36827;&#34892;&#24037;&#20316;</span></span><br><span class="line"></span><br><span class="line">pyenv activate py33_Mao</span><br><span class="line">pyenv deactivate</span><br><span class="line"><span class="comment"># &#36827;&#20837; 3.3 &#29615;&#22659;&#36827;&#34892;&#24037;&#20316;, &#32467;&#26463;&#21518;&#31163;&#24320;&#34394;&#25311;&#29615;&#22659;</span></span><br><span class="line"></span><br><span class="line">rm -rf ~/.pyenv/versions/py35_Mao/</span><br><span class="line">rm -rf ~/.pyenv/versions/<span class="number">3.5</span>.<span class="number">2</span>/envs/py35_Mao</span><br><span class="line">rm -rf ~/.pyenv/versions/py33_Mao/</span><br><span class="line">rm -rf ~/.pyenv/versions/<span class="number">3.3</span>.<span class="number">2</span>/envs/py33_Mao</span><br><span class="line"><span class="comment"># &#22914;&#26524;&#20197;&#21518;&#19981;&#20877;&#20351;&#29992;&#34394;&#25311;&#24320;&#21457;&#29615;&#22659;, &#21024;&#38500;&#29615;&#22659;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org75a4cf8" class="outline-2">
+<h2 id="org75a4cf8">参考资料</h2>
+<div class="outline-text-2" id="text-org75a4cf8">
+<ul class="org-ul">
+<li><a href="https://github.com/pyenv/pyenv" target="_blank" rel="external">pyenv/pyenv: Simple Python version management</a></li>
+<li><a href="http://www.jianshu.com/p/a23448208d9a" target="_blank" rel="external">使用 pyenv 可以在一个系统中安装多个 python 版本 - 简书</a></li>
+<li><a href="https://github.com/pyenv/pyenv/blob/master/COMMANDS.md#command-reference" target="_blank" rel="external">pyenv/COMMANDS.md at master · pyenv/pyenv</a></li>
+<li><a href="http://www.cnblogs.com/blackmatrix/p/5591341.html" target="_blank" rel="external">在 macOS 上通过 pyenv 安装和切换多版本 Python - BlackMatrix - 博客园</a></li>
+<li><a href="http://www.jb51.net/article/109542.htm" target="_blank" rel="external">pyenv 命令管理多个 Python 版本<sub>python</sub><sub>脚本之家</sub></a></li>
+<li><a href="http://www.cnblogs.com/npumenglei/p/3719412.html" target="_blank" rel="external">用 pyenv 和 virtualenv 搭建单机多版本 python 虚拟开发环境 - 雷子-晓飞爸 - 博客园</a></li>
+<li><a href="https://ask.hellobi.com/blog/seng/3047" target="_blank" rel="external">使用 pyenv 安装多个 Python 版本 - 天善智能：专注于商业智能 BI 和数据分析、大数据领域的垂直社区平台</a></li>
+<li><a href="https://github.com/pyenv/pyenv-virtualenv" target="_blank" rel="external">pyenv/pyenv-virtualenv: a pyenv plugin to manage virtualenv (a.k.a. python-virtualenv)</a></li>
+</ul>
+</div>
+</div>
+
+Last Updated 2017-09-19 Tue 16:07 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.2.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 9.0.10)
 
       
     </div>
@@ -672,9 +565,9 @@ Last Updated 2017-04-08 Sat 11:27 by lengyueyang<br>Render by <a href="https://g
       
         <div class="post-tags">
           
-            <a href="/tags/Emacs/" rel="tag">#Emacs</a>
+            <a href="/tags/Python/" rel="tag">#Python</a>
           
-            <a href="/tags/Spacemacs/" rel="tag">#Spacemacs</a>
+            <a href="/tags/Pyenv/" rel="tag">#Pyenv</a>
           
         </div>
       
@@ -683,16 +576,12 @@ Last Updated 2017-04-08 Sat 11:27 by lengyueyang<br>Render by <a href="https://g
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/28/Use org-mode to GTD/" rel="next" title="Use org-mode to GTD [用 org-mode 做时间管理 ]">
-                <i class="fa fa-chevron-left"></i> Use org-mode to GTD [用 org-mode 做时间管理 ]
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/02/05/Archlinux install and configuration/" rel="prev" title="Archlinux install and configuration [Archlinux 安装和配置]">
-                Archlinux install and configuration [Archlinux 安装和配置] <i class="fa fa-chevron-right"></i>
+              <a href="/2017/09/05/数据科学-数学与统计-高等代数-行列式/" rel="prev" title="数据科学-数学与统计-高等代数-行列式">
+                数据科学-数学与统计-高等代数-行列式 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -898,7 +787,7 @@ Last Updated 2017-04-08 Sat 11:27 by lengyueyang<br>Render by <a href="https://g
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#org336eb97"><span class="nav-number">1.</span> <span class="nav-text">Useful keybinding</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#orgc5c0088"><span class="nav-number">1.1.</span> <span class="nav-text">Memory</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org30b9e05"><span class="nav-number">2.</span> <span class="nav-text">The Emacs Evil Tutor</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#orgb1bc3b3"><span class="nav-number">2.1.</span> <span class="nav-text">LESSON 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org07407db"><span class="nav-number">2.2.</span> <span class="nav-text">LESSON 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org07b89eb"><span class="nav-number">2.3.</span> <span class="nav-text">LESSON 3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org840e066"><span class="nav-number">2.4.</span> <span class="nav-text">LESSON 4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orged05c17"><span class="nav-number">2.5.</span> <span class="nav-text">LESSON 5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orgb6e80cd"><span class="nav-number">2.6.</span> <span class="nav-text">LESSON 6</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org9488001"><span class="nav-number">3.</span> <span class="nav-text">Python and R programming environment configuration</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org30e80c0"><span class="nav-number">3.1.</span> <span class="nav-text">Python</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org0a6e4d2"><span class="nav-number">3.2.</span> <span class="nav-text">R</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#orgfb11d30"><span class="nav-number">1.</span> <span class="nav-text">Pyenv 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org14295aa"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orgbfd0013"><span class="nav-number">3.</span> <span class="nav-text">Pyenv 基本操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org855be3d"><span class="nav-number">4.</span> <span class="nav-text">安装不同版本 python</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orgc19cc88"><span class="nav-number">5.</span> <span class="nav-text">Pyenv-virtualenv python 不同项目虚拟环境的搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orgb868614"><span class="nav-number">6.</span> <span class="nav-text">项目实践举例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org75a4cf8"><span class="nav-number">7.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>

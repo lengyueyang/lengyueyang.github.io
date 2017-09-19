@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lengyueyang.github.io/"/>
-  <updated>2017-09-05T14:27:51.781Z</updated>
+  <updated>2017-09-19T08:07:09.142Z</updated>
   <id>http://lengyueyang.github.io/</id>
   
   <author>
@@ -14,6 +14,147 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python-Pyenv 使用方法总结</title>
+    <link href="http://lengyueyang.github.io/2017/09/19/Python-Pyenv%20%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/"/>
+    <id>http://lengyueyang.github.io/2017/09/19/Python-Pyenv 使用方法总结/</id>
+    <published>2017-09-19T00:00:00.000Z</published>
+    <updated>2017-09-19T08:07:09.142Z</updated>
+    
+    <content type="html">
+
+
+&lt;div id=&quot;outline-container-orgfb11d30&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgfb11d30&quot;&gt;Pyenv 简介&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgfb11d30&quot;&gt;
+&lt;p&gt;
+在使用 python 进行编程时, 经常遇到多个编程环境共存问题. pyenv 可以很好的解决这个问题, 本教程根据是学习使用 pyenv 的记录.
+&lt;/p&gt;
+
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org14295aa&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org14295aa&quot;&gt;安装&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org14295aa&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yaourt pyenv&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;yaourt pyenv-virtualenv&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+archlinux 系统安装上面命令直接安装, 其他版本可也从源中或者源代码安装.
+&lt;/p&gt;
+
+&lt;p&gt;
+安装完成后，pyenv 命令还没有加进系统的环境变量，需要将如下内容加到 ~/.zshrc 中，然后执行 source ~/.zshrc 
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt; PYENV_ROOT=&lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;variable&quot;&gt;$HOME&lt;/span&gt;/.pyenv&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt; PATH=&lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;variable&quot;&gt;$PYENV_ROOT&lt;/span&gt;/bin:&lt;span class=&quot;variable&quot;&gt;$PATH&lt;/span&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;variable&quot;&gt;$(pyenv init -)&lt;/span&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;variable&quot;&gt;$(pyenv virtualenv-init -)&lt;/span&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id=&quot;outline-container-orgbfd0013&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgbfd0013&quot;&gt;Pyenv 基本操作&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgbfd0013&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pyenv versions&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;* system (&lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt; by /home/lengyue/.python-version)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;2.7&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;13&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#26597;&amp;#30475;&amp;#30446;&amp;#21069;&amp;#25152;&amp;#26377;&amp;#29256;&amp;#26412;&amp;#30340; python&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv version&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#26597;&amp;#30475;&amp;#24403;&amp;#21069;&amp;#29256;&amp;#26412;&amp;#30340; python&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv global system/&lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#35774;&amp;#32622;&amp;#20840;&amp;#23616;&amp;#30340; python &amp;#29615;&amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv &lt;span class=&quot;built_in&quot;&gt;local&lt;/span&gt; system/&lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#35774;&amp;#32622;&amp;#23616;&amp;#37096;&amp;#30340; python &amp;#29615;&amp;#22659;, local &amp;#20248;&amp;#20808;&amp;#32423;&amp;#39640;&amp;#20110; global&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv &lt;span class=&quot;built_in&quot;&gt;local&lt;/span&gt; --unset&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#37325;&amp;#32622; local &amp;#29615;&amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv shell system/&lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#35774;&amp;#32622; shell &amp;#30340; python &amp;#29615;&amp;#22659;, shell &amp;#29615;&amp;#22659;&amp;#21448;&amp;#26377;&amp;#38480;&amp;#20110; local&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv shell --unset&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#37325;&amp;#32622; shell python &amp;#29615;&amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org855be3d&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org855be3d&quot;&gt;安装不同版本 python&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org855be3d&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pyenv install --list&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# pyenv &amp;#25903;&amp;#25345;&amp;#30340;&amp;#25152;&amp;#26377; python &amp;#21015;&amp;#34920;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv install &lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#23433;&amp;#35013;&amp;#29305;&amp;#23450;&amp;#29256;&amp;#26412;&amp;#30340; python&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv uninstall &lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#21368;&amp;#36733;&amp;#29305;&amp;#23450;&amp;#29256;&amp;#26412;&amp;#30340; python&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv &lt;span class=&quot;built_in&quot;&gt;rehash&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# refresh database&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+安装特定版本 python 出现错误: ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib
+按照下帖解决, 用如下命令
+&lt;/p&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/43976068/compiling-python-via-pyenv-on-archlinux-but-missing-openssl&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Compiling Python via Pyenv on Archlinux but missing OpenSSL - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;CFLAGS=-I/usr/include/openssl-&lt;span class=&quot;number&quot;&gt;1.0&lt;/span&gt; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;LDFLAGS=-L/usr/lib64/openssl-&lt;span class=&quot;number&quot;&gt;1.0&lt;/span&gt; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv install &lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-orgc19cc88&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgc19cc88&quot;&gt;Pyenv-virtualenv python 不同项目虚拟环境的搭建&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgc19cc88&quot;&gt;
+&lt;p&gt;
+利用 pyenv-virtualenv 就可以管理多个依赖库环境
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pyenv virtualenv PYTHON_VERSION PROJECT_NAME&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#21019;&amp;#24314;&amp;#26032;&amp;#30340;&amp;#29615;&amp;#22659;,&amp;#20301;&amp;#20110; ~/.pyenv/versions/, &amp;#20854;&amp;#20013;&amp;#65292;PYTHON_VERSION &amp;#26159;&amp;#20855;&amp;#20307;&amp;#30340; Python &amp;#29256;&amp;#26412;&amp;#21495;&amp;#65292;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#20363;&amp;#22914;&amp;#65292;3.6.0&amp;#65292;PROJECT_NAME &amp;#26159;&amp;#25105;&amp;#20204;&amp;#33258;&amp;#23450;&amp;#20041;&amp;#30340;&amp;#39033;&amp;#30446;&amp;#21517;&amp;#31216;&amp;#12290;&amp;#27604;&amp;#36739;&amp;#22909;&amp;#30340;&amp;#23454;&amp;#36341;&amp;#26041;&amp;#24335;&amp;#26159;&amp;#65292;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#22312; PROJECT_NAME &amp;#20063;&amp;#24102;&amp;#19978; Python &amp;#30340;&amp;#29256;&amp;#26412;&amp;#21495;&amp;#65292;&amp;#20197;&amp;#20415;&amp;#20110;&amp;#35782;&amp;#21035;&amp;#12290;&amp;#29616;&amp;#20551;&amp;#35774;&amp;#25105;&amp;#20204;&amp;#26377; XDiff &amp;#36825;&amp;#20040;&amp;#19968;&amp;#20010;&amp;#39033;&amp;#30446;&amp;#65292;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#24819;&amp;#38024;&amp;#23545; Python 2.7.13 &amp;#21644; Python 3.6.0 &amp;#20998;&amp;#21035;&amp;#21019;&amp;#24314;&amp;#19968;&amp;#20010;&amp;#34394;&amp;#25311;&amp;#29615;&amp;#22659;&amp;#65292;&amp;#37027;&amp;#23601;&amp;#21487;&amp;#20197;&amp;#20381;&amp;#27425;&amp;#25191;&amp;#34892;&amp;#22914;&amp;#19979;&amp;#21629;&amp;#20196;&amp;#12290;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv virtualenv &lt;span class=&quot;number&quot;&gt;3.6&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; py36_XDiff&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv virtualenv &lt;span class=&quot;number&quot;&gt;2.7&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;13&lt;/span&gt; py27_XDiff&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv virtualenvs&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#21019;&amp;#24314;&amp;#23436;&amp;#25104;&amp;#21518;&amp;#65292;&amp;#36890;&amp;#36807;&amp;#25191;&amp;#34892; pyenv virtualenvs &amp;#21629;&amp;#20196;&amp;#65292;&amp;#23601;&amp;#21487;&amp;#20197;&amp;#30475;&amp;#21040;&amp;#26412;&amp;#22320;&amp;#25152;&amp;#26377;&amp;#30340;&amp;#39033;&amp;#30446;&amp;#29615;&amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv activate py36_XDiff&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#20999;&amp;#25442;&amp;#21040;&amp;#26032;&amp;#30340;&amp;#29615;&amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv deactivate&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#36864;&amp;#22238;&amp;#21040;&amp;#31995;&amp;#32479;&amp;#29615;&amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv uninstall py36_XDiff&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Removing the directories in $(pyenv root)/versions and&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# $(pyenv root)/versions/{version}/envs will delete the virtualenv&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# uninstall &amp;#30340;&amp;#21629;&amp;#20196;&amp;#19981;&amp;#33021;&amp;#23436;&amp;#20840;&amp;#21368;&amp;#36733;&amp;#23436;, &amp;#21487;&amp;#20197;&amp;#20351;&amp;#29992;&amp;#21024;&amp;#38500;&amp;#30340;&amp;#26041;&amp;#24335;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id=&quot;outline-container-orgb868614&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgb868614&quot;&gt;项目实践举例&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgb868614&quot;&gt;
+&lt;p&gt;
+假设现在有一个项目同时尝试 python 3.5.2 和 3.3.2 进行编写, 流程如下.
+&lt;/p&gt;
+
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; ./Downloads&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#36827;&amp;#20837;&amp;#30446;&amp;#24405;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mkdir Mao &amp;amp; &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#21019;&amp;#24314;&amp;#39033;&amp;#30446;&amp;#30446;&amp;#24405;&amp;#24182;&amp;#36827;&amp;#20837;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#25509;&amp;#19979;&amp;#26469;&amp;#26377;&amp;#20004;&amp;#31181;&amp;#26041;&amp;#27861;, &amp;#19968;&amp;#31181;&amp;#29992; local &amp;#21464;&amp;#37327;, &amp;#21478;&amp;#19968;&amp;#31181;&amp;#29992; virtualenv &amp;#26041;&amp;#24335;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# local &amp;#21464;&amp;#37327;&amp;#27861;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv &lt;span class=&quot;built_in&quot;&gt;local&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; &amp;amp; pip install package&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#36827;&amp;#20837; 3.5.2 &amp;#30340;&amp;#29615;&amp;#22659;, &amp;#24182;&amp;#23433;&amp;#35013;&amp;#24517;&amp;#35201;&amp;#30340;&amp;#36719;&amp;#20214;&amp;#21253;, &amp;#36827;&amp;#34892;&amp;#27979;&amp;#35797;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv &lt;span class=&quot;built_in&quot;&gt;local&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;3.3&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; &amp;amp; pip install package&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#36827;&amp;#20837; 3.3.2 &amp;#30340;&amp;#29615;&amp;#22659;, &amp;#24182;&amp;#23433;&amp;#35013;&amp;#24517;&amp;#35201;&amp;#30340;&amp;#36719;&amp;#20214;&amp;#21253;, &amp;#36827;&amp;#34892;&amp;#27979;&amp;#35797;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# virtualenv &amp;#27861;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv virtualenv &lt;span class=&quot;number&quot;&gt;3.6&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; py36_Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv virtualenv &lt;span class=&quot;number&quot;&gt;2.7&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;13&lt;/span&gt; py33_Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#21019;&amp;#24314;&amp;#20004;&amp;#20010;&amp;#34394;&amp;#25311;&amp;#29615;&amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv activate py35_Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#36827;&amp;#20837; 3.5 &amp;#29615;&amp;#22659;&amp;#36827;&amp;#34892;&amp;#24037;&amp;#20316;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv activate py33_Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv deactivate&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#36827;&amp;#20837; 3.3 &amp;#29615;&amp;#22659;&amp;#36827;&amp;#34892;&amp;#24037;&amp;#20316;, &amp;#32467;&amp;#26463;&amp;#21518;&amp;#31163;&amp;#24320;&amp;#34394;&amp;#25311;&amp;#29615;&amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rm -rf ~/.pyenv/versions/py35_Mao/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rm -rf ~/.pyenv/versions/&lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;/envs/py35_Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rm -rf ~/.pyenv/versions/py33_Mao/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rm -rf ~/.pyenv/versions/&lt;span class=&quot;number&quot;&gt;3.3&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;/envs/py33_Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#22914;&amp;#26524;&amp;#20197;&amp;#21518;&amp;#19981;&amp;#20877;&amp;#20351;&amp;#29992;&amp;#34394;&amp;#25311;&amp;#24320;&amp;#21457;&amp;#29615;&amp;#22659;, &amp;#21024;&amp;#38500;&amp;#29615;&amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id=&quot;outline-container-org75a4cf8&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org75a4cf8&quot;&gt;参考资料&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org75a4cf8&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/pyenv/pyenv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;pyenv/pyenv: Simple Python version management&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/a23448208d9a&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;使用 pyenv 可以在一个系统中安装多个 python 版本 - 简书&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/pyenv/pyenv/blob/master/COMMANDS.md#command-reference&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;pyenv/COMMANDS.md at master · pyenv/pyenv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/blackmatrix/p/5591341.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;在 macOS 上通过 pyenv 安装和切换多版本 Python - BlackMatrix - 博客园&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jb51.net/article/109542.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;pyenv 命令管理多个 Python 版本&lt;sub&gt;python&lt;/sub&gt;&lt;sub&gt;脚本之家&lt;/sub&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/npumenglei/p/3719412.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;用 pyenv 和 virtualenv 搭建单机多版本 python 虚拟开发环境 - 雷子-晓飞爸 - 博客园&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ask.hellobi.com/blog/seng/3047&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;使用 pyenv 安装多个 Python 版本 - 天善智能：专注于商业智能 BI 和数据分析、大数据领域的垂直社区平台&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/pyenv/pyenv-virtualenv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;pyenv/pyenv-virtualenv: a pyenv plugin to manage virtualenv (a.k.a. python-virtualenv)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+Last Updated 2017-09-19 Tue 16:07 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 25.2.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 9.0.10)
+</content>
+    
+    <summary type="html">
+    
+      &lt;div id=&quot;outline-container-orgfb11d30&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgfb11d30&quot;&gt;Pyenv 简介&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgfb11d30&quot;&gt;
+&lt;p&gt;
+在使用 python 进行编程时, 经常遇到多个编程环境共存问题. pyenv 可以很好的解决这个问题, 本教程根据是学习使用 pyenv 的记录.
+&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="PYTHON" scheme="http://lengyueyang.github.io/categories/PYTHON/"/>
+    
+    
+      <category term="Python" scheme="http://lengyueyang.github.io/tags/Python/"/>
+    
+      <category term="Pyenv" scheme="http://lengyueyang.github.io/tags/Pyenv/"/>
+    
+  </entry>
   
   <entry>
     <title>数据科学-数学与统计-高等代数-行列式</title>
@@ -4588,13 +4729,13 @@ Last Updated 2017-04-08 Sat 11:27 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Blog" scheme="http://lengyueyang.github.io/tags/Blog/"/>
-    
-      <category term="Github" scheme="http://lengyueyang.github.io/tags/Github/"/>
+      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
     
       <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
     
-      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
+      <category term="Blog" scheme="http://lengyueyang.github.io/tags/Blog/"/>
+    
+      <category term="Github" scheme="http://lengyueyang.github.io/tags/Github/"/>
     
   </entry>
   
@@ -4812,9 +4953,9 @@ Last Updated 2017-04-08 Sat 11:27 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
-    
       <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
+    
+      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
     
       <category term="Beamer" scheme="http://lengyueyang.github.io/tags/Beamer/"/>
     
@@ -4945,9 +5086,9 @@ Last Updated 2017-04-08 Sat 11:27 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
-    
       <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
+    
+      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
     
       <category term="GTD" scheme="http://lengyueyang.github.io/tags/GTD/"/>
     
@@ -5523,9 +5664,9 @@ Last Updated 2017-04-08 Sat 11:13 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
-    
       <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
+    
+      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
     
   </entry>
   
