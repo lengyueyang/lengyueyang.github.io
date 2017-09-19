@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lengyueyang.github.io/"/>
-  <updated>2017-09-19T08:07:09.142Z</updated>
+  <updated>2017-09-19T08:17:11.857Z</updated>
   <id>http://lengyueyang.github.io/</id>
   
   <author>
@@ -20,14 +20,14 @@
     <link href="http://lengyueyang.github.io/2017/09/19/Python-Pyenv%20%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/"/>
     <id>http://lengyueyang.github.io/2017/09/19/Python-Pyenv 使用方法总结/</id>
     <published>2017-09-19T00:00:00.000Z</published>
-    <updated>2017-09-19T08:07:09.142Z</updated>
+    <updated>2017-09-19T08:17:11.857Z</updated>
     
     <content type="html">
 
 
-&lt;div id=&quot;outline-container-orgfb11d30&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgfb11d30&quot;&gt;Pyenv 简介&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgfb11d30&quot;&gt;
+&lt;div id=&quot;outline-container-org9c7a5be&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org9c7a5be&quot;&gt;Pyenv 简介&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org9c7a5be&quot;&gt;
 &lt;p&gt;
 在使用 python 进行编程时, 经常遇到多个编程环境共存问题. pyenv 可以很好的解决这个问题, 本教程根据是学习使用 pyenv 的记录.
 &lt;/p&gt;
@@ -36,9 +36,9 @@
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org14295aa&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org14295aa&quot;&gt;安装&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org14295aa&quot;&gt;
+&lt;div id=&quot;outline-container-orge77191f&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orge77191f&quot;&gt;安装&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orge77191f&quot;&gt;
 &lt;div class=&quot;org-src-container&quot;&gt;
 &lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yaourt pyenv&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;yaourt pyenv-virtualenv&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/div&gt;
@@ -57,25 +57,31 @@ archlinux 系统安装上面命令直接安装, 其他版本可也从源中或�
 &lt;/div&gt;
 &lt;/div&gt;
 
-
-&lt;div id=&quot;outline-container-orgbfd0013&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgbfd0013&quot;&gt;Pyenv 基本操作&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgbfd0013&quot;&gt;
+&lt;div id=&quot;outline-container-org67b2e10&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org67b2e10&quot;&gt;Pyenv 基本操作&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org67b2e10&quot;&gt;
 &lt;div class=&quot;org-src-container&quot;&gt;
 &lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pyenv versions&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;* system (&lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt; by /home/lengyue/.python-version)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;2.7&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;13&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#26597;&amp;#30475;&amp;#30446;&amp;#21069;&amp;#25152;&amp;#26377;&amp;#29256;&amp;#26412;&amp;#30340; python&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv version&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#26597;&amp;#30475;&amp;#24403;&amp;#21069;&amp;#29256;&amp;#26412;&amp;#30340; python&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv global system/&lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#35774;&amp;#32622;&amp;#20840;&amp;#23616;&amp;#30340; python &amp;#29615;&amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv &lt;span class=&quot;built_in&quot;&gt;local&lt;/span&gt; system/&lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#35774;&amp;#32622;&amp;#23616;&amp;#37096;&amp;#30340; python &amp;#29615;&amp;#22659;, local &amp;#20248;&amp;#20808;&amp;#32423;&amp;#39640;&amp;#20110; global&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv &lt;span class=&quot;built_in&quot;&gt;local&lt;/span&gt; --unset&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#37325;&amp;#32622; local &amp;#29615;&amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv shell system/&lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#35774;&amp;#32622; shell &amp;#30340; python &amp;#29615;&amp;#22659;, shell &amp;#29615;&amp;#22659;&amp;#21448;&amp;#26377;&amp;#38480;&amp;#20110; local&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv shell --unset&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#37325;&amp;#32622; shell python &amp;#29615;&amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org855be3d&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org855be3d&quot;&gt;安装不同版本 python&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org855be3d&quot;&gt;
+&lt;div id=&quot;outline-container-org16f4d8d&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org16f4d8d&quot;&gt;安装不同版本 python&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org16f4d8d&quot;&gt;
 &lt;div class=&quot;org-src-container&quot;&gt;
 &lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pyenv install --list&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# pyenv &amp;#25903;&amp;#25345;&amp;#30340;&amp;#25152;&amp;#26377; python &amp;#21015;&amp;#34920;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv install &lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#23433;&amp;#35013;&amp;#29305;&amp;#23450;&amp;#29256;&amp;#26412;&amp;#30340; python&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv uninstall &lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#21368;&amp;#36733;&amp;#29305;&amp;#23450;&amp;#29256;&amp;#26412;&amp;#30340; python&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv &lt;span class=&quot;built_in&quot;&gt;rehash&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# refresh database&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/div&gt;
 
 &lt;p&gt;
-安装特定版本 python 出现错误: ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib
+安装特定版本 python 出现错误: 
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
 按照下帖解决, 用如下命令
 &lt;/p&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
@@ -88,9 +94,9 @@ archlinux 系统安装上面命令直接安装, 其他版本可也从源中或�
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgc19cc88&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgc19cc88&quot;&gt;Pyenv-virtualenv python 不同项目虚拟环境的搭建&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgc19cc88&quot;&gt;
+&lt;div id=&quot;outline-container-org8e944c4&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org8e944c4&quot;&gt;Pyenv-virtualenv python 不同项目虚拟环境的搭建&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org8e944c4&quot;&gt;
 &lt;p&gt;
 利用 pyenv-virtualenv 就可以管理多个依赖库环境
 &lt;/p&gt;
@@ -101,14 +107,12 @@ archlinux 系统安装上面命令直接安装, 其他版本可也从源中或�
 &lt;/div&gt;
 &lt;/div&gt;
 
-
-&lt;div id=&quot;outline-container-orgb868614&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgb868614&quot;&gt;项目实践举例&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgb868614&quot;&gt;
+&lt;div id=&quot;outline-container-org7341e32&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org7341e32&quot;&gt;项目实践举例&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org7341e32&quot;&gt;
 &lt;p&gt;
 假设现在有一个项目同时尝试 python 3.5.2 和 3.3.2 进行编写, 流程如下.
 &lt;/p&gt;
-
 
 &lt;div class=&quot;org-src-container&quot;&gt;
 &lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; ./Downloads&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#36827;&amp;#20837;&amp;#30446;&amp;#24405;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mkdir Mao &amp;amp; &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#21019;&amp;#24314;&amp;#39033;&amp;#30446;&amp;#30446;&amp;#24405;&amp;#24182;&amp;#36827;&amp;#20837;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#25509;&amp;#19979;&amp;#26469;&amp;#26377;&amp;#20004;&amp;#31181;&amp;#26041;&amp;#27861;, &amp;#19968;&amp;#31181;&amp;#29992; local &amp;#21464;&amp;#37327;, &amp;#21478;&amp;#19968;&amp;#31181;&amp;#29992; virtualenv &amp;#26041;&amp;#24335;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# local &amp;#21464;&amp;#37327;&amp;#27861;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv &lt;span class=&quot;built_in&quot;&gt;local&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; &amp;amp; pip install package&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#36827;&amp;#20837; 3.5.2 &amp;#30340;&amp;#29615;&amp;#22659;, &amp;#24182;&amp;#23433;&amp;#35013;&amp;#24517;&amp;#35201;&amp;#30340;&amp;#36719;&amp;#20214;&amp;#21253;, &amp;#36827;&amp;#34892;&amp;#27979;&amp;#35797;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv &lt;span class=&quot;built_in&quot;&gt;local&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;3.3&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; &amp;amp; pip install package&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#36827;&amp;#20837; 3.3.2 &amp;#30340;&amp;#29615;&amp;#22659;, &amp;#24182;&amp;#23433;&amp;#35013;&amp;#24517;&amp;#35201;&amp;#30340;&amp;#36719;&amp;#20214;&amp;#21253;, &amp;#36827;&amp;#34892;&amp;#27979;&amp;#35797;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# virtualenv &amp;#27861;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv virtualenv &lt;span class=&quot;number&quot;&gt;3.6&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; py36_Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv virtualenv &lt;span class=&quot;number&quot;&gt;2.7&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;13&lt;/span&gt; py33_Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#21019;&amp;#24314;&amp;#20004;&amp;#20010;&amp;#34394;&amp;#25311;&amp;#29615;&amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv activate py35_Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#36827;&amp;#20837; 3.5 &amp;#29615;&amp;#22659;&amp;#36827;&amp;#34892;&amp;#24037;&amp;#20316;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv activate py33_Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv deactivate&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#36827;&amp;#20837; 3.3 &amp;#29615;&amp;#22659;&amp;#36827;&amp;#34892;&amp;#24037;&amp;#20316;, &amp;#32467;&amp;#26463;&amp;#21518;&amp;#31163;&amp;#24320;&amp;#34394;&amp;#25311;&amp;#29615;&amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rm -rf ~/.pyenv/versions/py35_Mao/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rm -rf ~/.pyenv/versions/&lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;/envs/py35_Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rm -rf ~/.pyenv/versions/py33_Mao/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rm -rf ~/.pyenv/versions/&lt;span class=&quot;number&quot;&gt;3.3&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;/envs/py33_Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#22914;&amp;#26524;&amp;#20197;&amp;#21518;&amp;#19981;&amp;#20877;&amp;#20351;&amp;#29992;&amp;#34394;&amp;#25311;&amp;#24320;&amp;#21457;&amp;#29615;&amp;#22659;, &amp;#21024;&amp;#38500;&amp;#29615;&amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -116,10 +120,9 @@ archlinux 系统安装上面命令直接安装, 其他版本可也从源中或�
 &lt;/div&gt;
 &lt;/div&gt;
 
-
-&lt;div id=&quot;outline-container-org75a4cf8&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org75a4cf8&quot;&gt;参考资料&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org75a4cf8&quot;&gt;
+&lt;div id=&quot;outline-container-org83c1159&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org83c1159&quot;&gt;参考资料&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org83c1159&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/pyenv/pyenv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;pyenv/pyenv: Simple Python version management&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/a23448208d9a&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;使用 pyenv 可以在一个系统中安装多个 python 版本 - 简书&lt;/a&gt;&lt;/li&gt;
@@ -133,14 +136,14 @@ archlinux 系统安装上面命令直接安装, 其他版本可也从源中或�
 &lt;/div&gt;
 &lt;/div&gt;
 
-Last Updated 2017-09-19 Tue 16:07 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 25.2.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 9.0.10)
+Last Updated 2017-09-19 Tue 16:17 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 25.2.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 9.0.10)
 </content>
     
     <summary type="html">
     
-      &lt;div id=&quot;outline-container-orgfb11d30&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgfb11d30&quot;&gt;Pyenv 简介&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgfb11d30&quot;&gt;
+      &lt;div id=&quot;outline-container-org9c7a5be&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org9c7a5be&quot;&gt;Pyenv 简介&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org9c7a5be&quot;&gt;
 &lt;p&gt;
 在使用 python 进行编程时, 经常遇到多个编程环境共存问题. pyenv 可以很好的解决这个问题, 本教程根据是学习使用 pyenv 的记录.
 &lt;/p&gt;
@@ -759,6 +762,470 @@ Hom, R. A. (2014). 矩阵分析. : 机械工业出版社.
     
     
       <category term="Linear algebra" scheme="http://lengyueyang.github.io/tags/Linear-algebra/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据科学-数学和统计-概率论与数理统计-随机变量的数字特征</title>
+    <link href="http://lengyueyang.github.io/2017/05/29/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81/"/>
+    <id>http://lengyueyang.github.io/2017/05/29/数据科学-数学和统计-概率论与数理统计-随机变量的数字特征/</id>
+    <published>2017-05-29T00:00:00.000Z</published>
+    <updated>2017-08-07T14:18:34.720Z</updated>
+    
+    <content type="html">
+
+
+
+&lt;div id=&quot;outline-container-orgcffb922&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgcffb922&quot;&gt;随机变量的数字特征&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgcffb922&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-org615367c&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org615367c&quot;&gt;数学期望（均值）与中位数&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org615367c&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-org8fc6114&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org8fc6114&quot;&gt;数学期望的定义&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org8fc6114&quot;&gt;
+\begin{de}[离散型随机变量数学期望]
+\end{de}
+&lt;p&gt;
+设离散型随机变量 X 只取有限个可能值 \(a_1, \dots , a_n\) , 其概率分布 \(P(X = a_i) = p_i \, (i = 1, \dots ,m)\) ,则 X 的数学期望记作 \(E(X) or EX\) 定义为 \[E(X) = a_1p_1 + \dots + a_np_n\] ,若 n 取无限个值，若下式收敛，则称其为 X 的数学期望，数学期望也常称为平均，这里平均是加权平均
+&lt;/p&gt;
+
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+\begin{equation}
+E(X) = \sum_{i = 1}^\infty a_ip_i
+\end{equation}
+
+\begin{de}[连续性随机变量数学期望]
+\end{de}
+&lt;p&gt;
+连续型随机变量 X 的密度函数是 \(f(x)\) ， 如果下式收敛，则称 \(E(X)\) 为 X 的数学期望
+&lt;/p&gt;
+\begin{equation}
+  E(X) = \int_{-\infty}^\infty xf(x) dx
+\end{equation}
+
+&lt;p&gt;
+几个重要分布的数学期望
+&lt;/p&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;泊松分布的数学期望 是 λ (指定时间内发生时间的平均次数)&lt;/li&gt;
+&lt;li&gt;二项分布的数学期望 是 np&lt;/li&gt;
+&lt;li&gt;负二项分布的数学期望是 \(r(1-p)p\)&lt;/li&gt;
+&lt;li&gt;均匀分布的数学期望是 \(\frac{a+b}{2}\)&lt;/li&gt;
+&lt;li&gt;指数分布的数学期望是 \(λ^{-1}\) (在寿命分析中是平均寿命)&lt;/li&gt;
+&lt;li&gt;正太分布的数学期望是 μ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+数学期望由随机变量的分布完全决定，但在某些问题中，难于决定某些变量的分布如何，但有相当的根据（经验或理论）对期望值提出一些假定甚至有不少的了解；当需要通过观察或试验取得数据已经行估计时，估计随机变量的数字特征要比估计其分布容易且确切
+&lt;/p&gt;
+
+&lt;p&gt;
+在理论和应用中重要原因：本身含义；具备的良好性质，如工人的工资，容易知道其均值，单分布未知
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org605569c&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org605569c&quot;&gt;数学期望的性质&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org605569c&quot;&gt;
+\begin{thm}[数学期望性质-1]
+\end{thm}
+&lt;p&gt;
+若随机变量 \(X_1, \dots , X_n\) 的数学期望存在，则其和的期望等于各变量的期望之和，如下式
+&lt;/p&gt;
+\begin{equation}
+E(X_1 + \dots + X_n) = E(X_1) + \dots + E(X_n)
+\end{equation}
+
+\begin{thm}[数学期望性质-2]
+\end{thm}
+&lt;p&gt;
+若独立随机变量 \(X_1, \dots , X_n\) 的数学期望存在，则其积的期望等于各变量的期望之积，如下式
+&lt;/p&gt;
+\begin{equation}
+E(X_1 \dots X_n) = E(X_1)  \dots  E(X_n)
+\end{equation}
+
+\begin{thm}[数学期望性质-3]
+\end{thm}
+&lt;p&gt;
+若随机变量 X 为离散型，有分布 \(P(X = a_i) = p_i \quad (i = 1, \dots , n)\) ,或者为连续型，有概率密度函数 \(f(x)\) ,则有下式
+&lt;/p&gt;
+\begin{equation}
+E(g(X)) = \sum_ig(a_i)p_i \quad (if \sum_ig(a_i)p_i &lt; ∞)
+\end{equation}
+\begin{equation}
+  E(g(X)) = \int_{-\infty}^\infty g(x)f(x)dx \quad (if \int_{-\infty}^\infty |g(x)|f(x)dx &lt; \infty)
+\end{equation}
+
+&lt;p&gt;
+统计三大分布的期望：
+&lt;/p&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;\(X \sim \chi_n^2, \, E(X) = n\)&lt;/li&gt;
+&lt;li&gt;\(X \sim t_n, \, E(X) = 0 \quad (n &gt; 1)\)&lt;/li&gt;
+&lt;li&gt;\(X \sim F_{m,n}, \, E(X) = n(n-2) \quad (n &gt;2)\)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-orgc063c42&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orgc063c42&quot;&gt;条件数学期望（条件均值）&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgc063c42&quot;&gt;
+&lt;p&gt;
+条件数学期望公式
+&lt;/p&gt;
+\begin{equation}
+E(Y|x) = \int_{-\infty}^\infty yf(y|x)dy
+\end{equation}
+
+&lt;p&gt;
+意义：反映了随着 X 取值 x 的变化，Y 的平均变化情况如何，如对 \((X, Y) \sim N(a, b, σ_1^2, σ_2^2, \rho)\) ,在给定 \(X = x\) 条件下的正态分布为 \(N(b + \rho \sigma_2\sigma_1^{-1}(x_1 - a), (1-\rho^2)σ_2^2)\) ，故 \[E(Y|x) = b + \rho \sigma_2\sigma_1^{-1}(x_1 - a)\]
+&lt;/p&gt;
+
+&lt;p&gt;
+期望的条件数学期望公式
+&lt;/p&gt;
+\begin{equation}
+\begin{split}
+E(Y) = \int_{-\infty}^\infty E(Y|x)f_1(x)dx \\
+E(Y) = \int_{-\infty}^\infty g(x)f_1(x)dx \quad (g(x) = E(Y|x)) \\
+E(Y) = E[E(Y|x)]
+\end{split}
+\end{equation}
+
+&lt;p&gt;
+上述最后一个式子可以叙述为：一个变量 Y 的期望，等于其条件期望的期望(离散、连续)
+&lt;/p&gt;
+
+&lt;p&gt;
+在统计学上，常把条件期望 \(E(Y|x)\) 作为 x 的函数，称为 Y 对 X 的“回归函数”，“回归分析”即关于回归函数的统计研究
+&lt;/p&gt;
+
+&lt;p&gt;
+变量 Y 的（无条件）期望 = Y 的无条件期望 \(E(Y|x)\) 对 x 取加权平均，x 的权与变量 X 在 x 点的概率密度称比例
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org97f0bce&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org97f0bce&quot;&gt;中位数&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org97f0bce&quot;&gt;
+\begin{de}[中位数定义]
+\end{de}
+&lt;p&gt;
+设连续随机变量 X 的分布函数为 \(F(x)\) ,则满足下式的数 m 称为 X 或者分布 F 的中位数
+&lt;/p&gt;
+\begin{equation}
+P(X ⩽ m) = F(m) = 1/2
+\end{equation}
+
+&lt;p&gt;
+和数学期望一样，中位数用于刻画一个随机变量 X 的平均取值的数学特征
+&lt;/p&gt;
+
+&lt;p&gt;
+与数学期望相比的优点：受个别特大或特小值的影响很小；中位数总存在
+&lt;/p&gt;
+
+&lt;p&gt;
+在理论和应用中数学期望重要性超过中位数的原因：均值有很多优良的性质；中位数不唯一且离散型变量中位数不完全符合“中位”含义
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org8af648b&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org8af648b&quot;&gt;方差与钜&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org8af648b&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-org7173c39&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org7173c39&quot;&gt;方差和标准差&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org7173c39&quot;&gt;
+\begin{de}[方差定义]
+\end{de}
+&lt;p&gt;
+X 为随机变量，其分布为 F，则 \(Var(X)\)(见下式) 称为 X(或分布 F)的方差，其平方根(取正值)称为标准差
+&lt;/p&gt;
+\begin{equation}
+Var(X) = E(X - EX)^2 = E(X^2) - (EX)^2
+\end{equation}
+
+&lt;p&gt;
+方差的数学性质：
+&lt;/p&gt;
+\begin{thm}[方差的数学性质-1]
+\end{thm}
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;常数的方差是 0&lt;/li&gt;
+&lt;li&gt;若 c 为常数，则 \(Var(X + c) = Var(X)\)&lt;/li&gt;
+&lt;li&gt;若 c 为常数，则 \(Var(cX) = c^2Var(X)\)&lt;/li&gt;
+&lt;/ul&gt;
+\begin{thm}[方差的数学性质-2]
+\end{thm}
+&lt;p&gt;
+独立随机变量之和的方差等于各变量的方差之和，公式如下
+&lt;/p&gt;
+\begin{equation}
+Var(X_1 + \dots + X_n) = Var(X_1) + \dots + Var(X_n)
+\end{equation}
+
+&lt;p&gt;
+方差是刻画随机变量在其中心附近散布程度的数字特征之一
+&lt;/p&gt;
+
+&lt;p&gt;
+平均绝对差是刻画随机变量散布度的数字特征之一
+&lt;/p&gt;
+
+&lt;p&gt;
+几个重要分布的数学期望
+&lt;/p&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;泊松分布的数学方差是 λ (指定时间内发生时间的平均次数)&lt;/li&gt;
+&lt;li&gt;二项分布的数学方差是 \(np(1-p)\)&lt;/li&gt;
+&lt;li&gt;均匀分布的数学方差是 \(\frac{(b-a)^2}{12}\)&lt;/li&gt;
+&lt;li&gt;指数分布的数学方差是 \(λ^{-2}\)&lt;/li&gt;
+&lt;li&gt;正太分布的数学方差是 \(σ^2\)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+统计三大分布的期望：
+&lt;/p&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;\(X \sim \chi_n^2, \, var(X) = 2n\)&lt;/li&gt;
+&lt;li&gt;\(X \sim t_n, \, Var(X) = n ∕ (n-2) \quad (n &gt; 2)\)&lt;/li&gt;
+&lt;li&gt;\(X \sim F_{m,n}, \, Var(X) = 2n^2(m+n-2) ∕ [m(n-2)^2(n-4)] \quad (n &gt; 4)\)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org07bf0de&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org07bf0de&quot;&gt;钜&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org07bf0de&quot;&gt;
+\begin{de}[矩定义]
+\end{de}
+&lt;p&gt;
+设 X 为随机变量，c 为常数，k 为正整数，则量 \(E[(X-c)^k]\) 称为 X 关于 c 点的 k 阶矩
+&lt;/p&gt;
+
+&lt;p&gt;
+矩比较重要的性质
+&lt;/p&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;\(c = 0\) ， \(α^k = E(X^k)\) 称为 X 的 k 阶原点矩&lt;/li&gt;
+&lt;li&gt;\(c = E(X)\) ， \(\mu^k = E[(X-EX)^k]\) 称为 X 的 k 阶中心距&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+一阶原点矩为期望；一阶中心距为 0；二阶中心距为方差
+&lt;/p&gt;
+
+&lt;p&gt;
+统计学上，高于 4 阶的钜极少使用
+&lt;/p&gt;
+
+&lt;p&gt;
+三阶中心距：
+衡量分布是否有偏：对称为 0；大于 0 为正偏或右偏；小于 0 为负偏或左偏
+偏度系数为 \(\beta_1\) ，则
+&lt;/p&gt;
+\begin{equation}
+\beta_1 = u_3 ∕ u_2^(3/2)
+\end{equation}
+
+&lt;p&gt;
+四阶中心距：
+衡量分布（密度）在均值附近的陡峭程度如何。越陡峭值越小
+峰度系数为 \(\beta_2\) 则
+&lt;/p&gt;
+\begin{equation}
+\beta_2 = u_4 ∕ u_2^2
+\end{equation}
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org053764e&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org053764e&quot;&gt;协方差与相关系数&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org053764e&quot;&gt;
+\begin{de}[协方差定义]
+\end{de}
+&lt;p&gt;
+设 \(X, Y\) 是二维随机变量，X，Y 本身都是一维随机变量，记 \[E(X) = m_1, E(Y) = m_2, Var(X) = σ_1^2, var(Y) = σ_2^2\] , 则称 \(E[(X-m_1)(Y-m_2)]\) 为 \(X, Y\) 的协方差，记为 \(Cov(X, Y)\) ，有 \(Cov(X, Y) = Cov(Y, X)\) ，且有 \[Cov(c_1X + c_2, c_3Y +c_4) = c_1c_3Cov(X, Y)\] , \[Cov(X, Y) = E(XY) - m_1m_2\]
+&lt;/p&gt;
+
+\begin{thm}[协方差性质]
+\end{thm}
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;若 X，Y 独立，则 \(Cov(X, Y) = 0\)&lt;/li&gt;
+&lt;li&gt;\([Cov(X, Y)]^2 ⩽ σ_1^2σ_2^2\) , 等号成立当且仅当 X，Y 之间有严格的线性关系(即：存在常数 a，b 使得 Y=a+bX)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+协方差意义：多维随机变量的数字特征，反应分量之间的关系
+&lt;/p&gt;
+
+\begin{de}[相关系数定义]
+\end{de}
+&lt;p&gt;
+设 \(X, Y\) 是二维随机变量，X，Y 本身都是一维随机变量，记 \[E(X) = m_1, E(Y) = m_2, Var(X) = σ_1^2, var(Y) = σ_2^2\] , 则称 \(Cov(X, Y) ∕ (σ_1σ_2)\) 为 \(X, Y\) 的相关系数，并记为 \(Corr(X, Y)\)
+&lt;/p&gt;
+
+\begin{thm}[相关系数性质]
+\end{thm}
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;若 X，Y 独立，则 \(Corr(X, Y) = 0\)&lt;/li&gt;
+&lt;li&gt;\(|Corr(X, Y)]| ⩽ 1\) , 等号成立当且仅当 X，Y 之间有严格的线性关系(即：存在常数 a，b 使得 Y=a+bX)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+相关系数意义：标准尺度下的协方差
+&lt;/p&gt;
+
+&lt;p&gt;
+不相关和独立间的关系：Corr(X,Y)=0，表示 X 和 Y 不相关，X 和 Y 相关不一定独立，但独立一定相关
+&lt;/p&gt;
+
+&lt;p&gt;
+相关系数也称为线性相关系数。若 0&amp;lt;abs(Cov(X,Y))&amp;lt;1，则表示：X,Y 之间有一定程度的线性关系而非严格的线性关系
+&lt;/p&gt;
+
+&lt;p&gt;
+“线性相关”的最小二乘解释： 由 \[m_2 = bm_1 + a, b = σ_1^{-1}\sigma_2Corr(X, Y)\]
+&lt;/p&gt;
+
+&lt;p&gt;
+二维正态分布的相关系数特性：
+&lt;/p&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;若 \((X, Y)\) 为二维正态分布，则允许用任何函数 M(X) 去逼近 Y，所得到的结果与线性逼近结果类似，而线性逼近的程度完全取决于相关系数&lt;/li&gt;
+&lt;li&gt;若 \((X, Y)\) 为二维正态分布，由  \(Corr(X, Y) = 0\) 可以推出 X，Y 独立，即在这种情况下，独立与相关等同&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org7115bbc&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org7115bbc&quot;&gt;大数定理和中心极限定理&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org7115bbc&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-org0e1a73a&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org0e1a73a&quot;&gt;大数定理&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org0e1a73a&quot;&gt;
+\begin{thm}[大数定理定义]
+\end{thm}
+&lt;p&gt;
+设 \(X_1, X_2, \dots , X_n\) 是独立同分布的随机变量，记他们的公共均值为 a，又设他们的方差存在并记为 \(σ^2\) , 则对任意给定的 \(ε &gt; 0\) , 有下式成立，指出了 “当 n 很大时， \(\overbar(X)\) 接近于 a”，在概率论中叫做 &quot; \(\overbar(X)\) 依概率收敛于 a&quot;
+&lt;/p&gt;
+\begin{equation}
+  \lim_{n\to\infty} P(|\overbar(X) - a| \geqslant \varepsilon) = 0
+\end{equation}
+&lt;p&gt;
+上式一个重要的推广是伯努利大数定理，即 “频率收敛于概率”，公式如下
+&lt;/p&gt;
+\begin{equation}
+  \lim_{n\to\infty} P(p_n - p| \geqslant \varepsilon) = 0
+\end{equation}
+
+&lt;p&gt;
+大数定理的证明需要用到马尔科夫不等式和切比雪夫不等式，如下
+若 Y 为只能取非负值的随机变量， \(Var(Y)\) 存在，则对仍给常数 \(ε &gt; 0\) , 有
+&lt;/p&gt;
+
+&lt;p&gt;
+马尔科夫不等式
+&lt;/p&gt;
+\begin{equation}
+P(Y ⩾ ε) ⩽ E(Y) ∕ ε
+\end{equation}
+&lt;p&gt;
+切比雪夫不等式
+&lt;/p&gt;
+\begin{equation}
+P(|Y-EY| ⩾ ε) ⩽ Var(Y) ∕ ε^2
+\end{equation}
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-orga0b68e6&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orga0b68e6&quot;&gt;中心极限定理&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orga0b68e6&quot;&gt;
+\begin{thm}[林徳伯格定理]
+\end{thm}
+&lt;p&gt;
+设 \(X_1, X_2, \dots , X_n\) 为独立同分布的随机变量， \(E(X_i) = a_i, Var(X_i) = σ^2 (σ^2 &gt; 0)\) , 则对任何实数 x，有下式成立，其中 \(\Phi(x)\) 是标准正态分布 \(N(0, 1)\) 的分布函数
+&lt;/p&gt;
+\begin{equation}
+  \lim_{n\to\infty} P\left( \frac{1}{\sqrt{n}σ}(X_1 + \dots + X_n - na) \leqslant x \right) = \Phi(x)
+\end{equation}
+&lt;p&gt;
+虽则在一般情况很难求出 \(X_1, X_2, \dots , X_n\) 的分布的确切形式，但当 n 很大时，可通过正态分布求其近似值
+&lt;/p&gt;
+
+\begin{thm}[棣莫弗-拉普拉斯定理
+\end{thm}
+&lt;p&gt;
+设 \(X_1, X_2, \dots , X_n\) 为独立同分布的随机变量， \(X_i\) 的分布是 \[P(X_i =1) = p, \quda P(X_i = 0) = 1-p \quad (0&lt;p&lt;1)\] ,=&quot;&quot; 则对任何实数=&quot;&quot; x，有下式成立，其中=&quot;&quot; \(\phi(x)\)=&quot;&quot; 是标准正态分布=&quot;&quot; \(n(0,=&quot;&quot; 1)\)=&quot;&quot; 的分布函数=&quot;&quot; &lt;=&quot;&quot; p=&quot;&quot;&gt;
+\begin{equation}
+  \lim_{n\to\infty} P\left( \frac{1}{\sqrt{np(1-p)}}(X_1 + \dots + X_n - np) \leqslant x \right) = \Phi(x)
+\end{equation}
+
+&lt;p&gt;
+&lt;a href=&quot;#orgd95330d&quot;&gt;棣莫弗-拉普拉斯定理&lt;/a&gt; 是 &lt;a href=&quot;#orgc5dbd8a&quot;&gt;林徳伯格定理&lt;/a&gt; 的特例，是用正态分布去逼近二项分布(当 p 固定，n 很大时，np 值很大)，也可以用泊松分布去逼近二项分布(p 很小，np = λ 不太大时)，二者相同点是 n 值很大
+&lt;/p&gt;
+
+&lt;p&gt;
+若 \(t_1, t_2\) 是两个正整数， \(t_1 &lt; t_2\) ， 则当 n 相当大时，按照 &lt;a href=&quot;#orgf2308f0&quot;&gt;1&lt;/a&gt; ，近似有 \[P(t_1 ⩽ X_1 + \dots + X_n ⩽ t_2) = Φ(y_2) - \Phi(y_1)\] 其中 \[y_i = (t_i - np) ∕ \sqrt{np(1-p) \quad (i = 1, 2)}\]
+若将 \(y_1, y_2\) 修正为 \[y_1 = \left( t_1 - \frac{1}{2} -np\right) ⧸ \sqrt{np(1-p)}\]   \[y_2 = \left( t_2 + \frac{1}{2} -np\right) ⧸ \sqrt{np(1-p)}\] 再利用公式，则可提高精度
+&lt;/p&gt;
+
+&lt;p&gt;
+中心极限定理的推广方向：独立不同分布情形；非独立情形；由中心极限定理引起的误差；大偏差问题
+&lt;/p&gt;
+&lt;/p&lt;1)\]&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-orgbde50fd&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgbde50fd&quot;&gt;例题&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org4ddb555&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org4ddb555&quot;&gt;参考网页&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org4ddb555&quot;&gt;
+&lt;p&gt;
+&lt;a href=&quot;http://blog.csdn.net/zhang22huan/article/details/8631101&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/zhang22huan/article/details/8631101&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+Last Updated 2017-08-07 Mon 22:18 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 25.2.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 9.0.9)
+</content>
+    
+    <summary type="html">
+    
+      &lt;div id=&quot;outline-container-orgcffb922&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgcffb922&quot;&gt;随机变量的数字特征&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgcffb922&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-org615367c&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org615367c&quot;&gt;数学期望（均值）与中位数&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org615367c&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-org8fc6114&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org8fc6114&quot;&gt;数学期望的定义&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org8fc6114&quot;&gt;
+\begin{de}[离散型随机变量数学期望]
+\end{de}
+&lt;p&gt;
+设离散型随机变量 X 只取有限个可能值 \(a_1, \dots , a_n\) , 其概率分布 \(P(X = a_i) = p_i \, (i = 1, \dots ,m)\) ,则 X 的数学期望记作 \(E(X) or EX\) 定义为 \[E(X) = a_1p_1 + \dots + a_np_n\] ,若 n 取无限个值，若下式收敛，则称其为 X 的数学期望，数学期望也常称为平均，这里平均是加权平均
+&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="DATA SCIENTIST" scheme="http://lengyueyang.github.io/categories/DATA-SCIENTIST/"/>
+    
+    
+      <category term="Statistics" scheme="http://lengyueyang.github.io/tags/Statistics/"/>
     
   </entry>
   
@@ -1506,470 +1973,6 @@ Last Updated 2017-07-10 Mon 13:28 by lengyueyang&lt;br&gt;Render by &lt;a href=&
 
 &lt;p&gt;
 随机变量的反面为确定性变量，其取值遵循某种严格的规律的变量；
-&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="DATA SCIENTIST" scheme="http://lengyueyang.github.io/categories/DATA-SCIENTIST/"/>
-    
-    
-      <category term="Statistics" scheme="http://lengyueyang.github.io/tags/Statistics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据科学-数学和统计-概率论与数理统计-随机变量的数字特征</title>
-    <link href="http://lengyueyang.github.io/2017/05/29/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81/"/>
-    <id>http://lengyueyang.github.io/2017/05/29/数据科学-数学和统计-概率论与数理统计-随机变量的数字特征/</id>
-    <published>2017-05-29T00:00:00.000Z</published>
-    <updated>2017-08-07T14:18:34.720Z</updated>
-    
-    <content type="html">
-
-
-
-&lt;div id=&quot;outline-container-orgcffb922&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgcffb922&quot;&gt;随机变量的数字特征&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgcffb922&quot;&gt;
-&lt;/div&gt;&lt;div id=&quot;outline-container-org615367c&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org615367c&quot;&gt;数学期望（均值）与中位数&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org615367c&quot;&gt;
-&lt;/div&gt;&lt;div id=&quot;outline-container-org8fc6114&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org8fc6114&quot;&gt;数学期望的定义&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org8fc6114&quot;&gt;
-\begin{de}[离散型随机变量数学期望]
-\end{de}
-&lt;p&gt;
-设离散型随机变量 X 只取有限个可能值 \(a_1, \dots , a_n\) , 其概率分布 \(P(X = a_i) = p_i \, (i = 1, \dots ,m)\) ,则 X 的数学期望记作 \(E(X) or EX\) 定义为 \[E(X) = a_1p_1 + \dots + a_np_n\] ,若 n 取无限个值，若下式收敛，则称其为 X 的数学期望，数学期望也常称为平均，这里平均是加权平均
-&lt;/p&gt;
-
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-
-\begin{equation}
-E(X) = \sum_{i = 1}^\infty a_ip_i
-\end{equation}
-
-\begin{de}[连续性随机变量数学期望]
-\end{de}
-&lt;p&gt;
-连续型随机变量 X 的密度函数是 \(f(x)\) ， 如果下式收敛，则称 \(E(X)\) 为 X 的数学期望
-&lt;/p&gt;
-\begin{equation}
-  E(X) = \int_{-\infty}^\infty xf(x) dx
-\end{equation}
-
-&lt;p&gt;
-几个重要分布的数学期望
-&lt;/p&gt;
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;泊松分布的数学期望 是 λ (指定时间内发生时间的平均次数)&lt;/li&gt;
-&lt;li&gt;二项分布的数学期望 是 np&lt;/li&gt;
-&lt;li&gt;负二项分布的数学期望是 \(r(1-p)p\)&lt;/li&gt;
-&lt;li&gt;均匀分布的数学期望是 \(\frac{a+b}{2}\)&lt;/li&gt;
-&lt;li&gt;指数分布的数学期望是 \(λ^{-1}\) (在寿命分析中是平均寿命)&lt;/li&gt;
-&lt;li&gt;正太分布的数学期望是 μ&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;
-数学期望由随机变量的分布完全决定，但在某些问题中，难于决定某些变量的分布如何，但有相当的根据（经验或理论）对期望值提出一些假定甚至有不少的了解；当需要通过观察或试验取得数据已经行估计时，估计随机变量的数字特征要比估计其分布容易且确切
-&lt;/p&gt;
-
-&lt;p&gt;
-在理论和应用中重要原因：本身含义；具备的良好性质，如工人的工资，容易知道其均值，单分布未知
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;outline-container-org605569c&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org605569c&quot;&gt;数学期望的性质&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org605569c&quot;&gt;
-\begin{thm}[数学期望性质-1]
-\end{thm}
-&lt;p&gt;
-若随机变量 \(X_1, \dots , X_n\) 的数学期望存在，则其和的期望等于各变量的期望之和，如下式
-&lt;/p&gt;
-\begin{equation}
-E(X_1 + \dots + X_n) = E(X_1) + \dots + E(X_n)
-\end{equation}
-
-\begin{thm}[数学期望性质-2]
-\end{thm}
-&lt;p&gt;
-若独立随机变量 \(X_1, \dots , X_n\) 的数学期望存在，则其积的期望等于各变量的期望之积，如下式
-&lt;/p&gt;
-\begin{equation}
-E(X_1 \dots X_n) = E(X_1)  \dots  E(X_n)
-\end{equation}
-
-\begin{thm}[数学期望性质-3]
-\end{thm}
-&lt;p&gt;
-若随机变量 X 为离散型，有分布 \(P(X = a_i) = p_i \quad (i = 1, \dots , n)\) ,或者为连续型，有概率密度函数 \(f(x)\) ,则有下式
-&lt;/p&gt;
-\begin{equation}
-E(g(X)) = \sum_ig(a_i)p_i \quad (if \sum_ig(a_i)p_i &lt; ∞)
-\end{equation}
-\begin{equation}
-  E(g(X)) = \int_{-\infty}^\infty g(x)f(x)dx \quad (if \int_{-\infty}^\infty |g(x)|f(x)dx &lt; \infty)
-\end{equation}
-
-&lt;p&gt;
-统计三大分布的期望：
-&lt;/p&gt;
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;\(X \sim \chi_n^2, \, E(X) = n\)&lt;/li&gt;
-&lt;li&gt;\(X \sim t_n, \, E(X) = 0 \quad (n &gt; 1)\)&lt;/li&gt;
-&lt;li&gt;\(X \sim F_{m,n}, \, E(X) = n(n-2) \quad (n &gt;2)\)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;outline-container-orgc063c42&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;orgc063c42&quot;&gt;条件数学期望（条件均值）&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgc063c42&quot;&gt;
-&lt;p&gt;
-条件数学期望公式
-&lt;/p&gt;
-\begin{equation}
-E(Y|x) = \int_{-\infty}^\infty yf(y|x)dy
-\end{equation}
-
-&lt;p&gt;
-意义：反映了随着 X 取值 x 的变化，Y 的平均变化情况如何，如对 \((X, Y) \sim N(a, b, σ_1^2, σ_2^2, \rho)\) ,在给定 \(X = x\) 条件下的正态分布为 \(N(b + \rho \sigma_2\sigma_1^{-1}(x_1 - a), (1-\rho^2)σ_2^2)\) ，故 \[E(Y|x) = b + \rho \sigma_2\sigma_1^{-1}(x_1 - a)\]
-&lt;/p&gt;
-
-&lt;p&gt;
-期望的条件数学期望公式
-&lt;/p&gt;
-\begin{equation}
-\begin{split}
-E(Y) = \int_{-\infty}^\infty E(Y|x)f_1(x)dx \\
-E(Y) = \int_{-\infty}^\infty g(x)f_1(x)dx \quad (g(x) = E(Y|x)) \\
-E(Y) = E[E(Y|x)]
-\end{split}
-\end{equation}
-
-&lt;p&gt;
-上述最后一个式子可以叙述为：一个变量 Y 的期望，等于其条件期望的期望(离散、连续)
-&lt;/p&gt;
-
-&lt;p&gt;
-在统计学上，常把条件期望 \(E(Y|x)\) 作为 x 的函数，称为 Y 对 X 的“回归函数”，“回归分析”即关于回归函数的统计研究
-&lt;/p&gt;
-
-&lt;p&gt;
-变量 Y 的（无条件）期望 = Y 的无条件期望 \(E(Y|x)\) 对 x 取加权平均，x 的权与变量 X 在 x 点的概率密度称比例
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;outline-container-org97f0bce&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org97f0bce&quot;&gt;中位数&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org97f0bce&quot;&gt;
-\begin{de}[中位数定义]
-\end{de}
-&lt;p&gt;
-设连续随机变量 X 的分布函数为 \(F(x)\) ,则满足下式的数 m 称为 X 或者分布 F 的中位数
-&lt;/p&gt;
-\begin{equation}
-P(X ⩽ m) = F(m) = 1/2
-\end{equation}
-
-&lt;p&gt;
-和数学期望一样，中位数用于刻画一个随机变量 X 的平均取值的数学特征
-&lt;/p&gt;
-
-&lt;p&gt;
-与数学期望相比的优点：受个别特大或特小值的影响很小；中位数总存在
-&lt;/p&gt;
-
-&lt;p&gt;
-在理论和应用中数学期望重要性超过中位数的原因：均值有很多优良的性质；中位数不唯一且离散型变量中位数不完全符合“中位”含义
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;outline-container-org8af648b&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org8af648b&quot;&gt;方差与钜&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org8af648b&quot;&gt;
-&lt;/div&gt;&lt;div id=&quot;outline-container-org7173c39&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org7173c39&quot;&gt;方差和标准差&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org7173c39&quot;&gt;
-\begin{de}[方差定义]
-\end{de}
-&lt;p&gt;
-X 为随机变量，其分布为 F，则 \(Var(X)\)(见下式) 称为 X(或分布 F)的方差，其平方根(取正值)称为标准差
-&lt;/p&gt;
-\begin{equation}
-Var(X) = E(X - EX)^2 = E(X^2) - (EX)^2
-\end{equation}
-
-&lt;p&gt;
-方差的数学性质：
-&lt;/p&gt;
-\begin{thm}[方差的数学性质-1]
-\end{thm}
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;常数的方差是 0&lt;/li&gt;
-&lt;li&gt;若 c 为常数，则 \(Var(X + c) = Var(X)\)&lt;/li&gt;
-&lt;li&gt;若 c 为常数，则 \(Var(cX) = c^2Var(X)\)&lt;/li&gt;
-&lt;/ul&gt;
-\begin{thm}[方差的数学性质-2]
-\end{thm}
-&lt;p&gt;
-独立随机变量之和的方差等于各变量的方差之和，公式如下
-&lt;/p&gt;
-\begin{equation}
-Var(X_1 + \dots + X_n) = Var(X_1) + \dots + Var(X_n)
-\end{equation}
-
-&lt;p&gt;
-方差是刻画随机变量在其中心附近散布程度的数字特征之一
-&lt;/p&gt;
-
-&lt;p&gt;
-平均绝对差是刻画随机变量散布度的数字特征之一
-&lt;/p&gt;
-
-&lt;p&gt;
-几个重要分布的数学期望
-&lt;/p&gt;
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;泊松分布的数学方差是 λ (指定时间内发生时间的平均次数)&lt;/li&gt;
-&lt;li&gt;二项分布的数学方差是 \(np(1-p)\)&lt;/li&gt;
-&lt;li&gt;均匀分布的数学方差是 \(\frac{(b-a)^2}{12}\)&lt;/li&gt;
-&lt;li&gt;指数分布的数学方差是 \(λ^{-2}\)&lt;/li&gt;
-&lt;li&gt;正太分布的数学方差是 \(σ^2\)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;
-统计三大分布的期望：
-&lt;/p&gt;
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;\(X \sim \chi_n^2, \, var(X) = 2n\)&lt;/li&gt;
-&lt;li&gt;\(X \sim t_n, \, Var(X) = n ∕ (n-2) \quad (n &gt; 2)\)&lt;/li&gt;
-&lt;li&gt;\(X \sim F_{m,n}, \, Var(X) = 2n^2(m+n-2) ∕ [m(n-2)^2(n-4)] \quad (n &gt; 4)\)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;outline-container-org07bf0de&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org07bf0de&quot;&gt;钜&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org07bf0de&quot;&gt;
-\begin{de}[矩定义]
-\end{de}
-&lt;p&gt;
-设 X 为随机变量，c 为常数，k 为正整数，则量 \(E[(X-c)^k]\) 称为 X 关于 c 点的 k 阶矩
-&lt;/p&gt;
-
-&lt;p&gt;
-矩比较重要的性质
-&lt;/p&gt;
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;\(c = 0\) ， \(α^k = E(X^k)\) 称为 X 的 k 阶原点矩&lt;/li&gt;
-&lt;li&gt;\(c = E(X)\) ， \(\mu^k = E[(X-EX)^k]\) 称为 X 的 k 阶中心距&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;
-一阶原点矩为期望；一阶中心距为 0；二阶中心距为方差
-&lt;/p&gt;
-
-&lt;p&gt;
-统计学上，高于 4 阶的钜极少使用
-&lt;/p&gt;
-
-&lt;p&gt;
-三阶中心距：
-衡量分布是否有偏：对称为 0；大于 0 为正偏或右偏；小于 0 为负偏或左偏
-偏度系数为 \(\beta_1\) ，则
-&lt;/p&gt;
-\begin{equation}
-\beta_1 = u_3 ∕ u_2^(3/2)
-\end{equation}
-
-&lt;p&gt;
-四阶中心距：
-衡量分布（密度）在均值附近的陡峭程度如何。越陡峭值越小
-峰度系数为 \(\beta_2\) 则
-&lt;/p&gt;
-\begin{equation}
-\beta_2 = u_4 ∕ u_2^2
-\end{equation}
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;outline-container-org053764e&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org053764e&quot;&gt;协方差与相关系数&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org053764e&quot;&gt;
-\begin{de}[协方差定义]
-\end{de}
-&lt;p&gt;
-设 \(X, Y\) 是二维随机变量，X，Y 本身都是一维随机变量，记 \[E(X) = m_1, E(Y) = m_2, Var(X) = σ_1^2, var(Y) = σ_2^2\] , 则称 \(E[(X-m_1)(Y-m_2)]\) 为 \(X, Y\) 的协方差，记为 \(Cov(X, Y)\) ，有 \(Cov(X, Y) = Cov(Y, X)\) ，且有 \[Cov(c_1X + c_2, c_3Y +c_4) = c_1c_3Cov(X, Y)\] , \[Cov(X, Y) = E(XY) - m_1m_2\]
-&lt;/p&gt;
-
-\begin{thm}[协方差性质]
-\end{thm}
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;若 X，Y 独立，则 \(Cov(X, Y) = 0\)&lt;/li&gt;
-&lt;li&gt;\([Cov(X, Y)]^2 ⩽ σ_1^2σ_2^2\) , 等号成立当且仅当 X，Y 之间有严格的线性关系(即：存在常数 a，b 使得 Y=a+bX)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;
-协方差意义：多维随机变量的数字特征，反应分量之间的关系
-&lt;/p&gt;
-
-\begin{de}[相关系数定义]
-\end{de}
-&lt;p&gt;
-设 \(X, Y\) 是二维随机变量，X，Y 本身都是一维随机变量，记 \[E(X) = m_1, E(Y) = m_2, Var(X) = σ_1^2, var(Y) = σ_2^2\] , 则称 \(Cov(X, Y) ∕ (σ_1σ_2)\) 为 \(X, Y\) 的相关系数，并记为 \(Corr(X, Y)\)
-&lt;/p&gt;
-
-\begin{thm}[相关系数性质]
-\end{thm}
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;若 X，Y 独立，则 \(Corr(X, Y) = 0\)&lt;/li&gt;
-&lt;li&gt;\(|Corr(X, Y)]| ⩽ 1\) , 等号成立当且仅当 X，Y 之间有严格的线性关系(即：存在常数 a，b 使得 Y=a+bX)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;
-相关系数意义：标准尺度下的协方差
-&lt;/p&gt;
-
-&lt;p&gt;
-不相关和独立间的关系：Corr(X,Y)=0，表示 X 和 Y 不相关，X 和 Y 相关不一定独立，但独立一定相关
-&lt;/p&gt;
-
-&lt;p&gt;
-相关系数也称为线性相关系数。若 0&amp;lt;abs(Cov(X,Y))&amp;lt;1，则表示：X,Y 之间有一定程度的线性关系而非严格的线性关系
-&lt;/p&gt;
-
-&lt;p&gt;
-“线性相关”的最小二乘解释： 由 \[m_2 = bm_1 + a, b = σ_1^{-1}\sigma_2Corr(X, Y)\]
-&lt;/p&gt;
-
-&lt;p&gt;
-二维正态分布的相关系数特性：
-&lt;/p&gt;
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;若 \((X, Y)\) 为二维正态分布，则允许用任何函数 M(X) 去逼近 Y，所得到的结果与线性逼近结果类似，而线性逼近的程度完全取决于相关系数&lt;/li&gt;
-&lt;li&gt;若 \((X, Y)\) 为二维正态分布，由  \(Corr(X, Y) = 0\) 可以推出 X，Y 独立，即在这种情况下，独立与相关等同&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;outline-container-org7115bbc&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org7115bbc&quot;&gt;大数定理和中心极限定理&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org7115bbc&quot;&gt;
-&lt;/div&gt;&lt;div id=&quot;outline-container-org0e1a73a&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org0e1a73a&quot;&gt;大数定理&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org0e1a73a&quot;&gt;
-\begin{thm}[大数定理定义]
-\end{thm}
-&lt;p&gt;
-设 \(X_1, X_2, \dots , X_n\) 是独立同分布的随机变量，记他们的公共均值为 a，又设他们的方差存在并记为 \(σ^2\) , 则对任意给定的 \(ε &gt; 0\) , 有下式成立，指出了 “当 n 很大时， \(\overbar(X)\) 接近于 a”，在概率论中叫做 &quot; \(\overbar(X)\) 依概率收敛于 a&quot;
-&lt;/p&gt;
-\begin{equation}
-  \lim_{n\to\infty} P(|\overbar(X) - a| \geqslant \varepsilon) = 0
-\end{equation}
-&lt;p&gt;
-上式一个重要的推广是伯努利大数定理，即 “频率收敛于概率”，公式如下
-&lt;/p&gt;
-\begin{equation}
-  \lim_{n\to\infty} P(p_n - p| \geqslant \varepsilon) = 0
-\end{equation}
-
-&lt;p&gt;
-大数定理的证明需要用到马尔科夫不等式和切比雪夫不等式，如下
-若 Y 为只能取非负值的随机变量， \(Var(Y)\) 存在，则对仍给常数 \(ε &gt; 0\) , 有
-&lt;/p&gt;
-
-&lt;p&gt;
-马尔科夫不等式
-&lt;/p&gt;
-\begin{equation}
-P(Y ⩾ ε) ⩽ E(Y) ∕ ε
-\end{equation}
-&lt;p&gt;
-切比雪夫不等式
-&lt;/p&gt;
-\begin{equation}
-P(|Y-EY| ⩾ ε) ⩽ Var(Y) ∕ ε^2
-\end{equation}
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;outline-container-orga0b68e6&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;orga0b68e6&quot;&gt;中心极限定理&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orga0b68e6&quot;&gt;
-\begin{thm}[林徳伯格定理]
-\end{thm}
-&lt;p&gt;
-设 \(X_1, X_2, \dots , X_n\) 为独立同分布的随机变量， \(E(X_i) = a_i, Var(X_i) = σ^2 (σ^2 &gt; 0)\) , 则对任何实数 x，有下式成立，其中 \(\Phi(x)\) 是标准正态分布 \(N(0, 1)\) 的分布函数
-&lt;/p&gt;
-\begin{equation}
-  \lim_{n\to\infty} P\left( \frac{1}{\sqrt{n}σ}(X_1 + \dots + X_n - na) \leqslant x \right) = \Phi(x)
-\end{equation}
-&lt;p&gt;
-虽则在一般情况很难求出 \(X_1, X_2, \dots , X_n\) 的分布的确切形式，但当 n 很大时，可通过正态分布求其近似值
-&lt;/p&gt;
-
-\begin{thm}[棣莫弗-拉普拉斯定理
-\end{thm}
-&lt;p&gt;
-设 \(X_1, X_2, \dots , X_n\) 为独立同分布的随机变量， \(X_i\) 的分布是 \[P(X_i =1) = p, \quda P(X_i = 0) = 1-p \quad (0&lt;p&lt;1)\] ,=&quot;&quot; 则对任何实数=&quot;&quot; x，有下式成立，其中=&quot;&quot; \(\phi(x)\)=&quot;&quot; 是标准正态分布=&quot;&quot; \(n(0,=&quot;&quot; 1)\)=&quot;&quot; 的分布函数=&quot;&quot; &lt;=&quot;&quot; p=&quot;&quot;&gt;
-\begin{equation}
-  \lim_{n\to\infty} P\left( \frac{1}{\sqrt{np(1-p)}}(X_1 + \dots + X_n - np) \leqslant x \right) = \Phi(x)
-\end{equation}
-
-&lt;p&gt;
-&lt;a href=&quot;#orgd95330d&quot;&gt;棣莫弗-拉普拉斯定理&lt;/a&gt; 是 &lt;a href=&quot;#orgc5dbd8a&quot;&gt;林徳伯格定理&lt;/a&gt; 的特例，是用正态分布去逼近二项分布(当 p 固定，n 很大时，np 值很大)，也可以用泊松分布去逼近二项分布(p 很小，np = λ 不太大时)，二者相同点是 n 值很大
-&lt;/p&gt;
-
-&lt;p&gt;
-若 \(t_1, t_2\) 是两个正整数， \(t_1 &lt; t_2\) ， 则当 n 相当大时，按照 &lt;a href=&quot;#orgf2308f0&quot;&gt;1&lt;/a&gt; ，近似有 \[P(t_1 ⩽ X_1 + \dots + X_n ⩽ t_2) = Φ(y_2) - \Phi(y_1)\] 其中 \[y_i = (t_i - np) ∕ \sqrt{np(1-p) \quad (i = 1, 2)}\]
-若将 \(y_1, y_2\) 修正为 \[y_1 = \left( t_1 - \frac{1}{2} -np\right) ⧸ \sqrt{np(1-p)}\]   \[y_2 = \left( t_2 + \frac{1}{2} -np\right) ⧸ \sqrt{np(1-p)}\] 再利用公式，则可提高精度
-&lt;/p&gt;
-
-&lt;p&gt;
-中心极限定理的推广方向：独立不同分布情形；非独立情形；由中心极限定理引起的误差；大偏差问题
-&lt;/p&gt;
-&lt;/p&lt;1)\]&gt;&lt;/p&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;outline-container-orgbde50fd&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgbde50fd&quot;&gt;例题&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-org4ddb555&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org4ddb555&quot;&gt;参考网页&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org4ddb555&quot;&gt;
-&lt;p&gt;
-&lt;a href=&quot;http://blog.csdn.net/zhang22huan/article/details/8631101&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/zhang22huan/article/details/8631101&lt;/a&gt;
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-Last Updated 2017-08-07 Mon 22:18 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 25.2.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 9.0.9)
-</content>
-    
-    <summary type="html">
-    
-      &lt;div id=&quot;outline-container-orgcffb922&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgcffb922&quot;&gt;随机变量的数字特征&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgcffb922&quot;&gt;
-&lt;/div&gt;&lt;div id=&quot;outline-container-org615367c&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org615367c&quot;&gt;数学期望（均值）与中位数&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org615367c&quot;&gt;
-&lt;/div&gt;&lt;div id=&quot;outline-container-org8fc6114&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org8fc6114&quot;&gt;数学期望的定义&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org8fc6114&quot;&gt;
-\begin{de}[离散型随机变量数学期望]
-\end{de}
-&lt;p&gt;
-设离散型随机变量 X 只取有限个可能值 \(a_1, \dots , a_n\) , 其概率分布 \(P(X = a_i) = p_i \, (i = 1, \dots ,m)\) ,则 X 的数学期望记作 \(E(X) or EX\) 定义为 \[E(X) = a_1p_1 + \dots + a_np_n\] ,若 n 取无限个值，若下式收敛，则称其为 X 的数学期望，数学期望也常称为平均，这里平均是加权平均
 &lt;/p&gt;
     
     </summary>
@@ -4729,13 +4732,13 @@ Last Updated 2017-04-08 Sat 11:27 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
-    
-      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
-    
       <category term="Blog" scheme="http://lengyueyang.github.io/tags/Blog/"/>
     
       <category term="Github" scheme="http://lengyueyang.github.io/tags/Github/"/>
+    
+      <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
+    
+      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
     
   </entry>
   
@@ -4953,9 +4956,9 @@ Last Updated 2017-04-08 Sat 11:27 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
-    
       <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
+    
+      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
     
       <category term="Beamer" scheme="http://lengyueyang.github.io/tags/Beamer/"/>
     
@@ -5086,9 +5089,9 @@ Last Updated 2017-04-08 Sat 11:27 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
-    
       <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
+    
+      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
     
       <category term="GTD" scheme="http://lengyueyang.github.io/tags/GTD/"/>
     
@@ -5664,9 +5667,9 @@ Last Updated 2017-04-08 Sat 11:13 by lengyueyang&lt;br&gt;Render by &lt;a href=&
       <category term="EMACS" scheme="http://lengyueyang.github.io/categories/EMACS/"/>
     
     
-      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
-    
       <category term="Org-mode" scheme="http://lengyueyang.github.io/tags/Org-mode/"/>
+    
+      <category term="Emacs" scheme="http://lengyueyang.github.io/tags/Emacs/"/>
     
   </entry>
   

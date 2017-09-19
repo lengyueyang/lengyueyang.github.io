@@ -96,7 +96,7 @@
 <meta property="og:url" content="http://lengyueyang.github.io/2017/09/19/Python-Pyenv 使用方法总结/index.html">
 <meta property="og:site_name" content="深度识医">
 <meta property="og:description" content="Pyenv 简介   在使用 python 进行编程时, 经常遇到多个编程环境共存问题. pyenv 可以很好的解决这个问题, 本教程根据是学习使用 pyenv 的记录.">
-<meta property="og:updated_time" content="2017-09-19T08:07:09.142Z">
+<meta property="og:updated_time" content="2017-09-19T08:17:11.857Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python-Pyenv 使用方法总结">
 <meta name="twitter:description" content="Pyenv 简介   在使用 python 进行编程时, 经常遇到多个编程环境共存问题. pyenv 可以很好的解决这个问题, 本教程根据是学习使用 pyenv 的记录.">
@@ -408,9 +408,9 @@
         
 
 
-<div id="outline-container-orgfb11d30" class="outline-2">
-<h2 id="orgfb11d30">Pyenv 简介</h2>
-<div class="outline-text-2" id="text-orgfb11d30">
+<div id="outline-container-org9c7a5be" class="outline-2">
+<h2 id="org9c7a5be">Pyenv 简介</h2>
+<div class="outline-text-2" id="text-org9c7a5be">
 <p>
 在使用 python 进行编程时, 经常遇到多个编程环境共存问题. pyenv 可以很好的解决这个问题, 本教程根据是学习使用 pyenv 的记录.
 </p>
@@ -419,9 +419,9 @@
 </div>
 </div>
 
-<div id="outline-container-org14295aa" class="outline-2">
-<h2 id="org14295aa">安装</h2>
-<div class="outline-text-2" id="text-org14295aa">
+<div id="outline-container-orge77191f" class="outline-2">
+<h2 id="orge77191f">安装</h2>
+<div class="outline-text-2" id="text-orge77191f">
 <div class="org-src-container">
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">yaourt pyenv</span><br><span class="line">yaourt pyenv-virtualenv</span><br></pre></td></tr></table></figure>
 </div>
@@ -440,25 +440,31 @@ archlinux 系统安装上面命令直接安装, 其他版本可也从源中或�
 </div>
 </div>
 
-
-<div id="outline-container-orgbfd0013" class="outline-2">
-<h2 id="orgbfd0013">Pyenv 基本操作</h2>
-<div class="outline-text-2" id="text-orgbfd0013">
+<div id="outline-container-org67b2e10" class="outline-2">
+<h2 id="org67b2e10">Pyenv 基本操作</h2>
+<div class="outline-text-2" id="text-org67b2e10">
 <div class="org-src-container">
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">pyenv versions</span><br><span class="line"></span><br><span class="line">* system (<span class="built_in">set</span> by /home/lengyue/.python-version)</span><br><span class="line"><span class="number">2.7</span>.<span class="number">13</span></span><br><span class="line"><span class="number">3.5</span>.<span class="number">2</span></span><br><span class="line"><span class="comment"># &#26597;&#30475;&#30446;&#21069;&#25152;&#26377;&#29256;&#26412;&#30340; python</span></span><br><span class="line"></span><br><span class="line">pyenv version</span><br><span class="line"><span class="comment"># &#26597;&#30475;&#24403;&#21069;&#29256;&#26412;&#30340; python</span></span><br><span class="line"></span><br><span class="line">pyenv global system/<span class="number">3.5</span>.<span class="number">2</span></span><br><span class="line"><span class="comment"># &#35774;&#32622;&#20840;&#23616;&#30340; python &#29615;&#22659;</span></span><br><span class="line"></span><br><span class="line">pyenv <span class="built_in">local</span> system/<span class="number">3.5</span>.<span class="number">2</span></span><br><span class="line"><span class="comment"># &#35774;&#32622;&#23616;&#37096;&#30340; python &#29615;&#22659;, local &#20248;&#20808;&#32423;&#39640;&#20110; global</span></span><br><span class="line"></span><br><span class="line">pyenv <span class="built_in">local</span> --unset</span><br><span class="line"><span class="comment"># &#37325;&#32622; local &#29615;&#22659;</span></span><br><span class="line"></span><br><span class="line">pyenv shell system/<span class="number">3.5</span>.<span class="number">2</span></span><br><span class="line"><span class="comment"># &#35774;&#32622; shell &#30340; python &#29615;&#22659;, shell &#29615;&#22659;&#21448;&#26377;&#38480;&#20110; local</span></span><br><span class="line"></span><br><span class="line">pyenv shell --unset</span><br><span class="line"><span class="comment"># &#37325;&#32622; shell python &#29615;&#22659;</span></span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org855be3d" class="outline-2">
-<h2 id="org855be3d">安装不同版本 python</h2>
-<div class="outline-text-2" id="text-org855be3d">
+<div id="outline-container-org16f4d8d" class="outline-2">
+<h2 id="org16f4d8d">安装不同版本 python</h2>
+<div class="outline-text-2" id="text-org16f4d8d">
 <div class="org-src-container">
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">pyenv install --list</span><br><span class="line"><span class="comment"># pyenv &#25903;&#25345;&#30340;&#25152;&#26377; python &#21015;&#34920;</span></span><br><span class="line"></span><br><span class="line">pyenv install <span class="number">3.5</span>.<span class="number">2</span></span><br><span class="line"><span class="comment"># &#23433;&#35013;&#29305;&#23450;&#29256;&#26412;&#30340; python</span></span><br><span class="line"></span><br><span class="line">pyenv uninstall <span class="number">3.5</span>.<span class="number">2</span></span><br><span class="line"><span class="comment"># &#21368;&#36733;&#29305;&#23450;&#29256;&#26412;&#30340; python</span></span><br><span class="line"></span><br><span class="line">pyenv <span class="built_in">rehash</span></span><br><span class="line"><span class="comment"># refresh database</span></span><br></pre></td></tr></table></figure>
 </div>
 
 <p>
-安装特定版本 python 出现错误: ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib
+安装特定版本 python 出现错误: 
+</p>
+
+<div class="org-src-container">
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib</span><br></pre></td></tr></table></figure>
+</div>
+
+<p>
 按照下帖解决, 用如下命令
 </p>
 <ul class="org-ul">
@@ -471,9 +477,9 @@ archlinux 系统安装上面命令直接安装, 其他版本可也从源中或�
 </div>
 </div>
 
-<div id="outline-container-orgc19cc88" class="outline-2">
-<h2 id="orgc19cc88">Pyenv-virtualenv python 不同项目虚拟环境的搭建</h2>
-<div class="outline-text-2" id="text-orgc19cc88">
+<div id="outline-container-org8e944c4" class="outline-2">
+<h2 id="org8e944c4">Pyenv-virtualenv python 不同项目虚拟环境的搭建</h2>
+<div class="outline-text-2" id="text-org8e944c4">
 <p>
 利用 pyenv-virtualenv 就可以管理多个依赖库环境
 </p>
@@ -484,14 +490,12 @@ archlinux 系统安装上面命令直接安装, 其他版本可也从源中或�
 </div>
 </div>
 
-
-<div id="outline-container-orgb868614" class="outline-2">
-<h2 id="orgb868614">项目实践举例</h2>
-<div class="outline-text-2" id="text-orgb868614">
+<div id="outline-container-org7341e32" class="outline-2">
+<h2 id="org7341e32">项目实践举例</h2>
+<div class="outline-text-2" id="text-org7341e32">
 <p>
 假设现在有一个项目同时尝试 python 3.5.2 和 3.3.2 进行编写, 流程如下.
 </p>
-
 
 <div class="org-src-container">
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ./Downloads</span><br><span class="line"><span class="comment"># &#36827;&#20837;&#30446;&#24405;</span></span><br><span class="line"></span><br><span class="line">mkdir Mao &amp; <span class="built_in">cd</span> Mao</span><br><span class="line"><span class="comment"># &#21019;&#24314;&#39033;&#30446;&#30446;&#24405;&#24182;&#36827;&#20837;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># &#25509;&#19979;&#26469;&#26377;&#20004;&#31181;&#26041;&#27861;, &#19968;&#31181;&#29992; local &#21464;&#37327;, &#21478;&#19968;&#31181;&#29992; virtualenv &#26041;&#24335;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># local &#21464;&#37327;&#27861;</span></span><br><span class="line"></span><br><span class="line">pyenv <span class="built_in">local</span> <span class="number">3.5</span>.<span class="number">2</span> &amp; pip install package</span><br><span class="line"><span class="comment"># &#36827;&#20837; 3.5.2 &#30340;&#29615;&#22659;, &#24182;&#23433;&#35013;&#24517;&#35201;&#30340;&#36719;&#20214;&#21253;, &#36827;&#34892;&#27979;&#35797;</span></span><br><span class="line"></span><br><span class="line">pyenv <span class="built_in">local</span> <span class="number">3.3</span>.<span class="number">2</span> &amp; pip install package</span><br><span class="line"><span class="comment"># &#36827;&#20837; 3.3.2 &#30340;&#29615;&#22659;, &#24182;&#23433;&#35013;&#24517;&#35201;&#30340;&#36719;&#20214;&#21253;, &#36827;&#34892;&#27979;&#35797;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># virtualenv &#27861;</span></span><br><span class="line"></span><br><span class="line">pyenv virtualenv <span class="number">3.6</span>.<span class="number">0</span> py36_Mao</span><br><span class="line">pyenv virtualenv <span class="number">2.7</span>.<span class="number">13</span> py33_Mao</span><br><span class="line"><span class="comment"># &#21019;&#24314;&#20004;&#20010;&#34394;&#25311;&#29615;&#22659;</span></span><br><span class="line"></span><br><span class="line">pyenv activate py35_Mao</span><br><span class="line"><span class="comment"># &#36827;&#20837; 3.5 &#29615;&#22659;&#36827;&#34892;&#24037;&#20316;</span></span><br><span class="line"></span><br><span class="line">pyenv activate py33_Mao</span><br><span class="line">pyenv deactivate</span><br><span class="line"><span class="comment"># &#36827;&#20837; 3.3 &#29615;&#22659;&#36827;&#34892;&#24037;&#20316;, &#32467;&#26463;&#21518;&#31163;&#24320;&#34394;&#25311;&#29615;&#22659;</span></span><br><span class="line"></span><br><span class="line">rm -rf ~/.pyenv/versions/py35_Mao/</span><br><span class="line">rm -rf ~/.pyenv/versions/<span class="number">3.5</span>.<span class="number">2</span>/envs/py35_Mao</span><br><span class="line">rm -rf ~/.pyenv/versions/py33_Mao/</span><br><span class="line">rm -rf ~/.pyenv/versions/<span class="number">3.3</span>.<span class="number">2</span>/envs/py33_Mao</span><br><span class="line"><span class="comment"># &#22914;&#26524;&#20197;&#21518;&#19981;&#20877;&#20351;&#29992;&#34394;&#25311;&#24320;&#21457;&#29615;&#22659;, &#21024;&#38500;&#29615;&#22659;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -499,10 +503,9 @@ archlinux 系统安装上面命令直接安装, 其他版本可也从源中或�
 </div>
 </div>
 
-
-<div id="outline-container-org75a4cf8" class="outline-2">
-<h2 id="org75a4cf8">参考资料</h2>
-<div class="outline-text-2" id="text-org75a4cf8">
+<div id="outline-container-org83c1159" class="outline-2">
+<h2 id="org83c1159">参考资料</h2>
+<div class="outline-text-2" id="text-org83c1159">
 <ul class="org-ul">
 <li><a href="https://github.com/pyenv/pyenv" target="_blank" rel="external">pyenv/pyenv: Simple Python version management</a></li>
 <li><a href="http://www.jianshu.com/p/a23448208d9a" target="_blank" rel="external">使用 pyenv 可以在一个系统中安装多个 python 版本 - 简书</a></li>
@@ -516,7 +519,7 @@ archlinux 系统安装上面命令直接安装, 其他版本可也从源中或�
 </div>
 </div>
 
-Last Updated 2017-09-19 Tue 16:07 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.2.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 9.0.10)
+Last Updated 2017-09-19 Tue 16:17 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.2.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 9.0.10)
 
       
     </div>
@@ -787,7 +790,7 @@ Last Updated 2017-09-19 Tue 16:07 by lengyueyang<br>Render by <a href="https://g
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#orgfb11d30"><span class="nav-number">1.</span> <span class="nav-text">Pyenv 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org14295aa"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orgbfd0013"><span class="nav-number">3.</span> <span class="nav-text">Pyenv 基本操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org855be3d"><span class="nav-number">4.</span> <span class="nav-text">安装不同版本 python</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orgc19cc88"><span class="nav-number">5.</span> <span class="nav-text">Pyenv-virtualenv python 不同项目虚拟环境的搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orgb868614"><span class="nav-number">6.</span> <span class="nav-text">项目实践举例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org75a4cf8"><span class="nav-number">7.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#org9c7a5be"><span class="nav-number">1.</span> <span class="nav-text">Pyenv 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orge77191f"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org67b2e10"><span class="nav-number">3.</span> <span class="nav-text">Pyenv 基本操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org16f4d8d"><span class="nav-number">4.</span> <span class="nav-text">安装不同版本 python</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org8e944c4"><span class="nav-number">5.</span> <span class="nav-text">Pyenv-virtualenv python 不同项目虚拟环境的搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org7341e32"><span class="nav-number">6.</span> <span class="nav-text">项目实践举例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org83c1159"><span class="nav-number">7.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
