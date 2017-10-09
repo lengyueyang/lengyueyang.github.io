@@ -89,18 +89,18 @@
 
 
 
-<meta name="description" content="行列式   n 元排列   n 个不同正整数的一个全排列称为 n 元排列.    在 n 元排列 \(a_1, a_2, ⋯, a_n\) 中, 任取一对数 \(a_i,a_j(i &amp;lt; j)\), 如果 \(a_i &amp;lt; a_j\), 那么这一对数构成一个 顺序, 否则, 这对数构成一个 逆序. 一个 n 元排列中逆序的总数称为 逆序数, 记作 \(τ(a_1a_2⋯a_n)\).    逆序数为">
+<meta name="description" content="n 元排列   n 个不同正整数的一个全排列称为 n 元排列.    在 n 元排列 \(a_1, a_2, ⋯, a_n\) 中, 任取一对数 \(a_i,a_j(i &amp;lt; j)\), 如果 \(a_i &amp;lt; a_j\), 那么这一对数构成一个 顺序, 否则, 这对数构成一个 逆序. 一个 n 元排列中逆序的总数称为 逆序数, 记作 \(τ(a_1a_2⋯a_n)\).    逆序数为奇数的排列称">
 <meta name="keywords" content="Linear algebra">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据科学-数学与统计-高等代数-行列式">
 <meta property="og:url" content="http://lengyueyang.github.io/2017/09/05/数据科学-数学与统计-高等代数-行列式/index.html">
 <meta property="og:site_name" content="深度识医">
-<meta property="og:description" content="行列式   n 元排列   n 个不同正整数的一个全排列称为 n 元排列.    在 n 元排列 \(a_1, a_2, ⋯, a_n\) 中, 任取一对数 \(a_i,a_j(i &amp;lt; j)\), 如果 \(a_i &amp;lt; a_j\), 那么这一对数构成一个 顺序, 否则, 这对数构成一个 逆序. 一个 n 元排列中逆序的总数称为 逆序数, 记作 \(τ(a_1a_2⋯a_n)\).    逆序数为">
+<meta property="og:description" content="n 元排列   n 个不同正整数的一个全排列称为 n 元排列.    在 n 元排列 \(a_1, a_2, ⋯, a_n\) 中, 任取一对数 \(a_i,a_j(i &amp;lt; j)\), 如果 \(a_i &amp;lt; a_j\), 那么这一对数构成一个 顺序, 否则, 这对数构成一个 逆序. 一个 n 元排列中逆序的总数称为 逆序数, 记作 \(τ(a_1a_2⋯a_n)\).    逆序数为奇数的排列称">
 <meta property="og:image" content="http://lengyueyang.github.io/2017/09/05/数据科学-数学与统计-高等代数-行列式/MSimg/MS-3-3-3-1.png">
-<meta property="og:updated_time" content="2017-09-05T14:27:51.781Z">
+<meta property="og:updated_time" content="2017-10-09T14:49:51.817Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据科学-数学与统计-高等代数-行列式">
-<meta name="twitter:description" content="行列式   n 元排列   n 个不同正整数的一个全排列称为 n 元排列.    在 n 元排列 \(a_1, a_2, ⋯, a_n\) 中, 任取一对数 \(a_i,a_j(i &amp;lt; j)\), 如果 \(a_i &amp;lt; a_j\), 那么这一对数构成一个 顺序, 否则, 这对数构成一个 逆序. 一个 n 元排列中逆序的总数称为 逆序数, 记作 \(τ(a_1a_2⋯a_n)\).    逆序数为">
+<meta name="twitter:description" content="n 元排列   n 个不同正整数的一个全排列称为 n 元排列.    在 n 元排列 \(a_1, a_2, ⋯, a_n\) 中, 任取一对数 \(a_i,a_j(i &amp;lt; j)\), 如果 \(a_i &amp;lt; a_j\), 那么这一对数构成一个 顺序, 否则, 这对数构成一个 逆序. 一个 n 元排列中逆序的总数称为 逆序数, 记作 \(τ(a_1a_2⋯a_n)\).    逆序数为奇数的排列称">
 <meta name="twitter:image" content="http://lengyueyang.github.io/2017/09/05/数据科学-数学与统计-高等代数-行列式/MSimg/MS-3-3-3-1.png">
 
 
@@ -410,12 +410,10 @@
         
 
 
-<div id="outline-container-org3d322be" class="outline-2">
-<h2 id="org3d322be">行列式</h2>
-<div class="outline-text-2" id="text-org3d322be">
-</div><div id="outline-container-org04e3d5d" class="outline-3">
-<h3 id="org04e3d5d">n 元排列</h3>
-<div class="outline-text-3" id="text-org04e3d5d">
+
+<div id="outline-container-org135f865" class="outline-2">
+<h2 id="org135f865">n 元排列</h2>
+<div class="outline-text-2" id="text-org135f865">
 <p>
 n 个不同正整数的一个全排列称为 <b>n 元排列</b>.
 </p>
@@ -444,9 +442,9 @@ n 个不同正整数的一个全排列称为 <b>n 元排列</b>.
 </div>
 </div>
 
-<div id="outline-container-orgb728538" class="outline-3">
-<h3 id="orgb728538">n 阶行列式的定义</h3>
-<div class="outline-text-3" id="text-orgb728538">
+<div id="outline-container-org09b11d6" class="outline-2">
+<h2 id="org09b11d6">n 阶行列式的定义</h2>
+<div class="outline-text-2" id="text-org09b11d6">
 \begin{de}[n 阶行列式完全展开式定义]
 \end{de}
 <p>
@@ -476,7 +474,7 @@ n 阶行列式
 \right| = \sum_{j_1j_2 \cdots j_n}(-1)^{\tau (j_1j_2 \cdots j_n)}a_{1j_1}a_{2j_2} \cdots a_{nj_n}
 \end{equation}
 <p>
-其中 \(j_1j_2 ⋯ j_n\) 是 n 元排列, (<a href="#org42fb4a7">1</a>)式称为 n 阶行列式的 <b>完全展开式</b> .
+其中 \(j_1j_2 ⋯ j_n\) 是 n 元排列, (<a href="#org7bbbf14">1</a>)式称为 n 阶行列式的 <b>完全展开式</b> .
 </p>
 
 <p>
@@ -493,7 +491,7 @@ A = \left\{
 \right\}
 \end{equation}
 <p>
-则 n 阶行列式 (<a href="#org42fb4a7">1</a>)也称为 n 级矩阵 A 的行列式, 简记作 \(|A|\)或者\(det\,A\).
+则 n 阶行列式 (<a href="#org7bbbf14">1</a>)也称为 n 级矩阵 A 的行列式, 简记作 \(|A|\)或者\(det\,A\).
 </p>
 
 <p>
@@ -502,9 +500,9 @@ A = \left\{
 </div>
 </div>
 
-<div id="outline-container-org5491494" class="outline-3">
-<h3 id="org5491494">行列式的性质</h3>
-<div class="outline-text-3" id="text-org5491494">
+<div id="outline-container-org95f3c08" class="outline-2">
+<h2 id="org95f3c08">行列式的性质</h2>
+<div class="outline-text-2" id="text-org95f3c08">
 \begin{proposition}[行列式性质-1]
 \end{proposition}
 <p>
@@ -666,9 +664,9 @@ A = \left\{
 </div>
 
 
-<div id="outline-container-org6df78c7" class="outline-3">
-<h3 id="org6df78c7">行列式按一行(列)展开</h3>
-<div class="outline-text-3" id="text-org6df78c7">
+<div id="outline-container-org4f493ae" class="outline-2">
+<h2 id="org4f493ae">行列式按一行(列)展开</h2>
+<div class="outline-text-2" id="text-org4f493ae">
 \begin{de}[余子式与代数余子式定义]
 \end{de}
 <p>
@@ -684,7 +682,7 @@ n 阶行列式 \(|A|\) 等于它的第 i 行元素与自己的代数余子式的
   |A| = a_{i1}A_{i1} + a_{i2}A_{i2} + \cdots + a_{in}A_{in} = \sum_{j=1}^n a_{ij}A_{ij}
 \end{equation}
 <p>
-其中 \(i \in {1,2,⋯,n}\), (<a href="#orgd51c4b6">1</a>) 称为 n 阶行列式按第 i 行的展开式.
+其中 \(i \in {1,2,⋯,n}\), (<a href="#orgb7922f8">1</a>) 称为 n 阶行列式按第 i 行的展开式.
 </p>
 
 \begin{thm}[n 阶行列式列展开定理]
@@ -696,7 +694,7 @@ n 阶行列式 \(|A|\) 等于它的第 j 列元素与自己的代数余子式的
   |A| = a_{1j}A_{1j} + a_{2j}A_{2j} + \cdots + a_{nj}A_{nj} = \sum_{l=1}^n a_{lj}A_{lj}
 \end{equation}
 <p>
-其中 \(i \in {1,2,⋯,n}\), (<a href="#orgd51c4b6">1</a>) 称为 n 阶行列式按第 j 列的展开式.
+其中 \(i \in {1,2,⋯,n}\), (<a href="#orgb7922f8">1</a>) 称为 n 阶行列式按第 j 列的展开式.
 </p>
 
 \begin{thm}[n 阶行列式展开定理-3]
@@ -722,9 +720,9 @@ a_{1j}A_{1l} + a_{2j}A_{2l} + \cdots + a_{nj}A_{nl} = 0
 
 
 
-<div id="outline-container-org2722867" class="outline-3">
-<h3 id="org2722867">克莱姆法则(Cramer)</h3>
-<div class="outline-text-3" id="text-org2722867">
+<div id="outline-container-org65a41ec" class="outline-2">
+<h2 id="org65a41ec">克莱姆法则(Cramer)</h2>
+<div class="outline-text-2" id="text-org65a41ec">
 \begin{thm}[克莱姆法则定理-1]
 \end{thm}
 <p>
@@ -757,9 +755,9 @@ n 个方程的 n 元线性方程组的系数行列式 \(|A| ≠ 0\) 时, 它的�
 </div>
 
 
-<div id="outline-container-org821ae54" class="outline-3">
-<h3 id="org821ae54">行列式按 k 行(列)展开</h3>
-<div class="outline-text-3" id="text-org821ae54">
+<div id="outline-container-orge508615" class="outline-2">
+<h2 id="orge508615">行列式按 k 行(列)展开</h2>
+<div class="outline-text-2" id="text-orge508615">
 \begin{de}[k 阶子式定义]
 \end{de}
 <p>
@@ -773,7 +771,7 @@ j_1&, j_2, ⋯, j_k
 \right)
 \end{equation}
 <p>
-划去这个 k 阶子式所在的行和列, 剩下的元素按原来的排法组成 \((n-k)\) 的行列式, 称为 子式 (<a href="#org9899fa9">1</a>) 的余子式.
+划去这个 k 阶子式所在的行和列, 剩下的元素按原来的排法组成 \((n-k)\) 的行列式, 称为 子式 (<a href="#org8d83ada">1</a>) 的余子式.
 </p>
 
 \begin{thm}[Laplace 定理]
@@ -796,9 +794,8 @@ j_1^{'}, j_2^{'},  ⋯ , j_k^{'} \\
 \end{equation}
 </i_k)\)></p></i_k)\)></p></div>
 </div>
-</div>
 
-Last Updated 2017-09-05 Tue 22:27 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.2.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 9.0.10)
+Last Updated 2017-10-09 Mon 22:49 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="https://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.2.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 9.1.2)
 
       
     </div>
@@ -938,7 +935,7 @@ Last Updated 2017-09-05 Tue 22:27 by lengyueyang<br>Render by <a href="https://g
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1071,7 +1068,7 @@ Last Updated 2017-09-05 Tue 22:27 by lengyueyang<br>Render by <a href="https://g
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#org3d322be"><span class="nav-number">1.</span> <span class="nav-text">行列式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org04e3d5d"><span class="nav-number">1.1.</span> <span class="nav-text">n 元排列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orgb728538"><span class="nav-number">1.2.</span> <span class="nav-text">n 阶行列式的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org5491494"><span class="nav-number">1.3.</span> <span class="nav-text">行列式的性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org6df78c7"><span class="nav-number">1.4.</span> <span class="nav-text">行列式按一行(列)展开</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org2722867"><span class="nav-number">1.5.</span> <span class="nav-text">克莱姆法则(Cramer)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org821ae54"><span class="nav-number">1.6.</span> <span class="nav-text">行列式按 k 行(列)展开</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#org135f865"><span class="nav-number">1.</span> <span class="nav-text">n 元排列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org09b11d6"><span class="nav-number">2.</span> <span class="nav-text">n 阶行列式的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org95f3c08"><span class="nav-number">3.</span> <span class="nav-text">行列式的性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org4f493ae"><span class="nav-number">4.</span> <span class="nav-text">行列式按一行(列)展开</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org65a41ec"><span class="nav-number">5.</span> <span class="nav-text">克莱姆法则(Cramer)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orge508615"><span class="nav-number">6.</span> <span class="nav-text">行列式按 k 行(列)展开</span></a></li></ol></div>
             
 
           </div>

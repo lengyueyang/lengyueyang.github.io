@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lengyueyang.github.io/"/>
-  <updated>2017-09-19T08:17:11.857Z</updated>
+  <updated>2017-10-09T14:54:33.124Z</updated>
   <id>http://lengyueyang.github.io/</id>
   
   <author>
@@ -14,6 +14,657 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据科学-数学与统计-高等代数- n 维向量空间 n 维向量空间 \(k^n\)</title>
+    <link href="http://lengyueyang.github.io/2017/10/09/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-n%E7%BB%B4%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4K%5En/"/>
+    <id>http://lengyueyang.github.io/2017/10/09/数据科学-数学与统计-高等代数-n维向量空间K^n/</id>
+    <published>2017-10-09T00:00:00.000Z</published>
+    <updated>2017-10-09T14:54:33.124Z</updated>
+    
+    <content type="html">
+
+
+&lt;div id=&quot;outline-container-org4c0ab0c&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org4c0ab0c&quot;&gt;n 维向量空间 \(K^n\) 及其子空间&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org4c0ab0c&quot;&gt;
+&lt;p&gt;
+取定一个数域 K, 设 n 是任意给定的一个正整数. 令 \[K^n = {(a_1, a_2, ⋯, a_n) | a_i \in K, i = 1,2,⋯,n}\]
+&lt;/p&gt;
+
+&lt;p&gt;
+在 \(K^n\) 中规定加法运算如下:
+\[
+(a_1, a_2, \cdots, a_n) + (b_1, b_2, ⋯, b_n) \xlongequal{def} (a_1+b_1, a_2+b_2, \cdots, a_n+b_n)
+\]
+&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;
+在 K 的元素与 \(K^n\) 的元素之间规定数量乘法运算如下:
+\[
+k(a_1, a_2, \cdots, a_n) \xlongequal{def} (ka_1, ka_2, \cdots, ka_n)
+\]
+&lt;/p&gt;
+
+&lt;p&gt;
+加法与数量乘法满足的 8 条运算法则: 对于 \(\symbf{α, \beta, γ} \in K^n \quad k, l \in K\), 有 &lt;br&gt;
+(1) \(\symbf{α} + \symbf{\beta} = \symbf{\beta} + \symbf{α}\) &lt;br&gt;
+(2) \((\symbf{α} + \symbf{\beta}) + \symbf{γ} = \symbf{α} + (\symbf{\beta} + \symbf{γ})\) &lt;br&gt;
+(3) 把元素 \((0, 0, \cdots, 0)\) 记作 \(\symbf{0}\), 它使得 \(\symbf{0} + \symbf{α} = \symbf{α} + \symbf{0} = \symbf{α}\), 称 \\(symbf{0}\) 是 \(K^n\) 的 &lt;b&gt;零元素&lt;/b&gt; &lt;br&gt;
+(4) 对于 \(\symbf{α} = (a_1, a_2, \cdots, a_n) \in K^n\), 令
+\[
+{-}\symbf{α} \xlongequal{def} (-a_1, -a_2, \cdots, -a_n) \in K^n
+\], 有
+\[
+\symbf{\alpha} + (- \symbf{α}) = (- \symbf{\alpha}) + \symbf{\alpha} = \symbf{0}
+\], 称 \(- \symbf{\alpha}\) 是 \(\symbf{α}\) 的 &lt;b&gt;负元素&lt;/b&gt; &lt;br&gt;
+(5) \(1 \symbf{α} = \symbf{α}\) &lt;br&gt;
+(6) \((kl)\symbf{α} = k(l \symbf{\alpha})\) &lt;br&gt;
+(7) \((k+l) \symbf(α) = k \symbf{\alpha} + l \symbf{\alpha}\) &lt;br&gt;
+(8) \(k(\symbf{\alpha} + \symbf{\beta}) = k \symbf{α} + l \symbf{\beta}\)
+&lt;/p&gt;
+
+\begin{de}[n 维向量空间定义]
+\end{de}
+&lt;p&gt;
+数域 K 上所有 n 元有序数组组成的集合 \(K^n\), 连同定义在它上面的加法运算和数量乘法运算, 及其满足的 8 条运算法则一起, 称为数域 K 上的一个 &lt;b&gt;n 维向量空间&lt;/b&gt;. \(K^n\) 的元素称为 &lt;b&gt;n 维向量&lt;/b&gt;; 设向量 \(\symbf{α} = (a_1, a_2, \cdots, a_n)\), 称 \(a_i\) 是 \(\symbf{α}\) 的第 i 个分量.
+&lt;/p&gt;
+
+&lt;p&gt;
+n 元有序数组写成一行称为行向量, 写成一列称为列向量, 列向量可以看成是行向量的转置.
+&lt;/p&gt;
+
+&lt;p&gt;
+在 \(K^n\) 中, 给定向量 \(\symbf{α_1, α_2, ⋯, α_s}\), 对于 \(\symbf{β} \in K^n\), 如果存在 K 中的一组数 \(c_1, c_2, ⋯, c_s\), 使得
+\[
+\symbf{\beta} = c_1 \symbf{α_1} + c_2 \symbf{α_2} + ⋯ c_s \symbf{α_s}
+\], 那么称 \(\symbf{β}\) 可以由 \(\symbf{α_1, α_2, ⋯, α_s}\) &lt;b&gt;线性表出&lt;/b&gt;.
+&lt;/p&gt;
+
+\begin{de}[线性子空间定义]
+\end{de}
+&lt;p&gt;
+\(K^n\) 的一个非空子集 U 如果满足: &lt;br&gt;
+(1) 加法封闭: \(\symbf{\alpha, γ} \in U \Longrightarrow (\symbf{α} + \symbf{\gamma}) \in U\), &lt;br&gt;
+(2) 数量乘法封闭: \(\symbf{α} \in U, k \in U \Longrightarrow k \symbf{α} \in U\), &lt;br&gt;
+那么称 U 是 \(K^n\) 的线性子空间, 简称为子空间.
+&lt;/p&gt;
+
+&lt;p&gt;
+\({0}\) 是 \(K^n\) 的一个子空间, 称它的零子空间. \(K^n\) 本身也是其一个子空间.
+&lt;/p&gt;
+
+&lt;p&gt;
+向量组 \(\symbf{α_1, α_2, ⋯, α_s}\) 的所有线性组合组成的集合 W 是 \(K^n\) 的一个子空间, 称它为 \(\symbf{α_1, α_2, ⋯, α_s}\) &lt;b&gt;生成(或张成)的子空间&lt;/b&gt;, 记作
+\[
+⟨\symbf{α_1, α_2, ⋯, α_s}⟩
+\]
+&lt;/p&gt;
+
+&lt;p&gt;
+\begin{mingti}[线性标出命题]
+\end{mginti}
+数域 K 上的 n 元线性方程组 \(x_1\symbf{α_1} + x_2\symbf{α_2} + \cdots + x_n\symbf{α_n} = \symbf{\beta}\) 有解 &lt;br&gt;
+\(⟺\) \(\symbf{\beta}\)可以由 \(\symbf{α_1, α_2, ⋯, α_n}\) 线性标出 &lt;br&gt;
+\(⟺\) \(\symbf{\beta} \in \symbf{α_1, α_2, ⋯, α_n}\)
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id=&quot;outline-container-org29bc489&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org29bc489&quot;&gt;线性相关与线性无关的向量组&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org29bc489&quot;&gt;
+\begin{de}[线性相关定义]
+\end{de}
+&lt;p&gt;
+\(K^n\) 中向量组 \(\symbf{α_1, α_2, ⋯, α_s}(s ⩾ 1)\) 称为 &lt;b&gt;线性相关&lt;/b&gt; 的, 如果有 K 中不全为 0 的数 \(k_1, \cdots, k_s\), 使得
+\[
+k_1\symbf{α_1} + \cdots + k_s\symbf{α_s} = \symbf{0}
+\].
+&lt;/p&gt;
+
+\begin{de}[线性相关定义]
+\end{de}
+&lt;p&gt;
+\(K^n\) 中向量组 \(\symbf{α_1, α_2, ⋯, α_s}(s ⩾ 1)\) 称为 &lt;b&gt;线性无关&lt;/b&gt; 的, 即如果有从
+\[
+k_1\symbf{α_1} + \cdots + k_s\symbf{α_s} = \symbf{0}
+\] 可以推出所有系数 \(k_1, \cdots, k_s\) 全为 0, 那么称向量组 \(\symbf{α_1, α_2, ⋯, α_s}\) 是 &lt;b&gt;线性无关&lt;/b&gt; 的.
+&lt;/p&gt;
+
+&lt;p&gt;
+线性相关与线性无关是线性代数中最基本的概念之一, 可以从几个角度来考察线性相关的向量组与线性无关的向量组的本质区别: 
+&lt;img src=&quot;./MSimg/MS-3-4-2-1.png&quot; alt=&quot;MS-3-4-2-1.png&quot;&gt;
+&lt;img src=&quot;./MSimg/MS-3-4-2-2.png&quot; alt=&quot;MS-3-4-2-2.png&quot;&gt;
+&lt;/p&gt;
+
+\begin{mingti}[线性表出充要条件命题]
+\end{mingti}
+&lt;p&gt;
+设向量组 \(\symbf{α_1, α_2, ⋯, α_s}\) 线性无关, 则向量 \(\symbf{\beta}\) 可以由  \(\symbf{α_1, α_2, ⋯, α_s}\) 线性表出的充要条件是  \(\symbf{α_1, α_2, ⋯, α_s, \beta}\) 线性相关.
+&lt;/p&gt;
+
+\begin{cor}[线性表出充要条件推论]
+\end{cor}
+&lt;p&gt;
+设向量组 \(\symbf{α_1, α_2, ⋯, α_s}\) 线性无关, 则向量 \(\symbf{\beta}\) 不能由  \(\symbf{α_1, α_2, ⋯, α_s}\) 线性表出的充要条件是 \(\symbf{α_1, α_2, ⋯, α_s, \beta}\) 线性无关.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id=&quot;outline-container-orge05a8ee&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orge05a8ee&quot;&gt;向量组的秩&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orge05a8ee&quot;&gt;
+\begin{de}[极大线性无关组定义]
+\end{de}
+&lt;p&gt;
+向量组的一个部分称为一个 &lt;b&gt;极大线性无关组&lt;/b&gt;, 如果这个本身是线性无关的, 但是从这个向量组的其余向量(如果还有的话)中任取一个添进去, 得到的新的部分组都线性相关.
+&lt;/p&gt;
+
+\begin{de}[向量组等价定义]
+\end{de}
+&lt;p&gt;
+如果向量组 \(\symbf{α_1, α_2, ⋯, α_s}\) 的每一个向量都可以由向量组 \(\beta_1, β_2, ⋯, \beta_r\) 线性表出, 那么称向量组 \(\symbf{α_1, α_2, ⋯, α_s}\) 可以由向量组 \(\symbf{\beta_1, β_2, ⋯, \beta_r}\) 表出. 如果向量组 \(\symbf{α_1, α_2, ⋯, α_s}\) 与向量组 \(\symbf{\beta_1, β_2, ⋯, \beta_r}\) 可以互相线性表出, 那么称 向量组 \(\symbf{α_1, α_2, ⋯, α_s}\) 与向量组 \(\symbf{\beta_1, β_2, ⋯, \beta_r}\) &lt;b&gt;等价&lt;/b&gt;, 记作
+\[
+\symbf{α_1, α_2, ⋯, α_s} ≅ \symbf{\beta_1, β_2, ⋯, \beta_r}
+\]
+&lt;/p&gt;
+
+&lt;p&gt;
+向量组的等价是向量组之间的一种关系, 可以证明, 这种关系具有下述三条性质:
+&lt;/p&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;反身性, 任何一个向量组都与自身等价;&lt;/li&gt;
+&lt;li&gt;对称性, 如果 \(\symbf{α_1, α_2, ⋯, α_s}\) 与 \(\beta_1, β_2, ⋯, \beta_r\) 等价, 那么 \(\symbf{\beta_1, β_2, ⋯, \beta_r}\) 与 \(\symbf{α_1, α_2, ⋯, α_s}\) 等价;&lt;/li&gt;
+&lt;li&gt;传递性, 即如果&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+\[
+\{\symbf{α_1, α_2, ⋯, α_s} ≅ \symbf{\beta_1, β_2, ⋯, \beta_r}\}, \{\symbf{a_1, β_2, ⋯, \beta_r} ≅ \symbf{γ_1, γ_2, ⋯, γ_t}\}
+\], 那么
+\[
+\symbf{α_1, α_2, ⋯, α_s} ≅ \symbf{γ_1, γ_2, ⋯, γ_t}
+\]
+&lt;/p&gt;
+
+\begin{mingti}[向量组的秩命题-1]
+\end{mingti}
+&lt;p&gt;
+向量组与它的极大线性无关组等价.
+&lt;/p&gt;
+
+\begin{cor}[向量组的秩推论-1]
+\end{cor}
+&lt;p&gt;
+向量组的任意两个极大线性无关组等价.
+&lt;/p&gt;
+
+\begin{cor}[向量组的秩推论-2]
+\end{cor}
+&lt;p&gt;
+\(β\) 可以由向量组 \(\symbf{α_1, α_2, ⋯, α_s}\) 线性表出当且仅当 \(\beta\) 可以由 \(\symbf{α_1, α_2, ⋯, α_s}\) 的一个极大线性无关组线性表出.
+&lt;/p&gt;
+
+\begin{lemma}[向量组的秩引理-1]
+\end{lemma}
+&lt;p&gt;
+设向量组 \(\symbf{\beta_1, \beta_2, ⋯, \beta_r}\) 可以由向量组 \(\symbf{α_1, α_2, ⋯, α_s}\) 线性表出, 如果 \(r &gt; s\), 那么 \(\symbf{\beta_1, \beta_2, ⋯, \beta_r}\) 线性相关.
+&lt;/p&gt;
+
+\begin{cor}[向量组的秩推论-3]
+\end{cor}
+&lt;p&gt;
+设向量组 \(\symbf{\beta_1, \beta_2, ⋯, \beta_r}\) 可以由向量组 \(\symbf{α_1, α_2, ⋯, α_s}\) 线性表出, 如果\(\symbf{\beta_1, \beta_2, ⋯, \beta_r}\) 线性无关，那么 \(r ⩽ s\).
+&lt;/p&gt;
+
+\begin{cor}[向量组的秩推论-4]
+\end{cor}
+&lt;p&gt;
+等价的线性无关的向量组所含的向量个数相等.
+&lt;/p&gt;
+
+\begin{cor}[向量组的秩推论-5]
+\end{cor}
+&lt;p&gt;
+向量组的任意两个极大线性无关组所含向量的个数相等.
+&lt;/p&gt;
+
+\begin{de}[向量组的秩定义]
+\end{de}
+&lt;p&gt;
+向量组的极大线性无关组所含的向量个数称为这个 &lt;b&gt;向量组的秩&lt;/b&gt;.
+&lt;/p&gt;
+
+\begin{mingti}[向量组的秩命题-2]
+\end{mingti}
+&lt;p&gt;
+向量组 \(\symbf{α_1, α_2, ⋯, α_s}\) 线性无关的充分必要条件是它的秩等于它所含向量的个数.
+&lt;/p&gt;
+
+\begin{mingti}[向量组的秩命题-3]
+\end{mingti}
+&lt;p&gt;
+如果向量组(\(\uppercase\expandafter{\romannumeral1}\))可以由向量组(\(\uppercase\expandafter{\romannumeral2}\))线性表出, 那么(\(\uppercase\expandafter{\romannumeral1}\))的秩 \(\leq\) (\(\uppercase\expandafter{\romannumeral2}\))的秩.
+&lt;/p&gt;
+
+\begin{mingti}[向量组的秩命题-4]
+\end{mingti}
+&lt;p&gt;
+等价的向量组有相等的秩.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org54f9e46&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org54f9e46&quot;&gt;子空间的基与维数&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org54f9e46&quot;&gt;
+\begin{de}[基的定义]
+\end{de}
+&lt;p&gt;
+设 U 是 \(K^n\) 的一个子空间, 如果 \(\symbf{α_1, α_2, \cdots, α_r} \in U\), 并且满足下述两个条件:  
+&lt;/p&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;\(\symbf{α_1, α_2, \cdots, α_r}\) 线性无关,&lt;/li&gt;
+&lt;li&gt;U 中的每一个向量都可以由 \(\symbf{α_1, α_2, \cdots, α_r}\) 线性表出,&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+那么称 \(\symbf{α_1, α_2, \cdots, α_r}\) 是 U 的一个 &lt;b&gt;基&lt;/b&gt;, 显然, \(\symbf{ε_1, ε_2, \cdots, ε_n}\) 是 \(K^n\) 的一个基, 称它是 \(K^n\) 的 &lt;b&gt;标准基&lt;/b&gt;.
+&lt;/p&gt;
+
+\begin{thm}[子空间基定理-1]
+\end{thm}
+&lt;p&gt;
+\(K^n\) 的任一非零子空间 U 都有一个基.
+&lt;/p&gt;
+
+\begin{thm}[子空间基定理-2]
+\end{thm}
+&lt;p&gt;
+\(K^n\) 非零子空间 U 的任意两个基所含有的向量个数相等.
+&lt;/p&gt;
+
+\begin{de}[子空间维数定义]
+\end{de}
+&lt;p&gt;
+\(K^n\) 的非零子空间 U 的一个基所含有的向量的个数称为 U 的维数, 记作 \(dim_K U\), 或者 \(dim U\).
+&lt;/p&gt;
+
+\begin{mingti}[子空间的基与维数命题-1]
+\end{mingti}
+&lt;p&gt;
+设 \(dim U = r\), 则 U 中任意 \(r+1\) 向量都线性相关.
+&lt;/p&gt;
+
+\begin{mingti}[子空间的基与维数命题-2]
+\end{mingti}
+&lt;p&gt;
+设 \(dim U = r\), 则 U 中任意 r 个线性无关的向量都是 U 的一个基.
+&lt;/p&gt;
+
+\begin{mingti}[子空间的基与维数命题-3]
+\end{mingti}
+&lt;p&gt;
+设 \(dim U = r\), 设 \(\symbf{α_1, α_2, ⋯, α_r} \in U\). 如果 U 中每一个向量都可以有 \(\symbf{α_1, α_2, ⋯, α_r}\) 线性表出, 那么 \(\symbf{α_1, α_2, ⋯, α_r}\) 是 U 的一个基.
+&lt;/p&gt;
+
+\begin{mingti}[子空间的基与维数命题-4]
+\end{mingti}
+&lt;p&gt;
+设 U 和 W 都是 \(K^n\) 的非零子空间, 如果 \(U ⊆ W\), 那么 \(dim\,U ⩽ dim\, W\).
+&lt;/p&gt;
+
+\begin{mingti}[子空间的基与维数命题-5]
+\end{mingti}
+&lt;p&gt;
+设 U 和 W 是 \(K^n\) 的两个非零子空间, 缺 \(U ⊆ W\), 如果 \(dim\,U = dim\,W\), 那么 \(U = W\).
+&lt;/p&gt;
+
+\begin{thm}[子空间基定理-3]
+\end{thm}
+&lt;p&gt;
+向量组 \(\symbf{α_1, α_2, ⋯, α_s}\) 的一个极大线性无关组是这个向量生成的子空间 \(⟨\symbf{α_1, α_2, ⋯, α_s}⟩\) 的一个基, 从而
+\[
+dim⟨\symbf{α_1, α_2, ⋯, α_s}⟩ = rank\{\symbf{α_1, α_2, ⋯, α_s}\}
+\]
+&lt;/p&gt;
+
+&lt;p&gt;
+在上述定理中, 维数是对于子空间而言, 秩是对量组而言, 子空间有无群多个向量, 而向量组只有有限多个向量.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div id=&quot;outline-container-orgd5a9034&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgd5a9034&quot;&gt;矩阵的秩&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgd5a9034&quot;&gt;
+&lt;p&gt;
+矩阵 A 的列向量组的秩称为矩阵 A 的 &lt;b&gt;列秩&lt;/b&gt;, A 的行向量的秩称为 A 的 &lt;b&gt;行秩&lt;/b&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+矩阵 A 的列秩等于 A 的列空间的维数, A 的行秩等于 A 的行向量的维数.
+&lt;/p&gt;
+
+\begin{thm}[矩阵的秩定理-1]
+\end{thm}
+&lt;p&gt;
+阶梯型矩阵 J 的行秩与列秩相等, 它们都等于 J 的非零行的个数; 并且 J 的主元所在的列构成的列向量是 J 的一个极大线性无关组.
+&lt;/p&gt;
+
+\begin{thm}[矩阵的秩定理-2]
+\end{thm}
+&lt;p&gt;
+矩阵的初等行变换不改变矩阵的行秩.
+&lt;/p&gt;
+
+\begin{thm}[矩阵的秩定理-3]
+\end{thm}
+&lt;p&gt;
+矩阵的初等行变换不改变矩阵的列向量的线性相关性, 从而不改变矩阵的列秩. 即: 
+&lt;/p&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;设矩阵 C 经过初等行变换变成矩阵 D, 则 C 的列向量组线性相关当且仅当 D 的列向量组线性相关;&lt;/li&gt;
+&lt;li&gt;设矩阵 A 经过初等行变换变成矩阵 B, 并且 B 的第 \(j_1, j_2, ⋯, j_r\) 列构成 B 的列向量的一个极大线性无关组, 则 A 的第 \(j_1, j_2, ⋯, j_r\) 列构成 A 的列向量的一个极大线性无关组; 从而 A 的列秩等于 B 的列秩.&lt;/li&gt;
+&lt;/ol&gt;
+
+\begin{thm}[矩阵的秩定理-4]
+\end{thm}
+&lt;p&gt;
+任一矩阵 A 的行秩等于它的列秩.
+&lt;/p&gt;
+
+\begin{de}[矩阵的秩的定义]
+\end{de}
+&lt;p&gt;
+矩阵 A 的行秩与列秩统称为 A 的 &lt;b&gt;秩&lt;/b&gt;, 记作 \(rank(A)\).
+&lt;/p&gt;
+
+\begin{cor}[矩阵的秩推论-1]
+\end{cor}
+&lt;p&gt;
+设矩阵 A 经过初等行变换化成阶梯形矩阵 J, 则 A 的秩等于 J 的非零行个数. 设 J 的主元所在的列是第 \(j_1, j_2, ⋯, j_r\) 列, 则 A 的第 \(j_1, j_2, ⋯, j_r\) 列构成 A 的列向量组的一个极大线性无关组.
+&lt;/p&gt;
+
+\begin{cor}[矩阵的秩推论-2]
+\end{cor}
+&lt;p&gt;
+矩阵的初等行变换不改变矩阵的秩.
+&lt;/p&gt;
+
+\begin{thm}[矩阵的秩定理-5]
+\end{thm}
+&lt;p&gt;
+任一非零矩阵的秩等于它的不为零子式的最高阶数.
+&lt;/p&gt;
+
+&lt;p&gt;
+定理 4 与定理 5 表明, &lt;b&gt;矩阵的秩&lt;/b&gt; 是一个非常深刻的概念, 它可以从行向量的秩, 列向量的秩, 不为零子式的最高阶数 &lt;b&gt;三个角度&lt;/b&gt; 来刻画. 
+&lt;/p&gt;
+
+\begin{cor}[矩阵的秩推论-3]
+\end{cor}
+&lt;p&gt;
+设 \(s \times n\) 矩阵 A 的秩为 r, 则 A 的不等于零的 r 阶子式所在的列(行)构成 A 的列(行)向量组的一个极大线性无关组.
+&lt;/p&gt;
+
+\begin{cor}[矩阵的秩推论-4]
+\end{cor}
+&lt;p&gt;
+n 级矩阵 A 满秩(秩等于它的级数)的充分必要条件是 \(|A| ≠ 0\).
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-orgbef49eb&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgbef49eb&quot;&gt;线性方程组有解的充分必要条件&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgbef49eb&quot;&gt;
+\begin{thm}[线性方程组有解判别定理]
+\end{thm}
+&lt;p&gt;
+数域 K 上线性方程组
+&lt;/p&gt;
+\begin{equation}
+x_1 \symbf{α_1} + x_2 \symbf{α_2} + ⋯ + x_n \symbf{α_n} = \symbf{β}
+\end{equation}
+&lt;p&gt;
+有解的充分必要条件是: 它的系数矩阵与增广矩阵的秩相等.
+&lt;/p&gt;
+
+\begin{thm}[线性方程组有解定理-2]
+\end{thm}
+&lt;p&gt;
+数域 K 上 n 元线性方程组 (&lt;a href=&quot;#org6b85bab&quot;&gt;1&lt;/a&gt;) 有解时, 如果它的系数矩阵 A 的秩等于 n, 那么方程组有唯一解; 如果 A 的秩小于 n, 那么方程组有无穷多个解.
+&lt;/p&gt;
+
+\begin{cor}[线性方程组有解推论]
+\end{cor}
+&lt;p&gt;
+齐次线性方程组有非零解的充分必要条件是: 它的系数矩阵的秩小于未知量的个数.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-orgc004163&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgc004163&quot;&gt;齐次线性方程组的解集的结构&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgc004163&quot;&gt;
+&lt;p&gt;
+数域 K 上 n 元齐次方程组
+&lt;/p&gt;
+\begin{equation}
+x_1 \symbf{α_1} + x_2 \symbf{α_2} + ⋯ + x_n \symbf{α_n} = \symbf{0}
+\end{equation}
+&lt;p&gt;
+的一个解是 \(K^n\) 中的一个向量, 称它为齐次线性方程组 (&lt;a href=&quot;#org7ec47d8&quot;&gt;1&lt;/a&gt;) 的一个 &lt;b&gt;解向量&lt;/b&gt;. 齐次线性方程组的解集 W 是 \(K^n\) 的一个非空子集.
+&lt;/p&gt;
+
+\begin{proposition}[解集性质-1]
+\end{proposition} 
+&lt;p&gt;
+若 \(\symbf{γ, δ} \in W\), 则 \(\symbf{γ} + \symbf{δ} \in W\).
+&lt;/p&gt;
+
+\begin{proposition}[解集性质-2]
+\end{proposition} 
+&lt;p&gt;
+若 \(\symbf{γ} \in W\), \(k \in W\), 则 \(k \symbf{γ} \in W\).
+&lt;/p&gt;
+
+&lt;p&gt;
+齐次线性方程组(&lt;a href=&quot;#org7ec47d8&quot;&gt;1&lt;/a&gt;)的解集 W 是 \(K^n\) 的一个子空间, 称它为方程组 (&lt;a href=&quot;#org7ec47d8&quot;&gt;1&lt;/a&gt;) 的 &lt;b&gt;解空间&lt;/b&gt;. 把解空间 W 的一个基称为齐次线性方程组 (&lt;a href=&quot;#org7ec47d8&quot;&gt;1&lt;/a&gt;) 的一个 &lt;b&gt;基础解系&lt;/b&gt;.
+&lt;/p&gt;
+
+\begin{de}[解空间定义-1]
+\end{de}
+&lt;p&gt;
+齐次线性方程组 (&lt;a href=&quot;#org7ec47d8&quot;&gt;1&lt;/a&gt;) 有非零解时, 如果它的有限多个解 \(\symbf{\eta_1, \eta_2, ⋯, \eta_t}\) 满足:
+&lt;/p&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;\(\symbf{\eta_1, \eta_2, ⋯, \eta_t}\) 线性无关;&lt;/li&gt;
+&lt;li&gt;齐次线性方程组 (&lt;a href=&quot;#org7ec47d8&quot;&gt;1&lt;/a&gt;) 的每一个解都可以由 \(\symbf{\eta_1, \eta_2, ⋯, \eta_t}\) 线性表出,
+那么称 \(\symbf{\eta_1, \eta_2, ⋯, \eta_t}\) 是齐次线性方程组的一个 &lt;b&gt;基础解系&lt;/b&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+\begin{thm}[解空间定理-1]
+\end{thm}
+&lt;p&gt;
+数域 K 上 n 元齐次线性方程组的解空间 W 的维数为
+&lt;/p&gt;
+\begin{equation}
+dim\,W = n - rank{A}
+\end{equation}
+&lt;p&gt;
+其中 A 是方程组的系数矩阵. 从而当齐次线性方程组有非零解时, 它的每个基础解所含向量的个数等于 \(n-rank(A)\).
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;齐次线性方程组解集的求法&lt;/b&gt;
+&lt;/p&gt;
+
+
+
+&lt;div class=&quot;figure&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;MSimg/高等代数/3_2017-09-15_14-12-31.png&quot; alt=&quot;3_2017-09-15_14-12-31.png&quot;&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&quot;figure&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;MSimg/高等代数/4_2017-09-15_14-09-04.png&quot; alt=&quot;4_2017-09-15_14-09-04.png&quot;&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+
+
+
+&lt;div class=&quot;figure&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;MSimg/高等代数/5_2017-09-15_14-13-03.png&quot; alt=&quot;5_2017-09-15_14-13-03.png&quot;&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org02f879a&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org02f879a&quot;&gt;非齐次线性方程组的解集的结构&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org02f879a&quot;&gt;
+&lt;p&gt;
+数域 K 上 n 元非齐次方程组
+&lt;/p&gt;
+\begin{equation}
+x_1 \symbf{α_1} + x_2 \symbf{α_2} + ⋯ + x_n \symbf{α_n} = \symbf{\beta}
+\end{equation}
+&lt;p&gt;
+的解集为 U, 相应的齐次线性方程组:
+&lt;/p&gt;
+\begin{equation}
+x_1 \symbf{α_1} + x_2 \symbf{α_2} + ⋯ + x_n \symbf{α_n} = \symbf{0}
+\end{equation}
+&lt;p&gt;
+称它为非齐次线性方程组 (&lt;a href=&quot;#org6173607&quot;&gt;1&lt;/a&gt;) 的 &lt;b&gt;导出组&lt;/b&gt;, 导出组的解空间用 W 表示.
+&lt;/p&gt;
+
+\begin{proposition}[非齐次解集性质-1]
+\end{proposition} 
+&lt;p&gt;
+若 \(\symbf{γ, δ} \in U\), 则 \(\symbf{γ} - \symbf{δ} \in W\).
+&lt;/p&gt;
+
+\begin{proposition}[非齐次解集性质-2]
+\end{proposition} 
+&lt;p&gt;
+若 \(\symbf{γ} \in W\), \(\symbf{\eta} \in U\),  则 \(\symbf{γ + \eta} \in U\).
+&lt;/p&gt;
+
+\begin{thm}[非齐次解集定理-1]
+\end{thm}
+&lt;p&gt;
+如果数域 K 上 n 元非齐次线性方程组 (&lt;a href=&quot;#org6173607&quot;&gt;1&lt;/a&gt;) 有解, 那么它的解集 U 为
+&lt;/p&gt;
+\begin{equation}
+U = \{\symbf{γ_0} + \symbf{\eta} | \symbf{\eta} \in W\}
+\end{equation}
+&lt;p&gt;
+其中 \(\symbf{γ_0}\), 是非齐次线性方程组 (&lt;a href=&quot;#org6173607&quot;&gt;1&lt;/a&gt;) 的一个特解(简称 \(\symbf{γ_0}\) 是 &lt;b&gt;特解&lt;/b&gt; ), W 是方程组 (&lt;a href=&quot;#org6173607&quot;&gt;1&lt;/a&gt;) 的导出组的解空间.
+&lt;/p&gt;
+
+
+&lt;p&gt;
+把集合 \(\{\symbf{γ_0} + \symbf{\eta} | \symbf{\eta} \in W\}\) 记作 \(\symbf{γ_0} + W\), 称它是 W 的 &lt;b&gt;线性流行&lt;/b&gt; (或子空间 W 的一个 &lt;b&gt;配集&lt;/b&gt;), 把 \(dem \, W\) 称为线性流行 \(\symbf{γ_0} + W\) 的维数.
+&lt;/p&gt;
+
+\begin{cor}[非齐次解空间推论]
+\end{cor}
+&lt;p&gt;
+如果非齐次线性方程组 (&lt;a href=&quot;#org6173607&quot;&gt;1&lt;/a&gt;) 有解, 那么它的解唯一充分必要条件是: 它的导出组 (&lt;a href=&quot;#org01ee5dd&quot;&gt;1&lt;/a&gt;) 只有零解.
+&lt;/p&gt;
+
+&lt;p&gt;
+求解非齐次线性方程组的解集 U 的步骤:
+&lt;/p&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;求出非齐次线性方程组的一般解, 让自由未知量都取值 0, 得到一个特解 \(\symbf{γ_0}\);&lt;/li&gt;
+&lt;li&gt;写出导出组的一般解公式 (只要把非齐次线性方程组的一般解公式的常数项去掉即可), 求出导出组的一个基础解系 \(\symbf{\eta_1, \eta_2, ⋯, \eta_t}\);&lt;/li&gt;
+&lt;li&gt;写出非齐次线性方程组的解集 U&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+\[
+U = \{\symbf{γ_0} + k_1 \symbf{\eta_1} + ⋯ + k_t \symbf{\eta_t} \, | \, k_1, ⋯, k_t \in K \}
+\]
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org8d47aba&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org8d47aba&quot;&gt;例题&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org8d47aba&quot;&gt;
+\begin{ex}
+\end{ex}
+
+
+&lt;div class=&quot;figure&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;MSimg/高等代数/6_2017-09-15_14-13-10.png&quot; alt=&quot;6_2017-09-15_14-13-10.png&quot;&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+\begin{ex}
+\end{ex}
+
+
+
+&lt;div class=&quot;figure&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;MSimg/高等代数/7_2017-09-15_14-15-17_2017-09-15_14-18-16.png&quot; alt=&quot;7_2017-09-15_14-15-17_2017-09-15_14-18-16.png&quot;&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+
+
+
+&lt;div class=&quot;figure&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;MSimg/高等代数/8_2017-09-15_14-15-32_2017-09-15_14-18-59.png&quot; alt=&quot;8_2017-09-15_14-15-32_2017-09-15_14-18-59.png&quot;&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+Last Updated 2017-10-09 Mon 22:54 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;https://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 25.2.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 9.1.2)
+</content>
+    
+    <summary type="html">
+    
+      &lt;div id=&quot;outline-container-org4c0ab0c&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org4c0ab0c&quot;&gt;n 维向量空间 \(K^n\) 及其子空间&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org4c0ab0c&quot;&gt;
+&lt;p&gt;
+取定一个数域 K, 设 n 是任意给定的一个正整数. 令 \[K^n = {(a_1, a_2, ⋯, a_n) | a_i \in K, i = 1,2,⋯,n}\]
+&lt;/p&gt;
+
+&lt;p&gt;
+在 \(K^n\) 中规定加法运算如下:
+\[
+(a_1, a_2, \cdots, a_n) + (b_1, b_2, ⋯, b_n) \xlongequal{def} (a_1+b_1, a_2+b_2, \cdots, a_n+b_n)
+\]
+&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="DATA SCIENTIST" scheme="http://lengyueyang.github.io/categories/DATA-SCIENTIST/"/>
+    
+    
+      <category term="Linear algebra" scheme="http://lengyueyang.github.io/tags/Linear-algebra/"/>
+    
+  </entry>
   
   <entry>
     <title>Python-Pyenv 使用方法总结</title>
@@ -61,7 +712,7 @@ archlinux 系统安装上面命令直接安装, 其他版本可也从源中或�
 &lt;h2 id=&quot;org67b2e10&quot;&gt;Pyenv 基本操作&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-org67b2e10&quot;&gt;
 &lt;div class=&quot;org-src-container&quot;&gt;
-&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pyenv versions&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;* system (&lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt; by /home/lengyue/.python-version)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;2.7&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;13&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#26597;&amp;#30475;&amp;#30446;&amp;#21069;&amp;#25152;&amp;#26377;&amp;#29256;&amp;#26412;&amp;#30340; python&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv version&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#26597;&amp;#30475;&amp;#24403;&amp;#21069;&amp;#29256;&amp;#26412;&amp;#30340; python&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv global system/&lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#35774;&amp;#32622;&amp;#20840;&amp;#23616;&amp;#30340; python &amp;#29615;&amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv &lt;span class=&quot;built_in&quot;&gt;local&lt;/span&gt; system/&lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#35774;&amp;#32622;&amp;#23616;&amp;#37096;&amp;#30340; python &amp;#29615;&amp;#22659;, local &amp;#20248;&amp;#20808;&amp;#32423;&amp;#39640;&amp;#20110; global&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv &lt;span class=&quot;built_in&quot;&gt;local&lt;/span&gt; --unset&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#37325;&amp;#32622; local &amp;#29615;&amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv shell system/&lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#35774;&amp;#32622; shell &amp;#30340; python &amp;#29615;&amp;#22659;, shell &amp;#29615;&amp;#22659;&amp;#21448;&amp;#26377;&amp;#38480;&amp;#20110; local&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv shell --unset&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#37325;&amp;#32622; shell python &amp;#29615;&amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pyenv versions&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;* system (&lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt; by /home/lengyue/.python-version)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;2.7&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;13&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;amp;#26597;&amp;amp;#30475;&amp;amp;#30446;&amp;amp;#21069;&amp;amp;#25152;&amp;amp;#26377;&amp;amp;#29256;&amp;amp;#26412;&amp;amp;#30340; python&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv version&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;amp;#26597;&amp;amp;#30475;&amp;amp;#24403;&amp;amp;#21069;&amp;amp;#29256;&amp;amp;#26412;&amp;amp;#30340; python&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv global system/&lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;amp;#35774;&amp;amp;#32622;&amp;amp;#20840;&amp;amp;#23616;&amp;amp;#30340; python &amp;amp;#29615;&amp;amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv &lt;span class=&quot;built_in&quot;&gt;local&lt;/span&gt; system/&lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;amp;#35774;&amp;amp;#32622;&amp;amp;#23616;&amp;amp;#37096;&amp;amp;#30340; python &amp;amp;#29615;&amp;amp;#22659;, local &amp;amp;#20248;&amp;amp;#20808;&amp;amp;#32423;&amp;amp;#39640;&amp;amp;#20110; global&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv &lt;span class=&quot;built_in&quot;&gt;local&lt;/span&gt; --unset&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;amp;#37325;&amp;amp;#32622; local &amp;amp;#29615;&amp;amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv shell system/&lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;amp;#35774;&amp;amp;#32622; shell &amp;amp;#30340; python &amp;amp;#29615;&amp;amp;#22659;, shell &amp;amp;#29615;&amp;amp;#22659;&amp;amp;#21448;&amp;amp;#26377;&amp;amp;#38480;&amp;amp;#20110; local&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv shell --unset&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;amp;#37325;&amp;amp;#32622; shell python &amp;amp;#29615;&amp;amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -70,7 +721,7 @@ archlinux 系统安装上面命令直接安装, 其他版本可也从源中或�
 &lt;h2 id=&quot;org16f4d8d&quot;&gt;安装不同版本 python&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-org16f4d8d&quot;&gt;
 &lt;div class=&quot;org-src-container&quot;&gt;
-&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pyenv install --list&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# pyenv &amp;#25903;&amp;#25345;&amp;#30340;&amp;#25152;&amp;#26377; python &amp;#21015;&amp;#34920;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv install &lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#23433;&amp;#35013;&amp;#29305;&amp;#23450;&amp;#29256;&amp;#26412;&amp;#30340; python&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv uninstall &lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#21368;&amp;#36733;&amp;#29305;&amp;#23450;&amp;#29256;&amp;#26412;&amp;#30340; python&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv &lt;span class=&quot;built_in&quot;&gt;rehash&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# refresh database&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pyenv install --list&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# pyenv &amp;amp;#25903;&amp;amp;#25345;&amp;amp;#30340;&amp;amp;#25152;&amp;amp;#26377; python &amp;amp;#21015;&amp;amp;#34920;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv install &lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;amp;#23433;&amp;amp;#35013;&amp;amp;#29305;&amp;amp;#23450;&amp;amp;#29256;&amp;amp;#26412;&amp;amp;#30340; python&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv uninstall &lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;amp;#21368;&amp;amp;#36733;&amp;amp;#29305;&amp;amp;#23450;&amp;amp;#29256;&amp;amp;#26412;&amp;amp;#30340; python&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv &lt;span class=&quot;built_in&quot;&gt;rehash&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# refresh database&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/div&gt;
 
 &lt;p&gt;
@@ -102,7 +753,7 @@ archlinux 系统安装上面命令直接安装, 其他版本可也从源中或�
 &lt;/p&gt;
 
 &lt;div class=&quot;org-src-container&quot;&gt;
-&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pyenv virtualenv PYTHON_VERSION PROJECT_NAME&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#21019;&amp;#24314;&amp;#26032;&amp;#30340;&amp;#29615;&amp;#22659;,&amp;#20301;&amp;#20110; ~/.pyenv/versions/, &amp;#20854;&amp;#20013;&amp;#65292;PYTHON_VERSION &amp;#26159;&amp;#20855;&amp;#20307;&amp;#30340; Python &amp;#29256;&amp;#26412;&amp;#21495;&amp;#65292;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#20363;&amp;#22914;&amp;#65292;3.6.0&amp;#65292;PROJECT_NAME &amp;#26159;&amp;#25105;&amp;#20204;&amp;#33258;&amp;#23450;&amp;#20041;&amp;#30340;&amp;#39033;&amp;#30446;&amp;#21517;&amp;#31216;&amp;#12290;&amp;#27604;&amp;#36739;&amp;#22909;&amp;#30340;&amp;#23454;&amp;#36341;&amp;#26041;&amp;#24335;&amp;#26159;&amp;#65292;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#22312; PROJECT_NAME &amp;#20063;&amp;#24102;&amp;#19978; Python &amp;#30340;&amp;#29256;&amp;#26412;&amp;#21495;&amp;#65292;&amp;#20197;&amp;#20415;&amp;#20110;&amp;#35782;&amp;#21035;&amp;#12290;&amp;#29616;&amp;#20551;&amp;#35774;&amp;#25105;&amp;#20204;&amp;#26377; XDiff &amp;#36825;&amp;#20040;&amp;#19968;&amp;#20010;&amp;#39033;&amp;#30446;&amp;#65292;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#24819;&amp;#38024;&amp;#23545; Python 2.7.13 &amp;#21644; Python 3.6.0 &amp;#20998;&amp;#21035;&amp;#21019;&amp;#24314;&amp;#19968;&amp;#20010;&amp;#34394;&amp;#25311;&amp;#29615;&amp;#22659;&amp;#65292;&amp;#37027;&amp;#23601;&amp;#21487;&amp;#20197;&amp;#20381;&amp;#27425;&amp;#25191;&amp;#34892;&amp;#22914;&amp;#19979;&amp;#21629;&amp;#20196;&amp;#12290;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv virtualenv &lt;span class=&quot;number&quot;&gt;3.6&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; py36_XDiff&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv virtualenv &lt;span class=&quot;number&quot;&gt;2.7&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;13&lt;/span&gt; py27_XDiff&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv virtualenvs&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#21019;&amp;#24314;&amp;#23436;&amp;#25104;&amp;#21518;&amp;#65292;&amp;#36890;&amp;#36807;&amp;#25191;&amp;#34892; pyenv virtualenvs &amp;#21629;&amp;#20196;&amp;#65292;&amp;#23601;&amp;#21487;&amp;#20197;&amp;#30475;&amp;#21040;&amp;#26412;&amp;#22320;&amp;#25152;&amp;#26377;&amp;#30340;&amp;#39033;&amp;#30446;&amp;#29615;&amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv activate py36_XDiff&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#20999;&amp;#25442;&amp;#21040;&amp;#26032;&amp;#30340;&amp;#29615;&amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv deactivate&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#36864;&amp;#22238;&amp;#21040;&amp;#31995;&amp;#32479;&amp;#29615;&amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv uninstall py36_XDiff&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Removing the directories in $(pyenv root)/versions and&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# $(pyenv root)/versions/{version}/envs will delete the virtualenv&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# uninstall &amp;#30340;&amp;#21629;&amp;#20196;&amp;#19981;&amp;#33021;&amp;#23436;&amp;#20840;&amp;#21368;&amp;#36733;&amp;#23436;, &amp;#21487;&amp;#20197;&amp;#20351;&amp;#29992;&amp;#21024;&amp;#38500;&amp;#30340;&amp;#26041;&amp;#24335;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pyenv virtualenv PYTHON_VERSION PROJECT_NAME&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;amp;#21019;&amp;amp;#24314;&amp;amp;#26032;&amp;amp;#30340;&amp;amp;#29615;&amp;amp;#22659;,&amp;amp;#20301;&amp;amp;#20110; ~/.pyenv/versions/, &amp;amp;#20854;&amp;amp;#20013;&amp;amp;#65292;PYTHON_VERSION &amp;amp;#26159;&amp;amp;#20855;&amp;amp;#20307;&amp;amp;#30340; Python &amp;amp;#29256;&amp;amp;#26412;&amp;amp;#21495;&amp;amp;#65292;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;amp;#20363;&amp;amp;#22914;&amp;amp;#65292;3.6.0&amp;amp;#65292;PROJECT_NAME &amp;amp;#26159;&amp;amp;#25105;&amp;amp;#20204;&amp;amp;#33258;&amp;amp;#23450;&amp;amp;#20041;&amp;amp;#30340;&amp;amp;#39033;&amp;amp;#30446;&amp;amp;#21517;&amp;amp;#31216;&amp;amp;#12290;&amp;amp;#27604;&amp;amp;#36739;&amp;amp;#22909;&amp;amp;#30340;&amp;amp;#23454;&amp;amp;#36341;&amp;amp;#26041;&amp;amp;#24335;&amp;amp;#26159;&amp;amp;#65292;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;amp;#22312; PROJECT_NAME &amp;amp;#20063;&amp;amp;#24102;&amp;amp;#19978; Python &amp;amp;#30340;&amp;amp;#29256;&amp;amp;#26412;&amp;amp;#21495;&amp;amp;#65292;&amp;amp;#20197;&amp;amp;#20415;&amp;amp;#20110;&amp;amp;#35782;&amp;amp;#21035;&amp;amp;#12290;&amp;amp;#29616;&amp;amp;#20551;&amp;amp;#35774;&amp;amp;#25105;&amp;amp;#20204;&amp;amp;#26377; XDiff &amp;amp;#36825;&amp;amp;#20040;&amp;amp;#19968;&amp;amp;#20010;&amp;amp;#39033;&amp;amp;#30446;&amp;amp;#65292;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;amp;#24819;&amp;amp;#38024;&amp;amp;#23545; Python 2.7.13 &amp;amp;#21644; Python 3.6.0 &amp;amp;#20998;&amp;amp;#21035;&amp;amp;#21019;&amp;amp;#24314;&amp;amp;#19968;&amp;amp;#20010;&amp;amp;#34394;&amp;amp;#25311;&amp;amp;#29615;&amp;amp;#22659;&amp;amp;#65292;&amp;amp;#37027;&amp;amp;#23601;&amp;amp;#21487;&amp;amp;#20197;&amp;amp;#20381;&amp;amp;#27425;&amp;amp;#25191;&amp;amp;#34892;&amp;amp;#22914;&amp;amp;#19979;&amp;amp;#21629;&amp;amp;#20196;&amp;amp;#12290;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv virtualenv &lt;span class=&quot;number&quot;&gt;3.6&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; py36_XDiff&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv virtualenv &lt;span class=&quot;number&quot;&gt;2.7&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;13&lt;/span&gt; py27_XDiff&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv virtualenvs&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;amp;#21019;&amp;amp;#24314;&amp;amp;#23436;&amp;amp;#25104;&amp;amp;#21518;&amp;amp;#65292;&amp;amp;#36890;&amp;amp;#36807;&amp;amp;#25191;&amp;amp;#34892; pyenv virtualenvs &amp;amp;#21629;&amp;amp;#20196;&amp;amp;#65292;&amp;amp;#23601;&amp;amp;#21487;&amp;amp;#20197;&amp;amp;#30475;&amp;amp;#21040;&amp;amp;#26412;&amp;amp;#22320;&amp;amp;#25152;&amp;amp;#26377;&amp;amp;#30340;&amp;amp;#39033;&amp;amp;#30446;&amp;amp;#29615;&amp;amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv activate py36_XDiff&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;amp;#20999;&amp;amp;#25442;&amp;amp;#21040;&amp;amp;#26032;&amp;amp;#30340;&amp;amp;#29615;&amp;amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv deactivate&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;amp;#36864;&amp;amp;#22238;&amp;amp;#21040;&amp;amp;#31995;&amp;amp;#32479;&amp;amp;#29615;&amp;amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv uninstall py36_XDiff&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Removing the directories in $(pyenv root)/versions and&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# $(pyenv root)/versions/{version}/envs will delete the virtualenv&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# uninstall &amp;amp;#30340;&amp;amp;#21629;&amp;amp;#20196;&amp;amp;#19981;&amp;amp;#33021;&amp;amp;#23436;&amp;amp;#20840;&amp;amp;#21368;&amp;amp;#36733;&amp;amp;#23436;, &amp;amp;#21487;&amp;amp;#20197;&amp;amp;#20351;&amp;amp;#29992;&amp;amp;#21024;&amp;amp;#38500;&amp;amp;#30340;&amp;amp;#26041;&amp;amp;#24335;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -115,7 +766,7 @@ archlinux 系统安装上面命令直接安装, 其他版本可也从源中或�
 &lt;/p&gt;
 
 &lt;div class=&quot;org-src-container&quot;&gt;
-&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; ./Downloads&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#36827;&amp;#20837;&amp;#30446;&amp;#24405;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mkdir Mao &amp;amp; &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#21019;&amp;#24314;&amp;#39033;&amp;#30446;&amp;#30446;&amp;#24405;&amp;#24182;&amp;#36827;&amp;#20837;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#25509;&amp;#19979;&amp;#26469;&amp;#26377;&amp;#20004;&amp;#31181;&amp;#26041;&amp;#27861;, &amp;#19968;&amp;#31181;&amp;#29992; local &amp;#21464;&amp;#37327;, &amp;#21478;&amp;#19968;&amp;#31181;&amp;#29992; virtualenv &amp;#26041;&amp;#24335;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# local &amp;#21464;&amp;#37327;&amp;#27861;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv &lt;span class=&quot;built_in&quot;&gt;local&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; &amp;amp; pip install package&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#36827;&amp;#20837; 3.5.2 &amp;#30340;&amp;#29615;&amp;#22659;, &amp;#24182;&amp;#23433;&amp;#35013;&amp;#24517;&amp;#35201;&amp;#30340;&amp;#36719;&amp;#20214;&amp;#21253;, &amp;#36827;&amp;#34892;&amp;#27979;&amp;#35797;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv &lt;span class=&quot;built_in&quot;&gt;local&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;3.3&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; &amp;amp; pip install package&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#36827;&amp;#20837; 3.3.2 &amp;#30340;&amp;#29615;&amp;#22659;, &amp;#24182;&amp;#23433;&amp;#35013;&amp;#24517;&amp;#35201;&amp;#30340;&amp;#36719;&amp;#20214;&amp;#21253;, &amp;#36827;&amp;#34892;&amp;#27979;&amp;#35797;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# virtualenv &amp;#27861;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv virtualenv &lt;span class=&quot;number&quot;&gt;3.6&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; py36_Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv virtualenv &lt;span class=&quot;number&quot;&gt;2.7&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;13&lt;/span&gt; py33_Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#21019;&amp;#24314;&amp;#20004;&amp;#20010;&amp;#34394;&amp;#25311;&amp;#29615;&amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv activate py35_Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#36827;&amp;#20837; 3.5 &amp;#29615;&amp;#22659;&amp;#36827;&amp;#34892;&amp;#24037;&amp;#20316;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv activate py33_Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv deactivate&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#36827;&amp;#20837; 3.3 &amp;#29615;&amp;#22659;&amp;#36827;&amp;#34892;&amp;#24037;&amp;#20316;, &amp;#32467;&amp;#26463;&amp;#21518;&amp;#31163;&amp;#24320;&amp;#34394;&amp;#25311;&amp;#29615;&amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rm -rf ~/.pyenv/versions/py35_Mao/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rm -rf ~/.pyenv/versions/&lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;/envs/py35_Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rm -rf ~/.pyenv/versions/py33_Mao/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rm -rf ~/.pyenv/versions/&lt;span class=&quot;number&quot;&gt;3.3&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;/envs/py33_Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;#22914;&amp;#26524;&amp;#20197;&amp;#21518;&amp;#19981;&amp;#20877;&amp;#20351;&amp;#29992;&amp;#34394;&amp;#25311;&amp;#24320;&amp;#21457;&amp;#29615;&amp;#22659;, &amp;#21024;&amp;#38500;&amp;#29615;&amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; ./Downloads&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;amp;#36827;&amp;amp;#20837;&amp;amp;#30446;&amp;amp;#24405;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mkdir Mao &amp;amp;amp; &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;amp;#21019;&amp;amp;#24314;&amp;amp;#39033;&amp;amp;#30446;&amp;amp;#30446;&amp;amp;#24405;&amp;amp;#24182;&amp;amp;#36827;&amp;amp;#20837;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;amp;#25509;&amp;amp;#19979;&amp;amp;#26469;&amp;amp;#26377;&amp;amp;#20004;&amp;amp;#31181;&amp;amp;#26041;&amp;amp;#27861;, &amp;amp;#19968;&amp;amp;#31181;&amp;amp;#29992; local &amp;amp;#21464;&amp;amp;#37327;, &amp;amp;#21478;&amp;amp;#19968;&amp;amp;#31181;&amp;amp;#29992; virtualenv &amp;amp;#26041;&amp;amp;#24335;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# local &amp;amp;#21464;&amp;amp;#37327;&amp;amp;#27861;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv &lt;span class=&quot;built_in&quot;&gt;local&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; &amp;amp;amp; pip install package&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;amp;#36827;&amp;amp;#20837; 3.5.2 &amp;amp;#30340;&amp;amp;#29615;&amp;amp;#22659;, &amp;amp;#24182;&amp;amp;#23433;&amp;amp;#35013;&amp;amp;#24517;&amp;amp;#35201;&amp;amp;#30340;&amp;amp;#36719;&amp;amp;#20214;&amp;amp;#21253;, &amp;amp;#36827;&amp;amp;#34892;&amp;amp;#27979;&amp;amp;#35797;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv &lt;span class=&quot;built_in&quot;&gt;local&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;3.3&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; &amp;amp;amp; pip install package&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;amp;#36827;&amp;amp;#20837; 3.3.2 &amp;amp;#30340;&amp;amp;#29615;&amp;amp;#22659;, &amp;amp;#24182;&amp;amp;#23433;&amp;amp;#35013;&amp;amp;#24517;&amp;amp;#35201;&amp;amp;#30340;&amp;amp;#36719;&amp;amp;#20214;&amp;amp;#21253;, &amp;amp;#36827;&amp;amp;#34892;&amp;amp;#27979;&amp;amp;#35797;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# virtualenv &amp;amp;#27861;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv virtualenv &lt;span class=&quot;number&quot;&gt;3.6&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; py36_Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv virtualenv &lt;span class=&quot;number&quot;&gt;2.7&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;13&lt;/span&gt; py33_Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;amp;#21019;&amp;amp;#24314;&amp;amp;#20004;&amp;amp;#20010;&amp;amp;#34394;&amp;amp;#25311;&amp;amp;#29615;&amp;amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv activate py35_Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;amp;#36827;&amp;amp;#20837; 3.5 &amp;amp;#29615;&amp;amp;#22659;&amp;amp;#36827;&amp;amp;#34892;&amp;amp;#24037;&amp;amp;#20316;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv activate py33_Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyenv deactivate&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;amp;#36827;&amp;amp;#20837; 3.3 &amp;amp;#29615;&amp;amp;#22659;&amp;amp;#36827;&amp;amp;#34892;&amp;amp;#24037;&amp;amp;#20316;, &amp;amp;#32467;&amp;amp;#26463;&amp;amp;#21518;&amp;amp;#31163;&amp;amp;#24320;&amp;amp;#34394;&amp;amp;#25311;&amp;amp;#29615;&amp;amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rm -rf ~/.pyenv/versions/py35_Mao/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rm -rf ~/.pyenv/versions/&lt;span class=&quot;number&quot;&gt;3.5&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;/envs/py35_Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rm -rf ~/.pyenv/versions/py33_Mao/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rm -rf ~/.pyenv/versions/&lt;span class=&quot;number&quot;&gt;3.3&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;/envs/py33_Mao&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;amp;#22914;&amp;amp;#26524;&amp;amp;#20197;&amp;amp;#21518;&amp;amp;#19981;&amp;amp;#20877;&amp;amp;#20351;&amp;amp;#29992;&amp;amp;#34394;&amp;amp;#25311;&amp;amp;#24320;&amp;amp;#21457;&amp;amp;#29615;&amp;amp;#22659;, &amp;amp;#21024;&amp;amp;#38500;&amp;amp;#29615;&amp;amp;#22659;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -164,17 +815,15 @@ Last Updated 2017-09-19 Tue 16:17 by lengyueyang&lt;br&gt;Render by &lt;a href=&
     <link href="http://lengyueyang.github.io/2017/09/05/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-%E8%A1%8C%E5%88%97%E5%BC%8F/"/>
     <id>http://lengyueyang.github.io/2017/09/05/数据科学-数学与统计-高等代数-行列式/</id>
     <published>2017-09-05T00:00:00.000Z</published>
-    <updated>2017-09-05T14:27:51.781Z</updated>
+    <updated>2017-10-09T14:49:51.817Z</updated>
     
     <content type="html">
 
 
-&lt;div id=&quot;outline-container-org3d322be&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org3d322be&quot;&gt;行列式&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org3d322be&quot;&gt;
-&lt;/div&gt;&lt;div id=&quot;outline-container-org04e3d5d&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org04e3d5d&quot;&gt;n 元排列&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org04e3d5d&quot;&gt;
+
+&lt;div id=&quot;outline-container-org135f865&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org135f865&quot;&gt;n 元排列&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org135f865&quot;&gt;
 &lt;p&gt;
 n 个不同正整数的一个全排列称为 &lt;b&gt;n 元排列&lt;/b&gt;.
 &lt;/p&gt;
@@ -203,9 +852,9 @@ n 个不同正整数的一个全排列称为 &lt;b&gt;n 元排列&lt;/b&gt;.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgb728538&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgb728538&quot;&gt;n 阶行列式的定义&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgb728538&quot;&gt;
+&lt;div id=&quot;outline-container-org09b11d6&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org09b11d6&quot;&gt;n 阶行列式的定义&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org09b11d6&quot;&gt;
 \begin{de}[n 阶行列式完全展开式定义]
 \end{de}
 &lt;p&gt;
@@ -235,7 +884,7 @@ n 阶行列式
 \right| = \sum_{j_1j_2 \cdots j_n}(-1)^{\tau (j_1j_2 \cdots j_n)}a_{1j_1}a_{2j_2} \cdots a_{nj_n}
 \end{equation}
 &lt;p&gt;
-其中 \(j_1j_2 ⋯ j_n\) 是 n 元排列, (&lt;a href=&quot;#org42fb4a7&quot;&gt;1&lt;/a&gt;)式称为 n 阶行列式的 &lt;b&gt;完全展开式&lt;/b&gt; .
+其中 \(j_1j_2 ⋯ j_n\) 是 n 元排列, (&lt;a href=&quot;#org7bbbf14&quot;&gt;1&lt;/a&gt;)式称为 n 阶行列式的 &lt;b&gt;完全展开式&lt;/b&gt; .
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -252,7 +901,7 @@ A = \left\{
 \right\}
 \end{equation}
 &lt;p&gt;
-则 n 阶行列式 (&lt;a href=&quot;#org42fb4a7&quot;&gt;1&lt;/a&gt;)也称为 n 级矩阵 A 的行列式, 简记作 \(|A|\)或者\(det\,A\).
+则 n 阶行列式 (&lt;a href=&quot;#org7bbbf14&quot;&gt;1&lt;/a&gt;)也称为 n 级矩阵 A 的行列式, 简记作 \(|A|\)或者\(det\,A\).
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -261,9 +910,9 @@ A = \left\{
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org5491494&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org5491494&quot;&gt;行列式的性质&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org5491494&quot;&gt;
+&lt;div id=&quot;outline-container-org95f3c08&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org95f3c08&quot;&gt;行列式的性质&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org95f3c08&quot;&gt;
 \begin{proposition}[行列式性质-1]
 \end{proposition}
 &lt;p&gt;
@@ -425,9 +1074,9 @@ A = \left\{
 &lt;/div&gt;
 
 
-&lt;div id=&quot;outline-container-org6df78c7&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org6df78c7&quot;&gt;行列式按一行(列)展开&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org6df78c7&quot;&gt;
+&lt;div id=&quot;outline-container-org4f493ae&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org4f493ae&quot;&gt;行列式按一行(列)展开&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org4f493ae&quot;&gt;
 \begin{de}[余子式与代数余子式定义]
 \end{de}
 &lt;p&gt;
@@ -443,7 +1092,7 @@ n 阶行列式 \(|A|\) 等于它的第 i 行元素与自己的代数余子式的
   |A| = a_{i1}A_{i1} + a_{i2}A_{i2} + \cdots + a_{in}A_{in} = \sum_{j=1}^n a_{ij}A_{ij}
 \end{equation}
 &lt;p&gt;
-其中 \(i \in {1,2,⋯,n}\), (&lt;a href=&quot;#orgd51c4b6&quot;&gt;1&lt;/a&gt;) 称为 n 阶行列式按第 i 行的展开式.
+其中 \(i \in {1,2,⋯,n}\), (&lt;a href=&quot;#orgb7922f8&quot;&gt;1&lt;/a&gt;) 称为 n 阶行列式按第 i 行的展开式.
 &lt;/p&gt;
 
 \begin{thm}[n 阶行列式列展开定理]
@@ -455,7 +1104,7 @@ n 阶行列式 \(|A|\) 等于它的第 j 列元素与自己的代数余子式的
   |A| = a_{1j}A_{1j} + a_{2j}A_{2j} + \cdots + a_{nj}A_{nj} = \sum_{l=1}^n a_{lj}A_{lj}
 \end{equation}
 &lt;p&gt;
-其中 \(i \in {1,2,⋯,n}\), (&lt;a href=&quot;#orgd51c4b6&quot;&gt;1&lt;/a&gt;) 称为 n 阶行列式按第 j 列的展开式.
+其中 \(i \in {1,2,⋯,n}\), (&lt;a href=&quot;#orgb7922f8&quot;&gt;1&lt;/a&gt;) 称为 n 阶行列式按第 j 列的展开式.
 &lt;/p&gt;
 
 \begin{thm}[n 阶行列式展开定理-3]
@@ -481,9 +1130,9 @@ a_{1j}A_{1l} + a_{2j}A_{2l} + \cdots + a_{nj}A_{nl} = 0
 
 
 
-&lt;div id=&quot;outline-container-org2722867&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org2722867&quot;&gt;克莱姆法则(Cramer)&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org2722867&quot;&gt;
+&lt;div id=&quot;outline-container-org65a41ec&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org65a41ec&quot;&gt;克莱姆法则(Cramer)&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org65a41ec&quot;&gt;
 \begin{thm}[克莱姆法则定理-1]
 \end{thm}
 &lt;p&gt;
@@ -516,9 +1165,9 @@ n 个方程的 n 元线性方程组的系数行列式 \(|A| ≠ 0\) 时, 它的�
 &lt;/div&gt;
 
 
-&lt;div id=&quot;outline-container-org821ae54&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org821ae54&quot;&gt;行列式按 k 行(列)展开&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org821ae54&quot;&gt;
+&lt;div id=&quot;outline-container-orge508615&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orge508615&quot;&gt;行列式按 k 行(列)展开&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orge508615&quot;&gt;
 \begin{de}[k 阶子式定义]
 \end{de}
 &lt;p&gt;
@@ -532,7 +1181,7 @@ j_1&amp;, j_2, ⋯, j_k
 \right)
 \end{equation}
 &lt;p&gt;
-划去这个 k 阶子式所在的行和列, 剩下的元素按原来的排法组成 \((n-k)\) 的行列式, 称为 子式 (&lt;a href=&quot;#org9899fa9&quot;&gt;1&lt;/a&gt;) 的余子式.
+划去这个 k 阶子式所在的行和列, 剩下的元素按原来的排法组成 \((n-k)\) 的行列式, 称为 子式 (&lt;a href=&quot;#org8d83ada&quot;&gt;1&lt;/a&gt;) 的余子式.
 &lt;/p&gt;
 
 \begin{thm}[Laplace 定理]
@@ -555,19 +1204,15 @@ j_1^{&#39;}, j_2^{&#39;},  ⋯ , j_k^{&#39;} \\
 \end{equation}
 &lt;/i_k)\)&gt;&lt;/p&gt;&lt;/i_k)\)&gt;&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
 
-Last Updated 2017-09-05 Tue 22:27 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 25.2.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 9.0.10)
+Last Updated 2017-10-09 Mon 22:49 by lengyueyang&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;https://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 25.2.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 9.1.2)
 </content>
     
     <summary type="html">
     
-      &lt;div id=&quot;outline-container-org3d322be&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org3d322be&quot;&gt;行列式&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org3d322be&quot;&gt;
-&lt;/div&gt;&lt;div id=&quot;outline-container-org04e3d5d&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org04e3d5d&quot;&gt;n 元排列&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org04e3d5d&quot;&gt;
+      &lt;div id=&quot;outline-container-org135f865&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org135f865&quot;&gt;n 元排列&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org135f865&quot;&gt;
 &lt;p&gt;
 n 个不同正整数的一个全排列称为 &lt;b&gt;n 元排列&lt;/b&gt;.
 &lt;/p&gt;
