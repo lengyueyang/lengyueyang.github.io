@@ -17,15 +17,15 @@ import time
 
 
 # Data about this site
-BLOG_AUTHOR = "Mao"  # (translatable)
-BLOG_TITLE = "lengyueyang"  # (translatable)
+BLOG_AUTHOR = "Mao Xiaowei"  # (translatable)
+BLOG_TITLE = "深度识医"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "https://example.com/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://example.com/"
-BLOG_EMAIL = "n.tesla@example.com"
+BLOG_EMAIL = "maoxiaowei1988@qq.com"
 BLOG_DESCRIPTION = "This is a demo site for Nikola."  # (translatable)
 
 # Nikola is multilingual!
@@ -86,7 +86,7 @@ BLOG_DESCRIPTION = "This is a demo site for Nikola."  # (translatable)
 # in the default language will be shown instead.
 
 # What is the default language?
-DEFAULT_LANG = "en"
+DEFAULT_LANG = "zh_cn"
 
 # What other languages do you have?
 # The format is {"translationcode" : "path/to/translation" }
@@ -185,12 +185,14 @@ POSTS = (
     ("posts/*.rst", "posts", "post.tmpl"),
     ("posts/*.md", "posts", "post.tmpl"),
     ("posts/*.txt", "posts", "post.tmpl"),
+    ("posts/*.org", "posts", "post.tmpl"),
     ("posts/*.html", "posts", "post.tmpl"),
 )
 PAGES = (
     ("pages/*.rst", "pages", "page.tmpl"),
     ("pages/*.md", "pages", "page.tmpl"),
     ("pages/*.txt", "pages", "page.tmpl"),
+    ("stories/*.org", "stories", "story.tmpl"),
     ("pages/*.html", "pages", "page.tmpl"),
 )
 
@@ -271,6 +273,7 @@ COMPILERS = {
     "wiki": ('.wiki',),
     "ipynb": ('.ipynb',),
     "html": ('.html', '.htm'),
+    "orgmode": ('.org',),
     # PHP files are rendered the usual way (i.e. with the full templates).
     # The resulting files have .php extensions, making it possible to run
     # them without reconfiguring your server to recognize them.
@@ -281,12 +284,6 @@ COMPILERS = {
     # "pandoc": ('.rst', '.md', '.txt'),
 }
 
-# Add the orgmode compiler to your COMPILERS dict.
-COMPILERS["orgmode"] = ('.org',)
-
-# Add org files to your POSTS, PAGES
-POSTS = POSTS + (("posts/*.org", "posts", "post.tmpl"),)
-PAGES = PAGES + (("stories/*.org", "stories", "story.tmpl"),)
 
 # Create by default posts in one file format?
 # Set to False for two-file posts, with separate metadata.
