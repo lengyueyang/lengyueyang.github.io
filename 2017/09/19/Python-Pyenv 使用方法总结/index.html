@@ -7,7 +7,7 @@
 
 <html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+  <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -96,6 +96,7 @@
 <meta property="og:url" content="http://lengyueyang.github.io/2017/09/19/Python-Pyenv 使用方法总结/index.html">
 <meta property="og:site_name" content="深度识医">
 <meta property="og:description" content="Pyenv 简介   在使用 python 进行编程时, 经常遇到多个编程环境共存问题. pyenv 可以很好的解决这个问题, 本教程根据是学习使用 pyenv 的记录.">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-09-19T08:17:11.857Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python-Pyenv 使用方法总结">
@@ -133,7 +134,7 @@
 
 
 
-  <title> Python-Pyenv 使用方法总结 | 深度识医 </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> Python-Pyenv 使用方法总结 | 深度识医 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -144,7 +145,7 @@
 
 
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><script type="text/javascript">
+  <script type="text/javascript">
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
@@ -408,9 +409,9 @@
         
 
 
-<div id="outline-container-org9c7a5be" class="outline-2">
-<h2 id="org9c7a5be">Pyenv 简介</h2>
-<div class="outline-text-2" id="text-org9c7a5be">
+<div id="outline-container-org026b707" class="outline-2">
+<h2 id="org026b707">Pyenv 简介</h2>
+<div class="outline-text-2" id="text-org026b707">
 <p>
 在使用 python 进行编程时, 经常遇到多个编程环境共存问题. pyenv 可以很好的解决这个问题, 本教程根据是学习使用 pyenv 的记录.
 </p>
@@ -419,11 +420,11 @@
 </div>
 </div>
 
-<div id="outline-container-orge77191f" class="outline-2">
-<h2 id="orge77191f">安装</h2>
-<div class="outline-text-2" id="text-orge77191f">
+<div id="outline-container-orge2c61b1" class="outline-2">
+<h2 id="orge2c61b1">安装</h2>
+<div class="outline-text-2" id="text-orge2c61b1">
 <div class="org-src-container">
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">yaourt pyenv</span><br><span class="line">yaourt pyenv-virtualenv</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yaourt pyenv</span><br><span class="line">yaourt pyenv-virtualenv</span><br></pre></td></tr></table></figure>
 </div>
 
 <p>
@@ -435,25 +436,25 @@ archlinux 系统安装上面命令直接安装, 其他版本可也从源中或�
 </p>
 
 <div class="org-src-container">
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> PYENV_ROOT=<span class="string">"<span class="variable">$HOME</span>/.pyenv"</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$PYENV_ROOT</span>/bin:<span class="variable">$PATH</span>"</span></span><br><span class="line"><span class="built_in">eval</span> <span class="string">"<span class="variable">$(pyenv init -)</span>"</span></span><br><span class="line"><span class="built_in">eval</span> <span class="string">"<span class="variable">$(pyenv virtualenv-init -)</span>"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PYENV_ROOT=<span class="string">"<span class="variable">$HOME</span>/.pyenv"</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$PYENV_ROOT</span>/bin:<span class="variable">$PATH</span>"</span></span><br><span class="line"><span class="built_in">eval</span> <span class="string">"<span class="variable">$(pyenv init -)</span>"</span></span><br><span class="line"><span class="built_in">eval</span> <span class="string">"<span class="variable">$(pyenv virtualenv-init -)</span>"</span></span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org67b2e10" class="outline-2">
-<h2 id="org67b2e10">Pyenv 基本操作</h2>
-<div class="outline-text-2" id="text-org67b2e10">
+<div id="outline-container-org63061bc" class="outline-2">
+<h2 id="org63061bc">Pyenv 基本操作</h2>
+<div class="outline-text-2" id="text-org63061bc">
 <div class="org-src-container">
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">pyenv versions</span><br><span class="line"></span><br><span class="line">* system (<span class="built_in">set</span> by /home/lengyue/.python-version)</span><br><span class="line"><span class="number">2.7</span>.<span class="number">13</span></span><br><span class="line"><span class="number">3.5</span>.<span class="number">2</span></span><br><span class="line"><span class="comment"># &amp;#26597;&amp;#30475;&amp;#30446;&amp;#21069;&amp;#25152;&amp;#26377;&amp;#29256;&amp;#26412;&amp;#30340; python</span></span><br><span class="line"></span><br><span class="line">pyenv version</span><br><span class="line"><span class="comment"># &amp;#26597;&amp;#30475;&amp;#24403;&amp;#21069;&amp;#29256;&amp;#26412;&amp;#30340; python</span></span><br><span class="line"></span><br><span class="line">pyenv global system/<span class="number">3.5</span>.<span class="number">2</span></span><br><span class="line"><span class="comment"># &amp;#35774;&amp;#32622;&amp;#20840;&amp;#23616;&amp;#30340; python &amp;#29615;&amp;#22659;</span></span><br><span class="line"></span><br><span class="line">pyenv <span class="built_in">local</span> system/<span class="number">3.5</span>.<span class="number">2</span></span><br><span class="line"><span class="comment"># &amp;#35774;&amp;#32622;&amp;#23616;&amp;#37096;&amp;#30340; python &amp;#29615;&amp;#22659;, local &amp;#20248;&amp;#20808;&amp;#32423;&amp;#39640;&amp;#20110; global</span></span><br><span class="line"></span><br><span class="line">pyenv <span class="built_in">local</span> --unset</span><br><span class="line"><span class="comment"># &amp;#37325;&amp;#32622; local &amp;#29615;&amp;#22659;</span></span><br><span class="line"></span><br><span class="line">pyenv shell system/<span class="number">3.5</span>.<span class="number">2</span></span><br><span class="line"><span class="comment"># &amp;#35774;&amp;#32622; shell &amp;#30340; python &amp;#29615;&amp;#22659;, shell &amp;#29615;&amp;#22659;&amp;#21448;&amp;#26377;&amp;#38480;&amp;#20110; local</span></span><br><span class="line"></span><br><span class="line">pyenv shell --unset</span><br><span class="line"><span class="comment"># &amp;#37325;&amp;#32622; shell python &amp;#29615;&amp;#22659;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">pyenv versions</span><br><span class="line"></span><br><span class="line">* system (<span class="built_in">set</span> by /home/lengyue/.python-version)</span><br><span class="line"><span class="number">2.7</span>.<span class="number">13</span></span><br><span class="line"><span class="number">3.5</span>.<span class="number">2</span></span><br><span class="line"><span class="comment"># 查看目前所有版本的 python</span></span><br><span class="line"></span><br><span class="line">pyenv version</span><br><span class="line"><span class="comment"># 查看当前版本的 python</span></span><br><span class="line"></span><br><span class="line">pyenv global system/<span class="number">3.5</span>.<span class="number">2</span></span><br><span class="line"><span class="comment"># 设置全局的 python 环境</span></span><br><span class="line"></span><br><span class="line">pyenv <span class="built_in">local</span> system/<span class="number">3.5</span>.<span class="number">2</span></span><br><span class="line"><span class="comment"># 设置局部的 python 环境, local 优先级高于 global</span></span><br><span class="line"></span><br><span class="line">pyenv <span class="built_in">local</span> --unset</span><br><span class="line"><span class="comment"># 重置 local 环境</span></span><br><span class="line"></span><br><span class="line">pyenv shell system/<span class="number">3.5</span>.<span class="number">2</span></span><br><span class="line"><span class="comment"># 设置 shell 的 python 环境, shell 环境又有限于 local</span></span><br><span class="line"></span><br><span class="line">pyenv shell --unset</span><br><span class="line"><span class="comment"># 重置 shell python 环境</span></span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org16f4d8d" class="outline-2">
-<h2 id="org16f4d8d">安装不同版本 python</h2>
-<div class="outline-text-2" id="text-org16f4d8d">
+<div id="outline-container-org9fbe0e2" class="outline-2">
+<h2 id="org9fbe0e2">安装不同版本 python</h2>
+<div class="outline-text-2" id="text-org9fbe0e2">
 <div class="org-src-container">
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">pyenv install --list</span><br><span class="line"><span class="comment"># pyenv &amp;#25903;&amp;#25345;&amp;#30340;&amp;#25152;&amp;#26377; python &amp;#21015;&amp;#34920;</span></span><br><span class="line"></span><br><span class="line">pyenv install <span class="number">3.5</span>.<span class="number">2</span></span><br><span class="line"><span class="comment"># &amp;#23433;&amp;#35013;&amp;#29305;&amp;#23450;&amp;#29256;&amp;#26412;&amp;#30340; python</span></span><br><span class="line"></span><br><span class="line">pyenv uninstall <span class="number">3.5</span>.<span class="number">2</span></span><br><span class="line"><span class="comment"># &amp;#21368;&amp;#36733;&amp;#29305;&amp;#23450;&amp;#29256;&amp;#26412;&amp;#30340; python</span></span><br><span class="line"></span><br><span class="line">pyenv <span class="built_in">rehash</span></span><br><span class="line"><span class="comment"># refresh database</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">pyenv install --list</span><br><span class="line"><span class="comment"># pyenv 支持的所有 python 列表</span></span><br><span class="line"></span><br><span class="line">pyenv install <span class="number">3.5</span>.<span class="number">2</span></span><br><span class="line"><span class="comment"># 安装特定版本的 python</span></span><br><span class="line"></span><br><span class="line">pyenv uninstall <span class="number">3.5</span>.<span class="number">2</span></span><br><span class="line"><span class="comment"># 卸载特定版本的 python</span></span><br><span class="line"></span><br><span class="line">pyenv <span class="built_in">rehash</span></span><br><span class="line"><span class="comment"># refresh database</span></span><br></pre></td></tr></table></figure>
 </div>
 
 <p>
@@ -468,58 +469,58 @@ archlinux 系统安装上面命令直接安装, 其他版本可也从源中或�
 按照下帖解决, 用如下命令
 </p>
 <ul class="org-ul">
-<li><a href="https://stackoverflow.com/questions/43976068/compiling-python-via-pyenv-on-archlinux-but-missing-openssl" target="_blank" rel="external">Compiling Python via Pyenv on Archlinux but missing OpenSSL - Stack Overflow</a></li>
+<li><a href="https://stackoverflow.com/questions/43976068/compiling-python-via-pyenv-on-archlinux-but-missing-openssl" target="_blank" rel="noopener">Compiling Python via Pyenv on Archlinux but missing OpenSSL - Stack Overflow</a></li>
 </ul>
 
 <div class="org-src-container">
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">CFLAGS=-I/usr/include/openssl-<span class="number">1.0</span> \</span><br><span class="line">LDFLAGS=-L/usr/lib64/openssl-<span class="number">1.0</span> \</span><br><span class="line">pyenv install <span class="number">3.5</span>.<span class="number">2</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CFLAGS=-I/usr/include/openssl-<span class="number">1.0</span> \</span><br><span class="line">LDFLAGS=-L/usr/lib64/openssl-<span class="number">1.0</span> \</span><br><span class="line">pyenv install <span class="number">3.5</span>.<span class="number">2</span></span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org8e944c4" class="outline-2">
-<h2 id="org8e944c4">Pyenv-virtualenv python 不同项目虚拟环境的搭建</h2>
-<div class="outline-text-2" id="text-org8e944c4">
+<div id="outline-container-org46a4805" class="outline-2">
+<h2 id="org46a4805">Pyenv-virtualenv python 不同项目虚拟环境的搭建</h2>
+<div class="outline-text-2" id="text-org46a4805">
 <p>
 利用 pyenv-virtualenv 就可以管理多个依赖库环境
 </p>
 
 <div class="org-src-container">
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">pyenv virtualenv PYTHON_VERSION PROJECT_NAME</span><br><span class="line"><span class="comment"># &amp;#21019;&amp;#24314;&amp;#26032;&amp;#30340;&amp;#29615;&amp;#22659;,&amp;#20301;&amp;#20110; ~/.pyenv/versions/, &amp;#20854;&amp;#20013;&amp;#65292;PYTHON_VERSION &amp;#26159;&amp;#20855;&amp;#20307;&amp;#30340; Python &amp;#29256;&amp;#26412;&amp;#21495;&amp;#65292;</span></span><br><span class="line"><span class="comment"># &amp;#20363;&amp;#22914;&amp;#65292;3.6.0&amp;#65292;PROJECT_NAME &amp;#26159;&amp;#25105;&amp;#20204;&amp;#33258;&amp;#23450;&amp;#20041;&amp;#30340;&amp;#39033;&amp;#30446;&amp;#21517;&amp;#31216;&amp;#12290;&amp;#27604;&amp;#36739;&amp;#22909;&amp;#30340;&amp;#23454;&amp;#36341;&amp;#26041;&amp;#24335;&amp;#26159;&amp;#65292;</span></span><br><span class="line"><span class="comment"># &amp;#22312; PROJECT_NAME &amp;#20063;&amp;#24102;&amp;#19978; Python &amp;#30340;&amp;#29256;&amp;#26412;&amp;#21495;&amp;#65292;&amp;#20197;&amp;#20415;&amp;#20110;&amp;#35782;&amp;#21035;&amp;#12290;&amp;#29616;&amp;#20551;&amp;#35774;&amp;#25105;&amp;#20204;&amp;#26377; XDiff &amp;#36825;&amp;#20040;&amp;#19968;&amp;#20010;&amp;#39033;&amp;#30446;&amp;#65292;</span></span><br><span class="line"><span class="comment"># &amp;#24819;&amp;#38024;&amp;#23545; Python 2.7.13 &amp;#21644; Python 3.6.0 &amp;#20998;&amp;#21035;&amp;#21019;&amp;#24314;&amp;#19968;&amp;#20010;&amp;#34394;&amp;#25311;&amp;#29615;&amp;#22659;&amp;#65292;&amp;#37027;&amp;#23601;&amp;#21487;&amp;#20197;&amp;#20381;&amp;#27425;&amp;#25191;&amp;#34892;&amp;#22914;&amp;#19979;&amp;#21629;&amp;#20196;&amp;#12290;</span></span><br><span class="line"></span><br><span class="line">pyenv virtualenv <span class="number">3.6</span>.<span class="number">0</span> py36_XDiff</span><br><span class="line">pyenv virtualenv <span class="number">2.7</span>.<span class="number">13</span> py27_XDiff</span><br><span class="line"></span><br><span class="line">pyenv virtualenvs</span><br><span class="line"><span class="comment"># &amp;#21019;&amp;#24314;&amp;#23436;&amp;#25104;&amp;#21518;&amp;#65292;&amp;#36890;&amp;#36807;&amp;#25191;&amp;#34892; pyenv virtualenvs &amp;#21629;&amp;#20196;&amp;#65292;&amp;#23601;&amp;#21487;&amp;#20197;&amp;#30475;&amp;#21040;&amp;#26412;&amp;#22320;&amp;#25152;&amp;#26377;&amp;#30340;&amp;#39033;&amp;#30446;&amp;#29615;&amp;#22659;</span></span><br><span class="line"></span><br><span class="line">pyenv activate py36_XDiff</span><br><span class="line"><span class="comment"># &amp;#20999;&amp;#25442;&amp;#21040;&amp;#26032;&amp;#30340;&amp;#29615;&amp;#22659;</span></span><br><span class="line"></span><br><span class="line">pyenv deactivate</span><br><span class="line"><span class="comment"># &amp;#36864;&amp;#22238;&amp;#21040;&amp;#31995;&amp;#32479;&amp;#29615;&amp;#22659;</span></span><br><span class="line"></span><br><span class="line">pyenv uninstall py36_XDiff</span><br><span class="line"><span class="comment"># Removing the directories in $(pyenv root)/versions and</span></span><br><span class="line"><span class="comment"># $(pyenv root)/versions/{version}/envs will delete the virtualenv</span></span><br><span class="line"><span class="comment"># uninstall &amp;#30340;&amp;#21629;&amp;#20196;&amp;#19981;&amp;#33021;&amp;#23436;&amp;#20840;&amp;#21368;&amp;#36733;&amp;#23436;, &amp;#21487;&amp;#20197;&amp;#20351;&amp;#29992;&amp;#21024;&amp;#38500;&amp;#30340;&amp;#26041;&amp;#24335;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">pyenv virtualenv PYTHON_VERSION PROJECT_NAME</span><br><span class="line"><span class="comment"># 创建新的环境,位于 ~/.pyenv/versions/, 其中，PYTHON_VERSION 是具体的 Python 版本号，</span></span><br><span class="line"><span class="comment"># 例如，3.6.0，PROJECT_NAME 是我们自定义的项目名称。比较好的实践方式是，</span></span><br><span class="line"><span class="comment"># 在 PROJECT_NAME 也带上 Python 的版本号，以便于识别。现假设我们有 XDiff 这么一个项目，</span></span><br><span class="line"><span class="comment"># 想针对 Python 2.7.13 和 Python 3.6.0 分别创建一个虚拟环境，那就可以依次执行如下命令。</span></span><br><span class="line"></span><br><span class="line">pyenv virtualenv <span class="number">3.6</span>.<span class="number">0</span> py36_XDiff</span><br><span class="line">pyenv virtualenv <span class="number">2.7</span>.<span class="number">13</span> py27_XDiff</span><br><span class="line"></span><br><span class="line">pyenv virtualenvs</span><br><span class="line"><span class="comment"># 创建完成后，通过执行 pyenv virtualenvs 命令，就可以看到本地所有的项目环境</span></span><br><span class="line"></span><br><span class="line">pyenv activate py36_XDiff</span><br><span class="line"><span class="comment"># 切换到新的环境</span></span><br><span class="line"></span><br><span class="line">pyenv deactivate</span><br><span class="line"><span class="comment"># 退回到系统环境</span></span><br><span class="line"></span><br><span class="line">pyenv uninstall py36_XDiff</span><br><span class="line"><span class="comment"># Removing the directories in $(pyenv root)/versions and</span></span><br><span class="line"><span class="comment"># $(pyenv root)/versions/{version}/envs will delete the virtualenv</span></span><br><span class="line"><span class="comment"># uninstall 的命令不能完全卸载完, 可以使用删除的方式</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org7341e32" class="outline-2">
-<h2 id="org7341e32">项目实践举例</h2>
-<div class="outline-text-2" id="text-org7341e32">
+<div id="outline-container-org7b31b33" class="outline-2">
+<h2 id="org7b31b33">项目实践举例</h2>
+<div class="outline-text-2" id="text-org7b31b33">
 <p>
 假设现在有一个项目同时尝试 python 3.5.2 和 3.3.2 进行编写, 流程如下.
 </p>
 
 <div class="org-src-container">
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ./Downloads</span><br><span class="line"><span class="comment"># &amp;#36827;&amp;#20837;&amp;#30446;&amp;#24405;</span></span><br><span class="line"></span><br><span class="line">mkdir Mao &amp;amp; <span class="built_in">cd</span> Mao</span><br><span class="line"><span class="comment"># &amp;#21019;&amp;#24314;&amp;#39033;&amp;#30446;&amp;#30446;&amp;#24405;&amp;#24182;&amp;#36827;&amp;#20837;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># &amp;#25509;&amp;#19979;&amp;#26469;&amp;#26377;&amp;#20004;&amp;#31181;&amp;#26041;&amp;#27861;, &amp;#19968;&amp;#31181;&amp;#29992; local &amp;#21464;&amp;#37327;, &amp;#21478;&amp;#19968;&amp;#31181;&amp;#29992; virtualenv &amp;#26041;&amp;#24335;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># local &amp;#21464;&amp;#37327;&amp;#27861;</span></span><br><span class="line"></span><br><span class="line">pyenv <span class="built_in">local</span> <span class="number">3.5</span>.<span class="number">2</span> &amp;amp; pip install package</span><br><span class="line"><span class="comment"># &amp;#36827;&amp;#20837; 3.5.2 &amp;#30340;&amp;#29615;&amp;#22659;, &amp;#24182;&amp;#23433;&amp;#35013;&amp;#24517;&amp;#35201;&amp;#30340;&amp;#36719;&amp;#20214;&amp;#21253;, &amp;#36827;&amp;#34892;&amp;#27979;&amp;#35797;</span></span><br><span class="line"></span><br><span class="line">pyenv <span class="built_in">local</span> <span class="number">3.3</span>.<span class="number">2</span> &amp;amp; pip install package</span><br><span class="line"><span class="comment"># &amp;#36827;&amp;#20837; 3.3.2 &amp;#30340;&amp;#29615;&amp;#22659;, &amp;#24182;&amp;#23433;&amp;#35013;&amp;#24517;&amp;#35201;&amp;#30340;&amp;#36719;&amp;#20214;&amp;#21253;, &amp;#36827;&amp;#34892;&amp;#27979;&amp;#35797;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># virtualenv &amp;#27861;</span></span><br><span class="line"></span><br><span class="line">pyenv virtualenv <span class="number">3.6</span>.<span class="number">0</span> py36_Mao</span><br><span class="line">pyenv virtualenv <span class="number">2.7</span>.<span class="number">13</span> py33_Mao</span><br><span class="line"><span class="comment"># &amp;#21019;&amp;#24314;&amp;#20004;&amp;#20010;&amp;#34394;&amp;#25311;&amp;#29615;&amp;#22659;</span></span><br><span class="line"></span><br><span class="line">pyenv activate py35_Mao</span><br><span class="line"><span class="comment"># &amp;#36827;&amp;#20837; 3.5 &amp;#29615;&amp;#22659;&amp;#36827;&amp;#34892;&amp;#24037;&amp;#20316;</span></span><br><span class="line"></span><br><span class="line">pyenv activate py33_Mao</span><br><span class="line">pyenv deactivate</span><br><span class="line"><span class="comment"># &amp;#36827;&amp;#20837; 3.3 &amp;#29615;&amp;#22659;&amp;#36827;&amp;#34892;&amp;#24037;&amp;#20316;, &amp;#32467;&amp;#26463;&amp;#21518;&amp;#31163;&amp;#24320;&amp;#34394;&amp;#25311;&amp;#29615;&amp;#22659;</span></span><br><span class="line"></span><br><span class="line">rm -rf ~/.pyenv/versions/py35_Mao/</span><br><span class="line">rm -rf ~/.pyenv/versions/<span class="number">3.5</span>.<span class="number">2</span>/envs/py35_Mao</span><br><span class="line">rm -rf ~/.pyenv/versions/py33_Mao/</span><br><span class="line">rm -rf ~/.pyenv/versions/<span class="number">3.3</span>.<span class="number">2</span>/envs/py33_Mao</span><br><span class="line"><span class="comment"># &amp;#22914;&amp;#26524;&amp;#20197;&amp;#21518;&amp;#19981;&amp;#20877;&amp;#20351;&amp;#29992;&amp;#34394;&amp;#25311;&amp;#24320;&amp;#21457;&amp;#29615;&amp;#22659;, &amp;#21024;&amp;#38500;&amp;#29615;&amp;#22659;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ./Downloads</span><br><span class="line"><span class="comment"># 进入目录</span></span><br><span class="line"></span><br><span class="line">mkdir Mao &amp; <span class="built_in">cd</span> Mao</span><br><span class="line"><span class="comment"># 创建项目目录并进入</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 接下来有两种方法, 一种用 local 变量, 另一种用 virtualenv 方式</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># local 变量法</span></span><br><span class="line"></span><br><span class="line">pyenv <span class="built_in">local</span> <span class="number">3.5</span>.<span class="number">2</span> &amp; pip install package</span><br><span class="line"><span class="comment"># 进入 3.5.2 的环境, 并安装必要的软件包, 进行测试</span></span><br><span class="line"></span><br><span class="line">pyenv <span class="built_in">local</span> <span class="number">3.3</span>.<span class="number">2</span> &amp; pip install package</span><br><span class="line"><span class="comment"># 进入 3.3.2 的环境, 并安装必要的软件包, 进行测试</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># virtualenv 法</span></span><br><span class="line"></span><br><span class="line">pyenv virtualenv <span class="number">3.6</span>.<span class="number">0</span> py36_Mao</span><br><span class="line">pyenv virtualenv <span class="number">2.7</span>.<span class="number">13</span> py33_Mao</span><br><span class="line"><span class="comment"># 创建两个虚拟环境</span></span><br><span class="line"></span><br><span class="line">pyenv activate py35_Mao</span><br><span class="line"><span class="comment"># 进入 3.5 环境进行工作</span></span><br><span class="line"></span><br><span class="line">pyenv activate py33_Mao</span><br><span class="line">pyenv deactivate</span><br><span class="line"><span class="comment"># 进入 3.3 环境进行工作, 结束后离开虚拟环境</span></span><br><span class="line"></span><br><span class="line">rm -rf ~/.pyenv/versions/py35_Mao/</span><br><span class="line">rm -rf ~/.pyenv/versions/<span class="number">3.5</span>.<span class="number">2</span>/envs/py35_Mao</span><br><span class="line">rm -rf ~/.pyenv/versions/py33_Mao/</span><br><span class="line">rm -rf ~/.pyenv/versions/<span class="number">3.3</span>.<span class="number">2</span>/envs/py33_Mao</span><br><span class="line"><span class="comment"># 如果以后不再使用虚拟开发环境, 删除环境</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org83c1159" class="outline-2">
-<h2 id="org83c1159">参考资料</h2>
-<div class="outline-text-2" id="text-org83c1159">
+<div id="outline-container-org977f36c" class="outline-2">
+<h2 id="org977f36c">参考资料</h2>
+<div class="outline-text-2" id="text-org977f36c">
 <ul class="org-ul">
-<li><a href="https://github.com/pyenv/pyenv" target="_blank" rel="external">pyenv/pyenv: Simple Python version management</a></li>
-<li><a href="http://www.jianshu.com/p/a23448208d9a" target="_blank" rel="external">使用 pyenv 可以在一个系统中安装多个 python 版本 - 简书</a></li>
-<li><a href="https://github.com/pyenv/pyenv/blob/master/COMMANDS.md#command-reference" target="_blank" rel="external">pyenv/COMMANDS.md at master · pyenv/pyenv</a></li>
-<li><a href="http://www.cnblogs.com/blackmatrix/p/5591341.html" target="_blank" rel="external">在 macOS 上通过 pyenv 安装和切换多版本 Python - BlackMatrix - 博客园</a></li>
-<li><a href="http://www.jb51.net/article/109542.htm" target="_blank" rel="external">pyenv 命令管理多个 Python 版本<sub>python</sub><sub>脚本之家</sub></a></li>
-<li><a href="http://www.cnblogs.com/npumenglei/p/3719412.html" target="_blank" rel="external">用 pyenv 和 virtualenv 搭建单机多版本 python 虚拟开发环境 - 雷子-晓飞爸 - 博客园</a></li>
-<li><a href="https://ask.hellobi.com/blog/seng/3047" target="_blank" rel="external">使用 pyenv 安装多个 Python 版本 - 天善智能：专注于商业智能 BI 和数据分析、大数据领域的垂直社区平台</a></li>
-<li><a href="https://github.com/pyenv/pyenv-virtualenv" target="_blank" rel="external">pyenv/pyenv-virtualenv: a pyenv plugin to manage virtualenv (a.k.a. python-virtualenv)</a></li>
+<li><a href="https://github.com/pyenv/pyenv" target="_blank" rel="noopener">pyenv/pyenv: Simple Python version management</a></li>
+<li><a href="http://www.jianshu.com/p/a23448208d9a" target="_blank" rel="noopener">使用 pyenv 可以在一个系统中安装多个 python 版本 - 简书</a></li>
+<li><a href="https://github.com/pyenv/pyenv/blob/master/COMMANDS.md#command-reference" target="_blank" rel="noopener">pyenv/COMMANDS.md at master · pyenv/pyenv</a></li>
+<li><a href="http://www.cnblogs.com/blackmatrix/p/5591341.html" target="_blank" rel="noopener">在 macOS 上通过 pyenv 安装和切换多版本 Python - BlackMatrix - 博客园</a></li>
+<li><a href="http://www.jb51.net/article/109542.htm" target="_blank" rel="noopener">pyenv 命令管理多个 Python 版本<sub>python</sub><sub>脚本之家</sub></a></li>
+<li><a href="http://www.cnblogs.com/npumenglei/p/3719412.html" target="_blank" rel="noopener">用 pyenv 和 virtualenv 搭建单机多版本 python 虚拟开发环境 - 雷子-晓飞爸 - 博客园</a></li>
+<li><a href="https://ask.hellobi.com/blog/seng/3047" target="_blank" rel="noopener">使用 pyenv 安装多个 Python 版本 - 天善智能：专注于商业智能 BI 和数据分析、大数据领域的垂直社区平台</a></li>
+<li><a href="https://github.com/pyenv/pyenv-virtualenv" target="_blank" rel="noopener">pyenv/pyenv-virtualenv: a pyenv plugin to manage virtualenv (a.k.a. python-virtualenv)</a></li>
 </ul>
 </div>
 </div>
 
-Last Updated 2017-09-19 Tue 16:17 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.2.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 9.0.10)
+Last Updated 2017-09-19 Tue 16:17 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="noopener">hexo-renderer-org</a> with <a href="https://www.gnu.org/software/emacs/" target="_blank" rel="noopener">Emacs</a> 25.3.1 (<a href="http://orgmode.org" target="_blank" rel="noopener">Org</a> mode 9.1.2)
 
       
     </div>
@@ -579,16 +580,16 @@ Last Updated 2017-09-19 Tue 16:17 by lengyueyang<br>Render by <a href="https://g
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/09/数据科学-数学与统计-高等代数-n维向量空间K^n/" rel="next" title="数据科学-数学与统计-高等代数- n 维向量空间 n 维向量空间 \(k^n\)">
-                <i class="fa fa-chevron-left"></i> 数据科学-数学与统计-高等代数- n 维向量空间 n 维向量空间 \(k^n\)
+              <a href="/2017/09/05/数据科学-数学与统计-高等代数-行列式/" rel="next" title="数据科学-数学与统计-高等代数-行列式">
+                <i class="fa fa-chevron-left"></i> 数据科学-数学与统计-高等代数-行列式
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/09/05/数据科学-数学与统计-高等代数-行列式/" rel="prev" title="数据科学-数学与统计-高等代数-行列式">
-                数据科学-数学与统计-高等代数-行列式 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/10/09/数据科学-数学与统计-高等代数-n维向量空间K^n/" rel="prev" title="数据科学-数学与统计-高等代数- n 维向量空间 n 维向量空间 \(k^n\)">
+                数据科学-数学与统计-高等代数- n 维向量空间 n 维向量空间 \(k^n\) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -671,10 +672,10 @@ Last Updated 2017-09-19 Tue 16:17 by lengyueyang<br>Render by <a href="https://g
             
             
             <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">7</span>
+              
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
-              </a>
+              
             </div>
           
 
@@ -682,10 +683,10 @@ Last Updated 2017-09-19 Tue 16:17 by lengyueyang<br>Render by <a href="https://g
             
             
             <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">24</span>
+              
+                <span class="site-state-item-count">23</span>
                 <span class="site-state-item-name">标签</span>
-              </a>
+              
             </div>
           
 
@@ -794,7 +795,7 @@ Last Updated 2017-09-19 Tue 16:17 by lengyueyang<br>Render by <a href="https://g
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#org9c7a5be"><span class="nav-number">1.</span> <span class="nav-text">Pyenv 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orge77191f"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org67b2e10"><span class="nav-number">3.</span> <span class="nav-text">Pyenv 基本操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org16f4d8d"><span class="nav-number">4.</span> <span class="nav-text">安装不同版本 python</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org8e944c4"><span class="nav-number">5.</span> <span class="nav-text">Pyenv-virtualenv python 不同项目虚拟环境的搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org7341e32"><span class="nav-number">6.</span> <span class="nav-text">项目实践举例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org83c1159"><span class="nav-number">7.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#org026b707"><span class="nav-number">1.</span> <span class="nav-text">Pyenv 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orge2c61b1"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org63061bc"><span class="nav-number">3.</span> <span class="nav-text">Pyenv 基本操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org9fbe0e2"><span class="nav-number">4.</span> <span class="nav-text">安装不同版本 python</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org46a4805"><span class="nav-number">5.</span> <span class="nav-text">Pyenv-virtualenv python 不同项目虚拟环境的搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org7b31b33"><span class="nav-number">6.</span> <span class="nav-text">项目实践举例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org977f36c"><span class="nav-number">7.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
@@ -998,7 +999,7 @@ Last Updated 2017-09-19 Tue 16:17 by lengyueyang<br>Render by <a href="https://g
         }
       });
     </script>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

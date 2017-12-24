@@ -7,7 +7,7 @@
 
 <html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+  <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Org-mode,Emacs,GTD," />
+  <meta name="keywords" content="Emacs,Org-mode,GTD," />
 
 
 
@@ -90,12 +90,13 @@
 
 
 <meta name="description" content="写在前面   最近准备学习 R 和 Python 语言，比较了很多编辑器，最终选择了 Emacs，看到知乎上很多大神推荐 Spacemacs，准备用 Spacemacs 编写程序, 同时建立博客，记录学习过程。 首先接触了 Org-mode，用 org-mode 做时间管理，本文简述我用 org-mode 做时间管理的流程以及配置。 在用 org-mode 之前，应该有一些 Spacemacs">
-<meta name="keywords" content="Org-mode,Emacs,GTD">
+<meta name="keywords" content="Emacs,Org-mode,GTD">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Use org-mode to GTD [用 org-mode 做时间管理 ]">
 <meta property="og:url" content="http://lengyueyang.github.io/2016/02/28/Use org-mode to GTD/index.html">
 <meta property="og:site_name" content="深度识医">
 <meta property="og:description" content="写在前面   最近准备学习 R 和 Python 语言，比较了很多编辑器，最终选择了 Emacs，看到知乎上很多大神推荐 Spacemacs，准备用 Spacemacs 编写程序, 同时建立博客，记录学习过程。 首先接触了 Org-mode，用 org-mode 做时间管理，本文简述我用 org-mode 做时间管理的流程以及配置。 在用 org-mode 之前，应该有一些 Spacemacs">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-04-08T03:27:25.824Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Use org-mode to GTD [用 org-mode 做时间管理 ]">
@@ -133,7 +134,7 @@
 
 
 
-  <title> Use org-mode to GTD [用 org-mode 做时间管理 ] | 深度识医 </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> Use org-mode to GTD [用 org-mode 做时间管理 ] | 深度识医 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -144,7 +145,7 @@
 
 
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><script type="text/javascript">
+  <script type="text/javascript">
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
@@ -408,31 +409,32 @@
         
 
 
-<div id="outline-container-org4349128" class="outline-2">
-<h2 id="org4349128">写在前面</h2>
-<div class="outline-text-2" id="text-org4349128">
+<div id="outline-container-org5a22850" class="outline-2">
+<h2 id="org5a22850">写在前面</h2>
+<div class="outline-text-2" id="text-org5a22850">
 <ul class="org-ul">
 <li>最近准备学习 R 和 Python 语言，比较了很多编辑器，最终选择了 Emacs，看到知乎上很多大神推荐 Spacemacs，准备用 Spacemacs 编写程序, 同时建立博客，记录学习过程。</li>
 <li>首先接触了 Org-mode，用 org-mode 做时间管理，本文简述我用 org-mode 做时间管理的流程以及配置。</li>
-<li>在用 org-mode 之前，应该有一些 Spacemacs 及 Org-mode 的使用经验（参见<a href="https://github.com/syl20bnr/spacemacs/blob/master/layers/org/README.org#element-insertion" target="_blank" rel="external">pacemacs Keybinding</a>和<a href="http://www.gnu.org/software/emacs/manual/html_mono/org.html#Outlines" target="_blank" rel="external">Org Mode Manual</a>)。</li>
+<li>在用 org-mode 之前，应该有一些 Spacemacs 及 Org-mode 的使用经验（参见<a href="https://github.com/syl20bnr/spacemacs/blob/master/layers/org/README.org#element-insertion" target="_blank" rel="noopener">pacemacs Keybinding</a>和<a href="http://www.gnu.org/software/emacs/manual/html_mono/org.html#Outlines" target="_blank" rel="noopener">Org Mode Manual</a>)。</li>
 </ul>
 
 <a id="more"></a>
 </div>
 </div>
 
-<div id="outline-container-orgf00594e" class="outline-2">
-<h2 id="orgf00594e">我的 org-mode 工作流程</h2>
-<div class="outline-text-2" id="text-orgf00594e">
-</div><div id="outline-container-org1df1b30" class="outline-3">
-<h3 id="org1df1b30">建立自己的 GTD 文件</h3>
-<div class="outline-text-3" id="text-org1df1b30">
+<div id="outline-container-orgd8d90a7" class="outline-2">
+<h2 id="orgd8d90a7">我的 org-mode 工作流程</h2>
+<div class="outline-text-2" id="text-orgd8d90a7">
+</div>
+<div id="outline-container-org4dd0994" class="outline-3">
+<h3 id="org4dd0994">建立自己的 GTD 文件</h3>
+<div class="outline-text-3" id="text-org4dd0994">
 <p>
 可以参照<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup><sup>, </sup><sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>,我自己的 org 大纲如下：
 </p>
 
 <div class="org-src-container">
-<figure class="highlight r"><table><tr><td class="code"><pre><span class="line"><span class="comment">#+STARTUP: overview</span></span><br><span class="line"><span class="comment">#+TAGS: INFORMATICS(i) STATISTICS(s) COMPUTER(c) READING(r) PRIVATE(p) EMACS(e) MEETING(m) BLOG(g) LIFE(l)</span></span><br><span class="line"><span class="comment">#+STARTUP: hidestars</span></span><br><span class="line">* TASKS</span><br><span class="line">:PROPERTIES:</span><br><span class="line">:CATEGORY: Tasks</span><br><span class="line">:END:</span><br><span class="line"><span class="comment"># For one tasks</span></span><br><span class="line">** Spacemacs                                                          :EMACS:</span><br><span class="line">** Org-mode                                                           :EMACS:</span><br><span class="line">** Python                                                       :INFORMATICS:</span><br><span class="line">** R language                                                    :STATISTICS:</span><br><span class="line">** Reading                                                          :READING:</span><br><span class="line">* Calendar</span><br><span class="line">:PROPERTIES:</span><br><span class="line">:CATEGORY: Calendar</span><br><span class="line">:END:</span><br><span class="line"><span class="comment"># For appointments</span></span><br><span class="line">** Daily Tasks</span><br><span class="line">** Inbox</span><br><span class="line">** Quick Notes</span><br><span class="line">** Blog Ideas                                                         :BLOG:</span><br><span class="line">** <span class="number">2016</span>                                                            :PRIVATE:</span><br><span class="line">* Projects</span><br><span class="line">:PROPERTIES:</span><br><span class="line">:CATEGORY: Projects</span><br><span class="line">:END:</span><br><span class="line"><span class="comment"># With each project under it-each having their tasks (and subtasks) benath</span></span><br><span class="line">* Someday/Maybe</span><br><span class="line">:PROPERTIES:</span><br><span class="line">:CATEGORY: Someday/Maybe</span><br><span class="line">:END:</span><br><span class="line"><span class="comment"># For tasks that may be doon at some point</span></span><br><span class="line">** Computer System                                                :COMPUTER:</span><br><span class="line">*** Tiling window manager</span><br><span class="line">Awesome-Lua/Qtile-Python/i3-C written</span><br><span class="line">* Financial</span><br><span class="line">:PROPERTIES:</span><br><span class="line">:CATEGORY: Financial</span><br><span class="line">:END:</span><br><span class="line"><span class="comment"># For all tasks related to money, bills, salart, band and so on.</span></span><br><span class="line">* Habits</span><br><span class="line">:PROPERTIES:</span><br><span class="line">:CATEGORY: Habits</span><br><span class="line">:ARCHIVE_TIME: <span class="number">2016</span>-<span class="number">01</span>-<span class="number">06</span> Wed <span class="number">00</span>:<span class="number">11</span></span><br><span class="line">:ARCHIVE_FILE: ~/Emacs-lengyue/GTD-lengyue/GTD-lengyue.org</span><br><span class="line">:ARCHIVE_CATEGORY: Habits</span><br><span class="line">:END:</span><br><span class="line"><span class="comment"># For all the recurring tasks I want to keep to doing, and track with org-habit model.</span></span><br><span class="line">, ** Myself habits                                                   :PRIVATE:</span><br><span class="line">, *** Exercise                                                                </span><br><span class="line">**** TODO First <span class="keyword">for</span> six-pack abs</span><br><span class="line">** GTD refile                                                      :PRIVATE:</span><br><span class="line">*** TODO The Schedule of Monthly</span><br><span class="line">SCHEDULED: &amp;lt;<span class="number">2016</span>-<span class="number">03</span>-<span class="number">01</span> Tue <span class="number">22</span>:<span class="number">00</span> +1m&amp;gt;</span><br><span class="line">:PROPERTIES:</span><br><span class="line">:LAST_REPEAT: [<span class="number">2016</span>-<span class="number">02</span>-<span class="number">16</span> Tue <span class="number">00</span>:<span class="number">13</span>]</span><br><span class="line">:END:</span><br><span class="line">:LOGBOOK:</span><br><span class="line">- State <span class="string">"DONE"</span>       from <span class="string">"TODO"</span>       [<span class="number">2016</span>-<span class="number">02</span>-<span class="number">16</span> Tue <span class="number">00</span>:<span class="number">13</span>]</span><br><span class="line">:END:</span><br><span class="line">*** TODO Review Monthly </span><br><span class="line">SCHEDULED: &amp;lt;<span class="number">2016</span>-<span class="number">03</span>-<span class="number">02</span> Wed <span class="number">22</span>:<span class="number">10</span> +1m&amp;gt;</span><br><span class="line">:PROPERTIES:</span><br><span class="line">:LAST_REPEAT: [<span class="number">2016</span>-<span class="number">01</span>-<span class="number">31</span> Sun <span class="number">23</span>:<span class="number">40</span>]</span><br><span class="line">:END:</span><br><span class="line">:LOGBOOK:</span><br><span class="line">- State <span class="string">"CANCELLED"</span>  from <span class="string">"TODO"</span>       [<span class="number">2016</span>-<span class="number">01</span>-<span class="number">31</span> Sun <span class="number">23</span>:<span class="number">40</span>]</span><br><span class="line">:END:</span><br><span class="line">*** TODO Review Weekly</span><br><span class="line">:LOGBOOK:</span><br><span class="line">- State <span class="string">"DONE"</span>       from <span class="string">"TODO"</span>       [<span class="number">2016</span>-<span class="number">02</span>-<span class="number">21</span> Sun <span class="number">21</span>:<span class="number">56</span>]</span><br><span class="line">- State <span class="string">"CANCELLED"</span>  from <span class="string">"TODO"</span>       [<span class="number">2016</span>-<span class="number">02</span>-<span class="number">14</span> Sun <span class="number">20</span>:<span class="number">42</span>]</span><br><span class="line">- State <span class="string">"CANCELLED"</span>  from <span class="string">"TODO"</span>       [<span class="number">2016</span>-<span class="number">02</span>-<span class="number">11</span> Thu <span class="number">09</span>:<span class="number">59</span>]</span><br><span class="line">- State <span class="string">"CANCELLED"</span>  from <span class="string">"TODO"</span>       [<span class="number">2016</span>-<span class="number">01</span>-<span class="number">31</span> Sun <span class="number">23</span>:<span class="number">40</span>]</span><br><span class="line">- State <span class="string">"CANCELLED"</span>  from <span class="string">"TODO"</span>       [<span class="number">2016</span>-<span class="number">01</span>-<span class="number">25</span> Mon <span class="number">22</span>:<span class="number">20</span>]</span><br><span class="line">- State <span class="string">"CANCELLED"</span>  from <span class="string">"TODO"</span>       [<span class="number">2016</span>-<span class="number">01</span>-<span class="number">13</span> Wed <span class="number">20</span>:<span class="number">34</span>]</span><br><span class="line">- State <span class="string">"CANCELLED"</span>  from <span class="string">"TODO"</span>       [<span class="number">2016</span>-<span class="number">01</span>-<span class="number">13</span> Wed <span class="number">20</span>:<span class="number">34</span>]</span><br><span class="line">CLOCK: [<span class="number">2016</span>-<span class="number">01</span>-<span class="number">04</span> Mon <span class="number">23</span>:<span class="number">03</span>]--[<span class="number">2016</span>-<span class="number">01</span>-<span class="number">05</span> Tue <span class="number">20</span>:<span class="number">34</span>] =&amp;gt; <span class="number">21</span>:<span class="number">31</span></span><br><span class="line">- State <span class="string">"CANCELLED"</span>  from <span class="string">"TODO"</span>       [<span class="number">2016</span>-<span class="number">01</span>-<span class="number">04</span> Mon <span class="number">22</span>:<span class="number">41</span>]</span><br><span class="line">:END:</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#+STARTUP: overview</span></span><br><span class="line"><span class="comment">#+TAGS: INFORMATICS(i) STATISTICS(s) COMPUTER(c) READING(r) PRIVATE(p) EMACS(e) MEETING(m) BLOG(g) LIFE(l)</span></span><br><span class="line"><span class="comment">#+STARTUP: hidestars</span></span><br><span class="line">* TASKS</span><br><span class="line">:PROPERTIES:</span><br><span class="line">:CATEGORY: Tasks</span><br><span class="line">:END:</span><br><span class="line"><span class="comment"># For one tasks</span></span><br><span class="line">** Spacemacs                                                          :EMACS:</span><br><span class="line">** Org-mode                                                           :EMACS:</span><br><span class="line">** Python                                                       :INFORMATICS:</span><br><span class="line">** R language                                                    :STATISTICS:</span><br><span class="line">** Reading                                                          :READING:</span><br><span class="line">* Calendar</span><br><span class="line">:PROPERTIES:</span><br><span class="line">:CATEGORY: Calendar</span><br><span class="line">:END:</span><br><span class="line"><span class="comment"># For appointments</span></span><br><span class="line">** Daily Tasks</span><br><span class="line">** Inbox</span><br><span class="line">** Quick Notes</span><br><span class="line">** Blog Ideas                                                         :BLOG:</span><br><span class="line">** <span class="number">2016</span>                                                            :PRIVATE:</span><br><span class="line">* Projects</span><br><span class="line">:PROPERTIES:</span><br><span class="line">:CATEGORY: Projects</span><br><span class="line">:END:</span><br><span class="line"><span class="comment"># With each project under it-each having their tasks (and subtasks) benath</span></span><br><span class="line">* Someday/Maybe</span><br><span class="line">:PROPERTIES:</span><br><span class="line">:CATEGORY: Someday/Maybe</span><br><span class="line">:END:</span><br><span class="line"><span class="comment"># For tasks that may be doon at some point</span></span><br><span class="line">** Computer System                                                :COMPUTER:</span><br><span class="line">*** Tiling window manager</span><br><span class="line">Awesome-Lua/Qtile-Python/i3-C written</span><br><span class="line">* Financial</span><br><span class="line">:PROPERTIES:</span><br><span class="line">:CATEGORY: Financial</span><br><span class="line">:END:</span><br><span class="line"><span class="comment"># For all tasks related to money, bills, salart, band and so on.</span></span><br><span class="line">* Habits</span><br><span class="line">:PROPERTIES:</span><br><span class="line">:CATEGORY: Habits</span><br><span class="line">:ARCHIVE_TIME: <span class="number">2016</span>-<span class="number">01</span>-<span class="number">06</span> Wed <span class="number">00</span>:<span class="number">11</span></span><br><span class="line">:ARCHIVE_FILE: ~/Emacs-lengyue/GTD-lengyue/GTD-lengyue.org</span><br><span class="line">:ARCHIVE_CATEGORY: Habits</span><br><span class="line">:END:</span><br><span class="line"><span class="comment"># For all the recurring tasks I want to keep to doing, and track with org-habit model.</span></span><br><span class="line">, ** Myself habits                                                   :PRIVATE:</span><br><span class="line">, *** Exercise                                                                </span><br><span class="line">**** TODO First <span class="keyword">for</span> six-pack abs</span><br><span class="line">** GTD refile                                                      :PRIVATE:</span><br><span class="line">*** TODO The Schedule of Monthly</span><br><span class="line">SCHEDULED: &lt;<span class="number">2016</span>-<span class="number">03</span>-<span class="number">01</span> Tue <span class="number">22</span>:<span class="number">00</span> +1m&gt;</span><br><span class="line">:PROPERTIES:</span><br><span class="line">:LAST_REPEAT: [<span class="number">2016</span>-<span class="number">02</span>-<span class="number">16</span> Tue <span class="number">00</span>:<span class="number">13</span>]</span><br><span class="line">:END:</span><br><span class="line">:LOGBOOK:</span><br><span class="line">- State <span class="string">"DONE"</span>       from <span class="string">"TODO"</span>       [<span class="number">2016</span>-<span class="number">02</span>-<span class="number">16</span> Tue <span class="number">00</span>:<span class="number">13</span>]</span><br><span class="line">:END:</span><br><span class="line">*** TODO Review Monthly </span><br><span class="line">SCHEDULED: &lt;<span class="number">2016</span>-<span class="number">03</span>-<span class="number">02</span> Wed <span class="number">22</span>:<span class="number">10</span> +1m&gt;</span><br><span class="line">:PROPERTIES:</span><br><span class="line">:LAST_REPEAT: [<span class="number">2016</span>-<span class="number">01</span>-<span class="number">31</span> Sun <span class="number">23</span>:<span class="number">40</span>]</span><br><span class="line">:END:</span><br><span class="line">:LOGBOOK:</span><br><span class="line">- State <span class="string">"CANCELLED"</span>  from <span class="string">"TODO"</span>       [<span class="number">2016</span>-<span class="number">01</span>-<span class="number">31</span> Sun <span class="number">23</span>:<span class="number">40</span>]</span><br><span class="line">:END:</span><br><span class="line">*** TODO Review Weekly</span><br><span class="line">:LOGBOOK:</span><br><span class="line">- State <span class="string">"DONE"</span>       from <span class="string">"TODO"</span>       [<span class="number">2016</span>-<span class="number">02</span>-<span class="number">21</span> Sun <span class="number">21</span>:<span class="number">56</span>]</span><br><span class="line">- State <span class="string">"CANCELLED"</span>  from <span class="string">"TODO"</span>       [<span class="number">2016</span>-<span class="number">02</span>-<span class="number">14</span> Sun <span class="number">20</span>:<span class="number">42</span>]</span><br><span class="line">- State <span class="string">"CANCELLED"</span>  from <span class="string">"TODO"</span>       [<span class="number">2016</span>-<span class="number">02</span>-<span class="number">11</span> Thu <span class="number">09</span>:<span class="number">59</span>]</span><br><span class="line">- State <span class="string">"CANCELLED"</span>  from <span class="string">"TODO"</span>       [<span class="number">2016</span>-<span class="number">01</span>-<span class="number">31</span> Sun <span class="number">23</span>:<span class="number">40</span>]</span><br><span class="line">- State <span class="string">"CANCELLED"</span>  from <span class="string">"TODO"</span>       [<span class="number">2016</span>-<span class="number">01</span>-<span class="number">25</span> Mon <span class="number">22</span>:<span class="number">20</span>]</span><br><span class="line">- State <span class="string">"CANCELLED"</span>  from <span class="string">"TODO"</span>       [<span class="number">2016</span>-<span class="number">01</span>-<span class="number">13</span> Wed <span class="number">20</span>:<span class="number">34</span>]</span><br><span class="line">- State <span class="string">"CANCELLED"</span>  from <span class="string">"TODO"</span>       [<span class="number">2016</span>-<span class="number">01</span>-<span class="number">13</span> Wed <span class="number">20</span>:<span class="number">34</span>]</span><br><span class="line">CLOCK: [<span class="number">2016</span>-<span class="number">01</span>-<span class="number">04</span> Mon <span class="number">23</span>:<span class="number">03</span>]--[<span class="number">2016</span>-<span class="number">01</span>-<span class="number">05</span> Tue <span class="number">20</span>:<span class="number">34</span>] =&gt; <span class="number">21</span>:<span class="number">31</span></span><br><span class="line">- State <span class="string">"CANCELLED"</span>  from <span class="string">"TODO"</span>       [<span class="number">2016</span>-<span class="number">01</span>-<span class="number">04</span> Mon <span class="number">22</span>:<span class="number">41</span>]</span><br><span class="line">:END:</span><br></pre></td></tr></table></figure>
 </div>
 
 <ul class="org-ul">
@@ -446,14 +448,15 @@
 </div>
 </div>
 
-<div id="outline-container-org58fb41b" class="outline-3">
-<h3 id="org58fb41b">设置每个任务的状态，tags 和 priorities</h3>
-<div class="outline-text-3" id="text-org58fb41b">
-</div><div id="outline-container-org09a529c" class="outline-4">
-<h4 id="org09a529c">设置任务状态，我用以下 todo tiems，参考<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup></h4>
-<div class="outline-text-4" id="text-org09a529c">
+<div id="outline-container-orgca9d772" class="outline-3">
+<h3 id="orgca9d772">设置每个任务的状态，tags 和 priorities</h3>
+<div class="outline-text-3" id="text-orgca9d772">
+</div>
+<div id="outline-container-orgbe6b000" class="outline-4">
+<h4 id="orgbe6b000">设置任务状态，我用以下 todo tiems，参考<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup></h4>
+<div class="outline-text-4" id="text-orgbe6b000">
 <div class="org-src-container">
-<figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line"><span class="list">(<span class="keyword">sequence</span> <span class="string">"TODO(t)"</span> <span class="string">"NEXT(n)"</span> <span class="string">"|"</span>  <span class="string">"DONE(d)"</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">sequence</span> <span class="string">"WAITING(w@/!)"</span> <span class="string">"SOMEDAY(s)"</span> <span class="string">"|"</span> <span class="string">"HOLD(h@/!)"</span> <span class="string">"CANCELLED(c@/!)"</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">sequence</span> <span class="string">"INBOX(i)"</span> <span class="string">"|"</span> <span class="string">"NOTE(e)"</span> <span class="string">"PHONE(p)"</span> <span class="string">"MEETING(m)"</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">sequence</span> <span class="string">"REPORT(r)"</span> <span class="string">"BUG(b)"</span> <span class="string">"KNOWNCAUSE(k)"</span> <span class="string">"|"</span> <span class="string">"FIXED(f)"</span>)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="list">(<span class="keyword">sequence</span> <span class="string">"TODO(t)"</span> <span class="string">"NEXT(n)"</span> <span class="string">"|"</span>  <span class="string">"DONE(d)"</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">sequence</span> <span class="string">"WAITING(w@/!)"</span> <span class="string">"SOMEDAY(s)"</span> <span class="string">"|"</span> <span class="string">"HOLD(h@/!)"</span> <span class="string">"CANCELLED(c@/!)"</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">sequence</span> <span class="string">"INBOX(i)"</span> <span class="string">"|"</span> <span class="string">"NOTE(e)"</span> <span class="string">"PHONE(p)"</span> <span class="string">"MEETING(m)"</span>)</span></span><br><span class="line"><span class="list">(<span class="keyword">sequence</span> <span class="string">"REPORT(r)"</span> <span class="string">"BUG(b)"</span> <span class="string">"KNOWNCAUSE(k)"</span> <span class="string">"|"</span> <span class="string">"FIXED(f)"</span>)</span></span><br></pre></td></tr></table></figure>
 </div>
 <ul class="org-ul">
 <li>每个 TODO 任务有 TODO 和 DONE 两种状态，NEXT 只出现在 Project 中</li>
@@ -466,19 +469,19 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org23ecc47" class="outline-3">
-<h3 id="org23ecc47">设置任务时间，计划和截止时间</h3>
-<div class="outline-text-3" id="text-org23ecc47">
+<div id="outline-container-org6cc5109" class="outline-3">
+<h3 id="org6cc5109">设置任务时间，计划和截止时间</h3>
+<div class="outline-text-3" id="text-org6cc5109">
 <p>
 详情可见<sup><a id="fnr.4" class="footref" href="#fn.4">4</a></sup>
 </p>
 </div>
 </div>
-<div id="outline-container-org5ac164a" class="outline-3">
-<h3 id="org5ac164a">执行计划，必要时记录每个任务的时间</h3>
+<div id="outline-container-org99b778d" class="outline-3">
+<h3 id="org99b778d">执行计划，必要时记录每个任务的时间</h3>
 </div>
-<div id="outline-container-org3c56979" class="outline-3">
-<h3 id="org3c56979">周回顾</h3>
+<div id="outline-container-orgcef4505" class="outline-3">
+<h3 id="orgcef4505">周回顾</h3>
 </div>
 </div>
 <div id="footnotes">
@@ -486,25 +489,25 @@
 <div id="text-footnotes">
 
 <div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
-<a href="http://orgmode.org/worg/org-gtd-etc.html" target="_blank" rel="external">http://orgmode.org/worg/org-gtd-etc.html</a>
+<a href="http://orgmode.org/worg/org-gtd-etc.html" target="_blank" rel="noopener">http://orgmode.org/worg/org-gtd-etc.html</a>
 </p></div></div>
 
 <div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
-<a href="http://members.optusnet.com.au/~charles57/GTD/gtd_workflow.html" target="_blank" rel="external">http://members.optusnet.com.au/~charles57/GTD/gtd_workflow.html</a>
+<a href="http://members.optusnet.com.au/~charles57/GTD/gtd_workflow.html" target="_blank" rel="noopener">http://members.optusnet.com.au/~charles57/GTD/gtd_workflow.html</a>
 </p></div></div>
 
 <div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3">3</a></sup> <div class="footpara"><p class="footpara">
-<a href="http://doc.norang.ca/org-mode.html#HowToUseThisDocument" target="_blank" rel="external">http://doc.norang.ca/org-mode.html#HowToUseThisDocument</a>
+<a href="http://doc.norang.ca/org-mode.html#HowToUseThisDocument" target="_blank" rel="noopener">http://doc.norang.ca/org-mode.html#HowToUseThisDocument</a>
 </p></div></div>
 
 <div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4">4</a></sup> <div class="footpara"><p class="footpara">
-<a href="http://orgmode.org/manual/Dates-and-times.html#Dates-and-times" target="_blank" rel="external">http://orgmode.org/manual/Dates-and-times.html#Dates-and-times</a>
+<a href="http://orgmode.org/manual/Dates-and-times.html#Dates-and-times" target="_blank" rel="noopener">http://orgmode.org/manual/Dates-and-times.html#Dates-and-times</a>
 </p></div></div>
 
 
 </div>
 </div>
-Last Updated 2017-04-08 Sat 11:27 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.2.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 9.0.7)
+Last Updated 2017-04-08 Sat 11:27 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="noopener">hexo-renderer-org</a> with <a href="https://www.gnu.org/software/emacs/" target="_blank" rel="noopener">Emacs</a> 25.3.1 (<a href="http://orgmode.org" target="_blank" rel="noopener">Org</a> mode 9.1.2)
 
       
     </div>
@@ -553,9 +556,9 @@ Last Updated 2017-04-08 Sat 11:27 by lengyueyang<br>Render by <a href="https://g
       
         <div class="post-tags">
           
-            <a href="/tags/Org-mode/" rel="tag">#Org-mode</a>
-          
             <a href="/tags/Emacs/" rel="tag">#Emacs</a>
+          
+            <a href="/tags/Org-mode/" rel="tag">#Org-mode</a>
           
             <a href="/tags/GTD/" rel="tag">#GTD</a>
           
@@ -566,16 +569,16 @@ Last Updated 2017-04-08 Sat 11:27 by lengyueyang<br>Render by <a href="https://g
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/04/Use org-mode to make presentation/" rel="next" title="Use org-mode to make slide [用 org-mode 做幻灯]">
-                <i class="fa fa-chevron-left"></i> Use org-mode to make slide [用 org-mode 做幻灯]
+              <a href="/2016/02/14/Spacemacs Learning/" rel="next" title="Spacemacs Learning [Spacemacs 学习]">
+                <i class="fa fa-chevron-left"></i> Spacemacs Learning [Spacemacs 学习]
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/02/14/Spacemacs Learning/" rel="prev" title="Spacemacs Learning [Spacemacs 学习]">
-                Spacemacs Learning [Spacemacs 学习] <i class="fa fa-chevron-right"></i>
+              <a href="/2016/03/04/Use org-mode to make presentation/" rel="prev" title="Use org-mode to make slide [用 org-mode 做幻灯]">
+                Use org-mode to make slide [用 org-mode 做幻灯] <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -658,10 +661,10 @@ Last Updated 2017-04-08 Sat 11:27 by lengyueyang<br>Render by <a href="https://g
             
             
             <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">7</span>
+              
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
-              </a>
+              
             </div>
           
 
@@ -669,10 +672,10 @@ Last Updated 2017-04-08 Sat 11:27 by lengyueyang<br>Render by <a href="https://g
             
             
             <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">24</span>
+              
+                <span class="site-state-item-count">23</span>
                 <span class="site-state-item-name">标签</span>
-              </a>
+              
             </div>
           
 
@@ -781,7 +784,7 @@ Last Updated 2017-04-08 Sat 11:27 by lengyueyang<br>Render by <a href="https://g
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#org4349128"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orgf00594e"><span class="nav-number">2.</span> <span class="nav-text">我的 org-mode 工作流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org1df1b30"><span class="nav-number">2.1.</span> <span class="nav-text">建立自己的 GTD 文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org58fb41b"><span class="nav-number">2.2.</span> <span class="nav-text">设置每个任务的状态，tags 和 priorities</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#org09a529c"><span class="nav-number">2.2.1.</span> <span class="nav-text">设置任务状态，我用以下 todo tiems，参考3</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org23ecc47"><span class="nav-number">2.3.</span> <span class="nav-text">设置任务时间，计划和截止时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org5ac164a"><span class="nav-number">2.4.</span> <span class="nav-text">执行计划，必要时记录每个任务的时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org3c56979"><span class="nav-number">2.5.</span> <span class="nav-text">周回顾</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">Footnotes: </span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#org5a22850"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orgd8d90a7"><span class="nav-number">2.</span> <span class="nav-text">我的 org-mode 工作流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org4dd0994"><span class="nav-number">2.1.</span> <span class="nav-text">建立自己的 GTD 文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orgca9d772"><span class="nav-number">2.2.</span> <span class="nav-text">设置每个任务的状态，tags 和 priorities</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#orgbe6b000"><span class="nav-number">2.2.1.</span> <span class="nav-text">设置任务状态，我用以下 todo tiems，参考3</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org6cc5109"><span class="nav-number">2.3.</span> <span class="nav-text">设置任务时间，计划和截止时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org99b778d"><span class="nav-number">2.4.</span> <span class="nav-text">执行计划，必要时记录每个任务的时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orgcef4505"><span class="nav-number">2.5.</span> <span class="nav-text">周回顾</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">Footnotes: </span></a></li></ol></div>
             
 
           </div>
@@ -985,7 +988,7 @@ Last Updated 2017-04-08 Sat 11:27 by lengyueyang<br>Render by <a href="https://g
         }
       });
     </script>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

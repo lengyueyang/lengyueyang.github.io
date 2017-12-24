@@ -7,7 +7,7 @@
 
 <html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+  <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -96,6 +96,7 @@
 <meta property="og:url" content="http://lengyueyang.github.io/2017/08/07/数据科学-数学与统计-高等代数-线性方程组的解法/index.html">
 <meta property="og:site_name" content="深度识医">
 <meta property="og:description" content="概述   高等代数的学习部分用以下书籍    邱维声, (2010). 高等代数. : 清华大学出版社. Hom, R. A. (2014). 矩阵分析. : 机械工业出版社.  张贤达, (2013). 矩阵分析与应用. : 清华大学出版社.">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-08-07T14:16:17.741Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据科学-数学与统计-高等代数-线性方程组的解法">
@@ -133,7 +134,7 @@
 
 
 
-  <title> 数据科学-数学与统计-高等代数-线性方程组的解法 | 深度识医 </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> 数据科学-数学与统计-高等代数-线性方程组的解法 | 深度识医 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -144,7 +145,7 @@
 
 
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><script type="text/javascript">
+  <script type="text/javascript">
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
@@ -408,9 +409,9 @@
         
 
 
-<div id="outline-container-orgdeb5bf1" class="outline-2">
-<h2 id="orgdeb5bf1">概述</h2>
-<div class="outline-text-2" id="text-orgdeb5bf1">
+<div id="outline-container-orga5824f3" class="outline-2">
+<h2 id="orga5824f3">概述</h2>
+<div class="outline-text-2" id="text-orga5824f3">
 <p>
 高等代数的学习部分用以下书籍
 </p>
@@ -423,12 +424,13 @@ Hom, R. A. (2014). 矩阵分析. : 机械工业出版社.
 <a id="more"></a>
 </div>
 </div>
-<div id="outline-container-org9dcb325" class="outline-2">
-<h2 id="org9dcb325">线性方程组的解法</h2>
-<div class="outline-text-2" id="text-org9dcb325">
-</div><div id="outline-container-orgb2bf5b7" class="outline-3">
-<h3 id="orgb2bf5b7">解线性方差组的矩阵消元法</h3>
-<div class="outline-text-3" id="text-orgb2bf5b7">
+<div id="outline-container-orgc863b79" class="outline-2">
+<h2 id="orgc863b79">线性方程组的解法</h2>
+<div class="outline-text-2" id="text-orgc863b79">
+</div>
+<div id="outline-container-orgbcfc9ce" class="outline-3">
+<h3 id="orgbcfc9ce">解线性方差组的矩阵消元法</h3>
+<div class="outline-text-3" id="text-orgbcfc9ce">
 <p>
 左端都是未知量 \(x_1, x_2, \dots , x_n\) 的一次其次式，右端是常数的方程组称为线性方程组，每个未知量前面的数称为系数，右端的项称为常数项。为了书写简便，对于一个线性方程组，可以只写出它的系数和常数项，并且把它们按照原来的次序排成一张表，这张表称为线性方程组的 <b>增广矩阵</b> ，只列出系数的的表称为方程组的系数矩阵。
 </p>
@@ -448,7 +450,7 @@ Hom, R. A. (2014). 矩阵分析. : 机械工业出版社.
 \end{equation}
 
 <p>
-对于线性方程组(<a href="#orgb3b58b7">1</a>)，如果 \(x_1, x_2, \dots , x_n\) 分别用数 \(c_1, c_2, \dots , c_n\) 代入后，每个方程变成恒等式，称 n 元有序数组 \((c_1, c_2, \dots , c_n)\) 是线性方程组(<a href="#orgb3b58b7">1</a>) 的 <b>一个解</b> ，其所有解组成的集合称为这个方程组的 <b>解集</b> 。
+对于线性方程组(<a href="#orgc6587d2">1</a>)，如果 \(x_1, x_2, \dots , x_n\) 分别用数 \(c_1, c_2, \dots , c_n\) 代入后，每个方程变成恒等式，称 n 元有序数组 \((c_1, c_2, \dots , c_n)\) 是线性方程组(<a href="#orgc6587d2">1</a>) 的 <b>一个解</b> ，其所有解组成的集合称为这个方程组的 <b>解集</b> 。
 </p>
 
 <p>
@@ -486,14 +488,14 @@ Hom, R. A. (2014). 矩阵分析. : 机械工业出版社.
 </p>
 
 <div class="org-src-container">
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">digraph graphname {&#10;  graph [ dpi = 300 ]; &#10;  node [color=Blue, fontcolor=Blacd, fontsize=16, shape=box]&#10;&#10;  A [label=&#34;&#38;#32447;&#38;#24615;&#38;#26041;&#38;#31243;&#38;#32452;&#38;#30340;&#38;#22686;&#38;#24191;&#38;#30697;&#38;#38453;&#34;];&#10;  B [label = &#34;&#38;#38454;&#38;#26799;&#38;#22411;&#38;#30697;&#38;#38453;&#34;];&#10;  C [label = &#34;&#38;#20889;&#38;#20986;&#38;#38454;&#38;#26799;&#38;#22411;&#38;#26041;&#38;#31243;&#38;#32452;&#34;];&#10;  D [label = &#34;&#38;#31616;&#38;#21270;&#38;#34892;&#38;#38454;&#38;#26799;&#38;#24418;&#38;#30697;&#38;#38453;&#34;];&#10;  E [label = &#34;&#38;#27714;&#38;#35299;&#34;];&#10;  F [label = &#34;&#38;#20889;&#38;#20986;&#38;#35299;&#34;];&#10;&#10;  A -&#38;gt; B [label = &#34; &#38;#30697;&#38;#38453;&#38;#30340;&#38;#21021;&#38;#31561;&#38;#34892;&#38;#21464;&#38;#25442;&#34;];&#10;  B -&#38;gt; C [label = &#34; &#38;#25110;&#38;#32773;&#34;];&#10;  B -&#38;gt; D [label = &#34; &#38;#30697;&#38;#38453;&#38;#30340;&#38;#21021;&#38;#31561;&#38;#34892;&#38;#21464;&#38;#25442;&#34;];&#10;  C -&#38;gt; E;&#10;  D -&#38;gt; F;&#10;&#10;}&#10;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">digraph graphname {&#10;  graph [ dpi = 300 ]; &#10;  node [color=Blue, fontcolor=Blacd, fontsize=16, shape=box]&#10;&#10;  A [label=&#34;&#32447;&#24615;&#26041;&#31243;&#32452;&#30340;&#22686;&#24191;&#30697;&#38453;&#34;];&#10;  B [label = &#34;&#38454;&#26799;&#22411;&#30697;&#38453;&#34;];&#10;  C [label = &#34;&#20889;&#20986;&#38454;&#26799;&#22411;&#26041;&#31243;&#32452;&#34;];&#10;  D [label = &#34;&#31616;&#21270;&#34892;&#38454;&#26799;&#24418;&#30697;&#38453;&#34;];&#10;  E [label = &#34;&#27714;&#35299;&#34;];&#10;  F [label = &#34;&#20889;&#20986;&#35299;&#34;];&#10;&#10;  A -&#62; B [label = &#34; &#30697;&#38453;&#30340;&#21021;&#31561;&#34892;&#21464;&#25442;&#34;];&#10;  B -&#62; C [label = &#34; &#25110;&#32773;&#34;];&#10;  B -&#62; D [label = &#34; &#30697;&#38453;&#30340;&#21021;&#31561;&#34892;&#21464;&#25442;&#34;];&#10;  C -&#62; E;&#10;  D -&#62; F;&#10;&#10;}&#10;</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org5622ba0" class="outline-3">
-<h3 id="org5622ba0">线性方程组的解的情况及其判别准则</h3>
-<div class="outline-text-3" id="text-org5622ba0">
+<div id="outline-container-org0b68b4c" class="outline-3">
+<h3 id="org0b68b4c">线性方程组的解的情况及其判别准则</h3>
+<div class="outline-text-3" id="text-org0b68b4c">
 \begin{thm}[高斯(Gauss)-约当(Jordan)算法定理]
 \end{thm}
 <p>
@@ -518,14 +520,14 @@ n 元齐次线性方程组如果方程的数目 s 小于未知量的个数 n, �
 
 
 <div class="org-src-container">
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">digraph graphname {&#10;  graph [ dpi = 300 ]; &#10;  node [color=Blue, fontcolor=Blacd, fontsize=16, shape=box]&#10;&#10;  A [label=&#34;&#38;#32447;&#38;#24615;&#38;#26041;&#38;#31243;&#38;#32452;&#38;#30340;&#38;#22686;&#38;#24191;&#38;#30697;&#38;#38453;&#34;];&#10;  B [label = &#34;&#38;#38454;&#38;#26799;&#38;#22411;&#38;#30697;&#38;#38453;&#34;];&#10;  C [label = &#34;&#38;#30456;&#38;#24212;&#38;#30340;&#38;#38454;&#38;#26799;&#38;#22411;&#38;#26041;&#38;#31243;&#38;#32452;&#38;#20986;&#38;#29616; \n &#39;0=d(&#38;#20854;&#38;#20013; d &#38;#19981;&#38;#31561;&#38;#20110; 0)&#39;&#34;];&#10;  D [label = &#34;&#38;#21407;&#38;#26041;&#38;#31243;&#38;#32452;&#38;#26080;&#38;#35299;&#34;];&#10;  E [label = &#34;&#38;#21021;&#38;#31561;&#38;#34892;&#38;#21464;&#38;#25442;&#34;];&#10;  F [label = &#34;&#38;#31616;&#38;#21270;&#38;#34892;&#38;#38454;&#38;#26799;&#38;#22411;&#38;#30697;&#38;#38453;&#34;];&#10;  G [label = &#34;&#38;#38750;&#38;#38646;&#38;#34892;&#38;#25968;&#38;#30446;=&#38;#26410;&#38;#30693;&#38;#37327;&#38;#25968;&#38;#30446;?&#34;];&#10;  H [label = &#34;&#38;#21407;&#38;#26041;&#38;#31243;&#38;#32452;&#38;#26377;&#38;#21807;&#38;#19968;&#38;#35299; \n &#38;#21487;&#38;#31435;&#38;#21363;&#38;#20889;&#38;#20986;&#38;#35299;&#34;];&#10;  I [label = &#34;&#38;#26377;&#38;#26080;&#38;#32676;&#38;#22810;&#38;#20010;&#38;#35299;, \n &#38;#21487;&#38;#20889;&#38;#20986;&#38;#19968;&#38;#33324;&#38;#35299;&#34;];&#10;&#10;  A -&#38;gt; B [label = &#34; &#38;#30697;&#38;#38453;&#38;#30340;&#38;#21021;&#38;#31561;&#38;#34892;&#38;#21464;&#38;#25442;&#34;];&#10;  B -&#38;gt; C ;&#10;  B -&#38;gt; E;&#10;  C -&#38;gt; D [label = &#34; &#38;#26159;&#34;];&#10;  C -&#38;gt; E [label = &#34; &#38;#21542;&#34;];&#10;  E -&#38;gt; F;&#10;  F -&#38;gt; G;&#10;  G -&#38;gt; H [label = &#34; &#38;#26159;&#34;];&#10;  G -&#38;gt; I [label = &#34; &#38;#21542;&#34;];&#10;&#10;}&#10;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">digraph graphname {&#10;  graph [ dpi = 300 ]; &#10;  node [color=Blue, fontcolor=Blacd, fontsize=16, shape=box]&#10;&#10;  A [label=&#34;&#32447;&#24615;&#26041;&#31243;&#32452;&#30340;&#22686;&#24191;&#30697;&#38453;&#34;];&#10;  B [label = &#34;&#38454;&#26799;&#22411;&#30697;&#38453;&#34;];&#10;  C [label = &#34;&#30456;&#24212;&#30340;&#38454;&#26799;&#22411;&#26041;&#31243;&#32452;&#20986;&#29616; \n &#39;0=d(&#20854;&#20013; d &#19981;&#31561;&#20110; 0)&#39;&#34;];&#10;  D [label = &#34;&#21407;&#26041;&#31243;&#32452;&#26080;&#35299;&#34;];&#10;  E [label = &#34;&#21021;&#31561;&#34892;&#21464;&#25442;&#34;];&#10;  F [label = &#34;&#31616;&#21270;&#34892;&#38454;&#26799;&#22411;&#30697;&#38453;&#34;];&#10;  G [label = &#34;&#38750;&#38646;&#34892;&#25968;&#30446;=&#26410;&#30693;&#37327;&#25968;&#30446;?&#34;];&#10;  H [label = &#34;&#21407;&#26041;&#31243;&#32452;&#26377;&#21807;&#19968;&#35299; \n &#21487;&#31435;&#21363;&#20889;&#20986;&#35299;&#34;];&#10;  I [label = &#34;&#26377;&#26080;&#32676;&#22810;&#20010;&#35299;, \n &#21487;&#20889;&#20986;&#19968;&#33324;&#35299;&#34;];&#10;&#10;  A -&#62; B [label = &#34; &#30697;&#38453;&#30340;&#21021;&#31561;&#34892;&#21464;&#25442;&#34;];&#10;  B -&#62; C ;&#10;  B -&#62; E;&#10;  C -&#62; D [label = &#34; &#26159;&#34;];&#10;  C -&#62; E [label = &#34; &#21542;&#34;];&#10;  E -&#62; F;&#10;  F -&#62; G;&#10;  G -&#62; H [label = &#34; &#26159;&#34;];&#10;  G -&#62; I [label = &#34; &#21542;&#34;];&#10;&#10;}&#10;</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org8b214a6" class="outline-3">
-<h3 id="org8b214a6">数域</h3>
-<div class="outline-text-3" id="text-org8b214a6">
+<div id="outline-container-org3c4c4ea" class="outline-3">
+<h3 id="org3c4c4ea">数域</h3>
+<div class="outline-text-3" id="text-org3c4c4ea">
 \begin{de}[数域定义]
 \end{de}
 <p>
@@ -547,7 +549,7 @@ n 元齐次线性方程组如果方程的数目 s 小于未知量的个数 n, �
 </div>
 </div>
 
-Last Updated 2017-08-07 Mon 22:16 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="external">hexo-renderer-org</a> with <a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 25.2.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 9.0.9)
+Last Updated 2017-08-07 Mon 22:16 by lengyueyang<br>Render by <a href="https://github.com/CodeFalling/hexo-renderer-org" target="_blank" rel="noopener">hexo-renderer-org</a> with <a href="https://www.gnu.org/software/emacs/" target="_blank" rel="noopener">Emacs</a> 25.3.1 (<a href="http://orgmode.org" target="_blank" rel="noopener">Org</a> mode 9.1.2)
 
       
     </div>
@@ -605,16 +607,16 @@ Last Updated 2017-08-07 Mon 22:16 by lengyueyang<br>Render by <a href="https://g
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/05/数据科学-数学与统计-高等代数-行列式/" rel="next" title="数据科学-数学与统计-高等代数-行列式">
-                <i class="fa fa-chevron-left"></i> 数据科学-数学与统计-高等代数-行列式
+              <a href="/2017/05/29/数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布/" rel="next" title="数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布">
+                <i class="fa fa-chevron-left"></i> 数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/29/数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布/" rel="prev" title="数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布">
-                数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/09/05/数据科学-数学与统计-高等代数-行列式/" rel="prev" title="数据科学-数学与统计-高等代数-行列式">
+                数据科学-数学与统计-高等代数-行列式 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -697,10 +699,10 @@ Last Updated 2017-08-07 Mon 22:16 by lengyueyang<br>Render by <a href="https://g
             
             
             <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">7</span>
+              
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
-              </a>
+              
             </div>
           
 
@@ -708,10 +710,10 @@ Last Updated 2017-08-07 Mon 22:16 by lengyueyang<br>Render by <a href="https://g
             
             
             <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">24</span>
+              
+                <span class="site-state-item-count">23</span>
                 <span class="site-state-item-name">标签</span>
-              </a>
+              
             </div>
           
 
@@ -820,7 +822,7 @@ Last Updated 2017-08-07 Mon 22:16 by lengyueyang<br>Render by <a href="https://g
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#orgdeb5bf1"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org9dcb325"><span class="nav-number">2.</span> <span class="nav-text">线性方程组的解法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#orgb2bf5b7"><span class="nav-number">2.1.</span> <span class="nav-text">解线性方差组的矩阵消元法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org5622ba0"><span class="nav-number">2.2.</span> <span class="nav-text">线性方程组的解的情况及其判别准则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org8b214a6"><span class="nav-number">2.3.</span> <span class="nav-text">数域</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#orga5824f3"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orgc863b79"><span class="nav-number">2.</span> <span class="nav-text">线性方程组的解法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#orgbcfc9ce"><span class="nav-number">2.1.</span> <span class="nav-text">解线性方差组的矩阵消元法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org0b68b4c"><span class="nav-number">2.2.</span> <span class="nav-text">线性方程组的解的情况及其判别准则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org3c4c4ea"><span class="nav-number">2.3.</span> <span class="nav-text">数域</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1024,7 +1026,7 @@ Last Updated 2017-08-07 Mon 22:16 by lengyueyang<br>Render by <a href="https://g
         }
       });
     </script>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
