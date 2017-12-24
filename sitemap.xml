@@ -1,130 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <url>
-    <loc>http://lengyueyang.github.io/2017/12/11/Archlinux%20Shadowsocks%20%E9%85%8D%E7%BD%AE/</loc>
-    
-    <lastmod>2017-12-11T14:37:59.870Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lengyueyang.github.io/2017/10/09/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-n%E7%BB%B4%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4K%5En/</loc>
-    
-    <lastmod>2017-10-09T14:54:33.124Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lengyueyang.github.io/2017/09/05/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-%E8%A1%8C%E5%88%97%E5%BC%8F/</loc>
-    
-    <lastmod>2017-10-09T14:49:51.817Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lengyueyang.github.io/2017/09/19/Python-Pyenv%20%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/</loc>
-    
-    <lastmod>2017-09-19T08:17:11.857Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lengyueyang.github.io/2017/05/29/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81/</loc>
-    
-    <lastmod>2017-08-07T14:18:34.720Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lengyueyang.github.io/2017/08/07/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E7%9A%84%E8%A7%A3%E6%B3%95/</loc>
-    
-    <lastmod>2017-08-07T14:16:17.741Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lengyueyang.github.io/2017/05/29/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83/</loc>
-    
-    <lastmod>2017-07-10T05:28:52.817Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lengyueyang.github.io/2017/04/08/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%A6%82%E7%8E%87/</loc>
-    
-    <lastmod>2017-04-15T14:54:38.623Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lengyueyang.github.io/2017/03/26/A%20simple%20introduction%20of%20lengyueyang's%20spacemacs%20configration%5B%E4%B8%AA%E4%BA%BAspacemacs%E9%85%8D%E7%BD%AE%E7%AE%80%E4%BB%8B%5D/</loc>
-    
-    <lastmod>2017-04-08T03:29:11.333Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lengyueyang.github.io/2017/03/15/%E6%88%BF%E5%AD%90%EF%BC%8C%E5%8C%97%E4%BA%AC/</loc>
-    
-    <lastmod>2017-04-08T03:28:51.479Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lengyueyang.github.io/2017/02/26/Use%20Mu4e%20to%20manage%20email/</loc>
-    
-    <lastmod>2017-04-08T03:28:37.966Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lengyueyang.github.io/2016/04/23/Statistics%20in%20research%20article:%20Part%201,%20Univariate%20analysis/</loc>
-    
-    <lastmod>2017-04-08T03:28:08.798Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lengyueyang.github.io/2016/03/11/Blog%20with%20org-mode%20and%20github/</loc>
-    
-    <lastmod>2017-04-08T03:27:50.004Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lengyueyang.github.io/2016/02/28/Use%20org-mode%20to%20GTD/</loc>
-    
-    <lastmod>2017-04-08T03:27:25.824Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lengyueyang.github.io/2016/02/14/Spacemacs%20Learning/</loc>
-    
-    <lastmod>2017-04-08T03:27:21.960Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lengyueyang.github.io/2016/03/04/Use%20org-mode%20to%20make%20presentation/</loc>
-    
-    <lastmod>2017-04-08T03:27:12.574Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lengyueyang.github.io/2016/02/05/Archlinux%20install%20and%20configuration/</loc>
-    
-    <lastmod>2017-04-08T03:26:15.275Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lengyueyang.github.io/2016/01/30/Org-mode%20test/</loc>
-    
-    <lastmod>2017-04-08T03:13:53.532Z</lastmod>
-    
-  </url>
-  
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+ <url>
+  <loc>https://example.com/</loc>
+  <lastmod>2017-12-24T11:32:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/2016/</loc>
+  <lastmod>2017-12-24T11:32:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/2017/</loc>
+  <lastmod>2017-12-24T11:28:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/archive.html</loc>
+  <lastmod>2017-12-24T11:32:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/categories/</loc>
+  <lastmod>2017-12-24T11:32:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/categories/cat_emacs/</loc>
+  <lastmod>2017-12-24T11:32:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/categories/emacs/</loc>
+  <lastmod>2017-12-24T11:32:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/categories/org-mode/</loc>
+  <lastmod>2017-12-24T11:32:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/galleries/</loc>
+  <lastmod>2017-12-24T11:04:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/listings/</loc>
+  <lastmod>2017-12-24T11:04:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/posts/Org-mode%20test/</loc>
+  <lastmod>2017-12-24T11:32:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/posts/test/</loc>
+  <lastmod>2017-12-24T11:28:00Z</lastmod>
+ </url>
 </urlset>
