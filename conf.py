@@ -281,6 +281,13 @@ COMPILERS = {
     # "pandoc": ('.rst', '.md', '.txt'),
 }
 
+# Add the orgmode compiler to your COMPILERS dict.
+COMPILERS["orgmode"] = ('.org',)
+
+# Add org files to your POSTS, PAGES
+POSTS = POSTS + (("posts/*.org", "posts", "post.tmpl"),)
+PAGES = PAGES + (("stories/*.org", "stories", "story.tmpl"),)
+
 # Create by default posts in one file format?
 # Set to False for two-file posts, with separate metadata.
 # ONE_FILE_POSTS = True
@@ -639,7 +646,7 @@ REDIRECTIONS = []
 # For more details, read the manual:
 # https://getnikola.com/handbook.html#deploying-to-github
 # You will need to configure the deployment branch on GitHub.
-GITHUB_SOURCE_BRANCH = 'src'
+GITHUB_SOURCE_BRANCH = 'blog'
 GITHUB_DEPLOY_BRANCH = 'master'
 
 # The name of the remote where you wish to push to, using github_deploy.
