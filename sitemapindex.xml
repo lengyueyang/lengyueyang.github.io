@@ -19,14 +19,14 @@
  </sitemap>
  <sitemap>
   <loc>https://example.com/galleries/rss.xml</loc>
-  <lastmod>2017-12-24T11:04:00Z</lastmod>
+  <lastmod>2017-12-24T14:28:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://example.com/rss.xml</loc>
-  <lastmod>2017-12-24T11:32:00Z</lastmod>
+  <lastmod>2017-12-24T14:28:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://example.com/sitemap.xml</loc>
-  <lastmod>2017-12-24T11:32:00Z</lastmod>
+  <lastmod>2017-12-24T14:28:00Z</lastmod>
  </sitemap>
 </sitemapindex>
