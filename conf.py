@@ -17,16 +17,16 @@ import time
 
 
 # Data about this site
-BLOG_AUTHOR = "Mao Xiaowei"  # (translatable)
-BLOG_TITLE = "深度识医"  # (translatable)
+BLOG_AUTHOR = {"en": "lengyueyang", "zh_cn": "冷月阳"}  # (translatable)
+BLOG_TITLE ={"en": "Deep Medical", "zh_cn": "深度识医"}  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
-SITE_URL = "https://example.com/"
+SITE_URL = "https://lengyueyang.github.io/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://example.com/"
 BLOG_EMAIL = "maoxiaowei1988@qq.com"
-BLOG_DESCRIPTION = "This is a demo site for Nikola."  # (translatable)
+BLOG_DESCRIPTION = {"en": "Lengyueyang's Personal Blog.", "zh_cn": "冷月阳的个人博客"} # (translatable)
 
 # Nikola is multilingual!
 #
@@ -86,15 +86,14 @@ BLOG_DESCRIPTION = "This is a demo site for Nikola."  # (translatable)
 # in the default language will be shown instead.
 
 # What is the default language?
-DEFAULT_LANG = "zh_cn"
+DEFAULT_LANG = "en"
 
 # What other languages do you have?
 # The format is {"translationcode" : "path/to/translation" }
 # the path will be used as a prefix for the generated pages location
 TRANSLATIONS = {
     DEFAULT_LANG: "",
-    # Example for another language:
-    # "es": "./es",
+    "zh_cn": "./zh_cn",
 }
 
 # What will translated input files be named like?
@@ -138,10 +137,16 @@ NAVIGATION_LINKS = {
         ("/categories/", "Tags"),
         ("/rss.xml", "RSS feed"),
     ),
+    "zh_cn": (
+        ("/archive.html", "归档"),
+        ("/categories/", "标签云"),
+        ("/rss.xml", "RSS订阅"),
+    ),
+
 }
 
 # Name of the theme to use.
-THEME = "bootstrap3"
+THEME = "material-theme"
 
 # Primary color of your theme. This will be used to customize your theme and
 # auto-generate related colors in POSTS_SECTION_COLORS. Must be a HEX value.
@@ -182,17 +187,17 @@ THEME_COLOR = '#5670d4'
 #     )
 
 POSTS = (
+    ("posts/*.org", "posts", "post.tmpl"),
     ("posts/*.rst", "posts", "post.tmpl"),
     ("posts/*.md", "posts", "post.tmpl"),
     ("posts/*.txt", "posts", "post.tmpl"),
-    ("posts/*.org", "posts", "post.tmpl"),
     ("posts/*.html", "posts", "post.tmpl"),
 )
 PAGES = (
-    ("pages/*.rst", "pages", "page.tmpl"),
-    ("pages/*.md", "pages", "page.tmpl"),
+    ("pages/*.org", {"en": "pages", "zh_cn": "页面"}, "page.tmpl"),
+    ("pages/*.rst", {"en": "pages", "zh_cn": "页面"}, "page.tmpl"),
+    ("pages/*.md", {"en": "pages", "zh_cn": "页面"}, "page.tmpl"),
     ("pages/*.txt", "pages", "page.tmpl"),
-    ("stories/*.org", "stories", "story.tmpl"),
     ("pages/*.html", "pages", "page.tmpl"),
 )
 
@@ -902,7 +907,7 @@ IMAGE_FOLDERS = {'images': 'images'}
 # )
 
 # Show teasers (instead of full posts) in indexes? Defaults to False.
-# INDEX_TEASERS = False
+INDEX_TEASERS = True
 
 # HTML fragments with the Read more... links.
 # The following tags exist and are replaced for you:
@@ -982,12 +987,12 @@ RSS_COPYRIGHT_FORMATS = CONTENT_FOOTER_FORMATS
 # systems.  The following comment systems are supported by Nikola:
 #   disqus, facebook, googleplus, intensedebate, isso, livefyre, muut
 # You can leave this option blank to disable comments.
-COMMENT_SYSTEM = ""
+COMMENT_SYSTEM = "disqus"
 # And you also need to add your COMMENT_SYSTEM_ID which
 # depends on what comment system you use. The default is
 # "nikolademo" which is a test account for Disqus. More information
 # is in the manual.
-COMMENT_SYSTEM_ID = ""
+COMMENT_SYSTEM_ID = "lengyueyang"
 
 # Enable annotations using annotateit.org?
 # If set to False, you can still enable them for individual posts and pages
@@ -1140,7 +1145,7 @@ MARKDOWN_EXTENSIONS = ['markdown.extensions.fenced_code', 'markdown.extensions.c
 
 # Modify the number of Post per Index Page
 # Defaults to 10
-# INDEX_DISPLAY_POST_COUNT = 10
+INDEX_DISPLAY_POST_COUNT = 20
 
 # By default, Nikola generates RSS files for the website and for tags, and
 # links to it.  Set this to False to disable everything RSS-related.
@@ -1363,7 +1368,30 @@ UNSLUGIFY_TITLES = True
 
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
-GLOBAL_CONTEXT = {}
+GLOBAL_CONTEXT = {
+    'header_color': 'info',
+    # 'author_avatar': '/images/StreakyCobra.png',
+    # 'biography': BIOGRAPHY,
+    'use_pace': True,
+    'social_links': [
+    {
+        'bgcolor': "#F44336",
+        'icon': "<i class='fa fa-share-square'></i>"
+    },
+    {
+        "url": "https://github.com/lengyueyang",
+        "bgcolor": "#666666",
+        "color": "#fffff",
+        "icon": "<i class='fa fa-github-square'></i>",
+    },
+    {
+        "url": "https://www.linkedin.com/in/lengyueyang",
+        "bgcolor": "#3B5998",
+        "color": "#fffff",
+        "icon": "<i class='fa fa-linkedin-square'></i>",
+    },
+    ],
+}
 
 # Add functions here and they will be called with template
 # GLOBAL_CONTEXT as parameter when the template is about to be
