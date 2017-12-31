@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns#
+article: http://ogp.me/ns/article#
+" lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Python-Pyenv 使用方法总结 | 深度识医</title>
+<script src="../../../assets/js/pace.min.js"></script><link href="../../../assets/css/pace.css" rel="stylesheet">
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="../../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (zh_cn)" href="../../rss.xml">
+<link rel="canonical" href="https://lengyueyang.github.io/zh_cn/posts/python-pyenv-shi-yong-fang-fa-zong-jie/">
+<!--[if lt IE 9]>
+            <script src="../../../assets/js/html5shiv.min.js"></script>
+            <script src="../../../assets/js/respond.min.js"></script>
+        <![endif]--><meta name="author" content="lengyueyang">
+<link rel="prev" href="../spacemacs-learning/" title="Spacemacs Learning" type="text/html">
+<link rel="next" href="../org-mode-test/" title="Org-mode test" type="text/html">
+<meta property="og:site_name" content="深度识医">
+<meta property="og:title" content="Python-Pyenv 使用方法总结">
+<meta property="og:url" content="https://lengyueyang.github.io/zh_cn/posts/python-pyenv-shi-yong-fang-fa-zong-jie/">
+<meta property="og:description" content="Pyenv 简介
+
+
+在使用 python 进行编程时, 经常遇到多个编程环境共存问题. pyenv 可以很好的解决这个问题, 本教程根据是学习使用 pyenv 的记录.
+
+
+
+
+&lt;!–more–&gt;
+
+
+
+
+
+
+
+安装
+
+yaourt pyenv
+yaourt pyenv-virtualenv
+
+
+
+archlinux 系统安装上面命令直接安装, 其他版本可也从源中或者源代码安装.
+
+
+
+安装完成">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-12-31T19:26:52+08:00">
+<link rel="alternate" hreflang="en" href="../../../posts/python-pyenv-shi-yong-fang-fa-zong-jie/">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-info header-panel shadow-z-3" role="navigation"><div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-3">
+            <h1 class="title-blog">
+                <a href="https://lengyueyang.github.io/zh_cn/">
+                        <span id="blog-title">深度识医</span>
+                    </a>
+            </h1>
+          </div>
+          <div class="col-xs-9">
+            <a id="hamburger" class="btn btn-raised" href="javascript:void(0);" onclick="menuToggle();">☰</a>
+          </div>
+        </div>
+      </div>
+<!-- /.container-fluid -->
+</nav><div class="container-fluid main" id="content" role="main">
+        <div class="row">
+            <nav class="col-xs-12 col-sm-3 menu"><ul>
+<li class="withripple"><a href="../../../archive.html">Archive</a></li>
+                <li class="withripple"><a href="../../../categories/">Tags</a></li>
+                <li class="withripple"><a href="../../../rss.xml">RSS feed</a></li>
+
+                    
+                </ul>
+<ul>
+<li>            </li>
+<li><a href="https://lengyueyang.github.io/" rel="alternate" hreflang="en">English</a></li>
+
+                    
+                </ul></nav><div class="posts-material col-xs-12 col-sm-9">
+                <div class="col-xs-12 col-md-11 content-material">
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Python-Pyenv 使用方法总结</a></h1>
+<hr>
+<div class="metadata">
+            <span class="byline author vcard">
+                <a href=".">
+                        <img class="img-circle" src="../../../images/lengyueyang.png" alt="icon">
+                    lengyueyang
+                </a>
+            </span>
+            <span class="dateline">
+                <a href="." rel="bookmark"><i class="mdi-device-access-time"></i>
+                    <time class="published dt-published" datetime="2017-12-31T19:26:52+08:00" itemprop="datePublished" title="2017-12-31 19:26">2017-12-31 19:26</time></a>
+            </span>
+                <span class="commentline">            <a href="#disqus_thread" data-disqus-identifier="cache/posts/Python-Pyenv 使用方法总结.html">Comments</a>
+
+</span>
+        </div>
+        
+        <hr></header><div class="e-content entry-content" itemprop="articleBody text">
+    <div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">Pyenv 简介</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+在使用 python 进行编程时, 经常遇到多个编程环境共存问题. pyenv 可以很好的解决这个问题, 本教程根据是学习使用 pyenv 的记录.
+</p>
+
+<div class="export">
+<p>
+&lt;!–more–&gt;
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">安装</h2>
+<div class="outline-text-2" id="text-2">
+<div class="highlight"><pre><span></span>yaourt pyenv
+yaourt pyenv-virtualenv
+</pre></div>
+
+<p>
+archlinux 系统安装上面命令直接安装, 其他版本可也从源中或者源代码安装.
+</p>
+
+<p>
+安装完成后，pyenv 命令还没有加进系统的环境变量，需要将如下内容加到 ~/.zshrc 中，然后执行 source ~/.zshrc 
+</p>
+
+<div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PYENV_ROOT</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.pyenv"</span>
+<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$PYENV_ROOT</span><span class="s2">/bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
+<span class="nb">eval</span> <span class="s2">"</span><span class="k">$(</span>pyenv init -<span class="k">)</span><span class="s2">"</span>
+<span class="nb">eval</span> <span class="s2">"</span><span class="k">$(</span>pyenv virtualenv-init -<span class="k">)</span><span class="s2">"</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">Pyenv 基本操作</h2>
+<div class="outline-text-2" id="text-3">
+<div class="highlight"><pre><span></span>pyenv versions
+
+* system <span class="o">(</span><span class="nb">set</span> by /home/lengyue/.python-version<span class="o">)</span>
+<span class="m">2</span>.7.13
+<span class="m">3</span>.5.2
+<span class="c1"># 查看目前所有版本的 python</span>
+
+pyenv version
+<span class="c1"># 查看当前版本的 python</span>
+
+pyenv global system/3.5.2
+<span class="c1"># 设置全局的 python 环境</span>
+
+pyenv <span class="nb">local</span> system/3.5.2
+<span class="c1"># 设置局部的 python 环境, local 优先级高于 global</span>
+
+pyenv <span class="nb">local</span> --unset
+<span class="c1"># 重置 local 环境</span>
+
+pyenv shell system/3.5.2
+<span class="c1"># 设置 shell 的 python 环境, shell 环境又有限于 local</span>
+
+pyenv shell --unset
+<span class="c1"># 重置 shell python 环境</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">安装不同版本 python</h2>
+<div class="outline-text-2" id="text-4">
+<div class="highlight"><pre><span></span>pyenv install --list
+<span class="c1"># pyenv 支持的所有 python 列表</span>
+
+pyenv install <span class="m">3</span>.5.2
+<span class="c1"># 安装特定版本的 python</span>
+
+pyenv uninstall <span class="m">3</span>.5.2
+<span class="c1"># 卸载特定版本的 python</span>
+
+pyenv rehash
+<span class="c1"># refresh database</span>
+</pre></div>
+
+<p>
+安装特定版本 python 出现错误: 
+</p>
+
+<div class="highlight"><pre><span></span>ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib
+</pre></div>
+
+<p>
+按照下帖解决, 用如下命令
+</p>
+<ul class="org-ul">
+<li>
+<a href="https://stackoverflow.com/questions/43976068/compiling-python-via-pyenv-on-archlinux-but-missing-openssl">Compiling Python via Pyenv on Archlinux but missing OpenSSL - Stack Overflow</a>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="nv">CFLAGS</span><span class="o">=</span>-I/usr/include/openssl-1.0 <span class="se">\</span>
+<span class="nv">LDFLAGS</span><span class="o">=</span>-L/usr/lib64/openssl-1.0 <span class="se">\</span>
+pyenv install <span class="m">3</span>.5.2
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">Pyenv-virtualenv python 不同项目虚拟环境的搭建</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+利用 pyenv-virtualenv 就可以管理多个依赖库环境
+</p>
+
+<div class="highlight"><pre><span></span>pyenv virtualenv PYTHON_VERSION PROJECT_NAME
+<span class="c1"># 创建新的环境,位于 ~/.pyenv/versions/, 其中，PYTHON_VERSION 是具体的 Python 版本号，</span>
+<span class="c1"># 例如，3.6.0，PROJECT_NAME 是我们自定义的项目名称。比较好的实践方式是，</span>
+<span class="c1"># 在 PROJECT_NAME 也带上 Python 的版本号，以便于识别。现假设我们有 XDiff 这么一个项目，</span>
+<span class="c1"># 想针对 Python 2.7.13 和 Python 3.6.0 分别创建一个虚拟环境，那就可以依次执行如下命令。</span>
+
+pyenv virtualenv <span class="m">3</span>.6.0 py36_XDiff
+pyenv virtualenv <span class="m">2</span>.7.13 py27_XDiff
+
+pyenv virtualenvs
+<span class="c1"># 创建完成后，通过执行 pyenv virtualenvs 命令，就可以看到本地所有的项目环境</span>
+
+pyenv activate py36_XDiff
+<span class="c1"># 切换到新的环境</span>
+
+pyenv deactivate
+<span class="c1"># 退回到系统环境</span>
+
+pyenv uninstall py36_XDiff
+<span class="c1"># Removing the directories in $(pyenv root)/versions and</span>
+<span class="c1"># $(pyenv root)/versions/{version}/envs will delete the virtualenv</span>
+<span class="c1"># uninstall 的命令不能完全卸载完, 可以使用删除的方式</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6">项目实践举例</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+假设现在有一个项目同时尝试 python 3.5.2 和 3.3.2 进行编写, 流程如下.
+</p>
+
+<div class="highlight"><pre><span></span><span class="nb">cd</span> ./Downloads
+<span class="c1"># 进入目录</span>
+
+mkdir Mao <span class="p">&amp;</span> <span class="nb">cd</span> Mao
+<span class="c1"># 创建项目目录并进入</span>
+
+<span class="c1"># 接下来有两种方法, 一种用 local 变量, 另一种用 virtualenv 方式</span>
+
+<span class="c1"># local 变量法</span>
+
+pyenv <span class="nb">local</span> <span class="m">3</span>.5.2 <span class="p">&amp;</span> pip install package
+<span class="c1"># 进入 3.5.2 的环境, 并安装必要的软件包, 进行测试</span>
+
+pyenv <span class="nb">local</span> <span class="m">3</span>.3.2 <span class="p">&amp;</span> pip install package
+<span class="c1"># 进入 3.3.2 的环境, 并安装必要的软件包, 进行测试</span>
+
+<span class="c1"># virtualenv 法</span>
+
+pyenv virtualenv <span class="m">3</span>.6.0 py36_Mao
+pyenv virtualenv <span class="m">2</span>.7.13 py33_Mao
+<span class="c1"># 创建两个虚拟环境</span>
+
+pyenv activate py35_Mao
+<span class="c1"># 进入 3.5 环境进行工作</span>
+
+pyenv activate py33_Mao
+pyenv deactivate
+<span class="c1"># 进入 3.3 环境进行工作, 结束后离开虚拟环境</span>
+
+rm -rf ~/.pyenv/versions/py35_Mao/
+rm -rf ~/.pyenv/versions/3.5.2/envs/py35_Mao
+rm -rf ~/.pyenv/versions/py33_Mao/
+rm -rf ~/.pyenv/versions/3.3.2/envs/py33_Mao
+<span class="c1"># 如果以后不再使用虚拟开发环境, 删除环境</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7">参考资料</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>
+<a href="https://github.com/pyenv/pyenv">pyenv/pyenv: Simple Python version management</a>
+</li>
+<li>
+<a href="http://www.jianshu.com/p/a23448208d9a">使用 pyenv 可以在一个系统中安装多个 python 版本 - 简书</a>
+</li>
+<li>
+<a href="https://github.com/pyenv/pyenv/blob/master/COMMANDS.md#command-reference">pyenv/COMMANDS.md at master · pyenv/pyenv</a>
+</li>
+<li>
+<a href="http://www.cnblogs.com/blackmatrix/p/5591341.html">在 macOS 上通过 pyenv 安装和切换多版本 Python - BlackMatrix - 博客园</a>
+</li>
+<li>
+<a href="http://www.jb51.net/article/109542.htm">pyenv 命令管理多个 Python 版本<sub>python</sub><sub>脚本之家</sub></a>
+</li>
+<li>
+<a href="http://www.cnblogs.com/npumenglei/p/3719412.html">用 pyenv 和 virtualenv 搭建单机多版本 python 虚拟开发环境 - 雷子-晓飞爸 - 博客园</a>
+</li>
+<li>
+<a href="https://ask.hellobi.com/blog/seng/3047">使用 pyenv 安装多个 Python 版本 - 天善智能：专注于商业智能 BI 和数据分析、大数据领域的垂直社区平台</a>
+</li>
+<li>
+<a href="https://github.com/pyenv/pyenv-virtualenv">pyenv/pyenv-virtualenv: a pyenv plugin to manage virtualenv (a.k.a. python-virtualenv)</a>
+</li>
+</ul>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager">
+<li class="previous">
+                <a href="../spacemacs-learning/" rel="prev" title="Spacemacs Learning">前一篇</a>
+            </li>
+            <li class="next">
+                <a href="../org-mode-test/" rel="next" title="Org-mode test">后一篇</a>
+            </li>
+        </ul></nav></aside><section class="comments"><h2>
+<i class="mdi-communication-forum"></i>注释</h2>
+        <hr>
+<div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="lengyueyang",
+            disqus_url="https://lengyueyang.github.io/zh_cn/posts/python-pyenv-shi-yong-fang-fa-zong-jie/",
+        disqus_title="Python-Pyenv \u4f7f\u7528\u65b9\u6cd5\u603b\u7ed3",
+        disqus_identifier="cache/posts/Python-Pyenv 使用方法总结.html",
+        disqus_config = function () {
+            this.language = "zh_cn";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="lengyueyang";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+            </div>
+        </div>
+        <button class="btn btn-fab btn-raised btn-material-green btn-footer" data-toggle="modal" data-target="#footer-dialog">
+            <i class="mdi-communication-message"></i>
+        </button>
+        <div id="footer-dialog" class="modal fade" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">lengyueyang</h4>
+                <div>
+                    
+<img class="img-circle" style="float:left;margin:10px 20px 10px 0px;max-height:200px;" src="../../../images/lengyueyang.png"><p><u>Basic Medical, 8 years PHD, Do some research on Medical Data Scientist</u></p>
+
+<p>I am currently work on Medical Big Data analysis, learning Machine learning and deep learning.</p>
+<p><a href="http://spacemacs.org"><img src="https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg"></a></p>
+<p>
+
+                </p>
+</div>
+                <hr>
+</div>
+              <div class="modal-body">
+                    Contents © 2017         <a href="mailto:maoxiaowei1988@qq.com">lengyueyang</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+                    
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Ok</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="source-button">
+    <a class="btn btn-fab btn-raised btn-material-indigo" target="_blank" href="index.org" title="源代码">
+        <i class="mdi-file-cloud-download"></i>
+    </a>
+
+        </div>
+        <div class="kc_fab_wrapper"></div>
+</div>
+
+
+            <script src="../../../assets/js/all-nocdn.js"></script><script src="../../../assets/js/colorbox-i18n/jquery.colorbox-zh-CN.js"></script><script>
+                var links = [
+                        {
+                            "bgcolor": "#F44336",
+                            "icon": "<i class='fa fa-share-square'></i>",
+                        },
+                        {
+                            "url": "https://github.com/lengyueyang",
+                            "bgcolor": "#666666",
+                            "color": "#fffff",
+                            "icon": "<i class='fa fa-github-square'></i>",
+                        },
+                        {
+                            "url": "https://www.linkedin.com/in/lengyueyang",
+                            "bgcolor": "#3B5998",
+                            "color": "#fffff",
+                            "icon": "<i class='fa fa-linkedin-square'></i>",
+                        },
+                ];
+
+            $(document).ready(function() {
+                // This command is used to initialize some elements and make them work properly
+                $.material.init();
+                    $('.kc_fab_wrapper').kc_fab(links);
+            });
+
+            $(window).on("resize", function() {
+                if($(window).width() > 767) {
+                  $("html, body").height($(window).height());
+                  $(".main, .menu").height($(window).height() - $(".header-panel").outerHeight() - 76 );
+                  $(".posts-material").height($(window).height());
+                } else {
+                  $("html, body").css('height', '');
+                  $(".main, .menu").css('height', '');
+                  $(".posts-material").css('height', '');
+                }
+            }).trigger("resize");
+
+            function menuToggle() {
+                $("nav.menu, ul").toggleClass('responsive', '');
+            }
+        </script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

@@ -7,115 +7,79 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>https://lengyueyang.github.io/categories/archlinux.xml</loc>
-  <lastmod>2017-12-31T14:22:00Z</lastmod>
+  <lastmod>2017-12-31T14:34:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://lengyueyang.github.io/categories/cat_emacs.xml</loc>
-  <lastmod>2017-12-31T14:22:00Z</lastmod>
+  <lastmod>2017-12-31T14:34:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://lengyueyang.github.io/categories/cat_linux.xml</loc>
-  <lastmod>2017-12-31T14:22:00Z</lastmod>
+  <lastmod>2017-12-31T14:34:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://lengyueyang.github.io/categories/configuration.xml</loc>
-  <lastmod>2017-12-31T14:22:00Z</lastmod>
+  <lastmod>2017-12-31T14:34:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://lengyueyang.github.io/categories/linux.xml</loc>
-  <lastmod>2017-12-31T14:22:00Z</lastmod>
+  <lastmod>2017-12-31T14:34:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://lengyueyang.github.io/categories/shadowsocks.xml</loc>
-  <lastmod>2017-12-31T14:22:00Z</lastmod>
+  <lastmod>2017-12-31T14:34:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://lengyueyang.github.io/categories/spacemacs.xml</loc>
-  <lastmod>2017-12-31T14:22:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://lengyueyang.github.io/en/categories/archlinux.xml</loc>
-  <lastmod>2017-12-31T12:12:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://lengyueyang.github.io/en/categories/cat_emacs.xml</loc>
-  <lastmod>2017-12-31T12:12:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://lengyueyang.github.io/en/categories/cat_linux.xml</loc>
-  <lastmod>2017-12-31T12:12:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://lengyueyang.github.io/en/categories/configuration.xml</loc>
-  <lastmod>2017-12-31T12:12:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://lengyueyang.github.io/en/categories/linux.xml</loc>
-  <lastmod>2017-12-31T12:12:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://lengyueyang.github.io/en/categories/shadowsocks.xml</loc>
-  <lastmod>2017-12-31T12:12:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://lengyueyang.github.io/en/categories/spacemacs.xml</loc>
-  <lastmod>2017-12-31T12:12:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://lengyueyang.github.io/en/galleries/rss.xml</loc>
-  <lastmod>2017-12-31T12:14:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://lengyueyang.github.io/en/rss.xml</loc>
-  <lastmod>2017-12-31T12:12:00Z</lastmod>
+  <lastmod>2017-12-31T14:34:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://lengyueyang.github.io/galleries/rss.xml</loc>
-  <lastmod>2017-12-31T14:20:00Z</lastmod>
+  <lastmod>2017-12-31T14:33:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://lengyueyang.github.io/rss.xml</loc>
-  <lastmod>2017-12-31T14:22:00Z</lastmod>
+  <lastmod>2017-12-31T14:34:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://lengyueyang.github.io/sitemap.xml</loc>
-  <lastmod>2017-12-31T14:22:00Z</lastmod>
+  <lastmod>2017-12-31T14:34:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://lengyueyang.github.io/zh_cn/categories/archlinux.xml</loc>
-  <lastmod>2017-12-31T12:03:00Z</lastmod>
+  <lastmod>2017-12-31T14:34:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://lengyueyang.github.io/zh_cn/categories/cat_emacs.xml</loc>
-  <lastmod>2017-12-31T12:03:00Z</lastmod>
+  <lastmod>2017-12-31T14:34:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://lengyueyang.github.io/zh_cn/categories/cat_linux.xml</loc>
-  <lastmod>2017-12-31T12:03:00Z</lastmod>
+  <lastmod>2017-12-31T14:34:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://lengyueyang.github.io/zh_cn/categories/configuration.xml</loc>
-  <lastmod>2017-12-31T12:03:00Z</lastmod>
+  <lastmod>2017-12-31T14:34:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://lengyueyang.github.io/zh_cn/categories/linux.xml</loc>
-  <lastmod>2017-12-31T12:03:00Z</lastmod>
+  <lastmod>2017-12-31T14:34:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://lengyueyang.github.io/zh_cn/categories/shadowsocks.xml</loc>
-  <lastmod>2017-12-31T12:03:00Z</lastmod>
+  <lastmod>2017-12-31T14:34:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://lengyueyang.github.io/zh_cn/categories/spacemacs.xml</loc>
-  <lastmod>2017-12-31T12:03:00Z</lastmod>
+  <lastmod>2017-12-31T14:34:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://lengyueyang.github.io/zh_cn/galleries/rss.xml</loc>
-  <lastmod>2017-12-31T12:01:00Z</lastmod>
+  <lastmod>2017-12-31T14:33:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://lengyueyang.github.io/zh_cn/rss.xml</loc>
-  <lastmod>2017-12-31T12:03:00Z</lastmod>
+  <lastmod>2017-12-31T14:34:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://lengyueyang.github.io/zh_tw/categories/archlinux.xml</loc>

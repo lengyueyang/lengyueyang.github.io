@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns#
+article: http://ogp.me/ns/article#
+" lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog with org-mode and github | 深度识医</title>
+<script src="../../../assets/js/pace.min.js"></script><link href="../../../assets/css/pace.css" rel="stylesheet">
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="../../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (zh_cn)" href="../../rss.xml">
+<link rel="canonical" href="https://lengyueyang.github.io/zh_cn/posts/blog-with-org-mode-and-github/">
+<!--[if lt IE 9]>
+            <script src="../../../assets/js/html5shiv.min.js"></script>
+            <script src="../../../assets/js/respond.min.js"></script>
+        <![endif]--><meta name="author" content="lengyueyang">
+<link rel="prev" href="../org-mode-test/" title="Org-mode test" type="text/html">
+<meta property="og:site_name" content="深度识医">
+<meta property="og:title" content="Blog with org-mode and github">
+<meta property="og:url" content="https://lengyueyang.github.io/zh_cn/posts/blog-with-org-mode-and-github/">
+<meta property="og:description" content="写在前面
+
+
+长久以来，一直想建立自己的博客，今年开始学习 Emacs，偶遇几位大神用 Hexo 建立博客，于是也动手搭建自己的博客，记录学习过程，记录向数据科学转型学习点滴
+
+本文简述用 Org-mode 写博客，通过 Hexo 搭建博客的过程，我的博客见一家之言
+
+
+
+
+
+&lt;!–more–&gt;
+
+
+
+
+
+
+
+
+用 Hexo 搭建博客
+
+
+主要参照 CKJOKER1和岁月如歌2及漠然3的博客
+
+
+">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-12-31T19:26:52+08:00">
+<link rel="alternate" hreflang="en" href="../../../posts/blog-with-org-mode-and-github/">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-info header-panel shadow-z-3" role="navigation"><div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-3">
+            <h1 class="title-blog">
+                <a href="https://lengyueyang.github.io/zh_cn/">
+                        <span id="blog-title">深度识医</span>
+                    </a>
+            </h1>
+          </div>
+          <div class="col-xs-9">
+            <a id="hamburger" class="btn btn-raised" href="javascript:void(0);" onclick="menuToggle();">☰</a>
+          </div>
+        </div>
+      </div>
+<!-- /.container-fluid -->
+</nav><div class="container-fluid main" id="content" role="main">
+        <div class="row">
+            <nav class="col-xs-12 col-sm-3 menu"><ul>
+<li class="withripple"><a href="../../../archive.html">Archive</a></li>
+                <li class="withripple"><a href="../../../categories/">Tags</a></li>
+                <li class="withripple"><a href="../../../rss.xml">RSS feed</a></li>
+
+                    
+                </ul>
+<ul>
+<li>            </li>
+<li><a href="https://lengyueyang.github.io/" rel="alternate" hreflang="en">English</a></li>
+
+                    
+                </ul></nav><div class="posts-material col-xs-12 col-sm-9">
+                <div class="col-xs-12 col-md-11 content-material">
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Blog with org-mode and github</a></h1>
+<hr>
+<div class="metadata">
+            <span class="byline author vcard">
+                <a href=".">
+                        <img class="img-circle" src="../../../images/lengyueyang.png" alt="icon">
+                    lengyueyang
+                </a>
+            </span>
+            <span class="dateline">
+                <a href="." rel="bookmark"><i class="mdi-device-access-time"></i>
+                    <time class="published dt-published" datetime="2017-12-31T19:26:52+08:00" itemprop="datePublished" title="2017-12-31 19:26">2017-12-31 19:26</time></a>
+            </span>
+                <span class="commentline">            <a href="#disqus_thread" data-disqus-identifier="cache/posts/Blog with org-mode and github.html">Comments</a>
+
+</span>
+        </div>
+        
+        <hr></header><div class="e-content entry-content" itemprop="articleBody text">
+    <div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">写在前面</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>长久以来，一直想建立自己的博客，今年开始学习 Emacs，偶遇几位大神用 Hexo 建立博客，于是也动手搭建自己的博客，记录学习过程，记录向数据科学转型学习点滴
+</li>
+<li>本文简述用 Org-mode 写博客，通过 Hexo 搭建博客的过程，我的博客见<a href="http://lengyueyang.github.io/">一家之言</a>
+</li>
+</ul>
+<div class="export">
+<p>
+&lt;!–more–&gt;
+</p>
+
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">用 Hexo 搭建博客</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+主要参照 CKJOKER<sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup>和岁月如歌<sup><a id="fnr.2" name="fnr.2" class="footref" href="#fn.2">2</a></sup>及漠然<sup><a id="fnr.3" name="fnr.3" class="footref" href="#fn.3">3</a></sup>的博客
+</p>
+<ul class="org-ul">
+<li>我本人用 Archlinux，先安装 npm，再通过 npm 安装 hexo
+<div class="highlight"><pre><span></span>sudo pacman -S npm
+mkdir hexo
+npm install -g hexo
+npm install -g hexo-cli
+hexo init
+hexo install
+hexo server
+</pre></div>
+</li>
+</ul>
+<p>
+这时候在浏览器中打开 <a href="http://0.0.0.0:4000/">http://0.0.0.0:4000/</a> 应该能看到效果如图所示
+<img src="http://7xrrxa.com1.z0.glb.clouddn.com/hexo_start.png" alt="hexo_start.png"></p>
+
+<ul class="org-ul">
+<li>安装 hexo 的一些插件
+
+<div class="highlight"><pre><span></span>npm install hexo-generator-index --save
+npm install hexo-generator-archive --save
+npm install hexo-generator-category --save
+npm install hexo-generator-tag --save
+npm install hexo-server --save
+npm install hexo-deployer-git --save
+npm install hexo-deployer-heroku --save
+npm install hexo-deployer-rsync --save
+npm install hexo-deployer-openshift --save
+npm install hexo-renderer-marked@0.2 --save
+npm install hexo-renderer-stylus@0.2 --save
+npm install hexo-generator-feed@1 --save
+npm install hexo-generator-sitemap@1 --save
+</pre></div>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">博客源代码托管到 Github 上</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>建立 Github 账号，设置本地 SSH，与 Github 连接
+</li>
+<li>修改 _config.yml，增加
+<div class="highlight"><pre><span></span>deploy:
+type: git
+repo: git@github.com:xxx/xxx.github.io.git
+branch: master
+</pre></div>
+</li>
+</ul>
+<p>
+及根据参考修改其他配置
+</p>
+<ul class="org-ul">
+<li>使用 Next 主题，根据配置文件说明配置自己的博客
+
+<div class="highlight"><pre><span></span>git clone https://github.com/iissnan/hexo-theme-next themes/next
+</pre></div>
+</li>
+<li>打开自己的博客，修改美化相应选项
+
+<div class="highlight"><pre><span></span>hexo clean
+hexo g
+hexo g
+hexo d
+</pre></div>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">用 Org-mode 写博客</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+主要参照 CodeFalling<sup><a id="fnr.4" name="fnr.4" class="footref" href="#fn.4">4</a></sup>和 zilongshanren<sup><a id="fnr.5" name="fnr.5" class="footref" href="#fn.5">5</a></sup></p>
+<ul class="org-ul">
+<li>用<a href="https://github.com/CodeFalling/blog-admin">blog-admin</a> 做前端，参照文件说明配置
+</li>
+<li>用<a href="https://github.com/CodeFalling/hexo-renderer-org">hexo-renderer-org</a> 将写好的.org 文件转化成 hexo 识别的 md 文件并发布
+</li>
+<li>参照 CodeFalling 和 zilongshanren 的 github 的 Spacemacs 私人配置更改自己的配置
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">一些问题</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1">Org-mode 图片插入</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>安装<a href="https://github.com/CodeFalling/hexo-asset-image">hexo-asset-image</a>， 安装后在.md 文件中插入图片没有问题，在 org 中插入有问题
+</li>
+<li>Org 中插入图片或者链接格式如下
+</li>
+</ul>
+<div class="highlight"><pre><span></span>[[file:filedir/file OR html adress]]
+</pre></div>
+<ul class="org-ul">
+<li>改变图片大小，位置，加入图片说明可增加以下代码
+</li>
+</ul>
+<div class="highlight"><pre><span></span>#+CAPTION: title with figure number
+#+ATTR_HTML: :width 200px :align left :title The tile of picture without figure number
+</pre></div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef">
+<sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup><p class="footpara">
+<a href="https://ckjoker.github.io/2015/01/27/Linux-github-hexo-blog/">https://ckjoker.github.io/2015/01/27/Linux-github-hexo-blog/</a>
+</p>
+</div>
+
+<div class="footdef">
+<sup><a id="fn.2" name="fn.2" class="footnum" href="#fnr.2">2</a></sup><p class="footpara">
+<a href="http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/">http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/</a>
+</p>
+</div>
+
+<div class="footdef">
+<sup><a id="fn.3" name="fn.3" class="footnum" href="#fnr.3">3</a></sup><p class="footpara">
+<a href="http://mritd.me/2015/12/31/Github-%E6%90%AD%E5%BB%BA-Hexo-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/">http://mritd.me/2015/12/31/Github-%E6%90%AD%E5%BB%BA-Hexo-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</a>
+</p>
+</div>
+
+<div class="footdef">
+<sup><a id="fn.4" name="fn.4" class="footnum" href="#fnr.4">4</a></sup><p class="footpara">
+<a href="https://github.com/CodeFalling">https://github.com/CodeFalling</a>
+</p>
+</div>
+
+<div class="footdef">
+<sup><a id="fn.5" name="fn.5" class="footnum" href="#fnr.5">5</a></sup><p class="footpara">
+<a href="https://github.com/zilongshanren">https://github.com/zilongshanren</a>
+</p>
+</div>
+
+
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager">
+<li class="previous">
+                <a href="../org-mode-test/" rel="prev" title="Org-mode test">前一篇</a>
+            </li>
+        </ul></nav></aside><section class="comments"><h2>
+<i class="mdi-communication-forum"></i>注释</h2>
+        <hr>
+<div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="lengyueyang",
+            disqus_url="https://lengyueyang.github.io/zh_cn/posts/blog-with-org-mode-and-github/",
+        disqus_title="Blog with org-mode and github",
+        disqus_identifier="cache/posts/Blog with org-mode and github.html",
+        disqus_config = function () {
+            this.language = "zh_cn";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="lengyueyang";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+            </div>
+        </div>
+        <button class="btn btn-fab btn-raised btn-material-green btn-footer" data-toggle="modal" data-target="#footer-dialog">
+            <i class="mdi-communication-message"></i>
+        </button>
+        <div id="footer-dialog" class="modal fade" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">lengyueyang</h4>
+                <div>
+                    
+<img class="img-circle" style="float:left;margin:10px 20px 10px 0px;max-height:200px;" src="../../../images/lengyueyang.png"><p><u>Basic Medical, 8 years PHD, Do some research on Medical Data Scientist</u></p>
+
+<p>I am currently work on Medical Big Data analysis, learning Machine learning and deep learning.</p>
+<p><a href="http://spacemacs.org"><img src="https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg"></a></p>
+<p>
+
+                </p>
+</div>
+                <hr>
+</div>
+              <div class="modal-body">
+                    Contents © 2017         <a href="mailto:maoxiaowei1988@qq.com">lengyueyang</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+                    
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Ok</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="source-button">
+    <a class="btn btn-fab btn-raised btn-material-indigo" target="_blank" href="index.org" title="源代码">
+        <i class="mdi-file-cloud-download"></i>
+    </a>
+
+        </div>
+        <div class="kc_fab_wrapper"></div>
+</div>
+
+
+            <script src="../../../assets/js/all-nocdn.js"></script><script src="../../../assets/js/colorbox-i18n/jquery.colorbox-zh-CN.js"></script><script>
+                var links = [
+                        {
+                            "bgcolor": "#F44336",
+                            "icon": "<i class='fa fa-share-square'></i>",
+                        },
+                        {
+                            "url": "https://github.com/lengyueyang",
+                            "bgcolor": "#666666",
+                            "color": "#fffff",
+                            "icon": "<i class='fa fa-github-square'></i>",
+                        },
+                        {
+                            "url": "https://www.linkedin.com/in/lengyueyang",
+                            "bgcolor": "#3B5998",
+                            "color": "#fffff",
+                            "icon": "<i class='fa fa-linkedin-square'></i>",
+                        },
+                ];
+
+            $(document).ready(function() {
+                // This command is used to initialize some elements and make them work properly
+                $.material.init();
+                    $('.kc_fab_wrapper').kc_fab(links);
+            });
+
+            $(window).on("resize", function() {
+                if($(window).width() > 767) {
+                  $("html, body").height($(window).height());
+                  $(".main, .menu").height($(window).height() - $(".header-panel").outerHeight() - 76 );
+                  $(".posts-material").height($(window).height());
+                } else {
+                  $("html, body").css('height', '');
+                  $(".main, .menu").css('height', '');
+                  $(".posts-material").css('height', '');
+                }
+            }).trigger("resize");
+
+            function menuToggle() {
+                $("nav.menu, ul").toggleClass('responsive', '');
+            }
+        </script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>
