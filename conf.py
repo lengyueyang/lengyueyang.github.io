@@ -17,8 +17,8 @@ import time
 
 
 # Data about this site
-BLOG_AUTHOR = {"en": "lengyueyang", "zh_cn": "冷月阳"}  # (translatable)
-BLOG_TITLE ={"en": "Deep Medical", "zh_cn": "深度识医"}  # (translatable)
+BLOG_AUTHOR = "lengyueyang"  # (translatable)
+BLOG_TITLE ="深度识医"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "https://lengyueyang.github.io/"
@@ -26,7 +26,7 @@ SITE_URL = "https://lengyueyang.github.io/"
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://example.com/"
 BLOG_EMAIL = "maoxiaowei1988@qq.com"
-BLOG_DESCRIPTION = {"en": "Lengyueyang's Personal Blog.", "zh_cn": "冷月阳的个人博客"} # (translatable)
+BLOG_DESCRIPTION = "Lengyueyang's Personal Blog." # (translatable)
 
 # Nikola is multilingual!
 #
@@ -93,7 +93,8 @@ DEFAULT_LANG = "en"
 # the path will be used as a prefix for the generated pages location
 TRANSLATIONS = {
     DEFAULT_LANG: "",
-    "zh_cn": "./zh_cn",
+#    "en": "./en",
+    "zh_tw": "./zh_tw",
 }
 
 # What will translated input files be named like?
@@ -132,21 +133,21 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 #          else they won’t be highlighted when active.
 
 NAVIGATION_LINKS = {
-    DEFAULT_LANG: (
+    DEFAULT_LANG:(
         ("/archive.html", "Archive"),
         ("/categories/", "Tags"),
         ("/rss.xml", "RSS feed"),
     ),
-    "zh_cn": (
-        ("/archive.html", "归档"),
-        ("/categories/", "标签云"),
-        ("/rss.xml", "RSS订阅"),
-    ),
-
+#    DEFAULT_LANG: (
+#        ("/archive.html", "归档"),
+#        ("/categories/", "标签云"),
+#        ("/rss.xml", "RSS订阅"),
+#    ),
 }
 
 # Name of the theme to use.
-THEME = "bootstrap3"
+# THEME = "material-theme"
+THEME = "material-theme"
 
 # Primary color of your theme. This will be used to customize your theme and
 # auto-generate related colors in POSTS_SECTION_COLORS. Must be a HEX value.
@@ -194,9 +195,9 @@ POSTS = (
     ("posts/*.html", "posts", "post.tmpl"),
 )
 PAGES = (
-    ("pages/*.org", {"en": "pages", "zh_cn": "页面"}, "page.tmpl"),
-    ("pages/*.rst", {"en": "pages", "zh_cn": "页面"}, "page.tmpl"),
-    ("pages/*.md", {"en": "pages", "zh_cn": "页面"}, "page.tmpl"),
+    ("pages/*.org", "pages", "page.tmpl"),
+    ("pages/*.rst", "pages", "page.tmpl"),
+    ("pages/*.ipnb", "pages", "page.tmpl"),
     ("pages/*.txt", "pages", "page.tmpl"),
     ("pages/*.html", "pages", "page.tmpl"),
 )
@@ -569,14 +570,14 @@ FRONT_INDEX_HEADER = {
 # Create per-month archives instead of per-year
 # CREATE_MONTHLY_ARCHIVE = False
 # Create one large archive instead of per-year
-# CREATE_SINGLE_ARCHIVE = False
+CREATE_SINGLE_ARCHIVE = True
 # Create year, month, and day archives each with a (long) list of posts
 # (overrides both CREATE_MONTHLY_ARCHIVE and CREATE_SINGLE_ARCHIVE)
-# CREATE_FULL_ARCHIVES = False
+# CREATE_FULL_ARCHIVES = True
 # If monthly archives or full archives are created, adds also one archive per day
-# CREATE_DAILY_ARCHIVE = False
+# CREATE_DAILY_ARCHIVE = True
 # Create previous, up, next navigation links for archives
-# CREATE_ARCHIVE_NAVIGATION = False
+# CREATE_ARCHIVE_NAVIGATION = True
 # Final locations for the archives are:
 # output / TRANSLATION[lang] / ARCHIVE_PATH / ARCHIVE_FILENAME
 # output / TRANSLATION[lang] / ARCHIVE_PATH / YEAR / index.html
@@ -1366,12 +1367,20 @@ UNSLUGIFY_TITLES = True
 # those.
 # TEMPLATE_FILTERS = {}
 
+BIOGRAPHY = """
+<img class="img-circle" style="float:left;margin:10px 20px 10px 0px;max-height:200px;" src="/images/lengyueyang.png">
+<p><u>Basic Medical, 8 years PHD, Do some research on Medical Data Scientist</u></p>
+
+<p>I am currently work on Medical Big Data analysis, learning Machine learning and deep learning.</p>
+<p><a href="http://spacemacs.org"><img src="https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg" /></a><p>
+"""
+
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
 GLOBAL_CONTEXT = {
     'header_color': 'info',
-    # 'author_avatar': '/images/StreakyCobra.png',
-    # 'biography': BIOGRAPHY,
+    'author_avatar': '/images/lengyueyang.png',
+    'biography': BIOGRAPHY,
     'use_pace': True,
     'social_links': [
     {
