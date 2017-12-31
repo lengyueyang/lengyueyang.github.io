@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns#
+article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spacemacs Learning | 深度识医</title>
+<script src="../../assets/js/pace.min.js"></script><link href="../../assets/css/pace.css" rel="stylesheet">
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (zh_tw)" href="../../zh_tw/rss.xml">
+<link rel="canonical" href="https://lengyueyang.github.io/posts/spacemacs-learning/">
+<!--[if lt IE 9]>
+            <script src="../../assets/js/html5shiv.min.js"></script>
+            <script src="../../assets/js/respond.min.js"></script>
+        <![endif]--><meta name="author" content="lengyueyang">
+<link rel="prev" href="../statistics-in-research-article-part-1-univariate-analysis/" title="Statistics in research article: Part 1, Univariate analysis" type="text/html">
+<link rel="next" href="../python-pyenv-shi-yong-fang-fa-zong-jie/" title="Python-Pyenv 使用方法总结" type="text/html">
+<meta property="og:site_name" content="深度识医">
+<meta property="og:title" content="Spacemacs Learning">
+<meta property="og:url" content="https://lengyueyang.github.io/posts/spacemacs-learning/">
+<meta property="og:description" content="Useful keybinding
+
+
+Memory
+
+
+SPC f s Save a buffer
+
+SPC f S Save all opened buffers
+
+SPC b b Open or switch a buffer with helm
+
+SPC T h Select a theme using a helm buffer
+
+SPC f/p t To toggle the Neot">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-12-31T19:26:52+08:00">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-info header-panel shadow-z-3" role="navigation"><div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-3">
+            <h1 class="title-blog">
+                <a href="https://lengyueyang.github.io/">
+                        <span id="blog-title">深度识医</span>
+                    </a>
+            </h1>
+          </div>
+          <div class="col-xs-9">
+            <a id="hamburger" class="btn btn-raised" href="javascript:void(0);" onclick="menuToggle();">☰</a>
+          </div>
+        </div>
+      </div>
+<!-- /.container-fluid -->
+</nav><div class="container-fluid main" id="content" role="main">
+        <div class="row">
+            <nav class="col-xs-12 col-sm-3 menu"><ul>
+<li class="withripple"><a href="../../archive.html">Archive</a></li>
+                <li class="withripple"><a href="../../categories/">Tags</a></li>
+                <li class="withripple"><a href="../../rss.xml">RSS feed</a></li>
+
+                    
+                </ul>
+<ul>
+<li>            </li>
+<li><a href="https://lengyueyang.github.io/zh_tw/" rel="alternate" hreflang="zh_tw">繁體中文</a></li>
+
+                    
+                </ul></nav><div class="posts-material col-xs-12 col-sm-9">
+                <div class="col-xs-12 col-md-11 content-material">
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Spacemacs Learning</a></h1>
+<hr>
+<div class="metadata">
+            <span class="byline author vcard">
+                <a href=".">
+                        <img class="img-circle" src="../../images/lengyueyang.png" alt="icon">
+                    lengyueyang
+                </a>
+            </span>
+            <span class="dateline">
+                <a href="." rel="bookmark"><i class="mdi-device-access-time"></i>
+                    <time class="published dt-published" datetime="2017-12-31T19:26:52+08:00" itemprop="datePublished" title="2017-12-31 19:26">2017-12-31 19:26</time></a>
+            </span>
+                <span class="commentline">            <a href="#disqus_thread" data-disqus-identifier="cache/posts/Spacemacs Learning.html">Comments</a>
+
+</span>
+        </div>
+        
+        <hr></header><div class="e-content entry-content" itemprop="articleBody text">
+    <div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">Useful keybinding</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1">Memory</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>SPC f s Save a buffer
+</li>
+<li>SPC f S Save all opened buffers
+</li>
+<li>SPC b b Open or switch a buffer with helm
+</li>
+<li>SPC T h Select a theme using a helm buffer
+</li>
+<li>SPC f/p t To toggle the Neotree buffer press (project)
+</li>
+<li>SPC h b Open the bookmark
+</li>
+<li>SPC h l Resume the last helm buffers
+</li>
+<li>SPC s L Focus the last converted search buffer
+</li>
+<li>F3 In a helm buffer, convert a helm search buffer into a regular buffer
+</li>
+</ul>
+<div class="export">
+<p>
+&lt;!–more–&gt;
+</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">The Emacs Evil Tutor</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1">LESSON 1</h3>
+<div class="outline-text-3" id="text-2-1">
+<ol class="org-ol">
+<li>The cursor is moved using either the arrow keys or the hjkl keys.
+h (left)        j (down)       k (up)            l (right)
+</li>
+
+<li>To exit Emacs type:  &lt;ESC&gt; :qa! &lt;ENTER&gt;  to trash all changes.
+OR type:  &lt;ESC&gt; :wqa &lt;ENTER&gt;  to save the changes.
+</li>
+
+<li>Ctrl + f Page Down
+Ctrl + b Page Up
+</li>
+
+<li>0 Cursor to the beginging of the line
+$ Cursor to the end of the line
+</li>
+
+<li>G Cursor to the last of the file
+nG Cursor to the n line of the file
+gg Cursor to the begin of the file, like 1G
+<p>
+:[Enter] followed by a line number and moves to that line number.
+N[Enter] Curosr to the N line
+</p>
+</li>
+</ol>
+<p>
+NOTE: Pressing &lt;ESC&gt; will place you in normal state or will cancel
+      an unwanted and partially completed command.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2">LESSON 2</h3>
+<div class="outline-text-3" id="text-2-2">
+<ol class="org-ol">
+<li>x/X To delete a character under/before the cursor in normal state type
+</li>
+
+<li>To delete a whole line type:  dd
+</li>
+
+<li>The format for a command in normal state is:
+
+<p>
+  [number]  command  object    OR    command  [number]  object
+where:
+  number - is how many times to repeat the command
+  command - is what to do, such as  d  for delete
+  object - is what the command should act upon, such as  w  for word,
+           $  for "to the end of line", etc.
+</p>
+</li>
+
+<li>d1G, dG, d0, d$
+</li>
+
+<li>yy Copy the line of cursokr
+nyy Copy the n line data
+</li>
+
+<li>y1G, yG, y0, y$
+</li>
+
+<li>p/P Paste the data from the next/before line
+</li>
+
+<li>To undo previous actions, type:  u
+To undo the undo's type:  CTRL-R
+Repeat the last opeartion: .
+</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3">LESSON 3</h3>
+<div class="outline-text-3" id="text-2-3">
+<ol class="org-ol">
+<li>To replace text that has already been deleted, type  p  this puts the
+deleted text AFTER the cursor (if a line was deleted it will go on the
+line below the cursor).
+</li>
+
+<li>To replace the character under the cursor, type  r  and then the
+character which will replace the original.
+</li>
+
+<li>The change command allows you to change the specified object from the
+cursor to the end of the object.  eg. Type  cw  to change from the
+cursor to the end of the word,  c$  to change to the end of a line.
+</li>
+
+<li>The format for change is:
+[number]  c  object    OR    c  [number]  object
+</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-sec-2-4" class="outline-3">
+<h3 id="sec-2-4">LESSON 4</h3>
+<div class="outline-text-3" id="text-2-4">
+<ol class="org-ol">
+<li>Typing  /  followed by a phrase searches FORWARD for the phrase.
+Typing  ?  followed by a phrase searches BACKWARD for the phrase.
+After a search type  n  to find the next occurrence in the same direction
+or  N  to search in the opposite direction.
+</li>
+
+<li>Typing  %  while the cursor is on a  (,),[,],{, or }  locates its
+matching pair.
+</li>
+
+<li>To substitute new for the first old on a line type  :s/old/new
+To substitute new for all 'old's on a line type     :s/old/new/g
+To substitute phrases between two line #'s type     :#,#s/old/new/g
+To substitute all occurrences in the file type      :%s/old/new/g
+To ask for confirmation each time add 'c'           :%s/old/new/gc
+</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-sec-2-5" class="outline-3">
+<h3 id="sec-2-5">LESSON 5</h3>
+<div class="outline-text-3" id="text-2-5">
+<ol class="org-ol">
+<li>:!command  executes an external command.
+
+<p>
+Some useful examples are:
+</p>
+<p>
+:!ls  or  :!dir                 -  shows a directory listing.
+</p>
+<p>
+:!rm  or  :!del FILENAME        -  removes file FILENAME.
+</p>
+</li>
+
+<li>:w FILENAME  writes the current buffer to disk with file name FILENAME.
+</li>
+
+<li>:#,#w FILENAME  saves the lines # through # in file FILENAME.
+</li>
+
+<li>:r FILENAME  retrieves disk file FILENAME and inserts it into the
+current buffer following the cursor position.
+</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-sec-2-6" class="outline-3">
+<h3 id="sec-2-6">LESSON 6</h3>
+<div class="outline-text-3" id="text-2-6">
+<ol class="org-ol">
+<li>Typing  o   opens a line BELOW the cursor and places the cursor on the open
+line in insert state.
+Typing a capital  O  opens the line ABOVE the line the cursor is on.
+</li>
+
+<li>Type an  a  to insert text AFTER the character the cursor is on.
+Typing a capital  A  automatically appends text to the end of the line.
+</li>
+
+<li>i/I Insert text at the character/Not blank
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">Python and R programming environment configuration</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1">Python</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>Configure the auto-complete mode as the spacemacs layer: auto-complete
+</li>
+<li>Replace the keybinding SPC m s i to 'run python' in file package.el within python layer
+</li>
+<li>Add the following confirmation to .spacemacs
+<div class="highlight"><pre><span></span><span class="p">(</span><span class="nf">add-hook</span> <span class="ss">'inferior-python-mode-hook</span> <span class="ss">'flycheck-mode</span><span class="p">)</span>
+<span class="p">(</span><span class="nf">add-hook</span> <span class="ss">'inferior-python-mode-hook</span> <span class="ss">'flyspell-mode</span><span class="p">)</span>
+</pre></div>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2">R</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>Add the following confirmation to .spacemacs
+</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="p">(</span><span class="nf">add-hook</span> <span class="ss">'R-mode-hook</span> <span class="ss">'smartparens-mode</span><span class="p">)</span>
+<span class="p">(</span><span class="nf">add-hook</span> <span class="ss">'R-mode-hook</span> <span class="ss">'flycheck-mode</span><span class="p">)</span>
+<span class="p">(</span><span class="nf">add-hook</span> <span class="ss">'R-mode-hook</span> <span class="ss">'flyspell-mode</span><span class="p">)</span>
+<span class="p">(</span><span class="nf">add-hook</span> <span class="ss">'org-mode-hook</span> <span class="ss">'smartparens-mode</span><span class="p">)</span>
+<span class="p">(</span><span class="nf">add-hook</span> <span class="ss">'inferior-ess-mode-hook</span> <span class="ss">'company-mode</span><span class="p">)</span>
+<span class="p">(</span><span class="nf">add-hook</span> <span class="ss">'inferior-ess-mode-hook</span> <span class="ss">'smartparens-mode</span><span class="p">)</span>
+<span class="p">(</span><span class="nf">add-hook</span> <span class="ss">'inferior-ess-mode-hook</span> <span class="ss">'flycheck-mode</span><span class="p">)</span>
+<span class="p">(</span><span class="nf">add-hook</span> <span class="ss">'inferior-ess-mode-hook</span> <span class="ss">'flyspell-mode</span><span class="p">)</span>
+</pre></div>
+<ul class="org-ul">
+<li>For the R auto complete: after open the R file, then C-c C-c, reopen the R file 
+</li>
+<li>When insert src-block with org heading, add a , before the heading, to avoid mistake
+</li>
+</ul>
+</div>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager">
+<li class="previous">
+                <a href="../statistics-in-research-article-part-1-univariate-analysis/" rel="prev" title="Statistics in research article: Part 1, Univariate analysis">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../python-pyenv-shi-yong-fang-fa-zong-jie/" rel="next" title="Python-Pyenv 使用方法总结">Next post</a>
+            </li>
+        </ul></nav></aside><section class="comments"><h2>
+<i class="mdi-communication-forum"></i>Comments</h2>
+        <hr>
+<div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="lengyueyang",
+            disqus_url="https://lengyueyang.github.io/posts/spacemacs-learning/",
+        disqus_title="Spacemacs Learning",
+        disqus_identifier="cache/posts/Spacemacs Learning.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="lengyueyang";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+            </div>
+        </div>
+        <button class="btn btn-fab btn-raised btn-material-green btn-footer" data-toggle="modal" data-target="#footer-dialog">
+            <i class="mdi-communication-message"></i>
+        </button>
+        <div id="footer-dialog" class="modal fade" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">lengyueyang</h4>
+                <div>
+                    
+<img class="img-circle" style="float:left;margin:10px 20px 10px 0px;max-height:200px;" src="../../images/lengyueyang.png"><p><u>Basic Medical, 8 years PHD, Do some research on Medical Data Scientist</u></p>
+
+<p>I am currently work on Medical Big Data analysis, learning Machine learning and deep learning.</p>
+<p><a href="http://spacemacs.org"><img src="https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg"></a></p>
+<p>
+
+                </p>
+</div>
+                <hr>
+</div>
+              <div class="modal-body">
+                    Contents © 2017         <a href="mailto:maoxiaowei1988@qq.com">lengyueyang</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+                    
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Ok</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="source-button">
+    <a class="btn btn-fab btn-raised btn-material-indigo" target="_blank" href="index.org" title="Source">
+        <i class="mdi-file-cloud-download"></i>
+    </a>
+
+        </div>
+        <div class="kc_fab_wrapper"></div>
+</div>
+
+
+            <script src="../../assets/js/all-nocdn.js"></script><script>
+                var links = [
+                        {
+                            "bgcolor": "#F44336",
+                            "icon": "<i class='fa fa-share-square'></i>",
+                        },
+                        {
+                            "url": "https://github.com/lengyueyang",
+                            "bgcolor": "#666666",
+                            "color": "#fffff",
+                            "icon": "<i class='fa fa-github-square'></i>",
+                        },
+                        {
+                            "url": "https://www.linkedin.com/in/lengyueyang",
+                            "bgcolor": "#3B5998",
+                            "color": "#fffff",
+                            "icon": "<i class='fa fa-linkedin-square'></i>",
+                        },
+                ];
+
+            $(document).ready(function() {
+                // This command is used to initialize some elements and make them work properly
+                $.material.init();
+                    $('.kc_fab_wrapper').kc_fab(links);
+            });
+
+            $(window).on("resize", function() {
+                if($(window).width() > 767) {
+                  $("html, body").height($(window).height());
+                  $(".main, .menu").height($(window).height() - $(".header-panel").outerHeight() - 76 );
+                  $(".posts-material").height($(window).height());
+                } else {
+                  $("html, body").css('height', '');
+                  $(".main, .menu").css('height', '');
+                  $(".posts-material").css('height', '');
+                }
+            }).trigger("resize");
+
+            function menuToggle() {
+                $("nav.menu, ul").toggleClass('responsive', '');
+            }
+        </script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>
