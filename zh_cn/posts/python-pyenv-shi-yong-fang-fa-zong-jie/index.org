@@ -1,0 +1,185 @@
+#+BEGIN_COMMENT
+.. title: 
+.. slug: 
+.. date:  19:26:52 UTC+08:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+#+TITLE: Python-Pyenv 使用方法总结
+#+DATE: 2017-09-19
+#+LAYOUT: post
+#+TAGS: Python, Pyenv
+#+CATEGORIES: PYTHON
+
+* Pyenv 简介
+
+在使用 python 进行编程时, 经常遇到多个编程环境共存问题. pyenv 可以很好的解决这个问题, 本教程根据是学习使用 pyenv 的记录.
+
+#+BEGIN_EXPORT html
+<!--more-->
+#+END_EXPORT
+
+* 安装
+
+#+BEGIN_SRC sh
+  yaourt pyenv
+  yaourt pyenv-virtualenv
+#+END_SRC
+
+archlinux 系统安装上面命令直接安装, 其他版本可也从源中或者源代码安装.
+
+安装完成后，pyenv 命令还没有加进系统的环境变量，需要将如下内容加到 ~/.zshrc 中，然后执行 source ~/.zshrc 
+
+#+BEGIN_SRC sh
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+#+END_SRC
+
+* Pyenv 基本操作
+
+#+BEGIN_SRC sh
+  pyenv versions
+
+  ,* system (set by /home/lengyue/.python-version)
+  2.7.13
+  3.5.2
+  # 查看目前所有版本的 python
+
+  pyenv version
+  # 查看当前版本的 python
+
+  pyenv global system/3.5.2
+  # 设置全局的 python 环境
+
+  pyenv local system/3.5.2
+  # 设置局部的 python 环境, local 优先级高于 global
+
+  pyenv local --unset
+  # 重置 local 环境
+
+  pyenv shell system/3.5.2
+  # 设置 shell 的 python 环境, shell 环境又有限于 local
+
+  pyenv shell --unset
+  # 重置 shell python 环境
+#+END_SRC
+
+* 安装不同版本 python
+
+#+BEGIN_SRC sh
+  pyenv install --list
+  # pyenv 支持的所有 python 列表
+
+  pyenv install 3.5.2
+  # 安装特定版本的 python
+
+  pyenv uninstall 3.5.2
+  # 卸载特定版本的 python
+
+  pyenv rehash
+  # refresh database
+#+END_SRC
+
+安装特定版本 python 出现错误: 
+
+#+BEGIN_SRC sh
+  ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib
+#+END_SRC
+
+按照下帖解决, 用如下命令
+- [[https://stackoverflow.com/questions/43976068/compiling-python-via-pyenv-on-archlinux-but-missing-openssl][Compiling Python via Pyenv on Archlinux but missing OpenSSL - Stack Overflow]]
+
+#+BEGIN_SRC sh
+CFLAGS=-I/usr/include/openssl-1.0 \
+LDFLAGS=-L/usr/lib64/openssl-1.0 \
+pyenv install 3.5.2
+#+END_SRC
+
+* Pyenv-virtualenv python 不同项目虚拟环境的搭建
+
+利用 pyenv-virtualenv 就可以管理多个依赖库环境
+
+#+BEGIN_SRC sh
+  pyenv virtualenv PYTHON_VERSION PROJECT_NAME
+  # 创建新的环境,位于 ~/.pyenv/versions/, 其中，PYTHON_VERSION 是具体的 Python 版本号，
+  # 例如，3.6.0，PROJECT_NAME 是我们自定义的项目名称。比较好的实践方式是，
+  # 在 PROJECT_NAME 也带上 Python 的版本号，以便于识别。现假设我们有 XDiff 这么一个项目，
+  # 想针对 Python 2.7.13 和 Python 3.6.0 分别创建一个虚拟环境，那就可以依次执行如下命令。
+
+  pyenv virtualenv 3.6.0 py36_XDiff
+  pyenv virtualenv 2.7.13 py27_XDiff
+
+  pyenv virtualenvs
+  # 创建完成后，通过执行 pyenv virtualenvs 命令，就可以看到本地所有的项目环境
+
+  pyenv activate py36_XDiff
+  # 切换到新的环境
+
+  pyenv deactivate
+  # 退回到系统环境
+
+  pyenv uninstall py36_XDiff
+  # Removing the directories in $(pyenv root)/versions and
+  # $(pyenv root)/versions/{version}/envs will delete the virtualenv
+  # uninstall 的命令不能完全卸载完, 可以使用删除的方式
+
+#+END_SRC
+
+* 项目实践举例
+
+假设现在有一个项目同时尝试 python 3.5.2 和 3.3.2 进行编写, 流程如下.
+
+#+BEGIN_SRC sh
+  cd ./Downloads
+  # 进入目录
+
+  mkdir Mao & cd Mao
+  # 创建项目目录并进入
+
+  # 接下来有两种方法, 一种用 local 变量, 另一种用 virtualenv 方式
+
+  # local 变量法
+
+  pyenv local 3.5.2 & pip install package
+  # 进入 3.5.2 的环境, 并安装必要的软件包, 进行测试
+
+  pyenv local 3.3.2 & pip install package
+  # 进入 3.3.2 的环境, 并安装必要的软件包, 进行测试
+
+  # virtualenv 法
+
+  pyenv virtualenv 3.6.0 py36_Mao
+  pyenv virtualenv 2.7.13 py33_Mao
+  # 创建两个虚拟环境
+
+  pyenv activate py35_Mao
+  # 进入 3.5 环境进行工作
+
+  pyenv activate py33_Mao
+  pyenv deactivate
+  # 进入 3.3 环境进行工作, 结束后离开虚拟环境
+
+  rm -rf ~/.pyenv/versions/py35_Mao/
+  rm -rf ~/.pyenv/versions/3.5.2/envs/py35_Mao
+  rm -rf ~/.pyenv/versions/py33_Mao/
+  rm -rf ~/.pyenv/versions/3.3.2/envs/py33_Mao
+  # 如果以后不再使用虚拟开发环境, 删除环境
+
+#+END_SRC
+
+* 参考资料
+- [[https://github.com/pyenv/pyenv][pyenv/pyenv: Simple Python version management]]
+- [[http://www.jianshu.com/p/a23448208d9a][使用 pyenv 可以在一个系统中安装多个 python 版本 - 简书]]
+- [[https://github.com/pyenv/pyenv/blob/master/COMMANDS.md#command-reference][pyenv/COMMANDS.md at master · pyenv/pyenv]]
+- [[http://www.cnblogs.com/blackmatrix/p/5591341.html][在 macOS 上通过 pyenv 安装和切换多版本 Python - BlackMatrix - 博客园]]
+- [[http://www.jb51.net/article/109542.htm][pyenv 命令管理多个 Python 版本_python_脚本之家]]
+- [[http://www.cnblogs.com/npumenglei/p/3719412.html][用 pyenv 和 virtualenv 搭建单机多版本 python 虚拟开发环境 - 雷子-晓飞爸 - 博客园]]
+- [[https://ask.hellobi.com/blog/seng/3047][使用 pyenv 安装多个 Python 版本 - 天善智能：专注于商业智能 BI 和数据分析、大数据领域的垂直社区平台]]
+- [[https://github.com/pyenv/pyenv-virtualenv][pyenv/pyenv-virtualenv: a pyenv plugin to manage virtualenv (a.k.a. python-virtualenv)]]
+

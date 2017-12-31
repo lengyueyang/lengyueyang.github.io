@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>深度识医 (文章分类：Archlinux)</title><link>https://lengyueyang.github.io/</link><description></description><atom:link href="https://lengyueyang.github.io/zh_cn/categories/archlinux.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2017 &lt;a href="mailto:maoxiaowei1988@qq.com"&gt;冷月阳&lt;/a&gt; </copyright><lastBuildDate>Sun, 31 Dec 2017 05:08:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Archlinux Shadowsocks 配置</title><link>https://lengyueyang.github.io/zh_cn/posts/archlinux-shadowsocks-pei-zhi/</link><dc:creator>冷月阳</dc:creator><description>&lt;div id="outline-container-sec-1" class="outline-2"&gt;
+&lt;h2 id="sec-1"&gt;购买 socks5 帐号&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-1"&gt;
+&lt;p&gt;
+本人购买倚天剑 socks 帐号
+网址如下:
+&lt;a href="https://a.aiguobit.com/users/ucenter"&gt;https://a.aiguobit.com/users/ucenter&lt;/a&gt;
+或者从 github 进入
+&lt;a href="https://github.com/itrump/ssfree/blob/master/cn/%E5%80%9A%E5%A4%A9%E5%89%91ss%E6%96%B0%E7%BD%91%E7%AB%99.md"&gt;https://github.com/itrump/ssfree/blob/master/cn/%E5%80%9A%E5%A4%A9%E5%89%91ss%E6%96%B0%E7%BD%91%E7%AB%99.md&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://lengyueyang.github.io/zh_cn/posts/archlinux-shadowsocks-pei-zhi/"&gt;更多…&lt;/a&gt; (剩余 1 分钟去阅读)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</description><guid>https://lengyueyang.github.io/zh_cn/posts/archlinux-shadowsocks-pei-zhi/</guid><pubDate>Mon, 11 Dec 2017 11:26:52 GMT</pubDate></item><item><title>Archlinux install and configuration</title><link>https://lengyueyang.github.io/zh_cn/posts/archlinux-install-and-configurationen/</link><dc:creator>冷月阳</dc:creator><description>&lt;div id="outline-container-sec-1" class="outline-2"&gt;
+&lt;h2 id="sec-1"&gt;Archlinux install [安装篇]&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-1"&gt;
+&lt;/div&gt;&lt;div id="outline-container-sec-1-1" class="outline-3"&gt;
+&lt;h3 id="sec-1-1"&gt;Prepare for the installation&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-1-1"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Prepare the ISO of archlinux, and brasero it into USB flash disk
+&lt;/li&gt;
+
+&lt;li&gt;Partiton: use cfdisk, use the UEFI install, the mkfs
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;/dev/sda1 to UEFI boot: ef00, 1G
+/dev/sda2 to 119G
+mkfs.fat -F32 /dev/sda1
+mkfs.ext4 /dev/sda2
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="export"&gt;
+&lt;p&gt;
+&amp;lt;!–more–&amp;gt;
+&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Select mirrorlist:
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;nano -w /etc/pacman.d/mirrorlist add 
+&lt;span class="nv"&gt;Server&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; http://mirrors.tuna.tsinghua.edu.cn/archlinux/&lt;span class="nv"&gt;$repo&lt;/span&gt;/os/&lt;span class="nv"&gt;$arch&lt;/span&gt;
+&lt;span class="nv"&gt;Server&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; http://mirrors.163.com/archlinux/&lt;span class="nv"&gt;$repo&lt;/span&gt;/os/&lt;span class="nv"&gt;$arch&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Wireless network link
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;iwconfig&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;find&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;name&lt;/span&gt; &lt;span class="nv"&gt;of&lt;/span&gt; &lt;span class="nv"&gt;your&lt;/span&gt; &lt;span class="nv"&gt;wireless&lt;/span&gt; &lt;span class="nv"&gt;moudule:&lt;/span&gt; &lt;span class="nv"&gt;like&lt;/span&gt; &lt;span class="nv"&gt;wlan0&lt;/span&gt;
+&lt;span class="nv"&gt;then:&lt;/span&gt;
+&lt;span class="nv"&gt;ip&lt;/span&gt; &lt;span class="nv"&gt;link&lt;/span&gt; &lt;span class="nv"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;wlan0&lt;/span&gt; &lt;span class="nv"&gt;up&lt;/span&gt;
+&lt;span class="nv"&gt;wpa_supplicant&lt;/span&gt; &lt;span class="nv"&gt;-D&lt;/span&gt; &lt;span class="nv"&gt;nl80211,wext&lt;/span&gt; &lt;span class="nv"&gt;-i&lt;/span&gt; &lt;span class="nv"&gt;wlan0&lt;/span&gt; &lt;span class="nv"&gt;-c&lt;/span&gt; &lt;span class="nv"&gt;&amp;lt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;wpa_passphrase&lt;/span&gt; &lt;span class="s"&gt;"your_SSID"&lt;/span&gt; &lt;span class="s"&gt;"your_key"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nv"&gt;dhcpcd&lt;/span&gt; &lt;span class="nv"&gt;wlan0&lt;/span&gt;
+&lt;span class="nv"&gt;now&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;wireless&lt;/span&gt; &lt;span class="nv"&gt;should&lt;/span&gt; &lt;span class="nv"&gt;be&lt;/span&gt; &lt;span class="nv"&gt;connected&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id="outline-container-sec-1-2" class="outline-3"&gt;
+&lt;h3 id="sec-1-2"&gt;Basic install&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-1-2"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Mount the partition
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;muont /dev/sda2 /mnt
+mkdir -p /mnt/boot/EFI
+mount /dev/sda1 /mnt/boot/EFI
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Bbasic system install
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pacstrap /mnt base base-devel
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Generate the fstab
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;genfstab -p /mnt &amp;gt;&amp;gt; /mnt/etc/fstab
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Went into the new system and update the system
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;arch-chroot /mnt
+nano /etc/loacle.gen  en.us &lt;span class="p"&gt;&amp;amp;&lt;/span&gt; en.cn &lt;span class="c1"&gt;# remove#&lt;/span&gt;
+locale-gen
+nano /etc/locale.gen    &lt;span class="c1"&gt;# 反注释需要的 locale&lt;/span&gt;
+locale-gen    &lt;span class="c1"&gt;# 生成 locale&lt;/span&gt;
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;LANG&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&amp;lt;locale&amp;gt;  &amp;gt; /etc/locale.conf &lt;span class="c1"&gt;# 设置默认 locale&lt;/span&gt;
+ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+hwclock --systohc --utc
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Add passwd and users
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; yourname &amp;gt; /etc/hostname
+nano /etc/hosts
+passwd &lt;span class="m"&gt;111111&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt; &lt;span class="nb"&gt;times&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+useradd -m -g users -s /bin/bash name
+passwd name &lt;span class="m"&gt;111111&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt; &lt;span class="nb"&gt;times&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+nano -w /etc/sudos add line name &lt;span class="nv"&gt;ALL&lt;/span&gt;&lt;span class="o"&gt;=(&lt;/span&gt;ALL&lt;span class="o"&gt;)&lt;/span&gt; ALL
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Grub installation
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# pacman -S dosfstools grub efibootmgr&lt;/span&gt;
+&lt;span class="c1"&gt;# grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=arch_grub --recheck&lt;/span&gt;
+&lt;span class="c1"&gt;# grub-mkconfig -o /boot/grub/grub.cfg&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Install X windows and gnome
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pacman -S alsa-utils xorg-server xorg-xinit xorg-server-utils
+pacman -S xf86-video-intel xf86-input-synaptics
+pacman -S gnome gnome-extra
+systemctl &lt;span class="nb"&gt;enable&lt;/span&gt; gdm.service
+systemctl &lt;span class="nb"&gt;enable&lt;/span&gt; NetworkManager.service
+&lt;span class="nb"&gt;exit&lt;/span&gt; 
+umount /mnt/boot/EFI
+umount /mnt
+reboot
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-1-3" class="outline-3"&gt;
+&lt;h3 id="sec-1-3"&gt;Software install&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-1-3"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Yaourt installation
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo nano -w /etc/pacman.conf
+remove &lt;span class="c1"&gt;# before mutilib&lt;/span&gt;
+add  
+&lt;span class="o"&gt;[&lt;/span&gt;archlinuxfr&lt;span class="o"&gt;]&lt;/span&gt; 
+&lt;span class="nv"&gt;Server&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; http://repo.archlinux.fr/&lt;span class="nv"&gt;$arch&lt;/span&gt;
+in the last line
+&lt;span class="k"&gt;then&lt;/span&gt; &lt;span class="nb"&gt;exit&lt;/span&gt;
+sudo pacman -Syyuu
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Software installation
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo pacman -S yaourt emacs gnome-tweak-tool firefox libreoffice clementine vlc smplayer vim gimp shotwell blender impressive r osdlyrics stardict gnome-search-tool dropbox
+yaourt wqy-microhei mendeleydesktop  wps acroread acroread-chinese-fonts texstudio
+pacman codecs &lt;span class="o"&gt;(&lt;/span&gt;nedded&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Install textlive as the peking BBS
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-2" class="outline-2"&gt;
+&lt;h2 id="sec-2"&gt;Configuration [配置篇]&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-2"&gt;
+&lt;/div&gt;&lt;div id="outline-container-sec-2-1" class="outline-3"&gt;
+&lt;h3 id="sec-2-1"&gt;Fcitx&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-2-1"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo pacman -S fcitx fcitx-im fcitx-configtool ibus
+sudo cp /usr/bin/ibus-daemon /usr/bin/ibus-daemon.cp
+sudo rm -rf /usr/bin/ibus-daemon
+sudo gsettings &lt;span class="nb"&gt;set&lt;/span&gt; org.gnome.settings-daemon.plugins.keyboard active &lt;span class="nb"&gt;false&lt;/span&gt;
+sudo nano -w .xprofile add
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;GTK_IM_MODULE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;fcitx
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;QT_IM_MODULE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;fcitx
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;XMODIFIERS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"@im=fcitx"&lt;/span&gt;
+yaourt fcitx-googlepinyin fcitx-sogoupinyin
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-2-2" class="outline-3"&gt;
+&lt;h3 id="sec-2-2"&gt;Web to hidden&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-2-2"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;yaourt lantern
+Add new firefox autoproxy server
+&lt;span class="m"&gt;127&lt;/span&gt;.0.0.1 &lt;span class="m"&gt;8787&lt;/span&gt;
+sudo systemctl &lt;span class="nb"&gt;enable&lt;/span&gt; lantern.service
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-2-3" class="outline-3"&gt;
+&lt;h3 id="sec-2-3"&gt;Startdict&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-2-3"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo pacman -S startdict
+cp dict /usr/share/stardict/dic
+cp WyabdcRealPeopleTTS /usr/share/WyabdcRealPeopleTTS
+cp startdict config /home
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-2-4" class="outline-3"&gt;
+&lt;h3 id="sec-2-4"&gt;Samba&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-2-4"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cp /etc/samba/smb.conf.default /etc/samba/smb.conf
+sudo systemctl enable/start smbd.service nmbd.service
+sudo systemctl start/enable cups
+add printer
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-2-5" class="outline-3"&gt;
+&lt;h3 id="sec-2-5"&gt;Bumblebee&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-2-5"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo pacman -S bumblebee mesa nvidia nvidia-settings xf86-video-intel
+sudo gpasswd -a user bumblebee
+sudo systemctl &lt;span class="nb"&gt;enable&lt;/span&gt; bumblebeed.service
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-2-6" class="outline-3"&gt;
+&lt;h3 id="sec-2-6"&gt;Firefox&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-2-6"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cp config
+rm .mozilla/Firefox/9999/.parentlock
+&lt;span class="o"&gt;(&lt;/span&gt;bookmaker add-ons: noscript autopager autoproxy stumbleupon deafaultzoom xnot instantfox flashlock videodownloadhelper greasemonkey allsidebar downloadstatbar zotero firegesture&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-2-7" class="outline-3"&gt;
+&lt;h3 id="sec-2-7"&gt;Dnsmasq: maybe out of data&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-2-7"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo gedit /etc/NetworkManager/dispatcher.d/localhost-prepend
+add
+&lt;span class="c1"&gt;#!/bin/bash                                       &lt;/span&gt;
+&lt;span class="c1"&gt;# Prepend localhost to resolv.conf for dnsmasq&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; ! &lt;span class="k"&gt;$(&lt;/span&gt;grep &lt;span class="m"&gt;127&lt;/span&gt;.0.0.1 /etc/resolv.conf&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+  sed -i &lt;span class="s1"&gt;'1s|^|nameserver 127.0.0.1\n|'&lt;/span&gt; /etc/resolv.conf
+&lt;span class="k"&gt;fi&lt;/span&gt;
+sudo chmod +x /etc/NetworkManager/dispatcher.d/localhost-prepend
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-3" class="outline-2"&gt;
+&lt;h2 id="sec-3"&gt;Questions [问题篇]&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-3"&gt;
+&lt;/div&gt;&lt;div id="outline-container-sec-3-1" class="outline-3"&gt;
+&lt;h3 id="sec-3-1"&gt;GNOME3.6 文件夹默认打开方式关联问题&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-3-1"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Edit /usr/share/applications/audacious.desktop 
+and remove following line:
+&lt;span class="nv"&gt;MimeType&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;inode/directory&lt;span class="p"&gt;;&lt;/span&gt;
+sudo nano /usr/share/applications/mimeinfo.cache
+sudo gedit /usr/share/applications/mimeinfo.cache
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-3-2" class="outline-3"&gt;
+&lt;h3 id="sec-3-2"&gt;Add module auto&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-3-2"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo gedit /etc/modules-load.d/virtio-net.conf
+&lt;span class="c1"&gt;#Load 'virtio-net.ko' at boot.&lt;/span&gt;
+virtio-net
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-3-3" class="outline-3"&gt;
+&lt;h3 id="sec-3-3"&gt;LIWORD start fonts problem&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-3-3"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo gedit /etc/fonts/conf.d/65-nonlatin.conf
+save 
+&lt;span class="k"&gt;then&lt;/span&gt; open LIWORD is ok.
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-3-4" class="outline-3"&gt;
+&lt;h3 id="sec-3-4"&gt;Emacs fcitx&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-3-4"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo nano -w .bashrc add
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;GTK_IM_MODULE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;fcitx
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;QT_IM_MODULE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;fcitx
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;XMODIFIERS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"@im=fcitx"&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><category>Archlinux</category><category>Linux</category><guid>https://lengyueyang.github.io/zh_cn/posts/archlinux-install-and-configurationen/</guid><pubDate>Fri, 05 Feb 2016 11:26:52 GMT</pubDate></item></channel></rss>

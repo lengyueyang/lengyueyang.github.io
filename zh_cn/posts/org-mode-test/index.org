@@ -1,0 +1,25 @@
+#+BEGIN_COMMENT
+.. title: 
+.. slug: 
+.. date:  19:26:52 UTC+08:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+#+TITLE: Org-mode test
+#+DATE: 2016-01-30 
+#+TAGS: Emacs, Org-mode
+#+CATEGORIES: EMACS
+* Orgmode
+** Why orgmode
+
+#+BEGIN_SRC js
+  consol.log("hello");
+#+END_SRC
+** Insert html
+#+BEGIN_EXPORT html
+<!--more-->
+#+END_EXPORT

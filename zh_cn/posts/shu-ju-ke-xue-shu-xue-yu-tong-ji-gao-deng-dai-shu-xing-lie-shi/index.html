@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns#
+article: http://ogp.me/ns/article#
+" lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>数据科学-数学与统计-高等代数-行列式 | 深度识医</title>
+<script src="../../../assets/js/pace.min.js"></script><link href="../../../assets/css/pace.css" rel="stylesheet">
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="../../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (zh_cn)" href="../../rss.xml">
+<link rel="canonical" href="https://lengyueyang.github.io/zh_cn/posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-xing-lie-shi/">
+<!--[if lt IE 9]>
+            <script src="../../../assets/js/html5shiv.min.js"></script>
+            <script src="../../../assets/js/respond.min.js"></script>
+        <![endif]--><meta name="author" content="冷月阳">
+<meta property="og:site_name" content="深度识医">
+<meta property="og:title" content="数据科学-数学与统计-高等代数-行列式">
+<meta property="og:url" content="https://lengyueyang.github.io/zh_cn/posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-xing-lie-shi/">
+<meta property="og:description" content="n 元排列
+
+
+n 个不同正整数的一个全排列称为 n 元排列.
+
+
+
+在 n 元排列 \(a_1, a_2, ⋯, a_n\) 中, 任取一对数 \(a_i,a_j(i &lt; j)\), 如果 \(a_i &lt; a_j\), 那么这一对数构成一个 顺序, 否则, 这对数构成一个 逆序. 一个 n 元排列中逆序的总数称为 逆序数, 记作 \(τ(a_1a_2⋯a_n)\).
+
+
+
+逆序数为奇数的排列称为">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-12-31T19:26:52+08:00">
+<link rel="alternate" hreflang="en" href="../../../posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-xing-lie-shi/">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-info header-panel shadow-z-3" role="navigation"><div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-3">
+            <h1 class="title-blog">
+                <a href="https://lengyueyang.github.io/zh_cn/">
+                        <span id="blog-title">深度识医</span>
+                    </a>
+            </h1>
+          </div>
+          <div class="col-xs-9">
+            <a id="hamburger" class="btn btn-raised" href="javascript:void(0);" onclick="menuToggle();">☰</a>
+          </div>
+        </div>
+      </div>
+<!-- /.container-fluid -->
+</nav><div class="container-fluid main" id="content" role="main">
+        <div class="row">
+            <nav class="col-xs-12 col-sm-3 menu"><ul>
+<li class="withripple"><a href="../../../archive.html">归档</a></li>
+                <li class="withripple"><a href="../../../categories/">标签云</a></li>
+                <li class="withripple"><a href="../../../rss.xml">RSS订阅</a></li>
+
+                    
+                </ul>
+<ul>
+<li>            </li>
+<li><a href="https://lengyueyang.github.io/" rel="alternate" hreflang="en">English</a></li>
+
+                    
+                </ul></nav><div class="posts-material col-xs-12 col-sm-9">
+                <div class="col-xs-12 col-md-11 content-material">
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">数据科学-数学与统计-高等代数-行列式</a></h1>
+<hr>
+<div class="metadata">
+            <span class="byline author vcard">
+                <a href=".">
+                        <i class="mdi-action-face-unlock"></i>
+                    冷月阳
+                </a>
+            </span>
+            <span class="dateline">
+                <a href="." rel="bookmark"><i class="mdi-device-access-time"></i>
+                    <time class="published dt-published" datetime="2017-12-31T19:26:52+08:00" itemprop="datePublished" title="2017-12-31 19:26">2017-12-31 19:26</time></a>
+            </span>
+                <span class="commentline">            <a href="#disqus_thread" data-disqus-identifier="cache/posts/数据科学-数学与统计-高等代数-行列式.html">Comments</a>
+
+</span>
+        </div>
+        
+        <hr></header><div class="e-content entry-content" itemprop="articleBody text">
+    <div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">n 元排列</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+n 个不同正整数的一个全排列称为 <b>n 元排列</b>.
+</p>
+
+<p>
+在 n 元排列 \(a_1, a_2, ⋯, a_n\) 中, 任取一对数 \(a_i,a_j(i &lt; j)\), 如果 \(a_i &lt; a_j\), 那么这一对数构成一个 <b>顺序</b>, 否则, 这对数构成一个 <b>逆序</b>. 一个 n 元排列中逆序的总数称为 <b>逆序数</b>, 记作 \(τ(a_1a_2⋯a_n)\).
+</p>
+
+<p>
+逆序数为奇数的排列称为 <b>奇排列</b>, 逆序数为偶数的排列称为 <b>偶排列</b>. 将一个排列中的两个数字互换, 其余数字位置不变的变换称为一个 <b>对换</b>.
+</p>
+
+<div class="export">
+<p>
+&lt;!–more–&gt;
+</p>
+
+</div>
+
+\begin{thm}[n 元排列定理-1]
+\end{thm}
+<p>
+对换改变 n 元排列的奇偶性.
+</p>
+
+\begin{thm}[n 元排列定理-2]
+\end{thm}
+<p>
+任一 n 元排列与排列 \(123⋯n\) 可以经过一系列对换互变, 并且所做对换次数与这个 n 元排列有相同的奇偶性.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">n 阶行列式的定义</h2>
+<div class="outline-text-2" id="text-2">
+\begin{de}[n 阶行列式完全展开式定义]
+\end{de}
+<p>
+n 阶行列式
+</p>
+\begin{equation*}
+\left|
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; $a_{1n} \\
+&amp; a_{21} \quad &amp; a_{22} \quad &amp; \cdots \quad &amp; a_{2n} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{n1} \quad &amp; a_{n2} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right|
+\end{equation*}
+<p>
+是 \(n!\) 项的代数和, 其中每一项都是位于不同行、不同列的 n 个元素的乘积, 把这 n 个元素以行指标为自然序列排好位置, 当列指标排列是偶排列时, 该项带正号; 是奇排列时, 该项带负号, 即
+</p>
+\begin{equation}
+\left|
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; a_{1n} \\
+&amp; a_{21} \quad &amp; a_{22} \quad &amp; \cdots \quad &amp; a_{2n} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{n1} \quad &amp; a_{n2} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right| = \sum_{j_1j_2 \cdots j_n}(-1)^{\tau (j_1j_2 \cdots j_n)}a_{1j_1}a_{2j_2} \cdots a_{nj_n}
+\end{equation}
+<p>
+其中 \(j_1j_2 ⋯ j_n\) 是 n 元排列, (<a href="#n">1</a>)式称为 n 阶行列式的 <b>完全展开式</b> .
+</p>
+
+<p>
+令
+</p>
+\begin{equation}
+A = \left\{
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; $a_{1n} \\
+&amp; a_{21} \quad &amp; a_{22} \quad &amp; \cdots \quad &amp; a_{2n} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{n1} \quad &amp; a_{n2} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right\}
+\end{equation}
+<p>
+则 n 阶行列式 (<a href="#n">1</a>)也称为 n 级矩阵 A 的行列式, 简记作 \(|A|\)或者\(det\,A\).
+</p>
+
+<p>
+主对角线下方元素全为 0 的 n 阶行列式称为 <b>上三角形行列式</b>, n 阶上三角形行列式的值等于它主对角线上 n 个元素的乘积.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">行列式的性质</h2>
+<div class="outline-text-2" id="text-3">
+\begin{proposition}[行列式性质-1]
+\end{proposition}
+<p>
+行列互换, 行列式值不变, 即
+</p>
+\begin{equation}
+\left|
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; a_{1n} \\
+&amp; a_{21} \quad &amp; a_{22} \quad &amp; \cdots \quad &amp; a_{2n} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{n1} \quad &amp; a_{n2} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right| = \left|
+\begin{split}
+&amp; a_{11} \quad &amp; a_{21} \quad &amp; \cdots \quad &amp; a_{n1} \\
+&amp; a_{12} \quad &amp; a_{22} \quad &amp; \cdots \quad &amp; a_{n2} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{1n} \quad &amp; a_{2n} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right|
+\end{equation}
+
+\begin{proposition}[行列式性质-2]
+\end{proposition}
+<p>
+行列式一行的公因子可以提出去, 即
+</p>
+\begin{equation}
+\left|
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; a_{1n} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; ka_{i1} \quad &amp; ka_{i2} \quad &amp; \cdots \quad &amp; ka_{in} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{n1} \quad &amp; a_{n2} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right| = k \left|
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; a_{1n} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{i1} \quad &amp; a_{i2} \quad &amp; \cdots \quad &amp; a_{in} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{n1} \quad &amp; a_{n2} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right|
+\end{equation}
+
+\begin{proposition}[行列式性质-3]
+\end{proposition}
+<p>
+行列式中若有某一行是两组数的和, 则次行列式等于两个行列式的和, 这两个行列式的这一行分别是第一组数和第二组数, 而其余各行与原来行列式的相应各行相同. 即
+</p>
+\begin{equation}
+\left|
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; a_{1n} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; b_1 + c_1 \quad &amp; b_2 + c_2 \quad &amp; \cdots \quad &amp; b_n + c_n \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{n1} \quad &amp; a_{n2} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right| = \left|
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; a_{1n} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; b_1 \quad &amp; b_2 \quad &amp; \cdots \quad &amp; b_n \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{n1} \quad &amp; a_{n2} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right| + \left|
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; a_{1n} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; c_1 \quad &amp; c_2 \quad &amp; \cdots \quad &amp; c_n \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{n1} \quad &amp; a_{n2} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right|
+\end{equation}
+
+\begin{proposition}[行列式性质-4]
+\end{proposition}
+<p>
+两行互换, 行列式反号. 即
+</p>
+\begin{equation}
+\left|
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; a_{1n} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{i1} \quad &amp; a_{i2} \quad &amp; \cdots \quad &amp; a_{in} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{k1} \quad &amp; a_{k2} \quad &amp; \cdots \quad &amp; a_{kn} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{n1} \quad &amp; a_{n2} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right| =  \left|
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; a_{1n} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{k1} \quad &amp; a_{k2} \quad &amp; \cdots \quad &amp; a_{kn} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{i1} \quad &amp; a_{i2} \quad &amp; \cdots \quad &amp; a_{in} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{n1} \quad &amp; a_{n2} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right|
+\end{equation}
+
+\begin{proposition}[行列式性质-5]
+\end{proposition}
+<p>
+两行相同, 行列式为 0.
+</p>
+
+\begin{proposition}[行列式性质-6]
+\end{proposition}
+<p>
+两行成比例, 行列式为 0.
+</p>
+
+\begin{proposition}[行列式性质-7]
+\end{proposition}
+<p>
+把一行的倍数加到另一行上, 行列式的值不变. 即
+</p>
+\begin{equation}
+\left|
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; a_{1n} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{i1} \quad &amp; a_{i2} \quad &amp; \cdots \quad &amp; a_{in} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{k1} + la_{i1} \quad &amp; a_{k2}  + la_{i2} \quad &amp; \cdots \quad &amp; a_{kn} + la_{in}  \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{n1} \quad &amp; a_{n2} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right| =  \left|
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; a_{1n} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{i1} \quad &amp; a_{i2} \quad &amp; \cdots \quad &amp; a_{in} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{k1} \quad &amp; a_{k2} \quad &amp; \cdots \quad &amp; a_{kn} \\
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\
+&amp; a_{n1} \quad &amp; a_{n2} \quad &amp; \cdots \quad &amp;a_{nn} \\
+\end{split}
+\right|
+\end{equation}
+
+
+<div class="figure">
+<p><img src="MSimg/MS-3-3-3-1.png" alt="MS-3-3-3-1.png"></p>
+<p><span class="figure-number">Figure 1:</span> 行列式性质图</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">行列式按一行(列)展开</h2>
+<div class="outline-text-2" id="text-4">
+\begin{de}[余子式与代数余子式定义]
+\end{de}
+<p>
+n 阶行列式 \(|A|\) 中, 划去第 i 行和第 j 列, 剩下的元素按原来次序组成 \(n-1\) 阶行列式称为矩阵 A 的 \((i, j)\) 元的 <b>余子式</b>, 记作 \(M_{ij}\). 令 \(A_{ij}=(-1^{i+j}M_{ij})\), 称 \(A_{ij}\) 是 A 的 \((i, j)\) 元的 <b>代数余子式</b>.
+</p>
+
+\begin{thm}[n 阶行列式行展开定理]
+\end{thm}
+<p>
+n 阶行列式 \(|A|\) 等于它的第 i 行元素与自己的代数余子式的乘积之和, 即
+</p>
+\begin{equation}
+  |A| = a_{i1}A_{i1} + a_{i2}A_{i2} + \cdots + a_{in}A_{in} = \sum_{j=1}^n a_{ij}A_{ij}
+\end{equation}
+<p>
+其中 \(i \in {1,2,⋯,n}\), (<a href="#n">1</a>) 称为 n 阶行列式按第 i 行的展开式.
+</p>
+
+\begin{thm}[n 阶行列式列展开定理]
+\end{thm}
+<p>
+n 阶行列式 \(|A|\) 等于它的第 j 列元素与自己的代数余子式的乘积之和, 即
+</p>
+\begin{equation}
+  |A| = a_{1j}A_{1j} + a_{2j}A_{2j} + \cdots + a_{nj}A_{nj} = \sum_{l=1}^n a_{lj}A_{lj}
+\end{equation}
+<p>
+其中 \(i \in {1,2,⋯,n}\), (<a href="#n">1</a>) 称为 n 阶行列式按第 j 列的展开式.
+</p>
+
+\begin{thm}[n 阶行列式展开定理-3]
+\end{thm}
+<p>
+n 阶行列式 \(|A|\) 等于它的第 i 行元素与第 k 行(\(k \neq i\)) 相应元素的代数余子式的乘积之和等于 0, 即
+</p>
+\begin{equation}
+  a_{i1}A_{k1} + a_{i2}A_{k2} + \cdots + a_{in}A_{kn} = 0
+\end{equation}
+
+\begin{thm}[n 阶行列式展开定理-4]
+\end{thm}
+<p>
+n 阶行列式 \(|A|\) 等于它的第 j 列元素与第 l 列(\(l \neq j\)) 相应元素的代数余子式的乘积之和等于 0, 即
+</p>
+\begin{equation}
+a_{1j}A_{1l} + a_{2j}A_{2l} + \cdots + a_{nj}A_{nl} = 0
+\end{equation}
+</div>
+</div>
+
+
+
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">克莱姆法则(Cramer)</h2>
+<div class="outline-text-2" id="text-5">
+\begin{thm}[克莱姆法则定理-1]
+\end{thm}
+<p>
+数域 K 上的 n 元线性方程组有唯一解的充分必要条件是它的系数行列式不等于 0.
+</p>
+
+<p>
+n 级矩阵的初等行变换不改变他们行列式的非零性质.
+</p>
+
+\begin{cor}[克莱姆法则定理-1 推论]
+\end{cor}
+<p>
+数域 K 上 n 个方程的 n 元齐次线性方程组只有零解的充分必要条件是它的系数行列式不等于 0.
+</p>
+
+\begin{thm}[克莱姆法则定理-2]
+\end{thm}
+<p>
+n 个方程的 n 元线性方程组的系数行列式 \(|A| ≠ 0\) 时, 它的唯一解是
+\[
+\left ( \frac{|B_1|}{|A|},  \frac{|B_2|}{|A|}, ⋯,  \frac{|B_n|}{|A|} \right)
+\]
+</p>
+
+<p>
+定理 1 的充分性和定理 2 合起来称为 <b>克莱姆(Cramer)法则</b>.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6">行列式按 k 行(列)展开</h2>
+<div class="outline-text-2" id="text-6">
+\begin{de}[k 阶子式定义]
+\end{de}
+<p>
+n 阶行列式 \(|A|\) 中任意取定 k 行, k 列 \(1 \le k &lt; n\), 位于这些行和列的交叉处的 \(k^2\) 个元素按照原来的派发组成的 k 阶行列式, 称为 \(|A|\) 的一个 <b>k 阶子式</b>. 取定 \(|A|\) 的第 \(i_1, i_2, ⋯, i_k(i_1 &lt; i_2 &lt; ⋯ <i_k j_2 j_k k>
+\begin{equation}
+A \left(
+\begin{split}
+i_1&amp;, i_2, ⋯, i_k \\
+j_1&amp;, j_2, ⋯, j_k
+\end{split}
+\right)
+\end{equation}
+<p>
+划去这个 k 阶子式所在的行和列, 剩下的元素按原来的排法组成 \((n-k)\) 的行列式, 称为 子式 (<a href="#k">1</a>) 的余子式.
+</p>
+
+\begin{thm}[Laplace 定理]
+\end{thm}
+<p>
+在 n 阶行列式 \(|A|\) 中, 取定第 \(i_1, i_2, ⋯, i_k(i_1 &lt; i_2 &lt; ⋯ <i_k k>
+\begin{equation}
+  |A| = \sum_{1 \leqslant j_1 &lt; \cdots &lt; j_k \leqslant n} A \left(
+\begin{split}
+i_1, i_2, ⋯, i_k \\
+j_1, j_2, ⋯, j_k \\
+\end{split}
+\right) 
+(-1)^{(i_1+ \cdots +i_k) + (j_1 + \cdots + j_k)} A \left(
+\begin{split}
+i_1^{'}, i_2^{'},  ⋯ , i_k^{'} \\
+j_1^{'}, j_2^{'},  ⋯ , j_k^{'} \\
+\end{split}
+\right)
+\end{equation}
+</i_k></p></i_k></p>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav></nav></aside><section class="comments"><h2>
+<i class="mdi-communication-forum"></i>注释</h2>
+        <hr>
+<div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="lengyueyang",
+            disqus_url="https://lengyueyang.github.io/zh_cn/posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-xing-lie-shi/",
+        disqus_title="\u6570\u636e\u79d1\u5b66-\u6570\u5b66\u4e0e\u7edf\u8ba1-\u9ad8\u7b49\u4ee3\u6570-\u884c\u5217\u5f0f",
+        disqus_identifier="cache/posts/数据科学-数学与统计-高等代数-行列式.html",
+        disqus_config = function () {
+            this.language = "zh_cn";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="lengyueyang";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+            </div>
+        </div>
+        <button class="btn btn-fab btn-raised btn-material-green btn-footer" data-toggle="modal" data-target="#footer-dialog">
+            <i class="mdi-communication-message"></i>
+        </button>
+        <div id="footer-dialog" class="modal fade" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">深度识医 credits</h4>
+              </div>
+              <div class="modal-body">
+                    Contents © 2017         <a href="mailto:maoxiaowei1988@qq.com">冷月阳</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+                    
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Ok</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="source-button">
+    <a class="btn btn-fab btn-raised btn-material-indigo" target="_blank" href="index.org" title="源代码">
+        <i class="mdi-file-cloud-download"></i>
+    </a>
+
+        </div>
+        <div class="kc_fab_wrapper"></div>
+</div>
+
+
+            <script src="../../../assets/js/all-nocdn.js"></script><script src="../../../assets/js/colorbox-i18n/jquery.colorbox-zh-CN.js"></script><script>
+                var links = [
+                        {
+                            "bgcolor": "#F44336",
+                            "icon": "<i class='fa fa-share-square'></i>",
+                        },
+                        {
+                            "url": "https://github.com/lengyueyang",
+                            "bgcolor": "#666666",
+                            "color": "#fffff",
+                            "icon": "<i class='fa fa-github-square'></i>",
+                        },
+                        {
+                            "url": "https://www.linkedin.com/in/lengyueyang",
+                            "bgcolor": "#3B5998",
+                            "color": "#fffff",
+                            "icon": "<i class='fa fa-linkedin-square'></i>",
+                        },
+                ];
+
+            $(document).ready(function() {
+                // This command is used to initialize some elements and make them work properly
+                $.material.init();
+                    $('.kc_fab_wrapper').kc_fab(links);
+            });
+
+            $(window).on("resize", function() {
+                if($(window).width() > 767) {
+                  $("html, body").height($(window).height());
+                  $(".main, .menu").height($(window).height() - $(".header-panel").outerHeight() - 76 );
+                  $(".posts-material").height($(window).height());
+                } else {
+                  $("html, body").css('height', '');
+                  $(".main, .menu").css('height', '');
+                  $(".posts-material").css('height', '');
+                }
+            }).trigger("resize");
+
+            function menuToggle() {
+                $("nav.menu, ul").toggleClass('responsive', '');
+            }
+        </script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>
