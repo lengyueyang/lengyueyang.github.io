@@ -34,44 +34,8 @@
   <lastmod>2017-12-31T05:08:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://lengyueyang.github.io/en/categories/archlinux.xml</loc>
-  <lastmod>2017-12-31T04:44:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://lengyueyang.github.io/en/categories/cat_emacs.xml</loc>
-  <lastmod>2017-12-31T04:44:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://lengyueyang.github.io/en/categories/cat_linux.xml</loc>
-  <lastmod>2017-12-31T04:44:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://lengyueyang.github.io/en/categories/configuration.xml</loc>
-  <lastmod>2017-12-31T04:44:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://lengyueyang.github.io/en/categories/linux.xml</loc>
-  <lastmod>2017-12-31T04:44:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://lengyueyang.github.io/en/categories/shadowsocks.xml</loc>
-  <lastmod>2017-12-31T04:44:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://lengyueyang.github.io/en/categories/spacemacs.xml</loc>
-  <lastmod>2017-12-31T04:44:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://lengyueyang.github.io/en/galleries/rss.xml</loc>
-  <lastmod>2017-12-31T04:42:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://lengyueyang.github.io/en/rss.xml</loc>
-  <lastmod>2017-12-31T04:44:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://lengyueyang.github.io/galleries/rss.xml</loc>
-  <lastmod>2017-12-31T05:06:00Z</lastmod>
+  <lastmod>2017-12-31T10:34:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://lengyueyang.github.io/rss.xml</loc>
@@ -79,7 +43,7 @@
  </sitemap>
  <sitemap>
   <loc>https://lengyueyang.github.io/sitemap.xml</loc>
-  <lastmod>2017-12-31T05:08:00Z</lastmod>
+  <lastmod>2017-12-31T10:34:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://lengyueyang.github.io/zh_cn/categories/archlinux.xml</loc>
@@ -111,7 +75,7 @@
  </sitemap>
  <sitemap>
   <loc>https://lengyueyang.github.io/zh_cn/galleries/rss.xml</loc>
-  <lastmod>2017-12-31T05:06:00Z</lastmod>
+  <lastmod>2017-12-31T10:34:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://lengyueyang.github.io/zh_cn/rss.xml</loc>
