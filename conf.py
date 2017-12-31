@@ -94,7 +94,7 @@ DEFAULT_LANG = "en"
 TRANSLATIONS = {
     DEFAULT_LANG: "",
 #    "en": "./en",
-    "zh_tw": "./zh_tw",
+    "zh_cn": "./zh_cn",
 }
 
 # What will translated input files be named like?
@@ -247,9 +247,9 @@ TIMEZONE = "Asia/Shanghai"
 # LOCALE_DEFAULT = locale to use for languages not mentioned in LOCALES; if
 # not set the default Nikola mapping is used.
 
-# LOCALES = {}
+LOCALES = {"en": "en_US.utf8", "zh_cn": "zh_CN.utf8"}
 # LOCALE_FALLBACK = None
-# LOCALE_DEFAULT = None
+LOCALE_DEFAULT = None
 
 # One or more folders containing files to be copied as-is into the output.
 # The format is a dictionary of {source: relative destination}.
