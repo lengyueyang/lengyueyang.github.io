@@ -92,7 +92,7 @@ DEFAULT_LANG = "zh_cn"
 # The format is {"translationcode" : "path/to/translation" }
 # the path will be used as a prefix for the generated pages location
 TRANSLATIONS = {
-    DEFAULT_LANG: "",
+    DEFAULT_LANG: "./zh_cn",
    "en": "./en",
     # "zh_cn": "./zh_cn",
 }

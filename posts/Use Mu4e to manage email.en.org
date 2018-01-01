@@ -1,7 +1,7 @@
 #+BEGIN_COMMENT
 .. title: Use Mu4e to manage email
 .. slug: 
-.. date:  19:26:52 UTC+08:00
+.. date: 2017-02-26 19:26:52 UTC+08:00
 .. tags: Emacs, Mu4e, Offlineimap
 .. category: EMACS
 .. link: 
