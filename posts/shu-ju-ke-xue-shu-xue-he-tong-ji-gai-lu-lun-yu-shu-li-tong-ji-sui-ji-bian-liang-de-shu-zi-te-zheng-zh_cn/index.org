@@ -1,0 +1,305 @@
+#+BEGIN_COMMENT
+.. title: 数据科学-数学和统计-概率论与数理统计-随机变量的数字特征
+.. slug: 
+.. date: 2017-05-29 19:26:52 UTC+08:00
+.. tags: Statistics, mathjax
+.. category: DATA SCIENTIST
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+#+TITLE: 数据科学-数学和统计-概率论与数理统计-随机变量的数字特征
+#+DATE: 2017-05-29
+#+LAYOUT: post
+#+TAGS: Statistics
+#+CATEGORIES: DATA SCIENTIST
+
+
+* 随机变量的数字特征
+** 数学期望（均值）与中位数
+
+*** 数学期望的定义
+#+name: 离散型随机变量数学期望
+\begin{de}[离散型随机变量数学期望]
+\end{de}
+设离散型随机变量 X 只取有限个可能值 \(a_1, \dots , a_n\) , 其概率分布 \(P(X = a_i) = p_i \, (i = 1, \dots ,m)\) ,则 X 的数学期望记作 \(E(X) or EX\) 定义为 \[E(X) = a_1p_1 + \dots + a_np_n\] ,若 n 取无限个值，若下式收敛，则称其为 X 的数学期望，数学期望也常称为平均，这里平均是加权平均
+
+{{{TEASER_END}}}
+
+#+name: 离散型随机变量数学期望公式
+\begin{equation}
+E(X) = \sum_{i = 1}^\infty a_ip_i
+\end{equation}
+
+#+name: 连续性随机变量数学期望
+\begin{de}[连续性随机变量数学期望]
+\end{de}
+连续型随机变量 X 的密度函数是 \(f(x)\) ， 如果下式收敛，则称 \(E(X)\) 为 X 的数学期望
+#+name: 连续性随机变量数学期望公式
+\begin{equation}
+  E(X) = \int_{-\infty}^\infty xf(x) dx
+\end{equation}
+
+几个重要分布的数学期望
+- 泊松分布的数学期望 是 λ (指定时间内发生时间的平均次数)
+- 二项分布的数学期望 是 np
+- 负二项分布的数学期望是 \(r(1-p)p\)
+- 均匀分布的数学期望是 \(\frac{a+b}{2}\)
+- 指数分布的数学期望是 \(λ^{-1}\) (在寿命分析中是平均寿命)
+- 正太分布的数学期望是 μ
+
+数学期望由随机变量的分布完全决定，但在某些问题中，难于决定某些变量的分布如何，但有相当的根据（经验或理论）对期望值提出一些假定甚至有不少的了解；当需要通过观察或试验取得数据已经行估计时，估计随机变量的数字特征要比估计其分布容易且确切
+
+在理论和应用中重要原因：本身含义；具备的良好性质，如工人的工资，容易知道其均值，单分布未知
+
+*** 数学期望的性质
+#+name: 数学期望性质-1
+\begin{thm}[数学期望性质-1]
+\end{thm}
+若随机变量 \(X_1, \dots , X_n\) 的数学期望存在，则其和的期望等于各变量的期望之和，如下式
+#+name: 数学期望性质公式-1
+\begin{equation}
+E(X_1 + \dots + X_n) = E(X_1) + \dots + E(X_n)
+\end{equation}
+
+#+name: 数学期望性质-2
+\begin{thm}[数学期望性质-2]
+\end{thm}
+若独立随机变量 \(X_1, \dots , X_n\) 的数学期望存在，则其积的期望等于各变量的期望之积，如下式
+#+name: 数学期望性质公式-2
+\begin{equation}
+E(X_1 \dots X_n) = E(X_1)  \dots  E(X_n)
+\end{equation}
+
+#+name: 数学期望性质-3
+\begin{thm}[数学期望性质-3]
+\end{thm}
+若随机变量 X 为离散型，有分布 \(P(X = a_i) = p_i \quad (i = 1, \dots , n)\) ,或者为连续型，有概率密度函数 \(f(x)\) ,则有下式
+#+name: 数学期望性质公式离散型-3
+\begin{equation}
+E(g(X)) = \sum_ig(a_i)p_i \quad (if \sum_ig(a_i)p_i < ∞)
+\end{equation}
+#+name: 数学期望性质公式连续型-3
+\begin{equation}
+  E(g(X)) = \int_{-\infty}^\infty g(x)f(x)dx \quad (if \int_{-\infty}^\infty |g(x)|f(x)dx < \infty)
+\end{equation}
+
+统计三大分布的期望：
+- \(X \sim \chi_n^2, \, E(X) = n\) 
+- \(X \sim t_n, \, E(X) = 0 \quad (n > 1)\) 
+- \(X \sim F_{m,n}, \, E(X) = n(n-2) \quad (n >2)\) 
+
+*** 条件数学期望（条件均值）
+条件数学期望公式
+#+name: 条件数学期望公式
+\begin{equation}
+E(Y|x) = \int_{-\infty}^\infty yf(y|x)dy
+\end{equation}
+
+意义：反映了随着 X 取值 x 的变化，Y 的平均变化情况如何，如对 \((X, Y) \sim N(a, b, σ_1^2, σ_2^2, \rho)\) ,在给定 \(X = x\) 条件下的正态分布为 \(N(b + \rho \sigma_2\sigma_1^{-1}(x_1 - a), (1-\rho^2)σ_2^2)\) ，故 \[E(Y|x) = b + \rho \sigma_2\sigma_1^{-1}(x_1 - a)\]
+
+期望的条件数学期望公式
+#+name: 期望条件数学期望公式
+\begin{equation}
+\begin{split}
+E(Y) = \int_{-\infty}^\infty E(Y|x)f_1(x)dx \\
+E(Y) = \int_{-\infty}^\infty g(x)f_1(x)dx \quad (g(x) = E(Y|x)) \\
+E(Y) = E[E(Y|x)]
+\end{split}
+\end{equation}
+
+上述最后一个式子可以叙述为：一个变量 Y 的期望，等于其条件期望的期望(离散、连续)
+
+在统计学上，常把条件期望 \(E(Y|x)\) 作为 x 的函数，称为 Y 对 X 的“回归函数”，“回归分析”即关于回归函数的统计研究
+
+变量 Y 的（无条件）期望 = Y 的无条件期望 \(E(Y|x)\) 对 x 取加权平均，x 的权与变量 X 在 x 点的概率密度称比例
+
+*** 中位数
+#+name: 中位数定义
+\begin{de}[中位数定义]
+\end{de}
+设连续随机变量 X 的分布函数为 \(F(x)\) ,则满足下式的数 m 称为 X 或者分布 F 的中位数
+#+name: 中位数公式
+\begin{equation}
+P(X ⩽ m) = F(m) = 1/2
+\end{equation}
+
+和数学期望一样，中位数用于刻画一个随机变量 X 的平均取值的数学特征
+
+与数学期望相比的优点：受个别特大或特小值的影响很小；中位数总存在
+
+在理论和应用中数学期望重要性超过中位数的原因：均值有很多优良的性质；中位数不唯一且离散型变量中位数不完全符合“中位”含义
+
+** 方差与钜
+
+*** 方差和标准差
+#+name: 方差定义
+\begin{de}[方差定义]
+\end{de}
+X 为随机变量，其分布为 F，则 \(Var(X)\)(见下式) 称为 X(或分布 F)的方差，其平方根(取正值)称为标准差
+#+name: 方差定义公式
+\begin{equation}
+Var(X) = E(X - EX)^2 = E(X^2) - (EX)^2
+\end{equation}
+
+方差的数学性质：
+#+name: 方差的数学性质-1
+\begin{thm}[方差的数学性质-1]
+\end{thm}
+- 常数的方差是 0
+- 若 c 为常数，则 \(Var(X + c) = Var(X)\)
+- 若 c 为常数，则 \(Var(cX) = c^2Var(X)\)
+#+name: 方差的数学性质-2
+\begin{thm}[方差的数学性质-2]
+\end{thm}
+独立随机变量之和的方差等于各变量的方差之和，公式如下
+#+name: 方差的数学性质公式-2
+\begin{equation}
+Var(X_1 + \dots + X_n) = Var(X_1) + \dots + Var(X_n)
+\end{equation}
+
+方差是刻画随机变量在其中心附近散布程度的数字特征之一
+
+平均绝对差是刻画随机变量散布度的数字特征之一
+
+几个重要分布的数学期望
+- 泊松分布的数学方差是 λ (指定时间内发生时间的平均次数)
+- 二项分布的数学方差是 \(np(1-p)\)
+- 均匀分布的数学方差是 \(\frac{(b-a)^2}{12}\)
+- 指数分布的数学方差是 \(λ^{-2}\) 
+- 正太分布的数学方差是 \(σ^2\)
+
+统计三大分布的期望：
+- \(X \sim \chi_n^2, \, var(X) = 2n\) 
+- \(X \sim t_n, \, Var(X) = n ∕ (n-2) \quad (n > 2)\) 
+- \(X \sim F_{m,n}, \, Var(X) = 2n^2(m+n-2) ∕ [m(n-2)^2(n-4)] \quad (n > 4)\) 
+
+*** 钜
+#+name: 矩定义
+\begin{de}[矩定义]
+\end{de}
+设 X 为随机变量，c 为常数，k 为正整数，则量 \(E[(X-c)^k]\) 称为 X 关于 c 点的 k 阶矩
+
+矩比较重要的性质
+- \(c = 0\) ， \(α^k = E(X^k)\) 称为 X 的 k 阶原点矩
+- \(c = E(X)\) ， \(\mu^k = E[(X-EX)^k]\) 称为 X 的 k 阶中心距
+
+一阶原点矩为期望；一阶中心距为 0；二阶中心距为方差
+
+统计学上，高于 4 阶的钜极少使用
+
+三阶中心距：
+衡量分布是否有偏：对称为 0；大于 0 为正偏或右偏；小于 0 为负偏或左偏
+偏度系数为 \(\beta_1\) ，则
+#+name: 偏度系数公式
+\begin{equation}
+\beta_1 = u_3 ∕ u_2^(3/2)
+\end{equation}
+
+四阶中心距：
+衡量分布（密度）在均值附近的陡峭程度如何。越陡峭值越小
+峰度系数为 \(\beta_2\) 则
+#+name: 峰度系数公式
+\begin{equation}
+\beta_2 = u_4 ∕ u_2^2
+\end{equation}
+
+** 协方差与相关系数
+#+name: 协方差定义
+\begin{de}[协方差定义]
+\end{de}
+设 \(X, Y\) 是二维随机变量，X，Y 本身都是一维随机变量，记 \[E(X) = m_1, E(Y) = m_2, Var(X) = σ_1^2, var(Y) = σ_2^2\] , 则称 \(E[(X-m_1)(Y-m_2)]\) 为 \(X, Y\) 的协方差，记为 \(Cov(X, Y)\) ，有 \(Cov(X, Y) = Cov(Y, X)\) ，且有 \[Cov(c_1X + c_2, c_3Y +c_4) = c_1c_3Cov(X, Y)\] , \[Cov(X, Y) = E(XY) - m_1m_2\]
+
+#+name: 协方差性质
+\begin{thm}[协方差性质]
+\end{thm}
+- 若 X，Y 独立，则 \(Cov(X, Y) = 0\) 
+- \([Cov(X, Y)]^2 ⩽ σ_1^2σ_2^2\) , 等号成立当且仅当 X，Y 之间有严格的线性关系(即：存在常数 a，b 使得 Y=a+bX)
+
+协方差意义：多维随机变量的数字特征，反应分量之间的关系
+
+#+name: 相关系数定义
+\begin{de}[相关系数定义]
+\end{de}
+设 \(X, Y\) 是二维随机变量，X，Y 本身都是一维随机变量，记 \[E(X) = m_1, E(Y) = m_2, Var(X) = σ_1^2, var(Y) = σ_2^2\] , 则称 \(Cov(X, Y) ∕ (σ_1σ_2)\) 为 \(X, Y\) 的相关系数，并记为 \(Corr(X, Y)\)
+
+#+name: 相关系数性质
+\begin{thm}[相关系数性质]
+\end{thm}
+- 若 X，Y 独立，则 \(Corr(X, Y) = 0\) 
+- \(|Corr(X, Y)]| ⩽ 1\) , 等号成立当且仅当 X，Y 之间有严格的线性关系(即：存在常数 a，b 使得 Y=a+bX)
+
+相关系数意义：标准尺度下的协方差
+
+不相关和独立间的关系：Corr(X,Y)=0，表示 X 和 Y 不相关，X 和 Y 相关不一定独立，但独立一定相关
+
+相关系数也称为线性相关系数。若 0<abs(Cov(X,Y))<1，则表示：X,Y 之间有一定程度的线性关系而非严格的线性关系
+
+“线性相关”的最小二乘解释： 由 \[m_2 = bm_1 + a, b = σ_1^{-1}\sigma_2Corr(X, Y)\]
+
+二维正态分布的相关系数特性：
+- 若 \((X, Y)\) 为二维正态分布，则允许用任何函数 M(X) 去逼近 Y，所得到的结果与线性逼近结果类似，而线性逼近的程度完全取决于相关系数
+- 若 \((X, Y)\) 为二维正态分布，由  \(Corr(X, Y) = 0\) 可以推出 X，Y 独立，即在这种情况下，独立与相关等同
+
+** 大数定理和中心极限定理
+    
+*** 大数定理
+#+name: 大数定理定义
+\begin{thm}[大数定理定义]
+\end{thm}
+设 \(X_1, X_2, \dots , X_n\) 是独立同分布的随机变量，记他们的公共均值为 a，又设他们的方差存在并记为 \(σ^2\) , 则对任意给定的 \(ε > 0\) , 有下式成立，指出了 “当 n 很大时， \(\overbar(X)\) 接近于 a”，在概率论中叫做 " \(\overbar(X)\) 依概率收敛于 a"
+#+name: 大数定理公式
+\begin{equation}
+  \lim_{n\to\infty} P(|\overbar(X) - a| \geqslant \varepsilon) = 0
+\end{equation}
+上式一个重要的推广是伯努利大数定理，即 “频率收敛于概率”，公式如下
+#+name: 伯努利大数定理公式
+\begin{equation}
+  \lim_{n\to\infty} P(p_n - p| \geqslant \varepsilon) = 0
+\end{equation}
+
+大数定理的证明需要用到马尔科夫不等式和切比雪夫不等式，如下
+若 Y 为只能取非负值的随机变量， \(Var(Y)\) 存在，则对仍给常数 \(ε > 0\) , 有
+
+马尔科夫不等式
+#+name: 马尔科夫不等式
+\begin{equation}
+P(Y ⩾ ε) ⩽ E(Y) ∕ ε
+\end{equation}
+切比雪夫不等式
+#+name: 切比雪夫不等式
+\begin{equation}
+P(|Y-EY| ⩾ ε) ⩽ Var(Y) ∕ ε^2
+\end{equation}
+
+*** 中心极限定理
+#+name: 林徳伯格定理
+\begin{thm}[林徳伯格定理]
+\end{thm}
+设 \(X_1, X_2, \dots , X_n\) 为独立同分布的随机变量， \(E(X_i) = a_i, Var(X_i) = σ^2 (σ^2 > 0)\) , 则对任何实数 x，有下式成立，其中 \(\Phi(x)\) 是标准正态分布 \(N(0, 1)\) 的分布函数
+#+name: 林徳伯格定理公式
+\begin{equation}
+  \lim_{n\to\infty} P\left( \frac{1}{\sqrt{n}σ}(X_1 + \dots + X_n - na) \leqslant x \right) = \Phi(x)
+\end{equation}
+虽则在一般情况很难求出 \(X_1, X_2, \dots , X_n\) 的分布的确切形式，但当 n 很大时，可通过正态分布求其近似值
+
+#+name: 棣莫弗-拉普拉斯定理
+\begin{thm}[棣莫弗-拉普拉斯定理
+\end{thm}
+设 \(X_1, X_2, \dots , X_n\) 为独立同分布的随机变量， \(X_i\) 的分布是 \[P(X_i =1) = p, \quda P(X_i = 0) = 1-p \quad (0<p<1)\] , 则对任何实数 x，有下式成立，其中 \(\Phi(x)\) 是标准正态分布 \(N(0, 1)\) 的分布函数
+#+name: 棣莫弗-拉普拉斯定理公式
+\begin{equation}
+  \lim_{n\to\infty} P\left( \frac{1}{\sqrt{np(1-p)}}(X_1 + \dots + X_n - np) \leqslant x \right) = \Phi(x)
+\end{equation}
+
+[[棣莫弗-拉普拉斯定理][棣莫弗-拉普拉斯定理]] 是 [[林徳伯格定理][林徳伯格定理]] 的特例，是用正态分布去逼近二项分布(当 p 固定，n 很大时，np 值很大)，也可以用泊松分布去逼近二项分布(p 很小，np = λ 不太大时)，二者相同点是 n 值很大
+
+若 \(t_1, t_2\) 是两个正整数， \(t_1 < t_2\) ， 则当 n 相当大时，按照 [[棣莫弗-拉普拉斯定理公式]] ，近似有 \[P(t_1 ⩽ X_1 + \dots + X_n ⩽ t_2) = Φ(y_2) - \Phi(y_1)\] 其中 \[y_i = (t_i - np) ∕ \sqrt{np(1-p) \quad (i = 1, 2)}\]
+若将 \(y_1, y_2\) 修正为 \[y_1 = \left( t_1 - \frac{1}{2} -np\right) ⧸ \sqrt{np(1-p)}\]   \[y_2 = \left( t_2 + \frac{1}{2} -np\right) ⧸ \sqrt{np(1-p)}\] 再利用公式，则可提高精度
+
+中心极限定理的推广方向：独立不同分布情形；非独立情形；由中心极限定理引起的误差；大偏差问题
+
+** 例题
+** 参考网页
+http://blog.csdn.net/zhang22huan/article/details/8631101

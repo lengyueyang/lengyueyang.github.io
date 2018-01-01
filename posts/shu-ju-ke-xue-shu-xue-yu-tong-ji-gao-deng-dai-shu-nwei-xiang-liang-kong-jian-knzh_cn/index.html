@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns#
+article: http://ogp.me/ns/article#
+" lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>数据科学-数学与统计-高等代数- n 维向量空间 n 维向量空间 \(k^n\) | 深度识医</title>
+<script src="../../assets/js/pace.min.js"></script><link href="../../assets/css/pace.css" rel="stylesheet">
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="../../en/rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (zh_cn)" href="../../rss.xml">
+<link rel="canonical" href="https://lengyueyang.github.io/posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-nwei-xiang-liang-kong-jian-knzh_cn/">
+<!--[if lt IE 9]>
+            <script src="../../assets/js/html5shiv.min.js"></script>
+            <script src="../../assets/js/respond.min.js"></script>
+        <![endif]--><meta name="author" content="冷月阳">
+<link rel="prev" href="../python-pyenv-methodszh_cn/" title="Python-Pyenv 使用方法总结" type="text/html">
+<link rel="next" href="../archlinux-shadowsocks/" title="Archlinux Shadowsocks 配置" type="text/html">
+<meta property="og:site_name" content="深度识医">
+<meta property="og:title" content="数据科学-数学与统计-高等代数- n 维向量空间 n 维向量空间 \(k^n\)">
+<meta property="og:url" content="https://lengyueyang.github.io/posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-nwei-xiang-liang-kong-jian-knzh_cn/">
+<meta property="og:description" content="n 维向量空间 \(K^n\) 及其子空间
+
+
+取定一个数域 K, 设 n 是任意给定的一个正整数. 令 \[K^n = {(a_1, a_2, ⋯, a_n) | a_i \in K, i = 1,2,⋯,n}\]
+
+
+
+在 \(K^n\) 中规定加法运算如下:
+\[
+(a_1, a_2, \cdots, a_n) + (b_1, b_2, ⋯, b_n) \xlongequal{def} (a">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-10-09T19:26:52+08:00">
+<meta property="article:tag" content="Linear algebra">
+<meta property="article:tag" content="mathjax">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-info header-panel shadow-z-3" role="navigation"><div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-3">
+            <h1 class="title-blog">
+                <a href="https://lengyueyang.github.io/">
+                        <span id="blog-title">深度识医</span>
+                    </a>
+            </h1>
+          </div>
+          <div class="col-xs-9">
+            <a id="hamburger" class="btn btn-raised" href="javascript:void(0);" onclick="menuToggle();">☰</a>
+          </div>
+        </div>
+      </div>
+<!-- /.container-fluid -->
+</nav><div class="container-fluid main" id="content" role="main">
+        <div class="row">
+            <nav class="col-xs-12 col-sm-3 menu"><ul>
+<li class="withripple"><a href="../../archive.html">归档</a></li>
+                <li class="withripple"><a href="../../categories/">标签云</a></li>
+                <li class="withripple"><a href="../../rss.xml">RSS订阅</a></li>
+
+                    
+                </ul>
+<ul>
+<li>            </li>
+<li><a href="https://lengyueyang.github.io/en/" rel="alternate" hreflang="en">English</a></li>
+
+                    
+                </ul></nav><div class="posts-material col-xs-12 col-sm-9">
+                <div class="col-xs-12 col-md-11 content-material">
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">数据科学-数学与统计-高等代数- n 维向量空间 n 维向量空间 \(k^n\)</a></h1>
+<hr>
+<div class="metadata">
+            <span class="byline author vcard">
+                <a href=".">
+                        <img class="img-circle" src="../../images/lengyueyang.png" alt="icon">
+                    冷月阳
+                </a>
+            </span>
+            <span class="dateline">
+                <a href="." rel="bookmark"><i class="mdi-device-access-time"></i>
+                    <time class="published dt-published" datetime="2017-10-09T19:26:52+08:00" itemprop="datePublished" title="2017-10-09 19:26">2017-10-09 19:26</time></a>
+            </span>
+                <span class="commentline">            <a href="#disqus_thread" data-disqus-identifier="cache/posts/数据科学-数学与统计-高等代数-n维向量空间K^n.zh_cn.html">Comments</a>
+
+</span>
+        </div>
+        
+        <hr></header><div class="e-content entry-content" itemprop="articleBody text">
+    <div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">n 维向量空间 \(K^n\) 及其子空间</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+取定一个数域 K, 设 n 是任意给定的一个正整数. 令 \[K^n = {(a_1, a_2, ⋯, a_n) | a_i \in K, i = 1,2,⋯,n}\]
+</p>
+
+<p>
+在 \(K^n\) 中规定加法运算如下:
+\[
+(a_1, a_2, \cdots, a_n) + (b_1, b_2, ⋯, b_n) \xlongequal{def} (a_1+b_1, a_2+b_2, \cdots, a_n+b_n)
+\]
+</p>
+
+<!-- TEASER_END -->
+
+<p>
+在 K 的元素与 \(K^n\) 的元素之间规定数量乘法运算如下:
+\[
+k(a_1, a_2, \cdots, a_n) \xlongequal{def} (ka_1, ka_2, \cdots, ka_n)
+\]
+</p>
+
+<p>
+加法与数量乘法满足的 8 条运算法则: 对于 \(\symbf{α, \beta, γ} \in K^n \quad k, l \in K\), 有 <br>
+(1) \(\symbf{α} + \symbf{\beta} = \symbf{\beta} + \symbf{α}\) <br>
+(2) \((\symbf{α} + \symbf{\beta}) + \symbf{γ} = \symbf{α} + (\symbf{\beta} + \symbf{γ})\) <br>
+(3) 把元素 \((0, 0, \cdots, 0)\) 记作 \(\symbf{0}\), 它使得 \(\symbf{0} + \symbf{α} = \symbf{α} + \symbf{0} = \symbf{α}\), 称 \\(symbf{0}\) 是 \(K^n\) 的 <b>零元素</b> <br>
+(4) 对于 \(\symbf{α} = (a_1, a_2, \cdots, a_n) \in K^n\), 令
+\[
+{-}\symbf{α} \xlongequal{def} (-a_1, -a_2, \cdots, -a_n) \in K^n
+\], 有
+\[
+\symbf{\alpha} + (- \symbf{α}) = (- \symbf{\alpha}) + \symbf{\alpha} = \symbf{0}
+\], 称 \(- \symbf{\alpha}\) 是 \(\symbf{α}\) 的 <b>负元素</b> <br>
+(5) \(1 \symbf{α} = \symbf{α}\) <br>
+(6) \((kl)\symbf{α} = k(l \symbf{\alpha})\) <br>
+(7) \((k+l) \symbf(α) = k \symbf{\alpha} + l \symbf{\alpha}\) <br>
+(8) \(k(\symbf{\alpha} + \symbf{\beta}) = k \symbf{α} + l \symbf{\beta}\)
+</p>
+
+\begin{de}[n 维向量空间定义]
+\end{de}
+<p>
+数域 K 上所有 n 元有序数组组成的集合 \(K^n\), 连同定义在它上面的加法运算和数量乘法运算, 及其满足的 8 条运算法则一起, 称为数域 K 上的一个 <b>n 维向量空间</b>. \(K^n\) 的元素称为 <b>n 维向量</b>; 设向量 \(\symbf{α} = (a_1, a_2, \cdots, a_n)\), 称 \(a_i\) 是 \(\symbf{α}\) 的第 i 个分量.
+</p>
+
+<p>
+n 元有序数组写成一行称为行向量, 写成一列称为列向量, 列向量可以看成是行向量的转置.
+</p>
+
+<p>
+在 \(K^n\) 中, 给定向量 \(\symbf{α_1, α_2, ⋯, α_s}\), 对于 \(\symbf{β} \in K^n\), 如果存在 K 中的一组数 \(c_1, c_2, ⋯, c_s\), 使得
+\[
+\symbf{\beta} = c_1 \symbf{α_1} + c_2 \symbf{α_2} + ⋯ c_s \symbf{α_s}
+\], 那么称 \(\symbf{β}\) 可以由 \(\symbf{α_1, α_2, ⋯, α_s}\) <b>线性表出</b>.
+</p>
+
+\begin{de}[线性子空间定义]
+\end{de}
+<p>
+\(K^n\) 的一个非空子集 U 如果满足: <br>
+(1) 加法封闭: \(\symbf{\alpha, γ} \in U \Longrightarrow (\symbf{α} + \symbf{\gamma}) \in U\), <br>
+(2) 数量乘法封闭: \(\symbf{α} \in U, k \in U \Longrightarrow k \symbf{α} \in U\), <br>
+那么称 U 是 \(K^n\) 的线性子空间, 简称为子空间.
+</p>
+
+<p>
+\({0}\) 是 \(K^n\) 的一个子空间, 称它的零子空间. \(K^n\) 本身也是其一个子空间.
+</p>
+
+<p>
+向量组 \(\symbf{α_1, α_2, ⋯, α_s}\) 的所有线性组合组成的集合 W 是 \(K^n\) 的一个子空间, 称它为 \(\symbf{α_1, α_2, ⋯, α_s}\) <b>生成(或张成)的子空间</b>, 记作
+\[
+⟨\symbf{α_1, α_2, ⋯, α_s}⟩
+\]
+</p>
+
+<p>
+\begin{mingti}[线性标出命题]
+\end{mginti}
+数域 K 上的 n 元线性方程组 \(x_1\symbf{α_1} + x_2\symbf{α_2} + \cdots + x_n\symbf{α_n} = \symbf{\beta}\) 有解 <br>
+\(⟺\) \(\symbf{\beta}\)可以由 \(\symbf{α_1, α_2, ⋯, α_n}\) 线性标出 <br>
+\(⟺\) \(\symbf{\beta} \in \symbf{α_1, α_2, ⋯, α_n}\)
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">线性相关与线性无关的向量组</h2>
+<div class="outline-text-2" id="text-2">
+\begin{de}[线性相关定义]
+\end{de}
+<p>
+\(K^n\) 中向量组 \(\symbf{α_1, α_2, ⋯, α_s}(s ⩾ 1)\) 称为 <b>线性相关</b> 的, 如果有 K 中不全为 0 的数 \(k_1, \cdots, k_s\), 使得
+\[
+k_1\symbf{α_1} + \cdots + k_s\symbf{α_s} = \symbf{0}
+\].
+</p>
+
+\begin{de}[线性相关定义]
+\end{de}
+<p>
+\(K^n\) 中向量组 \(\symbf{α_1, α_2, ⋯, α_s}(s ⩾ 1)\) 称为 <b>线性无关</b> 的, 即如果有从
+\[
+k_1\symbf{α_1} + \cdots + k_s\symbf{α_s} = \symbf{0}
+\] 可以推出所有系数 \(k_1, \cdots, k_s\) 全为 0, 那么称向量组 \(\symbf{α_1, α_2, ⋯, α_s}\) 是 <b>线性无关</b> 的.
+</p>
+
+<p>
+线性相关与线性无关是线性代数中最基本的概念之一, 可以从几个角度来考察线性相关的向量组与线性无关的向量组的本质区别: 
+<img src="MSimg/MS-3-4-2-1.png" alt="MS-3-4-2-1.png"><img src="MSimg/MS-3-4-2-2.png" alt="MS-3-4-2-2.png"></p>
+
+\begin{mingti}[线性表出充要条件命题]
+\end{mingti}
+<p>
+设向量组 \(\symbf{α_1, α_2, ⋯, α_s}\) 线性无关, 则向量 \(\symbf{\beta}\) 可以由  \(\symbf{α_1, α_2, ⋯, α_s}\) 线性表出的充要条件是  \(\symbf{α_1, α_2, ⋯, α_s, \beta}\) 线性相关.
+</p>
+
+\begin{cor}[线性表出充要条件推论]
+\end{cor}
+<p>
+设向量组 \(\symbf{α_1, α_2, ⋯, α_s}\) 线性无关, 则向量 \(\symbf{\beta}\) 不能由  \(\symbf{α_1, α_2, ⋯, α_s}\) 线性表出的充要条件是 \(\symbf{α_1, α_2, ⋯, α_s, \beta}\) 线性无关.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">向量组的秩</h2>
+<div class="outline-text-2" id="text-3">
+\begin{de}[极大线性无关组定义]
+\end{de}
+<p>
+向量组的一个部分称为一个 <b>极大线性无关组</b>, 如果这个本身是线性无关的, 但是从这个向量组的其余向量(如果还有的话)中任取一个添进去, 得到的新的部分组都线性相关.
+</p>
+
+\begin{de}[向量组等价定义]
+\end{de}
+<p>
+如果向量组 \(\symbf{α_1, α_2, ⋯, α_s}\) 的每一个向量都可以由向量组 \(\beta_1, β_2, ⋯, \beta_r\) 线性表出, 那么称向量组 \(\symbf{α_1, α_2, ⋯, α_s}\) 可以由向量组 \(\symbf{\beta_1, β_2, ⋯, \beta_r}\) 表出. 如果向量组 \(\symbf{α_1, α_2, ⋯, α_s}\) 与向量组 \(\symbf{\beta_1, β_2, ⋯, \beta_r}\) 可以互相线性表出, 那么称 向量组 \(\symbf{α_1, α_2, ⋯, α_s}\) 与向量组 \(\symbf{\beta_1, β_2, ⋯, \beta_r}\) <b>等价</b>, 记作
+\[
+\symbf{α_1, α_2, ⋯, α_s} ≅ \symbf{\beta_1, β_2, ⋯, \beta_r}
+\]
+</p>
+
+<p>
+向量组的等价是向量组之间的一种关系, 可以证明, 这种关系具有下述三条性质:
+</p>
+<ol class="org-ol">
+<li>反身性, 任何一个向量组都与自身等价;
+</li>
+<li>对称性, 如果 \(\symbf{α_1, α_2, ⋯, α_s}\) 与 \(\beta_1, β_2, ⋯, \beta_r\) 等价, 那么 \(\symbf{\beta_1, β_2, ⋯, \beta_r}\) 与 \(\symbf{α_1, α_2, ⋯, α_s}\) 等价;
+</li>
+<li>传递性, 即如果
+</li>
+</ol>
+<p>
+\[
+\{\symbf{α_1, α_2, ⋯, α_s} ≅ \symbf{\beta_1, β_2, ⋯, \beta_r}\}, \{\symbf{a_1, β_2, ⋯, \beta_r} ≅ \symbf{γ_1, γ_2, ⋯, γ_t}\}
+\], 那么
+\[
+\symbf{α_1, α_2, ⋯, α_s} ≅ \symbf{γ_1, γ_2, ⋯, γ_t}
+\]
+</p>
+
+\begin{mingti}[向量组的秩命题-1]
+\end{mingti}
+<p>
+向量组与它的极大线性无关组等价.
+</p>
+
+\begin{cor}[向量组的秩推论-1]
+\end{cor}
+<p>
+向量组的任意两个极大线性无关组等价.
+</p>
+
+\begin{cor}[向量组的秩推论-2]
+\end{cor}
+<p>
+\(β\) 可以由向量组 \(\symbf{α_1, α_2, ⋯, α_s}\) 线性表出当且仅当 \(\beta\) 可以由 \(\symbf{α_1, α_2, ⋯, α_s}\) 的一个极大线性无关组线性表出.
+</p>
+
+\begin{lemma}[向量组的秩引理-1]
+\end{lemma}
+<p>
+设向量组 \(\symbf{\beta_1, \beta_2, ⋯, \beta_r}\) 可以由向量组 \(\symbf{α_1, α_2, ⋯, α_s}\) 线性表出, 如果 \(r &gt; s\), 那么 \(\symbf{\beta_1, \beta_2, ⋯, \beta_r}\) 线性相关.
+</p>
+
+\begin{cor}[向量组的秩推论-3]
+\end{cor}
+<p>
+设向量组 \(\symbf{\beta_1, \beta_2, ⋯, \beta_r}\) 可以由向量组 \(\symbf{α_1, α_2, ⋯, α_s}\) 线性表出, 如果\(\symbf{\beta_1, \beta_2, ⋯, \beta_r}\) 线性无关，那么 \(r ⩽ s\).
+</p>
+
+\begin{cor}[向量组的秩推论-4]
+\end{cor}
+<p>
+等价的线性无关的向量组所含的向量个数相等.
+</p>
+
+\begin{cor}[向量组的秩推论-5]
+\end{cor}
+<p>
+向量组的任意两个极大线性无关组所含向量的个数相等.
+</p>
+
+\begin{de}[向量组的秩定义]
+\end{de}
+<p>
+向量组的极大线性无关组所含的向量个数称为这个 <b>向量组的秩</b>.
+</p>
+
+\begin{mingti}[向量组的秩命题-2]
+\end{mingti}
+<p>
+向量组 \(\symbf{α_1, α_2, ⋯, α_s}\) 线性无关的充分必要条件是它的秩等于它所含向量的个数.
+</p>
+
+\begin{mingti}[向量组的秩命题-3]
+\end{mingti}
+<p>
+如果向量组(\(\uppercase\expandafter{\romannumeral1}\))可以由向量组(\(\uppercase\expandafter{\romannumeral2}\))线性表出, 那么(\(\uppercase\expandafter{\romannumeral1}\))的秩 \(\leq\) (\(\uppercase\expandafter{\romannumeral2}\))的秩.
+</p>
+
+\begin{mingti}[向量组的秩命题-4]
+\end{mingti}
+<p>
+等价的向量组有相等的秩.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">子空间的基与维数</h2>
+<div class="outline-text-2" id="text-4">
+\begin{de}[基的定义]
+\end{de}
+<p>
+设 U 是 \(K^n\) 的一个子空间, 如果 \(\symbf{α_1, α_2, \cdots, α_r} \in U\), 并且满足下述两个条件:  
+</p>
+<ol class="org-ol">
+<li>\(\symbf{α_1, α_2, \cdots, α_r}\) 线性无关,
+</li>
+<li>U 中的每一个向量都可以由 \(\symbf{α_1, α_2, \cdots, α_r}\) 线性表出,
+</li>
+</ol>
+<p>
+那么称 \(\symbf{α_1, α_2, \cdots, α_r}\) 是 U 的一个 <b>基</b>, 显然, \(\symbf{ε_1, ε_2, \cdots, ε_n}\) 是 \(K^n\) 的一个基, 称它是 \(K^n\) 的 <b>标准基</b>.
+</p>
+
+\begin{thm}[子空间基定理-1]
+\end{thm}
+<p>
+\(K^n\) 的任一非零子空间 U 都有一个基.
+</p>
+
+\begin{thm}[子空间基定理-2]
+\end{thm}
+<p>
+\(K^n\) 非零子空间 U 的任意两个基所含有的向量个数相等.
+</p>
+
+\begin{de}[子空间维数定义]
+\end{de}
+<p>
+\(K^n\) 的非零子空间 U 的一个基所含有的向量的个数称为 U 的维数, 记作 \(dim_K U\), 或者 \(dim U\).
+</p>
+
+\begin{mingti}[子空间的基与维数命题-1]
+\end{mingti}
+<p>
+设 \(dim U = r\), 则 U 中任意 \(r+1\) 向量都线性相关.
+</p>
+
+\begin{mingti}[子空间的基与维数命题-2]
+\end{mingti}
+<p>
+设 \(dim U = r\), 则 U 中任意 r 个线性无关的向量都是 U 的一个基.
+</p>
+
+\begin{mingti}[子空间的基与维数命题-3]
+\end{mingti}
+<p>
+设 \(dim U = r\), 设 \(\symbf{α_1, α_2, ⋯, α_r} \in U\). 如果 U 中每一个向量都可以有 \(\symbf{α_1, α_2, ⋯, α_r}\) 线性表出, 那么 \(\symbf{α_1, α_2, ⋯, α_r}\) 是 U 的一个基.
+</p>
+
+\begin{mingti}[子空间的基与维数命题-4]
+\end{mingti}
+<p>
+设 U 和 W 都是 \(K^n\) 的非零子空间, 如果 \(U ⊆ W\), 那么 \(dim\,U ⩽ dim\, W\).
+</p>
+
+\begin{mingti}[子空间的基与维数命题-5]
+\end{mingti}
+<p>
+设 U 和 W 是 \(K^n\) 的两个非零子空间, 缺 \(U ⊆ W\), 如果 \(dim\,U = dim\,W\), 那么 \(U = W\).
+</p>
+
+\begin{thm}[子空间基定理-3]
+\end{thm}
+<p>
+向量组 \(\symbf{α_1, α_2, ⋯, α_s}\) 的一个极大线性无关组是这个向量生成的子空间 \(⟨\symbf{α_1, α_2, ⋯, α_s}⟩\) 的一个基, 从而
+\[
+dim⟨\symbf{α_1, α_2, ⋯, α_s}⟩ = rank\{\symbf{α_1, α_2, ⋯, α_s}\}
+\]
+</p>
+
+<p>
+在上述定理中, 维数是对于子空间而言, 秩是对量组而言, 子空间有无群多个向量, 而向量组只有有限多个向量.
+</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">矩阵的秩</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+矩阵 A 的列向量组的秩称为矩阵 A 的 <b>列秩</b>, A 的行向量的秩称为 A 的 <b>行秩</b>.
+</p>
+
+<p>
+矩阵 A 的列秩等于 A 的列空间的维数, A 的行秩等于 A 的行向量的维数.
+</p>
+
+\begin{thm}[矩阵的秩定理-1]
+\end{thm}
+<p>
+阶梯型矩阵 J 的行秩与列秩相等, 它们都等于 J 的非零行的个数; 并且 J 的主元所在的列构成的列向量是 J 的一个极大线性无关组.
+</p>
+
+\begin{thm}[矩阵的秩定理-2]
+\end{thm}
+<p>
+矩阵的初等行变换不改变矩阵的行秩.
+</p>
+
+\begin{thm}[矩阵的秩定理-3]
+\end{thm}
+<p>
+矩阵的初等行变换不改变矩阵的列向量的线性相关性, 从而不改变矩阵的列秩. 即: 
+</p>
+<ol class="org-ol">
+<li>设矩阵 C 经过初等行变换变成矩阵 D, 则 C 的列向量组线性相关当且仅当 D 的列向量组线性相关;
+</li>
+<li>设矩阵 A 经过初等行变换变成矩阵 B, 并且 B 的第 \(j_1, j_2, ⋯, j_r\) 列构成 B 的列向量的一个极大线性无关组, 则 A 的第 \(j_1, j_2, ⋯, j_r\) 列构成 A 的列向量的一个极大线性无关组; 从而 A 的列秩等于 B 的列秩.
+</li>
+</ol>
+
+\begin{thm}[矩阵的秩定理-4]
+\end{thm}
+<p>
+任一矩阵 A 的行秩等于它的列秩.
+</p>
+
+\begin{de}[矩阵的秩的定义]
+\end{de}
+<p>
+矩阵 A 的行秩与列秩统称为 A 的 <b>秩</b>, 记作 \(rank(A)\).
+</p>
+
+\begin{cor}[矩阵的秩推论-1]
+\end{cor}
+<p>
+设矩阵 A 经过初等行变换化成阶梯形矩阵 J, 则 A 的秩等于 J 的非零行个数. 设 J 的主元所在的列是第 \(j_1, j_2, ⋯, j_r\) 列, 则 A 的第 \(j_1, j_2, ⋯, j_r\) 列构成 A 的列向量组的一个极大线性无关组.
+</p>
+
+\begin{cor}[矩阵的秩推论-2]
+\end{cor}
+<p>
+矩阵的初等行变换不改变矩阵的秩.
+</p>
+
+\begin{thm}[矩阵的秩定理-5]
+\end{thm}
+<p>
+任一非零矩阵的秩等于它的不为零子式的最高阶数.
+</p>
+
+<p>
+定理 4 与定理 5 表明, <b>矩阵的秩</b> 是一个非常深刻的概念, 它可以从行向量的秩, 列向量的秩, 不为零子式的最高阶数 <b>三个角度</b> 来刻画. 
+</p>
+
+\begin{cor}[矩阵的秩推论-3]
+\end{cor}
+<p>
+设 \(s \times n\) 矩阵 A 的秩为 r, 则 A 的不等于零的 r 阶子式所在的列(行)构成 A 的列(行)向量组的一个极大线性无关组.
+</p>
+
+\begin{cor}[矩阵的秩推论-4]
+\end{cor}
+<p>
+n 级矩阵 A 满秩(秩等于它的级数)的充分必要条件是 \(|A| ≠ 0\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6">线性方程组有解的充分必要条件</h2>
+<div class="outline-text-2" id="text-6">
+\begin{thm}[线性方程组有解判别定理]
+\end{thm}
+<p>
+数域 K 上线性方程组
+</p>
+\begin{equation}
+x_1 \symbf{α_1} + x_2 \symbf{α_2} + ⋯ + x_n \symbf{α_n} = \symbf{β}
+\end{equation}
+<p>
+有解的充分必要条件是: 它的系数矩阵与增广矩阵的秩相等.
+</p>
+
+\begin{thm}[线性方程组有解定理-2]
+\end{thm}
+<p>
+数域 K 上 n 元线性方程组 (<a href=".">1</a>) 有解时, 如果它的系数矩阵 A 的秩等于 n, 那么方程组有唯一解; 如果 A 的秩小于 n, 那么方程组有无穷多个解.
+</p>
+
+\begin{cor}[线性方程组有解推论]
+\end{cor}
+<p>
+齐次线性方程组有非零解的充分必要条件是: 它的系数矩阵的秩小于未知量的个数.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7">齐次线性方程组的解集的结构</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+数域 K 上 n 元齐次方程组
+</p>
+\begin{equation}
+x_1 \symbf{α_1} + x_2 \symbf{α_2} + ⋯ + x_n \symbf{α_n} = \symbf{0}
+\end{equation}
+<p>
+的一个解是 \(K^n\) 中的一个向量, 称它为齐次线性方程组 (<a href="#n">1</a>) 的一个 <b>解向量</b>. 齐次线性方程组的解集 W 是 \(K^n\) 的一个非空子集.
+</p>
+
+\begin{proposition}[解集性质-1]
+\end{proposition} 
+<p>
+若 \(\symbf{γ, δ} \in W\), 则 \(\symbf{γ} + \symbf{δ} \in W\).
+</p>
+
+\begin{proposition}[解集性质-2]
+\end{proposition} 
+<p>
+若 \(\symbf{γ} \in W\), \(k \in W\), 则 \(k \symbf{γ} \in W\).
+</p>
+
+<p>
+齐次线性方程组(<a href="#n">1</a>)的解集 W 是 \(K^n\) 的一个子空间, 称它为方程组 (<a href="#n">1</a>) 的 <b>解空间</b>. 把解空间 W 的一个基称为齐次线性方程组 (<a href="#n">1</a>) 的一个 <b>基础解系</b>.
+</p>
+
+\begin{de}[解空间定义-1]
+\end{de}
+<p>
+齐次线性方程组 (<a href="#n">1</a>) 有非零解时, 如果它的有限多个解 \(\symbf{\eta_1, \eta_2, ⋯, \eta_t}\) 满足:
+</p>
+<ol class="org-ol">
+<li>\(\symbf{\eta_1, \eta_2, ⋯, \eta_t}\) 线性无关;
+</li>
+<li>齐次线性方程组 (<a href="#n">1</a>) 的每一个解都可以由 \(\symbf{\eta_1, \eta_2, ⋯, \eta_t}\) 线性表出,
+那么称 \(\symbf{\eta_1, \eta_2, ⋯, \eta_t}\) 是齐次线性方程组的一个 <b>基础解系</b>.
+</li>
+</ol>
+
+\begin{thm}[解空间定理-1]
+\end{thm}
+<p>
+数域 K 上 n 元齐次线性方程组的解空间 W 的维数为
+</p>
+\begin{equation}
+dim\,W = n - rank{A}
+\end{equation}
+<p>
+其中 A 是方程组的系数矩阵. 从而当齐次线性方程组有非零解时, 它的每个基础解所含向量的个数等于 \(n-rank(A)\).
+</p>
+
+<p>
+<b>齐次线性方程组解集的求法</b>
+</p>
+
+
+
+<div class="figure">
+<p><img src="MSimg/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/3_2017-09-15_14-12-31.png" alt="3_2017-09-15_14-12-31.png"></p>
+</div>
+
+
+<div class="figure">
+<p><img src="MSimg/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/4_2017-09-15_14-09-04.png" alt="4_2017-09-15_14-09-04.png"></p>
+</div>
+
+
+
+
+<div class="figure">
+<p><img src="MSimg/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/5_2017-09-15_14-13-03.png" alt="5_2017-09-15_14-13-03.png"></p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8">非齐次线性方程组的解集的结构</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+数域 K 上 n 元非齐次方程组
+</p>
+\begin{equation}
+x_1 \symbf{α_1} + x_2 \symbf{α_2} + ⋯ + x_n \symbf{α_n} = \symbf{\beta}
+\end{equation}
+<p>
+的解集为 U, 相应的齐次线性方程组:
+</p>
+\begin{equation}
+x_1 \symbf{α_1} + x_2 \symbf{α_2} + ⋯ + x_n \symbf{α_n} = \symbf{0}
+\end{equation}
+<p>
+称它为非齐次线性方程组 (<a href="#n-1">1</a>) 的 <b>导出组</b>, 导出组的解空间用 W 表示.
+</p>
+
+\begin{proposition}[非齐次解集性质-1]
+\end{proposition} 
+<p>
+若 \(\symbf{γ, δ} \in U\), 则 \(\symbf{γ} - \symbf{δ} \in W\).
+</p>
+
+\begin{proposition}[非齐次解集性质-2]
+\end{proposition} 
+<p>
+若 \(\symbf{γ} \in W\), \(\symbf{\eta} \in U\),  则 \(\symbf{γ + \eta} \in U\).
+</p>
+
+\begin{thm}[非齐次解集定理-1]
+\end{thm}
+<p>
+如果数域 K 上 n 元非齐次线性方程组 (<a href="#n-1">1</a>) 有解, 那么它的解集 U 为
+</p>
+\begin{equation}
+U = \{\symbf{γ_0} + \symbf{\eta} | \symbf{\eta} \in W\}
+\end{equation}
+<p>
+其中 \(\symbf{γ_0}\), 是非齐次线性方程组 (<a href="#n-1">1</a>) 的一个特解(简称 \(\symbf{γ_0}\) 是 <b>特解</b> ), W 是方程组 (<a href="#n-1">1</a>) 的导出组的解空间.
+</p>
+
+
+<p>
+把集合 \(\{\symbf{γ_0} + \symbf{\eta} | \symbf{\eta} \in W\}\) 记作 \(\symbf{γ_0} + W\), 称它是 W 的 <b>线性流行</b> (或子空间 W 的一个 <b>配集</b>), 把 \(dem \, W\) 称为线性流行 \(\symbf{γ_0} + W\) 的维数.
+</p>
+
+\begin{cor}[非齐次解空间推论]
+\end{cor}
+<p>
+如果非齐次线性方程组 (<a href="#n-1">1</a>) 有解, 那么它的解唯一充分必要条件是: 它的导出组 (<a href="#n-1">1</a>) 只有零解.
+</p>
+
+<p>
+求解非齐次线性方程组的解集 U 的步骤:
+</p>
+<ol class="org-ol">
+<li>求出非齐次线性方程组的一般解, 让自由未知量都取值 0, 得到一个特解 \(\symbf{γ_0}\);
+</li>
+<li>写出导出组的一般解公式 (只要把非齐次线性方程组的一般解公式的常数项去掉即可), 求出导出组的一个基础解系 \(\symbf{\eta_1, \eta_2, ⋯, \eta_t}\);
+</li>
+<li>写出非齐次线性方程组的解集 U
+</li>
+</ol>
+<p>
+\[
+U = \{\symbf{γ_0} + k_1 \symbf{\eta_1} + ⋯ + k_t \symbf{\eta_t} \, | \, k_1, ⋯, k_t \in K \}
+\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-9" class="outline-2">
+<h2 id="sec-9">例题</h2>
+<div class="outline-text-2" id="text-9">
+\begin{ex}
+\end{ex}
+
+
+<div class="figure">
+<p><img src="MSimg/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/6_2017-09-15_14-13-10.png" alt="6_2017-09-15_14-13-10.png"></p>
+</div>
+
+\begin{ex}
+\end{ex}
+
+
+
+<div class="figure">
+<p><img src="MSimg/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/7_2017-09-15_14-15-17_2017-09-15_14-18-16.png" alt="7_2017-09-15_14-15-17_2017-09-15_14-18-16.png"></p>
+</div>
+
+
+
+
+<div class="figure">
+<p><img src="MSimg/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/8_2017-09-15_14-15-32_2017-09-15_14-18-59.png" alt="8_2017-09-15_14-15-32_2017-09-15_14-18-59.png"></p>
+</div>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><div itemprop="keywords" class="tags">
+            <a class="tag p-category btn btn-success btn-raised btn-sm" href="../../categories/linear-algebra/" rel="tag">Linear algebra</a>
+        </div>
+
+            <ul class="pager">
+<li class="previous">
+                <a href="../python-pyenv-methodszh_cn/" rel="prev" title="Python-Pyenv 使用方法总结">前一篇</a>
+            </li>
+            <li class="next">
+                <a href="../archlinux-shadowsocks/" rel="next" title="Archlinux Shadowsocks 配置">后一篇</a>
+            </li>
+        </ul></nav></aside><section class="comments"><h2>
+<i class="mdi-communication-forum"></i>注释</h2>
+        <hr>
+<div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="lengyueyang",
+            disqus_url="https://lengyueyang.github.io/posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-nwei-xiang-liang-kong-jian-knzh_cn/",
+        disqus_title="\u6570\u636e\u79d1\u5b66-\u6570\u5b66\u4e0e\u7edf\u8ba1-\u9ad8\u7b49\u4ee3\u6570- n \u7ef4\u5411\u91cf\u7a7a\u95f4 n \u7ef4\u5411\u91cf\u7a7a\u95f4 \\(k^n\\)",
+        disqus_identifier="cache/posts/数据科学-数学与统计-高等代数-n维向量空间K^n.zh_cn.html",
+        disqus_config = function () {
+            this.language = "zh_cn";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script><script type="text/x-mathjax-config">
+            MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
+            </script></article><script>var disqus_shortname="lengyueyang";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+            </div>
+        </div>
+        <button class="btn btn-fab btn-raised btn-material-green btn-footer" data-toggle="modal" data-target="#footer-dialog">
+            <i class="mdi-communication-message"></i>
+        </button>
+        <div id="footer-dialog" class="modal fade" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">冷月阳</h4>
+                <div>
+                    
+<img class="img-circle" style="float:left;margin:10px 20px 10px 0px;max-height:200px;" src="../../images/lengyueyang.png"><p><u>Basic Medical, 8 years PHD, Do some research on Medical Data Scientist</u></p>
+
+<p>I am currently work on Medical Big Data analysis, learning Machine learning and deep learning.</p>
+<p><a href="http://spacemacs.org"><img src="https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg"></a></p>
+<p>
+
+                </p>
+</div>
+                <hr>
+</div>
+              <div class="modal-body">
+                    Contents © 2018         <a href="mailto:maoxiaowei1988@qq.com">冷月阳</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+                    
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Ok</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="source-button">
+    <a class="btn btn-fab btn-raised btn-material-indigo" target="_blank" href="index.org" title="源代码">
+        <i class="mdi-file-cloud-download"></i>
+    </a>
+
+        </div>
+        <div class="kc_fab_wrapper"></div>
+</div>
+
+
+            <script src="../../assets/js/all-nocdn.js"></script><script src="../../assets/js/colorbox-i18n/jquery.colorbox-zh-CN.js"></script><script>
+                var links = [
+                        {
+                            "bgcolor": "#F44336",
+                            "icon": "<i class='fa fa-share-square'></i>",
+                        },
+                        {
+                            "url": "https://github.com/lengyueyang",
+                            "bgcolor": "#666666",
+                            "color": "#fffff",
+                            "icon": "<i class='fa fa-github-square'></i>",
+                        },
+                        {
+                            "url": "https://www.linkedin.com/in/lengyueyang",
+                            "bgcolor": "#3B5998",
+                            "color": "#fffff",
+                            "icon": "<i class='fa fa-linkedin-square'></i>",
+                        },
+                ];
+
+            $(document).ready(function() {
+                // This command is used to initialize some elements and make them work properly
+                $.material.init();
+                    $('.kc_fab_wrapper').kc_fab(links);
+            });
+
+            $(window).on("resize", function() {
+                if($(window).width() > 767) {
+                  $("html, body").height($(window).height());
+                  $(".main, .menu").height($(window).height() - $(".header-panel").outerHeight() - 76 );
+                  $(".posts-material").height($(window).height());
+                } else {
+                  $("html, body").css('height', '');
+                  $(".main, .menu").css('height', '');
+                  $(".posts-material").css('height', '');
+                }
+            }).trigger("resize");
+
+            function menuToggle() {
+                $("nav.menu, ul").toggleClass('responsive', '');
+            }
+        </script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

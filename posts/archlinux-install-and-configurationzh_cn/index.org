@@ -1,0 +1,228 @@
+#+BEGIN_COMMENT
+.. title: Archlinux 安装和配置
+.. slug: 
+.. date: 2016-02-05 19:26:52 UTC+08:00
+.. tags: Linux, Archlinux
+.. category: LINUX
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+#+TITLE: Archlinux install and configuration [Archlinux 安装和配置]
+#+DATE: 2016-02-05 
+#+LAYOUT: post
+#+TAGS: Linux, Archlinux
+#+CATEGORIES: LINUX
+
+* Archlinux install [安装篇]
+** Prepare for the installation
+- Prepare the ISO of archlinux, and brasero it into USB flash disk
+
+- Partiton: use cfdisk, use the UEFI install, the mkfs
+#+BEGIN_SRC sh
+/dev/sda1 to UEFI boot: ef00, 1G
+/dev/sda2 to 119G
+mkfs.fat -F32 /dev/sda1
+mkfs.ext4 /dev/sda2
+#+END_SRC
+
+{{{TEASER_END}}}
+
+- Select mirrorlist:
+#+BEGIN_SRC sh
+nano -w /etc/pacman.d/mirrorlist add 
+Server = http://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
+Server = http://mirrors.163.com/archlinux/$repo/os/$arch
+#+END_SRC
+
+- Wireless network link
+#+BEGIN_SRC emacs-lisp
+iwconfig to find the name of your wireless moudule: like wlan0
+then:
+ip link set wlan0 up
+wpa_supplicant -D nl80211,wext -i wlan0 -c <(wpa_passphrase "your_SSID" "your_key")
+dhcpcd wlan0
+now the wireless should be connected
+#+END_SRC
+
+
+** Basic install
+- Mount the partition
+#+BEGIN_SRC sh
+muont /dev/sda2 /mnt
+mkdir -p /mnt/boot/EFI
+mount /dev/sda1 /mnt/boot/EFI
+#+END_SRC
+
+- Bbasic system install
+#+BEGIN_SRC sh
+pacstrap /mnt base base-devel
+#+END_SRC
+
+- Generate the fstab
+#+BEGIN_SRC sh
+genfstab -p /mnt >> /mnt/etc/fstab
+#+END_SRC
+
+- Went into the new system and update the system
+#+BEGIN_SRC sh
+arch-chroot /mnt
+nano /etc/loacle.gen  en.us & en.cn # remove#
+locale-gen
+nano /etc/locale.gen    # 反注释需要的 locale
+locale-gen    # 生成 locale
+echo LANG=<locale>  > /etc/locale.conf # 设置默认 locale
+ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+hwclock --systohc --utc
+#+END_SRC
+
+- Add passwd and users
+#+BEGIN_SRC sh
+echo yourname > /etc/hostname
+nano /etc/hosts
+passwd 111111(2 times)
+useradd -m -g users -s /bin/bash name
+passwd name 111111(2 times)
+nano -w /etc/sudos add line name ALL=(ALL) ALL
+#+END_SRC
+
+- Grub installation
+#+BEGIN_SRC sh
+# pacman -S dosfstools grub efibootmgr
+# grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=arch_grub --recheck
+# grub-mkconfig -o /boot/grub/grub.cfg
+#+END_SRC
+
+- Install X windows and gnome
+#+BEGIN_SRC sh
+pacman -S alsa-utils xorg-server xorg-xinit xorg-server-utils
+pacman -S xf86-video-intel xf86-input-synaptics
+pacman -S gnome gnome-extra
+systemctl enable gdm.service
+systemctl enable NetworkManager.service
+exit 
+umount /mnt/boot/EFI
+umount /mnt
+reboot
+#+END_SRC
+** Software install
+- Yaourt installation
+#+BEGIN_SRC sh
+sudo nano -w /etc/pacman.conf
+remove # before mutilib
+add  
+[archlinuxfr] 
+Server = http://repo.archlinux.fr/$arch
+in the last line
+then exit
+sudo pacman -Syyuu
+#+END_SRC
+
+- Software installation
+#+BEGIN_SRC sh
+sudo pacman -S yaourt emacs gnome-tweak-tool firefox libreoffice clementine vlc smplayer vim gimp shotwell blender impressive r osdlyrics stardict gnome-search-tool dropbox
+yaourt wqy-microhei mendeleydesktop  wps acroread acroread-chinese-fonts texstudio
+pacman codecs (nedded)
+#+END_SRC
+
+- Install textlive as the peking BBS
+
+* Configuration [配置篇]
+
+** Fcitx
+#+BEGIN_SRC sh
+sudo pacman -S fcitx fcitx-im fcitx-configtool ibus
+sudo cp /usr/bin/ibus-daemon /usr/bin/ibus-daemon.cp
+sudo rm -rf /usr/bin/ibus-daemon
+sudo gsettings set org.gnome.settings-daemon.plugins.keyboard active false
+sudo nano -w .xprofile add
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
+yaourt fcitx-googlepinyin fcitx-sogoupinyin
+#+END_SRC
+
+** Web to hidden
+#+BEGIN_SRC sh
+yaourt lantern
+Add new firefox autoproxy server
+127.0.0.1 8787
+sudo systemctl enable lantern.service
+#+END_SRC
+
+** Startdict
+#+BEGIN_SRC sh
+sudo pacman -S startdict
+cp dict /usr/share/stardict/dic
+cp WyabdcRealPeopleTTS /usr/share/WyabdcRealPeopleTTS
+cp startdict config /home
+#+END_SRC
+
+** Samba 
+#+BEGIN_SRC sh
+cp /etc/samba/smb.conf.default /etc/samba/smb.conf
+sudo systemctl enable/start smbd.service nmbd.service
+sudo systemctl start/enable cups
+add printer
+#+END_SRC
+
+** Bumblebee
+#+BEGIN_SRC sh
+sudo pacman -S bumblebee mesa nvidia nvidia-settings xf86-video-intel
+sudo gpasswd -a user bumblebee
+sudo systemctl enable bumblebeed.service
+#+END_SRC
+
+** Firefox 
+#+BEGIN_SRC sh
+cp config
+rm .mozilla/Firefox/9999/.parentlock
+(bookmaker add-ons: noscript autopager autoproxy stumbleupon deafaultzoom xnot instantfox flashlock videodownloadhelper greasemonkey allsidebar downloadstatbar zotero firegesture)
+#+END_SRC
+
+** Dnsmasq: maybe out of data
+#+BEGIN_SRC sh
+sudo gedit /etc/NetworkManager/dispatcher.d/localhost-prepend
+add
+#!/bin/bash                                       
+# Prepend localhost to resolv.conf for dnsmasq
+
+if [[ ! $(grep 127.0.0.1 /etc/resolv.conf) ]]; then
+  sed -i '1s|^|nameserver 127.0.0.1\n|' /etc/resolv.conf
+fi
+sudo chmod +x /etc/NetworkManager/dispatcher.d/localhost-prepend
+#+END_SRC
+
+* Questions [问题篇]
+
+** GNOME3.6 文件夹默认打开方式关联问题
+#+BEGIN_SRC sh
+Edit /usr/share/applications/audacious.desktop 
+and remove following line:
+MimeType=inode/directory;
+sudo nano /usr/share/applications/mimeinfo.cache
+sudo gedit /usr/share/applications/mimeinfo.cache
+#+END_SRC
+
+** Add module auto
+#+BEGIN_SRC sh
+sudo gedit /etc/modules-load.d/virtio-net.conf
+#Load 'virtio-net.ko' at boot.
+virtio-net
+#+END_SRC
+
+** LIWORD start fonts problem
+#+BEGIN_SRC sh
+sudo gedit /etc/fonts/conf.d/65-nonlatin.conf
+save 
+then open LIWORD is ok.
+#+END_SRC
+
+** Emacs fcitx
+#+BEGIN_SRC sh
+sudo nano -w .bashrc add
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
+#+END_SRC

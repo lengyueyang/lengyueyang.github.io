@@ -1,0 +1,223 @@
+#+BEGIN_COMMENT
+.. title: Use org-mode to make slide/beamer
+.. slug: 
+.. date: 2016-03-04 19:26:52 UTC+08:00
+.. tags: Org-mode, Beamer, Emacs
+.. category: EMACS
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+#+TITLE: Use org-mode to make slide [用 org-mode 做幻灯]
+#+DATE: 2016-03-04
+#+LAYOUT: post
+#+TAGS: Org-mode, Beamer, Emacs
+#+CATEGORIES: EMACS
+* 缘由：
+- 之前做幻灯一直用 powerpoint，受限于各种格式调整，之后接触到了 latex，开始用 beamer 做幻灯
+- 最近迷恋上了 Reproducible Research，用 org-mode 进行时间管理、写 blog，恰巧最近需要做幻灯，本文记录用 org-mode 进行写做幻灯的过程以及注意事项,本文示例见[[https://github.com/lengyueyang/org-beamer][org-beamer]]
+
+{{{TEASER_END}}}
+
+* 配置
+- Org-mode 做幻灯实际上是用 org-mode 写做，转换成 latex 的 beamer，鉴于以后可能会用到中文，因此用 xelatex 编译 tex 文件
+- 导出快捷键：SPC e l P，更改 tex 默认编译引擎，我安装的是 Tex live 版本，安装详情见[fn:1]，更改引擎可参照[fn:2] (我的应该是更改 latexmk.pl 文件中的 pdflatex 为 xelatex，这一步记不清楚了)
+* Org-mode 做幻灯过程简介
+** Org-mode Beamer 模式设置
+#+BEGIN_SRC org
+#+TITLE:  Multiple therapeutic effects of progranulin on experimental acute ischaemic stroke
+#+AUTHOR: Xiaowei Mao
+#+EMAIL:  maoweirm@126.com
+#+BEAMER_HEADER: \date[March 4$^{th}$, 2016]{March 4$^{th}$, 2016 \\ \vskip 0.5cm \scriptsize{Brain. 2015 Jul;138(Pt 7):1932-48.}}
+#+BEAMER_HEADER: \title[Progranulin on ischemic stroke]{Multiple therapeutic effects of progranulin on experimental acute ischaemic stroke}
+#+BEAMER_HEADER: \institute[Pharmaron]{Pharmacology, Pharmaron} 
+#+OPTIONS: H:2 num:t toc:1 \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS: TeX:t LaTeX:nil skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+startup: beamer
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [bigger]
+#+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
+#+BEAMER_FRAME_LEVEL: 2
+#+LaTeX_HEADER: \usetheme{CambridgeUS}
+#+LaTeX_HEADER: \AtBeginSection{\begin{frame}{Outline}   \tableofcontents[currentsection] \end{frame} }
+#+LaTeX_HEADER: \setbeamertemplate{navigation symbols}{}
+#+LaTeX_HEADER: \renewcommand\maketitle{\frame[plain]{\titlepage}}
+#+LaTeX_HEADER: \usepackage{fontspec}
+#+LaTeX_HEADER: \usepackage{xeCJK}
+#+LaTeX_HEADER: \setmainfont{Times New Roman}
+#+LaTeX_HEADER: \setsansfont{Arial}
+#+LaTeX_HEADER: \setmonofont{Courier Std}
+#+LaTeX_HEADER: \setCJKmainfont[BoldFont={ },ItalicFont={ }]{WenQuanYi Micro Hei}
+#+LaTeX_HEADER: \setCJKsansfont{WenQuanYi Micro Hei}
+#+LaTeX_HEADER: \setCJKmonofont{WenQuanYi Micro Hei Mono} 
+#+LaTeX_HEADER: \graphicspath{pic file folder}
+#+BEAMER_HEADER: %\logo{\includegraphics[height=5mm]{logo.png}}
+#+LaTeX_HEADER: \usepackage[backend = biber, natbib=true, style = science, sorting = none]{biblatex}
+#+LaTeX_HEADER: \addbibresource{Pharmaron.bib}
+#+LaTeX_HEADER: \AtBeginBibliography{\footnotesize}
+#+LaTeX_HEADER: \setbeamertemplate{bibliography item}[text]
+#+LaTeX_HEADER: \usepackage[none]{hyphenat}
+#+LaTeX_HEADER: \usepackage[abs]{overpic}
+#+END_SRC
+
+- 在幻灯首页及页脚短标题、时间以及系所
+#+BEGIN_SRC org
+#+BEAMER_HEADER: \date[March 4$^{th}$, 2016]{March 4$^{th}$, 2016 \\ \vskip 0.5cm \scriptsize{Brain. 2015 Jul;138(Pt 7):1932-48.}}
+#+BEAMER_HEADER: \title[Progranulin on ischemic stroke]{Multiple therapeutic effects of progranulin on experimental acute ischaemic stroke}
+#+BEAMER_HEADER: \institute[Pharmaron]{Pharmacology, Pharmaron} 
+
+#+END_SRC
+
+- 常规设置，注意 H：2 表示目录两层
+#+BEGIN_SRC org
+#+OPTIONS: H:2 num:t toc:1 \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS: TeX:t LaTeX:nil skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+startup: beamer
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [bigger]
+#+END_SRC
+
+- Beamer 主题选择，在每个 section 之前加入这个 section 的目录，标题页去掉页眉和页脚
+#+BEGIN_SRC org
+#+LaTeX_HEADER: \usetheme{CambridgeUS}
+#+LaTeX_HEADER: \AtBeginSection{\begin{frame}{Outline}   \tableofcontents[currentsection] \end{frame} }
+#+LaTeX_HEADER: \setbeamertemplate{navigation symbols}{}
+#+LaTeX_HEADER: \renewcommand\maketitle{\frame[plain]{\titlepage}}
+#+END_SRC
+
+- 设置字体，用 fontspec 和 xeCJK 包
+#+BEGIN_SRC org
+#+LaTeX_HEADER: \usepackage{fontspec}
+#+LaTeX_HEADER: \usepackage{xeCJK}
+#+LaTeX_HEADER: \setmainfont{Times New Roman}
+#+LaTeX_HEADER: \setsansfont{Arial}
+#+LaTeX_HEADER: \setmonofont{Courier Std}
+#+LaTeX_HEADER: \setCJKmainfont[BoldFont={ },ItalicFont={ }]{WenQuanYi Micro Hei}
+#+LaTeX_HEADER: \setCJKsansfont{WenQuanYi Micro Hei}
+#+LaTeX_HEADER: \setCJKmonofont{WenQuanYi Micro Hei Mono} 
+#+END_SRC
+
+
+- 默认插入图片位置:
+#+BEGIN_SRC org
+#+LaTeX_HEADER: \graphicspath{pic file folder}
+#+END_SRC
+
+- 参考文献
+#+BEGIN_SRC org
+#+BEAMER_HEADER: %\logo{\includegraphics[height=5mm]{logo.png}}
+#+LaTeX_HEADER: \usepackage[backend = biber, natbib=true, style = science, sorting = none]{biblatex}
+#+LaTeX_HEADER: \addbibresource{Pharmaron.bib}
+#+LaTeX_HEADER: \AtBeginBibliography{\footnotesize}
+#+LaTeX_HEADER: \setbeamertemplate{bibliography item}[text]
+#+END_SRC
+
+- 取消断词，overpic 包
+#+BEGIN_SRC org
+#+LaTeX_HEADER: \usepackage[none]{hyphenat}
+#+LaTeX_HEADER: \usepackage[abs]{overpic}
+#+END_SRC
+
+** 插入小标题及分页
+#+BEGIN_SRC org
+,*** A block                                                           :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.6
+:END:
+- A stroke is a medical emergency in which the blood supply to any portion of the brain is interrupted or reduced.
+\vspace{0.5cm}
+- Alternative names: Cerebrovascular accident/ disease (CVA), Cerebral infarction, Cerebral hemorrhage.
+,*** picture                                                         :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
+\includegraphics[width=4.5cm]{b1} \newline
+\centering \scriptsize{The Circle of Willis Anatomy}
+#+END_SRC
+
+** 插入多张图片
+#+BEGIN_SRC org
+\begin{overpic}[height=6cm, width=12cm]{b2}
+\put(20,0){\visible<2>{\includegraphics[height=6cm, width=5.5cm]{b6}}}
+\put(200,0){\visible<2>{\includegraphics[height=6cm, width=4.5cm]{b3}}}
+\put(0,0){\visible<4>{\includegraphics[height=6cm, width=6.5cm]{b4}}}
+\put(172,0){\visible<4>{\includegraphics[height=6cm, width=6cm]{b5}}}
+\end{overpic}
+#+END_SRC
+
+** 插入 block
+#+BEGIN_SRC org
+,***                                                                 :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.6
+:END:
+\includegraphics[height=5cm,width=\textwidth]{b10}
+,*** \pause \small Stroke therapeutic strategy                 :B_block:BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.4
+:BEAMER_env: block
+:END:
+\begin{itemize}
+\item \footnotesize Broaden the therapeutic time window
+\begin{itemize}
+ \item \scriptsize The new thrombolytics
+ \item \scriptsize Neuroprotection agents-\emph{\textbf{progranulin}}
+\end{itemize}
+\item \footnotesize Therapy is recovery stage
+\begin{itemize}
+ \item \scriptsize Neuroprotection agents
+ \item \scriptsize Stem cell therapy
+ \item \scriptsize Chinese traditional medicine
+ \item \scriptsize Acupuncture
+ \item \scriptsize ......
+\end{itemize}
+\end{itemize}
+#+END_SRC
+
+** 插入参考文献
+#+BEGIN_SRC org
+,** References
+\tiny
+\cite{moretti2015neuroprotection} \cite{george2015novel} \cite{butcher2010acute} \cite{hacke2008thrombolysis} \cite{kanazawa2011biochemical} \cite{kanazawa2011inhibition} \cite{nguyen2013progranulin} \cite{o20061}
+\printbibliography[heading = none]
+#+END_SRC
+
+* 一些问题
+** 参考文献
+- 默认编译快捷键不能编译参考文献，在配置文件中加入一下代码即可
+
+#+BEGIN_SRC emacs-lisp
+  (setq org-latex-pdf-process
+        '("xelatex -interaction nonstopmode -output-directory %o %f" "biber %b" "xelatex -interaction nonstopmode -output-directory %o %f" "xelatex -interaction nonstopmode -output-directory %o %f"))
+#+END_SRC
+
+- 改变参考文献字体大小,加入一下代码
+
+  #+BEGIN_SRC latex
+    \AtBeginBibliography{\tiny}
+  #+END_SRC
+
+** 脚注
+- 如果文章某一页有脚注，插入\footfullcite{脚注内容}即可
+- 如果脚注连续，即插入参考文献 4-6，或 2,3，并且同一页插入两个相同脚注,可参考代码见[fn:3], 也可在我的 github 下载[[https://github.com/lengyueyang/org-beamer/blob/master/footnoteref.sty][footnoteref]]，
+用\usepackage{footnoteref}
+- 改变脚注字体大小，加入一下代码
+
+  #+BEGIN_SRC org
+\renewcommand{\footnotesize}{\tiny}
+  #+END_SRC
+
+* Footnotes
+
+[fn:3] http://tex.stackexchange.com/questions/35673/biblatex-is-there-a-command-analogous-to-ifciteseen-but-within-one-page
+
+[fn:2] http://kieranhealy.org/blog/archives/2011/01/21/exporting-org-mode-to-pdf-via-xelatex/
+
+[fn:1] http://attach3.bdwm.net/attach/boards/MathTools/M.1435670549.A/pkuthss-bootstrap-0.1.4.pdf
