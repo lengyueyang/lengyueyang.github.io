@@ -92,7 +92,7 @@ DEFAULT_LANG = "zh_cn"
 # The format is {"translationcode" : "path/to/translation" }
 # the path will be used as a prefix for the generated pages location
 TRANSLATIONS = {
-    DEFAULT_LANG: "zh_cn",
+    DEFAULT_LANG: "",
    "en": "./en",
 }
 
@@ -132,16 +132,16 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 #          else they won’t be highlighted when active.
 
 NAVIGATION_LINKS = {
-   DEFAULT_LANG: (
+    DEFAULT_LANG: (
        ("/archive.html", "归档"),
        ("/categories/", "标签云"),
        ("/rss.xml", "RSS订阅"),
-   ),
+        ),
     "en":(
         ("/archive.html", "Archive"),
         ("/categories/", "Tags"),
         ("/rss.xml", "RSS feed"),
-    ),
+        ),
 
 }
 
