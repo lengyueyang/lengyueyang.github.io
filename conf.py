@@ -93,7 +93,8 @@ DEFAULT_LANG = "zh_cn"
 # the path will be used as a prefix for the generated pages location
 TRANSLATIONS = {
     DEFAULT_LANG: "",
-   "en": "./en",
+    # "zh_cn": "./zh_cn",
+    "en": "en",
 }
 
 # What will translated input files be named like?
@@ -138,9 +139,9 @@ NAVIGATION_LINKS = {
         ("/rss.xml", "RSS订阅"),
     ),
     "en": (
-        ("/archive.html", "Archives"),
-        ("/categories/index.html", "Tags"),
-        ("/rss.xml", "RSS feed"),
+        ("./archive.html", "Archives"),
+        ("./categories/index.html", "Tags"),
+        ("./rss.xml", "RSS feed"),
     ),
 }
 
