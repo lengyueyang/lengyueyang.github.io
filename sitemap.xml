@@ -6,12 +6,124 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
+  <loc>https://lengyueyang.github.io/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/archive.html</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/categories/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/categories/archlinux/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/categories/beamer/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/categories/blog/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/categories/cat_data-scientist/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/categories/cat_emacs/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/categories/cat_linux/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/categories/cat_python/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/categories/cat_research/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/categories/configuration/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/categories/emacs/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/categories/github/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/categories/gtd/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/categories/linear-algebra/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/categories/linux/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/categories/mathjax/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/categories/mu4e/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/categories/offlineimap/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/categories/org-mode/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/categories/pyenv/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/categories/python/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/categories/r/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/categories/research/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/categories/shadowsocks/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/categories/spacemacs/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/categories/statistics/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://lengyueyang.github.io/en/</loc>
   <lastmod>2018-01-01T03:50:00Z</lastmod>
  </url>
  <url>
   <loc>https://lengyueyang.github.io/en/archive.html</loc>
-  <lastmod>2018-01-01T03:50:00Z</lastmod>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
  </url>
  <url>
   <loc>https://lengyueyang.github.io/en/categories/</loc>
@@ -124,86 +236,163 @@
  <url>
   <loc>https://lengyueyang.github.io/en/posts/a-simple-introduction-of-lengyueyangs-spacemacs-configrationzh_cn/</loc>
   <lastmod>2018-01-01T03:50:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/zh_cn/posts/a-simple-introduction-of-lengyueyangs-spacemacs-configrationzh_cn/" />
+  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/posts/a-simple-introduction-of-lengyueyangs-spacemacs-configrationzh_cn/" />
  </url>
  <url>
   <loc>https://lengyueyang.github.io/en/posts/archlinux-install-and-configurationzh_cn/</loc>
   <lastmod>2018-01-01T03:50:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/zh_cn/posts/archlinux-install-and-configurationzh_cn/" />
+  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/posts/archlinux-install-and-configurationzh_cn/" />
  </url>
  <url>
   <loc>https://lengyueyang.github.io/en/posts/archlinux-shadowsocks/</loc>
   <lastmod>2018-01-01T03:50:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/zh_cn/posts/archlinux-shadowsocks/" />
+  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/posts/archlinux-shadowsocks/" />
  </url>
  <url>
   <loc>https://lengyueyang.github.io/en/posts/blog-with-org-mode-and-githubzh_cn/</loc>
   <lastmod>2018-01-01T03:50:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/zh_cn/posts/blog-with-org-mode-and-githubzh_cn/" />
+  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/posts/blog-with-org-mode-and-githubzh_cn/" />
  </url>
  <url>
   <loc>https://lengyueyang.github.io/en/posts/python-pyenv-methodszh_cn/</loc>
   <lastmod>2018-01-01T03:50:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/zh_cn/posts/python-pyenv-methodszh_cn/" />
+  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/posts/python-pyenv-methodszh_cn/" />
  </url>
  <url>
   <loc>https://lengyueyang.github.io/en/posts/shu-ju-ke-xue-shu-xue-he-tong-ji-gai-lu-lun-yu-shu-li-tong-ji-shi-jian-de-gai-lu-zh_cn/</loc>
   <lastmod>2018-01-01T03:50:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/zh_cn/posts/shu-ju-ke-xue-shu-xue-he-tong-ji-gai-lu-lun-yu-shu-li-tong-ji-shi-jian-de-gai-lu-zh_cn/" />
+  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/posts/shu-ju-ke-xue-shu-xue-he-tong-ji-gai-lu-lun-yu-shu-li-tong-ji-shi-jian-de-gai-lu-zh_cn/" />
  </url>
  <url>
   <loc>https://lengyueyang.github.io/en/posts/shu-ju-ke-xue-shu-xue-he-tong-ji-gai-lu-lun-yu-shu-li-tong-ji-sui-ji-bian-liang-de-shu-zi-te-zheng-zh_cn/</loc>
   <lastmod>2018-01-01T03:50:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/zh_cn/posts/shu-ju-ke-xue-shu-xue-he-tong-ji-gai-lu-lun-yu-shu-li-tong-ji-sui-ji-bian-liang-de-shu-zi-te-zheng-zh_cn/" />
+  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/posts/shu-ju-ke-xue-shu-xue-he-tong-ji-gai-lu-lun-yu-shu-li-tong-ji-sui-ji-bian-liang-de-shu-zi-te-zheng-zh_cn/" />
  </url>
  <url>
   <loc>https://lengyueyang.github.io/en/posts/shu-ju-ke-xue-shu-xue-he-tong-ji-gai-lu-lun-yu-shu-li-tong-ji-sui-ji-bian-liang-ji-qi-gai-lu-fen-bu-zh_cn/</loc>
   <lastmod>2018-01-01T03:50:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/zh_cn/posts/shu-ju-ke-xue-shu-xue-he-tong-ji-gai-lu-lun-yu-shu-li-tong-ji-sui-ji-bian-liang-ji-qi-gai-lu-fen-bu-zh_cn/" />
+  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/posts/shu-ju-ke-xue-shu-xue-he-tong-ji-gai-lu-lun-yu-shu-li-tong-ji-sui-ji-bian-liang-ji-qi-gai-lu-fen-bu-zh_cn/" />
  </url>
  <url>
   <loc>https://lengyueyang.github.io/en/posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-nwei-xiang-liang-kong-jian-knzh_cn/</loc>
   <lastmod>2018-01-01T03:50:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/zh_cn/posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-nwei-xiang-liang-kong-jian-knzh_cn/" />
+  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-nwei-xiang-liang-kong-jian-knzh_cn/" />
  </url>
  <url>
   <loc>https://lengyueyang.github.io/en/posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-xian-xing-fang-cheng-zu-de-jie-fa-zh_cn/</loc>
   <lastmod>2018-01-01T03:50:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/zh_cn/posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-xian-xing-fang-cheng-zu-de-jie-fa-zh_cn/" />
+  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-xian-xing-fang-cheng-zu-de-jie-fa-zh_cn/" />
  </url>
  <url>
   <loc>https://lengyueyang.github.io/en/posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-xing-lie-shi-zh_cn/</loc>
   <lastmod>2018-01-01T03:50:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/zh_cn/posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-xing-lie-shi-zh_cn/" />
+  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-xing-lie-shi-zh_cn/" />
  </url>
  <url>
   <loc>https://lengyueyang.github.io/en/posts/spacemacs-learningzh_cn/</loc>
   <lastmod>2018-01-01T03:50:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/zh_cn/posts/spacemacs-learningzh_cn/" />
+  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/posts/spacemacs-learningzh_cn/" />
  </url>
  <url>
   <loc>https://lengyueyang.github.io/en/posts/statistics-in-research-article-part-1-univariate-analysiszh_cn/</loc>
   <lastmod>2018-01-01T03:50:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/zh_cn/posts/statistics-in-research-article-part-1-univariate-analysiszh_cn/" />
+  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/posts/statistics-in-research-article-part-1-univariate-analysiszh_cn/" />
  </url>
  <url>
   <loc>https://lengyueyang.github.io/en/posts/use-mu4e-to-manage-emailzh_cn/</loc>
   <lastmod>2018-01-01T03:50:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/zh_cn/posts/use-mu4e-to-manage-emailzh_cn/" />
+  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/posts/use-mu4e-to-manage-emailzh_cn/" />
  </url>
  <url>
   <loc>https://lengyueyang.github.io/en/posts/use-org-mode-to-gtdzh_cn/</loc>
   <lastmod>2018-01-01T03:50:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/zh_cn/posts/use-org-mode-to-gtdzh_cn/" />
+  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/posts/use-org-mode-to-gtdzh_cn/" />
  </url>
  <url>
   <loc>https://lengyueyang.github.io/en/posts/use-org-mode-to-make-presentationzh_cn/</loc>
   <lastmod>2018-01-01T03:50:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/zh_cn/posts/use-org-mode-to-make-presentationzh_cn/" />
+  <xhtml:link rel="alternate" hreflang="zh_cn" href="https://lengyueyang.github.io/posts/use-org-mode-to-make-presentationzh_cn/" />
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/galleries/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
  </url>
  <url>
   <loc>https://lengyueyang.github.io/listings/</loc>
   <lastmod>2018-01-01T03:50:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/posts/a-simple-introduction-of-lengyueyangs-spacemacs-configrationzh_cn/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://lengyueyang.github.io/en/posts/a-simple-introduction-of-lengyueyangs-spacemacs-configrationzh_cn/" />
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/posts/archlinux-install-and-configurationzh_cn/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://lengyueyang.github.io/en/posts/archlinux-install-and-configurationzh_cn/" />
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/posts/archlinux-shadowsocks/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://lengyueyang.github.io/en/posts/archlinux-shadowsocks/" />
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/posts/blog-with-org-mode-and-githubzh_cn/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://lengyueyang.github.io/en/posts/blog-with-org-mode-and-githubzh_cn/" />
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/posts/python-pyenv-methodszh_cn/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://lengyueyang.github.io/en/posts/python-pyenv-methodszh_cn/" />
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/posts/shu-ju-ke-xue-shu-xue-he-tong-ji-gai-lu-lun-yu-shu-li-tong-ji-shi-jian-de-gai-lu-zh_cn/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/posts/shu-ju-ke-xue-shu-xue-he-tong-ji-gai-lu-lun-yu-shu-li-tong-ji-sui-ji-bian-liang-de-shu-zi-te-zheng-zh_cn/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/posts/shu-ju-ke-xue-shu-xue-he-tong-ji-gai-lu-lun-yu-shu-li-tong-ji-sui-ji-bian-liang-ji-qi-gai-lu-fen-bu-zh_cn/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-nwei-xiang-liang-kong-jian-knzh_cn/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-xian-xing-fang-cheng-zu-de-jie-fa-zh_cn/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-xing-lie-shi-zh_cn/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/posts/spacemacs-learningzh_cn/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://lengyueyang.github.io/en/posts/spacemacs-learningzh_cn/" />
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/posts/statistics-in-research-article-part-1-univariate-analysiszh_cn/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/posts/use-mu4e-to-manage-emailzh_cn/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://lengyueyang.github.io/en/posts/use-mu4e-to-manage-emailzh_cn/" />
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/posts/use-org-mode-to-gtdzh_cn/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://lengyueyang.github.io/en/posts/use-org-mode-to-gtdzh_cn/" />
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/posts/use-org-mode-to-make-presentationzh_cn/</loc>
+  <lastmod>2018-01-01T03:55:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://lengyueyang.github.io/en/posts/use-org-mode-to-make-presentationzh_cn/" />
  </url>
  <url>
   <loc>https://lengyueyang.github.io/zh_cn/</loc>
@@ -324,27 +513,26 @@
  <url>
   <loc>https://lengyueyang.github.io/zh_cn/posts/a-simple-introduction-of-lengyueyangs-spacemacs-configrationzh_cn/</loc>
   <lastmod>2018-01-01T03:50:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://lengyueyang.github.io/en/posts/a-simple-introduction-of-lengyueyangs-spacemacs-configrationzh_cn/" />
  </url>
  <url>
   <loc>https://lengyueyang.github.io/zh_cn/posts/archlinux-install-and-configurationzh_cn/</loc>
   <lastmod>2018-01-01T03:50:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://lengyueyang.github.io/en/posts/archlinux-install-and-configurationzh_cn/" />
  </url>
  <url>
   <loc>https://lengyueyang.github.io/zh_cn/posts/archlinux-shadowsocks/</loc>
   <lastmod>2018-01-01T03:50:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://lengyueyang.github.io/en/posts/archlinux-shadowsocks/" />
  </url>
  <url>
   <loc>https://lengyueyang.github.io/zh_cn/posts/blog-with-org-mode-and-githubzh_cn/</loc>
   <lastmod>2018-01-01T03:50:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://lengyueyang.github.io/en/posts/blog-with-org-mode-and-githubzh_cn/" />
+ </url>
+ <url>
+  <loc>https://lengyueyang.github.io/zh_cn/posts/ge-ren-fang-zi-bei-jing-zh_cn/</loc>
+  <lastmod>2018-01-01T03:50:00Z</lastmod>
  </url>
  <url>
   <loc>https://lengyueyang.github.io/zh_cn/posts/python-pyenv-methodszh_cn/</loc>
   <lastmod>2018-01-01T03:50:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://lengyueyang.github.io/en/posts/python-pyenv-methodszh_cn/" />
  </url>
  <url>
   <loc>https://lengyueyang.github.io/zh_cn/posts/shu-ju-ke-xue-shu-xue-he-tong-ji-gai-lu-lun-yu-shu-li-tong-ji-shi-jian-de-gai-lu-zh_cn/</loc>
@@ -373,7 +561,6 @@
  <url>
   <loc>https://lengyueyang.github.io/zh_cn/posts/spacemacs-learningzh_cn/</loc>
   <lastmod>2018-01-01T03:50:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://lengyueyang.github.io/en/posts/spacemacs-learningzh_cn/" />
  </url>
  <url>
   <loc>https://lengyueyang.github.io/zh_cn/posts/statistics-in-research-article-part-1-univariate-analysiszh_cn/</loc>
@@ -382,16 +569,13 @@
  <url>
   <loc>https://lengyueyang.github.io/zh_cn/posts/use-mu4e-to-manage-emailzh_cn/</loc>
   <lastmod>2018-01-01T03:50:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://lengyueyang.github.io/en/posts/use-mu4e-to-manage-emailzh_cn/" />
  </url>
  <url>
   <loc>https://lengyueyang.github.io/zh_cn/posts/use-org-mode-to-gtdzh_cn/</loc>
   <lastmod>2018-01-01T03:50:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://lengyueyang.github.io/en/posts/use-org-mode-to-gtdzh_cn/" />
  </url>
  <url>
   <loc>https://lengyueyang.github.io/zh_cn/posts/use-org-mode-to-make-presentationzh_cn/</loc>
   <lastmod>2018-01-01T03:50:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://lengyueyang.github.io/en/posts/use-org-mode-to-make-presentationzh_cn/" />
  </url>
 </urlset>
