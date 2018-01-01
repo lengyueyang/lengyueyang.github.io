@@ -133,16 +133,17 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 #          else they won’t be highlighted when active.
 
 NAVIGATION_LINKS = {
-    "en":(
-        ("/archive.html", "Archive"),
-        ("/categories/", "Tags"),
-        ("/rss.xml", "RSS feed"),
-    ),
    DEFAULT_LANG: (
        ("/archive.html", "归档"),
        ("/categories/", "标签云"),
        ("/rss.xml", "RSS订阅"),
    ),
+    "en":(
+        ("/archive.html", "Archive"),
+        ("/categories/", "Tags"),
+        ("/rss.xml", "RSS feed"),
+    ),
+
 }
 
 # Name of the theme to use.
