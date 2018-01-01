@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns#
+article: http://ogp.me/ns/article#
+" lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布 | 深度识医</title>
+<script src="../../../assets/js/pace.min.js"></script><link href="../../../assets/css/pace.css" rel="stylesheet">
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="../../../en/rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (zh_cn)" href="../../rss.xml">
+<link rel="canonical" href="https://lengyueyang.github.io/zh_cn/posts/shu-ju-ke-xue-shu-xue-he-tong-ji-gai-lu-lun-yu-shu-li-tong-ji-sui-ji-bian-liang-ji-qi-gai-lu-fen-bu-zh_cn/">
+<!--[if lt IE 9]>
+            <script src="../../../assets/js/html5shiv.min.js"></script>
+            <script src="../../../assets/js/respond.min.js"></script>
+        <![endif]--><meta name="author" content="冷月阳">
+<link rel="prev" href="../shu-ju-ke-xue-shu-xue-he-tong-ji-gai-lu-lun-yu-shu-li-tong-ji-sui-ji-bian-liang-de-shu-zi-te-zheng-zh_cn/" title="数据科学-数学和统计-概率论与数理统计-随机变量的数字特征" type="text/html">
+<link rel="next" href="../shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-xian-xing-fang-cheng-zu-de-jie-fa-zh_cn/" title="数据科学-数学与统计-高等代数-线性方程组的解法" type="text/html">
+<meta property="og:site_name" content="深度识医">
+<meta property="og:title" content="数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布">
+<meta property="og:url" content="https://lengyueyang.github.io/zh_cn/posts/shu-ju-ke-xue-shu-xue-he-tong-ji-gai-lu-lun-yu-shu-li-tong-ji-sui-ji-bian-liang-ji-qi-gai-lu-fen-bu-zh_cn/">
+<meta property="og:description" content="随机变量及其概率分布
+
+
+一维随机变量
+
+
+随机变量的概念
+
+
+随机变量的定义：“其值随机会而定”的变量，是试验结果的函数
+
+
+
+随机变量的反面为确定性变量，其取值遵循某种严格的规律的变量；
+
+
+
+
+
+随机事件与随机变量的关系：前者从静态观点来研究随机现象，后者从动态观点，随机变量(向量)的研究，是概率论的中心内容
+
+
+
+随机变量的分类（按其可能取的值的全体的性质）：离散型随机变量（只能取有限个值">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-05-29T19:26:52+08:00">
+<meta property="article:tag" content="mathjax">
+<meta property="article:tag" content="Statistics">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-info header-panel shadow-z-3" role="navigation"><div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-3">
+            <h1 class="title-blog">
+                <a href="https://lengyueyang.github.io/zh_cn/">
+                        <span id="blog-title">深度识医</span>
+                    </a>
+            </h1>
+          </div>
+          <div class="col-xs-9">
+            <a id="hamburger" class="btn btn-raised" href="javascript:void(0);" onclick="menuToggle();">☰</a>
+          </div>
+        </div>
+      </div>
+<!-- /.container-fluid -->
+</nav><div class="container-fluid main" id="content" role="main">
+        <div class="row">
+            <nav class="col-xs-12 col-sm-3 menu"><ul>
+<li class="withripple"><a href="../../../archive.html">归档</a></li>
+                <li class="withripple"><a href="../../../categories/">标签云</a></li>
+                <li class="withripple"><a href="../../../rss.xml">RSS订阅</a></li>
+
+                    
+                </ul>
+<ul>
+<li>            </li>
+<li><a href="https://lengyueyang.github.io/en/" rel="alternate" hreflang="en">English</a></li>
+
+                    
+                </ul></nav><div class="posts-material col-xs-12 col-sm-9">
+                <div class="col-xs-12 col-md-11 content-material">
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布</a></h1>
+<hr>
+<div class="metadata">
+            <span class="byline author vcard">
+                <a href=".">
+                        <img class="img-circle" src="../../../images/lengyueyang.png" alt="icon">
+                    冷月阳
+                </a>
+            </span>
+            <span class="dateline">
+                <a href="." rel="bookmark"><i class="mdi-device-access-time"></i>
+                    <time class="published dt-published" datetime="2017-05-29T19:26:52+08:00" itemprop="datePublished" title="2017-05-29 19:26">2017-05-29 19:26</time></a>
+            </span>
+                <span class="commentline">            <a href="#disqus_thread" data-disqus-identifier="cache/posts/数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布.zh_cn.html">Comments</a>
+
+</span>
+        </div>
+        
+        <hr></header><div class="e-content entry-content" itemprop="articleBody text">
+    <div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">随机变量及其概率分布</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1">一维随机变量</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-sec-1-1-1" class="outline-4">
+<h4 id="sec-1-1-1">随机变量的概念</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+随机变量的定义：“其值随机会而定”的变量，是试验结果的函数
+</p>
+
+<p>
+随机变量的反面为确定性变量，其取值遵循某种严格的规律的变量；
+</p>
+
+<!-- TEASER_END -->
+
+<p>
+随机事件与随机变量的关系：前者从静态观点来研究随机现象，后者从动态观点，随机变量(向量)的研究，是概率论的中心内容
+</p>
+
+<p>
+随机变量的分类（按其可能取的值的全体的性质）：离散型随机变量（只能取有限个值）和连续性随机变量（取值充满某一个区间，数学上抽象的情况）
+</p>
+
+<p>
+随机变量的研究：取值、取各种值的概率
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-1-2" class="outline-4">
+<h4 id="sec-1-1-2">离散型随机变量的分布及其例子</h4>
+<div class="outline-text-4" id="text-1-1-2">
+\begin{de}[离散型随机变量概率函数的定义]
+\end{de}
+<p>
+设 X 为离散型随机变量，其全部可能值为 \(\lbrace a_1, a_2, \dots \rbrace \) ，则下式称为为随机变量的概率函数
+</p>
+\begin{equation}
+p_i = P(X = a_i) \qquad (i = 1, 2, \dots )
+\end{equation}
+<p>
+显然，有 \(p_i \geqslant 0 , p_1 + p_2 + \dots = 1\)
+</p>
+
+\begin{de}[随机变量分布函数定义]
+\end{de}
+<p>
+设 X 为一随机变量，则函数 P(公式见下)称为 X 的分布函数
+</p>
+\begin{equation}
+F(x) = P(X \leqslant x) = F(x) (-\infty &lt; x &lt; ∞) = \sum_{\lbrace i|a_i ⩽ x \rbrace }p_i
+\end{equation}
+
+<p>
+离散型随机变量的概率函数和分布函数的关系：等价，知道其一即可知道另一个
+</p>
+
+<p>
+随机变量的分布函数\(F(x)\)的性质：
+</p>
+<ul class="org-ul">
+<li>\(F(x)\) 是单调非降: 当 \(x_1 ⩽ x_2\) 时，有 \(F(x_1) ⩽ F(x_2)\)
+</li>
+<li>当 \(x → \infty\)时， \(F(x) → 1\) ; \(x → - \infty\)时， \(F(x) → 0\)
+</li>
+</ul>
+</div>
+
+<ul class="org-ul">
+<li>
+<a id="sec-1-1-2-1" name="sec-1-1-2-1"></a>离散性随机变量分布-二项分布<br><div class="outline-text-5" id="text-1-1-2-1">
+\begin{de}[二项分布定义]
+\end{de}
+<p>
+设某事件 A 在一次试验中发生的概率为 p, 先将这个试验独立的重复 n 次，以 X 记作 A 在 n 次试验中发生的次数，n 可取 \(0, 1, \dots ,n\) 等值，如 X 遵从下式，则称 X 所遵从的概率分布为二项分布，并常记为 \(B(n, p)\) ，记为 \(X \sim B(n, p)\)
+</p>
+\begin{equation}
+p_i = P(X = i) = b(i; n; p) = \binom{n}{i}p_i(1-p)^{n-p}
+\end{equation}
+
+<p>
+二项分布的条件：各次试验的条件是稳定的；各次试验的独立性
+</p>
+</div>
+</li>
+
+<li>
+<a id="sec-1-1-2-2" name="sec-1-1-2-2"></a>离散性随机变量分布-泊松分布<br><div class="outline-text-5" id="text-1-1-2-2">
+\begin{de}[泊松分布定义]
+\end{de}
+<p>
+随机变量 X 的可能取值为 \(0, 1, 2 \dots\) , 且概率分布如下式，则称 X 服从泊松分布，常记为 \(X \sim P(λ)\)  
+</p>
+\begin{equation}
+P(X = i) = e^{-λ}λ^i \divslash i! 
+\end{equation}
+
+<p>
+波瓦松分布出现场合：表示在一定时间和空间内出现的事件个数
+</p>
+
+<p>
+二项分布和波瓦松分布的关系：波瓦松分布可作为二项分布的极限而得到，若 X 服从 \(B(n, p)\) ，其中 n 很大，p 很小而 np 不太大时，则 X 的分布接近于参数为 np 的波瓦松分布
+</p>
+</div>
+</li>
+
+<li>
+<a id="sec-1-1-2-3" name="sec-1-1-2-3"></a>离散性随机变量分布-超几何分布<br><div class="outline-text-5" id="text-1-1-2-3">
+\begin{de}[超几何分布定义]
+\end{de}
+<p>
+随机变量 X 记为从 N 个产品里随机抽出 n 个里面所含废品数(废品总数为 M)，若 X 满足下式，则称 X 服从超级和分布
+</p>
+\begin{equation}
+  P(X = m) = \binom{M}{m} \binom{N-M}{n-m} \xsol \binom{N}{n} 
+\end{equation}
+
+<p>
+在本例中，当 n 固定时, \(M \devslash N = p\) 固定，当 \(N → ∞\) 时，X 近似服从二项分布 \(B(n, p)\)
+</p>
+</div>
+</li>
+
+<li>
+<a id="sec-1-1-2-4" name="sec-1-1-2-4"></a>离散性随机变量分布-负二项分布<br><div class="outline-text-5" id="text-1-1-2-4">
+\begin{de}[负二项分布定义]
+\end{de}
+<p>
+负二项分布是定下废品个数 r，把总抽样次数减去 r 作为变量，概率分布如下式，则称 X 服从负二项分布  
+</p>
+\begin{equation}
+  P(X = i) = b(r-1; i+r-1, p)p = \binom{i+r-1}{r-1}p^r(1-p)^i \qquad (i = 0, 1, 2, \dots) 
+\end{equation}
+
+<p>
+当 \(r = 1\) 时，<a href=".">1</a> 概率 \(p, p(1-p), p(1-p)^2, \dots\) 呈公比为 1-p 的几何级数，因此，称之为几何分布
+</p>
+</div>
+</li>
+</ul>
+</div>
+
+<div id="outline-container-sec-1-1-3" class="outline-4">
+<h4 id="sec-1-1-3">连续性随机变量的分布及其例子</h4>
+<div class="outline-text-4" id="text-1-1-3">
+\begin{de}[连续性随机变量概率密度函数定义]
+\end{de}
+<p>
+设连续型随机变量 X 有概率分布函数 F(x)，则概率分布函数的导数 \(f(x) = F'(x)\) 称为 X 的概率密度函数
+</p>
+
+<p>
+连续型随机变量 X 概率密度函数的三条基本性质：
+</p>
+<ul class="org-ul">
+<li>\(f(x) ⩾ 0 \)
+</li>
+<li>\(\int_{-\infty}^\infty dx = 1\)
+</li>
+<li>对任何常数 \(a &lt; b\) , 有 \[P(a ⩽ X ⩽ b) = F(b) - F(a) = ∫_a^bf(x)\] 微积分基本定理
+</li>
+</ul>
+</div>
+
+<ul class="org-ul">
+<li>
+<a id="sec-1-1-3-1" name="sec-1-1-3-1"></a>连续性随机变量分布-正态分布<br><div class="outline-text-5" id="text-1-1-3-1">
+\begin{de}[正态分布定义]
+\end{de}
+<p>
+如果一个随机变量具有下式的概率密度函数，称 X 为正太随机变量，并记为 \(X \sim N(μ, σ)\) , μ 和 σ 都是常数，μ 可以取任何常数，而 \(0 &lt; σ^2 &lt; ∞\) .
+</p>
+\begin{equation}
+f(x) = \frac{1}{\sqrt{2\pi}\sigma}exp(-\frac{(x-\mu)^2}{2\sigma^2})
+\end{equation}
+
+<p>
+两个重要的积分例子 
+</p>
+<ul class="org-ul">
+<li>\(I = \int_{-∞}^\infty exp(-\frac{t^2}{2}dt = \sqrt{2\pi}\) ,具体证明可以考虑 \(I^2 = 2\pi\) 
+</li>
+<li>\(I = \int_{-∞}^\infty t^2exp(-\frac{t^2}{2})dt = \sqrt{2\pi}\) ,用分部积分可得到
+</li>
+</ul>
+
+\begin{de}[标准正态分布]
+\end{de}
+<p>
+若正太分布当 \(\mu = 0\) , \(σ^2 =1\) 时，称下式为正太分布 \(N(0, 1)\) 的密度函数, \\(N(0, 1)\) 称为标准正太分布
+</p>
+\begin{equation}
+f(x) = \frac{1}{\sqrt{2\pi}}exp(-\frac{x^2}{2})
+\end{equation}
+
+<p>
+一般在概率论中，正太分布的密度函数和分布函数分别记为 \(\phi(x)\) (或 手写的 \(\varphi(x)\)), \(Φ(x)\)
+</p>
+</div>
+</li>
+
+<li>
+<a id="sec-1-1-3-2" name="sec-1-1-3-2"></a>连续性随机变量分布-指数分布<br><div class="outline-text-5" id="text-1-1-3-2">
+\begin{de}[指数分布定义]
+\end{de}
+<p>
+若随机变量 X 有以下概率密度函数，则称 X 服从指数分布，其中 \(λ &gt; 0\) 为参数
+</p>
+\begin{equation}
+f(x) = \left\{\begin{array}{ll}
+               λe^{-λx}, &amp; if \quad x &gt; 0 \\
+               0,    &amp; if \quad \(x ⩽ 0\)
+              \end{array} \right.
+\end{equation}
+
+<p>
+变量 X 的分布函数 F(x) 见下式，指数分布最常见的一个场合是寿命分布， \(λ^{-1}\) 就是平均寿命 
+</p>
+\begin{equation}
+F(x) = P(X ⩽ x) = \int_{-∞}^xf(t)dt = \left\{\begin{array}{ll}
+                                       0,    &amp; if \quad \(x ⩽ 0\) \\
+                                       1 - e^{-λx}, &amp; if \quad x &gt; 0 
+                                      \end{array}\right
+\end{equation}
+</div>
+</li>
+
+<li>
+<a id="sec-1-1-3-3" name="sec-1-1-3-3"></a>连续性随机变量分布-威布尔分布<br><div class="outline-text-5" id="text-1-1-3-3">
+\begin{de}[威布尔分布]
+\end{de}
+<p>
+若随机变量 X 有以下概率密度函数，则称 X 服从威布尔分布，其中 \(λ &gt; 0\) , \(m &gt; 0\) 是常数
+</p>
+\begin{equation}
+f(x) = \left\{\begin{array}{ll}
+               λαe^{-λx^\alpha}, &amp; if \quad x &gt; 0 \\
+               0,    &amp; if \quad \(x ⩽ 0\)
+              \end{array} \right.
+\end{equation}
+
+<p>
+变量 X 的分布函数 F(x) 见下式
+</p>
+\begin{equation}
+F(x) = P(X ⩽ x) = \int_{-∞}^xf(t)dt = \left\{\begin{array}{ll}
+                                       0,    &amp; if \quad \(x ⩽ 0\) \\
+                                       1 - e^{-λx^\alpha}, &amp; if \quad x &gt; 0 
+                                      \end{array}\right
+\end{equation}
+
+<p>
+指数分布是威布尔分布当 \(α = 1\) 时的特例，威布尔分布考虑 λ 随事件变化而变化
+</p>
+</div>
+</li>
+
+<li>
+<a id="sec-1-1-3-4" name="sec-1-1-3-4"></a>连续性随机变量分布-均匀分布<br><div class="outline-text-5" id="text-1-1-3-4">
+\begin{de}[均匀分布定义]
+\end{de}
+<p>
+若随机变量 X 有以下概率密度函数，则称 X 服从区间 \([a, b]\) 上的均匀分布，常记为 \(X \sim R(a, b)\)
+</p>
+\begin{equation}
+f(x) = \left\{\begin{array}{ll}
+               1 ∕ (b-a) , &amp; if \quad \(a ⩽ x ⩽ b\) \\
+               0,    &amp; others
+              \end{array} \right.
+\end{equation}
+
+<p>
+变量 X 的均匀分布函数 F(x) 见下式 
+</p>
+\begin{equation}
+F(x) = P(X ⩽ x) = \int_{-∞}^xf(t)dt = \left\{\begin{array}{ll}
+                                       0, &amp; if \quad \(x ⩽ a\) \\
+                                       (x - a) ∕ (b-a), &amp; if \quad \(a ⩽ x ⩽ b\) \\
+                                       1^{}, &amp; if \quad x &gt; b 
+                                      \end{array}\right
+\end{equation}
+</div>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2">多维随机变量（随机向量）</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-sec-1-2-1" class="outline-4">
+<h4 id="sec-1-2-1">离散型随机向量的分布</h4>
+<div class="outline-text-4" id="text-1-2-1">
+\begin{de}[多维离散型随机向量概率函数定义]
+\end{de}
+<p>
+以 \(\lbrace a_{i1}, a_{i2}, \dots \rbrace \) 记 \(X_i\) 的全部可能取值 \((i = 1, 2, \dots)\) , 则事件 \(\lbrace X_1 = a_{1j_1}, X_2 = a_{2j_2}, \dots , X_n = a_{nj_n}\rbrace \) 的概率如下式所示，称为随机向量 \(X = (X_1, X_2, \dots , X_n)\) 的概率函数。
+</p>
+\begin{equation}
+\begin{split}
+p(j_1, j_2, \dots ,j_n) &amp;= P(X_1 = a_{1j_1}, X_2 = a_{2j_2}, \dots , X_n = a_{}_{nj_n})  \\
+&amp;(j_1, j_2, \dots , J_n = 1, 2, \dots)
+\end{split}
+\end{equation}
+
+<p>
+概率函数(<a href=".">1</a>)应满足一下条件
+</p>
+<ul class="org-ul">
+<li>\(p(j_1, j_2, \dots ,j_n) \geqslant 0 \)
+</li>
+<li>\(\sum_{j_n }\sum_{j_2} \dots \sum_{j_1} p(j_1, j_2, \dots ,j_n) = 1\)
+</li>
+</ul>
+</div>
+
+<ul class="org-ul"><li>
+<a id="sec-1-2-1-1" name="sec-1-2-1-1"></a>多项分布<br><div class="outline-text-5" id="text-1-2-1-1">
+\begin{de}[多项分布定义]
+\end{de}
+<p>
+设 \(A_1, A_2, \dots , A_n\) 组成一个完备事件群，先对立重复试验 N 次，以 \(X_i\) 记在这 N 次试验中事件　\(A_i\) 事件发生的次数 \((i = 1, \dots , n)\) ,则 \(X = (X_1, X_2, \dots , X_n)\) 为一个 n 维随机向量，它的取值范围是： \(X_1, X_2, \dots , X_n\) 都是非负整数，且其和为 N，X 的概率分布即为多项分布，记为 \(M(N; p_1, p_2, \dots , p_n)\), 概率函数见下式
+</p>
+\begin{equation}
+\begin{split}
+P(X_1 = k_1_{}, X_2 = k_2&amp;, \dots , X_n = k_n_{}_{}) = \frac{N!}{k_1!k_2! \dots k_n!} p_1^k_1p_2^k_2 \dots p_n^k_n \\
+  (k_i ⩾ 0, \quad &amp; k_1 + k_2 + \dots + k_n = N)
+\end{split}
+\end{equation}
+
+<p>
+多项分布是最重要的离散性多项分布，当一个总体按照某种属性分成几类时，就会涉及多项分布，如一种疾病可以按照严重程度分级，一种产品可以分成一等、二等、三等品等
+</p>
+</div>
+</li></ul>
+</div>
+
+<div id="outline-container-sec-1-2-2" class="outline-4">
+<h4 id="sec-1-2-2">连续型随机向量的分布</h4>
+<div class="outline-text-4" id="text-1-2-2">
+\begin{de}[多维连续随机向量密度函数定义]
+\end{de}
+<p>
+\(X = (X_1, X_2, \dots , X_n)\) 是一个 n 维随机向量，若 \(f(x_1, x_2, \dots , x_n)\) 是定义在 \(\BbbR^n\) 上的非负函数，使对 \(\BbbR^n\) 中的任何几何 A，有下式成立，则称 f 是 X 的(概率)密度函数
+</p>
+\begin{equation}
+  P(X \in A) = \underbrace{\int \dots \int}_A f(x_1, x_2, \dots , x_n)dx_1 \dots dx_n
+\end{equation}
+<p>
+如果把 A 取成全空间 \(\BbbR^n\) ,则 \(\lbrace X \in A \rbrace \) 是必然事件，其概率为 1，因此有 \[\underbrace{\int \dots \int}_A f(x_1, x_2, \dots , x_n)dx_1 \dots dx_n = 1\]
+</p>
+</div>
+
+<ul class="org-ul">
+<li>
+<a id="sec-1-2-2-1" name="sec-1-2-2-1"></a>二维均匀分布<br><div class="outline-text-5" id="text-1-2-2-1">
+\begin{de}[二维均匀分布定义]
+\end{de}
+<p>
+若随机变量 X 有以下概率密度函数，则称 X 服从区间是二维均匀分布
+</p>
+\begin{equation}
+f(x_1, x_2) = \left\{\begin{array}{ll}
+               1 ∕ (b-a)(d-c) , &amp; if \quad \(a ⩽ x_1 ⩽ b\) \(and\) \(c ⩽ x_2 ⩽ d\) \\
+               0,    &amp; others
+              \end{array} \right.
+\end{equation}
+</div>
+</li>
+
+<li>
+<a id="sec-1-2-2-2" name="sec-1-2-2-2"></a>二维正太分布<br><div class="outline-text-5" id="text-1-2-2-2">
+\begin{de}[二维正态分布定义]
+\end{de}
+<p>
+如果一个随机变量具有下式的概率密度函数，称 X 为二维正态随机变量，并记为 \(X \sim N(a, b, σ_1^2, σ_2^2, \rho)\) , \(a, b, σ_1, σ_2\) 是这个分布的参数，其取值范围为：
+ \[- ∞ &lt; a, b &lt; ∞, σ_1 &gt;0, σ_2 &gt;0, -1 &lt; \rho &lt; 1\]
+</p>
+\begin{equation}
+f(x_1, x_2) = (2\pi σ_1σ_2\sqrt{1-\rho^2})^{-1} exp\left[-\frac{1}{2(1-\rho^2)} \left( \frac{(x_1 - a)^2}{\sigma_1^2} + \frac{2\rho(x_1 - a)(x_2 - b)}{\sigma_1σ_2} + \frac{(x_2 - b)^2}{\sigma_2^2}\right)\right]
+\end{equation}
+
+<p>
+注意项：（a）连续型随机变量是有密度函数的随机变量；（b）各分量为一维连续型随机变量的随机向量并不一定是连续型随机变量；（c）可用概率分布函数去描述多维随机向量的概率分布
+</p>
+</div>
+</li>
+</ul>
+</div>
+
+<div id="outline-container-sec-1-2-3" class="outline-4">
+<h4 id="sec-1-2-3">边缘分布</h4>
+<div class="outline-text-4" id="text-1-2-3">
+\begin{de}[边缘分布定义]
+\end{de}
+<p>
+\(X = (X_1, X_2, \dots , X_n)\) 是一个 n 维随机向量，X 有 n 维分布 F，X 的每一个分量 \(X_i\) 都是一维随机向量，他们各自的分布 \(F_i \quad (i = 1, \dots , n)\) 都是一维分布，称为随机向量 X 或分布 F 的 “边缘分布”
+</p>
+
+<p>
+边缘分布完全由原分布确定
+</p>
+
+<p>
+离散型随机向量的边缘分布的计算：
+</p>
+<ul class="org-ul">
+<li>分别计算行和和列和，再求
+</li>
+<li>多项分布的边缘分布密度，\(X_n\) 的分布是二项分布 \(B(N, p_n)\)
+</li>
+</ul>
+<p>
+连续型随机向量的边缘分布：
+</p>
+\begin{equation}
+  f_1(x_1) = \int_{-\infty}^\infty \dots \int_{-\infty}^\infty f(x_1, x_2, \dots , x_n) dx_2 \dots dx_n
+\end{equation}
+<p>
+二维正态分布 \(X \sim N(a, b, σ_1^2, σ_2^2, \rho)\) 的边缘分布密度是一维正态分布 \(X \sim N(a, σ_1^2)\) 和 \(X \sim N(b, σ_2^2)\)
+</p>
+
+<p>
+边缘分布要点：
+</p>
+<ul class="org-ul">
+<li>已知某随机向量的分布可推导其任一分量的（边缘）分布
+</li>
+<li>已知某随机向量的各分量的分布，也推导不出该随机向量的分布，因为边缘分布只考虑随机向量的某一分量的情况，未涉及他们之间的关系，而该关系包含的该随机向量的分布中
+</li>
+<li>边缘分布也可以不只是单个的
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3">条件概率分布与随机变量的独立性</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-sec-1-3-1" class="outline-4">
+<h4 id="sec-1-3-1">条件概率分布的概念</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+一般形式：设有两个随机变量（向量）X，Y，在给定了 Y 取某个或某些值的条件下，去求 X 的条件分布
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-3-2" class="outline-4">
+<h4 id="sec-1-3-2">离散型随机变量的条件概率分布</h4>
+<div class="outline-text-4" id="text-1-3-2">
+\begin{equation}
+P(X_1 = a_i | X_2 = b_j) = p_{ij}\sum_kp_{kj} \quad (i = 1, 2, \dots)
+\end{equation}
+
+<p>
+多项分布 \(M(N; p_1, p_2, \dots , p_n)\) 在 \(X_2 = k_2\) 条件下， \(X_1\) 的条件分布就是二项分布 \(B(N-k_2, p_1(1-p_2))\)
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-3-3" class="outline-4">
+<h4 id="sec-1-3-3">连续型随机变量的条件分布</h4>
+<div class="outline-text-4" id="text-1-3-3">
+\begin{equation}
+\begin{split}
+  P(X_1 ⩽ x_1, a ⩽ X_2 ⩽ b) = \int_{-\infty}^{x_1}dt_1\int_a^bf(t_1, t_2)dt_2\xsol \int_a^bf_2(t_2)dt_2 \\
+  f(x_1, x_2) = f_2(x_2)f_1(x_1|x_2) \\
+  f(x_1, x_2) = f_1(x_1)f_2(x_2|x_1) \\
+  f(x_1, x_2, \dots , x_n) = g(x_1, x_2, \dots , x_k)h(x_{k+1}, \dots , x_n|x_1, \dots , x_k)
+\end{split}
+\end{equation}
+
+<p>
+二维正态分布的条件密度
+</p>
+\begin{equation}
+f(x_2, x_1) = (2\pi σ_2\sqrt{1-\rho^2})^{-1} exp\left[-\frac{(x_2 - (b + \rho \sigma_2\sigma_1^{-1}(x_1 - a)))}{2(1-\rho^2)σ_2^2}\right]
+\end{equation}
+<p>
+这是正太分布 \(N(b + \rho \sigma_2\sigma_1^{-1}(x_1 - a), (1-\rho^2)σ_2^2)\) ,可见正太变量的条件分布仍是正态分布，可以看出 ρ 刻画了 \(X_1, X_2\) 之间的关系
+</p>
+
+\begin{equation}
+  f_1(x_1) = \int_{-\infty}^{\infty}f(x_1, x_2)dx_2 = \int_{-\infty}^{\infty}f(x_1 | x_2)f_2(x_2)dx_2
+\end{equation}
+</div>
+</div>
+
+<div id="outline-container-sec-1-3-4" class="outline-4">
+<h4 id="sec-1-3-4">随机变量的独立性</h4>
+<div class="outline-text-4" id="text-1-3-4">
+\begin{de}[随机变量独立性定义]
+\end{de}
+<p>
+n 维随机向量 \(X = (X_1, X_2, \dots , X_n)\) 的联合概率密度函数为 \(f(x_1, \dots , x_n)\) ,而 \(X_i\) 的边缘密度为 \(f_i(x_i) (i = 1, 2, \dots ,n)\) ,如满足下式则称变量 \(X_1, X_2, \dots , X_n\) 相互独立，简称独立 
+</p>
+\begin{equation}
+f(x_1, x_2, \dots ,x_n) = f_1(x_1)\dots f(x_n)
+\end{equation}
+
+\begin{thm}[连续随机变量独立性定理]
+\end{thm}
+<p>
+如果连续变量 \(X_1, X_2, \dots , X_n\) 独立，则对任何 \(a_i &lt; b_i\) ,由 \(A_i = \lbrace a_1 ⩽ X_i ⩽ b_i \rbrace , (i = 1, 2, \dots)\) 定义的 n 个事件 \(A_1, \dots ,A_n\) 也独立；反之，若对任何 \(a_i &lt; b_i\) ，事件 \(A_1, \dots ,A_n\) 独立，则变量 \(X_1, X_2, \dots , X_n\) 也独立
+</p>
+
+\begin{thm}[连续随机变量独立性定理二]
+\end{thm}
+<p>
+若连续随机向量 \((X_1, \dots , X_n)\) 的概率密度函数 \(f(x_1, \dots ,x_n)\) 可以表示为 n 个函数 \(g_1, \dots , g_n\) 之积，其中， \(g_i\) 只依赖于 \(x_i\) ，即 \[f(x_1, \dots ,x_n) = g_1(x_1) \dots g_n(x_n)\] ,则称 \((X_1, \dots , X_n)\) 独立，且 \(X_i\) 的边缘密度函数 \(f_i(x_i)\) 和 \(g_i(x_i)\) 只相差一个常数因子
+</p>
+
+\begin{thm}[连续随机变量独立性定理三]
+\end{thm}
+<p>
+若连续随机向量 \((X_1, \dots , X_n)\) 相互独立，而 \[Y_1 = g_1(X_1, \dots ,X_m) , \quad Y_2 = g_2(X_{m+1}, \dots ,X_n)\] ,则 \(Y_1\) 与 \(Y_2\) 独立
+</p>
+
+\begin{de}[离散型随机变量独立性定义]
+\end{de}
+<p>
+\((X_1, \dots , X_n)\) 都是离散随机变量，对任何常数 \(a_1, a_2, \dots, a_n\) 下式都成立，则称 \((X_1, \dots , X_n)\) 独立
+</p>
+\begin{equation}
+P(X_1 = a, \dots ,X_n = a_n) = P(X_1 = a_1) \dots P(X_n = a_n)
+\end{equation}
+
+<p>
+连续性随机变量的三条定理适用于离散数学随机变量
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-4" class="outline-3">
+<h3 id="sec-1-4">随机变量的函数的概率分布</h3>
+<div class="outline-text-3" id="text-1-4">
+</div>
+<div id="outline-container-sec-1-4-1" class="outline-4">
+<h4 id="sec-1-4-1">离散型分布的情况</h4>
+<div class="outline-text-4" id="text-1-4-1">
+<p>
+用概率概率思维解决问题：
+</p>
+<ul class="org-ul">
+<li>多项分布： 设 \((X_1, X_2, \dots , X_n)\) 服从多项分布 \(M(N; p_1, \dots , p_n) \quad (n ⩾ 3)\) ,则 \(Y = X_1 + X_2\) 服从二项分布 \(B(N, p_1 + p_2)\) ，可以从公式去计算，也可以从概率角度去理解，多项分布定义 n 个事件 \(A_1, A_2, \dots , A_n\) , \(X_1, X_2, \dots , X_n\) 分别是他们在 N 次试验中发生的次数，先记  \(A = A_1 + A_2\) ,则事件 \(A, A_3, \dots , A_n\) 仍然构成一个万别事件群，其概率分别为 \(p_1 + p_2, p_3, \dots , p_n\) ，记 \(Y = X_1 + X_2\) ，则  \((Y, X_3, \dots , X_n)\) 构成多项分布 \(B(N, p_1 + p_2, p_3, \dots , p_n)\) ，而 Y 成为这个多项分布的一个边缘分布，可得上述结论
+</li>
+<li>二项分布: 设 \(X_1\) 和 \(X_2\) ，分别服从二项分布 \(B(n_1, p)\) 和 \(B(n_2, p)\) ，则 \(Y = X_1 + X_2\) 服从二项分布 \(B(n_1 + p_2, p)\)
+</li>
+<li>波松分布: 设 \(X_1\) 和 \(X_2\) ，分别服从泊松分布 \(P(λ_1)\) 和 \(P(λ_2)\) ，则 \(Y = X_1 + X_2\) 服从泊松分布 \(P(λ_1 + λ_2)\)
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1-4-2" class="outline-4">
+<h4 id="sec-1-4-2">连续型分布的情况：一般讨论</h4>
+<div class="outline-text-4" id="text-1-4-2">
+\begin{de}[单变量函数的密度函数]
+\end{de}
+<p>
+设 X 有密度函数 f(x)，\(Y = g(X)\) ,其反函数 \(X = h(Y)\) 存在，且 h 的导数 \(h'\) 存在，则 Y 的密度函数如下式
+</p>
+\begin{equation}
+l(y) = f(h(y))|h'(y)|
+\end{equation}
+
+\begin{de}[二变量函数的密度函数]
+\end{de}
+<p>
+设 \(X_1, X_2\) 有密度函数 \(f(x_1, x_2)\) ，\(Y_1, Y_2\) 都是 \(X_1, X_2\) 的函数： \[Y_1 = g_1(X_1, X_2), \quad Y_2 = g_2(X_1, X_2)\] ,其反函数 \[X_1 = h_1(Y_1, Y_2), \quad X_2 = h_2(Y_1, Y_2)\] 存在，又假定 \(g_1, g_2\) 都有一阶连续偏导数， \(h_1, h_2\) 也有连续偏导数，在一一对应变换的情况下，雅可比行列式如下式，则 \((Y_1, Y_2)\) 的密度函数见下式 
+</p>
+\begin{equation*}
+\symbf{J}(y_1, y_2) = \left|\begin{array}{ll}
+               {\partial h_1} \divslash {\partial y_1} &amp; \quad {\partial h_1} \divslash {\partial y_2} \\
+               {\partial h_2} \divslash {\partial y_2} &amp; \quad {\partial h_2} \divslash {\partial y_2}
+              \end{array} \right|
+\end{equation*}
+\begin{equation}
+l(y_1, y_2) = f(h_1(y_1, y_2), h_2(y_1, y_2))|\symbf{J}(y_1, y_2)|
+\end{equation}
+
+\begin{de}[多变量函数的密度函数]
+\end{de}
+<p>
+设 \(X_1, \dots , X_2\) 有密度函数 \(f(x_1, \dots , x_2)\) ，\(Y_1, Y_2, \dots , Y_n\) 都是 \(X_1, X_2, \dots ,X_n\) 的函数： \[Y_i = g_i(X_1, X_2, \dots, X_n) \quad (i = 1, \dots, n)\] ,其反函数 \[X_i = h_i(Y_1, Y_2, \dots , Y_n) \quad (i = 1, \dots ,n)\] 存在，又假定 \(g_1, g_2, \dots ,g_n\) 都有一阶连续偏导数， \(h_1, h_2, \dots , h_n\) 也有连续偏导数，在一一对应变换的情况下，雅可比行列式如下式，则 \((Y_1, Y_2, \dots , Y_n)\) 的密度函数见下式 
+</p>
+\begin{equation*}
+\symbf{J}(y_1, y_2, \dots , y_n) = \left|\begin{array}{lll}
+                                 {\partial h_1} \divslash {\partial y_1} &amp; \quad \dots &amp; \quad {\partial h_1} \divslash {\partial y_2} \\
+                                 \vdots                    &amp; \quad   &amp; \quad ⋮                         \\
+                                 {\partial h_2} \divslash {\partial y_2} &amp; \quad \dots &amp; \quad {\partial h_2} \divslash {\partial y_2} \\
+                               \end{array} \right|
+\end{equation*}
+\begin{equation}
+l(y_1, y_2, \dots , y_n) = f(h_1(y_1, y_2, \dots ,y_n), \dots , h_n(y_1, y_2, \dots , y_n))|\symbf{J}(y_1, y_2, \dots ,y_n)|
+\end{equation}
+</div>
+</div>
+
+<div id="outline-container-sec-1-4-3" class="outline-4">
+<h4 id="sec-1-4-3">随机变量和的密度函数</h4>
+<div class="outline-text-4" id="text-1-4-3">
+\begin{de}[二维随机变量和密度函数]
+\end{de}
+<p>
+设 \((X_1, X_2)\) 的联合密度函数为 \(f(x_1, x_2)\) , 则 \(Y = X_1 + X_2\) 的密度函数如下式
+</p>
+\begin{equation}
+  l(y) = \int_{-\infty}^\infty f(y-x, x)dx = \int_{-\infty}^\infty f(x, y-x)dx
+\end{equation}
+<p>
+若 \(X_1\) 与 \(X_2\) 独立，则
+</p>
+\begin{equation*}
+  l(y) = \int_{-\infty}^\infty f_1(y-x)f_2(x)dx = \int_{-\infty}^\infty f_1(x)f_2(y-x)dx
+\end{equation*}
+
+\begin{de}[正态分布和密度函数]
+\end{de}
+<p>
+设 \((X_1, X_2)\) 分别服从正太分布 \(N(\mu_1, \sigma_1^2), N(\mu_2, σ_2^2)\) ,则 \(Y = X_1 + X_2\) 服从二维正太分布 \(N(u_1 + \mu_2, σ_1^2 + σ_2^2 + 2\rho\sigma_1\sigma_2)\) , \(Y = X_1 + X_2\) 的密度函数如下式
+</p>
+\begin{equation}
+l(y) = \frac{1}{\sqrt{2\pi(σ_1^2 + σ_2^2 + 2\rho\sigma_1\sigma_2)}}exp\left[-\frac{(y-\mu_1 -\mu_2)^2}{2(σ_1^2 + σ_2^2 + 2\rho\sigma_1\sigma_2)}\right]
+\end{equation}
+
+<p>
+由(<a href=".">1</a>)可以看出，若 Y 服从正太分布，则 Y 可以表示成两个随机变量 \(X_1, X_2\) 之和，且 \(X_1, X_2\) 也必须服从正太分布，这个性质称为 “正态分布的再生性” ，显然对多个变量上式仍成立。
+</p>
+
+<p>
+两个重要的函数： <a href=".">\(Γ\) 函数</a> 和 <a href="#Beta">\(\Beta\) 函数</a> 公式
+</p>
+\begin{equation}
+\Gamma(x) = \int_0^\infty e^{ - t}t^{x - 1}dt \quad (x &gt; 0)
+\end{equation}
+\begin{equation}
+\Beta(x, y) = \int_0^1 t^{x - 1} (1-t)^{y-1} dt \quad (x, y &gt; 0)
+\end{equation}
+
+<p>
+由 <a href=".">\(Γ\) 函数</a> 和 <a href="#Beta">\(\Beta\) 函数</a> 公式，可以计算出下面结论
+</p>
+\begin{equation}
+\begin{split}
+&amp; Γ(1) = 1 \\
+&amp; Γ(1/2) = \sqrt{\pi} \\
+&amp; Γ(n) = (n-1)! \\
+&amp; Γ(n/2) = 1*3*5\dots*(n-2)*2^{-(n-1)/2}\sqrt{\pi} \\
+&amp; F(x + 1) = x\Gamma(x) \\
+&amp; \Beta(x, y) = \Gamma(x)\Gamma(y) \divslash \Gamma(x, y)
+\end{split}
+\end{equation}
+</div>
+
+<ul class="org-ul"><li>
+<a id="sec-1-4-3-1" name="sec-1-4-3-1"></a>卡方分布<br><div class="outline-text-5" id="text-1-4-3-1">
+\begin{de}[卡方分布定义]
+\end{de}
+<p>
+若 \(X_1, X_2, \dots , X_n\) 相互独立，都服从正太分布 \(N(0, 1)\) ,则 \(Y = X_1^2 + \dots + X_n^2\) 服从自由度为 n 的卡方分布 \(\chi_n^2\) ,其密度函数见下式
+</p>
+\begin{equation}
+k_n (x) = \left\{\begin{array}{ll}
+               \frac{1}{Γ(2/n)2^{n/2}}e^{-x/2} x^{(n-2)/2} &amp; \quad if x &gt; 0 \\
+               0 &amp; \quad if x ⩽ 0
+              \end{array} \right
+\end{equation}
+
+<p>
+上式(<a href=".">1</a>)称为自由度为 n 的皮尔逊卡方密度，相应的分布称为卡方分布
+</p>
+
+<p>
+卡方分布的性质：
+</p>
+<ul class="org-ul">
+<li>设 \(X_1, X_2\) 独立， \(X_1 \sim \chi_m^2, \, X_2 \sim \chi_n^2\) ,则  \(X_1 + X_2 \sim \chi_{m+n}^2\)
+</li>
+<li>若 \(X_1, \dots , X_n\) 独立，且都服从指数分布(<a href=".">1</a>) ,则 \[X = 2λ(X_1 + X_2 + \dots + X_n) \sim \chi_{2n}^n\]
+</li>
+</ul>
+</div>
+</li></ul>
+</div>
+
+<div id="outline-container-sec-1-4-4" class="outline-4">
+<h4 id="sec-1-4-4">随机变量商的密度函数</h4>
+<div class="outline-text-4" id="text-1-4-4">
+\begin{de}[随机变量商密度函数]
+\end{de}
+<p>
+设 \((X_1, X_2)\) 的联合密度函数为 \(f(x_1, x_2)\) , 则 \(Y = X_2/X_1\) 的密度函数如下式
+</p>
+\begin{equation}
+  l(y) = \int_0^\infty x_1f(x_1, x_1y)dx_1
+\end{equation}
+<p>
+若 \(X_1\) 与 \(X_2\) 独立，则
+</p>
+\begin{equation*}
+  l(y) = \int_0^\infty x_1f_1(x_1)f_2(x_1y)dx_1
+\end{equation*}
+</div>
+
+<ul class="org-ul">
+<li>
+<a id="sec-1-4-4-1" name="sec-1-4-4-1"></a>t 分布<br><div class="outline-text-5" id="text-1-4-4-1">
+\begin{de}[t 分布定义]
+\end{de}
+<p>
+若 \(X_1, X_2\) 独立，都服从分布 \(X_1 \sim \chi_n^2, \, X_2 \sim N(0, 1)\) ,则 \(Y = X_2 ∕ \sqrt{X_1/n}\) 服从自由度为 n 的 t 分布 \(t_n, \quad Y \sim t_n\) ,其密度函数见下式
+</p>
+\begin{equation}
+  t_n (y) =  \frac{Γ(n + 1)/2}{Γ(n/2)\sqrt{2\pi{}}}\left( 1 + \frac{y^2}{n} \right)^{-\frac{(n+1}{2}}\Gamma\left(\frac{(n+1)}{2} \right)
+\end{equation}
+
+<p>
+当自由度 n 很大时，t 分布接近于正态分布
+</p>
+</div>
+</li>
+
+<li>
+<a id="sec-1-4-4-2" name="sec-1-4-4-2"></a>F 分布<br><div class="outline-text-5" id="text-1-4-4-2">
+\begin{de}[F 分布定义]
+\end{de}
+<p>
+若 \(X_1, X_2\) 独立，都服从卡方分布 \(X_1 \sim \chi_n^2, \, X_2 \sim \chi_m^2\) ,则 \(Y = m^{-1}X_2 ∕ (n^{-1}X_1)\) 服从自由度为 \(m, n\) 的 F 分布 \(Y \sim F_{mn}\) ,其密度函数见下式
+</p>
+\begin{equation}
+  f_{mn}(y) =  m^{m/2}n^{n/2} \frac{Γ((m + n)/2)}{Γ(m/2)Γ(n/2)} y^{m/2-1} (my + n)^{-(m+n)/2} 
+\end{equation}
+</div>
+</li>
+
+<li>
+<a id="sec-1-4-4-3" name="sec-1-4-4-3"></a>统计上的三大分布应用性质<br><div class="outline-text-5" id="text-1-4-4-3">
+<ul class="org-ul">
+<li>设 \(X_1, \dots , X_n\) 独立同分布，有公共的正态分布 \(N(\mu, σ^2)\) ,记 \(\overbar{X} = (X_1 + \dots + X_n)/n, \, S^2 = \sum_{i=1}^n (X_i - \overbar{X})^2/(n-1)\) ，则 \[(n-1)S^2 ∕σ^2 = \sum_{i=1}^n (X_i - \overbar{X})^2 ∕σ^2 \sim \chi_{n-1}^2\]
+</li>
+<li>\(X_1, \dots , X_n\) 假定同上，则 \[\sqrt{n}(\overbar{X} - \mu) ∕S \sim t_{n-1}\]
+</li>
+<li>设 \(X_1, \dots , X_n\) , \(Y_1, \dots , Y_m\) 独立，\(X_i\) 有公共的正态分布 \(N(\mu_1, σ_1^2)\) , \(Y_i\) 有公共的正态分布 \(N(\mu_2, σ_2^2)\) ,则 \[ \left[\sum_{j=1}^n (Y_j - \overbar{Y})^2 ∕(σ_2^2(m-1))\right] \xsol \left[\sum_{i=1}^n (X_i - \overbar{X})^2 ∕(σ_1^2(n-1))\right] \sim F_{m-1, n-1} \] 若 \(σ_1^2 = σ_2^2\) 则 \(N(\mu_2, σ_2^2)\) ,则 \[\left\sqrt{\frac{nm(n+m-2)}{n+m}}[(\overbar{X} \minus \overbar{Y}) - (\mu_1 \minus \mu_2)] ∕\left[\sum_{i=1}^n (X_i - \overbar{X})^2 \minus \sum_{j=1}^n (Y_j - \overbar{Y})^2\right] \sim t_{n+m-2} \]
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1-5" class="outline-3">
+<h3 id="sec-1-5">例题</h3>
+</div>
+<div id="outline-container-sec-1-6" class="outline-3">
+<h3 id="sec-1-6">参考网页</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+<a href="http://blog.csdn.net/zhang22huan/article/details/8546822">http://blog.csdn.net/zhang22huan/article/details/8546822</a>
+</p>
+</div>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><div itemprop="keywords" class="tags">
+            <a class="tag p-category btn btn-success btn-raised btn-sm" href="../../categories/statistics/" rel="tag">Statistics</a>
+        </div>
+
+            <ul class="pager">
+<li class="previous">
+                <a href="../shu-ju-ke-xue-shu-xue-he-tong-ji-gai-lu-lun-yu-shu-li-tong-ji-sui-ji-bian-liang-de-shu-zi-te-zheng-zh_cn/" rel="prev" title="数据科学-数学和统计-概率论与数理统计-随机变量的数字特征">前一篇</a>
+            </li>
+            <li class="next">
+                <a href="../shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-xian-xing-fang-cheng-zu-de-jie-fa-zh_cn/" rel="next" title="数据科学-数学与统计-高等代数-线性方程组的解法">后一篇</a>
+            </li>
+        </ul></nav></aside><section class="comments"><h2>
+<i class="mdi-communication-forum"></i>注释</h2>
+        <hr>
+<div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="lengyueyang",
+            disqus_url="https://lengyueyang.github.io/zh_cn/posts/shu-ju-ke-xue-shu-xue-he-tong-ji-gai-lu-lun-yu-shu-li-tong-ji-sui-ji-bian-liang-ji-qi-gai-lu-fen-bu-zh_cn/",
+        disqus_title="\u6570\u636e\u79d1\u5b66-\u6570\u5b66\u548c\u7edf\u8ba1-\u6982\u7387\u8bba\u4e0e\u6570\u7406\u7edf\u8ba1-\u968f\u673a\u53d8\u91cf\u53ca\u5176\u6982\u7387\u5206\u5e03",
+        disqus_identifier="cache/posts/数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布.zh_cn.html",
+        disqus_config = function () {
+            this.language = "zh_cn";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script><script type="text/x-mathjax-config">
+            MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
+            </script></article><script>var disqus_shortname="lengyueyang";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+            </div>
+        </div>
+        <button class="btn btn-fab btn-raised btn-material-green btn-footer" data-toggle="modal" data-target="#footer-dialog">
+            <i class="mdi-communication-message"></i>
+        </button>
+        <div id="footer-dialog" class="modal fade" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">冷月阳</h4>
+                <div>
+                    
+<img class="img-circle" style="float:left;margin:10px 20px 10px 0px;max-height:200px;" src="../../../images/lengyueyang.png"><p><u>Basic Medical, 8 years PHD, Do some research on Medical Data Scientist</u></p>
+
+<p>I am currently work on Medical Big Data analysis, learning Machine learning and deep learning.</p>
+<p><a href="http://spacemacs.org"><img src="https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg"></a></p>
+<p>
+
+                </p>
+</div>
+                <hr>
+</div>
+              <div class="modal-body">
+                    Contents © 2018         <a href="mailto:maoxiaowei1988@qq.com">冷月阳</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+                    
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Ok</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="source-button">
+    <a class="btn btn-fab btn-raised btn-material-indigo" target="_blank" href="index.org" title="源代码">
+        <i class="mdi-file-cloud-download"></i>
+    </a>
+
+        </div>
+        <div class="kc_fab_wrapper"></div>
+</div>
+
+
+            <script src="../../../assets/js/all-nocdn.js"></script><script src="../../../assets/js/colorbox-i18n/jquery.colorbox-zh-CN.js"></script><script>
+                var links = [
+                        {
+                            "bgcolor": "#F44336",
+                            "icon": "<i class='fa fa-share-square'></i>",
+                        },
+                        {
+                            "url": "https://github.com/lengyueyang",
+                            "bgcolor": "#666666",
+                            "color": "#fffff",
+                            "icon": "<i class='fa fa-github-square'></i>",
+                        },
+                        {
+                            "url": "https://www.linkedin.com/in/lengyueyang",
+                            "bgcolor": "#3B5998",
+                            "color": "#fffff",
+                            "icon": "<i class='fa fa-linkedin-square'></i>",
+                        },
+                ];
+
+            $(document).ready(function() {
+                // This command is used to initialize some elements and make them work properly
+                $.material.init();
+                    $('.kc_fab_wrapper').kc_fab(links);
+            });
+
+            $(window).on("resize", function() {
+                if($(window).width() > 767) {
+                  $("html, body").height($(window).height());
+                  $(".main, .menu").height($(window).height() - $(".header-panel").outerHeight() - 76 );
+                  $(".posts-material").height($(window).height());
+                } else {
+                  $("html, body").css('height', '');
+                  $(".main, .menu").css('height', '');
+                  $(".posts-material").css('height', '');
+                }
+            }).trigger("resize");
+
+            function menuToggle() {
+                $("nav.menu, ul").toggleClass('responsive', '');
+            }
+        </script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>
