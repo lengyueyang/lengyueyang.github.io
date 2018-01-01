@@ -133,16 +133,15 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-       ("/archive.html", "归档"),
-       ("/categories/", "标签云"),
-       ("/rss.xml", "RSS订阅"),
-        ),
-    "en":(
-        ("/archive.html", "Archive"),
-        ("/categories/", "Tags"),
+        ("/archive.html", "归档"),
+        ("/categories/index.html", "标签云"),
+        ("/rss.xml", "RSS订阅"),
+    ),
+    "en": (
+        ("/archive.html", "Archives"),
+        ("/categories/index.html", "Tags"),
         ("/rss.xml", "RSS feed"),
-        ),
-
+    ),
 }
 
 # Name of the theme to use.
@@ -196,7 +195,7 @@ POSTS = (
 )
 PAGES = (
     # ("pages/*.org", "pages", "page.tmpl"),
-    ("pages/*.org", {"en": "pages", "zh_cn": "pages"}, "page.tmpl"),
+    ("pages/*.org", {"en": "pages", "zh_cn": "页面"}, "page.tmpl"),
     ("pages/*.rst", "pages", "page.tmpl"),
     ("pages/*.ipnb", "pages", "page.tmpl"),
     ("pages/*.txt", "pages", "page.tmpl"),
