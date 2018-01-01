@@ -1,9 +1,9 @@
 #+BEGIN_COMMENT
-.. title: 
+.. title: 科研文章中的统计：第一部分，单因素分析
 .. slug: 
-.. date:  19:26:52 UTC+08:00
-.. tags: 
-.. category: 
+.. date: 2016-04-23 19:26:52 UTC+08:00
+.. tags: Statistics, Research, R
+.. category: RESEARCH
 .. link: 
 .. description: 
 .. type: text
@@ -21,9 +21,7 @@
 - 本文以 R 语言为切入点，以我自己文章中的数据为原型，简单阐述单因素分析的方法原理及过程
 - 有关 R 语言介绍及安装方法，请移步 R 语言官方网[fn:1]站
 
-#+BEGIN_EXPORT html
-<!--more-->
-#+END_EXPORT
+{{{TEASER_END}}}
 
 * R 分析基本流程
 ** 数据导入，在 R 语言中导入数据框用 read.table，再显示数据

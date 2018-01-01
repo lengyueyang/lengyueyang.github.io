@@ -1,6 +1,6 @@
 #+BEGIN_COMMENT
-.. title: Archlinux Shadowsocks 配置
-.. slug: 
+.. title: Archlinux Shadowsocks Configuration
+.. slug: archlinux-shadowsocks
 .. date: 2017-12-11 19:26:52 UTC+08:00
 .. tags: Archlinux, Shadowsocks
 .. category: LINUX
@@ -20,12 +20,11 @@
 本人购买倚天剑 socks 帐号
 网址如下:
 https://a.aiguobit.com/users/ucenter
+
 或者从 github 进入
 https://github.com/itrump/ssfree/blob/master/cn/%E5%80%9A%E5%A4%A9%E5%89%91ss%E6%96%B0%E7%BD%91%E7%AB%99.md
 {{{TEASER_END}}}
-#+BEGIN_EXPORT html
-<!--more-->
-#+END_EXPORT
+
 
 * 在 Archlinux 安装 shadsocks
 

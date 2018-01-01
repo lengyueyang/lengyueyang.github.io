@@ -1,9 +1,9 @@
 #+BEGIN_COMMENT
-.. title: 
+.. title: Use org-mode to GTD
 .. slug: 
-.. date:  19:26:52 UTC+08:00
-.. tags: 
-.. category: 
+.. date: 2016-02-28 19:26:52 UTC+08:00
+.. tags: Org-mode, GTD, Emacs
+.. category: EMACS
 .. link: 
 .. description: 
 .. type: text
@@ -20,9 +20,7 @@
 - 首先接触了 Org-mode，用 org-mode 做时间管理，本文简述我用 org-mode 做时间管理的流程以及配置。
 - 在用 org-mode 之前，应该有一些 Spacemacs 及 Org-mode 的使用经验（参见[[https://github.com/syl20bnr/spacemacs/blob/master/layers/org/README.org#element-insertion][pacemacs Keybinding]]和[[http://www.gnu.org/software/emacs/manual/html_mono/org.html#Outlines][Org Mode Manual]])。
 
-#+BEGIN_EXPORT html
-<!--more-->
-#+END_EXPORT
+{{{TEASER_END}}}
 
 * 我的 org-mode 工作流程
 ** 建立自己的 GTD 文件

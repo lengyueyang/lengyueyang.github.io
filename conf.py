@@ -17,8 +17,8 @@ import time
 
 
 # Data about this site
-BLOG_AUTHOR = "lengyueyang"  # (translatable)
-BLOG_TITLE ="深度识医"  # (translatable)
+BLOG_AUTHOR = {"en": "Lengyueyang", "zh_cn": "冷月阳"}  # (translatable)
+BLOG_TITLE = {"en": "Deep Medical Learning", "zh_cn": "深度识医"}  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "https://lengyueyang.github.io/"
@@ -26,7 +26,7 @@ SITE_URL = "https://lengyueyang.github.io/"
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://example.com/"
 BLOG_EMAIL = "maoxiaowei1988@qq.com"
-BLOG_DESCRIPTION = "Lengyueyang's Personal Blog." # (translatable)
+BLOG_DESCRIPTION = {"en": "Lengyueyang's personal blog", "zh_cn": "冷月阳的个人博客"} # (translatable)
 
 # Nikola is multilingual!
 #
@@ -86,15 +86,15 @@ BLOG_DESCRIPTION = "Lengyueyang's Personal Blog." # (translatable)
 # in the default language will be shown instead.
 
 # What is the default language?
-DEFAULT_LANG = "en"
+DEFAULT_LANG = "zh_cn"
 
 # What other languages do you have?
 # The format is {"translationcode" : "path/to/translation" }
 # the path will be used as a prefix for the generated pages location
 TRANSLATIONS = {
     DEFAULT_LANG: "",
-#    "en": "./en",
-    "zh_cn": "./zh_cn",
+   "en": "./en",
+    # "zh_cn": "./zh_cn",
 }
 
 # What will translated input files be named like?
@@ -133,16 +133,16 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 #          else they won’t be highlighted when active.
 
 NAVIGATION_LINKS = {
-    DEFAULT_LANG:(
+    "en":(
         ("/archive.html", "Archive"),
         ("/categories/", "Tags"),
         ("/rss.xml", "RSS feed"),
     ),
-#    DEFAULT_LANG: (
-#        ("/archive.html", "归档"),
-#        ("/categories/", "标签云"),
-#        ("/rss.xml", "RSS订阅"),
-#    ),
+   DEFAULT_LANG: (
+       ("/archive.html", "归档"),
+       ("/categories/", "标签云"),
+       ("/rss.xml", "RSS订阅"),
+   ),
 }
 
 # Name of the theme to use.
@@ -195,7 +195,8 @@ POSTS = (
     ("posts/*.html", "posts", "post.tmpl"),
 )
 PAGES = (
-    ("pages/*.org", "pages", "page.tmpl"),
+    # ("pages/*.org", "pages", "page.tmpl"),
+    ("pages/*.org", {"en": "pages", "zh_cn": "pages"}, "page.tmpl"),
     ("pages/*.rst", "pages", "page.tmpl"),
     ("pages/*.ipnb", "pages", "page.tmpl"),
     ("pages/*.txt", "pages", "page.tmpl"),

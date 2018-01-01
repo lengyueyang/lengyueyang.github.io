@@ -1,9 +1,9 @@
 #+BEGIN_COMMENT
-.. title: 
+.. title: 数据科学-数学与统计-高等代数-线性方程组的解法
 .. slug: 
-.. date:  19:26:52 UTC+08:00
-.. tags: 
-.. category: 
+.. date: 2017-08-07 19:26:52 UTC+08:00
+.. tags: Linear algebra, mathjax
+.. category: DATA SCIENTIST
 .. link: 
 .. description: 
 .. type: text
@@ -22,9 +22,7 @@
 邱维声, (2010). 高等代数. : 清华大学出版社.
 Hom, R. A. (2014). 矩阵分析. : 机械工业出版社. 
 张贤达, (2013). 矩阵分析与应用. : 清华大学出版社.
-#+BEGIN_EXPORT html
-<!--more-->
-#+END_EXPORT 
+{{{TEASER_END}}}
 * 线性方程组的解法
 ** 解线性方差组的矩阵消元法
 

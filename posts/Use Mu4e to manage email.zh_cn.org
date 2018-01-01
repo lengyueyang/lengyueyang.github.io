@@ -1,9 +1,9 @@
 #+BEGIN_COMMENT
-.. title: 
+.. title: 用 mu4e 管理邮件
 .. slug: 
 .. date:  19:26:52 UTC+08:00
-.. tags: 
-.. category: 
+.. tags: Emacs, Mu4e, Offlineimap
+.. category: EMACS
 .. link: 
 .. description: 
 .. type: text
@@ -19,9 +19,7 @@
 
 用 offlineimap 收取邮件，用 mu4e 在 emacs 中管理邮件，本教程配置多账户。
 
-#+BEGIN_EXPORT html
-<!--more-->
-#+END_EXPORT
+{{{TEASER_END}}}
 
 * offlineimap 设置
 

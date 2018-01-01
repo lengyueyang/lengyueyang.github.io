@@ -1,9 +1,9 @@
 #+BEGIN_COMMENT
-.. title: 
+.. title: Spacemacs 学习
 .. slug: 
-.. date:  19:26:52 UTC+08:00
-.. tags: 
-.. category: 
+.. date: 2016-02-14 19:26:52 UTC+08:00
+.. tags: Spacemacs, Emacs
+.. category: EMACS
 .. link: 
 .. description: 
 .. type: text
@@ -27,9 +27,7 @@
 - SPC s L Focus the last converted search buffer
 - F3 In a helm buffer, convert a helm search buffer into a regular buffer
 
-#+BEGIN_EXPORT html
-<!--more-->
-#+END_EXPORT
+{{{TEASER_END}}}
 
 ** The Emacs Evil Tutor
 

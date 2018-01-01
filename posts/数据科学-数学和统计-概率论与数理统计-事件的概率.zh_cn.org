@@ -1,9 +1,9 @@
 #+BEGIN_COMMENT
-.. title: 
+.. title: 数据科学-数学和统计-概率论与数理统计-事件的概率
 .. slug: 
-.. date:  19:26:52 UTC+08:00
-.. tags: 
-.. category: 
+.. date: 2017-04-08 19:26:52 UTC+08:00
+.. tags: Statistics, mathjax
+.. category: DATA SCIENTIST
 .. link: 
 .. description: 
 .. type: text
@@ -23,10 +23,8 @@
 - 陈希儒, (2009). 概率论与数理统计. : 中国科技大学出版社.
 - 陈希儒, 倪. (2009). 数理统计学教程. : 中国科技大学出版社.
 - 高惠璇, (2005). 应用多元统计分析. : 北京大学出版社.
-#+BEGIN_EXPORT html
-<!--more-->
-#+END_EXPORT
 
+{{{TEASER_END}}}
 
 * 事件的概率 
 

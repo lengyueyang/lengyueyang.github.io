@@ -1,9 +1,9 @@
 #+BEGIN_COMMENT
-.. title: 
+.. title: 数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布
 .. slug: 
-.. date:  19:26:52 UTC+08:00
-.. tags: 
-.. category: 
+.. date: 2017-05-29 19:26:52 UTC+08:00
+.. tags: Statistics, mathjax
+.. category: DATA SCIENTIST
 .. link: 
 .. description: 
 .. type: text
@@ -26,9 +26,7 @@
 
 随机变量的反面为确定性变量，其取值遵循某种严格的规律的变量；
 
-#+BEGIN_EXPORT html
-<!--more-->
-#+END_EXPORT
+{{{TEASER_END}}}
 
 随机事件与随机变量的关系：前者从静态观点来研究随机现象，后者从动态观点，随机变量(向量)的研究，是概率论的中心内容
 

@@ -1,9 +1,9 @@
 #+BEGIN_COMMENT
-.. title: 
+.. title: 数据科学-数学与统计-高等代数-行列式
 .. slug: 
-.. date:  19:26:52 UTC+08:00
-.. tags: 
-.. category: 
+.. date: 2017-09-05 19:26:52 UTC+08:00
+.. tags: Linear algebra, mathjax
+.. category: DATA SCIENTIST
 .. link: 
 .. description: 
 .. type: text
@@ -24,9 +24,7 @@ n 个不同正整数的一个全排列称为 *n 元排列*.
 
 逆序数为奇数的排列称为 *奇排列*, 逆序数为偶数的排列称为 *偶排列*. 将一个排列中的两个数字互换, 其余数字位置不变的变换称为一个 *对换*.
 
-#+BEGIN_EXPORT html
-<!--more-->
-#+END_EXPORT
+{{{TEASER_END}}}
 
 #+name: n 元排列定理-1
 \begin{thm}[n 元排列定理-1]

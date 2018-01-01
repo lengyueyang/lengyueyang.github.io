@@ -1,8 +1,7 @@
 #+BEGIN_COMMENT
-.. title: Archlinux install and configuration
+.. title: Archlinux 安装和配置
 .. slug: 
 .. date: 2016-02-05 19:26:52 UTC+08:00
-.. modified: 2017-02-05 19:26:52 UTC+08:00
 .. tags: Linux, Archlinux
 .. category: LINUX
 .. link: 
@@ -15,6 +14,7 @@
 #+LAYOUT: post
 #+TAGS: Linux, Archlinux
 #+CATEGORIES: LINUX
+
 * Archlinux install [安装篇]
 ** Prepare for the installation
 - Prepare the ISO of archlinux, and brasero it into USB flash disk
@@ -27,9 +27,7 @@ mkfs.fat -F32 /dev/sda1
 mkfs.ext4 /dev/sda2
 #+END_SRC
 
-#+BEGIN_EXPORT html
-<!--more-->
-#+END_EXPORT
+{{{TEASER_END}}}
 
 - Select mirrorlist:
 #+BEGIN_SRC sh

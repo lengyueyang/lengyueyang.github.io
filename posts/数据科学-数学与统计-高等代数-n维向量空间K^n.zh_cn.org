@@ -1,9 +1,9 @@
 #+BEGIN_COMMENT
-.. title: 
+.. title: 数据科学-数学与统计-高等代数- n 维向量空间 n 维向量空间 \(k^n\)
 .. slug: 
-.. date:  19:26:52 UTC+08:00
-.. tags: 
-.. category: 
+.. date: 2017-10-09 19:26:52 UTC+08:00
+.. tags: Linear algebra, mathjax
+.. category: DATA SCIENTIST
 .. link: 
 .. description: 
 .. type: text
@@ -22,9 +22,9 @@
 \[
 (a_1, a_2, \cdots, a_n) + (b_1, b_2, ⋯, b_n) \xlongequal{def} (a_1+b_1, a_2+b_2, \cdots, a_n+b_n)
 \]
-#+BEGIN_EXPORT html
-<!--more-->
-#+END_EXPORT
+
+{{{TEASER_END}}}
+
 在 K 的元素与 \(K^n\) 的元素之间规定数量乘法运算如下:
 \[
 k(a_1, a_2, \cdots, a_n) \xlongequal{def} (ka_1, ka_2, \cdots, ka_n)

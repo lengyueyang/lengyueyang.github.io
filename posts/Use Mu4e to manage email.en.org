@@ -1,0 +1,632 @@
+#+BEGIN_COMMENT
+.. title: Use Mu4e to manage email
+.. slug: 
+.. date:  19:26:52 UTC+08:00
+.. tags: Emacs, Mu4e, Offlineimap
+.. category: EMACS
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+#+TITLE: Use Mu4e to manage email [用 mu4e 管理邮件]
+#+DATE: 2017-02-26
+#+LAYOUT: post
+#+TAGS: Emacs, Mu4e, Offlineimap 
+#+CATEGORIES: EMACS
+
+* 概述
+
+用 offlineimap 收取邮件，用 mu4e 在 emacs 中管理邮件，本教程配置多账户。
+
+{{{TEASER_END}}}
+
+* offlineimap 设置
+
+** 安装 offlineimap
+
+本人用 archlinux，直接 =sudo pacman -S offlineimap= 即可
+
+** 配置 offlineimap
+
+在 home 目录下建立 .offlineimaprc 文件，加入以下代码
+
+#+BEGIN_SRC python
+
+  # -*- mode: python2 -*-
+  [general]
+  # accounts = Gmail, Foxmail, Lengyue-163
+  accounts = Gmail, Foxmail
+  maxsyncaccounts = 2
+  pythonfile = ~/.offlineimap.py
+
+  [Account Gmail]
+  localrepository = Gmail-Local
+  remoterepository = Gmail-Remote
+
+  [Repository Gmail-Local]
+  type = Maildir
+  localfolders = ~/Documents/Mu4e/Gmail
+
+  [Repository Gmail-Remote]
+  type = Gmail
+  auth_mechanisms = LOGIN
+  remotehost = imap.gmail.com
+  remoteuser = xxxxx@gmail.com
+  remotepass = xxxxx
+  ssl = true
+  sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+  nametrans = lambda foldername: foldername.decode('imap4-utf-7').encode('utf-8')
+  folderfilter = lambda folder: not re.search('(^Spam$|All)', folder)
+  maxconnections = 2
+  realdelete = yes
+
+
+  [Account Foxmail]
+  localrepository = Foxmail-Local
+  remoterepository = Foxmail-Remote
+
+  [Repository Foxmail-Local]
+  type = Maildir
+  localfolders = ~/Documents/Mu4e/Foxmail
+
+  [Repository Foxmail-Remote]
+  type = IMAP
+  remotehost = imap.qq.com
+  remoteuser = xxxxx@qq.com
+  remotepass = xxxxx
+  ssl = true
+  sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+  nametrans = lambda foldername: foldername.decode('imap4-utf-7').encode('utf-8')
+  folderfilter = lambda foldername: foldername in ['INBOX','Drafts', 'Sent Messages', 'Deleted Messages']
+  maxconnections = 2
+  realdelete = no
+
+#+END_SRC
+
+设置 gmail 和 qq 两个账户，按照上面配置，邮箱和密码改成自己的(首先开通 gmail 和 qq 邮箱的 imap 功能，设置授权码，可参照后面参考资料)。
+其中，比较重要的有以下几项:
+
+=localfolders= 是下载邮件的位置
+
+=nametrans = lambda foldername: foldername.decode('imap4-utf-7').encode('utf-8')= 防止中文乱码
+
+=folderfilter = lambda foldername: foldername in ['INBOX','Drafts', 'Sent Messages', 'Deleted Messages']= 选择自己同步的文件夹
+
+=folderfilter = lambda folder: not re.search('(^Spam$|All)', folder)= 不选择 Spam 和有 All 字样的文件夹同步 2
+
+同时，在 home 目录下家里 =.offlineimap.py= 文件，加入以下内容，防止乱码
+
+#+BEGIN_SRC python
+  #!/usr/bin/env python2
+
+  import binascii
+  import codecs
+
+  import sys
+  reload(sys)
+  sys.setdefaultencoding("utf-8")
+
+  def modified_base64(s):
+      s = s.encode('utf-16be')
+      return binascii.b2a_base64(s).rstrip('\n=').replace('/', ',')
+
+  def doB64(_in, r):
+      if _in:
+          r.append('&%s-' % modified_base64(''.join(_in)))
+          del _in[:]
+
+  def encoder(s):
+      r = []
+      _in = []
+      for c in s:
+          ordC = ord(c)
+          if 0x20 <= ordC <= 0x25 or 0x27 <= ordC <= 0x7e:
+              doB64(_in, r)
+              r.append(c)
+          elif c == '&':
+              doB64(_in, r)
+              r.append('&-')
+          else:
+              _in.append(c)
+      doB64(_in, r)
+      return (str(''.join(r)), len(s))
+
+  # decoding
+
+  def modified_unbase64(s):
+      b = binascii.a2b_base64(s.replace(',', '/') + '===')
+      return unicode(b, 'utf-16be')
+
+  def decoder(s):
+      r = []
+      decode = []
+      for c in s:
+          if c == '&' and not decode:
+              decode.append('&')
+          elif c == '-' and decode:
+              if len(decode) == 1:
+                  r.append('&')
+              else:
+                  r.append(modified_unbase64(''.join(decode[1:])))
+              decode = []
+          elif decode:
+              decode.append(c)
+          else:
+              r.append(c)
+      if decode:
+          r.append(modified_unbase64(''.join(decode[1:])))
+      bin_str = ''.join(r)
+      return (bin_str, len(s))
+
+  class StreamReader(codecs.StreamReader):
+      def decode(self, s, errors='strict'):
+          return decoder(s)
+
+  class StreamWriter(codecs.StreamWriter):
+      def decode(self, s, errors='strict'):
+          return encoder(s)
+
+  def imap4_utf_7(name):
+      if name == 'imap4-utf-7':
+          return (encoder, decoder, StreamReader, StreamWriter)
+  codecs.register(imap4_utf_7)
+#+END_SRC
+
+** 用 offlineimap 下载邮件
+
+在终端用运行命令 =offlineimap= ，下载邮件
+
+* Mu4e 设置
+
+我用 spacemacs，先将 mu4e layer 加入 spaemacs 配置文件中，启用 mu4e layer。
+
+安装 mu4e 是 mu 软件的一部分，因此安装 mu 软件(yaourt mu)。
+
+安装完成之后，建立索引，在终端运行 =mu index --rebuild --maildir=~/Documents/Mu4e= ，文件夹的位置根据自己的更改。
+
+在 spacemacs 的配置文件中加入以下代码，注意：根据自己的邮箱个数等更改相应位置即可。
+
+#+BEGIN_SRC emacs-lisp
+
+  (add-to-load-path "~/.spacemacs.d/package/mu4e")
+
+  (require 'mu4e)
+
+  (setq mu4e-account-alist
+        '(("Gmail"
+           ;; Under each account, set the account-specific variables you want.
+           (mu4e-sent-messages-behavior delete)
+           (mu4e-sent-folder "/Gmail/[Gmail].Sent Mail")
+           (mu4e-drafts-folder "/Gmail/[Gmail].Drafts")
+           (user-mail-address "xxxxx@gmail.com")
+           (user-full-name "xxxxx"))
+          ("Foxmail"
+           (mu4e-sent-messages-behavior sent)
+           (mu4e-sent-folder "/Foxmail/Sent Messages")
+           (mu4e-drafts-folder "/Foxmail/Drafts")
+           (user-mail-address "xxxxx@foxmail.com")
+           (user-full-name "xxxxx"))
+          ;; ("Lengyue-163"
+          ;;  (mu4e-sent-messages-behavior sent)
+          ;;  (mu4e-sent-folder "/Lengyue-163/Sent Items")
+          ;;  (mu4e-drafts-folder "/Lengyue-163/Drafts")
+          ;;  (user-mail-address "zanghuahong@163.com")
+          ;;  (user-full-name "Mao Xiaowei"))
+         )
+  )
+
+  (mu4e/mail-account-reset)
+
+  ;;; Set up some common mu4e variables
+  (setq mu4e-maildir "~/Documents/Mu4e"
+        mu4e-trash-folder "/Gmail/Trash"
+        mu4e-refile-folder "/Gmail/Archive"
+        ;; mu4e-get-mail-command "mbsync -a"
+        mu4e-update-interval nil
+        mu4e-compose-signature-auto-include nil
+        mu4e-view-show-images t
+        mu4e-view-show-addresses t)
+
+  ;;; Mail directory shortcuts
+  (setq mu4e-maildir-shortcuts
+        '(
+          ("/Foxmail/INBOX" . ?f)
+          ("/Foxmail/Drafts" . ?d)
+          ("/Foxmail/Sent Messages" . ?s)
+          ("/Gmail/INBOX" . ?g)
+          ;; ("/Gmail/[Gmail].All Mail" . ?a)
+          ("/Gmail/[Gmail].Drafts" . ?r)
+          ("/Gmail/[Gmail].Sent Mail" . ?m)
+          ("/Gmail/[Gmail].Trash" . ?t)
+          ;; ("/Lengyue-163/INBOX" . ?i)
+          ))
+
+  ;;; Bookmarks
+  (setq mu4e-bookmarks
+        `(("flag:unread AND NOT flag:trashed" "Unread messages" ?u)
+          ("date:today..now" "Today's messages" ?t)
+          ("date:7d..now" "Last 7 days" ?w)
+          ("mime:image/*" "Messages with images" ?p)
+          (,(mapconcat 'identity
+                       (mapcar
+                        (lambda (maildir)
+                          (concat "maildir:" (car maildir)))
+                        mu4e-maildir-shortcuts) " OR ")
+           "All inboxes" ?i)))
+
+  (setq mu4e-enable-notifications t)
+
+  (with-eval-after-load 'mu4e-alert
+    ;; Enable Desktop notifications
+    ;; (mu4e-alert-set-default-style 'notifications)) ; For linux
+    (mu4e-alert-set-default-style 'libnotify))  ; Alternative for linux
+    ;; (mu4e-alert-set-default-style 'notifier))   ; For Mac OSX (through the
+                                          ; terminal notifier app)
+  ;; (mu4e-alert-set-default-style 'growl))      ; Alternative for Mac OSX
+
+  (setq mu4e-enable-mode-line t)
+
+  (setq mu4e-get-mail-command "offlineimap")
+  ;; Fetch mail in 60 sec interval
+  (setq mu4e-update-interval 60)
+
+  (require 'mu4e-contrib)
+  (setq mu4e-html2text-command 'mu4e-shr2text)
+  ;; try to emulate some of the eww key-bindings
+  (add-hook 'mu4e-view-mode-hook
+            (lambda ()
+              (local-set-key (kbd "<tab>") 'shr-next-link)
+              (local-set-key (kbd "<backtab>") 'shr-previous-link)))
+
+  ;; something about ourselves
+  (require 'smtpmail)  
+  (setq user-mail-address "xxxxx@foxmail.com"  
+        user-full-name "xxxxx"
+        smtpmail-stream-type 'starttls
+        starttls-use-gnutls t
+        mu4e-compose-signature  
+        (concat  
+         "xxxx\n"  
+         "Blog: http://lengyueyang.github.io\n"  
+         "\n")  
+        mu4e-compose-signature-auto-include t  
+        )  
+
+  (setq send-mail-function            'smtpmail-send-it
+        message-send-mail-function    'smtpmail-send-it
+        smtpmail-auth-credentials     (expand-file-name "~/.authinfo")
+        smtpmail-stream-type          'tls
+        smtpmail-smtp-server          "smtp.qq.com"
+        smtpmail-smtp-service         465
+        smtpmail-smtp-user "xxxxx@qq.com")
+
+  (setq message-kill-buffer-on-exit t)
+
+  ;; save attachment to my desktop (this can also be a function)  
+  (setq mu4e-attachment-dir "/home/lengyue/Documents/Mu4e/Attachment")  
+
+#+END_SRC
+
+** 几点说明：
+
+mu 更新后，发现系统不能自己找到 mu4e 文件夹，因此手动链接
+=(add-to-load-path "~/.spacemacs.d/package/mu4e")=
+
+contact 内容是自己的邮件签名
+
+* Mu4e 简单使用小结
+
+
+** Keybindings to remember of Mu4e
+
+*** =offlineimap= and =mu index --maildir=~/Documents/Mu4e=
+*** Main view-Default bindings
+
+R: Reply      s: search            .: raw view (toggle)
+
+F: Forward    j: jump-to-maildir   q: quit
+C: Compose    b: bookmark-search
+
+E: Edit       B: edit bookmark-search
+
+*** Headers menu in the emacs menu bar
+
+key          description
+
+n,p          view the next, previous message
+
+],[          move to the next, previous unread message
+
+y            select the message view (if it's visible)
+
+RET          open the message at point in the message view
+
+
+searching
+
+s            search
+
+S            edit last query
+
+/            narrow the search
+
+b            search bookmark
+
+B            edit bookmark before search
+
+j            jump to maildir
+
+M-left,\     previous query
+
+M-right      next query
+
+O            change sort order
+
+P            toggle threading
+
+Q            toggle full-search
+
+V            toggle skip-duplicates
+
+W            toggle include-related
+
+marking
+
+d            mark for moving to the trash folder
+
+=            mark for removing trash flag ('untrash')
+
+DEL,D        mark for complete deletion
+
+m            mark for moving to another maildir folder
+
+r            mark for refiling
+
++,-          mark for flagging/unflagging
+
+?,!          mark message as unread, read
+
+u            unmark message at point
+
+U            unmark *all* messages
+
+%            mark based on a regular expression
+
+T,t          mark whole thread, subthread
+
+<insert>,*   mark for 'something' (decide later)
+
+#            resolve deferred 'something' marks
+
+x            execute actions for the marked messages
+
+composition
+ 
+R,F,C        reply/forward/compose
+
+E            edit (only allowed for draft messages)
+
+
+misc
+
+
+;            switch focus
+
+a            execute some custom action on a header
+
+|            pipe message through shell command
+
+C-+,C--      increase / decrease the number of headers shown
+
+H            get help
+
+C-S-u        update mail & reindex
+
+q            leave the headers buffer
+
+
+*** Message View
+
+key          description
+
+n,p          view the next, previous message
+
+],[          move to the next, previous unread message
+
+y            select the headers view (if it's visible)
+
+RET          scroll down
+
+M-RET        open URL at point / attachment at point
+
+SPC          scroll down, if at end, move to next message
+
+S-SPC        scroll up
+
+searching
+
+s            search
+
+e            edit last query
+
+/            narrow the search
+
+b            search bookmark
+
+B            edit bookmark before search
+
+j            jump to maildir
+
+M-left       previous query
+
+M-right      next query
+
+marking
+
+d            mark for moving to the trash folder
+
+=            mark for removing trash flag ('untrash')
+
+DEL,D        mark for complete deletion
+
+m            mark for moving to another maildir folder
+
+r            mark for refiling
+
++,-          mark for flagging/unflagging
+
+u            unmark message at point
+
+U            unmark *all* messages
+
+%            mark based on a regular expression
+
+T,t          mark whole thread, subthread
+
+<insert>,*   mark for 'something' (decide later)
+
+#            resolve deferred 'something' marks
+
+x            execute actions for the marked messages
+
+composition
+ 
+R,F,C        reply/forward/compose
+
+E            edit (only allowed for draft messages)
+
+actions
+
+g            go to (visit) numbered URL (using `browse-url')
+
+(or: <mouse-1> or M-RET with point on url)
+
+C-u g visits multiple URLs
+
+f            fetch (download )the numbered URL.
+
+C-u f fetches multiple URLs
+
+k            save the numbered URL in the kill-ring.
+
+C-u k saves multiple URLs
+
+e            extract (save) attachment (asks for number)
+
+(or: <mouse-2> or S-RET with point on attachment)
+
+C-u e extracts multiple attachments
+
+o            open attachment (asks for number)
+
+(or: <mouse-1> or M-RET with point on attachment)
+
+a            execute some custom action on the message
+
+A            execute some custom action on an attachment
+
+misc
+
+;            switch focus
+
+c            copy address at point (with C-u copy long version)
+
+h            toggle between html/text (if available)
+
+w            toggle line wrapping
+
+#            toggle show/hide cited parts
+
+v            show details about the cryptographic signature
+
+.            show the raw message view. 'q' takes you back.
+
+C-+,C--      increase / decrease the number of headers shown
+
+H            get help
+
+C-S-u        update mail & reindex
+
+q            leave the message view
+
+*** Attachment actions
+
+Similarly, there is mu4e-view-attachment-action (A) for actions on attachments, which you can specify with mu4e-view-attachment-actions.
+
+mu4e predefines a number of attachment-actions:
+
+    open-with (w): open the attachment with some arbitrary program. For example, suppose you have received a message with a picture attachment; then, A w 1 RET gimp RET opens that attachment in The Gimp
+    pipe (|: process the attachment with some Unix shell-pipe and see the results. Suppose you receive a patch file, and would like to get an overview of the changes, using the diffstat program. You can use something like: A | 1 RET diffstat -b RET.
+    emacs (e): open the attachment in your running emacs. For example, if you receive some text file you’d like to open in emacs: A e 1 RET.
+
+*** Editor view
+
+key          description
+
+C-c C-c      send message
+
+C-c C-d      save to drafts and leave
+
+C-c C-k      kill the message buffer (the message remains in the draft folder)
+
+C-c C-a      attach a file (pro-tip: drag & drop works as well)
+
+
+(mu4e-specific)
+
+C-S-u        update mail & reindex
+
+*** What to mark for
+
+mu4e supports a number of marks:
+
+mark for/as   keybinding  | description
+
+'something'  *, <insert> | mark now, decide later
+
+delete        D, <delete> | delete
+
+flag          +           | mark as 'flagged' ('starred')
+
+move          m           | move to some maildir
+
+read          !           | mark as read
+
+refile        r           | mark for refiling
+
+trash         d           | move to the trash folder
+
+untrash       =           | remove 'trash' flag
+
+unflag        -           | remove 'flagged' mark
+
+unmark        u           | remove mark at point
+
+unmark all    U           | remove all marks
+
+unread        ?           | marks as unread
+
+action        a           | apply some action
+
+** 其他
+
+若参考配置有问题，请移步官网或后面参考资料，或邮件联系我，随时欢迎 😍。
+
+
+
+* 参考资料
+
+- [[https://github.com/larstvei/dot-emacs][larstvei/dot-emacs: My Emacs configurations written in Org mode]]
+- [[http://wenshanren.org/?p=111][mu4e: an E-mail Client for Emacs | 肉山博客 (Wenshan's Blog)]]
+- [[http://coldnew.github.io/blog/2016/01-02_mu4e/][在 emacs 下使用 mu4e 收發郵件 | coldnew's blog]]
+- [[http://blog.csdn.net/csfreebird/article/details/52973188][spacemacs email layer - 博客频道 - CSDN.NET]]
+- [[https://github.com/howardabrams/dot-files/blob/master/emacs-mail.org][dot-files/emacs-mail.org at master · howardabrams/dot-files]]
+- [[https://guso.ml/search?q=offlinemap+%E5%A4%9A%E5%B8%90%E6%88%B7&prmd=ivns&ei=pVc8WPPzNsv0vgTT2pn4Cw&start=10&sa=N][offlinemap 多帐户 - Google 搜索]]
+- [[https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Bemail/mu4e][spacemacs/layers/+email/mu4e at master · syl20bnr/spacemacs]]
+- [[http://www.djcbsoftware.nl/code/mu/mu4e/index.html][Mu4e 0.9.16 user manual: Top]]
+- [[https://github.com/lujun9972/emacs-document/blob/master/org-mode/%E7%94%A8org-mime%E5%9C%A8org-mode%E4%B8%AD%E5%8F%91%E9%80%81html%E9%82%AE%E4%BB%B6.org][emacs-document/用 org-mime 在 org-mode 中发送 html 邮件.org at master · lujun9972/emacs-document]]
+- [[https://emacs.lujianmei.com/03-For-an-editor/init-mu4e.html][Mu4e 邮件管理 · 谁说 Emacs 不好玩？]]
+- [[http://www.bagualu.net/wordpress/archives/6555][emacs 中的 email 客户端 mu4e | 猎数博客]]
+- [[https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Bemail/gnus#org-mime-in-org-layer][spacemacs/layers/+email/gnus at master · syl20bnr/spacemacs]]
+
