@@ -2,7 +2,7 @@
 .. title: 房子，北京
 .. slug: 
 .. date: 2017-03-15 19:26:52 UTC+08:00
-.. tags: House, Life, private
+.. tags: House, Life
 .. category: LIFE
 .. link: 
 .. description: 
