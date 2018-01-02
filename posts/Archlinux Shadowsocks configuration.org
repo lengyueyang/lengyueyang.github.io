@@ -1,5 +1,5 @@
 #+BEGIN_COMMENT
-.. title: Archlinux Shadowsocks Configuration
+.. title: Archlinux Shadowsocks Configuration [Archlinux Shadowsocks 配置]
 .. slug: archlinux-shadowsocks
 .. date: 2017-12-11 19:26:52 UTC+08:00
 .. tags: Archlinux, Shadowsocks

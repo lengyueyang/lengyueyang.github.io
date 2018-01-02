@@ -1,6 +1,6 @@
 #+BEGIN_COMMENT
 .. title: 数据科学-数学和统计-概率论与数理统计-随机变量的数字特征
-.. slug: 
+.. slug: DS-MS-Statistics-suijibianliangdeshuzitezheng
 .. date: 2017-05-29 19:26:52 UTC+08:00
 .. tags: Statistics, mathjax
 .. category: DATA SCIENTIST

@@ -1,6 +1,6 @@
 #+BEGIN_COMMENT
 .. title: 数据科学-数学与统计-高等代数- n 维向量空间 n 维向量空间 \(k^n\)
-.. slug: 
+.. slug: DS-MS-AG-nweixiangliangkongjian
 .. date: 2017-10-09 19:26:52 UTC+08:00
 .. tags: Linear algebra, mathjax
 .. category: DATA SCIENTIST

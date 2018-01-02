@@ -1,6 +1,6 @@
 #+BEGIN_COMMENT
 .. title: 房子，北京
-.. slug: 
+.. slug: house-beijing-2017-03-15
 .. date: 2017-03-15 19:26:52 UTC+08:00
 .. tags: House, Life
 .. category: LIFE
@@ -9,11 +9,6 @@
 .. type: text
 #+END_COMMENT
 
-#+TITLE: 房子，北京
-#+DATE: 2017-03-15
-#+LAYOUT: post
-#+TAGS: House, Life
-#+CATEGORIES: LIFE
 
 * 缘起
 今天早上看了一篇同学分享的文章--[[http://mp.weixin.qq.com/s?__biz=MjM5OTQ0MjM4MA==&mid=2651896417&idx=2&sn=3f956b783256b99e925c1c062b50a773&chksm=bcdf78c28ba8f1d416901eae3e4cea7230f176c975007d4af61c153303ecc75a498ce7711a31&mpshare=1&scene=1&srcid=0313S3DzfdNKeRHFAUfjBRoZ#rd][《清华硕士集体逃离北京！一枚中科院科研人员的自白： 我为什么选择离开》]]

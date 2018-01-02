@@ -1,8 +1,7 @@
 #+BEGIN_COMMENT
-.. title: Archlinux install and configuration
-.. slug: 
+.. title: Archlinux install and configuration [Archlinux 安装和配置]
+.. slug: archlinux-install-and-configuration
 .. date: 2016-02-05 19:26:52 UTC+08:00
-.. modified: 2017-02-05 19:26:52 UTC+08:00
 .. tags: Linux, Archlinux
 .. category: LINUX
 .. link: 
@@ -16,7 +15,7 @@
 #+TAGS: Linux, Archlinux
 #+CATEGORIES: LINUX
 
-* Archlinux install
+* Archlinux install [安装篇]
 ** Prepare for the installation
 - Prepare the ISO of archlinux, and brasero it into USB flash disk
 
@@ -129,7 +128,7 @@ pacman codecs (nedded)
 
 - Install textlive as the peking BBS
 
-* Configuration
+* Configuration [配置篇]
 
 ** Fcitx
 #+BEGIN_SRC sh
@@ -195,7 +194,7 @@ fi
 sudo chmod +x /etc/NetworkManager/dispatcher.d/localhost-prepend
 #+END_SRC
 
-* Questions
+* Questions [问题篇]
 
 ** GNOME3.6 文件夹默认打开方式关联问题
 #+BEGIN_SRC sh

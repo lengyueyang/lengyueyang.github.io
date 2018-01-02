@@ -1,6 +1,6 @@
 #+BEGIN_COMMENT
 .. title: 数据科学-数学与统计-高等代数-线性方程组的解法
-.. slug: 
+.. slug: DS-MS-AG-xianxingfangchengzudejiefa
 .. date: 2017-08-07 19:26:52 UTC+08:00
 .. tags: Linear algebra, mathjax
 .. category: DATA SCIENTIST

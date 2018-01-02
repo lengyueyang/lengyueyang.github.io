@@ -1,6 +1,6 @@
 #+BEGIN_COMMENT
-.. title: A simple introduction of lengyueyang's spacemacs configration
-.. slug: 
+.. title: A simple introduction of lengyueyang's spacemacs configration[个人 spacemacs 配置简介]
+.. slug: a-simple-introduction-lengyueyang's-spacemacs-configration
 .. date: 2017-03-26 19:26:52 UTC+08:00
 .. tags: Spacemacs, Configuration
 .. category: EMACS

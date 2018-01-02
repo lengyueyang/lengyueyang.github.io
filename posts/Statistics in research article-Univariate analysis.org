@@ -1,6 +1,6 @@
 #+BEGIN_COMMENT
-.. title: 科研文章中的统计：第一部分，单因素分析
-.. slug: 
+.. title: Statistics in research article-Univariate analysis [科研文章中的统计-单因素分析]
+.. slug: statistics-in-research-article-univariate-analysis
 .. date: 2016-04-23 19:26:52 UTC+08:00
 .. tags: Statistics, Research, R
 .. category: RESEARCH

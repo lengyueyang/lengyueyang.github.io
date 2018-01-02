@@ -1,6 +1,6 @@
 #+BEGIN_COMMENT
-.. title: Blog with org-mode and github
-.. slug: 
+.. title: Blog with org-mode and github [用 Org-mdoe 和 github 搭建博客]
+.. slug: blog-with-org-mode-and-github
 .. date: 2016-03-11 19:26:52 UTC+08:00
 .. tags: Blog, Github, Org-mode, Emacs
 .. category: EMACS

@@ -1,6 +1,6 @@
 #+BEGIN_COMMENT
 .. title: 数据科学-数学与统计-高等代数-行列式
-.. slug: 
+.. slug: DS-MS-AG-hanglieshi
 .. date: 2017-09-05 19:26:52 UTC+08:00
 .. tags: Linear algebra, mathjax
 .. category: DATA SCIENTIST

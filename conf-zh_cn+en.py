@@ -17,8 +17,8 @@ import time
 
 
 # Data about this site
-BLOG_AUTHOR = "Lengyueyang"  # (translatable)
-BLOG_TITLE = "深度识医"  # (translatable)
+BLOG_AUTHOR = {"en": "Lengyueyang", "zh_cn": "冷月阳"}  # (translatable)
+BLOG_TITLE = {"en": "Deep Medical Learning", "zh_cn": "深度识医"}  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "https://lengyueyang.github.io/"
@@ -26,7 +26,7 @@ SITE_URL = "https://lengyueyang.github.io/"
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://example.com/"
 BLOG_EMAIL = "maoxiaowei1988@qq.com"
-BLOG_DESCRIPTION = "Lengyueyang's personal blog."  # (translatable)
+BLOG_DESCRIPTION = {"en": "Lengyueyang's personal blog", "zh_cn": "冷月阳的个人博客"} # (translatable)
 
 # Nikola is multilingual!
 #
@@ -86,15 +86,15 @@ BLOG_DESCRIPTION = "Lengyueyang's personal blog."  # (translatable)
 # in the default language will be shown instead.
 
 # What is the default language?
-DEFAULT_LANG = "en"
+DEFAULT_LANG = "zh_cn"
 
 # What other languages do you have?
 # The format is {"translationcode" : "path/to/translation" }
 # the path will be used as a prefix for the generated pages location
 TRANSLATIONS = {
     DEFAULT_LANG: "",
-    # Example for another language:
-    # "es": "./es",
+    # "zh_cn": "./zh_cn",
+    "en": "en",
 }
 
 # What will translated input files be named like?
@@ -134,13 +134,19 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/archive.html", "Archives"),
-        ("/categories/index.html", "Tags"),
-        ("/rss.xml", "RSS feed"),
+        ("/archive.html", "归档"),
+        ("/categories/index.html", "标签云"),
+        ("/rss.xml", "RSS订阅"),
+    ),
+    "en": (
+        ("./archive.html", "Archives"),
+        ("./categories/index.html", "Tags"),
+        ("./rss.xml", "RSS feed"),
     ),
 }
 
 # Name of the theme to use.
+# THEME = "material-theme"
 THEME = "material-theme"
 
 # Primary color of your theme. This will be used to customize your theme and
@@ -189,9 +195,10 @@ POSTS = (
     ("posts/*.html", "posts", "post.tmpl"),
 )
 PAGES = (
-    ("pages/*.org", "pages", "page.tmpl"),
+    # ("pages/*.org", "pages", "page.tmpl"),
+    ("pages/*.org", {"en": "pages", "zh_cn": "页面"}, "page.tmpl"),
     ("pages/*.rst", "pages", "page.tmpl"),
-    ("pages/*.md", "pages", "page.tmpl"),
+    ("pages/*.ipnb", "pages", "page.tmpl"),
     ("pages/*.txt", "pages", "page.tmpl"),
     ("pages/*.html", "pages", "page.tmpl"),
 )
@@ -241,9 +248,9 @@ TIMEZONE = "Asia/Shanghai"
 # LOCALE_DEFAULT = locale to use for languages not mentioned in LOCALES; if
 # not set the default Nikola mapping is used.
 
-# LOCALES = {}
+LOCALES = {"en": "en_US.utf8", "zh_cn": "zh_CN.utf8"}
 # LOCALE_FALLBACK = None
-# LOCALE_DEFAULT = None
+LOCALE_DEFAULT = None
 
 # One or more folders containing files to be copied as-is into the output.
 # The format is a dictionary of {source: relative destination}.
@@ -283,6 +290,7 @@ COMPILERS = {
     # with many of the others.
     # "pandoc": ('.rst', '.md', '.txt'),
 }
+
 
 # Create by default posts in one file format?
 # Set to False for two-file posts, with separate metadata.
@@ -563,15 +571,14 @@ FRONT_INDEX_HEADER = {
 # Create per-month archives instead of per-year
 # CREATE_MONTHLY_ARCHIVE = False
 # Create one large archive instead of per-year
-# CREATE_SINGLE_ARCHIVE = False
 CREATE_SINGLE_ARCHIVE = True
 # Create year, month, and day archives each with a (long) list of posts
 # (overrides both CREATE_MONTHLY_ARCHIVE and CREATE_SINGLE_ARCHIVE)
-# CREATE_FULL_ARCHIVES = False
+# CREATE_FULL_ARCHIVES = True
 # If monthly archives or full archives are created, adds also one archive per day
-# CREATE_DAILY_ARCHIVE = False
+# CREATE_DAILY_ARCHIVE = True
 # Create previous, up, next navigation links for archives
-# CREATE_ARCHIVE_NAVIGATION = False
+# CREATE_ARCHIVE_NAVIGATION = True
 # Final locations for the archives are:
 # output / TRANSLATION[lang] / ARCHIVE_PATH / ARCHIVE_FILENAME
 # output / TRANSLATION[lang] / ARCHIVE_PATH / YEAR / index.html
@@ -1016,7 +1023,7 @@ COMMENT_SYSTEM_ID = "lengyueyang"
 # (Uses the INDEX_FILE setting, so if that is, say, default.html,
 # it will instead /foo/default.html => /foo)
 # (Note: This was briefly STRIP_INDEX_HTML in v 5.4.3 and 5.4.4)
-STRIP_INDEXES = False
+STRIP_INDEXES = True
 
 # Should the sitemap list directories which only include other directories
 # and no files.
@@ -1037,7 +1044,7 @@ STRIP_INDEXES = False
 # This can be disabled on a per-page/post basis by adding
 #    .. pretty_url: False
 # to the metadata.
-PRETTY_URLS = False
+PRETTY_URLS = True
 
 # If True, publish future dated posts right away instead of scheduling them.
 # Defaults to False.
@@ -1400,4 +1407,3 @@ GLOBAL_CONTEXT = {
 # GLOBAL_CONTEXT as parameter when the template is about to be
 # rendered
 GLOBAL_CONTEXT_FILLER = []
-

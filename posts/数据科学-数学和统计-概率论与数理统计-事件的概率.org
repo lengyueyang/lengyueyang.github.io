@@ -1,6 +1,6 @@
 #+BEGIN_COMMENT
 .. title: 数据科学-数学和统计-概率论与数理统计-事件的概率
-.. slug: 
+.. slug: DS-MS-Statistics-shijiandegailv
 .. date: 2017-04-08 19:26:52 UTC+08:00
 .. tags: Statistics, mathjax
 .. category: DATA SCIENTIST
