@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns#
+article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Use Mu4e to manage email [用 mu4e 管理邮件] | 深度识医</title>
+<script src="../assets/js/pace.min.js"></script><link href="../assets/css/pace.css" rel="stylesheet">
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+<link rel="canonical" href="https://lengyueyang.github.io/posts/use-Mu4e-to-manage-email.html">
+<!--[if lt IE 9]>
+            <script src="../assets/js/html5shiv.min.js"></script>
+            <script src="../assets/js/respond.min.js"></script>
+        <![endif]--><meta name="author" content="Lengyueyang">
+<link rel="prev" href="statistics-in-research-article-univariate-analysis.html" title="Statistics in research article-Univariate analysis [科研文章中的统计-单因素分析]" type="text/html">
+<link rel="next" href="house-beijing-2017-03-15.html" title="房子，北京" type="text/html">
+<meta property="og:site_name" content="深度识医">
+<meta property="og:title" content="Use Mu4e to manage email [用 mu4e 管理邮件]">
+<meta property="og:url" content="https://lengyueyang.github.io/posts/use-Mu4e-to-manage-email.html">
+<meta property="og:description" content="概述
+
+
+用 offlineimap 收取邮件，用 mu4e 在 emacs 中管理邮件，本教程配置多账户。
+
+
+
+
+
+
+
+offlineimap 设置
+
+
+安装 offlineimap
+
+
+本人用 archlinux，直接 sudo pacman -S offlineimap 即可
+
+
+
+
+
+配置 offlineimap
+
+
+在 home 目录下建立 .offlineimaprc 文件，加入以下">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-02-26T19:26:52+08:00">
+<meta property="article:tag" content="Emacs">
+<meta property="article:tag" content="Mu4e">
+<meta property="article:tag" content="Offlineimap">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-info header-panel shadow-z-3" role="navigation"><div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-3">
+            <h1 class="title-blog">
+                <a href="https://lengyueyang.github.io/">
+                        <span id="blog-title">深度识医</span>
+                    </a>
+            </h1>
+          </div>
+          <div class="col-xs-9">
+            <a id="hamburger" class="btn btn-raised" href="javascript:void(0);" onclick="menuToggle();">☰</a>
+          </div>
+        </div>
+      </div>
+<!-- /.container-fluid -->
+</nav><div class="container-fluid main" id="content" role="main">
+        <div class="row">
+            <nav class="col-xs-12 col-sm-3 menu"><ul>
+<li class="withripple"><a href="../archive.html">Archives</a></li>
+                <li class="withripple"><a href="../categories/index.html">Tags</a></li>
+                <li class="withripple"><a href="../rss.xml">RSS feed</a></li>
+
+                    
+                </ul>
+<ul></ul></nav><div class="posts-material col-xs-12 col-sm-9">
+                <div class="col-xs-12 col-md-11 content-material">
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Use Mu4e to manage email [用 mu4e 管理邮件]</a></h1>
+<hr>
+<div class="metadata">
+            <span class="byline author vcard">
+                <a href="#">
+                        <img class="img-circle" src="../images/lengyueyang.png" alt="icon">
+                    Lengyueyang
+                </a>
+            </span>
+            <span class="dateline">
+                <a href="#" rel="bookmark"><i class="mdi-device-access-time"></i>
+                    <time class="published dt-published" datetime="2017-02-26T19:26:52+08:00" itemprop="datePublished" title="2017-02-26 19:26">2017-02-26 19:26</time></a>
+            </span>
+                <span class="commentline">            <a href="use-Mu4e-to-manage-email.html#disqus_thread" data-disqus-identifier="cache/posts/Use Mu4e to manage email.html">Comments</a>
+
+</span>
+        </div>
+        
+        <hr></header><div class="e-content entry-content" itemprop="articleBody text">
+    <div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">概述</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+用 offlineimap 收取邮件，用 mu4e 在 emacs 中管理邮件，本教程配置多账户。
+</p>
+
+<!-- TEASER_END -->
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">offlineimap 设置</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1">安装 offlineimap</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+本人用 archlinux，直接 <code>sudo pacman -S offlineimap</code> 即可
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2">配置 offlineimap</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+在 home 目录下建立 .offlineimaprc 文件，加入以下代码
+</p>
+
+<div class="highlight"><pre><span></span><span class="c1"># -*- mode: python2 -*-</span>
+<span class="p">[</span><span class="n">general</span><span class="p">]</span>
+<span class="c1"># accounts = Gmail, Foxmail, Lengyue-163</span>
+<span class="n">accounts</span> <span class="o">=</span> <span class="n">Gmail</span><span class="p">,</span> <span class="n">Foxmail</span>
+<span class="n">maxsyncaccounts</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">pythonfile</span> <span class="o">=</span> <span class="o">~/.</span><span class="n">offlineimap</span><span class="o">.</span><span class="n">py</span>
+
+<span class="p">[</span><span class="n">Account</span> <span class="n">Gmail</span><span class="p">]</span>
+<span class="n">localrepository</span> <span class="o">=</span> <span class="n">Gmail</span><span class="o">-</span><span class="n">Local</span>
+<span class="n">remoterepository</span> <span class="o">=</span> <span class="n">Gmail</span><span class="o">-</span><span class="n">Remote</span>
+
+<span class="p">[</span><span class="n">Repository</span> <span class="n">Gmail</span><span class="o">-</span><span class="n">Local</span><span class="p">]</span>
+<span class="nb">type</span> <span class="o">=</span> <span class="n">Maildir</span>
+<span class="n">localfolders</span> <span class="o">=</span> <span class="o">~/</span><span class="n">Documents</span><span class="o">/</span><span class="n">Mu4e</span><span class="o">/</span><span class="n">Gmail</span>
+
+<span class="p">[</span><span class="n">Repository</span> <span class="n">Gmail</span><span class="o">-</span><span class="n">Remote</span><span class="p">]</span>
+<span class="nb">type</span> <span class="o">=</span> <span class="n">Gmail</span>
+<span class="n">auth_mechanisms</span> <span class="o">=</span> <span class="n">LOGIN</span>
+<span class="n">remotehost</span> <span class="o">=</span> <span class="n">imap</span><span class="o">.</span><span class="n">gmail</span><span class="o">.</span><span class="n">com</span>
+<span class="n">remoteuser</span> <span class="o">=</span> <span class="n">xxxxx</span><span class="nd">@gmail.com</span>
+<span class="n">remotepass</span> <span class="o">=</span> <span class="n">xxxxx</span>
+<span class="n">ssl</span> <span class="o">=</span> <span class="n">true</span>
+<span class="n">sslcacertfile</span> <span class="o">=</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssl</span><span class="o">/</span><span class="n">certs</span><span class="o">/</span><span class="n">ca</span><span class="o">-</span><span class="n">certificates</span><span class="o">.</span><span class="n">crt</span>
+<span class="n">nametrans</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">foldername</span><span class="p">:</span> <span class="n">foldername</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">'imap4-utf-7'</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">)</span>
+<span class="n">folderfilter</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">folder</span><span class="p">:</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">'(^Spam$|All)'</span><span class="p">,</span> <span class="n">folder</span><span class="p">)</span>
+<span class="n">maxconnections</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">realdelete</span> <span class="o">=</span> <span class="n">yes</span>
+
+
+<span class="p">[</span><span class="n">Account</span> <span class="n">Foxmail</span><span class="p">]</span>
+<span class="n">localrepository</span> <span class="o">=</span> <span class="n">Foxmail</span><span class="o">-</span><span class="n">Local</span>
+<span class="n">remoterepository</span> <span class="o">=</span> <span class="n">Foxmail</span><span class="o">-</span><span class="n">Remote</span>
+
+<span class="p">[</span><span class="n">Repository</span> <span class="n">Foxmail</span><span class="o">-</span><span class="n">Local</span><span class="p">]</span>
+<span class="nb">type</span> <span class="o">=</span> <span class="n">Maildir</span>
+<span class="n">localfolders</span> <span class="o">=</span> <span class="o">~/</span><span class="n">Documents</span><span class="o">/</span><span class="n">Mu4e</span><span class="o">/</span><span class="n">Foxmail</span>
+
+<span class="p">[</span><span class="n">Repository</span> <span class="n">Foxmail</span><span class="o">-</span><span class="n">Remote</span><span class="p">]</span>
+<span class="nb">type</span> <span class="o">=</span> <span class="n">IMAP</span>
+<span class="n">remotehost</span> <span class="o">=</span> <span class="n">imap</span><span class="o">.</span><span class="n">qq</span><span class="o">.</span><span class="n">com</span>
+<span class="n">remoteuser</span> <span class="o">=</span> <span class="n">xxxxx</span><span class="nd">@qq.com</span>
+<span class="n">remotepass</span> <span class="o">=</span> <span class="n">xxxxx</span>
+<span class="n">ssl</span> <span class="o">=</span> <span class="n">true</span>
+<span class="n">sslcacertfile</span> <span class="o">=</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssl</span><span class="o">/</span><span class="n">certs</span><span class="o">/</span><span class="n">ca</span><span class="o">-</span><span class="n">certificates</span><span class="o">.</span><span class="n">crt</span>
+<span class="n">nametrans</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">foldername</span><span class="p">:</span> <span class="n">foldername</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">'imap4-utf-7'</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">)</span>
+<span class="n">folderfilter</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">foldername</span><span class="p">:</span> <span class="n">foldername</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'INBOX'</span><span class="p">,</span><span class="s1">'Drafts'</span><span class="p">,</span> <span class="s1">'Sent Messages'</span><span class="p">,</span> <span class="s1">'Deleted Messages'</span><span class="p">]</span>
+<span class="n">maxconnections</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">realdelete</span> <span class="o">=</span> <span class="n">no</span>
+</pre></div>
+
+<p>
+设置 gmail 和 qq 两个账户，按照上面配置，邮箱和密码改成自己的(首先开通 gmail 和 qq 邮箱的 imap 功能，设置授权码，可参照后面参考资料)。
+其中，比较重要的有以下几项:
+</p>
+
+<p>
+<code>localfolders</code> 是下载邮件的位置
+</p>
+
+<p>
+<code>nametrans = lambda foldername: foldername.decode('imap4-utf-7').encode('utf-8')</code> 防止中文乱码
+</p>
+
+<p>
+<code>folderfilter = lambda foldername: foldername in ['INBOX','Drafts', 'Sent Messages', 'Deleted Messages']</code> 选择自己同步的文件夹
+</p>
+
+<p>
+<code>folderfilter = lambda folder: not re.search('(^Spam$|All)', folder)</code> 不选择 Spam 和有 All 字样的文件夹同步 2
+</p>
+
+<p>
+同时，在 home 目录下家里 <code>.offlineimap.py</code> 文件，加入以下内容，防止乱码
+</p>
+
+<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python2</span>
+
+<span class="kn">import</span> <span class="nn">binascii</span>
+<span class="kn">import</span> <span class="nn">codecs</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="nb">reload</span><span class="p">(</span><span class="n">sys</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">setdefaultencoding</span><span class="p">(</span><span class="s2">"utf-8"</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">modified_base64</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">'utf-16be'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">binascii</span><span class="o">.</span><span class="n">b2a_base64</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">='</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="s1">','</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">doB64</span><span class="p">(</span><span class="n">_in</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">_in</span><span class="p">:</span>
+	<span class="n">r</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'&amp;</span><span class="si">%s</span><span class="s1">-'</span> <span class="o">%</span> <span class="n">modified_base64</span><span class="p">(</span><span class="s1">''</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">_in</span><span class="p">)))</span>
+	<span class="k">del</span> <span class="n">_in</span><span class="p">[:]</span>
+
+<span class="k">def</span> <span class="nf">encoder</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">_in</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+	<span class="n">ordC</span> <span class="o">=</span> <span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+	<span class="k">if</span> <span class="mh">0x20</span> <span class="o">&lt;=</span> <span class="n">ordC</span> <span class="o">&lt;=</span> <span class="mh">0x25</span> <span class="ow">or</span> <span class="mh">0x27</span> <span class="o">&lt;=</span> <span class="n">ordC</span> <span class="o">&lt;=</span> <span class="mh">0x7e</span><span class="p">:</span>
+	    <span class="n">doB64</span><span class="p">(</span><span class="n">_in</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
+	    <span class="n">r</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+	<span class="k">elif</span> <span class="n">c</span> <span class="o">==</span> <span class="s1">'&amp;'</span><span class="p">:</span>
+	    <span class="n">doB64</span><span class="p">(</span><span class="n">_in</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
+	    <span class="n">r</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'&amp;-'</span><span class="p">)</span>
+	<span class="k">else</span><span class="p">:</span>
+	    <span class="n">_in</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+    <span class="n">doB64</span><span class="p">(</span><span class="n">_in</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="s1">''</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">r</span><span class="p">)),</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+
+<span class="c1"># decoding</span>
+
+<span class="k">def</span> <span class="nf">modified_unbase64</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">binascii</span><span class="o">.</span><span class="n">a2b_base64</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">','</span><span class="p">,</span> <span class="s1">'/'</span><span class="p">)</span> <span class="o">+</span> <span class="s1">'==='</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">unicode</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="s1">'utf-16be'</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">decoder</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">decode</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+	<span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="s1">'&amp;'</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">decode</span><span class="p">:</span>
+	    <span class="n">decode</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'&amp;'</span><span class="p">)</span>
+	<span class="k">elif</span> <span class="n">c</span> <span class="o">==</span> <span class="s1">'-'</span> <span class="ow">and</span> <span class="n">decode</span><span class="p">:</span>
+	    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">decode</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+		<span class="n">r</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'&amp;'</span><span class="p">)</span>
+	    <span class="k">else</span><span class="p">:</span>
+		<span class="n">r</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">modified_unbase64</span><span class="p">(</span><span class="s1">''</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">decode</span><span class="p">[</span><span class="mi">1</span><span class="p">:])))</span>
+	    <span class="n">decode</span> <span class="o">=</span> <span class="p">[]</span>
+	<span class="k">elif</span> <span class="n">decode</span><span class="p">:</span>
+	    <span class="n">decode</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+	<span class="k">else</span><span class="p">:</span>
+	    <span class="n">r</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">decode</span><span class="p">:</span>
+	<span class="n">r</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">modified_unbase64</span><span class="p">(</span><span class="s1">''</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">decode</span><span class="p">[</span><span class="mi">1</span><span class="p">:])))</span>
+    <span class="n">bin_str</span> <span class="o">=</span> <span class="s1">''</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">bin_str</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+
+<span class="k">class</span> <span class="nc">StreamReader</span><span class="p">(</span><span class="n">codecs</span><span class="o">.</span><span class="n">StreamReader</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">decode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'strict'</span><span class="p">):</span>
+	<span class="k">return</span> <span class="n">decoder</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">StreamWriter</span><span class="p">(</span><span class="n">codecs</span><span class="o">.</span><span class="n">StreamWriter</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">decode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'strict'</span><span class="p">):</span>
+	<span class="k">return</span> <span class="n">encoder</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">imap4_utf_7</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s1">'imap4-utf-7'</span><span class="p">:</span>
+	<span class="k">return</span> <span class="p">(</span><span class="n">encoder</span><span class="p">,</span> <span class="n">decoder</span><span class="p">,</span> <span class="n">StreamReader</span><span class="p">,</span> <span class="n">StreamWriter</span><span class="p">)</span>
+<span class="n">codecs</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">imap4_utf_7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3">用 offlineimap 下载邮件</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+在终端用运行命令 <code>offlineimap</code> ，下载邮件
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">Mu4e 设置</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+我用 spacemacs，先将 mu4e layer 加入 spaemacs 配置文件中，启用 mu4e layer。
+</p>
+
+<p>
+安装 mu4e 是 mu 软件的一部分，因此安装 mu 软件(yaourt mu)。
+</p>
+
+<p>
+安装完成之后，建立索引，在终端运行 <code>mu index --rebuild --maildir=~/Documents/Mu4e</code> ，文件夹的位置根据自己的更改。
+</p>
+
+<p>
+在 spacemacs 的配置文件中加入以下代码，注意：根据自己的邮箱个数等更改相应位置即可。
+</p>
+
+<div class="highlight"><pre><span></span><span class="p">(</span><span class="nf">add-to-load-path</span> <span class="s">"~/.spacemacs.d/package/mu4e"</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nf">require</span> <span class="ss">'mu4e</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nf">setq</span> <span class="nv">mu4e-account-alist</span>
+      <span class="o">'</span><span class="p">((</span><span class="s">"Gmail"</span>
+	 <span class="c1">;; Under each account, set the account-specific variables you want.</span>
+	 <span class="p">(</span><span class="nf">mu4e-sent-messages-behavior</span> <span class="nv">delete</span><span class="p">)</span>
+	 <span class="p">(</span><span class="nf">mu4e-sent-folder</span> <span class="s">"/Gmail/[Gmail].Sent Mail"</span><span class="p">)</span>
+	 <span class="p">(</span><span class="nf">mu4e-drafts-folder</span> <span class="s">"/Gmail/[Gmail].Drafts"</span><span class="p">)</span>
+	 <span class="p">(</span><span class="nf">user-mail-address</span> <span class="s">"xxxxx@gmail.com"</span><span class="p">)</span>
+	 <span class="p">(</span><span class="nf">user-full-name</span> <span class="s">"xxxxx"</span><span class="p">))</span>
+	<span class="p">(</span><span class="s">"Foxmail"</span>
+	 <span class="p">(</span><span class="nf">mu4e-sent-messages-behavior</span> <span class="nv">sent</span><span class="p">)</span>
+	 <span class="p">(</span><span class="nf">mu4e-sent-folder</span> <span class="s">"/Foxmail/Sent Messages"</span><span class="p">)</span>
+	 <span class="p">(</span><span class="nf">mu4e-drafts-folder</span> <span class="s">"/Foxmail/Drafts"</span><span class="p">)</span>
+	 <span class="p">(</span><span class="nf">user-mail-address</span> <span class="s">"xxxxx@foxmail.com"</span><span class="p">)</span>
+	 <span class="p">(</span><span class="nf">user-full-name</span> <span class="s">"xxxxx"</span><span class="p">))</span>
+	<span class="c1">;; ("Lengyue-163"</span>
+	<span class="c1">;;  (mu4e-sent-messages-behavior sent)</span>
+	<span class="c1">;;  (mu4e-sent-folder "/Lengyue-163/Sent Items")</span>
+	<span class="c1">;;  (mu4e-drafts-folder "/Lengyue-163/Drafts")</span>
+	<span class="c1">;;  (user-mail-address "zanghuahong@163.com")</span>
+	<span class="c1">;;  (user-full-name "Mao Xiaowei"))</span>
+       <span class="p">)</span>
+<span class="p">)</span>
+
+<span class="p">(</span><span class="nf">mu4e/mail-account-reset</span><span class="p">)</span>
+
+<span class="c1">;;; Set up some common mu4e variables</span>
+<span class="p">(</span><span class="nf">setq</span> <span class="nv">mu4e-maildir</span> <span class="s">"~/Documents/Mu4e"</span>
+      <span class="nv">mu4e-trash-folder</span> <span class="s">"/Gmail/Trash"</span>
+      <span class="nv">mu4e-refile-folder</span> <span class="s">"/Gmail/Archive"</span>
+      <span class="c1">;; mu4e-get-mail-command "mbsync -a"</span>
+      <span class="nv">mu4e-update-interval</span> <span class="nv">nil</span>
+      <span class="nv">mu4e-compose-signature-auto-include</span> <span class="nv">nil</span>
+      <span class="nv">mu4e-view-show-images</span> <span class="nv">t</span>
+      <span class="nv">mu4e-view-show-addresses</span> <span class="nv">t</span><span class="p">)</span>
+
+<span class="c1">;;; Mail directory shortcuts</span>
+<span class="p">(</span><span class="nf">setq</span> <span class="nv">mu4e-maildir-shortcuts</span>
+      <span class="o">'</span><span class="p">(</span>
+	<span class="p">(</span><span class="s">"/Foxmail/INBOX"</span> <span class="o">.</span> <span class="nv">?f</span><span class="p">)</span>
+	<span class="p">(</span><span class="s">"/Foxmail/Drafts"</span> <span class="o">.</span> <span class="nv">?d</span><span class="p">)</span>
+	<span class="p">(</span><span class="s">"/Foxmail/Sent Messages"</span> <span class="o">.</span> <span class="nv">?s</span><span class="p">)</span>
+	<span class="p">(</span><span class="s">"/Gmail/INBOX"</span> <span class="o">.</span> <span class="nv">?g</span><span class="p">)</span>
+	<span class="c1">;; ("/Gmail/[Gmail].All Mail" . ?a)</span>
+	<span class="p">(</span><span class="s">"/Gmail/[Gmail].Drafts"</span> <span class="o">.</span> <span class="nv">?r</span><span class="p">)</span>
+	<span class="p">(</span><span class="s">"/Gmail/[Gmail].Sent Mail"</span> <span class="o">.</span> <span class="nv">?m</span><span class="p">)</span>
+	<span class="p">(</span><span class="s">"/Gmail/[Gmail].Trash"</span> <span class="o">.</span> <span class="nv">?t</span><span class="p">)</span>
+	<span class="c1">;; ("/Lengyue-163/INBOX" . ?i)</span>
+	<span class="p">))</span>
+
+<span class="c1">;;; Bookmarks</span>
+<span class="p">(</span><span class="nf">setq</span> <span class="nv">mu4e-bookmarks</span>
+      <span class="o">`</span><span class="p">((</span><span class="s">"flag:unread AND NOT flag:trashed"</span> <span class="s">"Unread messages"</span> <span class="nv">?u</span><span class="p">)</span>
+	<span class="p">(</span><span class="s">"date:today..now"</span> <span class="s">"Today's messages"</span> <span class="nv">?t</span><span class="p">)</span>
+	<span class="p">(</span><span class="s">"date:7d..now"</span> <span class="s">"Last 7 days"</span> <span class="nv">?w</span><span class="p">)</span>
+	<span class="p">(</span><span class="s">"mime:image/*"</span> <span class="s">"Messages with images"</span> <span class="nv">?p</span><span class="p">)</span>
+	<span class="p">(</span><span class="o">,</span><span class="p">(</span><span class="nf">mapconcat</span> <span class="ss">'identity</span>
+		     <span class="p">(</span><span class="nf">mapcar</span>
+		      <span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">maildir</span><span class="p">)</span>
+			<span class="p">(</span><span class="nf">concat</span> <span class="s">"maildir:"</span> <span class="p">(</span><span class="nb">car </span><span class="nv">maildir</span><span class="p">)))</span>
+		      <span class="nv">mu4e-maildir-shortcuts</span><span class="p">)</span> <span class="s">" OR "</span><span class="p">)</span>
+	 <span class="s">"All inboxes"</span> <span class="nv">?i</span><span class="p">)))</span>
+
+<span class="p">(</span><span class="nf">setq</span> <span class="nv">mu4e-enable-notifications</span> <span class="nv">t</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nf">with-eval-after-load</span> <span class="ss">'mu4e-alert</span>
+  <span class="c1">;; Enable Desktop notifications</span>
+  <span class="c1">;; (mu4e-alert-set-default-style 'notifications)) ; For linux</span>
+  <span class="p">(</span><span class="nf">mu4e-alert-set-default-style</span> <span class="ss">'libnotify</span><span class="p">))</span>  <span class="c1">; Alternative for linux</span>
+  <span class="c1">;; (mu4e-alert-set-default-style 'notifier))   ; For Mac OSX (through the</span>
+					<span class="c1">; terminal notifier app)</span>
+<span class="c1">;; (mu4e-alert-set-default-style 'growl))      ; Alternative for Mac OSX</span>
+
+<span class="p">(</span><span class="nf">setq</span> <span class="nv">mu4e-enable-mode-line</span> <span class="nv">t</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nf">setq</span> <span class="nv">mu4e-get-mail-command</span> <span class="s">"offlineimap"</span><span class="p">)</span>
+<span class="c1">;; Fetch mail in 60 sec interval</span>
+<span class="p">(</span><span class="nf">setq</span> <span class="nv">mu4e-update-interval</span> <span class="mi">60</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nf">require</span> <span class="ss">'mu4e-contrib</span><span class="p">)</span>
+<span class="p">(</span><span class="nf">setq</span> <span class="nv">mu4e-html2text-command</span> <span class="ss">'mu4e-shr2text</span><span class="p">)</span>
+<span class="c1">;; try to emulate some of the eww key-bindings</span>
+<span class="p">(</span><span class="nf">add-hook</span> <span class="ss">'mu4e-view-mode-hook</span>
+	  <span class="p">(</span><span class="k">lambda </span><span class="p">()</span>
+	    <span class="p">(</span><span class="nf">local-set-key</span> <span class="p">(</span><span class="nf">kbd</span> <span class="s">"&lt;tab&gt;"</span><span class="p">)</span> <span class="ss">'shr-next-link</span><span class="p">)</span>
+	    <span class="p">(</span><span class="nf">local-set-key</span> <span class="p">(</span><span class="nf">kbd</span> <span class="s">"&lt;backtab&gt;"</span><span class="p">)</span> <span class="ss">'shr-previous-link</span><span class="p">)))</span>
+
+<span class="c1">;; something about ourselves</span>
+<span class="p">(</span><span class="nf">require</span> <span class="ss">'smtpmail</span><span class="p">)</span>  
+<span class="p">(</span><span class="nf">setq</span> <span class="nv">user-mail-address</span> <span class="s">"xxxxx@foxmail.com"</span>  
+      <span class="nv">user-full-name</span> <span class="s">"xxxxx"</span>
+      <span class="nv">smtpmail-stream-type</span> <span class="ss">'starttls</span>
+      <span class="nv">starttls-use-gnutls</span> <span class="nv">t</span>
+      <span class="nv">mu4e-compose-signature</span>  
+      <span class="p">(</span><span class="nf">concat</span>  
+       <span class="s">"xxxx\n"</span>  
+       <span class="s">"Blog: http://lengyueyang.github.io\n"</span>  
+       <span class="s">"\n"</span><span class="p">)</span>  
+      <span class="nv">mu4e-compose-signature-auto-include</span> <span class="nv">t</span>  
+      <span class="p">)</span>  
+
+<span class="p">(</span><span class="nf">setq</span> <span class="nv">send-mail-function</span>            <span class="ss">'smtpmail-send-it</span>
+      <span class="nv">message-send-mail-function</span>    <span class="ss">'smtpmail-send-it</span>
+      <span class="nv">smtpmail-auth-credentials</span>     <span class="p">(</span><span class="nf">expand-file-name</span> <span class="s">"~/.authinfo"</span><span class="p">)</span>
+      <span class="nv">smtpmail-stream-type</span>          <span class="ss">'tls</span>
+      <span class="nv">smtpmail-smtp-server</span>          <span class="s">"smtp.qq.com"</span>
+      <span class="nv">smtpmail-smtp-service</span>         <span class="mi">465</span>
+      <span class="nv">smtpmail-smtp-user</span> <span class="s">"xxxxx@qq.com"</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nf">setq</span> <span class="nv">message-kill-buffer-on-exit</span> <span class="nv">t</span><span class="p">)</span>
+
+<span class="c1">;; save attachment to my desktop (this can also be a function)  </span>
+<span class="p">(</span><span class="nf">setq</span> <span class="nv">mu4e-attachment-dir</span> <span class="s">"/home/lengyue/Documents/Mu4e/Attachment"</span><span class="p">)</span>  
+</pre></div>
+</div>
+
+<div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1">几点说明：</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+mu 更新后，发现系统不能自己找到 mu4e 文件夹，因此手动链接
+<code>(add-to-load-path "~/.spacemacs.d/package/mu4e")</code>
+</p>
+
+<p>
+contact 内容是自己的邮件签名
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">Mu4e 简单使用小结</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1">Keybindings to remember of Mu4e</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-sec-4-1-1" class="outline-4">
+<h4 id="sec-4-1-1">
+<code>offlineimap</code> and <code>mu index --maildir=~/Documents/Mu4e</code>
+</h4>
+</div>
+<div id="outline-container-sec-4-1-2" class="outline-4">
+<h4 id="sec-4-1-2">Main view-Default bindings</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<p>
+R: Reply      s: search            .: raw view (toggle)
+</p>
+
+<p>
+F: Forward    j: jump-to-maildir   q: quit
+C: Compose    b: bookmark-search
+</p>
+
+<p>
+E: Edit       B: edit bookmark-search
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-1-3" class="outline-4">
+<h4 id="sec-4-1-3">Headers menu in the emacs menu bar</h4>
+<div class="outline-text-4" id="text-4-1-3">
+<p>
+key          description
+</p>
+
+<p>
+n,p          view the next, previous message
+</p>
+
+<p>
+],[          move to the next, previous unread message
+</p>
+
+<p>
+y            select the message view (if it's visible)
+</p>
+
+<p>
+RET          open the message at point in the message view
+</p>
+
+
+<p>
+searching
+</p>
+
+<p>
+s            search
+</p>
+
+<p>
+S            edit last query
+</p>
+
+<p>
+/            narrow the search
+</p>
+
+<p>
+b            search bookmark
+</p>
+
+<p>
+B            edit bookmark before search
+</p>
+
+<p>
+j            jump to maildir
+</p>
+
+<p>
+M-left,\     previous query
+</p>
+
+<p>
+M-right      next query
+</p>
+
+<p>
+O            change sort order
+</p>
+
+<p>
+P            toggle threading
+</p>
+
+<p>
+Q            toggle full-search
+</p>
+
+<p>
+V            toggle skip-duplicates
+</p>
+
+<p>
+W            toggle include-related
+</p>
+
+<p>
+marking
+</p>
+
+<p>
+d            mark for moving to the trash folder
+</p>
+
+<p>
+=            mark for removing trash flag ('untrash')
+</p>
+
+<p>
+DEL,D        mark for complete deletion
+</p>
+
+<p>
+m            mark for moving to another maildir folder
+</p>
+
+<p>
+r            mark for refiling
+</p>
+
+<p>
++,-          mark for flagging/unflagging
+</p>
+
+<p>
+?,!          mark message as unread, read
+</p>
+
+<p>
+u            unmark message at point
+</p>
+
+<p>
+U            unmark <b>all</b> messages
+</p>
+
+<p>
+%            mark based on a regular expression
+</p>
+
+<p>
+T,t          mark whole thread, subthread
+</p>
+
+<p>
+&lt;insert&gt;,*   mark for 'something' (decide later)
+</p>
+
+<p>
+x            execute actions for the marked messages
+</p>
+
+<p>
+composition
+</p>
+
+<p>
+R,F,C        reply/forward/compose
+</p>
+
+<p>
+E            edit (only allowed for draft messages)
+</p>
+
+
+<p>
+misc
+</p>
+
+
+<p>
+;            switch focus
+</p>
+
+<p>
+a            execute some custom action on a header
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left"></colgroup>
+<tbody><tr>
+<td class="left">pipe message through shell command</td>
+</tr></tbody>
+</table>
+<p>
+C-+,C–      increase / decrease the number of headers shown
+</p>
+
+<p>
+H            get help
+</p>
+
+<p>
+C-S-u        update mail &amp; reindex
+</p>
+
+<p>
+q            leave the headers buffer
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-4-1-4" class="outline-4">
+<h4 id="sec-4-1-4">Message View</h4>
+<div class="outline-text-4" id="text-4-1-4">
+<p>
+key          description
+</p>
+
+<p>
+n,p          view the next, previous message
+</p>
+
+<p>
+],[          move to the next, previous unread message
+</p>
+
+<p>
+y            select the headers view (if it's visible)
+</p>
+
+<p>
+RET          scroll down
+</p>
+
+<p>
+M-RET        open URL at point / attachment at point
+</p>
+
+<p>
+SPC          scroll down, if at end, move to next message
+</p>
+
+<p>
+S-SPC        scroll up
+</p>
+
+<p>
+searching
+</p>
+
+<p>
+s            search
+</p>
+
+<p>
+e            edit last query
+</p>
+
+<p>
+/            narrow the search
+</p>
+
+<p>
+b            search bookmark
+</p>
+
+<p>
+B            edit bookmark before search
+</p>
+
+<p>
+j            jump to maildir
+</p>
+
+<p>
+M-left       previous query
+</p>
+
+<p>
+M-right      next query
+</p>
+
+<p>
+marking
+</p>
+
+<p>
+d            mark for moving to the trash folder
+</p>
+
+<p>
+=            mark for removing trash flag ('untrash')
+</p>
+
+<p>
+DEL,D        mark for complete deletion
+</p>
+
+<p>
+m            mark for moving to another maildir folder
+</p>
+
+<p>
+r            mark for refiling
+</p>
+
+<p>
++,-          mark for flagging/unflagging
+</p>
+
+<p>
+u            unmark message at point
+</p>
+
+<p>
+U            unmark <b>all</b> messages
+</p>
+
+<p>
+%            mark based on a regular expression
+</p>
+
+<p>
+T,t          mark whole thread, subthread
+</p>
+
+<p>
+&lt;insert&gt;,*   mark for 'something' (decide later)
+</p>
+
+<p>
+x            execute actions for the marked messages
+</p>
+
+<p>
+composition
+</p>
+
+<p>
+R,F,C        reply/forward/compose
+</p>
+
+<p>
+E            edit (only allowed for draft messages)
+</p>
+
+<p>
+actions
+</p>
+
+<p>
+g            go to (visit) numbered URL (using `browse-url')
+</p>
+
+<p>
+(or: &lt;mouse-1&gt; or M-RET with point on url)
+</p>
+
+<p>
+C-u g visits multiple URLs
+</p>
+
+<p>
+f            fetch (download )the numbered URL.
+</p>
+
+<p>
+C-u f fetches multiple URLs
+</p>
+
+<p>
+k            save the numbered URL in the kill-ring.
+</p>
+
+<p>
+C-u k saves multiple URLs
+</p>
+
+<p>
+e            extract (save) attachment (asks for number)
+</p>
+
+<p>
+(or: &lt;mouse-2&gt; or S-RET with point on attachment)
+</p>
+
+<p>
+C-u e extracts multiple attachments
+</p>
+
+<p>
+o            open attachment (asks for number)
+</p>
+
+<p>
+(or: &lt;mouse-1&gt; or M-RET with point on attachment)
+</p>
+
+<p>
+a            execute some custom action on the message
+</p>
+
+<p>
+A            execute some custom action on an attachment
+</p>
+
+<p>
+misc
+</p>
+
+<p>
+;            switch focus
+</p>
+
+<p>
+c            copy address at point (with C-u copy long version)
+</p>
+
+<p>
+h            toggle between html/text (if available)
+</p>
+
+<p>
+w            toggle line wrapping
+</p>
+
+<p>
+v            show details about the cryptographic signature
+</p>
+
+<p>
+.            show the raw message view. 'q' takes you back.
+</p>
+
+<p>
+C-+,C–      increase / decrease the number of headers shown
+</p>
+
+<p>
+H            get help
+</p>
+
+<p>
+C-S-u        update mail &amp; reindex
+</p>
+
+<p>
+q            leave the message view
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-1-5" class="outline-4">
+<h4 id="sec-4-1-5">Attachment actions</h4>
+<div class="outline-text-4" id="text-4-1-5">
+<p>
+Similarly, there is mu4e-view-attachment-action (A) for actions on attachments, which you can specify with mu4e-view-attachment-actions.
+</p>
+
+<p>
+mu4e predefines a number of attachment-actions:
+</p>
+
+<p>
+open-with (w): open the attachment with some arbitrary program. For example, suppose you have received a message with a picture attachment; then, A w 1 RET gimp RET opens that attachment in The Gimp
+pipe (|: process the attachment with some Unix shell-pipe and see the results. Suppose you receive a patch file, and would like to get an overview of the changes, using the diffstat program. You can use something like: A | 1 RET diffstat -b RET.
+emacs (e): open the attachment in your running emacs. For example, if you receive some text file you’d like to open in emacs: A e 1 RET.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-1-6" class="outline-4">
+<h4 id="sec-4-1-6">Editor view</h4>
+<div class="outline-text-4" id="text-4-1-6">
+<p>
+key          description
+</p>
+
+<p>
+C-c C-c      send message
+</p>
+
+<p>
+C-c C-d      save to drafts and leave
+</p>
+
+<p>
+C-c C-k      kill the message buffer (the message remains in the draft folder)
+</p>
+
+<p>
+C-c C-a      attach a file (pro-tip: drag &amp; drop works as well)
+</p>
+
+
+<p>
+(mu4e-specific)
+</p>
+
+<p>
+C-S-u        update mail &amp; reindex
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-1-7" class="outline-4">
+<h4 id="sec-4-1-7">What to mark for</h4>
+<div class="outline-text-4" id="text-4-1-7">
+<p>
+mu4e supports a number of marks:
+</p>
+
+<p>
+mark for/as   keybinding  | description
+</p>
+
+<p>
+'something'  *, &lt;insert&gt; | mark now, decide later
+</p>
+
+<p>
+delete        D, &lt;delete&gt; | delete
+</p>
+
+<p>
+flag          +           | mark as 'flagged' ('starred')
+</p>
+
+<p>
+move          m           | move to some maildir
+</p>
+
+<p>
+read          !           | mark as read
+</p>
+
+<p>
+refile        r           | mark for refiling
+</p>
+
+<p>
+trash         d           | move to the trash folder
+</p>
+
+<p>
+untrash       =           | remove 'trash' flag
+</p>
+
+<p>
+unflag        -           | remove 'flagged' mark
+</p>
+
+<p>
+unmark        u           | remove mark at point
+</p>
+
+<p>
+unmark all    U           | remove all marks
+</p>
+
+<p>
+unread        ?           | marks as unread
+</p>
+
+<p>
+action        a           | apply some action
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2">其他</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+若参考配置有问题，请移步官网或后面参考资料，或邮件联系我，随时欢迎 😍。
+</p>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">参考资料</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>
+<a href="https://github.com/larstvei/dot-emacs">larstvei/dot-emacs: My Emacs configurations written in Org mode</a>
+</li>
+<li>
+<a href="http://wenshanren.org/?p=111">mu4e: an E-mail Client for Emacs | 肉山博客 (Wenshan's Blog)</a>
+</li>
+<li>
+<a href="http://coldnew.github.io/blog/2016/01-02_mu4e/">在 emacs 下使用 mu4e 收發郵件 | coldnew's blog</a>
+</li>
+<li>
+<a href="http://blog.csdn.net/csfreebird/article/details/52973188">spacemacs email layer - 博客频道 - CSDN.NET</a>
+</li>
+<li>
+<a href="https://github.com/howardabrams/dot-files/blob/master/emacs-mail.org">dot-files/emacs-mail.org at master · howardabrams/dot-files</a>
+</li>
+<li>
+<a href="https://guso.ml/search?q=offlinemap+%E5%A4%9A%E5%B8%90%E6%88%B7&amp;prmd=ivns&amp;ei=pVc8WPPzNsv0vgTT2pn4Cw&amp;start=10&amp;sa=N">offlinemap 多帐户 - Google 搜索</a>
+</li>
+<li>
+<a href="https://github.com/syl20bnr/spacemacs/tree/master/layers/+email/mu4e">spacemacs/layers/+email/mu4e at master · syl20bnr/spacemacs</a>
+</li>
+<li>
+<a href="http://www.djcbsoftware.nl/code/mu/mu4e/index.html">Mu4e 0.9.16 user manual: Top</a>
+</li>
+<li>
+<a href="https://github.com/lujun9972/emacs-document/blob/master/org-mode/%E7%94%A8org-mime%E5%9C%A8org-mode%E4%B8%AD%E5%8F%91%E9%80%81html%E9%82%AE%E4%BB%B6.org">emacs-document/用 org-mime 在 org-mode 中发送 html 邮件.org at master · lujun9972/emacs-document</a>
+</li>
+<li>
+<a href="https://emacs.lujianmei.com/03-For-an-editor/init-mu4e.html">Mu4e 邮件管理 · 谁说 Emacs 不好玩？</a>
+</li>
+<li>
+<a href="http://www.bagualu.net/wordpress/archives/6555">emacs 中的 email 客户端 mu4e | 猎数博客</a>
+</li>
+<li>
+<a href="https://github.com/syl20bnr/spacemacs/tree/master/layers/+email/gnus#org-mime-in-org-layer">spacemacs/layers/+email/gnus at master · syl20bnr/spacemacs</a>
+</li>
+</ul>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><div itemprop="keywords" class="tags">
+            <a class="tag p-category btn btn-success btn-raised btn-sm" href="../categories/emacs.html" rel="tag">Emacs</a>
+            <a class="tag p-category btn btn-success btn-raised btn-sm" href="../categories/mu4e.html" rel="tag">Mu4e</a>
+            <a class="tag p-category btn btn-success btn-raised btn-sm" href="../categories/offlineimap.html" rel="tag">Offlineimap</a>
+        </div>
+
+            <ul class="pager">
+<li class="previous">
+                <a href="statistics-in-research-article-univariate-analysis.html" rel="prev" title="Statistics in research article-Univariate analysis [科研文章中的统计-单因素分析]">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="house-beijing-2017-03-15.html" rel="next" title="房子，北京">Next post</a>
+            </li>
+        </ul></nav></aside><section class="comments"><h2>
+<i class="mdi-communication-forum"></i>Comments</h2>
+        <hr>
+<div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="lengyueyang",
+            disqus_url="https://lengyueyang.github.io/posts/use-Mu4e-to-manage-email.html",
+        disqus_title="Use Mu4e to manage email [\u7528 mu4e \u7ba1\u7406\u90ae\u4ef6]",
+        disqus_identifier="cache/posts/Use Mu4e to manage email.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="lengyueyang";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+            </div>
+        </div>
+        <button class="btn btn-fab btn-raised btn-material-green btn-footer" data-toggle="modal" data-target="#footer-dialog">
+            <i class="mdi-communication-message"></i>
+        </button>
+        <div id="footer-dialog" class="modal fade" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Lengyueyang</h4>
+                <div>
+                    
+<img class="img-circle" style="float:left;margin:10px 20px 10px 0px;max-height:200px;" src="../images/lengyueyang.png"><p><u>Basic Medical, 8 years PHD, Do some research on Medical Data Scientist</u></p>
+
+<p>I am currently work on Medical Big Data analysis, learning Machine learning and deep learning.</p>
+<p><a href="http://spacemacs.org"><img src="https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg"></a></p>
+<p>
+
+                </p>
+</div>
+                <hr>
+</div>
+              <div class="modal-body">
+                    Contents © 2018         <a href="mailto:maoxiaowei1988@qq.com">Lengyueyang</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+                    
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Ok</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="source-button">
+    <a class="btn btn-fab btn-raised btn-material-indigo" target="_blank" href="use-Mu4e-to-manage-email.org" title="Source">
+        <i class="mdi-file-cloud-download"></i>
+    </a>
+
+        </div>
+        <div class="kc_fab_wrapper"></div>
+</div>
+
+
+            <script src="../assets/js/all-nocdn.js"></script><script>
+                var links = [
+                        {
+                            "bgcolor": "#F44336",
+                            "icon": "<i class='fa fa-share-square'></i>",
+                        },
+                        {
+                            "url": "https://github.com/lengyueyang",
+                            "bgcolor": "#666666",
+                            "color": "#fffff",
+                            "icon": "<i class='fa fa-github-square'></i>",
+                        },
+                        {
+                            "url": "https://www.linkedin.com/in/lengyueyang",
+                            "bgcolor": "#3B5998",
+                            "color": "#fffff",
+                            "icon": "<i class='fa fa-linkedin-square'></i>",
+                        },
+                ];
+
+            $(document).ready(function() {
+                // This command is used to initialize some elements and make them work properly
+                $.material.init();
+                    $('.kc_fab_wrapper').kc_fab(links);
+            });
+
+            $(window).on("resize", function() {
+                if($(window).width() > 767) {
+                  $("html, body").height($(window).height());
+                  $(".main, .menu").height($(window).height() - $(".header-panel").outerHeight() - 76 );
+                  $(".posts-material").height($(window).height());
+                } else {
+                  $("html, body").css('height', '');
+                  $(".main, .menu").css('height', '');
+                  $(".posts-material").css('height', '');
+                }
+            }).trigger("resize");
+
+            function menuToggle() {
+                $("nav.menu, ul").toggleClass('responsive', '');
+            }
+        </script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

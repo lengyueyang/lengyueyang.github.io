@@ -1,0 +1,102 @@
+#+BEGIN_COMMENT
+.. title: Archlinux Shadowsocks Configuration [Archlinux Shadowsocks 配置]
+.. slug: archlinux-shadowsocks
+.. date: 2017-12-11 19:26:52 UTC+08:00
+.. tags: Archlinux, Shadowsocks
+.. category: LINUX
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+
+#+TITLE: Archlinux Shadowsocks 配置
+#+DATE: 2017-12-11
+#+LAYOUT: post
+#+TAGS: Archlinux, Shadowsocks
+#+CATEGORIES: LINUX
+
+* 购买 socks5 帐号
+本人购买倚天剑 socks 帐号
+网址如下:
+https://a.aiguobit.com/users/ucenter
+
+或者从 github 进入
+https://github.com/itrump/ssfree/blob/master/cn/%E5%80%9A%E5%A4%A9%E5%89%91ss%E6%96%B0%E7%BD%91%E7%AB%99.md
+{{{TEASER_END}}}
+
+
+* 在 Archlinux 安装 shadsocks
+
+   #+BEGIN_SRC sh
+     sudo pacman -S shadowsocks
+   #+END_SRC
+
+* 在 Documents 下建立 shadowsocks.json, 加入帐号配置
+
+   #+BEGIN_SRC sh
+     {
+         "server":"my_server_ip",
+         "local_address": "127.0.0.1",
+         "local_port":1080,
+         "server_port":my_server_port,
+         "password":"my_password",
+         "timeout":300,
+         "method":"aes-256-cfb"
+     }
+   #+END_SRC
+
+* SS 启动及开机启动
+
+   #+BEGIN_SRC sh
+     sslocal -c Documents/VPN/Shadowsocks/shadowsocks2.json
+
+     sudo systemctl enable shadowsoks.service
+
+     sudo pacman -S supervisor
+
+     sudo gedit /etc/supervisord.conf
+
+     # Add
+
+     [program:shadowsocks]
+     command=sslocal -c /home/lengyue/Documents/VPN/Shadowsocks/shadowsocks2.json
+     autostart=true
+     autorestart=true
+     user=root
+     log_stderr=true
+     logfile=/var/log/shadowsocks.log
+
+     sudo systemctl enable supervisord.service
+   #+END_SRC
+
+* 使用 privoxy 使 http 走 socks5
+
+#+BEGIN_SRC sh
+  sudo pacman -S privoxy
+
+  sudo gedit /etc/privoxy/config
+
+  # Add
+
+  listen-address  127.0.0.1:8118/
+  forward-socks5 /    127.0.0.1:1080 .
+
+  sudo systemctl enable prioxy.service
+#+END_SRC
+
+* emacs 代理，见 lengyueyang.org proxy 配置部分.
+
+
+* 使用 proxychains 代理程序
+
+
+#+BEGIN_SRC sh
+  sudo pacman -S proxychains
+
+  sudo gedit /etc/proxychains.conf
+
+  # change to
+
+  socks5 127.0.0.1 1080
+#+END_SRC

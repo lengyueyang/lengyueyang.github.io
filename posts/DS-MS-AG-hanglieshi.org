@@ -1,0 +1,350 @@
+#+BEGIN_COMMENT
+.. title: 数据科学-数学与统计-高等代数-行列式
+.. slug: DS-MS-AG-hanglieshi
+.. date: 2017-09-05 19:26:52 UTC+08:00
+.. tags: Linear algebra, mathjax
+.. category: DATA SCIENTIST
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+#+TITLE: 数据科学-数学与统计-高等代数-行列式
+#+DATE: 2017-09-05
+#+LAYOUT: post
+#+TAGS: Linear algebra
+#+CATEGORIES: DATA SCIENTIST
+
+
+* n 元排列
+
+n 个不同正整数的一个全排列称为 *n 元排列*.
+
+在 n 元排列 \(a_1, a_2, ⋯, a_n\) 中, 任取一对数 \(a_i,a_j(i < j)\), 如果 \(a_i < a_j\), 那么这一对数构成一个 *顺序*, 否则, 这对数构成一个 *逆序*. 一个 n 元排列中逆序的总数称为 *逆序数*, 记作 \(τ(a_1a_2⋯a_n)\).
+
+逆序数为奇数的排列称为 *奇排列*, 逆序数为偶数的排列称为 *偶排列*. 将一个排列中的两个数字互换, 其余数字位置不变的变换称为一个 *对换*.
+
+{{{TEASER_END}}}
+
+#+name: n 元排列定理-1
+\begin{thm}[n 元排列定理-1]
+\end{thm}
+对换改变 n 元排列的奇偶性.
+
+#+name: n 元排列定理-2
+\begin{thm}[n 元排列定理-2]
+\end{thm}
+任一 n 元排列与排列 \(123⋯n\) 可以经过一系列对换互变, 并且所做对换次数与这个 n 元排列有相同的奇偶性.
+
+* n 阶行列式的定义
+
+#+name: n 阶行列式完全展开式定义
+\begin{de}[n 阶行列式完全展开式定义]
+\end{de}
+n 阶行列式
+\begin{equation*}
+\left|
+\begin{split}
+& a_{11} \quad & a_{12} \quad & \cdots \quad & $a_{1n} \\
+& a_{21} \quad & a_{22} \quad & \cdots \quad & a_{2n} \\
+& \vdots \quad & \vdots \quad & \quad & \vdots \\
+& a_{n1} \quad & a_{n2} \quad & \cdots \quad &a_{nn} \\
+\end{split}
+\right|
+\end{equation*}
+是 \(n!\) 项的代数和, 其中每一项都是位于不同行、不同列的 n 个元素的乘积, 把这 n 个元素以行指标为自然序列排好位置, 当列指标排列是偶排列时, 该项带正号; 是奇排列时, 该项带负号, 即
+#+name: n 阶行列式完全展开式定义公式
+\begin{equation}
+\left|
+\begin{split}
+& a_{11} \quad & a_{12} \quad & \cdots \quad & a_{1n} \\
+& a_{21} \quad & a_{22} \quad & \cdots \quad & a_{2n} \\
+& \vdots \quad & \vdots \quad & \quad & \vdots \\
+& a_{n1} \quad & a_{n2} \quad & \cdots \quad &a_{nn} \\
+\end{split}
+\right| = \sum_{j_1j_2 \cdots j_n}(-1)^{\tau (j_1j_2 \cdots j_n)}a_{1j_1}a_{2j_2} \cdots a_{nj_n}
+\end{equation}
+其中 \(j_1j_2 ⋯ j_n\) 是 n 元排列, ([[n 阶行列式完全展开式定义公式]])式称为 n 阶行列式的 *完全展开式* .
+
+令
+#+name: n 级矩阵 A(n 阶行列式)
+\begin{equation}
+A = \left\{
+\begin{split}
+& a_{11} \quad & a_{12} \quad & \cdots \quad & $a_{1n} \\
+& a_{21} \quad & a_{22} \quad & \cdots \quad & a_{2n} \\
+& \vdots \quad & \vdots \quad & \quad & \vdots \\
+& a_{n1} \quad & a_{n2} \quad & \cdots \quad &a_{nn} \\
+\end{split}
+\right\}
+\end{equation}
+则 n 阶行列式 ([[n 阶行列式完全展开式定义公式]])也称为 n 级矩阵 A 的行列式, 简记作 \(|A|\)或者\(det\,A\).
+
+主对角线下方元素全为 0 的 n 阶行列式称为 *上三角形行列式*, n 阶上三角形行列式的值等于它主对角线上 n 个元素的乘积.
+
+* 行列式的性质
+
+#+name: 行列式性质-1
+\begin{proposition}[行列式性质-1]
+\end{proposition}
+行列互换, 行列式值不变, 即
+#+name: 行列式性质-1 公式
+\begin{equation}
+\left|
+\begin{split}
+& a_{11} \quad & a_{12} \quad & \cdots \quad & a_{1n} \\
+& a_{21} \quad & a_{22} \quad & \cdots \quad & a_{2n} \\
+& \vdots \quad & \vdots \quad & \quad & \vdots \\
+& a_{n1} \quad & a_{n2} \quad & \cdots \quad &a_{nn} \\
+\end{split}
+\right| = \left|
+\begin{split}
+& a_{11} \quad & a_{21} \quad & \cdots \quad & a_{n1} \\
+& a_{12} \quad & a_{22} \quad & \cdots \quad & a_{n2} \\
+& \vdots \quad & \vdots \quad & \quad & \vdots \\
+& a_{1n} \quad & a_{2n} \quad & \cdots \quad &a_{nn} \\
+\end{split}
+\right|
+\end{equation}
+
+#+name: 行列式性质-2
+\begin{proposition}[行列式性质-2]
+\end{proposition}
+行列式一行的公因子可以提出去, 即
+#+name: 行列式性质-2 公式
+\begin{equation}
+\left|
+\begin{split}
+& a_{11} \quad & a_{12} \quad & \cdots \quad & a_{1n} \\
+& \vdots \quad & \vdots \quad & \quad & \vdots \\
+& ka_{i1} \quad & ka_{i2} \quad & \cdots \quad & ka_{in} \\
+& \vdots \quad & \vdots \quad & \quad & \vdots \\
+& a_{n1} \quad & a_{n2} \quad & \cdots \quad &a_{nn} \\
+\end{split}
+\right| = k \left|
+\begin{split}
+& a_{11} \quad & a_{12} \quad & \cdots \quad & a_{1n} \\
+& \vdots \quad & \vdots \quad & \quad & \vdots \\
+& a_{i1} \quad & a_{i2} \quad & \cdots \quad & a_{in} \\
+& \vdots \quad & \vdots \quad & \quad & \vdots \\
+& a_{n1} \quad & a_{n2} \quad & \cdots \quad &a_{nn} \\
+\end{split}
+\right|
+\end{equation}
+
+#+name: 行列式性质-3
+\begin{proposition}[行列式性质-3]
+\end{proposition}
+行列式中若有某一行是两组数的和, 则次行列式等于两个行列式的和, 这两个行列式的这一行分别是第一组数和第二组数, 而其余各行与原来行列式的相应各行相同. 即
+#+name: 行列式性质-3 公式
+\begin{equation}
+\left|
+\begin{split}
+& a_{11} \quad & a_{12} \quad & \cdots \quad & a_{1n} \\
+& \vdots \quad & \vdots \quad & \quad & \vdots \\
+& b_1 + c_1 \quad & b_2 + c_2 \quad & \cdots \quad & b_n + c_n \\
+& \vdots \quad & \vdots \quad & \quad & \vdots \\
+& a_{n1} \quad & a_{n2} \quad & \cdots \quad &a_{nn} \\
+\end{split}
+\right| = \left|
+\begin{split}
+& a_{11} \quad & a_{12} \quad & \cdots \quad & a_{1n} \\
+& \vdots \quad & \vdots \quad & \quad & \vdots \\
+& b_1 \quad & b_2 \quad & \cdots \quad & b_n \\
+& \vdots \quad & \vdots \quad & \quad & \vdots \\
+& a_{n1} \quad & a_{n2} \quad & \cdots \quad &a_{nn} \\
+\end{split}
+\right| + \left|
+\begin{split}
+& a_{11} \quad & a_{12} \quad & \cdots \quad & a_{1n} \\
+& \vdots \quad & \vdots \quad & \quad & \vdots \\
+& c_1 \quad & c_2 \quad & \cdots \quad & c_n \\
+& \vdots \quad & \vdots \quad & \quad & \vdots \\
+& a_{n1} \quad & a_{n2} \quad & \cdots \quad &a_{nn} \\
+\end{split}
+\right|
+\end{equation}
+
+#+name: 行列式性质-4
+\begin{proposition}[行列式性质-4]
+\end{proposition}
+两行互换, 行列式反号. 即
+#+name: 行列式性质-4 公式
+\begin{equation}
+\left|
+\begin{split}
+& a_{11} \quad & a_{12} \quad & \cdots \quad & a_{1n} \\
+& \vdots \quad & \vdots \quad & \quad & \vdots \\
+& a_{i1} \quad & a_{i2} \quad & \cdots \quad & a_{in} \\
+& \vdots \quad & \vdots \quad & \quad & \vdots \\
+& a_{k1} \quad & a_{k2} \quad & \cdots \quad & a_{kn} \\
+& \vdots \quad & \vdots \quad & \quad & \vdots \\
+& a_{n1} \quad & a_{n2} \quad & \cdots \quad &a_{nn} \\
+\end{split}
+\right| =  \left|
+\begin{split}
+& a_{11} \quad & a_{12} \quad & \cdots \quad & a_{1n} \\
+& \vdots \quad & \vdots \quad & \quad & \vdots \\
+& a_{k1} \quad & a_{k2} \quad & \cdots \quad & a_{kn} \\
+& \vdots \quad & \vdots \quad & \quad & \vdots \\
+& a_{i1} \quad & a_{i2} \quad & \cdots \quad & a_{in} \\
+& \vdots \quad & \vdots \quad & \quad & \vdots \\
+& a_{n1} \quad & a_{n2} \quad & \cdots \quad &a_{nn} \\
+\end{split}
+\right|
+\end{equation}
+
+#+name: 行列式性质-5
+\begin{proposition}[行列式性质-5]
+\end{proposition}
+两行相同, 行列式为 0.
+
+#+name: 行列式性质-6
+\begin{proposition}[行列式性质-6]
+\end{proposition}
+两行成比例, 行列式为 0.
+
+#+name: 行列式性质-7
+\begin{proposition}[行列式性质-7]
+\end{proposition}
+把一行的倍数加到另一行上, 行列式的值不变. 即
+#+name: 行列式性质-7 公式
+\begin{equation}
+\left|
+\begin{split}
+& a_{11} \quad & a_{12} \quad & \cdots \quad & a_{1n} \\
+& \vdots \quad & \vdots \quad & \quad & \vdots \\
+& a_{i1} \quad & a_{i2} \quad & \cdots \quad & a_{in} \\
+& \vdots \quad & \vdots \quad & \quad & \vdots \\
+& a_{k1} + la_{i1} \quad & a_{k2}  + la_{i2} \quad & \cdots \quad & a_{kn} + la_{in}  \\
+& \vdots \quad & \vdots \quad & \quad & \vdots \\
+& a_{n1} \quad & a_{n2} \quad & \cdots \quad &a_{nn} \\
+\end{split}
+\right| =  \left|
+\begin{split}
+& a_{11} \quad & a_{12} \quad & \cdots \quad & a_{1n} \\
+& \vdots \quad & \vdots \quad & \quad & \vdots \\
+& a_{i1} \quad & a_{i2} \quad & \cdots \quad & a_{in} \\
+& \vdots \quad & \vdots \quad & \quad & \vdots \\
+& a_{k1} \quad & a_{k2} \quad & \cdots \quad & a_{kn} \\
+& \vdots \quad & \vdots \quad & \quad & \vdots \\
+& a_{n1} \quad & a_{n2} \quad & \cdots \quad &a_{nn} \\
+\end{split}
+\right|
+\end{equation}
+
+#+caption: 行列式性质图
+[[file:./MSimg/MS-3-3-3-1.png]]
+
+
+* 行列式按一行(列)展开
+#+name: 余子式与代数余子式定义
+\begin{de}[余子式与代数余子式定义]
+\end{de}
+n 阶行列式 \(|A|\) 中, 划去第 i 行和第 j 列, 剩下的元素按原来次序组成 \(n-1\) 阶行列式称为矩阵 A 的 \((i, j)\) 元的 *余子式*, 记作 \(M_{ij}\). 令 \(A_{ij}=(-1^{i+j}M_{ij})\), 称 \(A_{ij}\) 是 A 的 \((i, j)\) 元的 *代数余子式*.
+
+#+name: n 阶行列式行展开定理
+\begin{thm}[n 阶行列式行展开定理]
+\end{thm}
+n 阶行列式 \(|A|\) 等于它的第 i 行元素与自己的代数余子式的乘积之和, 即
+#+name: n 阶行列式行展开定理公式
+\begin{equation}
+  |A| = a_{i1}A_{i1} + a_{i2}A_{i2} + \cdots + a_{in}A_{in} = \sum_{j=1}^n a_{ij}A_{ij}
+\end{equation}
+其中 \(i \in {1,2,⋯,n}\), ([[n 阶行列式行展开定理公式]]) 称为 n 阶行列式按第 i 行的展开式.
+
+#+name: n 阶行列式列展开定理
+\begin{thm}[n 阶行列式列展开定理]
+\end{thm}
+n 阶行列式 \(|A|\) 等于它的第 j 列元素与自己的代数余子式的乘积之和, 即
+#+name: n 阶行列式行展开定理公式
+\begin{equation}
+  |A| = a_{1j}A_{1j} + a_{2j}A_{2j} + \cdots + a_{nj}A_{nj} = \sum_{l=1}^n a_{lj}A_{lj}
+\end{equation}
+其中 \(i \in {1,2,⋯,n}\), ([[n 阶行列式行展开定理公式]]) 称为 n 阶行列式按第 j 列的展开式.
+
+#+name: n 阶行列式展开定理-3
+\begin{thm}[n 阶行列式展开定理-3]
+\end{thm}
+n 阶行列式 \(|A|\) 等于它的第 i 行元素与第 k 行(\(k \neq i\)) 相应元素的代数余子式的乘积之和等于 0, 即
+#+name: n 阶行列式展开定理-3 公式
+\begin{equation}
+  a_{i1}A_{k1} + a_{i2}A_{k2} + \cdots + a_{in}A_{kn} = 0
+\end{equation}
+
+#+name: n 阶行列式展开定理-4
+\begin{thm}[n 阶行列式展开定理-4]
+\end{thm}
+n 阶行列式 \(|A|\) 等于它的第 j 列元素与第 l 列(\(l \neq j\)) 相应元素的代数余子式的乘积之和等于 0, 即
+#+name: n 阶行列式展开定理-4 公式
+\begin{equation}
+a_{1j}A_{1l} + a_{2j}A_{2l} + \cdots + a_{nj}A_{nl} = 0
+\end{equation}
+
+
+
+
+* 克莱姆法则(Cramer)
+
+#+name: 克莱姆法则定理-1
+\begin{thm}[克莱姆法则定理-1]
+\end{thm}
+数域 K 上的 n 元线性方程组有唯一解的充分必要条件是它的系数行列式不等于 0.
+
+n 级矩阵的初等行变换不改变他们行列式的非零性质.
+
+#+name: 克莱姆法则定理-1 推论
+\begin{cor}[克莱姆法则定理-1 推论]
+\end{cor}
+数域 K 上 n 个方程的 n 元齐次线性方程组只有零解的充分必要条件是它的系数行列式不等于 0.
+
+#+name: 克莱姆法则定理-2
+\begin{thm}[克莱姆法则定理-2]
+\end{thm}
+n 个方程的 n 元线性方程组的系数行列式 \(|A| ≠ 0\) 时, 它的唯一解是
+\[
+\left ( \frac{|B_1|}{|A|},  \frac{|B_2|}{|A|}, ⋯,  \frac{|B_n|}{|A|} \right)
+\]
+
+定理 1 的充分性和定理 2 合起来称为 *克莱姆(Cramer)法则*.
+
+
+* 行列式按 k 行(列)展开
+
+#+name: k 阶子式定义
+\begin{de}[k 阶子式定义]
+\end{de}
+n 阶行列式 \(|A|\) 中任意取定 k 行, k 列 \(1 \le k < n\), 位于这些行和列的交叉处的 \(k^2\) 个元素按照原来的派发组成的 k 阶行列式, 称为 \(|A|\) 的一个 *k 阶子式*. 取定 \(|A|\) 的第 \(i_1, i_2, ⋯, i_k(i_1 < i_2 < ⋯ <i_k)\) 行, 第 \(j_1, j_2, ⋯, j_k(j_1 < j_2 < ⋯ <j_k)\) 列, 所得到的 k 阶子式记作
+#+name: k 阶子式公式
+\begin{equation}
+A \left(
+\begin{split}
+i_1&, i_2, ⋯, i_k \\
+j_1&, j_2, ⋯, j_k
+\end{split}
+\right)
+\end{equation}
+划去这个 k 阶子式所在的行和列, 剩下的元素按原来的排法组成 \((n-k)\) 的行列式, 称为 子式 ([[k 阶子式公式]]) 的余子式.
+
+#+name: Laplace 定理
+\begin{thm}[Laplace 定理]
+\end{thm}
+在 n 阶行列式 \(|A|\) 中, 取定第 \(i_1, i_2, ⋯, i_k(i_1 < i_2 < ⋯ <i_k)\) 行, 则这 k 行元素形成的所有 k 阶子式与他们的代数余子式的乘积之和等于 \(|A|\), 即
+#+name: Laplace 定理公式
+\begin{equation}
+  |A| = \sum_{1 \leqslant j_1 < \cdots < j_k \leqslant n} A \left(
+\begin{split}
+i_1, i_2, ⋯, i_k \\
+j_1, j_2, ⋯, j_k \\
+\end{split}
+\right) 
+(-1)^{(i_1+ \cdots +i_k) + (j_1 + \cdots + j_k)} A \left(
+\begin{split}
+i_1^{'}, i_2^{'},  ⋯ , i_k^{'} \\
+j_1^{'}, j_2^{'},  ⋯ , j_k^{'} \\
+\end{split}
+\right)
+\end{equation}
+
+
+
