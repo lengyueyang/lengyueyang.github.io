@@ -26,88 +26,88 @@
 ** 建立自己的 GTD 文件
 可以参照[fn:1][fn:2],我自己的 org 大纲如下：
 
-#+BEGIN_SRC R
-#+STARTUP: overview
-#+TAGS: INFORMATICS(i) STATISTICS(s) COMPUTER(c) READING(r) PRIVATE(p) EMACS(e) MEETING(m) BLOG(g) LIFE(l)
-#+STARTUP: hidestars
-,* TASKS
-:PROPERTIES:
-:CATEGORY: Tasks
-:END:
-# For one tasks
-,** Spacemacs                                                          :EMACS:
-,** Org-mode                                                           :EMACS:
-,** Python                                                       :INFORMATICS:
-,** R language                                                    :STATISTICS:
-,** Reading                                                          :READING:
-,* Calendar
-:PROPERTIES:
-:CATEGORY: Calendar
-:END:
-# For appointments
-,** Daily Tasks
-,** Inbox
-,** Quick Notes
-,** Blog Ideas                                                         :BLOG:
-,** 2016                                                            :PRIVATE:
-,* Projects
-:PROPERTIES:
-:CATEGORY: Projects
-:END:
-# With each project under it-each having their tasks (and subtasks) benath
-,* Someday/Maybe
-:PROPERTIES:
-:CATEGORY: Someday/Maybe
-:END:
-# For tasks that may be doon at some point
-,** Computer System                                                :COMPUTER:
-,*** Tiling window manager
-Awesome-Lua/Qtile-Python/i3-C written
-,* Financial
-:PROPERTIES:
-:CATEGORY: Financial
-:END:
-# For all tasks related to money, bills, salart, band and so on.
-,* Habits
-:PROPERTIES:
-:CATEGORY: Habits
-:ARCHIVE_TIME: 2016-01-06 Wed 00:11
-:ARCHIVE_FILE: ~/Emacs-lengyue/GTD-lengyue/GTD-lengyue.org
-:ARCHIVE_CATEGORY: Habits
-:END:
-# For all the recurring tasks I want to keep to doing, and track with org-habit model.
-, ** Myself habits                                                   :PRIVATE:
-, *** Exercise                                                                
-,**** TODO First for six-pack abs
-,** GTD refile                                                      :PRIVATE:
-,*** TODO The Schedule of Monthly
-SCHEDULED: <2016-03-01 Tue 22:00 +1m>
-:PROPERTIES:
-:LAST_REPEAT: [2016-02-16 Tue 00:13]
-:END:
-:LOGBOOK:
-- State "DONE"       from "TODO"       [2016-02-16 Tue 00:13]
-:END:
-,*** TODO Review Monthly 
-SCHEDULED: <2016-03-02 Wed 22:10 +1m>
-:PROPERTIES:
-:LAST_REPEAT: [2016-01-31 Sun 23:40]
-:END:
-:LOGBOOK:
-- State "CANCELLED"  from "TODO"       [2016-01-31 Sun 23:40]
-:END:
-,*** TODO Review Weekly
-:LOGBOOK:
-- State "DONE"       from "TODO"       [2016-02-21 Sun 21:56]
-- State "CANCELLED"  from "TODO"       [2016-02-14 Sun 20:42]
-- State "CANCELLED"  from "TODO"       [2016-02-11 Thu 09:59]
-- State "CANCELLED"  from "TODO"       [2016-01-31 Sun 23:40]
-- State "CANCELLED"  from "TODO"       [2016-01-25 Mon 22:20]
-- State "CANCELLED"  from "TODO"       [2016-01-13 Wed 20:34]
-- State "CANCELLED"  from "TODO"       [2016-01-13 Wed 20:34]
-CLOCK: [2016-01-04 Mon 23:03]--[2016-01-05 Tue 20:34] => 21:31
-- State "CANCELLED"  from "TODO"       [2016-01-04 Mon 22:41]
-:END:
+#+BEGIN_SRC emacs-lisp
+  ,#+STARTUP: overview
+  ,#+TAGS: INFORMATICS(i) STATISTICS(s) COMPUTER(c) READING(r) PRIVATE(p) EMACS(e) MEETING(m) BLOG(g) LIFE(l)
+  ,#+STARTUP: hidestars
+  ,* TASKS
+  :PROPERTIES:
+  :CATEGORY: Tasks
+  :END:
+  # For one tasks
+  ,** Spacemacs                                                          :EMACS:
+  ,** Org-mode                                                           :EMACS:
+  ,** Python                                                       :INFORMATICS:
+  ,** R language                                                    :STATISTICS:
+  ,** Reading                                                          :READING:
+  ,* Calendar
+  :PROPERTIES:
+  :CATEGORY: Calendar
+  :END:
+  # For appointments
+  ,** Daily Tasks
+  ,** Inbox
+  ,** Quick Notes
+  ,** Blog Ideas                                                         :BLOG:
+  ,** 2016                                                            :PRIVATE:
+  ,* Projects
+  :PROPERTIES:
+  :CATEGORY: Projects
+  :END:
+  # With each project under it-each having their tasks (and subtasks) benath
+  ,* Someday/Maybe
+  :PROPERTIES:
+  :CATEGORY: Someday/Maybe
+  :END:
+  # For tasks that may be doon at some point
+  ,** Computer System                                                :COMPUTER:
+  ,*** Tiling window manager
+  Awesome-Lua/Qtile-Python/i3-C written
+  ,* Financial
+  :PROPERTIES:
+  :CATEGORY: Financial
+  :END:
+  # For all tasks related to money, bills, salart, band and so on.
+  ,* Habits
+  :PROPERTIES:
+  :CATEGORY: Habits
+  :ARCHIVE_TIME: 2016-01-06 Wed 00:11
+  :ARCHIVE_FILE: ~/Emacs-lengyue/GTD-lengyue/GTD-lengyue.org
+  :ARCHIVE_CATEGORY: Habits
+  :END:
+  # For all the recurring tasks I want to keep to doing, and track with org-habit model.
+  , ** Myself habits                                                   :PRIVATE:
+  , *** Exercise                                                                
+  ,**** TODO First for six-pack abs
+  ,** GTD refile                                                      :PRIVATE:
+  ,*** TODO The Schedule of Monthly
+  SCHEDULED: <2016-03-01 Tue 22:00 +1m>
+  :PROPERTIES:
+  :LAST_REPEAT: [2016-02-16 Tue 00:13]
+  :END:
+  :LOGBOOK:
+  - State "DONE"       from "TODO"       [2016-02-16 Tue 00:13]
+  :END:
+  ,*** TODO Review Monthly 
+  SCHEDULED: <2016-03-02 Wed 22:10 +1m>
+  :PROPERTIES:
+  :LAST_REPEAT: [2016-01-31 Sun 23:40]
+  :END:
+  :LOGBOOK:
+  - State "CANCELLED"  from "TODO"       [2016-01-31 Sun 23:40]
+  :END:
+  ,*** TODO Review Weekly
+  :LOGBOOK:
+  - State "DONE"       from "TODO"       [2016-02-21 Sun 21:56]
+  - State "CANCELLED"  from "TODO"       [2016-02-14 Sun 20:42]
+  - State "CANCELLED"  from "TODO"       [2016-02-11 Thu 09:59]
+  - State "CANCELLED"  from "TODO"       [2016-01-31 Sun 23:40]
+  - State "CANCELLED"  from "TODO"       [2016-01-25 Mon 22:20]
+  - State "CANCELLED"  from "TODO"       [2016-01-13 Wed 20:34]
+  - State "CANCELLED"  from "TODO"       [2016-01-13 Wed 20:34]
+  CLOCK: [2016-01-04 Mon 23:03]--[2016-01-05 Tue 20:34] => 21:31
+  - State "CANCELLED"  from "TODO"       [2016-01-04 Mon 22:41]
+  :END:
 #+END_SRC
 
 - TASKS 用于记录阶段性学习计划与生活计划
