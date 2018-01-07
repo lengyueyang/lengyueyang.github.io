@@ -148,10 +148,10 @@ NAVIGATION_LINKS = {
 # THEME = "bootstrap3"
 # THEME = "libretto"
 # THEME = "material-theme"
-# THEME = "custom_theme"
+THEME = "custom_theme"
 # THEME = "custum-4_theme"
 # THEME = "bootstrap3-jinja"
-THEME = "bootswarch-darkly"
+# THEME = "bootswarch-darkly"
 
 
 # Primary color of your theme. This will be used to customize your theme and
@@ -710,7 +710,7 @@ GITHUB_COMMIT_SOURCE = True
 # CLOSURE_COMPILER_EXECUTABLE = 'closure-compiler'
 
 # Executable for the "optipng" filter (defaults to 'optipng').
-# OPTIPNG_EXECUTABLE = 'optipng'
+OPTIPNG_EXECUTABLE = 'optipng'
 
 # Executable for the "jpegoptim" filter (defaults to 'jpegoptim').
 # JPEGOPTIM_EXECUTABLE = 'jpegoptim'
