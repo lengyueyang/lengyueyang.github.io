@@ -148,10 +148,10 @@ NAVIGATION_LINKS = {
 # THEME = "bootstrap3"
 # THEME = "libretto"
 # THEME = "material-theme"
-# THEME = "custom_theme"
+THEME = "custom_theme"
 # THEME = "custum-4_theme"
 # THEME = "bootstrap3-jinja"
-THEME = "bootswarch-darkly"
+# THEME = "bootswarch-darkly"
 
 
 # Primary color of your theme. This will be used to customize your theme and

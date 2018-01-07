@@ -177,6 +177,27 @@ Nikola 是用 Python 写的，恰好以后要学 Python，同时 Nikola 通过 O
 
 #+END_SRC
 
+*** 主题
+
+#+BEGIN_SRC sh
+  nikola install_theme bootstrap3
+
+  nikola bootswatch_theme -n custom_theme -s darkly -p bootstrap3 
+#+END_SRC
+
+可以在 https://bootswatch.com/3/ 查找合适的主题，下载
+
+*** 语法高亮
+
+#+BEGIN_SRC sh
+  mkdir -p files/assets/css/
+  pygmentize -S friendly -a .highlight -f html >> files/assets/css/custom.css
+#+END_SRC
+
+默认使用 pygments，可以在 init.el 或 conf.el 中把 nikola-use-pygments 改成 nil 来取消它。
+
+为了正常显示语法高亮，需要增加相应的 custom.css，并确保 custom.css 被 theme 使用了用 pygmentize 生成相应的 css 文件， <PYGMENTSSTYLE> 可以用 pygmentize -L style 查看，比如 colorful,friendly 
+
 * Org-mode 配置
 
 ** Org-mode 和 tags 支持
