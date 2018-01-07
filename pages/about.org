@@ -1,0 +1,19 @@
+#+BEGIN_COMMENT
+.. title: About
+.. slug: about
+.. date: 2018-01-06 12:03:02 UTC+08:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+
+Basic Medical, 8 years PHD, Do some research on Medical Data Scientist
+
+I am currently work on Medical Big Data analysis, learning Machine learning and deep learning.
+
+email: maoxiaoweihl@gmail.com
+       maoxiaowei1988@foxmail.com
+

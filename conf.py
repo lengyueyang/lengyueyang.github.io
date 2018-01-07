@@ -136,12 +136,23 @@ NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/archive.html", "Archives"),
         ("/categories/index.html", "Tags"),
+        ("/pages/notes.html", "Notes"),
+        ("/pages/about.html", "About"),
+        ("https://github.com/lengyueyang", "Github"),
+        ("/pages/links.html", "Links"),
         ("/rss.xml", "RSS feed"),
     ),
 }
 
 # Name of the theme to use.
-THEME = "material-theme"
+# THEME = "bootstrap3"
+# THEME = "libretto"
+# THEME = "material-theme"
+# THEME = "custom_theme"
+# THEME = "custum-4_theme"
+# THEME = "bootstrap3-jinja"
+THEME = "bootswarch-darkly"
+
 
 # Primary color of your theme. This will be used to customize your theme and
 # auto-generate related colors in POSTS_SECTION_COLORS. Must be a HEX value.
@@ -934,18 +945,18 @@ FEED_LINKS_APPEND_QUERY = False
 
 # A HTML fragment describing the license, for the sidebar.
 # (translatable)
-LICENSE = ""
+# LICENSE = ""
 # I recommend using the Creative Commons' wizard:
 # https://creativecommons.org/choose/
-# LICENSE = """
-# <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-# <img alt="Creative Commons License BY-NC-SA"
-# style="border-width:0; margin-bottom:12px;"
-# src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a>"""
+LICENSE = """
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+<img alt="Creative Commons License BY-NC-SA"
+style="border-width:0; margin-bottom:12px;"
+src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a>"""
 
 # A small copyright notice for the page footer (in HTML).
 # (translatable)
-CONTENT_FOOTER = 'Contents &copy; {date}         <a href="mailto:{email}">{author}</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         {license}'
+CONTENT_FOOTER = 'Contents &copy; {date}         <a href="mailto:{email}">{author}</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a> and <a href=""https://orgmode.org/ rel="nofollow">Org-mode</a>   <a href="http://spacemacs.org"><img src="https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg" /></a>    {license}'
 
 # Things that will be passed to CONTENT_FOOTER.format().  This is done
 # for translatability, as dicts are not formattable.  Nikola will
@@ -1133,7 +1144,7 @@ MARKDOWN_EXTENSIONS = ['markdown.extensions.fenced_code', 'markdown.extensions.c
 
 # Show link to source for the posts?
 # Formerly known as HIDE_SOURCELINK (inverse)
-# SHOW_SOURCELINK = True
+SHOW_SOURCELINK = False
 # Copy the source files for your pages?
 # Setting it to False implies SHOW_SOURCELINK = False
 # COPY_SOURCES = True
@@ -1202,19 +1213,19 @@ INDEX_DISPLAY_POST_COUNT = 20
 # """ % SITE_URL
 #
 # If you prefer a Google search form, here's an example that should just work:
-# SEARCH_FORM = """
-# <!-- Google custom search -->
-# <form method="get" action="https://www.google.com/search" class="navbar-form navbar-right" role="search">
-# <div class="form-group">
-# <input type="text" name="q" class="form-control" placeholder="Search">
-# </div>
-# <button type="submit" class="btn btn-primary">
-# 	<span class="glyphicon glyphicon-search"></span>
-# </button>
-# <input type="hidden" name="sitesearch" value="%s">
-# </form>
-# <!-- End of custom search -->
-# """ % SITE_URL
+SEARCH_FORM = """
+<!-- Google custom search -->
+<form method="get" action="https://www.google.com/search" class="navbar-form navbar-right" role="search">
+<div class="form-group">
+<input type="text" name="q" class="form-control" placeholder="Search">
+</div>
+<button type="submit" class="btn btn-primary">
+	<span class="glyphicon glyphicon-search"></span>
+</button>
+<input type="hidden" name="sitesearch" value="%s">
+</form>
+<!-- End of custom search -->
+""" % SITE_URL
 
 # Use content distribution networks for jQuery, twitter-bootstrap css and js,
 # and html5shiv (for older versions of Internet Explorer)
@@ -1361,39 +1372,11 @@ UNSLUGIFY_TITLES = True
 # those.
 # TEMPLATE_FILTERS = {}
 
-BIOGRAPHY = """
-<img class="img-circle" style="float:left;margin:10px 20px 10px 0px;max-height:200px;" src="/images/lengyueyang.png">
-<p><u>Basic Medical, 8 years PHD, Do some research on Medical Data Scientist</u></p>
-
-<p>I am currently work on Medical Big Data analysis, learning Machine learning and deep learning.</p>
-<p><a href="http://spacemacs.org"><img src="https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg" /></a><p>
-"""
 
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
 GLOBAL_CONTEXT = {
-    'header_color': 'info',
-    'author_avatar': '/images/lengyueyang.png',
-    'biography': BIOGRAPHY,
-    'use_pace': True,
-    'social_links': [
-    {
-        'bgcolor': "#F44336",
-        'icon': "<i class='fa fa-share-square'></i>"
-    },
-    {
-        "url": "https://github.com/lengyueyang",
-        "bgcolor": "#666666",
-        "color": "#fffff",
-        "icon": "<i class='fa fa-github-square'></i>",
-    },
-    {
-        "url": "https://www.linkedin.com/in/lengyueyang",
-        "bgcolor": "#3B5998",
-        "color": "#fffff",
-        "icon": "<i class='fa fa-linkedin-square'></i>",
-    },
-    ],
+
 }
 
 # Add functions here and they will be called with template
