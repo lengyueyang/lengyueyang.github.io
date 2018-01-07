@@ -1,0 +1,650 @@
+#+BEGIN_COMMENT
+.. title: 博客迁移杂记-从 Hexo 到 Nikola
+.. slug: bo-ke-qian-yi-za-ji-cong-hexodao-nikola
+.. date: 2018-01-07 21:12:15 UTC+08:00
+.. tags: Org-mode, Nikola, Blog
+.. category: EMACS
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+
+* 迁移原因
+16 年年初，开始搭建自己的个人博客，一不小心入了 =spacemacs= 的坑，一直用 =Org-mode= 写作、记笔记等，因此博客必须支持 =Org-mode= ，最开始的解决方案是 Hexo，用 [[hexo-renderer-org]] 将 Org-mde 格式转化，使用 Next 主题，确实比较好看，当时配置博客站点花了很长时间，在使用过程中，总是会有 hexo 插件更新问题，导致博客不能发布等，因此，最近一个月寻找 hexo 的替代者。
+
+Nikola 是用 Python 写的，恰好以后要学 Python，同时 Nikola 通过 Org-mode 插件支持 Org-mode，于是选择 Nikola 作为博客框架，目前一切还好，就是主题比较难看。博客迁移过程用，参考[fn:1][fn:2][fn:3][fn:4] 
+
+{{{TEASER_END}}}
+
+* Nikola 安装和配置
+
+** 安装
+
+#+BEGIN_SRC sh
+  sudo pip install Nikola[extras]
+
+  git clone git@github.com:<username>.github.io.git ~/Nikola
+
+  cd ~/Nikola
+
+  git checkout -b blog
+
+#+END_SRC
+
+编辑 .gitignore 文件，加入内容
+
+#+BEGIN_SRC sh
+  ,*.py[cod]
+  __pycache__
+  cache
+  output
+  .doit.db
+  _env/
+#+END_SRC
+
+
+#+BEGIN_SRC sh
+  git add .gitignore
+  git commit -m "Add .gitignore"
+#+END_SRC
+
+建站 blog
+
+#+BEGIN_SRC sh
+  $ nikola init my_first_site
+  # Fill the asked information
+  # 把子文件信息弄到根目录来
+  $ mv my_first_site/* .
+  $ rm -r my_first_site
+#+END_SRC
+
+
+#+BEGIN_SRC sh
+  git add conf.py
+  git commit -m "Add conf.py"
+#+END_SRC
+
+
+#+BEGIN_SRC sh
+  nikola new_post -e
+  nikola build
+  nikola serve --browser
+#+END_SRC
+
+此时应该可以在浏览器中看到网站的初始样子了
+
+** 配置
+
+配置文件是主目录下 .conf.py 文件
+
+
+*** 修改自定义位置
+
+下面是我的自定义，可以参照修改
+
+#+BEGIN_SRC sh
+  # Data about this site
+  BLOG_AUTHOR = "Lengyueyang"  # (translatable)
+  BLOG_TITLE = "深度识医"  # (translatable)
+  # This is the main URL for your site. It will be used
+  # in a prominent link. Don't forget the protocol (http/https)!
+  SITE_URL = "https://lengyueyang.github.io/"
+  # This is the URL where Nikola's output will be deployed.
+  # If not set, defaults to SITE_URL
+  # BASE_URL = "https://example.com/"
+  BLOG_EMAIL = "maoxiaowei1988@qq.com"
+  BLOG_DESCRIPTION = "Lengyueyang's personal blog."  # (translatable)
+
+  NAVIGATION_LINKS = {
+      DEFAULT_LANG: (
+          ("/archive.html", "Archives"),
+          ("/categories/index.html", "Tags"),
+          ("/pages/notes.html", "Notes"),
+          ("/pages/about.html", "About"),
+          ("https://github.com/lengyueyang", "Github"),
+          ("/pages/links.html", "Links"),
+          ("/rss.xml", "RSS feed"),
+      ),
+  }
+
+#+END_SRC
+
+*** Archive 按照时间排序，去掉年份，首页显示缩略版
+
+#+BEGIN_SRC sh
+
+  I# Create per-month archives instead of per-year
+  # CREATE_MONTHLY_ARCHIVE = False
+  # Create one large archive instead of per-year
+  # CREATE_SINGLE_ARCHIVE = False
+  CREATE_SINGLE_ARCHIVE = True
+  # Create year, month, and day archives each with a (long) list of posts
+  # (overrides both CREATE_MONTHLY_ARCHIVE and CREATE_SINGLE_ARCHIVE)
+  # CREATE_FULL_ARCHIVES = False
+  # If monthly archives or full archives are created, adds also one archive per day
+  # CREATE_DAILY_ARCHIVE = False
+  # Create previous, up, next navigation links for archives
+  # CREATE_ARCHIVE_NAVIGATION = False
+  # Final locations for the archives are:
+  # output / TRANSLATION[lang] / ARCHIVE_PATH / ARCHIVE_FILENAME
+  # output / TRANSLATION[lang] / ARCHIVE_PATH / YEAR / index.html
+  # output / TRANSLATION[lang] / ARCHIVE_PATH / YEAR / MONTH / index.html
+  # output / TRANSLATION[lang] / ARCHIVE_PATH / YEAR / MONTH / DAY / index.html
+  # ARCHIVE_PATH = ""
+  # ARCHIVE_FILENAME = "archive.html"
+
+  NDEX_TEASERS = True
+
+  # github_deploy configuration
+  # For more details, read the manual:
+  # https://getnikola.com/handbook.html#deploying-to-github
+  # You will need to configure the deployment branch on GitHub.
+  GITHUB_SOURCE_BRANCH = 'blog'
+  GITHUB_DEPLOY_BRANCH = 'master'
+
+#+END_SRC
+
+*** 增加 google 搜索
+
+#+BEGIN_SRC sh
+  # If you prefer a Google search form, here's an example that should just work:
+  SEARCH_FORM = """
+  <!-- Google custom search -->
+  <form method="get" action="https://www.google.com/search" class="navbar-form navbar-right" role="search">
+  <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search">
+  </div>
+  <button type="submit" class="btn btn-primary">
+    <span class="glyphicon glyphicon-search"></span>
+  </button>
+  <input type="hidden" name="sitesearch" value="%s">
+  </form>
+  <!-- End of custom search -->
+  """ % SITE_URL
+
+#+END_SRC
+
+*** 增加评论
+
+#+BEGIN_SRC sh
+  COMMENT_SYSTEM = "disqus"
+  # And you also need to add your COMMENT_SYSTEM_ID which
+  # depends on what comment system you use. The default is
+  # "nikolademo" which is a test account for Disqus. More information
+  # is in the manual.
+  COMMENT_SYSTEM_ID = "your-ID"
+
+#+END_SRC
+
+* Org-mode 配置
+
+** Org-mode 和 tags 支持
+
+#+BEGIN_SRC sh
+  nikola plugin -i orgmode
+  nikola plugin -i tags
+#+END_SRC
+
+在 post 和 pages 等加入 org-mode 支持
+
+
+#+BEGIN_SRC sh
+  POSTS = (
+      ("posts/*.org", "posts", "post.tmpl"),
+      ("posts/*.rst", "posts", "post.tmpl"),
+      ("posts/*.md", "posts", "post.tmpl"),
+      ("posts/*.txt", "posts", "post.tmpl"),
+      ("posts/*.html", "posts", "post.tmpl"),
+  )
+  PAGES = (
+      ("pages/*.org", "pages", "page.tmpl"),
+      ("pages/*.rst", "pages", "page.tmpl"),
+      ("pages/*.md", "pages", "page.tmpl"),
+      ("pages/*.txt", "pages", "page.tmpl"),
+      ("pages/*.html", "pages", "page.tmpl"),
+  )
+
+  COMPILERS = {
+      "rest": ('.rst', '.txt'),
+      "markdown": ('.md', '.mdown', '.markdown'),
+      "textile": ('.textile',),
+      "txt2tags": ('.t2t',),
+      "bbcode": ('.bb',),
+      "wiki": ('.wiki',),
+      "ipynb": ('.ipynb',),
+      "html": ('.html', '.htm'),
+      "orgmode": ('.org',),
+      # PHP files are rendered the usual way (i.e. with the full templates).
+      # The resulting files have .php extensions, making it possible to run
+      # them without reconfiguring your server to recognize them.
+      "php": ('.php',),
+      # Pandoc detects the input from the source filename
+      # but is disabled by default as it would conflict
+      # with many of the others.
+      # "pandoc": ('.rst', '.md', '.txt'),
+  }
+
+#+END_SRC
+
+** Math 支持
+我的博客中，有个别文章有特别多的数学公式，其中有很多自定义，这里有两种方法
+
+*** Mathjax
+用 mathjax，通过在 metedata tags 加入 mathjax，但是 一些自定义的定理环境不能显示
+
+*** Latex preview
+通过 Org-mode 的 latex preview 功能，在到处 html 时，将数学公式变成图片，可以通过以下配置
+在 plugins org-mode 文件夹中建立 conf.el 文件，加入以下配置
+
+#+BEGIN_SRC sh
+  ;; Init file to use with the orgmode plugin.
+
+  ;; Load org-mode
+  ;; Requires org-mode v8.x
+
+
+  ;;; Custom configuration for the export.
+
+  ;;; Add any custom configuration that you would like to 'conf.el'.
+  (setq nikola-use-pygments t
+        org-export-with-toc t
+        org-export-with-section-numbers nil
+        org-startup-folded 'showeverything)
+
+
+  ;;org-mode export to latex
+  (require 'ox-latex)
+  (setq org-export-latex-listings t)
+
+  ;;org-mode source code setup in exporting to latex
+  (add-to-list 'org-latex-listings
+               '("" "listings"))
+  (add-to-list 'org-latex-listings
+               '("" "color"))
+  (add-to-list 'org-latex-packages-alist
+               '("" "xcolor" t))
+  (add-to-list 'org-latex-packages-alist
+               '("" "listings" t))
+  ;;(add-to-list 'org-latex-packages-alist
+  ;;             '("" "fontspec" t))
+  (add-to-list 'org-latex-packages-alist
+               '("" "indentfirst" t))
+  ;;(add-to-list 'org-latex-packages-alist
+  ;;             '("" "xunicode" t))
+  (add-to-list 'org-latex-packages-alist
+               '("" "geometry"))
+  (add-to-list 'org-latex-packages-alist
+               '("" "float"))
+  (add-to-list 'org-latex-packages-alist
+               '("" "longtable"))
+  (add-to-list 'org-latex-packages-alist
+               '("" "tikz"))
+  (add-to-list 'org-latex-packages-alist
+               '("" "fancyhdr"))
+  (add-to-list 'org-latex-packages-alist
+               '("" "textcomp"))
+  (add-to-list 'org-latex-packages-alist
+               '("" "amsmath"))
+  (add-to-list 'org-latex-packages-alist
+               '("" "amsthm"))
+  (add-to-list 'org-latex-packages-alist
+               '("" "tabularx" t))
+  (add-to-list 'org-latex-packages-alist
+               '("" "booktabs" t))
+  (add-to-list 'org-latex-packages-alist
+               '("" "grffile" t))
+  (add-to-list 'org-latex-packages-alist
+               '("" "wrapfig" t))
+  (add-to-list 'org-latex-packages-alist
+               '("normalem" "ulem" t))
+  (add-to-list 'org-latex-packages-alist
+               '("" "amssymb" t))
+  (add-to-list 'org-latex-packages-alist
+               '("" "extarrows" t))
+  (add-to-list 'org-latex-packages-alist
+               '("" "capt-of" t))
+  (add-to-list 'org-latex-packages-alist
+               '("figuresright" "rotating" t))
+  (add-to-list 'org-latex-packages-alist
+               '("Lenny" "fncychap" t))
+
+  (add-to-list 'org-latex-classes
+               '("lengyue-org-book"
+                 "\\documentclass{book}
+  \\usepackage[slantfont, boldfont]{xeCJK}
+  % chapter set
+  \\usepackage{titlesec}
+  \\usepackage{hyperref}
+  \\hypersetup{colorlinks,linkcolor=black,filecolor=black,urlcolor=blue,citecolor=black}
+  \\usepackage{fontspec}
+  \\usepackage{xunicode}
+  \\titleformat{\\paragraph}{\\normalfont\\normalsize\\bfseries}{\\theparagraph}{1em}{}
+  [NO-DEFAULT-PACKAGES]
+  [PACKAGES]
+
+
+  \\setCJKmainfont{WenQuanYi Micro Hei} % 设置缺省中文字体
+  \\setCJKsansfont{WenQuanYi Micro Hei}
+  \\setCJKmonofont{WenQuanYi Micro Hei Mono}
+
+  \\setmainfont{DejaVu Sans} % 英文衬线字体
+  \\setsansfont{DejaVu Serif} % 英文无衬线字体
+  \\setmonofont{DejaVu Sans Mono}
+  %\\setmainfont{WenQuanYi Micro Hei} % 设置缺省中文字体
+  %\\setsansfont{WenQuanYi Micro Hei}
+  %\\setmonofont{WenQuanYi Micro Hei Mono}
+
+  %如果没有它，会有一些 tex 特殊字符无法正常使用，比如连字符。
+  \\defaultfontfeatures{Mapping=tex-text}
+
+  % 中文断行
+  \\XeTeXlinebreaklocale \"zh\"
+  \\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
+
+  % 代码设置
+  \\lstset{numbers=left,
+  numberstyle= \\tiny,
+  keywordstyle= \\color{ blue!70},commentstyle=\\color{red!50!green!50!blue!50},
+  frame=shadowbox,
+  breaklines=true,
+  rulesepcolor= \\color{ red!20!green!20!blue!20}
+  }
+
+  [EXTRA]
+  "
+                   ("\\chapter{%s}" . "\\chapter*{%s}")
+                   ("\\section{%s}" . "\\section*{%s}")
+                   ("\\subsection{%s}" . "\\subsection*{%s}")
+                   ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+                   ("\\paragraph{%s}" . "\\paragraph*{%s}")
+                   ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
+  (add-to-list 'org-latex-classes
+               '("lengyue-org-article"
+                 "\\documentclass{article}
+  \\usepackage[slantfont, boldfont]{xeCJK}
+  \\usepackage{titlesec}
+  \\usepackage{hyperref}
+  \\hypersetup{colorlinks,linkcolor=black,filecolor=black,urlcolor=blue,citecolor=black}
+  \\usepackage{fontspec}
+  \\usepackage{xunicode}
+  \\titleformat{\\paragraph}{\\normalfont\\normalsize\\bfseries}{\\theparagraph}{1em}{}
+
+  [NO-DEFAULT-PACKAGES]
+  [PACKAGES]
+
+  \\parindent 2em
+
+  \\setCJKmainfont{WenQuanYi Micro Hei} % 设置缺省中文字体
+  \\setCJKsansfont{WenQuanYi Micro Hei}
+  \\setCJKmonofont{WenQuanYi Micro Hei Mono}
+
+  \\setmainfont{DejaVu Sans} % 英文衬线字体
+  \\setsansfont{DejaVu Serif} % 英文无衬线字体
+  \\setmonofont{DejaVu Sans Mono}
+  %\\setmainfont{WenQuanYi Micro Hei} % 设置缺省中文字体
+  %\\setsansfont{WenQuanYi Micro Hei}
+  %\\setmonofont{WenQuanYi Micro Hei Mono}
+
+  %如果没有它，会有一些 tex 特殊字符无法正常使用，比如连字符。
+  \\defaultfontfeatures{Mapping=tex-text}
+
+  % 中文断行
+  \\XeTeXlinebreaklocale \"zh\"
+  \\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
+
+  % 代码设置
+  \\lstset{numbers=left,
+  numberstyle= \\tiny,
+  keywordstyle= \\color{ blue!70},commentstyle=\\color{red!50!green!50!blue!50},
+  frame=shadowbox,
+  breaklines=true,
+  rulesepcolor= \\color{ red!20!green!20!blue!20}
+  }
+
+  [EXTRA]
+  "
+                   ("\\section{%s}" . "\\section*{%s}")
+                   ("\\subsection{%s}" . "\\subsection*{%s}")
+                   ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+                   ("\\paragraph{%s}" . "\\paragraph*{%s}")
+                   ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
+  (add-to-list 'org-latex-classes
+               '("lengyue-org-beamer"
+                 "\\documentclass{beamer}
+  \\usepackage[slantfont, boldfont]{xeCJK}
+  % beamer set
+  \\usepackage[none]{hyphenat}
+  \\usepackage[abs]{overpic}
+  \\usepackage{fontspec}
+  \\usepackage{xunicode}
+
+
+  [NO-DEFAULT-PACKAGES]
+  [PACKAGES]
+
+  \\setCJKmainfont{WenQuanYi Micro Hei} % 设置缺省中文字体
+  \\setCJKsansfont{WenQuanYi Micro Hei}
+  \\setCJKmonofont{WenQuanYi Micro Hei Mono}
+
+  \\setmainfont{DejaVu Sans} % 英文衬线字体
+  \\setsansfont{DejaVu Serif} % 英文无衬线字体
+  \\setmonofont{DejaVu Sans Mono}
+  %\\setmainfont{WenQuanYi Micro Hei} % 设置缺省中文字体
+  %\\setsansfont{WenQuanYi Micro Hei}
+  %\\setmonofont{WenQuanYi Micro Hei Mono}
+
+  %如果没有它，会有一些 tex 特殊字符无法正常使用，比如连字符。
+  \\defaultfontfeatures{Mapping=tex-text}
+
+  % 中文断行
+  \\XeTeXlinebreaklocale \"zh\"
+  \\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
+
+  % 代码设置
+  \\lstset{numbers=left,
+  numberstyle= \\tiny,
+  keywordstyle= \\color{ blue!70},commentstyle=\\color{red!50!green!50!blue!50},
+  frame=shadowbox,
+  breaklines=true,
+  rulesepcolor= \\color{ red!20!green!20!blue!20}
+  }
+
+  [EXTRA]
+  "
+                   ("\\section{%s}" . "\\section*{%s}")
+                   ("\\subsection{%s}" . "\\subsection*{%s}")
+                   ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+                   ("\\paragraph{%s}" . "\\paragraph*{%s}")
+                   ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
+  (setq org-latex-pdf-process
+          '("xelatex -interaction nonstopmode -output-directory %o %f"
+            ;; "biber %b" "xelatex -interaction nonstopmode -output-directory %o %f"
+            "bibtex %b"
+            "xelatex -interaction nonstopmode -output-directory %o %f"
+            "xelatex -interaction nonstopmode -output-directory %o %f"))
+
+  ;; (defcustom org-preview-latex-process-alist
+  ;;    (quote
+  ;;     (
+  ;;      (dvipng :programs
+  ;;              ("latex" "dvipng")
+  ;;              :description "dvi > png" :message "you need to install the programs: latex and dvipng." :image-input-type "dvi" :image-output-type "png" :image-size-adjust
+  ;;              (1.0 . 1.0)
+  ;;              :latex-compiler
+  ;;              ("latex -interaction nonstopmode -output-directory %o %f")
+  ;;              :image-converter
+  ;;              ("dvipng -fg %F -bg %B -D %D -T tight -o %O %f"))
+  ;;      (dvisvgm :programs
+  ;;               ("latex" "dvisvgm")
+  ;;               :description "xdv > svg" :message "you need to install the programs: latex and dvisvgm." :use-xcolor t :image-input-type "xdv" :image-output-type "svg" :image-size-adjust
+  ;;               (1.0 . 1.0)
+  ;;               :latex-compiler
+  ;;               ("xelatex -no-pdf -interaction nonstopmode -output-directory %o %f")
+  ;;               :image-converter
+  ;;               ("dvisvgm %f   %O"))
+  ;;      (imagemagick :programs
+  ;;                   ("latex" "convert")
+  ;;                   :description "pdf > png" :message "you need to install the programs: latex and imagemagick." :use-xcolor t :image-input-type "pdf" :image-output-type "png" :image-size-adjust
+  ;;                   (1.0 . 1.0)
+  ;;                   :latex-compiler
+  ;;                   ("xelatex -interaction nonstopmode -output-directory %o %f")
+  ;;                   :image-converter
+  ;;                   ("convert -density %D -trim -antialias %f -quality 100 %O")))))
+
+  ;; lualatex preview
+
+  ;; (setq org-preview-latex-process-alist
+  ;;       (plist-put (alist-get 'dvisvgm org-preview-latex-process-alist)
+  ;;                  :description "xdv > svg" :message "you need to install the programs: latex and dvisvgm." :use-xcolor t :image-input-type "xdv" :image-output-type "svg" :image-size-adjust
+  ;;                  ))
+
+  ;; (setq org-preview-latex-process-alist
+  ;;       (plist-put (alist-get 'dvisvgm org-preview-latex-process-alist)
+  ;;                  :latex-compiler
+  ;;                  ("xelatex -no-pdf -interaction nonstopmode -output-directory %o %f")))
+
+  ;; (push (cons 'dvisvgm
+  ;;             (plist-put (alist-get dvisvgm org-preview-latex-process-alist)
+  ;;                        :description "xdv > svg" :message "you need to install the programs: latex and dvisvgm." :use-xcolor t :image-input-type "xdv" :image-output-type "svg" :image-size-adjust
+  ;;                        ))
+  ;;       org-preview-latex-process-alist)
+
+  ;; (push (cons 'dvisvgm
+  ;;             (plist-put (alist-get dvisvgm org-preview-latex-process-alist)
+  ;;                        :latex-compiler
+  ;;                        ("xelatex -no-pdf -interaction nonstopmode -output-directory %o %f")))
+  ;;       org-preview-latex-process-alist)
+
+
+  ;; (custom-set-variables
+  ;;  ;; custom-set-variables was added by Custom.
+  ;;  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;;  ;; Your init file should contain only one such instance.
+  ;;  ;; If there is more than one, they won't work right.
+  ;;  '(org-preview-latex-process-alist
+  ;;    (quote
+  ;;     ((dvipng :programs
+  ;;              ("latex" "dvipng")
+  ;;              :description "dvi > png" :message "you need to install the programs: latex and dvipng." :image-input-type "dvi" :image-output-type "png" :image-size-adjust
+  ;;              (1.0 . 1.0)
+  ;;              :latex-compiler
+  ;;              ("latex -interaction nonstopmode -output-directory %o %f")
+  ;;              :image-converter
+  ;;              ("dvipng -fg %F -bg %B -D %D -T tight -o %O %f"))
+  ;;      (dvisvgm :programs
+  ;;               ("latex" "dvisvgm")
+  ;;               :description "xdv > svg" :message "you need to install the programs: latex and dvisvgm." :use-xcolor t :image-input-type "xdv" :image-output-type "svg" :image-size-adjust
+  ;;               (1.0 . 1.0)
+  ;;               :latex-compiler
+  ;;               ("xelatex -no-pdf -interaction nonstopmode -output-directory %o %f")
+  ;;               :image-converter
+  ;;               ("dvisvgm %f -n -b min -c %S -o %O"))
+  ;;      (imagemagick :programs
+  ;;                   ("latex" "convert")
+  ;;                   :description "pdf > png" :message "you need to install the programs: latex and imagemagick." :use-xcolor t :image-input-type "pdf" :image-output-type "png" :image-size-adjust
+  ;;                   (1.0 . 1.0)
+  ;;                   :latex-compiler
+  ;;                   ("xelatex -interaction nonstopmode -output-directory %o %f")
+  ;;                   :image-converter
+  ;;                   ("convert -density %D -trim -antialias %f -quality 100 %O")))))
+  ;; )
+
+  (setq org-format-latex-options (plist-put org-format-latex-options :html-scale 1.2))
+#+END_SRC
+
+在有数学公式的 org 文件中加入以下配置
+
+
+#+BEGIN_SRC sh
+  ,#+LATEX_CLASS: lengyue-org-book
+
+  ,#+OPTIONS: tex:imagemagick
+
+  ,#+LaTeX_HEADER: \usepackage[math-style=ISO]{unicode-math}
+  ,#+LaTeX_HEADER: \setmathfont{xits-math.otf}
+  ,#+LaTeX_HEADER: \usepackage[slantfont, boldfont]{xeCJK}
+  ,#+LaTeX_HEADER: \usepackage{fontspec}
+  ,#+LaTeX_HEADER: \setCJKmainfont{WenQuanYi Micro Hei}
+  ,#+LaTeX_HEADER: \setmainfont{xits-math.otf}
+  ,#+LaTeX_HEADER: \usepackage{extarrows}
+
+  ,#+LaTeX_HEADER: \newtheorem{axiom}{\hskip 2em 公理}[section] %公理 axiom，独立编号
+  ,#+LaTeX_HEADER: \newtheorem{de}{\hskip 2em 定义}[subsection] %定义 definition，简写为 de，独立编号
+  ,#+LaTeX_HEADER: \newtheorem*{deus}{\hskip 2em 定义} %定义不编号 definition，简写为 deus
+  ,#+LaTeX_HEADER: \newtheorem{thm}{\hskip 2em 定理}[subsection] %定理 theroem，简写为 thm，独立编号
+  ,#+LaTeX_HEADER: \newtheorem*{thmus}{\hskip 2em 定理} %定理不编号 theroem，简写为 thmus
+  ,#+LaTeX_HEADER: \newtheorem{lemma}[thm]{\hskip 2em 引理} %引理，记为 lemma，与 thm 共用编号
+  ,#+LaTeX_HEADER: \newtheorem*{lemmaus}{\hskip 2em 引理} %引理不编号，记为 lemmaus
+  ,#+LaTeX_HEADER: \newtheorem{cor}{\hskip 2em 推论}[thm] %推论 Corollary，简写为 col，在 thm 下面编号
+  ,#+LaTeX_HEADER: \newtheorem{proposition}{\hskip 2em 性质}[subsection] %性质, 独立编号
+  ,#+LaTeX_HEADER: \newtheorem{mingti}{\hskip 2em 命题}[subsection] %命题, 独立编号
+  ,#+LaTeX_HEADER: \newtheorem{ex}{\emph{\hskip 2em 实例}}[thm] %example 獨立編號
+  ,#+LaTeX_HEADER: \newtheorem*{exus}{\emph{\hskip 2em 实例}} %example 不编号
+  ,#+LaTeX_HEADER: \newtheorem*{remark}{\bf{\hskip 2em 点评}} %点评不编号
+  ,#+LaTeX_HEADER: \newtheorem{dde}{\hskip 2em 定义}  %定义
+  ,#+LaTeX_HEADER: \newtheorem*{ddeus}{\hskip 2em 定义}
+  ,#+LaTeX_HEADER: \renewcommand\qedsymbol{$\blacksquare$}
+  ,#+LaTeX_HEADER: \renewcommand{\proofname}{\bf{\hskip 2em 证明}}
+  ,#+LaTeX_HEADER: \newtheorem*{jd}{\emph{\hskip 2em 解答}}
+  ,#+LaTeX_HEADER: \numberwithin{equation}{section}
+
+#+END_SRC
+
+再次编译博客主站的时候，会在 posts 目录下出现 ltxpng 文件夹，将次文件夹 copy 到 output 文件夹 posts 下即可。
+
+用 imagemagick 编译的图片，比较小，尝试用 dvisvgm 进行编译，在 emacs 中可以成功，但是在博客目录下配置不起作用，待以后学习 lisp 之后再处理
+
+* Emacs 管理 blog
+用[[https://github.com/CodeFalling/blog-admin][blog-admin]] 做前端，参照文件说明配置，主要有以下几项
+
+#+BEGIN_SRC sh
+  ;; (add-to-load-path "~/.spacemacs.d/package/blog-admin")
+
+  (require 'blog-admin)
+  (spacemacs/set-leader-keys "ob" 'blog-admin-start)
+
+  ;;  (setq blog-admin-backend-type 'org-page)
+  ;;  (setq blog-admin-backend-path "~/MEGA/Emacs-lengyue/Blog-lengyue/source")
+  ;;  (setq blog-admin-backend-new-post-in-drafts t)
+  ;;  (setq blog-admin-backend-new-post-with-same-name-dir t)
+  ;;  (setq blog-admin-backend-org-page-drafts "_drafts")
+
+  ;;  (setq op/repository-directory "~/MEGA/Emacs-lengyue/Blog-lengyue/source")
+  ;;  (setq op/site-domain "http://lengyueyang.github.io") 
+  ;;  (setq op/personal-disqus-shortname "lengyueyang")
+
+  ;; (setq blog-admin-backend-type 'hexo)
+  ;; (setq blog-admin-backend-path "~/MEGA/Emacs-lengyue/Blog-lengyue/")
+  ;; (setq blog-admin-backend-new-post-in-drafts t)
+  ;; (setq blog-admin-backend-new-post-with-same-name-dir t)
+
+  (setq blog-admin-backend-type 'nikola)
+  (setq blog-admin-backend-path "~/MEGA/Emacs-lengyue/Blog-lengyue/Nikola")
+  (setq blog-admin-backend-new-post-in-drafts t)
+  (setq blog-admin-backend-nikola-executable "/usr/bin/nikola") ;; path to nikola executable
+  (setq blog-admin-backend-nikola-config-file "conf.py") ;; conf.py is default
+
+
+#+END_SRC
+
+* TODO 后期实现
+1. blog-admin 定制
+2. Nikola 主题定制
+3. Math 图片模糊
+
+
+* Footnotes
+
+[fn:4] https://qiwulun.github.io/posts/%E7%94%A8%20Nikola%20%E5%86%99%E5%8D%9A%E5%AE%A2.html
+
+[fn:3] http://mfcabrera.com/blog/this-site-runs-on-nikola.html
+
+[fn:2] https://punchagan.muse-amuse.in/blog/blogging-with-nikola-and-org-mode/
+
+[fn:1] https://streakycobra.github.io/posts/blogging-in-org-mode-with-nikola/
+
+

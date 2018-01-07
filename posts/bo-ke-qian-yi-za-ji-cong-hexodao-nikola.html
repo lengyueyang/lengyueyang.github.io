@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>博客迁移杂记-从 Hexo 到 Nikola | 深度识医</title>
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+<link rel="canonical" href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><meta name="author" content="Lengyueyang">
+<link rel="prev" href="archlinux-shadowsocks.html" title="Archlinux Shadowsocks Configuration [Archlinux Shadowsocks 配置]" type="text/html">
+<meta property="og:site_name" content="深度识医">
+<meta property="og:title" content="博客迁移杂记-从 Hexo 到 Nikola">
+<meta property="og:url" content="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html">
+<meta property="og:description" content="Table of Contents
+
+
+迁移原因
+Nikola 安装和配置
+
+安装
+配置
+
+修改自定义位置
+Archive 按照时间排序，去掉年份，首页显示缩略版
+增加 google 搜索
+增加评论
+
+
+
+
+Org-mode 配置
+
+Org-mode 和 tags 支持
+Math 支持
+
+Mathjax
+Latex preview
+
+
+
+
+Emacs 管理 blog
+TODO 后期实现
+
+
+
+
+
+">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2018-01-07T21:12:15+08:00">
+<meta property="article:tag" content="Blog">
+<meta property="article:tag" content="Nikola">
+<meta property="article:tag" content="Org-mode">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://lengyueyang.github.io/">
+
+                <span id="blog-title">深度识医</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../archive.html">Archives</a>
+                </li>
+<li>
+<a href="../categories/index.html">Tags</a>
+                </li>
+<li>
+<a href="../pages/notes.html">Notes</a>
+                </li>
+<li>
+<a href="../pages/about.html">About</a>
+                </li>
+<li>
+<a href="https://github.com/lengyueyang">Github</a>
+                </li>
+<li>
+<a href="../pages/links.html">Links</a>
+                </li>
+<li>
+<a href="../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<!-- Google custom search --><form method="get" action="https://www.google.com/search" class="navbar-form navbar-right" role="search">
+<div class="form-group">
+<input type="text" name="q" class="form-control" placeholder="Search">
+</div>
+<button type="submit" class="btn btn-primary">
+	<span class="glyphicon glyphicon-search"></span>
+</button>
+<input type="hidden" name="sitesearch" value="https://lengyueyang.github.io/">
+</form>
+<!-- End of custom search -->
+
+
+            <ul class="nav navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">博客迁移杂记-从 Hexo 到 Nikola</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                    Lengyueyang
+            </span></p>
+            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2018-01-07T21:12:15+08:00" itemprop="datePublished" title="2018-01-07 21:12">2018-01-07 21:12</time></a></p>
+                <p class="commentline">
+        
+    <a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#disqus_thread" data-disqus-identifier="cache/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html">Comments</a>
+
+
+            
+
+        </p>
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-1">迁移原因</a></li>
+<li>
+<a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2">Nikola 安装和配置</a>
+<ul>
+<li><a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-1">安装</a></li>
+<li>
+<a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2">配置</a>
+<ul>
+<li><a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-1">修改自定义位置</a></li>
+<li><a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-2">Archive 按照时间排序，去掉年份，首页显示缩略版</a></li>
+<li><a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-3">增加 google 搜索</a></li>
+<li><a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-4">增加评论</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-3">Org-mode 配置</a>
+<ul>
+<li><a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-3-1">Org-mode 和 tags 支持</a></li>
+<li>
+<a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-3-2">Math 支持</a>
+<ul>
+<li><a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-3-2-1">Mathjax</a></li>
+<li><a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-3-2-2">Latex preview</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-4">Emacs 管理 blog</a></li>
+<li><a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-5"><span class="todo TODO">TODO</span> 后期实现</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">迁移原因</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+16 年年初，开始搭建自己的个人博客，一不小心入了 <code>spacemacs</code> 的坑，一直用 <code>Org-mode</code> 写作、记笔记等，因此博客必须支持 <code>Org-mode</code> ，最开始的解决方案是 Hexo，用 <i>hexo-renderer-org</i> 将 Org-mde 格式转化，使用 Next 主题，确实比较好看，当时配置博客站点花了很长时间，在使用过程中，总是会有 hexo 插件更新问题，导致博客不能发布等，因此，最近一个月寻找 hexo 的替代者。
+</p>
+
+<p>
+Nikola 是用 Python 写的，恰好以后要学 Python，同时 Nikola 通过 Org-mode 插件支持 Org-mode，于是选择 Nikola 作为博客框架，目前一切还好，就是主题比较难看。博客迁移过程用，参考<sup><a id="fnr.1" name="fnr.1" class="footref" href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#fn.1">1</a></sup><sup>, </sup><sup><a id="fnr.2" name="fnr.2" class="footref" href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#fn.2">2</a></sup><sup>, </sup><sup><a id="fnr.3" name="fnr.3" class="footref" href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#fn.3">3</a></sup><sup>, </sup><sup><a id="fnr.4" name="fnr.4" class="footref" href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#fn.4">4</a></sup></p>
+
+<!-- TEASER_END -->
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">Nikola 安装和配置</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1">安装</h3>
+<div class="outline-text-3" id="text-2-1">
+<div class="highlight"><pre><span></span>sudo pip install Nikola<span class="o">[</span>extras<span class="o">]</span>
+
+git clone git@github.com:&lt;username&gt;.github.io.git ~/Nikola
+
+<span class="nb">cd</span> ~/Nikola
+
+git checkout -b blog
+</pre></div>
+
+<p>
+编辑 .gitignore 文件，加入内容
+</p>
+
+<div class="highlight"><pre><span></span>*.py<span class="o">[</span>cod<span class="o">]</span>
+__pycache__
+cache
+output
+.doit.db
+_env/
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>git add .gitignore
+git commit -m <span class="s2">"Add .gitignore"</span>
+</pre></div>
+
+<p>
+建站 blog
+</p>
+
+<div class="highlight"><pre><span></span>$ nikola init my_first_site
+<span class="c1"># Fill the asked information</span>
+<span class="c1"># 把子文件信息弄到根目录来</span>
+$ mv my_first_site/* .
+$ rm -r my_first_site
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>git add conf.py
+git commit -m <span class="s2">"Add conf.py"</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>nikola new_post -e
+nikola build
+nikola serve --browser
+</pre></div>
+
+<p>
+此时应该可以在浏览器中看到网站的初始样子了
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2">配置</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+配置文件是主目录下 .conf.py 文件
+</p>
+</div>
+
+
+<div id="outline-container-sec-2-2-1" class="outline-4">
+<h4 id="sec-2-2-1">修改自定义位置</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<p>
+下面是我的自定义，可以参照修改
+</p>
+
+<div class="highlight"><pre><span></span><span class="c1"># Data about this site</span>
+<span class="nv">BLOG_AUTHOR</span> <span class="o">=</span> <span class="s2">"Lengyueyang"</span>  <span class="c1"># (translatable)</span>
+<span class="nv">BLOG_TITLE</span> <span class="o">=</span> <span class="s2">"深度识医"</span>  <span class="c1"># (translatable)</span>
+<span class="c1"># This is the main URL for your site. It will be used</span>
+<span class="c1"># in a prominent link. Don't forget the protocol (http/https)!</span>
+<span class="nv">SITE_URL</span> <span class="o">=</span> <span class="s2">"https://lengyueyang.github.io/"</span>
+<span class="c1"># This is the URL where Nikola's output will be deployed.</span>
+<span class="c1"># If not set, defaults to SITE_URL</span>
+<span class="c1"># BASE_URL = "https://example.com/"</span>
+<span class="nv">BLOG_EMAIL</span> <span class="o">=</span> <span class="s2">"maoxiaowei1988@qq.com"</span>
+<span class="nv">BLOG_DESCRIPTION</span> <span class="o">=</span> <span class="s2">"Lengyueyang's personal blog."</span>  <span class="c1"># (translatable)</span>
+
+<span class="nv">NAVIGATION_LINKS</span> <span class="o">=</span> <span class="o">{</span>
+    DEFAULT_LANG: <span class="o">(</span>
+	<span class="o">(</span><span class="s2">"/archive.html"</span>, <span class="s2">"Archives"</span><span class="o">)</span>,
+	<span class="o">(</span><span class="s2">"/categories/index.html"</span>, <span class="s2">"Tags"</span><span class="o">)</span>,
+	<span class="o">(</span><span class="s2">"/pages/notes.html"</span>, <span class="s2">"Notes"</span><span class="o">)</span>,
+	<span class="o">(</span><span class="s2">"/pages/about.html"</span>, <span class="s2">"About"</span><span class="o">)</span>,
+	<span class="o">(</span><span class="s2">"https://github.com/lengyueyang"</span>, <span class="s2">"Github"</span><span class="o">)</span>,
+	<span class="o">(</span><span class="s2">"/pages/links.html"</span>, <span class="s2">"Links"</span><span class="o">)</span>,
+	<span class="o">(</span><span class="s2">"/rss.xml"</span>, <span class="s2">"RSS feed"</span><span class="o">)</span>,
+    <span class="o">)</span>,
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-sec-2-2-2" class="outline-4">
+<h4 id="sec-2-2-2">Archive 按照时间排序，去掉年份，首页显示缩略版</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<div class="highlight"><pre><span></span>I# Create per-month archives instead of per-year
+<span class="c1"># CREATE_MONTHLY_ARCHIVE = False</span>
+<span class="c1"># Create one large archive instead of per-year</span>
+<span class="c1"># CREATE_SINGLE_ARCHIVE = False</span>
+<span class="nv">CREATE_SINGLE_ARCHIVE</span> <span class="o">=</span> True
+<span class="c1"># Create year, month, and day archives each with a (long) list of posts</span>
+<span class="c1"># (overrides both CREATE_MONTHLY_ARCHIVE and CREATE_SINGLE_ARCHIVE)</span>
+<span class="c1"># CREATE_FULL_ARCHIVES = False</span>
+<span class="c1"># If monthly archives or full archives are created, adds also one archive per day</span>
+<span class="c1"># CREATE_DAILY_ARCHIVE = False</span>
+<span class="c1"># Create previous, up, next navigation links for archives</span>
+<span class="c1"># CREATE_ARCHIVE_NAVIGATION = False</span>
+<span class="c1"># Final locations for the archives are:</span>
+<span class="c1"># output / TRANSLATION[lang] / ARCHIVE_PATH / ARCHIVE_FILENAME</span>
+<span class="c1"># output / TRANSLATION[lang] / ARCHIVE_PATH / YEAR / index.html</span>
+<span class="c1"># output / TRANSLATION[lang] / ARCHIVE_PATH / YEAR / MONTH / index.html</span>
+<span class="c1"># output / TRANSLATION[lang] / ARCHIVE_PATH / YEAR / MONTH / DAY / index.html</span>
+<span class="c1"># ARCHIVE_PATH = ""</span>
+<span class="c1"># ARCHIVE_FILENAME = "archive.html"</span>
+
+<span class="nv">NDEX_TEASERS</span> <span class="o">=</span> True
+
+<span class="c1"># github_deploy configuration</span>
+<span class="c1"># For more details, read the manual:</span>
+<span class="c1"># https://getnikola.com/handbook.html#deploying-to-github</span>
+<span class="c1"># You will need to configure the deployment branch on GitHub.</span>
+<span class="nv">GITHUB_SOURCE_BRANCH</span> <span class="o">=</span> <span class="s1">'blog'</span>
+<span class="nv">GITHUB_DEPLOY_BRANCH</span> <span class="o">=</span> <span class="s1">'master'</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-sec-2-2-3" class="outline-4">
+<h4 id="sec-2-2-3">增加 google 搜索</h4>
+<div class="outline-text-4" id="text-2-2-3">
+<div class="highlight"><pre><span></span><span class="c1"># If you prefer a Google search form, here's an example that should just work:</span>
+<span class="nv">SEARCH_FORM</span> <span class="o">=</span> <span class="s2">"""</span>
+<span class="s2">&lt;!-- Google custom search --&gt;</span>
+<span class="s2">&lt;form method="</span>get<span class="s2">" action="</span>https://www.google.com/search<span class="s2">" class="</span>navbar-form navbar-right<span class="s2">" role="</span>search<span class="s2">"&gt;</span>
+<span class="s2">&lt;div class="</span>form-group<span class="s2">"&gt;</span>
+<span class="s2">&lt;input type="</span>text<span class="s2">" name="</span>q<span class="s2">" class="</span>form-control<span class="s2">" placeholder="</span>Search<span class="s2">"&gt;</span>
+<span class="s2">&lt;/div&gt;</span>
+<span class="s2">&lt;button type="</span>submit<span class="s2">" class="</span>btn btn-primary<span class="s2">"&gt;</span>
+<span class="s2">  &lt;span class="</span>glyphicon glyphicon-search<span class="s2">"&gt;&lt;/span&gt;</span>
+<span class="s2">&lt;/button&gt;</span>
+<span class="s2">&lt;input type="</span>hidden<span class="s2">" name="</span>sitesearch<span class="s2">" value="</span>%s<span class="s2">"&gt;</span>
+<span class="s2">&lt;/form&gt;</span>
+<span class="s2">&lt;!-- End of custom search --&gt;</span>
+<span class="s2">"""</span> % SITE_URL
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-sec-2-2-4" class="outline-4">
+<h4 id="sec-2-2-4">增加评论</h4>
+<div class="outline-text-4" id="text-2-2-4">
+<div class="highlight"><pre><span></span><span class="nv">COMMENT_SYSTEM</span> <span class="o">=</span> <span class="s2">"disqus"</span>
+<span class="c1"># And you also need to add your COMMENT_SYSTEM_ID which</span>
+<span class="c1"># depends on what comment system you use. The default is</span>
+<span class="c1"># "nikolademo" which is a test account for Disqus. More information</span>
+<span class="c1"># is in the manual.</span>
+<span class="nv">COMMENT_SYSTEM_ID</span> <span class="o">=</span> <span class="s2">"your-ID"</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">Org-mode 配置</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1">Org-mode 和 tags 支持</h3>
+<div class="outline-text-3" id="text-3-1">
+<div class="highlight"><pre><span></span>nikola plugin -i orgmode
+nikola plugin -i tags
+</pre></div>
+
+<p>
+在 post 和 pages 等加入 org-mode 支持
+</p>
+
+
+<div class="highlight"><pre><span></span><span class="nv">POSTS</span> <span class="o">=</span> <span class="o">(</span>
+    <span class="o">(</span><span class="s2">"posts/*.org"</span>, <span class="s2">"posts"</span>, <span class="s2">"post.tmpl"</span><span class="o">)</span>,
+    <span class="o">(</span><span class="s2">"posts/*.rst"</span>, <span class="s2">"posts"</span>, <span class="s2">"post.tmpl"</span><span class="o">)</span>,
+    <span class="o">(</span><span class="s2">"posts/*.md"</span>, <span class="s2">"posts"</span>, <span class="s2">"post.tmpl"</span><span class="o">)</span>,
+    <span class="o">(</span><span class="s2">"posts/*.txt"</span>, <span class="s2">"posts"</span>, <span class="s2">"post.tmpl"</span><span class="o">)</span>,
+    <span class="o">(</span><span class="s2">"posts/*.html"</span>, <span class="s2">"posts"</span>, <span class="s2">"post.tmpl"</span><span class="o">)</span>,
+<span class="o">)</span>
+<span class="nv">PAGES</span> <span class="o">=</span> <span class="o">(</span>
+    <span class="o">(</span><span class="s2">"pages/*.org"</span>, <span class="s2">"pages"</span>, <span class="s2">"page.tmpl"</span><span class="o">)</span>,
+    <span class="o">(</span><span class="s2">"pages/*.rst"</span>, <span class="s2">"pages"</span>, <span class="s2">"page.tmpl"</span><span class="o">)</span>,
+    <span class="o">(</span><span class="s2">"pages/*.md"</span>, <span class="s2">"pages"</span>, <span class="s2">"page.tmpl"</span><span class="o">)</span>,
+    <span class="o">(</span><span class="s2">"pages/*.txt"</span>, <span class="s2">"pages"</span>, <span class="s2">"page.tmpl"</span><span class="o">)</span>,
+    <span class="o">(</span><span class="s2">"pages/*.html"</span>, <span class="s2">"pages"</span>, <span class="s2">"page.tmpl"</span><span class="o">)</span>,
+<span class="o">)</span>
+
+<span class="nv">COMPILERS</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="s2">"rest"</span>: <span class="o">(</span><span class="s1">'.rst'</span>, <span class="s1">'.txt'</span><span class="o">)</span>,
+    <span class="s2">"markdown"</span>: <span class="o">(</span><span class="s1">'.md'</span>, <span class="s1">'.mdown'</span>, <span class="s1">'.markdown'</span><span class="o">)</span>,
+    <span class="s2">"textile"</span>: <span class="o">(</span><span class="s1">'.textile'</span>,<span class="o">)</span>,
+    <span class="s2">"txt2tags"</span>: <span class="o">(</span><span class="s1">'.t2t'</span>,<span class="o">)</span>,
+    <span class="s2">"bbcode"</span>: <span class="o">(</span><span class="s1">'.bb'</span>,<span class="o">)</span>,
+    <span class="s2">"wiki"</span>: <span class="o">(</span><span class="s1">'.wiki'</span>,<span class="o">)</span>,
+    <span class="s2">"ipynb"</span>: <span class="o">(</span><span class="s1">'.ipynb'</span>,<span class="o">)</span>,
+    <span class="s2">"html"</span>: <span class="o">(</span><span class="s1">'.html'</span>, <span class="s1">'.htm'</span><span class="o">)</span>,
+    <span class="s2">"orgmode"</span>: <span class="o">(</span><span class="s1">'.org'</span>,<span class="o">)</span>,
+    <span class="c1"># PHP files are rendered the usual way (i.e. with the full templates).</span>
+    <span class="c1"># The resulting files have .php extensions, making it possible to run</span>
+    <span class="c1"># them without reconfiguring your server to recognize them.</span>
+    <span class="s2">"php"</span>: <span class="o">(</span><span class="s1">'.php'</span>,<span class="o">)</span>,
+    <span class="c1"># Pandoc detects the input from the source filename</span>
+    <span class="c1"># but is disabled by default as it would conflict</span>
+    <span class="c1"># with many of the others.</span>
+    <span class="c1"># "pandoc": ('.rst', '.md', '.txt'),</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2">Math 支持</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+我的博客中，有个别文章有特别多的数学公式，其中有很多自定义，这里有两种方法
+</p>
+</div>
+
+<div id="outline-container-sec-3-2-1" class="outline-4">
+<h4 id="sec-3-2-1">Mathjax</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+用 mathjax，通过在 metedata tags 加入 mathjax，但是 一些自定义的定理环境不能显示
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3-2-2" class="outline-4">
+<h4 id="sec-3-2-2">Latex preview</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<p>
+通过 Org-mode 的 latex preview 功能，在到处 html 时，将数学公式变成图片，可以通过以下配置
+在 plugins org-mode 文件夹中建立 conf.el 文件，加入以下配置
+</p>
+
+<div class="highlight"><pre><span></span><span class="p">;;</span> Init file to use with the orgmode plugin.
+
+<span class="p">;;</span> Load org-mode
+<span class="p">;;</span> Requires org-mode v8.x
+
+
+<span class="p">;;;</span> Custom configuration <span class="k">for</span> the export.
+
+<span class="p">;;;</span> Add any custom configuration that you would like to <span class="s1">'conf.el'</span>.
+<span class="o">(</span>setq nikola-use-pygments t
+      org-export-with-toc t
+      org-export-with-section-numbers nil
+      org-startup-folded <span class="s1">'showeverything)</span>
+
+
+<span class="s1">;;org-mode export to latex</span>
+<span class="s1">(require '</span>ox-latex<span class="o">)</span>
+<span class="o">(</span>setq org-export-latex-listings t<span class="o">)</span>
+
+<span class="p">;;</span>org-mode <span class="nb">source</span> code setup in exporting to latex
+<span class="o">(</span>add-to-list <span class="s1">'org-latex-listings</span>
+<span class="s1">	     '</span><span class="o">(</span><span class="s2">""</span> <span class="s2">"listings"</span><span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">'org-latex-listings</span>
+<span class="s1">	     '</span><span class="o">(</span><span class="s2">""</span> <span class="s2">"color"</span><span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">'org-latex-packages-alist</span>
+<span class="s1">	     '</span><span class="o">(</span><span class="s2">""</span> <span class="s2">"xcolor"</span> t<span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">'org-latex-packages-alist</span>
+<span class="s1">	     '</span><span class="o">(</span><span class="s2">""</span> <span class="s2">"listings"</span> t<span class="o">))</span>
+<span class="p">;;</span><span class="o">(</span>add-to-list <span class="s1">'org-latex-packages-alist</span>
+<span class="s1">;;             '</span><span class="o">(</span><span class="s2">""</span> <span class="s2">"fontspec"</span> t<span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">'org-latex-packages-alist</span>
+<span class="s1">	     '</span><span class="o">(</span><span class="s2">""</span> <span class="s2">"indentfirst"</span> t<span class="o">))</span>
+<span class="p">;;</span><span class="o">(</span>add-to-list <span class="s1">'org-latex-packages-alist</span>
+<span class="s1">;;             '</span><span class="o">(</span><span class="s2">""</span> <span class="s2">"xunicode"</span> t<span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">'org-latex-packages-alist</span>
+<span class="s1">	     '</span><span class="o">(</span><span class="s2">""</span> <span class="s2">"geometry"</span><span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">'org-latex-packages-alist</span>
+<span class="s1">	     '</span><span class="o">(</span><span class="s2">""</span> <span class="s2">"float"</span><span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">'org-latex-packages-alist</span>
+<span class="s1">	     '</span><span class="o">(</span><span class="s2">""</span> <span class="s2">"longtable"</span><span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">'org-latex-packages-alist</span>
+<span class="s1">	     '</span><span class="o">(</span><span class="s2">""</span> <span class="s2">"tikz"</span><span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">'org-latex-packages-alist</span>
+<span class="s1">	     '</span><span class="o">(</span><span class="s2">""</span> <span class="s2">"fancyhdr"</span><span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">'org-latex-packages-alist</span>
+<span class="s1">	     '</span><span class="o">(</span><span class="s2">""</span> <span class="s2">"textcomp"</span><span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">'org-latex-packages-alist</span>
+<span class="s1">	     '</span><span class="o">(</span><span class="s2">""</span> <span class="s2">"amsmath"</span><span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">'org-latex-packages-alist</span>
+<span class="s1">	     '</span><span class="o">(</span><span class="s2">""</span> <span class="s2">"amsthm"</span><span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">'org-latex-packages-alist</span>
+<span class="s1">	     '</span><span class="o">(</span><span class="s2">""</span> <span class="s2">"tabularx"</span> t<span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">'org-latex-packages-alist</span>
+<span class="s1">	     '</span><span class="o">(</span><span class="s2">""</span> <span class="s2">"booktabs"</span> t<span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">'org-latex-packages-alist</span>
+<span class="s1">	     '</span><span class="o">(</span><span class="s2">""</span> <span class="s2">"grffile"</span> t<span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">'org-latex-packages-alist</span>
+<span class="s1">	     '</span><span class="o">(</span><span class="s2">""</span> <span class="s2">"wrapfig"</span> t<span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">'org-latex-packages-alist</span>
+<span class="s1">	     '</span><span class="o">(</span><span class="s2">"normalem"</span> <span class="s2">"ulem"</span> t<span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">'org-latex-packages-alist</span>
+<span class="s1">	     '</span><span class="o">(</span><span class="s2">""</span> <span class="s2">"amssymb"</span> t<span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">'org-latex-packages-alist</span>
+<span class="s1">	     '</span><span class="o">(</span><span class="s2">""</span> <span class="s2">"extarrows"</span> t<span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">'org-latex-packages-alist</span>
+<span class="s1">	     '</span><span class="o">(</span><span class="s2">""</span> <span class="s2">"capt-of"</span> t<span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">'org-latex-packages-alist</span>
+<span class="s1">	     '</span><span class="o">(</span><span class="s2">"figuresright"</span> <span class="s2">"rotating"</span> t<span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">'org-latex-packages-alist</span>
+<span class="s1">	     '</span><span class="o">(</span><span class="s2">"Lenny"</span> <span class="s2">"fncychap"</span> t<span class="o">))</span>
+
+<span class="o">(</span>add-to-list <span class="s1">'org-latex-classes</span>
+<span class="s1">	     '</span><span class="o">(</span><span class="s2">"lengyue-org-book"</span>
+	       <span class="s2">"\\documentclass{book}</span>
+<span class="s2">\\usepackage[slantfont, boldfont]{xeCJK}</span>
+<span class="s2">% chapter set</span>
+<span class="s2">\\usepackage{titlesec}</span>
+<span class="s2">\\usepackage{hyperref}</span>
+<span class="s2">\\hypersetup{colorlinks,linkcolor=black,filecolor=black,urlcolor=blue,citecolor=black}</span>
+<span class="s2">\\usepackage{fontspec}</span>
+<span class="s2">\\usepackage{xunicode}</span>
+<span class="s2">\\titleformat{\\paragraph}{\\normalfont\\normalsize\\bfseries}{\\theparagraph}{1em}{}</span>
+<span class="s2">[NO-DEFAULT-PACKAGES]</span>
+<span class="s2">[PACKAGES]</span>
+
+
+<span class="s2">\\setCJKmainfont{WenQuanYi Micro Hei} % 设置缺省中文字体</span>
+<span class="s2">\\setCJKsansfont{WenQuanYi Micro Hei}</span>
+<span class="s2">\\setCJKmonofont{WenQuanYi Micro Hei Mono}</span>
+
+<span class="s2">\\setmainfont{DejaVu Sans} % 英文衬线字体</span>
+<span class="s2">\\setsansfont{DejaVu Serif} % 英文无衬线字体</span>
+<span class="s2">\\setmonofont{DejaVu Sans Mono}</span>
+<span class="s2">%\\setmainfont{WenQuanYi Micro Hei} % 设置缺省中文字体</span>
+<span class="s2">%\\setsansfont{WenQuanYi Micro Hei}</span>
+<span class="s2">%\\setmonofont{WenQuanYi Micro Hei Mono}</span>
+
+<span class="s2">%如果没有它，会有一些 tex 特殊字符无法正常使用，比如连字符。</span>
+<span class="s2">\\defaultfontfeatures{Mapping=tex-text}</span>
+
+<span class="s2">% 中文断行</span>
+<span class="s2">\\XeTeXlinebreaklocale \"zh\"</span>
+<span class="s2">\\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt</span>
+
+<span class="s2">% 代码设置</span>
+<span class="s2">\\lstset{numbers=left,</span>
+<span class="s2">numberstyle= \\tiny,</span>
+<span class="s2">keywordstyle= \\color{ blue!70},commentstyle=\\color{red!50!green!50!blue!50},</span>
+<span class="s2">frame=shadowbox,</span>
+<span class="s2">breaklines=true,</span>
+<span class="s2">rulesepcolor= \\color{ red!20!green!20!blue!20}</span>
+<span class="s2">}</span>
+
+<span class="s2">[EXTRA]</span>
+<span class="s2">"</span>
+		 <span class="o">(</span><span class="s2">"\\chapter{%s}"</span> . <span class="s2">"\\chapter*{%s}"</span><span class="o">)</span>
+		 <span class="o">(</span><span class="s2">"\\section{%s}"</span> . <span class="s2">"\\section*{%s}"</span><span class="o">)</span>
+		 <span class="o">(</span><span class="s2">"\\subsection{%s}"</span> . <span class="s2">"\\subsection*{%s}"</span><span class="o">)</span>
+		 <span class="o">(</span><span class="s2">"\\subsubsection{%s}"</span> . <span class="s2">"\\subsubsection*{%s}"</span><span class="o">)</span>
+		 <span class="o">(</span><span class="s2">"\\paragraph{%s}"</span> . <span class="s2">"\\paragraph*{%s}"</span><span class="o">)</span>
+		 <span class="o">(</span><span class="s2">"\\subparagraph{%s}"</span> . <span class="s2">"\\subparagraph*{%s}"</span><span class="o">)))</span>
+
+<span class="o">(</span>add-to-list <span class="s1">'org-latex-classes</span>
+<span class="s1">	     '</span><span class="o">(</span><span class="s2">"lengyue-org-article"</span>
+	       <span class="s2">"\\documentclass{article}</span>
+<span class="s2">\\usepackage[slantfont, boldfont]{xeCJK}</span>
+<span class="s2">\\usepackage{titlesec}</span>
+<span class="s2">\\usepackage{hyperref}</span>
+<span class="s2">\\hypersetup{colorlinks,linkcolor=black,filecolor=black,urlcolor=blue,citecolor=black}</span>
+<span class="s2">\\usepackage{fontspec}</span>
+<span class="s2">\\usepackage{xunicode}</span>
+<span class="s2">\\titleformat{\\paragraph}{\\normalfont\\normalsize\\bfseries}{\\theparagraph}{1em}{}</span>
+
+<span class="s2">[NO-DEFAULT-PACKAGES]</span>
+<span class="s2">[PACKAGES]</span>
+
+<span class="s2">\\parindent 2em</span>
+
+<span class="s2">\\setCJKmainfont{WenQuanYi Micro Hei} % 设置缺省中文字体</span>
+<span class="s2">\\setCJKsansfont{WenQuanYi Micro Hei}</span>
+<span class="s2">\\setCJKmonofont{WenQuanYi Micro Hei Mono}</span>
+
+<span class="s2">\\setmainfont{DejaVu Sans} % 英文衬线字体</span>
+<span class="s2">\\setsansfont{DejaVu Serif} % 英文无衬线字体</span>
+<span class="s2">\\setmonofont{DejaVu Sans Mono}</span>
+<span class="s2">%\\setmainfont{WenQuanYi Micro Hei} % 设置缺省中文字体</span>
+<span class="s2">%\\setsansfont{WenQuanYi Micro Hei}</span>
+<span class="s2">%\\setmonofont{WenQuanYi Micro Hei Mono}</span>
+
+<span class="s2">%如果没有它，会有一些 tex 特殊字符无法正常使用，比如连字符。</span>
+<span class="s2">\\defaultfontfeatures{Mapping=tex-text}</span>
+
+<span class="s2">% 中文断行</span>
+<span class="s2">\\XeTeXlinebreaklocale \"zh\"</span>
+<span class="s2">\\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt</span>
+
+<span class="s2">% 代码设置</span>
+<span class="s2">\\lstset{numbers=left,</span>
+<span class="s2">numberstyle= \\tiny,</span>
+<span class="s2">keywordstyle= \\color{ blue!70},commentstyle=\\color{red!50!green!50!blue!50},</span>
+<span class="s2">frame=shadowbox,</span>
+<span class="s2">breaklines=true,</span>
+<span class="s2">rulesepcolor= \\color{ red!20!green!20!blue!20}</span>
+<span class="s2">}</span>
+
+<span class="s2">[EXTRA]</span>
+<span class="s2">"</span>
+		 <span class="o">(</span><span class="s2">"\\section{%s}"</span> . <span class="s2">"\\section*{%s}"</span><span class="o">)</span>
+		 <span class="o">(</span><span class="s2">"\\subsection{%s}"</span> . <span class="s2">"\\subsection*{%s}"</span><span class="o">)</span>
+		 <span class="o">(</span><span class="s2">"\\subsubsection{%s}"</span> . <span class="s2">"\\subsubsection*{%s}"</span><span class="o">)</span>
+		 <span class="o">(</span><span class="s2">"\\paragraph{%s}"</span> . <span class="s2">"\\paragraph*{%s}"</span><span class="o">)</span>
+		 <span class="o">(</span><span class="s2">"\\subparagraph{%s}"</span> . <span class="s2">"\\subparagraph*{%s}"</span><span class="o">)))</span>
+
+<span class="o">(</span>add-to-list <span class="s1">'org-latex-classes</span>
+<span class="s1">	     '</span><span class="o">(</span><span class="s2">"lengyue-org-beamer"</span>
+	       <span class="s2">"\\documentclass{beamer}</span>
+<span class="s2">\\usepackage[slantfont, boldfont]{xeCJK}</span>
+<span class="s2">% beamer set</span>
+<span class="s2">\\usepackage[none]{hyphenat}</span>
+<span class="s2">\\usepackage[abs]{overpic}</span>
+<span class="s2">\\usepackage{fontspec}</span>
+<span class="s2">\\usepackage{xunicode}</span>
+
+
+<span class="s2">[NO-DEFAULT-PACKAGES]</span>
+<span class="s2">[PACKAGES]</span>
+
+<span class="s2">\\setCJKmainfont{WenQuanYi Micro Hei} % 设置缺省中文字体</span>
+<span class="s2">\\setCJKsansfont{WenQuanYi Micro Hei}</span>
+<span class="s2">\\setCJKmonofont{WenQuanYi Micro Hei Mono}</span>
+
+<span class="s2">\\setmainfont{DejaVu Sans} % 英文衬线字体</span>
+<span class="s2">\\setsansfont{DejaVu Serif} % 英文无衬线字体</span>
+<span class="s2">\\setmonofont{DejaVu Sans Mono}</span>
+<span class="s2">%\\setmainfont{WenQuanYi Micro Hei} % 设置缺省中文字体</span>
+<span class="s2">%\\setsansfont{WenQuanYi Micro Hei}</span>
+<span class="s2">%\\setmonofont{WenQuanYi Micro Hei Mono}</span>
+
+<span class="s2">%如果没有它，会有一些 tex 特殊字符无法正常使用，比如连字符。</span>
+<span class="s2">\\defaultfontfeatures{Mapping=tex-text}</span>
+
+<span class="s2">% 中文断行</span>
+<span class="s2">\\XeTeXlinebreaklocale \"zh\"</span>
+<span class="s2">\\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt</span>
+
+<span class="s2">% 代码设置</span>
+<span class="s2">\\lstset{numbers=left,</span>
+<span class="s2">numberstyle= \\tiny,</span>
+<span class="s2">keywordstyle= \\color{ blue!70},commentstyle=\\color{red!50!green!50!blue!50},</span>
+<span class="s2">frame=shadowbox,</span>
+<span class="s2">breaklines=true,</span>
+<span class="s2">rulesepcolor= \\color{ red!20!green!20!blue!20}</span>
+<span class="s2">}</span>
+
+<span class="s2">[EXTRA]</span>
+<span class="s2">"</span>
+		 <span class="o">(</span><span class="s2">"\\section{%s}"</span> . <span class="s2">"\\section*{%s}"</span><span class="o">)</span>
+		 <span class="o">(</span><span class="s2">"\\subsection{%s}"</span> . <span class="s2">"\\subsection*{%s}"</span><span class="o">)</span>
+		 <span class="o">(</span><span class="s2">"\\subsubsection{%s}"</span> . <span class="s2">"\\subsubsection*{%s}"</span><span class="o">)</span>
+		 <span class="o">(</span><span class="s2">"\\paragraph{%s}"</span> . <span class="s2">"\\paragraph*{%s}"</span><span class="o">)</span>
+		 <span class="o">(</span><span class="s2">"\\subparagraph{%s}"</span> . <span class="s2">"\\subparagraph*{%s}"</span><span class="o">)))</span>
+
+<span class="o">(</span>setq org-latex-pdf-process
+	<span class="s1">'("xelatex -interaction nonstopmode -output-directory %o %f"</span>
+<span class="s1">	  ;; "biber %b" "xelatex -interaction nonstopmode -output-directory %o %f"</span>
+<span class="s1">	  "bibtex %b"</span>
+<span class="s1">	  "xelatex -interaction nonstopmode -output-directory %o %f"</span>
+<span class="s1">	  "xelatex -interaction nonstopmode -output-directory %o %f"))</span>
+
+<span class="s1">;; (defcustom org-preview-latex-process-alist</span>
+<span class="s1">;;    (quote</span>
+<span class="s1">;;     (</span>
+<span class="s1">;;      (dvipng :programs</span>
+<span class="s1">;;              ("latex" "dvipng")</span>
+<span class="s1">;;              :description "dvi &gt; png" :message "you need to install the programs: latex and dvipng." :image-input-type "dvi" :image-output-type "png" :image-size-adjust</span>
+<span class="s1">;;              (1.0 . 1.0)</span>
+<span class="s1">;;              :latex-compiler</span>
+<span class="s1">;;              ("latex -interaction nonstopmode -output-directory %o %f")</span>
+<span class="s1">;;              :image-converter</span>
+<span class="s1">;;              ("dvipng -fg %F -bg %B -D %D -T tight -o %O %f"))</span>
+<span class="s1">;;      (dvisvgm :programs</span>
+<span class="s1">;;               ("latex" "dvisvgm")</span>
+<span class="s1">;;               :description "xdv &gt; svg" :message "you need to install the programs: latex and dvisvgm." :use-xcolor t :image-input-type "xdv" :image-output-type "svg" :image-size-adjust</span>
+<span class="s1">;;               (1.0 . 1.0)</span>
+<span class="s1">;;               :latex-compiler</span>
+<span class="s1">;;               ("xelatex -no-pdf -interaction nonstopmode -output-directory %o %f")</span>
+<span class="s1">;;               :image-converter</span>
+<span class="s1">;;               ("dvisvgm %f   %O"))</span>
+<span class="s1">;;      (imagemagick :programs</span>
+<span class="s1">;;                   ("latex" "convert")</span>
+<span class="s1">;;                   :description "pdf &gt; png" :message "you need to install the programs: latex and imagemagick." :use-xcolor t :image-input-type "pdf" :image-output-type "png" :image-size-adjust</span>
+<span class="s1">;;                   (1.0 . 1.0)</span>
+<span class="s1">;;                   :latex-compiler</span>
+<span class="s1">;;                   ("xelatex -interaction nonstopmode -output-directory %o %f")</span>
+<span class="s1">;;                   :image-converter</span>
+<span class="s1">;;                   ("convert -density %D -trim -antialias %f -quality 100 %O")))))</span>
+
+<span class="s1">;; lualatex preview</span>
+
+<span class="s1">;; (setq org-preview-latex-process-alist</span>
+<span class="s1">;;       (plist-put (alist-get '</span>dvisvgm org-preview-latex-process-alist<span class="o">)</span>
+<span class="p">;;</span>                  :description <span class="s2">"xdv &gt; svg"</span> :message <span class="s2">"you need to install the programs: latex and dvisvgm."</span> :use-xcolor t :image-input-type <span class="s2">"xdv"</span> :image-output-type <span class="s2">"svg"</span> :image-size-adjust
+<span class="p">;;</span>                  <span class="o">))</span>
+
+<span class="p">;;</span> <span class="o">(</span>setq org-preview-latex-process-alist
+<span class="p">;;</span>       <span class="o">(</span>plist-put <span class="o">(</span>alist-get <span class="s1">'dvisvgm org-preview-latex-process-alist)</span>
+<span class="s1">;;                  :latex-compiler</span>
+<span class="s1">;;                  ("xelatex -no-pdf -interaction nonstopmode -output-directory %o %f")))</span>
+
+<span class="s1">;; (push (cons '</span>dvisvgm
+<span class="p">;;</span>             <span class="o">(</span>plist-put <span class="o">(</span>alist-get dvisvgm org-preview-latex-process-alist<span class="o">)</span>
+<span class="p">;;</span>                        :description <span class="s2">"xdv &gt; svg"</span> :message <span class="s2">"you need to install the programs: latex and dvisvgm."</span> :use-xcolor t :image-input-type <span class="s2">"xdv"</span> :image-output-type <span class="s2">"svg"</span> :image-size-adjust
+<span class="p">;;</span>                        <span class="o">))</span>
+<span class="p">;;</span>       org-preview-latex-process-alist<span class="o">)</span>
+
+<span class="p">;;</span> <span class="o">(</span>push <span class="o">(</span>cons <span class="s1">'dvisvgm</span>
+<span class="s1">;;             (plist-put (alist-get dvisvgm org-preview-latex-process-alist)</span>
+<span class="s1">;;                        :latex-compiler</span>
+<span class="s1">;;                        ("xelatex -no-pdf -interaction nonstopmode -output-directory %o %f")))</span>
+<span class="s1">;;       org-preview-latex-process-alist)</span>
+
+
+<span class="s1">;; (custom-set-variables</span>
+<span class="s1">;;  ;; custom-set-variables was added by Custom.</span>
+<span class="s1">;;  ;; If you edit it by hand, you could mess it up, so be careful.</span>
+<span class="s1">;;  ;; Your init file should contain only one such instance.</span>
+<span class="s1">;;  ;; If there is more than one, they won'</span>t work right.
+<span class="p">;;</span>  <span class="err">'</span><span class="o">(</span>org-preview-latex-process-alist
+<span class="p">;;</span>    <span class="o">(</span>quote
+<span class="p">;;</span>     <span class="o">((</span>dvipng :programs
+<span class="p">;;</span>              <span class="o">(</span><span class="s2">"latex"</span> <span class="s2">"dvipng"</span><span class="o">)</span>
+<span class="p">;;</span>              :description <span class="s2">"dvi &gt; png"</span> :message <span class="s2">"you need to install the programs: latex and dvipng."</span> :image-input-type <span class="s2">"dvi"</span> :image-output-type <span class="s2">"png"</span> :image-size-adjust
+<span class="p">;;</span>              <span class="o">(</span><span class="m">1</span>.0 . <span class="m">1</span>.0<span class="o">)</span>
+<span class="p">;;</span>              :latex-compiler
+<span class="p">;;</span>              <span class="o">(</span><span class="s2">"latex -interaction nonstopmode -output-directory %o %f"</span><span class="o">)</span>
+<span class="p">;;</span>              :image-converter
+<span class="p">;;</span>              <span class="o">(</span><span class="s2">"dvipng -fg %F -bg %B -D %D -T tight -o %O %f"</span><span class="o">))</span>
+<span class="p">;;</span>      <span class="o">(</span>dvisvgm :programs
+<span class="p">;;</span>               <span class="o">(</span><span class="s2">"latex"</span> <span class="s2">"dvisvgm"</span><span class="o">)</span>
+<span class="p">;;</span>               :description <span class="s2">"xdv &gt; svg"</span> :message <span class="s2">"you need to install the programs: latex and dvisvgm."</span> :use-xcolor t :image-input-type <span class="s2">"xdv"</span> :image-output-type <span class="s2">"svg"</span> :image-size-adjust
+<span class="p">;;</span>               <span class="o">(</span><span class="m">1</span>.0 . <span class="m">1</span>.0<span class="o">)</span>
+<span class="p">;;</span>               :latex-compiler
+<span class="p">;;</span>               <span class="o">(</span><span class="s2">"xelatex -no-pdf -interaction nonstopmode -output-directory %o %f"</span><span class="o">)</span>
+<span class="p">;;</span>               :image-converter
+<span class="p">;;</span>               <span class="o">(</span><span class="s2">"dvisvgm %f -n -b min -c %S -o %O"</span><span class="o">))</span>
+<span class="p">;;</span>      <span class="o">(</span>imagemagick :programs
+<span class="p">;;</span>                   <span class="o">(</span><span class="s2">"latex"</span> <span class="s2">"convert"</span><span class="o">)</span>
+<span class="p">;;</span>                   :description <span class="s2">"pdf &gt; png"</span> :message <span class="s2">"you need to install the programs: latex and imagemagick."</span> :use-xcolor t :image-input-type <span class="s2">"pdf"</span> :image-output-type <span class="s2">"png"</span> :image-size-adjust
+<span class="p">;;</span>                   <span class="o">(</span><span class="m">1</span>.0 . <span class="m">1</span>.0<span class="o">)</span>
+<span class="p">;;</span>                   :latex-compiler
+<span class="p">;;</span>                   <span class="o">(</span><span class="s2">"xelatex -interaction nonstopmode -output-directory %o %f"</span><span class="o">)</span>
+<span class="p">;;</span>                   :image-converter
+<span class="p">;;</span>                   <span class="o">(</span><span class="s2">"convert -density %D -trim -antialias %f -quality 100 %O"</span><span class="o">)))))</span>
+<span class="p">;;</span> <span class="o">)</span>
+
+<span class="o">(</span>setq org-format-latex-options <span class="o">(</span>plist-put org-format-latex-options :html-scale <span class="m">1</span>.2<span class="o">))</span>
+</pre></div>
+
+<p>
+在有数学公式的 org 文件中加入以下配置
+</p>
+
+
+<div class="highlight"><pre><span></span><span class="c1">#+LATEX_CLASS: lengyue-org-book</span>
+
+<span class="c1">#+OPTIONS: tex:imagemagick</span>
+
+<span class="c1">#+LaTeX_HEADER: \usepackage[math-style=ISO]{unicode-math}</span>
+<span class="c1">#+LaTeX_HEADER: \setmathfont{xits-math.otf}</span>
+<span class="c1">#+LaTeX_HEADER: \usepackage[slantfont, boldfont]{xeCJK}</span>
+<span class="c1">#+LaTeX_HEADER: \usepackage{fontspec}</span>
+<span class="c1">#+LaTeX_HEADER: \setCJKmainfont{WenQuanYi Micro Hei}</span>
+<span class="c1">#+LaTeX_HEADER: \setmainfont{xits-math.otf}</span>
+<span class="c1">#+LaTeX_HEADER: \usepackage{extarrows}</span>
+
+<span class="c1">#+LaTeX_HEADER: \newtheorem{axiom}{\hskip 2em 公理}[section] %公理 axiom，独立编号</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem{de}{\hskip 2em 定义}[subsection] %定义 definition，简写为 de，独立编号</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem*{deus}{\hskip 2em 定义} %定义不编号 definition，简写为 deus</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem{thm}{\hskip 2em 定理}[subsection] %定理 theroem，简写为 thm，独立编号</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem*{thmus}{\hskip 2em 定理} %定理不编号 theroem，简写为 thmus</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem{lemma}[thm]{\hskip 2em 引理} %引理，记为 lemma，与 thm 共用编号</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem*{lemmaus}{\hskip 2em 引理} %引理不编号，记为 lemmaus</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem{cor}{\hskip 2em 推论}[thm] %推论 Corollary，简写为 col，在 thm 下面编号</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem{proposition}{\hskip 2em 性质}[subsection] %性质, 独立编号</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem{mingti}{\hskip 2em 命题}[subsection] %命题, 独立编号</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem{ex}{\emph{\hskip 2em 实例}}[thm] %example 獨立編號</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem*{exus}{\emph{\hskip 2em 实例}} %example 不编号</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem*{remark}{\bf{\hskip 2em 点评}} %点评不编号</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem{dde}{\hskip 2em 定义}  %定义</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem*{ddeus}{\hskip 2em 定义}</span>
+<span class="c1">#+LaTeX_HEADER: \renewcommand\qedsymbol{$\blacksquare$}</span>
+<span class="c1">#+LaTeX_HEADER: \renewcommand{\proofname}{\bf{\hskip 2em 证明}}</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem*{jd}{\emph{\hskip 2em 解答}}</span>
+<span class="c1">#+LaTeX_HEADER: \numberwithin{equation}{section}</span>
+</pre></div>
+
+<p>
+再次编译博客主站的时候，会在 posts 目录下出现 ltxpng 文件夹，将次文件夹 copy 到 output 文件夹 posts 下即可。
+</p>
+
+<p>
+用 imagemagick 编译的图片，比较小，尝试用 dvisvgm 进行编译，在 emacs 中可以成功，但是在博客目录下配置不起作用，待以后学习 lisp 之后再处理
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">Emacs 管理 blog</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+用<a href="https://github.com/CodeFalling/blog-admin">blog-admin</a> 做前端，参照文件说明配置，主要有以下几项
+</p>
+
+<div class="highlight"><pre><span></span><span class="p">;;</span> <span class="o">(</span>add-to-load-path <span class="s2">"~/.spacemacs.d/package/blog-admin"</span><span class="o">)</span>
+
+<span class="o">(</span>require <span class="s1">'blog-admin)</span>
+<span class="s1">(spacemacs/set-leader-keys "ob" '</span>blog-admin-start<span class="o">)</span>
+
+<span class="p">;;</span>  <span class="o">(</span>setq blog-admin-backend-type <span class="s1">'org-page)</span>
+<span class="s1">;;  (setq blog-admin-backend-path "~/MEGA/Emacs-lengyue/Blog-lengyue/source")</span>
+<span class="s1">;;  (setq blog-admin-backend-new-post-in-drafts t)</span>
+<span class="s1">;;  (setq blog-admin-backend-new-post-with-same-name-dir t)</span>
+<span class="s1">;;  (setq blog-admin-backend-org-page-drafts "_drafts")</span>
+
+<span class="s1">;;  (setq op/repository-directory "~/MEGA/Emacs-lengyue/Blog-lengyue/source")</span>
+<span class="s1">;;  (setq op/site-domain "http://lengyueyang.github.io") </span>
+<span class="s1">;;  (setq op/personal-disqus-shortname "lengyueyang")</span>
+
+<span class="s1">;; (setq blog-admin-backend-type '</span>hexo<span class="o">)</span>
+<span class="p">;;</span> <span class="o">(</span>setq blog-admin-backend-path <span class="s2">"~/MEGA/Emacs-lengyue/Blog-lengyue/"</span><span class="o">)</span>
+<span class="p">;;</span> <span class="o">(</span>setq blog-admin-backend-new-post-in-drafts t<span class="o">)</span>
+<span class="p">;;</span> <span class="o">(</span>setq blog-admin-backend-new-post-with-same-name-dir t<span class="o">)</span>
+
+<span class="o">(</span>setq blog-admin-backend-type <span class="err">'</span>nikola<span class="o">)</span>
+<span class="o">(</span>setq blog-admin-backend-path <span class="s2">"~/MEGA/Emacs-lengyue/Blog-lengyue/Nikola"</span><span class="o">)</span>
+<span class="o">(</span>setq blog-admin-backend-new-post-in-drafts t<span class="o">)</span>
+<span class="o">(</span>setq blog-admin-backend-nikola-executable <span class="s2">"/usr/bin/nikola"</span><span class="o">)</span> <span class="p">;;</span> path to nikola executable
+<span class="o">(</span>setq blog-admin-backend-nikola-config-file <span class="s2">"conf.py"</span><span class="o">)</span> <span class="p">;;</span> conf.py is default
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">
+<span class="todo TODO">TODO</span> 后期实现</h2>
+<div class="outline-text-2" id="text-5">
+<ol class="org-ol">
+<li>blog-admin 定制
+</li>
+<li>Nikola 主题定制
+</li>
+<li>Math 图片模糊
+</li>
+</ol>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef">
+<sup><a id="fn.1" name="fn.1" class="footnum" href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#fnr.1">1</a></sup><p class="footpara">
+<a href="https://streakycobra.github.io/posts/blogging-in-org-mode-with-nikola/">https://streakycobra.github.io/posts/blogging-in-org-mode-with-nikola/</a>
+</p>
+</div>
+
+<div class="footdef">
+<sup><a id="fn.2" name="fn.2" class="footnum" href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#fnr.2">2</a></sup><p class="footpara">
+<a href="https://punchagan.muse-amuse.in/blog/blogging-with-nikola-and-org-mode/">https://punchagan.muse-amuse.in/blog/blogging-with-nikola-and-org-mode/</a>
+</p>
+</div>
+
+<div class="footdef">
+<sup><a id="fn.3" name="fn.3" class="footnum" href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#fnr.3">3</a></sup><p class="footpara">
+<a href="http://mfcabrera.com/blog/this-site-runs-on-nikola.html">http://mfcabrera.com/blog/this-site-runs-on-nikola.html</a>
+</p>
+</div>
+
+<div class="footdef">
+<sup><a id="fn.4" name="fn.4" class="footnum" href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#fnr.4">4</a></sup><p class="footpara">
+<a href="https://qiwulun.github.io/posts/%E7%94%A8%20Nikola%20%E5%86%99%E5%8D%9A%E5%AE%A2.html">https://qiwulun.github.io/posts/%E7%94%A8%20Nikola%20%E5%86%99%E5%8D%9A%E5%AE%A2.html</a>
+</p>
+</div>
+
+
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../categories/blog.html" rel="tag">Blog</a></li>
+            <li><a class="tag p-category" href="../categories/nikola.html" rel="tag">Nikola</a></li>
+            <li><a class="tag p-category" href="../categories/org-mode.html" rel="tag">Org-mode</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="archlinux-shadowsocks.html" rel="prev" title="Archlinux Shadowsocks Configuration [Archlinux Shadowsocks 配置]">Previous post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="lengyueyang",
+            disqus_url="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html",
+        disqus_title="\u535a\u5ba2\u8fc1\u79fb\u6742\u8bb0-\u4ece Hexo \u5230 Nikola",
+        disqus_identifier="cache/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="lengyueyang";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2018         <a href="mailto:maoxiaowei1988@qq.com">Lengyueyang</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a> and <a href="#" https: rel="nofollow">Org-mode</a>   <a href="http://spacemacs.org"><img src="https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg"></a>    
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a>
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

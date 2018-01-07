@@ -1,0 +1,101 @@
+#+BEGIN_COMMENT
+.. title: Notes
+.. slug: notes
+.. date: 2018-01-06 12:00:00 UTC+08:00
+.. tags: notes, learning
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+
+* Emacs 
+
+** Using Emacs Series
+http://cestlaz.github.io/stories/emacs/
+
+*** [[http://cestlaz.github.io/posts/using-emacs-introduction][Introduction]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-1-setup][Video 1 - Setting up the package manager]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-2-org][Video 2 - Intro to Org Mode]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-3-elisp][Video 3 - How to think about Emacs]] 
+
+*** [[http://cestlaz.github.io/posts/using-emacs-4-buffers][Video 4 - Buffers]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-5-windows][Video 5 - Windows]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-6-swiper][Video 6 - Search / Swiper]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-7-avy][Video 7 - Navigation / avy]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-8-autocomplete][Video 8 - Autocomplete]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-9-themes][Video 9 - Themes]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-10-org-init][Video 10 - Org init files]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-11-reveal][Video 11 - org-reveal / reveal.js]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-12-python][Video 12 - Python, Flycheck, Jedi]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-13-yasnippet][Video 13 - Python, Yasnippet]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-14-thoughts][Video 14 - Thoughts on Using Emacs]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-15-macros][Video 15 - Macros]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-16-undo-tree][Video 16 - Undo Tree]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-17-misc][Video 17 - Small packages]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-18-narrow][Video 18 - narrowing and iedit]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-19-live][Video 19 - moving to a live config]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-20-yanking][Video 20 - Yanking]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-21-web-mode][Video 21-web-mode]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-22-emacsclient][Video 22-emacsclient]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-23-capture-1][Video 23 - capture 1]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-24-capture-2][Video 24 - capture 2]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-25-tramp][Video 25 - Tramp]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-26-gcal][Video 26 - Google Calendar and Org Agenda]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-27-shell][Video 27 - Shell and eshell]]
+
+
+*** [[http://cestlaz.github.io/posts/using-emacs-27-rectangles][Video 28 - Rectangles]]
+
+
+*** [[http://cestlaz.github.io/posts/using-emacs-29%20elfeed][Video 29 - elfeed 1 ]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-30-elfeed-2][Video 30 - elfeed 2 - Hydras ]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-31-elfeed-3][Video 31 - elfeed 3 - macros]]
+
+
+*** [[http://cestlaz.github.io/posts/using-emacs-32-cpp][Video 32 - C++]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-33-projectile-jump][Video 33 - Projectile Dumb-jump]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-34-ibuffer-emmet][Video 34 - ibuffer and emmet]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-35-blogging][Video 35 - blogging]]
+
+
+*** [[http://cestlaz.github.io/posts/using-emacs-36-touch-of-elisp][Video 36 - A Touch of Elisp]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-37-treemacs][Video 37 - Treemacs file browser]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-38-dired][Video 38 - dired]]
+
+*** [[http://cestlaz.github.io/posts/using-emacs-39-mu4e][Video 39 - mu4e]]
+
