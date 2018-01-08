@@ -263,6 +263,7 @@ TIMEZONE = "Asia/Shanghai"
 # Which means copy 'files' into 'output'
 # FILES_FOLDERS = {'posts/ltxpng': 'posts/ltxpng'}
 FILES_FOLDERS = {'posts/ltxpng': 'posts/ltxpng', 'posts/MSimg': 'posts/MSimg', 'posts/file':'posts/file'}
+
 # One or more folders containing code listings to be processed and published on
 # the site. The format is a dictionary of {source: relative destination}.
 # Default is:
