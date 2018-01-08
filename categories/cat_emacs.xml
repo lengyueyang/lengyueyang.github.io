@@ -3,7 +3,7 @@
 &lt;a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;
 &lt;img alt="Creative Commons License BY-NC-SA"
 style="border-width:0; margin-bottom:12px;"
-src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Mon, 08 Jan 2018 10:58:56 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>博客迁移杂记-从 Hexo 到 Nikola</title><link>https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html</link><dc:creator>Lengyueyang</dc:creator><description>&lt;div&gt;&lt;div id="table-of-contents"&gt;
+src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Mon, 08 Jan 2018 13:44:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>博客迁移杂记-从 Hexo 到 Nikola</title><link>https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html</link><dc:creator>Lengyueyang</dc:creator><description>&lt;div&gt;&lt;div id="table-of-contents"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents"&gt;
 &lt;ul&gt;
@@ -19,6 +19,7 @@ src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"&gt;&lt;/a&gt;</copy
 &lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-4"&gt;增加评论&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-5"&gt;主题&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-6"&gt;语法高亮&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-7"&gt;发布时，复制特定文件夹到 output&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
