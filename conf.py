@@ -261,6 +261,9 @@ TIMEZONE = "Asia/Shanghai"
 # Default is:
 # FILES_FOLDERS = {'files': ''}
 # Which means copy 'files' into 'output'
+# FILES_FOLDERS = {'posts/ltxpng': 'posts/ltxpng'}
+FILES_FOLDERS = {'posts/ltxpng': 'posts/ltxpng', 'posts/MSimg': 'posts/MSimg', 'posts/file':'posts/file'}
+
 
 # One or more folders containing code listings to be processed and published on
 # the site. The format is a dictionary of {source: relative destination}.
@@ -710,7 +713,7 @@ GITHUB_COMMIT_SOURCE = True
 # CLOSURE_COMPILER_EXECUTABLE = 'closure-compiler'
 
 # Executable for the "optipng" filter (defaults to 'optipng').
-OPTIPNG_EXECUTABLE = 'optipng'
+# OPTIPNG_EXECUTABLE = 'optipng'
 
 # Executable for the "jpegoptim" filter (defaults to 'jpegoptim').
 # JPEGOPTIM_EXECUTABLE = 'jpegoptim'
