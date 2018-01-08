@@ -2,7 +2,7 @@
 .. title: 博客迁移杂记-从 Hexo 到 Nikola
 .. slug: bo-ke-qian-yi-za-ji-cong-hexodao-nikola
 .. date: 2018-01-07 21:12:15 UTC+08:00
-.. tags: Org-mode, Nikola, Blog
+.. tags: Blog, Nikola, Org-mode
 .. category: EMACS
 .. link: 
 .. description: 
@@ -77,7 +77,6 @@ Nikola 是用 Python 写的，恰好以后要学 Python，同时 Nikola 通过 O
 ** 配置
 
 配置文件是主目录下 .conf.py 文件
-
 
 *** 修改自定义位置
 
@@ -197,6 +196,17 @@ Nikola 是用 Python 写的，恰好以后要学 Python，同时 Nikola 通过 O
 默认使用 pygments，可以在 init.el 或 conf.el 中把 nikola-use-pygments 改成 nil 来取消它。
 
 为了正常显示语法高亮，需要增加相应的 custom.css，并确保 custom.css 被 theme 使用了用 pygmentize 生成相应的 css 文件， <PYGMENTSSTYLE> 可以用 pygmentize -L style 查看，比如 colorful,friendly 
+
+*** 发布时，复制特定文件夹到 output
+
+
+#+BEGIN_SRC sh
+
+  FILES_FOLDERS = {'posts/ltxpng': 'posts/ltxpng', 'posts/MSimg': 'posts/MSimg', 'posts/file':'posts/file'}
+
+#+END_SRC
+
+运行 =nikola build= , 可以复制 posts 下的三个文件夹到 output/posts 下面
 
 * Org-mode 配置
 

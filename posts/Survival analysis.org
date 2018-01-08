@@ -1,7 +1,7 @@
 #+BEGIN_COMMENT
 .. title: 科研工作中的生存分析
 .. slug: survival-analysis-research
-.. date: 2018-1-15 19:26:52 UTC+08:00
+.. date: 2018-01-15 19:26:52 UTC+08:00
 .. tags: Cox regression, KM analysis, Nomogram
 .. category: RESEARCH
 .. link: 
