@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>数据科学-数学与统计-高等代数-矩阵运算 | 深度识医</title>
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+<link rel="canonical" href="https://lengyueyang.github.io/Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><meta name="author" content="Lengyueyang">
+<link rel="prev" href="../life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html" title="博客迁移杂记-从 Hexo 到 Nikola" type="text/html">
+<link rel="next" href="../Research/survival-analysis-research.html" title="科研工作中的生存分析" type="text/html">
+<meta property="og:site_name" content="深度识医">
+<meta property="og:title" content="数据科学-数学与统计-高等代数-矩阵运算">
+<meta property="og:url" content="https://lengyueyang.github.io/Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html">
+<meta property="og:description" content="Table of Contents
+
+
+矩阵基础运算
+特殊矩阵
+矩阵乘积的秩与行列式
+可逆矩阵
+矩阵的分块
+正交矩阵  欧几里得空间 
+ 到  的线性映射
+例题
+
+
+
+
+
+矩阵基础运算
+
+
+
+
+
+
+设  都是数域 K 上  矩阵,令 , 则称矩阵 C 是矩阵 A 与 B 的 和, 记作 .
+
+
+
+
+
+
+
+设  都是数域 K 上  矩阵, , 令 , 则称是矩阵 M 是 k 与矩阵 A 的 数量乘积">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2018-01-08T21:03:03+08:00">
+<meta property="article:tag" content="Linear algebra">
+<meta property="article:tag" content="mathjax">
+<meta property="article:tag" content="Matrix computation">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://lengyueyang.github.io/">
+
+                <span id="blog-title">深度识医</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../posts/data-science/index.html">Data Science</a>
+                </li>
+<li>
+<a href="../posts/research/index.html">Research</a>
+                </li>
+<li>
+<a href="../posts/life/index.html">Life</a>
+                </li>
+<li>
+<a href="../categories/index.html">Tags</a>
+                </li>
+<li>
+<a href="../archive.html">Archives</a>
+                </li>
+<li>
+<a href="../pages/notes.html">Notes</a>
+                </li>
+<li>
+<a href="../pages/links.html">Links</a>
+                </li>
+<li>
+<a href="../pages/about.html">About</a>
+                </li>
+<li>
+<a href="https://github.com/lengyueyang">Github</a>
+                </li>
+<li>
+<a href="../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<!-- Google custom search --><form method="get" action="https://www.google.com/search" class="navbar-form navbar-right" role="search">
+<div class="form-group">
+<input type="text" name="q" class="form-control" placeholder="Search">
+</div>
+<button type="submit" class="btn btn-primary">
+	<span class="glyphicon glyphicon-search"></span>
+</button>
+<input type="hidden" name="sitesearch" value="https://lengyueyang.github.io/">
+</form>
+<!-- End of custom search -->
+
+
+            <ul class="nav navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="../Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html" class="u-url">数据科学-数学与统计-高等代数-矩阵运算</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                    Lengyueyang
+            </span></p>
+            <p class="dateline"><a href="../Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html" rel="bookmark"><time class="published dt-published" datetime="2018-01-08T21:03:03+08:00" itemprop="datePublished" title="2018-01-08 21:03">2018-01-08 21:03</time></a></p>
+                <p class="commentline">
+        
+    <a href="../Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#disqus_thread" data-disqus-identifier="cache/posts/Data Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html">Comments</a>
+
+
+            
+
+        </p>
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="../Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#sec-1">矩阵基础运算</a></li>
+<li><a href="../Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#sec-2">特殊矩阵</a></li>
+<li><a href="../Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#sec-3">矩阵乘积的秩与行列式</a></li>
+<li><a href="../Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#sec-4">可逆矩阵</a></li>
+<li><a href="../Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#sec-5">矩阵的分块</a></li>
+<li><a href="../Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#sec-6">正交矩阵 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_bf9b0943e6cc090fd1bc7580acb8b5c0f6791acf.png" alt="\(⋅\)"> 欧几里得空间 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_26eaef4011870bf0cd2f4f0413f0228dd2f0de37.png" alt="\(R^n\)"></a></li>
+<li><a href="../Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#sec-7"><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_0b20f7646222454f795423e3fe83323df9e96a50.png" alt="\(K^n\)"> 到 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_32c80f5f70cac53e5978524b9688f6bdc1acc851.png" alt="\(K^s\)"> 的线性映射</a></li>
+<li><a href="../Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#sec-8">例题</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">矩阵基础运算</h2>
+<div class="outline-text-2" id="text-1">
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_3abe4715730885b74ef803e53f4d0c0428622af6.png" alt="\begin{de}[矩阵加法定义]
+\end{de}"></p>
+</div>
+<p>
+设 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_7fe946cd7707ac561c4586c9cd098cd535376381.png" alt="\(A = (a_{ij}), B = (b_{ij})\)"> 都是数域 K 上 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_b57e699672819afa1e82577bdb095b8501a67de0.png" alt="\(s \times n\)"> 矩阵,令 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_bad0b2d10c06c8a6134166753309670f4f7a57c2.png" alt="\(C = (a_{ij} + b_{ij})_{s\times n}\)">, 则称矩阵 C 是矩阵 A 与 B 的 <b>和</b>, 记作 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_3c47dc0a932e503847d4f5f37722c2655a8428ca.png" alt="\(C = A + B\)">.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_f4b731dc695d0e597a77404353d5511ceee6fff8.png" alt="\begin{de}[矩阵数量乘法定义]
+\end{de}"></p>
+</div>
+<p>
+设 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_a3c14270b9ac4d03275f47827e490930d99b58cb.png" alt="\(A = (a_{ij})\)"> 都是数域 K 上 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_b57e699672819afa1e82577bdb095b8501a67de0.png" alt="\(s \times n\)"> 矩阵, <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_3877c0a5edafa0d7eeb5517f21cd125a558f9bf1.png" alt="\(k \in K_{}\)">, 令 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_8b19ff10ab258652fc8af8f4aa5e4a08b7a2cdb5.png" alt="\(M = (ka_{ij})_{s×n}\)">, 则称是矩阵 M 是 k 与矩阵 A 的 <b>数量乘积</b>, 记作 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_2258aac0ccd78e55ebb46232e60be91fd730ccd0.png" alt="\(M = kA\)">.
+</p>
+<!-- TEASER_END -->
+<p>
+矩阵的加法和数量乘法满足类似于 n 维向量的加法与数量乘法所满足的 8 条运算法则: 设 A, B, C 都是 K 上的 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_b57e699672819afa1e82577bdb095b8501a67de0.png" alt="\(s \times n\)"> 矩阵, <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_d012934fbe04897a5d117be200fd844d901df841.png" alt="\(k, l \in K\)">, 有
+</p>
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_194002c1ee993ba31b511873f298644d953df85b.png" alt="\begin{align*}
+&amp;amp;1. A+B=B+A;  &amp;amp;2. (A+B)+C=A+(B+C); \\
+&amp;amp;3. A+0=0+A; &amp;amp;4. A+(-A)=(-A+0)=A; \\
+&amp;amp;5. 1A=A; &amp;amp;6. (kl)A=k(lA); \\
+&amp;amp;7. (k+l)A=kA+lA; &amp;amp;8.k(A+B)=kA+kB. \\
+\end{align*}"></p>
+</div>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_65f8079ee2778d3eb634d44be3b0d96a106c610c.png" alt="\begin{de}[矩阵乘法定义]
+\end{de}"></p>
+</div>
+<p>
+设 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_278704eb3c52f57b3b0a8e0dc12b0c996d617b30.png" alt="\(A=(a_{ij})_{s×n}\)">, <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_8569d134f62ca330181f4edb6d829c4bbd6de7d6.png" alt="\(B=(b_{ij})_{n\times m}\)">, 令 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_771f3dbf535982b287a517c49d5122ff8f9f6a5f.png" alt="\(C=(c_{ij})_{s\times m}\)">, 其中
+<img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_b395909572941bb4237633435b5f0215d51f178b.png" alt="\[
+c_{ij}= a_{i1}b_{1j}+a_{i2}b_{2j}+ \cdots + a_{in}b_{nj} = \sum_{k=1}^na_{ik}b_{kj}
+\]"><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_05e7ac3952bdd883de933ab193589ce6f300c901.png" alt="\(i=1,2,⋯,s; j=1,2,⋯,m\)">. 则矩阵 C 称为矩阵 A 与矩阵 B 的 <b>乘积</b>, 记作 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_3268390835b1e1c93e6bf0c9fe369e9a20180bfa.png" alt="\(C=AB\)">.
+</p>
+
+<p>
+矩阵乘法有以下性质:
+</p>
+<ol class="org-ol">
+<li>只有左边矩阵的列数与右边矩阵的行数相同的两个矩阵才能相乘;
+</li>
+<li>乘积矩阵的 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_8f57447994656c48d4da0a293e2700db86b711a7.png" alt="\((i,j)\)"> 元等于左边矩阵的第 i 行与右边矩阵的第 j 列的对应元素乘积之和;
+</li>
+<li>乘积矩阵的行数等于左矩阵的行数, 乘积矩阵的列数等于右矩阵的列数.
+</li>
+</ol>
+<p>
+矩阵的性质:
+</p>
+<ol class="org-ol">
+<li>矩阵的乘法适合 <b>结合律</b>: 设 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_278704eb3c52f57b3b0a8e0dc12b0c996d617b30.png" alt="\(A=(a_{ij})_{s×n}\)">, <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_8569d134f62ca330181f4edb6d829c4bbd6de7d6.png" alt="\(B=(b_{ij})_{n\times m}\)">, 令 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_1660cf71d0ba915eb4edec4da85c8deda7d0fccb.png" alt="\(C=(c_{m\times r}_{})_{s\times m}\)">, 则 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_5536ea3c1173a3992918bc15a97146e640111286.png" alt="\((AB)C = A(BC)\)">, 但矩阵的乘法不适合交换律. 注意从 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_40067d196eb3af649ade2cf07220d7231f1364a3.png" alt="\(BA=0\)">, 不能得到 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_c4b3776af98b86f800c7a2fa3d7cc81b9f417203.png" alt="\(B=0 or A=0\)">.
+</li>
+</ol>
+<p>
+对于矩阵 A, 如果存在一个矩阵 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_0239750714efa2a360432747c94c01c5405cca69.png" alt="\(B\ne0\)"> 使得 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_0e595a21c203cc083f8f96fe9b8b7e98e913c66a.png" alt="\(AB=0\)">, 那么称 A 是一个 <b>左零因子</b>; 如果存在一个矩阵 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_ddda3d4641aee23dc8dd01f47f2408f244bcbd0b.png" alt="\(C\ne0\)">, 使得 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_e0af2c055ea6f10243136c248e55e7e3af097420.png" alt="\(CA=0\)">, 那么称 A 是一个 <b>右零因子</b>, 左零因子和右零因子统称为 <b>零因子</b>. 零矩阵是零因子, 称它为 <b>平凡零因子</b>.
+</p>
+
+<ol class="org-ol">
+<li>矩阵的乘法适合 <b>左分配率</b> 和 <b>右分配率</b>. 即
+</li>
+</ol>
+<p>
+<img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_9686c4e01e02eac18cdc3947f4fd117311a80265.png" alt="\[
+A(B+C) = AB + AC
+\]"></p>
+
+<ol class="org-ol">
+<li>主对角线上元素都是 1, 其余元素都是 0 的 n 级矩阵称为 n 级 <b>单位矩阵</b>, 记作 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_d3ee69bf52b3751d889d6eae0e532ca069c15816.png" alt="\(I_{n}\)">, 或者简记作 I, 容易直接计算得 
+</li>
+</ol>
+<p>
+<img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_c870d37adbd1a82dc0fc17c12436ae103605fee5.png" alt="\[
+  I_{s}A_{s\times n}= A_{s \times n}, \qquad A_{s \times n} I_n = A_{s \times n}
+\]">
+特别是, 如果 A 是 n 级矩阵, 则 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_ff79d3ece8c5548eb075ab499d38507a92ac4d2d.png" alt="\(IA = AI =A\)">.
+</p>
+
+<ol class="org-ol">
+<li>矩阵的乘法与数量乘法满足下述关系式: <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_b85e2c0cd5481747cc77dee499e0a2adf1bfe8b0.png" alt="\(k(AB)=(kA)B=A(kB)\)">. 
+</li>
+</ol>
+<p>
+主对角线上元素是同一个数 k, 其余元素全为 0 的 n 级矩阵称为 <b>数量矩阵</b>, 可以记作 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_69eccb6c58772a3f420987a5587d71433ca901da.png" alt="\(kI\)">.
+</p>
+
+<p>
+矩阵的加法, 数量乘法, 乘法与矩阵的转置的关系如下
+</p>
+<ol class="org-ol">
+<li>
+<img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_f792613916e0dea705472aa2260c0142bf292952.png" alt="\((A+B)' = A' + B'\)">;
+</li>
+<li>
+<img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_6cdccf0f69199dce916d4c110a2cbbee3bf6333b.png" alt="\((kA)' = kA'\)">;
+</li>
+<li>
+<img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_b90b63936eb0981649be8387b2a6ab463f0c77d6.png" alt="\((AB)'=B'A'\)">.
+</li>
+</ol>
+<p>
+如果 n 元线性方程组 (<i>n 元线性方程组一般形式</i>) 的系数矩阵为 A, 常数项组成的列向量为 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_c0f2ccb9d3796a44a74945453120ddff5b1accb7.png" alt="\(\sumbf{\beta}\)">, 未知量 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_6f6bab9d71e27bd01a50ad46f858468abba38618.png" alt="\(x_1, x_2, ⋯, x_n\)"> 组成的列向量为 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_487531b1f2f46c16b28379d316deb11ffb11fdba.png" alt="\(\symbf{X}\)">, 可以用矩阵乘法把 n 元线性方程组 (<i>n 元线性方程组一般形式</i>) 写成如下形式
+</p>
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_fc7a53c2157eccfc6733a2ead2d107793d7d41cd.png" alt="\begin{equation}
+\left(
+\begin{split}
+&amp;amp; a_{11} \quad &amp;amp; a_{12} \quad &amp;amp; \cdots \quad &amp;amp; a_{1n} \\
+&amp;amp; a_{21} \quad &amp;amp; a_{22} \quad &amp;amp; \cdots \quad &amp;amp; a_{2n} \\
+&amp;amp; \vdots \quad &amp;amp; \vdots \quad &amp;amp; \quad &amp;amp; \vdots \\
+&amp;amp; a_{s1} \quad &amp;amp; a_{s2} \quad &amp;amp; \cdots \quad &amp;amp;a_{sn} \\
+\end{split}
+\right)
+\left(
+\begin{split}
+&amp;amp; x_1 \\
+&amp;amp; x_2 \\
+&amp;amp; ⋮ \\
+&amp;amp; x_n \\
+\end{split}
+\right) = 
+\left(
+\begin{split}
+&amp;amp; b_1 \\
+&amp;amp; b_2 \\
+&amp;amp; ⋮ \\
+&amp;amp; b_n \\
+\end{split}
+\right)
+\end{equation}"></p>
+</div>
+<p>
+即 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_9970924f89a5d760b4b5b9bac4de75b09142f708.png" alt="\(A \symbf{X} = \symbf{β}\)">.
+</p>
+
+<p>
+相应的齐次新安县方程组可以简洁地写成 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_8fee64e38ff1999a2ba799de943960347977bb63.png" alt="\(A \symbf{X} = \symbf{0}\)">.
+于是列向量 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_3438fb54f758efa8ba2be70de5dd1e547b1111bb.png" alt="\(\symbf{\eta}\)"> 是齐次线性方程组的解, 当且仅当 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_5244ba165d0ddf0a55494bd78a71f2138c934492.png" alt="\(A \symbf{\eta} = \symbf{0}\)">.
+</p>
+
+<p>
+如果 A 的列向量组为 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_5e55ddcfcd81dc252cd71b8a3147ca2aeb20e47c.png" alt="\(\symbf{α_1, α_2, ⋯, α_n}\)">, 那么可以把 A 记作 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_ee079d8839aae06704858a6184746b00b403eebd.png" alt="\(A = \symbf{α_1, α_2, ⋯, α_n}\)">.
+</p>
+
+<p>
+设 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_278704eb3c52f57b3b0a8e0dc12b0c996d617b30.png" alt="\(A=(a_{ij})_{s×n}\)">, <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_8569d134f62ca330181f4edb6d829c4bbd6de7d6.png" alt="\(B=(b_{ij})_{n\times m}\)">, A 的列向量组为 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_5e55ddcfcd81dc252cd71b8a3147ca2aeb20e47c.png" alt="\(\symbf{α_1, α_2, ⋯, α_n}\)">, 按照矩阵乘法的定义, AB 的 j 列为
+</p>
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_efafd547c364b7c43a4e753683bec5b47d7dc299.png" alt="\begin{equation*}
+\left(
+\begin{split}
+&amp;amp; a_{11}b_{1j} + a_{12}b_{2j} + \cdots + a_{1n}b_{nj} \\
+&amp;amp; a_{21}b_{2j} + a_{22}b_{2j} + \cdots + a_{2n}b_{nj} \\
+&amp;amp; ⋮ \\
+&amp;amp; a_{s1}b_{1j} + a_{s2}b_{2j} + \cdots + a_{sn}b_{nj} \\
+\end{split}
+\right)
+= b_{1j}\symbf{\alpha_1} + b_{2j}\symbf{\alpha_2} + \cdots + b_{nj}\symbf{\alpha_n}
+\end{equation*}"></p>
+</div>
+<p>
+于是
+</p>
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_3f494a400b0babacbd292a24b0c98c7c5590a535.png" alt="\begin{equation}
+\begin{aligned}
+AB &amp;amp;= \symbf{α_1, α_2, ⋯, α_n} \left(
+\begin{split}
+&amp;amp; b_{11} \quad &amp;amp; b_{12} \quad &amp;amp; \cdots \quad &amp;amp; b_{1m} \\
+&amp;amp; b_{21} \quad &amp;amp; b_{22} \quad &amp;amp; \cdots \quad &amp;amp; b_{2m} \\
+&amp;amp; \vdots \quad &amp;amp; \vdots \quad &amp;amp; \quad &amp;amp; \vdots \\
+&amp;amp; b_{s1} \quad &amp;amp; b_{s2} \quad &amp;amp; \cdots \quad &amp;amp;b_{nm} \\
+\end{split}
+\right) \\
+&amp;amp;= (b_{11}\symbf{\alpha_1} + b_{21}\symbf{\alpha_2} + \cdots + b_{n1}\symbf{\alpha_n}, ⋯, b_{1m}\symbf{\alpha_1} + b_{2m}\symbf{\alpha_2} + \cdots + b_{nm}\symbf{\alpha_n})
+\end{aligned}
+\end{equation}"></p>
+</div>
+<p>
+由上式可以才看出, A 乘以 B 可以把 A 的列向量组与 B 的每一列对应元素的乘积之和作为 AB 的相应的列向量, 这是矩阵乘法的第二种表述方式.
+</p>
+
+<p>
+类似, 设矩阵 B 的行向量组为 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_7313e112acbc7b02787bc8c60c1b403520372925.png" alt="\(\symbf{γ_1,γ_2,⋯,γ_n}\)">, 则
+</p>
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_9101f92c559ef643386c3f6d5c3d8d8a7f157d16.png" alt="\begin{equation}
+AB &amp;amp;= \symbf{α_1, α_2, ⋯, α_n} \left(
+\begin{split}
+&amp;amp; a_{11} \quad &amp;amp; a_{12} \quad &amp;amp; \cdots \quad &amp;amp; a_{1n} \\
+&amp;amp; a_{21} \quad &amp;amp; a_{22} \quad &amp;amp; \cdots \quad &amp;amp; a_{2n} \\
+&amp;amp; \vdots \quad &amp;amp; \vdots \quad &amp;amp; \quad &amp;amp; \vdots \\
+&amp;amp; a_{s1} \quad &amp;amp; a_{s2} \quad &amp;amp; \cdots \quad &amp;amp;a_{sn} \\
+\end{split}
+\right) 
+\left(
+\begin{split}
+&amp;amp; γ_1 \\
+&amp;amp; γ_2 \\
+&amp;amp; ⋮ \\
+&amp;amp; γ_n \\
+\end{split}
+\right)
+= \left(
+\begin{split}
+&amp;amp;a_{11}\symbf{γ_1} + a_{12}_{}\symbf{γ_2} + \cdots + &amp;amp;a_{1n}\symbf{γ_n} \\
+&amp;amp;a_{21}\symbf{γ_1} + a_{22}_{}\symbf{γ_2} + \cdots + &amp;amp;a_{2n}\symbf{γ_n} \\
+&amp;amp;⋮ &amp;amp;⋮ \\
+&amp;amp;a_{s1}\symbf{γ_1} + a_{s2}_{}\symbf{γ_2} + \cdots + &amp;amp;a_{sn}\symbf{γ_n}
+\end{split}
+\right)
+\end{equation}"></p>
+</div>
+<p>
+由上式可以才看出, A 乘以 B 可以把 A 的每一行元素与 B 的行向量组的对应向量乘积之和作为 AB 的相应行向量, 这是矩阵乘法的第三种表述方式.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">特殊矩阵</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+<b>对角矩阵</b>
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_9e080618a3656ddce63cebc2b330bafc520ed406.png" alt="\begin{de}[对角矩阵定义]
+\end{de}"></p>
+</div>
+<p>
+主对角线以外的元素全为 0 的方阵称为 <b>对角矩阵</b>, 间记作 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_963ca05a4226c1941bde9f6956daf535f6362f11.png" alt="\(diag\{d_1, d_2, ⋯, d_n\}\)">.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_3355aacc6cac2546b0cafd7e401e41240dcf3a25.png" alt="\begin{mingti}[对角矩阵命题]
+\end{mingti}"></p>
+</div>
+<p>
+用一个对角矩阵左(右)乘一个矩阵 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_b2458872da5d4f0b2be9d790a23ba222a9eb5284.png" alt="\(\symbf{A}\)">, 相当于对角矩阵的住对角元分别去乘 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_b2458872da5d4f0b2be9d790a23ba222a9eb5284.png" alt="\(\symbf{A}\)"> 相应的列(行).
+</p>
+
+<p>
+两个对角矩阵的乘积还是 n 级对角矩阵, 并且把相应对角元素相乘.
+</p>
+
+<p>
+<b>基本矩阵</b>
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_072ea63433fa6e314f86162115aee5bb6b8a2d64.png" alt="\begin{de}[基本矩阵定义]
+\end{de}"></p>
+</div>
+<p>
+只有一个元素是 1, 其余元素全为 0 的矩阵称为 <b>基本矩阵</b>, <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_8f57447994656c48d4da0a293e2700db86b711a7.png" alt="\((i,j)\)"> 元为 1 的矩阵记作 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_f835e4879efe242017b207a9c5fd7553c18c305c.png" alt="\(E_{ij}\)">.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_473fb76610972d335bd3d4dcfe5c42484a6f1345.png" alt="\begin{mingti}[基本矩阵命题]
+\end{mingti}"></p>
+</div>
+<p>
+用 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_f835e4879efe242017b207a9c5fd7553c18c305c.png" alt="\(E_{ij}\)"> 左乘一个矩阵 A, 就相当于把 A 的第 j 行搬到第 i 行的位置, 而乘积矩阵的其余行全为零; 用  <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_f835e4879efe242017b207a9c5fd7553c18c305c.png" alt="\(E_{ij}\)"> 右乘一个矩阵 A, 相当于把 A 的第 i 列搬到第 j 列的位置.
+</p>
+
+<p>
+<b>上(下)三角矩阵</b>
+</p>
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_df21256961d466e2c8a35b26968711bdb30370c4.png" alt="\begin{de}[上(下)三角矩阵定义]
+\end{de}"></p>
+</div>
+<p>
+主对角线下(上)方的元素全为 0 的方阵称为上(下)三角矩阵.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_6cb0ff2affde6084ad45e93faba2271f5be90b4c.png" alt="\begin{mingti}[三角矩阵命题]
+\end{mingti}"></p>
+</div>
+<p>
+两个 n 级上三角矩阵 A 和 B 的乘积仍为上三角矩阵, 并且 AB 的住对角元等于 A 与 B 的相应主对角元的乘积.
+</p>
+
+<p>
+<b>初等矩阵</b>
+</p>
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_7f31a56a81aeae08db6e57d9be7de668bbe72f2f.png" alt="\begin{de}[初等矩阵定义]
+\end{de}"></p>
+</div>
+<p>
+由单位矩阵经过一次初等行(列)变换得到的矩阵称为 <b>初等矩阵</b>.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_e75eb052c814bed7a093639778687fa7a4a4f379.png" alt="\begin{thm}[初等矩阵定理]
+\end{thm}"></p>
+</div>
+<p>
+用初等矩阵左(右)乘一个矩阵 A, 就相当于 A 作了一次初等行(列)变换.
+</p>
+
+<p>
+<b>对称矩阵</b>
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_2d1a5f7d7ce0dd59f2a726b89e93492afb4ea35e.png" alt="\begin{de}[对称矩阵定义]
+\end{de}"></p>
+</div>
+<p>
+一个矩阵如果满足 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_ea4908fbc07c39e2a76b8ff45d1276afc15f025f.png" alt="\(A = A'\)">, 那么称 A 是 <b>对称矩阵</b>.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_9bd2db5d3e0490f3ae5461bc2ed641492bf71365.png" alt="\begin{mingti}[对称矩阵命题-1]
+\end{mingti}"></p>
+</div>
+<p>
+设 A, B 都是 n 级对称矩阵, 则 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_ff4d7779b89cf619570d477c680a200b81bb526e.png" alt="\(A+B, kA (k \in K)\)"> 都是对称矩阵.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_eaf983037c51f1afc43e75b02c9d75173ce562e4.png" alt="\begin{mingti}[对称矩阵命题-2]
+\end{mingti}"></p>
+</div>
+<p>
+设 A, B 都是 n 级对称矩阵, 则 AB 是对称矩阵的充分必要条件是 A 与 B 可以交换.
+</p>
+
+<p>
+<b>斜对称矩阵</b>
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_79663cf9735323e426f2631ecf06cb0e611f64b7.png" alt="\begin{de}[斜对称矩阵定义]
+\end{de}"></p>
+</div>
+<p>
+一个矩阵如果满足 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_59e45ccbffde767c75ff51101008c3417daaf99b.png" alt="\(A = -A'\)">, 那么称 A 是 <b>斜对称矩阵</b>.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_94a677ca132a0eaf2b756562542ada79627ae2ef.png" alt="\begin{mingti}[斜对称矩阵命题]
+\end{mingti}"></p>
+</div>
+<p>
+数域 K 上的奇数级斜对称矩阵的行列式等于 0.
+</p>
+</div>
+</div>
+
+
+
+
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">矩阵乘积的秩与行列式</h2>
+<div class="outline-text-2" id="text-3">
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_409151323ac83f67062431148b46badfedf2a1be.png" alt="\begin{thm}[矩阵乘积秩定理]
+\end{thm}"></p>
+</div>
+<p>
+设 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_aa7b7ea97111f26123ec261340ab5402ce92c96f.png" alt="\(A=(a_{ij})_{s \times n}, B=(b_{ij})_{n \times m}\)">, 则 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_1bf772de79689e0de48e4568bb7d2202d3168946.png" alt="\[ rank(AB) ⩽ rank(A) + rank(B) \]">.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_db70890879b4b7b7c7731e8e013ff74eb1150f23.png" alt="\begin{thm}[矩阵乘积行列式定理]
+\end{thm}"></p>
+</div>
+<p>
+设 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_5d0789f4e9d1d380ee4a06f740959d1031d9b732.png" alt="\(A=(a_{ij})_{n \times n}, B=(b_{ij})_{n \times n}\)">, 则 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_f241c1ee9b10c32929c0922c5f140e758c1f966a.png" alt="\[|AB| = |A||B|\]">. 可以推广到 n 级矩阵相乘的情形,
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_5a1abbc50664897600dc1ab70ed83a3c3bcef76f.png" alt="\begin{thm}[Binet-Cauchy 公式]
+\end{thm}"></p>
+</div>
+<p>
+设 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_9e4445e7255482b24893ae0e1ef1012738fbbc0f.png" alt="\(A=(a_{ij})_{s \times n}, B=(b_{ij})_{n \times s}\)">, 
+(1) 如果 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_9c17cd99eba2cc2276272225249d238f040219b0.png" alt="\(s &amp;gt; n\)">, 那么 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_e0a3c6146ea170696a74cb5eeffd284c0c5b6f66.png" alt="\(|AB|=0\)">;
+(2) 如果 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_de25b227b42b7f6fdae52a127d7ea94e52fe128f.png" alt="\(s \le n\)">, 那么 |AB| 等于 A 的所有 s 阶子式与 B 的 s 阶子式的乘积之和.
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">可逆矩阵</h2>
+<div class="outline-text-2" id="text-4">
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_6da9ee0ce93308f273e915af6d6ba94269849869.png" alt="\begin{de}[可逆矩阵定义]
+\end{de}"></p>
+</div>
+<p>
+对于数域 K 上的矩阵 A, 如果存在数域 K 上的矩阵 B, 使得 
+</p>
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_328c40abbcdba9eb860ffaf099eaa7b2c2c5659c.png" alt="\begin{equation}
+AB = BA = I
+\end{equation}"></p>
+</div>
+<p>
+那么称 A 是 <b>可逆矩阵(或非奇异矩阵)</b>. 
+</p>
+
+<p>
+可逆矩阵一定是方阵, 并且逆矩阵是唯一的.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_df2a09480ae5f05ea90cc646e116cffecc5af6c9.png" alt="\begin{de}[逆矩阵定义]
+\end{de}"></p>
+</div>
+<p>
+如果 A 是可逆矩阵, 那么适合 (<a href="../Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html">1</a>) 的矩阵 B 称为 A 的 <b>逆矩阵</b>, 记作 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_907d22b4038a3af2f65d6c1ad1d13d3d0f930e5c.png" alt="\(A^{-1}\)">.
+</p>
+
+<p>
+如果 A 是可逆矩阵, 那么 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_24eb014d4e0d8f795871319dcb2733f307df0780.png" alt="\(AA^{-1}=A^{-1}A=I\)">, 于是 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_907d22b4038a3af2f65d6c1ad1d13d3d0f930e5c.png" alt="\(A^{-1}\)"> 也是可逆矩阵, 并且 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_181f3ae161583a79d9526ff0f1b267a28e273bf6.png" alt="\((A^{-1})^{-1}=A\)">, 可以看出 n 级矩阵 A 可逆的必要条件是 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_5a577aa367733c8dddd0f497c5e3e05c2db62222.png" alt="\[|A| ≠ 0\]">.
+</p>
+
+<p>
+令 
+</p>
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_3f4592fc16fd667a3315a8756b21aa551a29dc9e.png" alt="\begin{equation*}
+A^* = \left\{
+\begin{split}
+&amp;amp; A_{11} \quad &amp;amp; A_{21} \quad &amp;amp; \cdots \quad &amp;amp; A_{n1} \\
+&amp;amp; A_{12}_{} \quad &amp;amp; A_{22} \quad &amp;amp; \cdots \quad &amp;amp; A_{n2} \\
+&amp;amp; \vdots \quad &amp;amp; \vdots \quad &amp;amp; \quad &amp;amp; \vdots \\
+&amp;amp; A_{1n} \quad &amp;amp; A_{2n} \quad &amp;amp; \cdots \quad &amp;amp;A_{nn} \\
+\end{split}
+\right\}
+\end{equation*}"></p>
+</div>
+<p>
+称 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_fde10a0d9a7a76d0101ff402ca6a72f30f9deb35.png" alt="\(A^*\)"> 是 A 的 <b>伴随矩阵</b>. 有
+</p>
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_27d265fbb665e6f77c128366b27ceca0f5c87a52.png" alt="\begin{equation*}
+\left\{
+\begin{split}
+&amp;amp; a_{11} \quad &amp;amp; a_{12} \quad &amp;amp; \cdots \quad &amp;amp; a_{1n} \\
+&amp;amp; a_{21} \quad &amp;amp; a_{22} \quad &amp;amp; \cdots \quad &amp;amp; a_{2n} \\
+&amp;amp; \vdots \quad &amp;amp; \vdots \quad &amp;amp; \quad &amp;amp; \vdots \\
+&amp;amp; a_{n1} \quad &amp;amp; a_{n2} \quad &amp;amp; \cdots \quad &amp;amp;a_{nn} \\
+\end{split}
+\right\}
+\left\{
+\begin{split}
+&amp;amp; A_{11} \quad &amp;amp; A_{21} \quad &amp;amp; \cdots \quad &amp;amp; A_{n1} \\
+&amp;amp; A_{12}_{} \quad &amp;amp; A_{22} \quad &amp;amp; \cdots \quad &amp;amp; A_{n2} \\
+&amp;amp; \vdots \quad &amp;amp; \vdots \quad &amp;amp; \quad &amp;amp; \vdots \\
+&amp;amp; A_{1n} \quad &amp;amp; A_{2n} \quad &amp;amp; \cdots \quad &amp;amp;A_{nn} \\
+\end{split}
+\right\} \\ \left\{
+\begin{split}
+&amp;amp; |A| \quad &amp;amp; 0 \quad &amp;amp; \cdots \quad &amp;amp; 0_{} \\
+&amp;amp; 0_{} \quad &amp;amp; |A| \quad &amp;amp; \cdots \quad &amp;amp; 0_{} \\
+&amp;amp; \vdots \quad &amp;amp; \vdots \quad &amp;amp; \quad &amp;amp; \vdots \\
+&amp;amp; 0_{} \quad &amp;amp; 0_{} \quad &amp;amp; \cdots \quad &amp;amp;|A| \\
+\end{split}
+\right\} = |A|I
+\end{equation*}"></p>
+</div>
+<p>
+即 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_1f488b1c849014051e12b780f652135bc83665fb.png" alt="\[AA^*=I\]">, 同理可得 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_f1fd401537b493f4ac1278f1a1c486188839e0d6.png" alt="\[A^*A=I\]">.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_e1b9eba2316ff70233a98085bbe0e7486285a1a3.png" alt="\begin{thm}[可逆矩阵定理]
+\end{thm}"></p>
+</div>
+<p>
+数域 K 上的 n 级矩阵 A 可逆的充分必要条件是 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_b258c2485943a2c49b31fa24602690d46c3b111e.png" alt="\(|A| \neq 0\)">. 当 A 可逆时, 
+</p>
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_34a20056408deb85537d35762a9bec1ad0e73487.png" alt="\begin{equation}
+  A^{-1} = \frac{1}{|A|}A^*
+\end{equation}"></p>
+</div>
+
+<p>
+数域 K 上的 n 级矩阵 A 可逆还可以推出一些充分必要条件:
+</p>
+
+<p>
+数域 K 上的 n 级矩阵 A 可逆 <br><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_bd79068ba68b623f52a65b84f4d04a917128f508.png" alt="\(⟺\)"> A 为满秩矩阵
+<img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_bd79068ba68b623f52a65b84f4d04a917128f508.png" alt="\(⟺\)"> A 的行(列)向量组线性无关
+<img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_bd79068ba68b623f52a65b84f4d04a917128f508.png" alt="\(⟺\)"> A 的行(列)向量组为 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_0b20f7646222454f795423e3fe83323df9e96a50.png" alt="\(K^n\)"> 的一个基
+<img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_bd79068ba68b623f52a65b84f4d04a917128f508.png" alt="\(⟺\)"> A 的行(列)空间等于 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_0b20f7646222454f795423e3fe83323df9e96a50.png" alt="\(K^n\)"></p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_9f9e7629c333c56db474f625bfb0236e36551848.png" alt="\begin{mingti}[可逆矩阵命题]
+\end{mingti}"></p>
+</div>
+<p>
+设 A 与 B 都是数域 K 上的 n 级矩阵, 如果 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_40b51762edf5e6d770b2de64a3fa9233e65af861.png" alt="\(AB=I\)">, 那么 A 与 B 都是可逆矩阵, 并且 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_4cb97a25cdbe50dbde5d50e300a1fef334b07681.png" alt="\(A^{-1}=B, B^{-1}=A\)">.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_b796fbea9e5d5793d93815171c883ced9337078c.png" alt="\begin{proposition}[可逆矩阵性质-1]
+\end{proposition}"></p>
+</div>
+<p>
+单位矩阵 I 可逆, 并且 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_de9534596f05cbedd3dbb031660b75df64dacb13.png" alt="\(I^{-1} =I\)"></p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_07422b42cc53c0cbec6fda52d7ed0d64c6dd31f2.png" alt="\begin{proposition}[可逆矩阵性质-2]
+\end{proposition}"></p>
+</div>
+<p>
+如果 A 可逆, 那么 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_49cb768a98c25609c5738b2caa90357370df4b7c.png" alt="\(A^{-1}^{}\)"> 也可逆, 且 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_181f3ae161583a79d9526ff0f1b267a28e273bf6.png" alt="\((A^{-1})^{-1}=A\)"></p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_f28d55f2a74c9f7dbfec19b9702bae7957c88441.png" alt="\begin{proposition}[可逆矩阵性质-3]
+\end{proposition}"></p>
+</div>
+<p>
+如果 n 级矩阵 A, B 都可逆, 那么 AB 也可逆, 并且 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_dfcdb6063165c0f9154e37e7036ad4959b5c6035.png" alt="\((AB)^{-1}=B^{-1}A^{-1}\)">.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_8ec0c513c685b8dc367991215a270cf7fc29c486.png" alt="\begin{proposition}[可逆矩阵性质-4]
+\end{proposition}"></p>
+</div>
+<p>
+如果 A 可逆, 那么 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_53cc441bc505e91af2c4d2baf4e6e034019cb677.png" alt="\(A'\)"> 也可逆, 并且 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_a1271bd644fe4ba5158201afd8011fb53e75d774.png" alt="\((A')^{-1}=(A^{-1})'\)">.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_7d801cca801a26bf964b2035dd1e9c90f535a6f7.png" alt="\begin{proposition}[可逆矩阵性质-5]
+\end{proposition}"></p>
+</div>
+<p>
+可逆矩阵经过初等行变换化成的简化阶梯型矩阵一定是单位矩阵.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_61a4230a78ae1a39318f48d914ff418916b01914.png" alt="\begin{proposition}[可逆矩阵性质-6]
+\end{proposition}"></p>
+</div>
+<p>
+矩阵 A 可逆的充分必要条件是它可以表示成一些初等矩阵的乘积.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_93b30c1c6f7f4ce0033f25d1bce7a1bfa3779391.png" alt="\begin{proposition}[可逆矩阵性质-7]
+\end{proposition}"></p>
+</div>
+<p>
+用一个可逆矩阵左(右)乘一个矩阵 A, 不改变矩阵的秩.
+</p>
+
+<p>
+设 A 是 n 级可逆矩阵, 则存在初等矩阵 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_ba3f1e49a2f6e1ea61e40aa31a2fd41f647e7950.png" alt="\(P_1, P_2, ⋯, P_t\)">, 使得 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_0b79868ad8077aa24310b84e52c05ed84ee2380f.png" alt="\(P_t \cdots P_2 P_1 = I\)">, 根据 <a href="../Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html">1</a> 可以得到 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_ee7a39b4f2f66de0427add786b7db28afb9376ff.png" alt="\(P_t \cdot \P_2P_1I = A^{-1}\)">, 可以得出
+<img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_2e5a4ba1d388f7d06aed58fa95254a2106028a3b.png" alt="\[A ⟶ I, I ⟶ A^{-1}\]">, 于是有 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_e9ed245971be07f85af9ea5fc233e15a13505e55.png" alt="\[(A, I) = (I, A^{-1})\]">, 这给出了求逆矩阵的另一种方法, 称它为 <b>初等行变化法</b>.
+</p>
+
+<p>
+设矩阵 A 可逆, 解矩阵方程 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_182acf51a79c9a3d96acf2e1612e853ad17ffff4.png" alt="\(AX=B\)"> 时, 可以在两边左乘 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_907d22b4038a3af2f65d6c1ad1d13d3d0f930e5c.png" alt="\(A^{-1}\)">, 得到 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_c55ff8d0c06cbe7503d8cd31d6469e6c619a7891.png" alt="\(A^{-1}AB=A^{-1}B\)">, 由此得出 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_76350ce91761c1318ed8bbc7fabb256ee17b94ec.png" alt="\(X=A^{-1}B\)">.
+</p>
+
+<p>
+设矩阵 A 可逆, 解矩阵方程 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_1e1884af7a9f695d72e9c11acd22769d005e9a5d.png" alt="\(XA=C\)"> 时, 可以在两边右乘 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_907d22b4038a3af2f65d6c1ad1d13d3d0f930e5c.png" alt="\(A^{-1}\)">, 得到 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_6b14cec9891ce1efa9e3095ab4c7ae3f868fe661.png" alt="\(XA^{-1}A=CA^{-1}\)">, 由此得出 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_59cabe4b2e14aafcfa627ddfcaf7bc9e66c17339.png" alt="\(X=CA^{-1}\)">.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">矩阵的分块</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+由矩阵 A 的若干行, 若干列的交叉位置的元素按原来的顺序排成的矩阵称为 A 的一个 <b>子矩阵</b>.
+</p>
+
+<p>
+把一个矩阵 A 的行分成若干组, 列也分成若干组, 从而 A 被分成若干个子矩阵, 把 A 看成是由这些子矩阵组成的, 这称为 <b>矩阵的分块</b>, 这种由子矩阵组成的矩阵称为 <b>分块矩阵</b>.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_e3c36e1492ab2e6bd9a8a5b8e6d7c7c348f1ca02.png" alt="\begin{mingti}[分块矩阵命题-1]
+\end{mingti}"></p>
+</div>
+<p>
+设 A 是 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_b57e699672819afa1e82577bdb095b8501a67de0.png" alt="\(s \times n\)"> 矩阵, B 是 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_df2eacbc8226c60567b8681d8e02191a64ed4f83.png" alt="\(n \times m\)"> 矩阵, B 的列向量组为 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_42154274f7a33344c0c04bb6c75970c1aee1b338.png" alt="\(\symbf{β_1, β_2, ⋯, \beta_m}\)">. 则 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_387c572e2509e166416141e60db8d9f6de638e46.png" alt="\[AB = A(\symbf{β_1, β_2, ⋯, \beta_m})=(A\symbf{\beta_1}, A\symbf{β_2}, ⋯, A\symbf{β_m})\]">.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_6196efd738bd6a82b477ccb61beafc45a9bafefb.png" alt="\begin{cor}[分块矩阵推论-1]
+\end{cor}"></p>
+</div>
+<p>
+设 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_ffc6bcb55ba944b4538612044b60c2ecc9cbbd9d.png" alt="\(A_{s \times n} \neq 0, B_{n×m}\)"> 的列向量组是 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_42154274f7a33344c0c04bb6c75970c1aee1b338.png" alt="\(\symbf{β_1, β_2, ⋯, \beta_m}\)">. 则
+<img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_c693f9e545e25a1c2d021bc3332c8b19967cb172.png" alt="\(AB = 0 \quad ⟺ \quad \symbf{β_1, β_2, ⋯, \beta_m}\)"> 都是齐次线性方程组 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_309930a8e0c90ad0d149f9edbcf6986932f7f2c5.png" alt="\(AX=0\)"> 的解.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_c1c0b29da0c0380ea8975229f0ac7b7be2e0da6a.png" alt="\begin{cor}[分块矩阵推论-2]
+\end{cor}"></p>
+</div>
+<p>
+设 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_ffc6bcb55ba944b4538612044b60c2ecc9cbbd9d.png" alt="\(A_{s \times n} \neq 0, B_{n×m}\)"> 的列向量组是 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_42154274f7a33344c0c04bb6c75970c1aee1b338.png" alt="\(\symbf{β_1, β_2, ⋯, \beta_m}\)">; <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_a341a0e6a19d0c8f556cd0bb4d7d80ad0f06729c.png" alt="\(C_{s×m}\)"> 的列向量组是 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_f9050105bac75cc516945bcf35e02cf712d37df7.png" alt="\(\symbf{δ_1, δ_2, ⋯, δ_m}\)">. 则
+<img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_defa6fa6a1539db16f2c72b7b8cd8d290c98e598.png" alt="\(AB = C \quad ⟺ \quad \symbf{β_j}\)"> 是齐次线性方程组 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_75ec235bb53a8e8d812d9aa943a36e09a5c3159a.png" alt="\(A \symbf{X}=\symbf{δ_j}, \, j = 1,2,⋯,m\)"> 的一个解.
+</p>
+
+
+
+<div class="figure">
+<p><img src="../Data%20Science/MSimg/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/screenshot_2017-09-16_11-08-22.png" alt="screenshot_2017-09-16_11-08-22.png"></p>
+</div>
+
+
+<p>
+<img src="../Data%20Science/MSimg/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/screenshot_2017-09-16_11-11-03.png" alt="screenshot_2017-09-16_11-11-03.png">
+上图中, 进行初等行变换即利用线性方程组的正常解法.
+</p>
+
+<p>
+主对角线上的所有子矩阵都是方阵, 而位于主对角线下(上)的所有子矩阵都为 0 的分块矩阵称为 <b>分块上(下)三角矩阵</b>, 容易得到
+</p>
+
+<div class="figure">
+<p><img src="../Data%20Science/MSimg/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/screenshot_2017-09-16_11-18-21.png" alt="screenshot_2017-09-16_11-18-21.png"></p>
+</div>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_c9e9adac1b9a7fc27a2956efaa3874e209ca5b13.png" alt="\begin{mingti}[分块矩阵命题-2]
+\end{mingti}"></p>
+</div>
+<p>
+设 A, B 分别是 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_e09bec5824d493bc899b4a1b3f036032afea96d4.png" alt="\(s\times n, n×s\)"> 矩阵, 则
+</p>
+<ol class="org-ol"><li>
+</li></ol>
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_f5bbe363504897d33ce846e64c7105d02c35e441.png" alt="\begin{equation*}
+\left|
+\begin{split}
+I_n \quad &amp;amp; B \\
+A \quad &amp;amp; I_s \\
+\end{split}
+\right| = |I_s - AB|
+\end{equation*}"></p>
+</div>
+<ol class="org-ol"><li>
+</li></ol>
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_5aca6dd641d8f63e8c06799cc7cae03111ef3125.png" alt="\begin{equation*}
+\left|
+\begin{split}
+I_n \quad &amp;amp; B \\
+A \quad &amp;amp; I_s \\
+\end{split}
+\right| = |I_n - BA|
+\end{equation*}"></p>
+</div>
+<ol class="org-ol">
+<li><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_c2b24bfb7ecb1b816a1788ce073288c371a0a593.png" alt="\(|I_s - AB| = |I_n| - BA\)"></li>
+</ol>
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_c99945a4fab14877e001e00c1e18148bbef29e51.png" alt="\begin{mingti}[分块矩阵命题-3]
+\end{mingti}"></p>
+</div>
+<p>
+设
+</p>
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_cae0f36ec6f7033fc9746212a5b6cbeb9980c5ee.png" alt="\begin{equation*}
+A = \left\{
+\begin{split}
+A_1 \quad &amp;amp; A_3 \\
+0 \quad &amp;amp; A_2 \\
+\end{split}
+\right\}
+\end{equation*}"></p>
+</div>
+<p>
+其中, <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_289531c20131bdf0c1df13a939b453b62bb3ce47.png" alt="\(A_1, A_2\)"> 都是方阵. 则 A 可逆当且仅当 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_289531c20131bdf0c1df13a939b453b62bb3ce47.png" alt="\(A_1, A_2\)"> 都可逆, 此时
+</p>
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_3f869411339d8dfe102c9d40c503dd1215105425.png" alt="\begin{equation*}
+A^{-1} = \left\{
+\begin{split}
+A_1^{-1} \quad &amp;amp; -A_1^{-1}A_3A_2^{-1} \\
+0 \quad &amp;amp; A_2^{-1} \\
+\end{split}
+\right\}
+\end{equation*}"></p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6">正交矩阵 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_bf9b0943e6cc090fd1bc7580acb8b5c0f6791acf.png" alt="\(⋅\)"> 欧几里得空间 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_26eaef4011870bf0cd2f4f0413f0228dd2f0de37.png" alt="\(R^n\)">
+</h2>
+<div class="outline-text-2" id="text-6">
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_ac07bc0e7f0f6defeb9418281b7702df620f5fce.png" alt="\begin{de}[正交矩阵定义]
+\end{de}"></p>
+</div>
+<p>
+实数域上的 n 级矩阵 A 如果满足 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_321ae7fd3982b9f3f1f8959c26fb55f3b5ef1039.png" alt="\(AA'=I\)">, 那么称 A 是 <b>正交矩阵</b>.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_0bc4b2f648654891125f406aff0215e6b890daa3.png" alt="\begin{mingti}[正交矩阵命题-1]
+\end{mingti}"></p>
+</div>
+<p>
+实数域上的 n 级矩阵 A 是正交矩阵 <br><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_5d5ac95b4bc31d3a3f93459a9130f04d09631bf2.png" alt="\(⟺ \quad AA' = I\)"><br><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_bd79068ba68b623f52a65b84f4d04a917128f508.png" alt="\(⟺\)"> A 可逆, 且 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_160308854f5e595c1a13e426785b35a50fe70d00.png" alt="\(A^{-1}=A'\)"><br><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_bd79068ba68b623f52a65b84f4d04a917128f508.png" alt="\(⟺\)"><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_cc85a7f02a888b4639019b39c19146418f86e7e4.png" alt="\(A'A=I\)"></p>
+
+<p>
+正交矩阵具有如下性质:
+</p>
+<ol class="org-ol">
+<li>I 是正交矩阵;
+</li>
+<li>如 A 与 B 都是 n 级正交矩阵, 则 AB 也是正交矩阵;
+</li>
+<li>若 A 是正交矩阵, 则 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_d052d0599454b1954f0230d8a214753f0d550800.png" alt="\(A^{-1}_{} or A'\)"> 也是正交矩阵;
+</li>
+<li>若 A 是正交矩阵, 则 |A|=1 或 -1.
+</li>
+</ol>
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_a1d1b81d794c004383809780a157d70be15539df.png" alt="\begin{mingti}[正交矩阵命题-2]
+\end{mingti}"></p>
+</div>
+<p>
+设实数域上的 n 级矩阵 A 的行向量为 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_3d7c1f851b7d08331b5e9d063dd21583ebf85478.png" alt="\(\symbf{γ_1, γ_2, ⋯, γ_n}\)">; 列向量为 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_4913897f38a377c333eda9756739ec2aa3d9c344.png" alt="\(\symbf{α_1, α_2, ⋯, α_m}\)">, 则
+</p>
+<ol class="org-ol">
+<li>A 为正交矩正当且仅当 A 的行向量组满足
+</li>
+</ol>
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_c3b1dcc6f54834f7e00afec367b54cc2283190a9.png" alt="\begin{equation*}
+\symbf{γ_iγ_j'} = \left\{
+\begin{split}
+&amp;amp;1, \quad if \quad i=j, \\
+&amp;amp;0, \quad if \quad i ≠ j.
+\end{split}
+\right
+\end{equation*}"></p>
+</div>
+<ol class="org-ol">
+<li>A 为正交矩正当且仅当 A 的列向量组满足
+</li>
+</ol>
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_30009dc2b505b399030d0fb622041675f3a952d4.png" alt="\begin{equation*}
+\symbf{α_i'α_j} = \left\{
+\begin{split}
+&amp;amp;1, \quad if \quad i=j, \\
+&amp;amp;0, \quad if \quad i ≠ j.
+\end{split}
+\right
+\end{equation*}"></p>
+</div>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_d82a4dfccbdba288ebbbd0af839d3ae3a355644f.png" alt="\begin{de}[内积定义]
+\end{de}"></p>
+</div>
+<p>
+在 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_d1091f980034b8b7b25e8583537072f83360ab42.png" alt="\(\symbf{R^n}\)"> 中, 任给 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_d4585295e88f1e5c651001dac98934ac1f363ca8.png" alt="\(\symbf{α}=(a_1, a_2,⋯,a_n), \, \symbf{β}=(b_1,b_2,⋯,b_n)\)">, 规定
+</p>
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_a7e752cd464750b6e1ae982266907f80bec31d13.png" alt="\begin{equation}
+(\symbf{α,β}) \xlongequal{def} a_1b_1+a_2b_2+⋯+a_nb_n
+\end{equation}"></p>
+</div>
+<p>
+这个二元函数值 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_2fde9a051279e3b18cd083f44df0fa8153c879aa.png" alt="\((\symbf{α,β})\)"> 称为 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_d1091f980034b8b7b25e8583537072f83360ab42.png" alt="\(\symbf{R^n}\)"> 的一个 <b>内积</b> (通常称它为 <b>标准内积</b>). (<a href="../Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#1">1</a>)也可以写成 
+</p>
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_b57d168b61aae364df82b34b7197672740532b3f.png" alt="\begin{equation}
+(\symbf{α,β}) = \symbf{αβ'}
+\end{equation}"></p>
+</div>
+
+<p>
+根据定义 (<a href="../Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html">1</a>) 可以得到内积有如下性质:
+</p>
+<ol class="org-ol">
+<li>
+<img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_6c22674a71e2df6c08dfebc124d4e1babd8449f9.png" alt="\((\symbf{α,β}) = (\symbf{β,α})\)"> (<b>对称性</b>)
+</li>
+<li>
+<img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_b710207710ac44c573def7130e2d749e6f4e2703.png" alt="\((\symbf{α+γ,β}) = (\symbf{α+β}) + (\symbf{γ+β})\)"> (线性之一)
+</li>
+<li>
+<img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_f1b31834648434b113e100641a958d280325668d.png" alt="\((k\symbf{α}\symbf{β}) = k(\symbf{β,α})\)"> (线性之二)
+</li>
+<li>
+<img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_b1566f9bcf1fb37cf2210595f636473ae37154ab.png" alt="\((\symbf{α,α}) ⩾ 0\)">, 等号成立当且仅当 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_2be9d7596b6f165a2494a2414536b3f9e81908c5.png" alt="\(\symbf{α=0}\)">. (正定性)
+</li>
+</ol>
+<p>
+如果 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_1ad213d36159dbff461937fe3f8cecb5ce3ab0b3.png" alt="\(\symbf{α,β}\)"> 是列向量, 那么标准内积可写成 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_fc0532f31566d5096ce5fcbab2fa9f0d60f1f23e.png" alt="\((\symbf{α,β})=(\symbf{α'β})\)"></p>
+
+<p>
+n 维向量空间 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_d1091f980034b8b7b25e8583537072f83360ab42.png" alt="\(\symbf{R^n}\)"> 有了标准内积以后, 就称 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_d1091f980034b8b7b25e8583537072f83360ab42.png" alt="\(\symbf{R^n}\)"> 为一个 <b>欧几里得空间</b>.
+</p>
+
+<p>
+在欧几里得空间  <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_d1091f980034b8b7b25e8583537072f83360ab42.png" alt="\(\symbf{R^n}\)"> 中, 向量 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_7fd28faf958ea7016b3159af8f5e6832a684407f.png" alt="\(\symbf{α}\)"> 的长度规定为
+<img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_0517053ec8c5277138bd419d64d14ba42b8c6eb9.png" alt="\[|\symbf{α}| \xlongequal{def} \sqrt{(\symbf{α,α})}\]"></p>
+
+<p>
+长度为 1 的向量称为 <b>单位向量</b>, 显然, <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_7fd28faf958ea7016b3159af8f5e6832a684407f.png" alt="\(\symbf{α}\)"> 为单位向量的充要条件是 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_578a425a78c6c4f41d90a72cf81211c3356147b1.png" alt="\(\symbf{(α, α)}=1\)">, 对于 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_b6a956f078a46bdf009d1d8ea561dc24c2c784b5.png" alt="\(\symbf{α}≠0\)">, 有 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_e89a9dea3c42e17ae9e89e7e54f4edac8a75b3f6.png" alt="\(\frac{1}{|\symbf{α}|}\symbf{α}\)"> 一定是单位向量, 称向量的 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_7fd28faf958ea7016b3159af8f5e6832a684407f.png" alt="\(\symbf{α}\)"><b>单位化</b>.
+</p>
+
+<p>
+在欧几里得空间 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_d1091f980034b8b7b25e8583537072f83360ab42.png" alt="\(\symbf{R^n}\)"> 中, 如果 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_ee3d5baae04509b08786029d6a6a3b8a20c223ff.png" alt="\((\symbf{α, β})=0\)">, 那么称 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_7fd28faf958ea7016b3159af8f5e6832a684407f.png" alt="\(\symbf{α}\)"> 与 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_087b2a26927615d599114aca99275aecd3ca4b0a.png" alt="\(\symbf{β}\)"> 是 <b>正交</b> 的, 记作 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_a08f2b2994b85b8c3847393da659eea57106c8cf.png" alt="\(\symbf{α} \bot \symbf{β}\)">, 显然, 零向量与任何向量正交.
+</p>
+
+<p>
+在欧几里得空间 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_d1091f980034b8b7b25e8583537072f83360ab42.png" alt="\(\symbf{R^n}\)"> 中, 由非零向量组成的向量组如果其中每两个不同的向量都正交, 那么称它们为 <b>正交向量组</b>, 仅由一个非零向量组成的向量组也是正交向量组, 如果正交向量组的每个向量都是单位向量, 那么称它为 <b>正交单位向量组</b>.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_d66b83450e5f2791181f308d03e9b8ada7871e0b.png" alt="\begin{mingti}[欧几里得空间命题-1]
+\end{mingti}"></p>
+</div>
+<p>
+在欧几里得空间 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_d1091f980034b8b7b25e8583537072f83360ab42.png" alt="\(\symbf{R^n}\)"> 中, 正交向量组一定是线性无关的.
+</p>
+
+<p>
+根据命题(<a href="../Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#1">1</a>)可以得到, 在欧几里得空间 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_d1091f980034b8b7b25e8583537072f83360ab42.png" alt="\(\symbf{R^n}\)"> 中, n 个向量组成的正交向量组一定是 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_d1091f980034b8b7b25e8583537072f83360ab42.png" alt="\(\symbf{R^n}\)"> 的一个基, 称它为 <b>正交基</b>, n 个单位向量组成的正交向量组称为 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_d1091f980034b8b7b25e8583537072f83360ab42.png" alt="\(\symbf{R^n}\)"> 的一个 <b>标准正交基</b>, 显然 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_d4dae322b5ede4ccb27623bcf789d28da4133a53.png" alt="\(\symbf{ε_1, ε_2, ⋯, ε_n}\)"> 是 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_d1091f980034b8b7b25e8583537072f83360ab42.png" alt="\(\symbf{R^n}\)"> 的一个 <b>标准正交基</b>.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_2601f05c0b40052edf029e43aa1653153b3a4d93.png" alt="\begin{mingti}[欧几里得空间命题-2]
+\end{mingti}"></p>
+</div>
+<p>
+实数域上的 n 级矩阵 A 是正交矩阵的充要条件是: A 的行(列)向量组是欧几里得空间 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_d1091f980034b8b7b25e8583537072f83360ab42.png" alt="\(\symbf{R^n}\)"> 的一个标准正交基.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_67c00d1a4e5c55d433f97cbf1861a217e769b895.png" alt="\begin{thm}[构造标准正交基定理]
+\end{thm}"></p>
+</div>
+<p>
+设 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_2fb7baaae375255048613537cc0a47a438acbf8a.png" alt="\(\symbf{α_1,α_2,⋯,α_s}\)"> 是欧几里得空间 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_d1091f980034b8b7b25e8583537072f83360ab42.png" alt="\(\symbf{R^n}\)"> 中一个线性无关的向量组, 令
+</p>
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_dbe43c7d2e653e4752338c145c673066b5b1dd59.png" alt="\begin{equation}
+\begin{split}
+  \symbf{β_1} \, &amp;amp;= \, \symbf{\alpha_1} \\
+  \symbf{β_2} \, &amp;amp;= \, \symbf{\alpha_2} - \frac{(\symbf{\alpha_2,\beta_1})}{(\symbf{\beta_1,\beta_1})}\symbf{beta_1} \\
+  \cdots \,&amp;amp;= \quad\, \cdots \\
+  \symbf{β_s} \, &amp;amp;= \, \symbf{\alpha_s} - \sum_{j=1}^{s-1} \frac{(\symbf{\alpha_s,\beta_j})}{(\symbf{\beta_j,\beta_j})}\symbf{\beta_j}
+\end{split}
+\end{equation}"></p>
+</div>
+
+<p>
+定理(<a href="../Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html">1</a>)给出了从一个线性无关的向量组 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_2fb7baaae375255048613537cc0a47a438acbf8a.png" alt="\(\symbf{α_1,α_2,⋯,α_s}\)"> 构造正交向量组的方法, 称为 <b>施密特(Schmidt)正交化过程</b>, 再将每个正交向量标准化, 即可得到单位正交向量组, 且与 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_2fb7baaae375255048613537cc0a47a438acbf8a.png" alt="\(\symbf{α_1,α_2,⋯,α_s}\)"> 等价.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7">
+<img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_0b20f7646222454f795423e3fe83323df9e96a50.png" alt="\(K^n\)"> 到 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_32c80f5f70cac53e5978524b9688f6bdc1acc851.png" alt="\(K^s\)"> 的线性映射</h2>
+<div class="outline-text-2" id="text-7">
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_6415330deba44fad33269dca1e383c335b5aaa0e.png" alt="\begin{de}[映射定义]
+\end{de}"></p>
+</div>
+<p>
+设 S 和 S' 是两个集合, 如果存在一个对于法则 f, 使得集合 S 中的每一个元素 a, 都有集合 S' 中唯一确定的元素 b 与它对应, 那么称 f 是 S 到 S' 的一个 <b>映射</b>, 记作
+</p>
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_ebab3bcf7978713e119f15755741f2c57541dc87.png" alt="\begin{equation*}
+\begin{split}
+f: \, &amp;amp;S ⟶ S' \\
+ &amp;amp;a ⟼ b
+\end{split}
+\end{equation*}"></p>
+</div>
+<p>
+其中, b 称为 a 在 f 下的 <b>象</b>, a 称为 b 在 f 下的 <b>原象</b>. a 在 f 下的象用符号 f(a) 或 fa 表示, 于是映射 f 也可以记成 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_a3d5caa055f3e12084ef5cc152557ab90a0b624b.png" alt="\[f(a)=b, \, a\in S.\]"></p>
+
+<p>
+设 f 是集合 S 到 S' 的一个映射, 则把 S 叫做映射 f 的 <b>定义域</b>, 把 S' 叫做 f 的 <b>陪域</b>, S 的所有元素在 f 下的象组成的集合叫做 f 的 <b>值域</b> 或 f 的 <b>象</b>. 记作 f(S) 或 Imf. 即 
+<img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_a4cbf00342987edc66f0dbaa71589f80df0b2cf9.png" alt="\[f(S) \xlongequal{def} \{f(a) | a \in S\}={b \in S' | ∃ a \in S \, to\, f(a)=b} \]">, 容易看出 f 的值域是 f 的陪域的子集.
+</p>
+
+<p>
+设 f 是集合 S 到集合 S' 的一个映射, 如果 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_d04f1734d611116906c139f015ed309bde24cd57.png" alt="\(f(S)=S'\)">, 那么称 f 是 <b>满射</b>, 显然, f 是满射当且仅当 f 的陪域中的每一个元素都有至少一个原象.
+</p>
+
+<p>
+如果映射 f 的定义域 S 中不同元素的象也不同, 那么称 f 是 <b>单射</b> (或 f 是一一对应). 如果映射 f 既是单射也是满射, 那么称 f 是 <b>双射</b> (或称 f 是 S 到 S' 的 <b>一一对应</b>), 显然, f 是双射当且仅当陪域中每一个元素都有唯一的原象.
+</p>
+
+<p>
+映射 f 与映射 g <b>相当</b>, 当且仅当它们的定义域相等, 陪域相等, 并且对应法则相同 (<img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_6ebc0c1e00025bca7604f6ea35c73591955d71f2.png" alt="\(∀ x \in S, f(x)=g(x)\)">), 集合 S 到自身的一个映射, 通常称为 S 上的一个 <b>变换</b>, 集合 S 到数集(数域 K 上的任一非空子集)的一个映射, 通常称为 S 上的一个 <b>函数</b>, 陪域 S' 中的元素 b 在映射 f 下的所有原象组成的集合称为 b 在 f 下的 <b>原象集</b>, 记作 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_a22ca52f58cba829f2da2b21a054427e8904f6de.png" alt="\(f^{-1}(b)\)">.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_f359289b20308d8fe2877f64c1ea339772d69eff.png" alt="\begin{de}[恒定映射定义]
+\end{de}"></p>
+</div>
+<p>
+映射 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_6787d4257bdfdb3c08436aa92810d1d11f162dad.png" alt="\(f: S ⟶ S\)">, 如果把 S 中的每一个元素对应到它自身, 即 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_1e7ca323db30e68fc2ecf08500d1fa266699769a.png" alt="\(∀x \in S\)">, 有 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_7db44139cf1f9187525ddf43d10567255c640e36.png" alt="\(f(x)=x\)">, 那么称 f 是 <b>恒等变映射</b> (或 S 上的 <b>恒等变换</b>), 记作 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_7bd7a285366aae047ed02a5efb2a2c4a01f0bb9d.png" alt="\(1_S\)">.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_1bd215d801fb542e4563df5c42c15c8be3e04e32.png" alt="\begin{de}[映射乘积定义]
+\end{de}"></p>
+</div>
+<p>
+相继施行映射 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_fce9af0ddf7c3455d4e56c4d2f353e62efc39789.png" alt="\(g: S ⟶ S'\)"> 和 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_0cbacac30c7a90169d9a8fdd9d50234777f03a1b.png" alt="\(f: S' ⟶ S''\)">, 得到 S 到 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_56264aede0b68cdbc8b9ba4060de8ee883ae404d.png" alt="\(S''\)"> 的一个映射, 称为 f 与 g 的 <b>乘积</b> (或 <b>合成</b>), 记作 fg, 即
+<img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_02d10615fe8e46eb1ba142fac0ca6d4f137a5037.png" alt="\[(fg)(a) \xlongequal{def} f(g(a)), \quad ∀ a \in S\]"></p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_6c47639e9ec3038b52557a197a6eac10e255de40.png" alt="\begin{thm}[映射乘法结合律]
+\end{thm}"></p>
+</div>
+<p>
+映射乘法适合集合律, 即如果 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_ceceb1a71da03a6f22c3864ec74689c0682fdaf5.png" alt="\(h: S ⟶ S', \, g: S' ⟶ S'', \, f: S'' ⟶ S'''\)">, 那么 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_df8ed8c4fb3ad9d6dd621289cac5b1c491d7014c.png" alt="\(f(gh)=(fg)h\)">.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_a15094473e8157121b1729553a238024ff5b77ec.png" alt="\begin{de}[逆映射定义]
+\end{de}"></p>
+</div>
+<p>
+设 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_6c74217e058ed95d231f973a9bc0fbf23033e509.png" alt="\(f: S ⟶ S'\)">, 如果存在一个映射, <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_f82169ea768c0d0231bc22fd316f4afed24dfdfc.png" alt="\(g: S' ⟶ S\)">, 使得
+<img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_9ed4aba9c1a6bf121bd352a91b6bc9ae38c66239.png" alt="\[fg = 1_{S'} \quad \quad gf=1_S\]">
+那么称映射 f 是 <b>可逆</b> 的, 此时称 g 是 f 的一个 <b>逆映射</b>.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_78a17c8590c0e68bda472fcab4000af2ba9ce6fd.png" alt="\begin{thm}[映射可逆定理]
+\end{thm}"></p>
+</div>
+<p>
+映射 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_6c74217e058ed95d231f973a9bc0fbf23033e509.png" alt="\(f: S ⟶ S'\)"> 是可逆的充要条件为 f 是双射.
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_228243e4aca957e523ef1cdd2ce2cf1083f96723.png" alt="\begin{de}[线性映射定义]
+\end{de}"></p>
+</div>
+<p>
+数域 K 上的向量空间 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_0b20f7646222454f795423e3fe83323df9e96a50.png" alt="\(K^n\)"> 到 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_32c80f5f70cac53e5978524b9688f6bdc1acc851.png" alt="\(K^s\)"> 的一个映射 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_dcd516b72acca05c151d7cea49cc96dff8860a62.png" alt="\(σ\)"> 如果保持加法和数量乘法, 即 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_4d631064b473d2304207554b44a71d50bb53587e.png" alt="\(∀ \symbf{α,β} \in K^n, k \in K\)">, 有
+</p>
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_777221fd5f3a8cc66dac697e0fe12d13a3008b32.png" alt="\begin{equation*}
+\begin{split}
+σ(\symbf{α+β}) &amp;amp;= σ(\symbf{α})+σ(β) \\
+σ(k\symbf{α}) &amp;amp;= kσ(\symbf{α}) \\
+\end{split}
+\end{equation*}"></p>
+</div>
+<p>
+那么称 σ 是 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_0b20f7646222454f795423e3fe83323df9e96a50.png" alt="\(K^n\)"> 到 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_32c80f5f70cac53e5978524b9688f6bdc1acc851.png" alt="\(K^s\)"> 的一个 <b>线性映射</b>.
+</p>
+
+<p>
+设 A 是数域 K 上的 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_b57e699672819afa1e82577bdb095b8501a67de0.png" alt="\(s \times n\)"> 矩阵, 令
+</p>
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_9598df8839b060da4305f628fcc1e8b7936cf139.png" alt="\begin{equation}
+\begin{split}
+\symbf{A}: \, &amp;amp;K^n ⟶ K^s \\
+ &amp;amp;\symbf{α} ⟼ A\symbf{α}
+\end{split}
+\end{equation}"></p>
+</div>
+<p>
+容易验证, <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_b2458872da5d4f0b2be9d790a23ba222a9eb5284.png" alt="\(\symbf{A}\)"> 是  <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_0b20f7646222454f795423e3fe83323df9e96a50.png" alt="\(K^n\)"> 到 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_32c80f5f70cac53e5978524b9688f6bdc1acc851.png" alt="\(K^s\)"> 的一个线性映射.
+</p>
+
+<p>
+根据定义(<a href="../Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html">1</a>), 可以得出一下几个事实:
+</p>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/MSimg/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/screenshot_2017-09-20_22-35-21.png" alt="screenshot_2017-09-20_22-35-21.png"></p>
+</div>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/MSimg/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/screenshot_2017-09-20_22-35-54.png" alt="screenshot_2017-09-20_22-35-54.png"></p>
+</div>
+
+
+
+<div class="figure">
+<p><img src="../Data%20Science/MSimg/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/screenshot_2017-09-20_22-36-55.png" alt="screenshot_2017-09-20_22-36-55.png"></p>
+</div>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_7cfc5966cb9b71346777523b08d82175bd7f7ae4.png" alt="\begin{de}[线性映射核定义]
+\end{de}"></p>
+</div>
+<p>
+设 σ 是 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_0b20f7646222454f795423e3fe83323df9e96a50.png" alt="\(K^n\)"> 到 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_32c80f5f70cac53e5978524b9688f6bdc1acc851.png" alt="\(K^s\)"> 的一个映射, <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_0b20f7646222454f795423e3fe83323df9e96a50.png" alt="\(K^n\)"> 的一个子集
+<img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_0bc3bca255a0682c088d6f09b114c60cb294ca51.png" alt="\[\{\symbf{α} \in K^n \, | \, σ(\symbf{α})=\symbf{0}\}\]">
+称为映射 σ 的核, 记作 Ker σ.
+</p>
+
+<p>
+容易验证, 如果 σ 是 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_0b20f7646222454f795423e3fe83323df9e96a50.png" alt="\(K^n\)"> 到 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_32c80f5f70cac53e5978524b9688f6bdc1acc851.png" alt="\(K^s\)"> 的一个线性映射, 那么 Ker σ 是 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_0b20f7646222454f795423e3fe83323df9e96a50.png" alt="\(K^n\)"> 的一个子空间. 由(<a href="../Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html">1</a>)定义的线性映射 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_b2458872da5d4f0b2be9d790a23ba222a9eb5284.png" alt="\(\symbf{A}\)">, 根据上面事实 3 可以得到
+<img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_e38347e5d3c8e335aa57293dcdf330ff363e49ed.png" alt="\[Ker \symbf{A} = W\]">
+即, 由(<a href="../Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html">1</a>)定义的线性映射 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_b2458872da5d4f0b2be9d790a23ba222a9eb5284.png" alt="\(\symbf{A}\)"> 的核等于齐次线性方程组 <img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_aa33163353ee7b384c8626e105e19620f2d9d138.png" alt="\(A\symbf{X}=\symbf{0}\)"> 的解空间.
+</p>
+
+<p>
+线性映射的象与核之间的关系可以由下式来刻画:
+</p>
+
+<div class="figure">
+<p><img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_f1d0d3fbff36f9657215147e2804ca8e05122741.png" alt="\begin{equation}
+dim \, Ker \symbf{A} + dim \, Im \symbf{A} = dim \, K^n
+\end{equation}"></p>
+</div>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/MSimg/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/screenshot_2017-09-20_22-55-12.png" alt="screenshot_2017-09-20_22-55-12.png"></p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8">例题</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+<b>逆矩阵的解法</b>
+</p>
+<ol class="org-ol">
+<li>根据定义(<a href="../Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html">1</a>), 可以用伴随矩阵去求解
+</li>
+<li>根据初等行变换法, 如
+</li>
+</ol>
+<div class="figure">
+<p><img src="../Data%20Science/MSimg/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/juz_2017-09-20_23-22-44.png" alt="juz_2017-09-20_23-22-44.png"></p>
+</div>
+
+<ol class="org-ol">
+<li>根据(<a href="../Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#2">1</a>), 可以得出解线性方程组的第三种方法
+</li>
+</ol>
+<div class="figure">
+<p><img src="../Data%20Science/MSimg/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/nijuzhen-3_2017-09-20_23-30-39.png" alt="nijuzhen-3_2017-09-20_23-30-39.png"></p>
+</div>
+
+<p>
+<b>矩阵 QR 分解及最小二乘解</b>
+</p>
+<ol class="org-ol">
+<li>n 级矩阵 TB 分解
+</li>
+</ol>
+<div class="figure">
+<p><img src="../Data%20Science/MSimg/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/screenshot_2017-09-20_23-36-29.png" alt="screenshot_2017-09-20_23-36-29.png"></p>
+</div>
+
+
+
+<div class="figure">
+<p><img src="../Data%20Science/MSimg/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/screenshot_2017-09-20_23-37-05.png" alt="screenshot_2017-09-20_23-37-05.png"></p>
+</div>
+
+
+
+<div class="figure">
+<p><img src="../Data%20Science/MSimg/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/screenshot_2017-09-20_23-37-34.png" alt="screenshot_2017-09-20_23-37-34.png"></p>
+</div>
+
+<ol class="org-ol">
+<li>
+<img src="../Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_5e57f1ee34e9383904b14c18017f14fa756d31c0.png" alt="\(m × n\)"> 矩阵 QR 分解
+</li>
+</ol>
+<div class="figure">
+<p><img src="../Data%20Science/MSimg/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/screenshot_2017-09-20_23-39-37.png" alt="screenshot_2017-09-20_23-39-37.png"></p>
+</div>
+
+
+
+<div class="figure">
+<p><img src="../Data%20Science/MSimg/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/screenshot_2017-09-20_23-41-04.png" alt="screenshot_2017-09-20_23-41-04.png"></p>
+</div>
+
+
+
+<div class="figure">
+<p><img src="../Data%20Science/MSimg/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/screenshot_2017-09-20_23-41-25.png" alt="screenshot_2017-09-20_23-41-25.png"></p>
+</div>
+
+
+<div class="figure">
+<p><img src="../Data%20Science/MSimg/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/screenshot_2017-09-20_23-41-46.png" alt="screenshot_2017-09-20_23-41-46.png"></p>
+</div>
+
+<ol class="org-ol">
+<li>最小二乘法
+</li>
+</ol>
+<div class="figure">
+<p><img src="../Data%20Science/MSimg/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/screenshot_2017-09-20_23-43-47.png" alt="screenshot_2017-09-20_23-43-47.png"></p>
+</div>
+
+
+
+<div class="figure">
+<p><img src="../Data%20Science/MSimg/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/screenshot_2017-09-20_23-44-30.png" alt="screenshot_2017-09-20_23-44-30.png"></p>
+</div>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../categories/linear-algebra.html" rel="tag">Linear algebra</a></li>
+            <li><a class="tag p-category" href="../categories/matrix-computation.html" rel="tag">Matrix computation</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html" rel="prev" title="博客迁移杂记-从 Hexo 到 Nikola">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../Research/survival-analysis-research.html" rel="next" title="科研工作中的生存分析">Next post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="lengyueyang",
+            disqus_url="https://lengyueyang.github.io/Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html",
+        disqus_title="\u6570\u636e\u79d1\u5b66-\u6570\u5b66\u4e0e\u7edf\u8ba1-\u9ad8\u7b49\u4ee3\u6570-\u77e9\u9635\u8fd0\u7b97",
+        disqus_identifier="cache/posts/Data Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
+        </script></article><script>var disqus_shortname="lengyueyang";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2018         <a href="mailto:maoxiaowei1988@qq.com">Lengyueyang</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a> and <a href="#" https: rel="nofollow">Org-mode</a>       
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+<img alt="Creative Commons License BY-NC-SA" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a>
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

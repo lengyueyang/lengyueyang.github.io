@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>科研工作中的生存分析 | 深度识医</title>
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+<link rel="canonical" href="https://lengyueyang.github.io/Research/survival-analysis-research.html">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><meta name="author" content="Lengyueyang">
+<link rel="prev" href="../Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html" title="数据科学-数学与统计-高等代数-矩阵运算" type="text/html">
+<meta property="og:site_name" content="深度识医">
+<meta property="og:title" content="科研工作中的生存分析">
+<meta property="og:url" content="https://lengyueyang.github.io/Research/survival-analysis-research.html">
+<meta property="og:description" content="Table of Contents
+
+
+引子
+生存分析概述
+
+生存分析的适用范围
+生存分析术语
+
+
+生存分析公式
+
+生存函数(Survival Function)
+生存分布函数(lifetime distribution function)和生存分布密度函数
+危险函数和累计危险函数(Hazard function and cumulative hazard function)
+生存函数之间的量化关">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2018-01-15T19:26:52+08:00">
+<meta property="article:tag" content="Cox regression">
+<meta property="article:tag" content="KM analysis">
+<meta property="article:tag" content="Nomogram">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://lengyueyang.github.io/">
+
+                <span id="blog-title">深度识医</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../posts/data-science/index.html">Data Science</a>
+                </li>
+<li>
+<a href="../posts/research/index.html">Research</a>
+                </li>
+<li>
+<a href="../posts/life/index.html">Life</a>
+                </li>
+<li>
+<a href="../categories/index.html">Tags</a>
+                </li>
+<li>
+<a href="../archive.html">Archives</a>
+                </li>
+<li>
+<a href="../pages/notes.html">Notes</a>
+                </li>
+<li>
+<a href="../pages/links.html">Links</a>
+                </li>
+<li>
+<a href="../pages/about.html">About</a>
+                </li>
+<li>
+<a href="https://github.com/lengyueyang">Github</a>
+                </li>
+<li>
+<a href="../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<!-- Google custom search --><form method="get" action="https://www.google.com/search" class="navbar-form navbar-right" role="search">
+<div class="form-group">
+<input type="text" name="q" class="form-control" placeholder="Search">
+</div>
+<button type="submit" class="btn btn-primary">
+	<span class="glyphicon glyphicon-search"></span>
+</button>
+<input type="hidden" name="sitesearch" value="https://lengyueyang.github.io/">
+</form>
+<!-- End of custom search -->
+
+
+            <ul class="nav navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">科研工作中的生存分析</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                    Lengyueyang
+            </span></p>
+            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2018-01-15T19:26:52+08:00" itemprop="datePublished" title="2018-01-15 19:26">2018-01-15 19:26</time></a></p>
+                <p class="commentline">
+        
+    <a href="survival-analysis-research.html#disqus_thread" data-disqus-identifier="cache/posts/Research/Survival analysis.html">Comments</a>
+
+
+            
+
+        </p>
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="survival-analysis-research.html#sec-1">引子</a></li>
+<li>
+<a href="survival-analysis-research.html#sec-2">生存分析概述</a>
+<ul>
+<li><a href="survival-analysis-research.html#sec-2-1">生存分析的适用范围</a></li>
+<li><a href="survival-analysis-research.html#sec-2-2">生存分析术语</a></li>
+</ul>
+</li>
+<li>
+<a href="survival-analysis-research.html#sec-3">生存分析公式</a>
+<ul>
+<li><a href="survival-analysis-research.html#sec-3-1">生存函数(Survival Function)</a></li>
+<li><a href="survival-analysis-research.html#sec-3-2">生存分布函数(lifetime distribution function)和生存分布密度函数</a></li>
+<li><a href="survival-analysis-research.html#sec-3-3">危险函数和累计危险函数(Hazard function and cumulative hazard function)</a></li>
+<li><a href="survival-analysis-research.html#sec-3-4">生存函数之间的量化关系</a></li>
+</ul>
+</li>
+<li>
+<a href="survival-analysis-research.html#sec-4">参数拟合</a>
+<ul>
+<li><a href="survival-analysis-research.html#sec-4-1">参数检验</a></li>
+<li><a href="survival-analysis-research.html#sec-4-2">非参数检验</a></li>
+<li><a href="survival-analysis-research.html#sec-4-3">Kaplan-Meier 生存分析</a></li>
+<li><a href="survival-analysis-research.html#sec-4-4">Cox PH 模型</a></li>
+</ul>
+</li>
+<li><a href="survival-analysis-research.html#sec-5">Creative Commons licensing</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">引子</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+生存分析是在科研中占有重要位置, 它是分析随时间变化的因素和生存率之间关系的一门学科, 这篇博客主要总结科研工作中的生存分析, 并用 python<sup><a id="fnr.1" name="fnr.1" class="footref" href="survival-analysis-research.html#fn.1">1</a></sup> 和 R<sup><a id="fnr.2" name="fnr.2" class="footref" href="survival-analysis-research.html#fn.2">2</a></sup> 代码实现, 彻底理清科研文章中的生存分析<sup><a id="fnr.3" name="fnr.3" class="footref" href="survival-analysis-research.html#fn.3">3</a></sup><sup>, </sup><sup><a id="fnr.4" name="fnr.4" class="footref" href="survival-analysis-research.html#fn.4">4</a></sup> .
+</p>
+
+<!-- TEASER_END -->
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">生存分析概述</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1">生存分析的适用范围</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>To describe the survival times of members of a group
+<ul class="org-ul">
+<li>Life tables
+</li>
+<li>Kaplan-Meier curves
+</li>
+<li>Survival function
+</li>
+<li>Hazard function
+</li>
+</ul>
+</li>
+<li>To compare the survival times of two or more groups
+<ul class="org-ul">
+<li>Log-rank test
+</li>
+</ul>
+</li>
+<li>To describe the effect of categorical or quantitative variables on survival
+</li>
+<li>Cox proportional hazards regression
+<ul class="org-ul">
+<li>Parametric survival models
+</li>
+<li>Survival trees
+</li>
+<li>Survival random forests
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2">生存分析术语</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>事件, Event: Death, disease occurrence, disease recurrence, recovery, or other experience of interest
+</li>
+<li>时间, Time: The time from the beginning of an observation period (such as surgery or beginning treatment) to (i) an event, or (ii) end of the study, or (iii) loss of contact or withdrawal from the study.
+</li>
+<li>未到重点 Censoring / Censored observation: If a subject does not have an event during the observation time, they are described as censored. The subject is censored in the sense that nothing is observed or known about that subject after the time of 
+</li>
+<li>删失数据, censoring. A censored subject may or may not have an event after the end of observation time.
+</li>
+<li>生存函数, Survival function S(t): The probability that a subject survives longer than time t.
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">生存分析公式</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1">生存函数(Survival Function)</h3>
+<div class="outline-text-3" id="text-3-1">
+
+<div class="figure">
+<p><img src="ltxpng/Survival%20analysis_3d19177abcf92303260476cdf06ee96fe10b8cfc.png" alt="\begin{equation}
+S(t) = Pr(T&amp;gt;t)
+\end{equation}"></p>
+</div>
+<p>
+其中, 其中 T 是死亡时间, S(t) 表示死亡时间 T 晚于时间 t 的概率, 很容易得到 <img src="ltxpng/Survival%20analysis_428431bd6eaa1382b0cc4cba0822b2881bc8a688.png" alt="\(S(0)=1\)">, 生存函数是递减函数.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2">生存分布函数(lifetime distribution function)和生存分布密度函数</h3>
+<div class="outline-text-3" id="text-3-2">
+
+<div class="figure">
+<p><img src="ltxpng/Survival%20analysis_54a0a47810855e56b4cfb67c0a66a4494f853c9a.png" alt="\begin{equation}
+F(t) = Pr(T &amp;lt; t) = 1-S(t)
+\end{equation}"></p>
+</div>
+
+<p>
+如果 F 是可微分的, 其微分函数 f(t) 是其密度函数
+</p>
+
+<div class="figure">
+<p><img src="ltxpng/Survival%20analysis_da1df353fbdff11bde9e603ef5baa8242696de5b.png" alt="\begin{equation}
+  f(t) = F'(t) = \frac{d}{dt}F(t)
+\end{equation}"></p>
+</div>
+
+<p>
+The function f is sometimes called the event density; it is the rate of death or failure events per unit time.
+</p>
+
+
+<div class="figure">
+<p><img src="ltxpng/Survival%20analysis_d36e47a7cf05bd8cc6c6fc03e7db22342945822e.png" alt="\begin{equation}
+  S(t) = Pr(T&amp;gt;t) = \int_t^{\infty}f(u)du = 1 - F(t)
+\end{equation}"></p>
+</div>
+
+
+<div class="figure">
+<p><img src="ltxpng/Survival%20analysis_768dafe08d6cfee6cd5e97cd17b1544f83fa3e82.png" alt="\begin{equation}
+  s(t) = S'(t) = \frac{d}{dt}S(t) = \frac{d}{dt} \int_t^{\infty}f(u)du = \frac{d}{dt} [1-F(t)] = -f(t)
+\end{equation}"></p>
+</div>
+<p>
+In other fields, such as statistical physics, the survival event density function is known as the first passage time density.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3">危险函数和累计危险函数(Hazard function and cumulative hazard function)</h3>
+<div class="outline-text-3" id="text-3-3">
+
+<div class="figure">
+<p><img src="ltxpng/Survival%20analysis_e56d8b49e7bd86612968e48e8c86a38ce66fba0e.png" alt="\begin{equation}
+  \lambda(t) = \lim_{dt \rightarrow 0} \frac{Pr(t \leqslant T \leqslant t+dt)}{dt \cdot S(t)} = \frac{f(t)}{S(t)} = - \frac{S'(t)}{S(t)}
+\end{equation}"></p>
+</div>
+<p>
+表示一个已经存活时间 t 的病人瞬间死亡的概率
+</p>
+
+<p>
+Force of mortality is a synonym of hazard function which is used particularly in demography and actuarial science, where it is denoted by μ. The term hazard rate is another synonym.
+</p>
+
+<p>
+The force of mortality of the survival function is defined as 
+</p>
+
+<div class="figure">
+<p><img src="ltxpng/Survival%20analysis_aebd98a54056f3b7ad94200491e71619f3677603.png" alt="\begin{equation*}
+  u(x) = - \frac{d}{dx}ln(S(x)) = \frac{f(x)}{S(x)}
+\end{equation*}"></p>
+</div>
+
+<p>
+Any function h is a hazard function if and only if it satisfies the following properties:
+</p>
+
+<div class="figure">
+<p><img src="ltxpng/Survival%20analysis_d5cd82c8e25f8da19188239e1b088fc0e06ee5d3.png" alt="\begin{equation*}
+\begin{split}
+1. &amp;amp;h(x) ⩾ 0 \quad ∀ (x ⩾ 0), \\
+2. &amp;amp;\int_0^{\infty} h(x)d(x) = \infty. \\
+\end{split}
+\end{equation*}"></p>
+</div>
+
+
+<div class="figure">
+<p><img src="ltxpng/Survival%20analysis_d3a3a37e7ad5b8dcf301b7fe79f371792cfbae52.png" alt="\begin{equation*}
+\begin{split}
+  Λ(t) &amp;amp;= -log S(t) \\
+  S(t) &amp;amp;= exp(-Λ(t)) \\
+  \frac{d}{dt}Λ(t) &amp;amp;= -\frac{S'(t)}{S(t)} = \lambda(t) \\
+  Λ(t) &amp;amp;= \int_0^{\infty}\lambda(u)du \\
+\end{split}
+\end{equation*}"></p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3-4" class="outline-3">
+<h3 id="sec-3-4">生存函数之间的量化关系</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+Future lifetime at a given time t<sub>0</sub> is the time remaining until death, given survival to age t<sub>0</sub>. Thus, it is T-t<sub>0</sub> in the present notation. The expected future lifetime is the expected value of future lifetime. The probability of death at or before age t<sub>0</sub>+t, given survival until age t<sub>0</sub>, is just
+</p>
+
+
+<div class="figure">
+<p><img src="img/Statistic%20analysis/screenshot_2018-01-17_21-02-59.png" alt="screenshot_2018-01-17_21-02-59.png"></p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">参数拟合</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1">参数检验</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Survival models can be usefully viewed as ordinary regression models in which the response variable is time. However, computing the likelihood function (needed for fitting parameters or making other kinds of inferences) is complicated by the censoring. The likelihood function for a survival model, in the presence of censored data, is formulated as follows. By definition the likelihood function is the conditional probability of the data given the parameters of the model. It is customary to assume that the data are independent given the parameters. Then the likelihood function is the product of the likelihood of each datum. It is convenient to partition the data into four categories: uncensored, left censored, right censored, and interval censored. These are denoted "unc.", "l.c.", "r.c.", and "i.c." in the equation below.
+</p>
+
+
+<div class="figure">
+<p><img src="img/Statistic%20analysis/screenshot_2018-01-17_21-03-57.png" alt="screenshot_2018-01-17_21-03-57.png"></p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2">非参数检验</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+The Kaplan-Meier estimator can be used to estimate the survival function. The Nelson–Aalen estimator can be used to provide a non-parametric estimate of the cumulative hazard rate function.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-3" class="outline-3">
+<h3 id="sec-4-3">Kaplan-Meier 生存分析</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<ul class="org-ul">
+<li>
+<a id="sec-4-3-1" name="sec-4-3-1"></a>加载数据<br><div class="outline-text-4" id="text-4-3-1">
+<p>
+用 <code>survival</code> 中的 <code>lung</code> 数据进行 K-M 分析
+</p>
+
+<p>
+首先加载数据
+</p>
+
+<div class="highlight"><pre><span></span><span class="kn">library</span><span class="p">(</span>survival<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>survminer<span class="p">)</span>
+data<span class="p">(</span>lung<span class="p">)</span>
+<span class="kp">head</span><span class="p">(</span>lung<span class="p">)</span>
+</pre></div>
+
+<pre class="example">
+  inst time status age sex ph.ecog ph.karno pat.karno meal.cal wt.loss
+1    3  306      2  74   1       1       90       100     1175      NA
+2    3  455      2  68   1       0       90        90     1225      15
+3    3 1010      1  56   1       0       90        90       NA      15
+4    5  210      2  57   1       1       90        60     1150      11
+5    1  883      2  60   1       0      100        90       NA       0
+6   12 1022      1  74   1       1       50        80      513       0
+</pre>
+
+<p>
+inst: Institution code
+time: Survival time in days
+status: censoring status 1=censored, 2=dead
+age: Age in years
+sex: Male=1 Female=2
+ph.ecog: ECOG performance score (0=good 5=dead)
+ph.karno: Karnofsky performance score (bad=0-good=100) rated by physician
+pat.karno: Karnofsky performance score as rated by patient
+meal.cal: Calories consumed at meals
+wt.loss: Weight loss in last six months
+</p>
+</div>
+</li>
+
+<li>
+<a id="sec-4-3-2" name="sec-4-3-2"></a>计算生存曲线<br><div class="outline-text-4" id="text-4-3-2">
+<div class="highlight"><pre><span></span>fit <span class="o">&lt;-</span> survfit<span class="p">(</span>Surv<span class="p">(</span>time<span class="p">,</span> status<span class="p">)</span> <span class="o">~</span> sex<span class="p">,</span> data <span class="o">=</span> lung<span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span>fit<span class="p">)</span>
+</pre></div>
+
+<pre class="example">
+Call: survfit(formula = Surv(time, status) ~ sex, data = lung)
+
+        n events median 0.95LCL 0.95UCL
+sex=1 138    112    270     212     310
+sex=2  90     53    426     348     550
+</pre>
+
+<p>
+print 函数简单列出了两组的区别，可以用 summary 函数查看详细值
+</p>
+<div class="highlight"><pre><span></span><span class="kp">summary</span><span class="p">(</span>fit<span class="p">)</span>
+</pre></div>
+
+<pre class="example">
+Call: survfit(formula = Surv(time, status) ~ sex, data = lung)
+
+                sex=1 
+ time n.risk n.event survival std.err lower 95% CI upper 95% CI
+   11    138       3   0.9783  0.0124       0.9542        1.000
+   12    135       1   0.9710  0.0143       0.9434        0.999
+   13    134       2   0.9565  0.0174       0.9231        0.991
+   15    132       1   0.9493  0.0187       0.9134        0.987
+   26    131       1   0.9420  0.0199       0.9038        0.982
+   30    130       1   0.9348  0.0210       0.8945        0.977
+   31    129       1   0.9275  0.0221       0.8853        0.972
+   53    128       2   0.9130  0.0240       0.8672        0.961
+   54    126       1   0.9058  0.0249       0.8583        0.956
+   59    125       1   0.8986  0.0257       0.8496        0.950
+   60    124       1   0.8913  0.0265       0.8409        0.945
+   65    123       2   0.8768  0.0280       0.8237        0.933
+   71    121       1   0.8696  0.0287       0.8152        0.928
+   81    120       1   0.8623  0.0293       0.8067        0.922
+   88    119       2   0.8478  0.0306       0.7900        0.910
+   92    117       1   0.8406  0.0312       0.7817        0.904
+   93    116       1   0.8333  0.0317       0.7734        0.898
+   95    115       1   0.8261  0.0323       0.7652        0.892
+  105    114       1   0.8188  0.0328       0.7570        0.886
+  107    113       1   0.8116  0.0333       0.7489        0.880
+  110    112       1   0.8043  0.0338       0.7408        0.873
+  116    111       1   0.7971  0.0342       0.7328        0.867
+  118    110       1   0.7899  0.0347       0.7247        0.861
+  131    109       1   0.7826  0.0351       0.7167        0.855
+  132    108       2   0.7681  0.0359       0.7008        0.842
+  135    106       1   0.7609  0.0363       0.6929        0.835
+  142    105       1   0.7536  0.0367       0.6851        0.829
+  144    104       1   0.7464  0.0370       0.6772        0.823
+  147    103       1   0.7391  0.0374       0.6694        0.816
+  156    102       2   0.7246  0.0380       0.6538        0.803
+  163    100       3   0.7029  0.0389       0.6306        0.783
+  166     97       1   0.6957  0.0392       0.6230        0.777
+  170     96       1   0.6884  0.0394       0.6153        0.770
+  175     94       1   0.6811  0.0397       0.6076        0.763
+  176     93       1   0.6738  0.0399       0.5999        0.757
+  177     92       1   0.6664  0.0402       0.5922        0.750
+  179     91       2   0.6518  0.0406       0.5769        0.736
+  180     89       1   0.6445  0.0408       0.5693        0.730
+  181     88       2   0.6298  0.0412       0.5541        0.716
+  183     86       1   0.6225  0.0413       0.5466        0.709
+  189     83       1   0.6150  0.0415       0.5388        0.702
+  197     80       1   0.6073  0.0417       0.5309        0.695
+  202     78       1   0.5995  0.0419       0.5228        0.687
+  207     77       1   0.5917  0.0420       0.5148        0.680
+  210     76       1   0.5839  0.0422       0.5068        0.673
+  212     75       1   0.5762  0.0424       0.4988        0.665
+  218     74       1   0.5684  0.0425       0.4909        0.658
+  222     72       1   0.5605  0.0426       0.4829        0.651
+  223     70       1   0.5525  0.0428       0.4747        0.643
+  229     67       1   0.5442  0.0429       0.4663        0.635
+  230     66       1   0.5360  0.0431       0.4579        0.627
+  239     64       1   0.5276  0.0432       0.4494        0.619
+  246     63       1   0.5192  0.0433       0.4409        0.611
+  267     61       1   0.5107  0.0434       0.4323        0.603
+  269     60       1   0.5022  0.0435       0.4238        0.595
+  270     59       1   0.4937  0.0436       0.4152        0.587
+  283     57       1   0.4850  0.0437       0.4065        0.579
+  284     56       1   0.4764  0.0438       0.3979        0.570
+  285     54       1   0.4676  0.0438       0.3891        0.562
+  286     53       1   0.4587  0.0439       0.3803        0.553
+  288     52       1   0.4499  0.0439       0.3716        0.545
+  291     51       1   0.4411  0.0439       0.3629        0.536
+  301     48       1   0.4319  0.0440       0.3538        0.527
+  303     46       1   0.4225  0.0440       0.3445        0.518
+  306     44       1   0.4129  0.0440       0.3350        0.509
+  310     43       1   0.4033  0.0441       0.3256        0.500
+  320     42       1   0.3937  0.0440       0.3162        0.490
+  329     41       1   0.3841  0.0440       0.3069        0.481
+  337     40       1   0.3745  0.0439       0.2976        0.471
+  353     39       2   0.3553  0.0437       0.2791        0.452
+  363     37       1   0.3457  0.0436       0.2700        0.443
+  364     36       1   0.3361  0.0434       0.2609        0.433
+  371     35       1   0.3265  0.0432       0.2519        0.423
+  387     34       1   0.3169  0.0430       0.2429        0.413
+  390     33       1   0.3073  0.0428       0.2339        0.404
+  394     32       1   0.2977  0.0425       0.2250        0.394
+  428     29       1   0.2874  0.0423       0.2155        0.383
+  429     28       1   0.2771  0.0420       0.2060        0.373
+  442     27       1   0.2669  0.0417       0.1965        0.362
+  455     25       1   0.2562  0.0413       0.1868        0.351
+  457     24       1   0.2455  0.0410       0.1770        0.341
+  460     22       1   0.2344  0.0406       0.1669        0.329
+  477     21       1   0.2232  0.0402       0.1569        0.318
+  519     20       1   0.2121  0.0397       0.1469        0.306
+  524     19       1   0.2009  0.0391       0.1371        0.294
+  533     18       1   0.1897  0.0385       0.1275        0.282
+  558     17       1   0.1786  0.0378       0.1179        0.270
+  567     16       1   0.1674  0.0371       0.1085        0.258
+  574     15       1   0.1562  0.0362       0.0992        0.246
+  583     14       1   0.1451  0.0353       0.0900        0.234
+  613     13       1   0.1339  0.0343       0.0810        0.221
+  624     12       1   0.1228  0.0332       0.0722        0.209
+  643     11       1   0.1116  0.0320       0.0636        0.196
+  655     10       1   0.1004  0.0307       0.0552        0.183
+  689      9       1   0.0893  0.0293       0.0470        0.170
+  707      8       1   0.0781  0.0276       0.0390        0.156
+  791      7       1   0.0670  0.0259       0.0314        0.143
+  814      5       1   0.0536  0.0239       0.0223        0.128
+  883      3       1   0.0357  0.0216       0.0109        0.117
+
+                sex=2 
+ time n.risk n.event survival std.err lower 95% CI upper 95% CI
+    5     90       1   0.9889  0.0110       0.9675        1.000
+   60     89       1   0.9778  0.0155       0.9478        1.000
+   61     88       1   0.9667  0.0189       0.9303        1.000
+   62     87       1   0.9556  0.0217       0.9139        0.999
+   79     86       1   0.9444  0.0241       0.8983        0.993
+   81     85       1   0.9333  0.0263       0.8832        0.986
+   95     83       1   0.9221  0.0283       0.8683        0.979
+  107     81       1   0.9107  0.0301       0.8535        0.972
+  122     80       1   0.8993  0.0318       0.8390        0.964
+  145     79       2   0.8766  0.0349       0.8108        0.948
+  153     77       1   0.8652  0.0362       0.7970        0.939
+  166     76       1   0.8538  0.0375       0.7834        0.931
+  167     75       1   0.8424  0.0387       0.7699        0.922
+  182     71       1   0.8305  0.0399       0.7559        0.913
+  186     70       1   0.8187  0.0411       0.7420        0.903
+  194     68       1   0.8066  0.0422       0.7280        0.894
+  199     67       1   0.7946  0.0432       0.7142        0.884
+  201     66       2   0.7705  0.0452       0.6869        0.864
+  208     62       1   0.7581  0.0461       0.6729        0.854
+  226     59       1   0.7452  0.0471       0.6584        0.843
+  239     57       1   0.7322  0.0480       0.6438        0.833
+  245     54       1   0.7186  0.0490       0.6287        0.821
+  268     51       1   0.7045  0.0501       0.6129        0.810
+  285     47       1   0.6895  0.0512       0.5962        0.798
+  293     45       1   0.6742  0.0523       0.5791        0.785
+  305     43       1   0.6585  0.0534       0.5618        0.772
+  310     42       1   0.6428  0.0544       0.5447        0.759
+  340     39       1   0.6264  0.0554       0.5267        0.745
+  345     38       1   0.6099  0.0563       0.5089        0.731
+  348     37       1   0.5934  0.0572       0.4913        0.717
+  350     36       1   0.5769  0.0579       0.4739        0.702
+  351     35       1   0.5604  0.0586       0.4566        0.688
+  361     33       1   0.5434  0.0592       0.4390        0.673
+  363     32       1   0.5265  0.0597       0.4215        0.658
+  371     30       1   0.5089  0.0603       0.4035        0.642
+  426     26       1   0.4893  0.0610       0.3832        0.625
+  433     25       1   0.4698  0.0617       0.3632        0.608
+  444     24       1   0.4502  0.0621       0.3435        0.590
+  450     23       1   0.4306  0.0624       0.3241        0.572
+  473     22       1   0.4110  0.0626       0.3050        0.554
+  520     19       1   0.3894  0.0629       0.2837        0.534
+  524     18       1   0.3678  0.0630       0.2628        0.515
+  550     15       1   0.3433  0.0634       0.2390        0.493
+  641     11       1   0.3121  0.0649       0.2076        0.469
+  654     10       1   0.2808  0.0655       0.1778        0.443
+  687      9       1   0.2496  0.0652       0.1496        0.417
+  705      8       1   0.2184  0.0641       0.1229        0.388
+  728      7       1   0.1872  0.0621       0.0978        0.359
+  731      6       1   0.1560  0.0590       0.0743        0.328
+  735      5       1   0.1248  0.0549       0.0527        0.295
+  765      3       1   0.0832  0.0499       0.0257        0.270
+</pre>
+
+<div class="highlight"><pre><span></span><span class="kp">summary</span><span class="p">(</span>fit<span class="p">)</span><span class="o">$</span><span class="kp">table</span>
+</pre></div>
+
+<pre class="example">
+      records n.max n.start events   *rmean *se(rmean) median 0.95LCL 0.95UCL
+sex=1     138   138     138    112 325.0663   22.59845    270     212     310
+sex=2      90    90      90     53 458.2757   33.78530    426     348     550
+</pre>
+</div>
+</li>
+
+<li>
+<a id="sec-4-3-3" name="sec-4-3-3"></a>可视化生存曲线<br><div class="outline-text-4" id="text-4-3-3">
+<p>
+可以用 <code>ggsurvplot</code> 进行生存曲线可视化，即画 K-M 曲线
+</p>
+
+<div class="highlight"><pre><span></span><span class="c1"># Change color, linetype by strata, risk.table color by strata</span>
+ggsurvplot<span class="p">(</span>fit<span class="p">,</span>
+	  pval <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> conf.int <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>
+	  risk.table <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="c1"># Add risk table</span>
+	  risk.table.col <span class="o">=</span> <span class="s">"strata"</span><span class="p">,</span> <span class="c1"># Change risk table color by groups</span>
+	  linetype <span class="o">=</span> <span class="s">"strata"</span><span class="p">,</span> <span class="c1"># Change line type by groups</span>
+	  surv.median.line <span class="o">=</span> <span class="s">"hv"</span><span class="p">,</span> <span class="c1"># Specify median survival</span>
+	  ggtheme <span class="o">=</span> theme_bw<span class="p">(),</span> <span class="c1"># Change ggplot2 theme</span>
+	  palette <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">"#E7B800"</span><span class="p">,</span> <span class="s">"#2E9FDF"</span><span class="p">))</span>
+</pre></div>
+
+
+<div class="figure">
+<p><img src="img/survival-analysis-KM-1.png" alt="survival-analysis-KM-1.png"></p>
+</div>
+
+<p>
+配置图像
+</p>
+<div class="highlight"><pre><span></span>ggsurvplot<span class="p">(</span>
+   fit<span class="p">,</span>                     <span class="c1"># survfit object with calculated statistics.</span>
+   pval <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>             <span class="c1"># show p-value of log-rank test.</span>
+   conf.int <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>         <span class="c1"># show confidence intervals for </span>
+			    <span class="c1"># point estimaes of survival curves.</span>
+   conf.int.style <span class="o">=</span> <span class="s">"step"</span><span class="p">,</span>  <span class="c1"># customize style of confidence intervals</span>
+   xlab <span class="o">=</span> <span class="s">"Time in days"</span><span class="p">,</span>   <span class="c1"># customize X axis label.</span>
+   break.time.by <span class="o">=</span> <span class="m">200</span><span class="p">,</span>     <span class="c1"># break X axis in time intervals by 200.</span>
+   ggtheme <span class="o">=</span> theme_light<span class="p">(),</span> <span class="c1"># customize plot and risk table with a theme.</span>
+   risk.table <span class="o">=</span> <span class="s">"abs_pct"</span><span class="p">,</span>  <span class="c1"># absolute number and percentage at risk.</span>
+  risk.table.y.text.col <span class="o">=</span> <span class="bp">T</span><span class="p">,</span><span class="c1"># colour risk table text annotations.</span>
+  risk.table.y.text <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span><span class="c1"># show bars instead of names in text annotations</span>
+			    <span class="c1"># in legend of risk table.</span>
+  ncensor.plot <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>      <span class="c1"># plot the number of censored subjects at time t</span>
+  surv.median.line <span class="o">=</span> <span class="s">"hv"</span><span class="p">,</span>  <span class="c1"># add the median survival pointer.</span>
+  legend.labs <span class="o">=</span> 
+    <span class="kt">c</span><span class="p">(</span><span class="s">"Male"</span><span class="p">,</span> <span class="s">"Female"</span><span class="p">),</span>    <span class="c1"># change legend labels.</span>
+  palette <span class="o">=</span> 
+    <span class="kt">c</span><span class="p">(</span><span class="s">"#E7B800"</span><span class="p">,</span> <span class="s">"#2E9FDF"</span><span class="p">)</span> <span class="c1"># custom color palettes.</span>
+<span class="p">)</span>
+</pre></div>
+
+
+<div class="figure">
+<p><img src="img/survival-analysis-KM-2.png" alt="survival-analysis-KM-2.png"></p>
+</div>
+
+<p>
+X 轴截断
+</p>
+<div class="highlight"><pre><span></span>ggsurvplot<span class="p">(</span>fit<span class="p">,</span>
+	  conf.int <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>
+	  risk.table.col <span class="o">=</span> <span class="s">"strata"</span><span class="p">,</span> <span class="c1"># Change risk table color by groups</span>
+	  ggtheme <span class="o">=</span> theme_bw<span class="p">(),</span> <span class="c1"># Change ggplot2 theme</span>
+	  palette <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">"#E7B800"</span><span class="p">,</span> <span class="s">"#2E9FDF"</span><span class="p">),</span>
+	  xlim <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">600</span><span class="p">))</span>
+</pre></div>
+
+
+<div class="figure">
+<p><img src="img/survival-analysis-KM-3.png" alt="survival-analysis-KM-3.png"></p>
+</div>
+
+<p>
+累计危险事件画图
+</p>
+<div class="highlight"><pre><span></span>ggsurvplot<span class="p">(</span>fit<span class="p">,</span>
+	  conf.int <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>
+	  risk.table.col <span class="o">=</span> <span class="s">"strata"</span><span class="p">,</span> <span class="c1"># Change risk table color by groups</span>
+	  ggtheme <span class="o">=</span> theme_bw<span class="p">(),</span> <span class="c1"># Change ggplot2 theme</span>
+	  palette <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">"#E7B800"</span><span class="p">,</span> <span class="s">"#2E9FDF"</span><span class="p">),</span>
+	  fun <span class="o">=</span> <span class="s">"event"</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="figure">
+<p><img src="img/survival-analysis-KM-4.png" alt="survival-analysis-KM-4.png"></p>
+</div>
+
+<p>
+累计危险率画图
+</p>
+<div class="highlight"><pre><span></span>ggsurvplot<span class="p">(</span>fit<span class="p">,</span>
+	  conf.int <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>
+	  risk.table.col <span class="o">=</span> <span class="s">"strata"</span><span class="p">,</span> <span class="c1"># Change risk table color by groups</span>
+	  ggtheme <span class="o">=</span> theme_bw<span class="p">(),</span> <span class="c1"># Change ggplot2 theme</span>
+	  palette <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">"#E7B800"</span><span class="p">,</span> <span class="s">"#2E9FDF"</span><span class="p">),</span>
+	  fun <span class="o">=</span> <span class="s">"cumhaz"</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="figure">
+<p><img src="img/survival-analysis-KM-5.png" alt="survival-analysis-KM-5.png"></p>
+</div>
+</div>
+</li>
+
+<li>
+<a id="sec-4-3-4" name="sec-4-3-4"></a>K-M 生存表<br><div class="outline-text-4" id="text-4-3-4">
+<p>
+可以用 <code>summary</code> 函数去看生存表格, 或者更强大的 <code>surv_summary</code> 去看
+</p>
+<div class="highlight"><pre><span></span><span class="kn">library</span><span class="p">(</span>survival<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>survminer<span class="p">)</span>
+data<span class="p">(</span>lung<span class="p">)</span>
+fit <span class="o">&lt;-</span> survfit<span class="p">(</span>Surv<span class="p">(</span>time<span class="p">,</span> status<span class="p">)</span> <span class="o">~</span> sex<span class="p">,</span> data <span class="o">=</span> lung<span class="p">)</span>
+<span class="kp">head</span><span class="p">(</span>surv_summary<span class="p">(</span>fit<span class="p">))</span>
+</pre></div>
+
+<pre class="example">
+  time n.risk n.event n.censor      surv    std.err     upper     lower strata sex
+1   11    138       3        0 0.9782609 0.01268978 1.0000000 0.9542301  sex=1   1
+2   12    135       1        0 0.9710145 0.01470747 0.9994124 0.9434235  sex=1   1
+3   13    134       2        0 0.9565217 0.01814885 0.9911586 0.9230952  sex=1   1
+4   15    132       1        0 0.9492754 0.01967768 0.9866017 0.9133612  sex=1   1
+5   26    131       1        0 0.9420290 0.02111708 0.9818365 0.9038355  sex=1   1
+6   30    130       1        0 0.9347826 0.02248469 0.9768989 0.8944820  sex=1   1
+Warning message:
+In .get_data(x, data = data) :
+  The `data` argument is not provided. Data will be extracted from model fit.
+</pre>
+</div>
+</li>
+
+<li>
+<a id="sec-4-3-5" name="sec-4-3-5"></a>Log-rank 检验<br><div class="outline-text-4" id="text-4-3-5">
+<p>
+可以用 <code>survdiff()</code> 函数检验组间差异 
+</p>
+<div class="highlight"><pre><span></span>surv_diff <span class="o">&lt;-</span> survdiff<span class="p">(</span>Surv<span class="p">(</span>time<span class="p">,</span> status<span class="p">)</span> <span class="o">~</span> sex<span class="p">,</span> data <span class="o">=</span> lung<span class="p">)</span>
+surv_diff
+</pre></div>
+
+<pre class="example">
+Call:
+survdiff(formula = Surv(time, status) ~ sex, data = lung)
+
+        N Observed Expected (O-E)^2/E (O-E)^2/V
+sex=1 138      112     91.6      4.55      10.3
+sex=2  90       53     73.4      5.68      10.3
+
+ Chisq= 10.3  on 1 degrees of freedom, p= 0.00131
+</pre>
+
+<p>
+明显, <code>p &lt; 0.01</code>, 说明两组生存率有差异.
+</p>
+</div>
+</li>
+
+<li>
+<a id="sec-4-3-6" name="sec-4-3-6"></a>多因素生存分析<br><div class="outline-text-4" id="text-4-3-6">
+<p>
+用 <code>colon</code> 数据集进行多因素分析拟合
+</p>
+<div class="highlight"><pre><span></span><span class="kn">library</span><span class="p">(</span>survival<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>survminer<span class="p">)</span>
+data<span class="p">(</span>colon<span class="p">)</span>
+fit2 <span class="o">&lt;-</span> survfit<span class="p">(</span> Surv<span class="p">(</span>time<span class="p">,</span> status<span class="p">)</span> <span class="o">~</span> sex <span class="o">+</span> rx <span class="o">+</span> adhere<span class="p">,</span> data <span class="o">=</span> colon <span class="p">)</span>
+<span class="kp">head</span><span class="p">(</span>surv_summary<span class="p">(</span>fit2<span class="p">))</span>
+</pre></div>
+
+<pre class="example">
+  time n.risk n.event n.censor  surv     std.err     upper     lower                      strata sex  rx adhere
+1   72    250       1        0 0.996 0.004008024 1.0000000 0.9882065 sex=0, rx=Obs    , adhere=0   0 Obs      0
+2   79    249       1        0 0.992 0.005679618 1.0000000 0.9810184 sex=0, rx=Obs    , adhere=0   0 Obs      0
+3   80    248       1        0 0.988 0.006970150 1.0000000 0.9745945 sex=0, rx=Obs    , adhere=0   0 Obs      0
+4   85    247       1        0 0.984 0.008064778 0.9996773 0.9685685 sex=0, rx=Obs    , adhere=0   0 Obs      0
+5   98    246       1        0 0.980 0.009035079 0.9975088 0.9627985 sex=0, rx=Obs    , adhere=0   0 Obs      0
+6   99    245       2        0 0.972 0.010734353 0.9926665 0.9517638 sex=0, rx=Obs    , adhere=0   0 Obs      0
+Warning message:
+In .get_data(x, data = data) :
+  The `data` argument is not provided. Data will be extracted from model fit.
+</pre>
+
+<p>
+多因素可视化
+</p>
+<div class="highlight"><pre><span></span><span class="c1"># Plot survival curves by sex and facet by rx and adhere</span>
+ggsurv <span class="o">&lt;-</span> ggsurvplot<span class="p">(</span>fit2<span class="p">,</span> fun <span class="o">=</span> <span class="s">"event"</span><span class="p">,</span> conf.int <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>
+		     ggtheme <span class="o">=</span> theme_bw<span class="p">())</span>
+
+ggsurv<span class="o">$</span>plot <span class="o">+</span>theme_bw<span class="p">()</span> <span class="o">+</span> theme <span class="p">(</span>legend.position <span class="o">=</span> <span class="s">"right"</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="figure">
+<p><img src="img/survival-analysis-KM-6.png" alt="survival-analysis-KM-6.png"></p>
+</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div id="outline-container-sec-4-4" class="outline-3">
+<h3 id="sec-4-4">Cox PH 模型</h3>
+<div class="outline-text-3" id="text-4-4">
+</div>
+<ul class="org-ul">
+<li>
+<a id="sec-4-4-1" name="sec-4-4-1"></a>Cox 分析概述<br><div class="outline-text-4" id="text-4-4-1">
+<p>
+利用 Cox 回归分析，可以对多变量进行分析，而且可以对时间有关的变量进行分析
+</p>
+
+
+<div class="figure">
+<p><img src="img/Statistic%20analysis/screenshot_2018-01-18_21-17-21.png" alt="screenshot_2018-01-18_21-17-21.png"></p>
+</div>
+
+
+
+<div class="figure">
+<p><img src="img/Statistic%20analysis/screenshot_2018-01-18_21-21-52.png" alt="screenshot_2018-01-18_21-21-52.png"></p>
+</div>
+</div>
+</li>
+
+<li>
+<a id="sec-4-4-2" name="sec-4-4-2"></a>单因素 Cox 模型建立<br><div class="outline-text-4" id="text-4-4-2">
+<p>
+可以用 <code>coxph()</code> 函数来建立模型
+</p>
+<div class="highlight"><pre><span></span><span class="kn">library</span><span class="p">(</span>survival<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>survminer<span class="p">)</span>
+data<span class="p">(</span>lung<span class="p">)</span>
+res.cox <span class="o">&lt;-</span> coxph<span class="p">(</span>Surv<span class="p">(</span>time<span class="p">,</span> status<span class="p">)</span> <span class="o">~</span> sex<span class="p">,</span> data <span class="o">=</span> lung<span class="p">)</span>
+res.cox
+</pre></div>
+
+<pre class="example">
+Call:
+coxph(formula = Surv(time, status) ~ sex, data = lung)
+
+      coef exp(coef) se(coef)     z      p
+sex -0.531     0.588    0.167 -3.18 0.0015
+
+Likelihood ratio test=10.6  on 1 df, p=0.00111
+n= 228, number of events= 165
+</pre>
+
+<div class="highlight"><pre><span></span><span class="kp">summary</span><span class="p">(</span>res.cox<span class="p">)</span>
+</pre></div>
+
+<pre class="example">
+Call:
+coxph(formula = Surv(time, status) ~ sex, data = lung)
+
+  n= 228, number of events= 165 
+
+       coef exp(coef) se(coef)      z Pr(&gt;|z|)
+sex -0.5310    0.5880   0.1672 -3.176  0.00149
+
+    exp(coef) exp(-coef) lower .95 upper .95
+sex     0.588      1.701    0.4237     0.816
+
+Concordance= 0.579  (se = 0.022 )
+Rsquare= 0.046   (max possible= 0.999 )
+Likelihood ratio test= 10.63  on 1 df,   p=0.001111
+Wald test            = 10.09  on 1 df,   p=0.001491
+Score (logrank) test = 10.33  on 1 df,   p=0.001312
+</pre>
+
+
+<div class="figure">
+<p><img src="img/Statistic%20analysis/screenshot_2018-01-18_21-56-01.png" alt="screenshot_2018-01-18_21-56-01.png"></p>
+</div>
+
+<p>
+检验多变量对生存率的影响
+</p>
+<div class="highlight"><pre><span></span>covariates <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">"age"</span><span class="p">,</span> <span class="s">"sex"</span><span class="p">,</span>  <span class="s">"ph.karno"</span><span class="p">,</span> <span class="s">"ph.ecog"</span><span class="p">,</span> <span class="s">"wt.loss"</span><span class="p">)</span>
+univ_formulas <span class="o">&lt;-</span> <span class="kp">sapply</span><span class="p">(</span>covariates<span class="p">,</span>
+			<span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> as.formula<span class="p">(</span><span class="kp">paste</span><span class="p">(</span><span class="s">'Surv(time, status)~'</span><span class="p">,</span> x<span class="p">)))</span>
+
+univ_models <span class="o">&lt;-</span> <span class="kp">lapply</span><span class="p">(</span>univ_formulas<span class="p">,</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">){</span>coxph<span class="p">(</span>x<span class="p">,</span> data <span class="o">=</span> lung<span class="p">)})</span>
+<span class="c1"># Extract data </span>
+univ_results <span class="o">&lt;-</span> <span class="kp">lapply</span><span class="p">(</span>univ_models<span class="p">,</span>
+		       <span class="kr">function</span><span class="p">(</span>x<span class="p">){</span> 
+			  x <span class="o">&lt;-</span> <span class="kp">summary</span><span class="p">(</span>x<span class="p">)</span>
+			  p.value<span class="o">&lt;-</span><span class="kp">signif</span><span class="p">(</span>x<span class="o">$</span>wald<span class="p">[</span><span class="s">"pvalue"</span><span class="p">],</span> digits<span class="o">=</span><span class="m">2</span><span class="p">)</span>
+			  wald.test<span class="o">&lt;-</span><span class="kp">signif</span><span class="p">(</span>x<span class="o">$</span>wald<span class="p">[</span><span class="s">"test"</span><span class="p">],</span> digits<span class="o">=</span><span class="m">2</span><span class="p">)</span>
+			  <span class="kp">beta</span><span class="o">&lt;-</span><span class="kp">signif</span><span class="p">(</span>x<span class="o">$</span>coef<span class="p">[</span><span class="m">1</span><span class="p">],</span> digits<span class="o">=</span><span class="m">2</span><span class="p">);</span><span class="c1">#coeficient beta</span>
+			  HR <span class="o">&lt;-</span><span class="kp">signif</span><span class="p">(</span>x<span class="o">$</span>coef<span class="p">[</span><span class="m">2</span><span class="p">],</span> digits<span class="o">=</span><span class="m">2</span><span class="p">);</span><span class="c1">#exp(beta)</span>
+			  HR.confint.lower <span class="o">&lt;-</span> <span class="kp">signif</span><span class="p">(</span>x<span class="o">$</span>conf.int<span class="p">[,</span><span class="s">"lower .95"</span><span class="p">],</span> <span class="m">2</span><span class="p">)</span>
+			  HR.confint.upper <span class="o">&lt;-</span> <span class="kp">signif</span><span class="p">(</span>x<span class="o">$</span>conf.int<span class="p">[,</span><span class="s">"upper .95"</span><span class="p">],</span><span class="m">2</span><span class="p">)</span>
+			  HR <span class="o">&lt;-</span> <span class="kp">paste0</span><span class="p">(</span>HR<span class="p">,</span> <span class="s">" ("</span><span class="p">,</span> 
+				       HR.confint.lower<span class="p">,</span> <span class="s">"-"</span><span class="p">,</span> HR.confint.upper<span class="p">,</span> <span class="s">")"</span><span class="p">)</span>
+			  res<span class="o">&lt;-</span><span class="kt">c</span><span class="p">(</span><span class="kp">beta</span><span class="p">,</span> HR<span class="p">,</span> wald.test<span class="p">,</span> p.value<span class="p">)</span>
+			  <span class="kp">names</span><span class="p">(</span>res<span class="p">)</span><span class="o">&lt;-</span><span class="kt">c</span><span class="p">(</span><span class="s">"beta"</span><span class="p">,</span> <span class="s">"HR (95% CI for HR)"</span><span class="p">,</span> <span class="s">"wald.test"</span><span class="p">,</span> 
+					<span class="s">"p.value"</span><span class="p">)</span>
+			  <span class="kr">return</span><span class="p">(</span>res<span class="p">)</span>
+			  <span class="c1">#return(exp(cbind(coef(x),confint(x))))</span>
+			 <span class="p">})</span>
+res <span class="o">&lt;-</span> <span class="kp">t</span><span class="p">(</span><span class="kp">as.data.frame</span><span class="p">(</span>univ_results<span class="p">,</span> check.names <span class="o">=</span> <span class="kc">FALSE</span><span class="p">))</span>
+<span class="kp">as.data.frame</span><span class="p">(</span>res<span class="p">)</span>
+</pre></div>
+
+<pre class="example">
+           beta HR (95% CI for HR) wald.test p.value
+age       0.019            1 (1-1)       4.1   0.042
+sex       -0.53   0.59 (0.42-0.82)        10  0.0015
+ph.karno -0.016      0.98 (0.97-1)       7.9   0.005
+ph.ecog    0.48        1.6 (1.3-2)        18 2.7e-05
+wt.loss  0.0013         1 (0.99-1)      0.05    0.83
+</pre>
+
+
+
+<p>
+From the output above,
+</p>
+
+<ul class="org-ul">
+<li>The variables sex, age and ph.ecog have highly statistically significant coefficients, while the coefficient for ph.karno is not significant.
+</li>
+
+<li>age and ph.ecog have positive beta coefficients, while sex has a negative coefficient. Thus, older age and higher ph.ecog are associated with poorer survival, whereas being female (sex=2) is associated with better survival.
+</li>
+</ul>
+</div>
+</li>
+
+<li>
+<a id="sec-4-4-3" name="sec-4-4-3"></a>多因素 Cox 回归分析<br><div class="outline-text-4" id="text-4-4-3">
+<div class="highlight"><pre><span></span>res.cox2 <span class="o">&lt;-</span> coxph<span class="p">(</span>Surv<span class="p">(</span>time<span class="p">,</span> status<span class="p">)</span> <span class="o">~</span> age <span class="o">+</span> sex <span class="o">+</span> ph.ecog<span class="p">,</span> data <span class="o">=</span> lung<span class="p">)</span>
+<span class="kp">summary</span><span class="p">(</span>res.cox2<span class="p">)</span>
+</pre></div>
+
+<pre class="example">
+Call:
+coxph(formula = Surv(time, status) ~ age + sex + ph.ecog, data = lung)
+
+  n= 227, number of events= 164 
+   (1 observation deleted due to missingness)
+
+             coef exp(coef)  se(coef)      z Pr(&gt;|z|)
+age      0.011067  1.011128  0.009267  1.194 0.232416
+sex     -0.552612  0.575445  0.167739 -3.294 0.000986
+ph.ecog  0.463728  1.589991  0.113577  4.083 4.45e-05
+
+        exp(coef) exp(-coef) lower .95 upper .95
+age        1.0111     0.9890    0.9929    1.0297
+sex        0.5754     1.7378    0.4142    0.7994
+ph.ecog    1.5900     0.6289    1.2727    1.9864
+
+Concordance= 0.637  (se = 0.026 )
+Rsquare= 0.126   (max possible= 0.999 )
+Likelihood ratio test= 30.5  on 3 df,   p=1.083e-06
+Wald test            = 29.93  on 3 df,   p=1.428e-06
+Score (logrank) test = 30.5  on 3 df,   p=1.083e-06
+</pre>
+
+
+
+<div class="figure">
+<p><img src="img/Statistic%20analysis/screenshot_2018-01-18_22-09-09.png" alt="screenshot_2018-01-18_22-09-09.png"></p>
+</div>
+</div>
+</li>
+
+<li>
+<a id="sec-4-4-4" name="sec-4-4-4"></a>Cox 回归可视化<br><div class="outline-text-4" id="text-4-4-4">
+<p>
+简单可视化
+</p>
+<div class="highlight"><pre><span></span>fit.cox <span class="o">&lt;-</span> survfit<span class="p">(</span>res.cox2<span class="p">,</span> data <span class="o">=</span> lung<span class="p">)</span>
+ggsurvplot<span class="p">(</span>fit.cox<span class="p">,</span> color <span class="o">=</span> <span class="s">"#2E9FDF"</span><span class="p">,</span>   ggtheme <span class="o">=</span> theme_minimal<span class="p">())</span>
+</pre></div>
+
+
+<div class="figure">
+<p><img src="img/survival-analysis-Cox-1.png" alt="survival-analysis-Cox-1.png"></p>
+</div>
+
+<p>
+按照性别进行分组可视化
+</p>
+<div class="highlight"><pre><span></span>sex_df <span class="o">&lt;-</span> <span class="kp">with</span><span class="p">(</span>lung<span class="p">,</span>
+	       <span class="kt">data.frame</span><span class="p">(</span>sex <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">),</span> 
+			  age <span class="o">=</span> <span class="kp">rep</span><span class="p">(</span><span class="kp">mean</span><span class="p">(</span>age<span class="p">,</span> na.rm <span class="o">=</span> <span class="kc">TRUE</span><span class="p">),</span> <span class="m">2</span><span class="p">),</span>
+			  ph.ecog <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span>
+			  <span class="p">)</span>
+	       <span class="p">)</span>
+
+res.cox2 <span class="o">&lt;-</span> coxph<span class="p">(</span>Surv<span class="p">(</span>time<span class="p">,</span> status<span class="p">)</span> <span class="o">~</span> age <span class="o">+</span> sex <span class="o">+</span> ph.ecog<span class="p">,</span> data <span class="o">=</span> lung<span class="p">)</span>
+fit.cox2 <span class="o">&lt;-</span> survfit<span class="p">(</span>res.cox2<span class="p">,</span> newdata <span class="o">=</span> sex_df<span class="p">)</span>
+
+ggsurvplot<span class="p">(</span>fit.cox2<span class="p">,</span> conf.int <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> legend.labs<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="s">"Sex=1"</span><span class="p">,</span> <span class="s">"Sex=2"</span><span class="p">),</span> data <span class="o">=</span> sex_df<span class="p">,</span>
+	   ggtheme <span class="o">=</span> theme_minimal<span class="p">())</span>
+</pre></div>
+
+
+<div class="figure">
+<p><img src="img/survival-analysis-Cox-2.png" alt="survival-analysis-Cox-2.png"></p>
+</div>
+</div>
+</li>
+
+
+<li>
+<a id="sec-4-4-5" name="sec-4-4-5"></a>Cox 模型假设检验<br><div class="outline-text-4" id="text-4-4-5">
+<p>
+用 <code>cox.zph()</code> 函数检验比例危险的假设
+</p>
+<div class="highlight"><pre><span></span><span class="kn">library</span><span class="p">(</span>survival<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>survminer<span class="p">)</span>
+data<span class="p">(</span>lung<span class="p">)</span>
+res.cox <span class="o">&lt;-</span> coxph<span class="p">(</span>Surv<span class="p">(</span>time<span class="p">,</span> status<span class="p">)</span> <span class="o">~</span> sex <span class="o">+</span> age <span class="o">+</span> wt.loss<span class="p">,</span> data <span class="o">=</span> lung<span class="p">)</span>
+test.ph <span class="o">&lt;-</span> cox.zph<span class="p">(</span>res.cox<span class="p">)</span>
+test.ph
+</pre></div>
+
+<pre class="example">
+            rho chisq     p
+sex      0.1265 2.349 0.125
+age     -0.0483 0.378 0.538
+wt.loss  0.0126 0.024 0.877
+GLOBAL       NA 2.846 0.416
+</pre>
+
+<p>
+From the output above, the test is not statistically significant for each of the covariates, and the global test is also not statistically significant. Therefore, we can assume the proportional hazards.
+</p>
+
+<p>
+可以用 <code>ggcoxzph()</code> 画出每个因素的检验
+</p>
+<div class="highlight"><pre><span></span>ggcoxzph<span class="p">(</span>test.ph<span class="p">)</span>
+</pre></div>
+
+
+<div class="figure">
+<p><img src="img/survival-analysis-Cox-3.png" alt="survival-analysis-Cox-3.png"></p>
+</div>
+
+<p>
+可以用 <code>ggcoxdiagnostics()</code> 画出 influential observations
+Specifying the argument type = “dfbeta”, plots the estimated changes in the regression coefficients upon deleting each observation in turn; likewise, type=“dfbetas” produces the estimated changes in the coefficients divided by their standard errors.
+</p>
+<div class="highlight"><pre><span></span>ggcoxdiagnostics<span class="p">(</span>res.cox<span class="p">,</span> type <span class="o">=</span> <span class="s">"dfbeta"</span><span class="p">,</span>
+		 linear.predictions <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> ggtheme <span class="o">=</span> theme_bw<span class="p">())</span>
+</pre></div>
+
+
+<div class="figure">
+<p><img src="img/survival-analysis-Cox-4.png" alt="survival-analysis-Cox-4.png"></p>
+</div>
+
+<p>
+(Index plots of dfbeta for the Cox regression of time to death on age, sex and wt.loss)
+</p>
+
+<p>
+The above index plots show that comparing the magnitudes of the largest dfbeta values to the regression coefficients suggests that none of the observations is terribly influential individually, even though some of the dfbeta values for age and wt.loss are large compared with the others.
+</p>
+
+<p>
+It’s also possible to check outliers by visualizing the deviance residuals. The deviance residual is a normalized transform of the martingale residual. These residuals should be roughtly symmetrically distributed about zero with a standard deviation of 1.
+</p>
+
+<ul class="org-ul">
+<li>Positive values correspond to individuals that “died too soon” compared to expected survival times.
+</li>
+<li>Negative values correspond to individual that “lived too long”.
+</li>
+<li>Very large or small values are outliers, which are poorly predicted by the model.
+</li>
+</ul>
+<p>
+Example of deviance residuals:
+</p>
+<div class="highlight"><pre><span></span>ggcoxdiagnostics<span class="p">(</span>res.cox<span class="p">,</span> type <span class="o">=</span> <span class="s">"deviance"</span><span class="p">,</span>
+		 linear.predictions <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> ggtheme <span class="o">=</span> theme_bw<span class="p">())</span>
+</pre></div>
+
+
+<div class="figure">
+<p><img src="img/survival-analysis-Cox-5.png" alt="survival-analysis-Cox-5.png"></p>
+</div>
+
+<p>
+Testing non linearity
+</p>
+
+<p>
+Often, we assume that continuous covariates have a linear form. However, this assumption should be checked.
+</p>
+
+<p>
+Plotting the Martingale residuals against continuous covariates is a common approach used to detect nonlinearity or, in other words, to assess the functional form of a covariate. For a given continuous covariate, patterns in the plot may suggest that the variable is not properly fit.
+</p>
+
+<p>
+Nonlinearity is not an issue for categorical variables, so we only examine plots of martingale residuals and partial residuals against a continuous variable.
+</p>
+
+<p>
+Martingale residuals may present any value in the range (-INF, +1):
+</p>
+
+<ul class="org-ul">
+<li>A value of martinguale residuals near 1 represents individuals that “died too soon”,
+</li>
+<li>and large negative values correspond to individuals that “lived too long”.
+</li>
+</ul>
+<p>
+To assess the functional form of a continuous variable in a Cox proportional hazards model, we’ll use the function ggcoxfunctional() [in the survminer R package].
+</p>
+
+<p>
+The function ggcoxfunctional() displays graphs of continuous covariates against martingale residuals of null cox proportional hazards model. This might help to properly choose the functional form of continuous variable in the Cox model. Fitted lines with lowess function should be linear to satisfy the Cox proportional hazards model assumptions.
+</p>
+
+<div class="highlight"><pre><span></span>ggcoxfunctional<span class="p">(</span>Surv<span class="p">(</span>time<span class="p">,</span> status<span class="p">)</span> <span class="o">~</span> age <span class="o">+</span> <span class="kp">log</span><span class="p">(</span>age<span class="p">)</span> <span class="o">+</span> <span class="kp">sqrt</span><span class="p">(</span>age<span class="p">),</span> data <span class="o">=</span> lung<span class="p">)</span>
+</pre></div>
+
+
+<div class="figure">
+<p><img src="img/survival-analysis-Cox-6.png" alt="survival-analysis-Cox-6.png"></p>
+</div>
+
+<p>
+根据上图所示, 显然是非线性的
+</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">Creative Commons licensing</h2>
+<div class="outline-text-2" id="text-5">
+<blockquote>
+<p>
+TITLE: 科研工作中的生存分析 <br>
+AUTHOR: lengyueyang <br>
+DATE: 2018-01-15 19:26:52 UTC+08:00<br>
+UPDATED: <br>
+LICENSE: The blog is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>, commercial use is not allowed, for any reprint, please indicate address and signature.
+</p>
+</blockquote>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef">
+<sup><a id="fn.1" name="fn.1" class="footnum" href="survival-analysis-research.html#fnr.1">1</a></sup><p class="footpara">
+<a href="https://github.com/gregsexton/ob-ipython">https://github.com/gregsexton/ob-ipython</a>
+</p>
+</div>
+
+<div class="footdef">
+<sup><a id="fn.2" name="fn.2" class="footnum" href="survival-analysis-research.html#fnr.2">2</a></sup><p class="footpara">
+<a href="http://tech.memoryimprintstudio.com/r-source-code-blocks-in-org-mode/">http://tech.memoryimprintstudio.com/r-source-code-blocks-in-org-mode/</a>
+</p>
+</div>
+
+<div class="footdef">
+<sup><a id="fn.3" name="fn.3" class="footnum" href="survival-analysis-research.html#fnr.3">3</a></sup><p class="footpara">
+<a href="https://en.wikipedia.org/wiki/Survival_analysis">https://en.wikipedia.org/wiki/Survival_analysis</a>
+</p>
+</div>
+
+<div class="footdef">
+<sup><a id="fn.4" name="fn.4" class="footnum" href="survival-analysis-research.html#fnr.4">4</a></sup><p class="footpara">
+<a href="https://www.cnblogs.com/wwxbi/p/6136348.html">https://www.cnblogs.com/wwxbi/p/6136348.html</a>
+</p>
+</div>
+
+
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../categories/cox-regression.html" rel="tag">Cox regression</a></li>
+            <li><a class="tag p-category" href="../categories/km-analysis.html" rel="tag">KM analysis</a></li>
+            <li><a class="tag p-category" href="../categories/nomogram.html" rel="tag">Nomogram</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html" rel="prev" title="数据科学-数学与统计-高等代数-矩阵运算">Previous post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="lengyueyang",
+            disqus_url="https://lengyueyang.github.io/Research/survival-analysis-research.html",
+        disqus_title="\u79d1\u7814\u5de5\u4f5c\u4e2d\u7684\u751f\u5b58\u5206\u6790",
+        disqus_identifier="cache/posts/Research/Survival analysis.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="lengyueyang";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2018         <a href="mailto:maoxiaowei1988@qq.com">Lengyueyang</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a> and <a href="#" https: rel="nofollow">Org-mode</a>       
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+<img alt="Creative Commons License BY-NC-SA" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a>
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

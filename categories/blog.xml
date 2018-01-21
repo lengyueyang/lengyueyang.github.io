@@ -2,41 +2,31 @@
 <?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>深度识医 (Posts about Blog)</title><link>https://lengyueyang.github.io/</link><description></description><atom:link href="https://lengyueyang.github.io/categories/blog.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:maoxiaowei1988@qq.com"&gt;Lengyueyang&lt;/a&gt; 
 &lt;a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;
 &lt;img alt="Creative Commons License BY-NC-SA"
-style="border-width:0; margin-bottom:12px;"
-src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Mon, 08 Jan 2018 13:44:44 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>博客迁移杂记-从 Hexo 到 Nikola</title><link>https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html</link><dc:creator>Lengyueyang</dc:creator><description>&lt;div&gt;&lt;div id="table-of-contents"&gt;
+src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Sun, 21 Jan 2018 06:12:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>博客迁移杂记-从 Hexo 到 Nikola</title><link>https://lengyueyang.github.io/life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html</link><dc:creator>Lengyueyang</dc:creator><description>&lt;div&gt;&lt;div id="table-of-contents"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-1"&gt;迁移原因&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2"&gt;Nikola 安装和配置&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://lengyueyang.github.io/life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-1"&gt;迁移原因&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lengyueyang.github.io/life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2"&gt;Nikola 安装和配置&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-1"&gt;安装&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2"&gt;配置&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-1"&gt;修改自定义位置&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-2"&gt;Archive 按照时间排序，去掉年份，首页显示缩略版&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-3"&gt;增加 google 搜索&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-4"&gt;增加评论&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-5"&gt;主题&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-6"&gt;语法高亮&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-7"&gt;发布时，复制特定文件夹到 output&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lengyueyang.github.io/life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-1"&gt;安装&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lengyueyang.github.io/life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2"&gt;配置&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-3"&gt;Org-mode 配置&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://lengyueyang.github.io/life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-3"&gt;Org-mode 配置&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-3-1"&gt;Org-mode 和 tags 支持&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-3-2"&gt;Math 支持&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://lengyueyang.github.io/life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-3-1"&gt;Org-mode 和 tags 支持&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lengyueyang.github.io/life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-3-2"&gt;Math 支持&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lengyueyang.github.io/life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-4"&gt;Emacs 管理 blog&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-3-2-1"&gt;Mathjax&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-3-2-2"&gt;Latex preview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lengyueyang.github.io/life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-4-1"&gt;用 blog-admin 做前端&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lengyueyang.github.io/life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-4-2"&gt;配置-增加阅读更多和 commit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lengyueyang.github.io/life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-4-3"&gt;快速插入知识产权&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-4"&gt;Emacs 管理 blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-5"&gt;&lt;span class="todo TODO"&gt;TODO&lt;/span&gt; 后期实现&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lengyueyang.github.io/life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-5"&gt;Creative Commons licensing&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -50,20 +40,20 @@ src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"&gt;&lt;/a&gt;</copy
 &lt;/p&gt;
 
 &lt;p&gt;
-Nikola 是用 Python 写的，恰好以后要学 Python，同时 Nikola 通过 Org-mode 插件支持 Org-mode，于是选择 Nikola 作为博客框架，目前一切还好，就是主题比较难看。博客迁移过程用，参考&lt;sup&gt;&lt;a id="fnr.1" name="fnr.1" class="footref" href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#fn.1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;, &lt;/sup&gt;&lt;sup&gt;&lt;a id="fnr.2" name="fnr.2" class="footref" href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#fn.2"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;, &lt;/sup&gt;&lt;sup&gt;&lt;a id="fnr.3" name="fnr.3" class="footref" href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#fn.3"&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;, &lt;/sup&gt;&lt;sup&gt;&lt;a id="fnr.4" name="fnr.4" class="footref" href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#fn.4"&gt;4&lt;/a&gt;&lt;/sup&gt; 
+Nikola 是用 Python 写的，恰好以后要学 Python，同时 Nikola 通过 Org-mode 插件支持 Org-mode，于是选择 Nikola 作为博客框架，目前一切还好，就是主题比较难看。博客迁移过程用，参考&lt;sup&gt;&lt;a id="fnr.1" name="fnr.1" class="footref" href="https://lengyueyang.github.io/life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#fn.1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;, &lt;/sup&gt;&lt;sup&gt;&lt;a id="fnr.2" name="fnr.2" class="footref" href="https://lengyueyang.github.io/life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#fn.2"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;, &lt;/sup&gt;&lt;sup&gt;&lt;a id="fnr.3" name="fnr.3" class="footref" href="https://lengyueyang.github.io/life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#fn.3"&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;, &lt;/sup&gt;&lt;sup&gt;&lt;a id="fnr.4" name="fnr.4" class="footref" href="https://lengyueyang.github.io/life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#fn.4"&gt;4&lt;/a&gt;&lt;/sup&gt; 
 &lt;/p&gt;
 
-&lt;p&gt;&lt;a href="https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html"&gt;Read more…&lt;/a&gt; (9 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>Blog</category><category>Nikola</category><category>Org-mode</category><guid>https://lengyueyang.github.io/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html</guid><pubDate>Sun, 07 Jan 2018 13:12:15 GMT</pubDate></item><item><title>Blog with org-mode and github [用 Org-mdoe 和 github 搭建博客]</title><link>https://lengyueyang.github.io/posts/blog-with-org-mode-and-github.html</link><dc:creator>Lengyueyang</dc:creator><description>&lt;div&gt;&lt;div id="table-of-contents"&gt;
+&lt;p&gt;&lt;a href="https://lengyueyang.github.io/life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html"&gt;Read more…&lt;/a&gt; (10 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>Blog</category><category>Nikola</category><category>Org-mode</category><guid>https://lengyueyang.github.io/life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html</guid><pubDate>Sun, 07 Jan 2018 13:12:15 GMT</pubDate></item><item><title>Blog with org-mode and github [用 Org-mdoe 和 github 搭建博客]</title><link>https://lengyueyang.github.io/life/blog-with-org-mode-and-github.html</link><dc:creator>Lengyueyang</dc:creator><description>&lt;div&gt;&lt;div id="table-of-contents"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/blog-with-org-mode-and-github.html#sec-1"&gt;写在前面&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/blog-with-org-mode-and-github.html#sec-2"&gt;用 Hexo 搭建博客&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/blog-with-org-mode-and-github.html#sec-3"&gt;博客源代码托管到 Github 上&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/blog-with-org-mode-and-github.html#sec-4"&gt;用 Org-mode 写博客&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/blog-with-org-mode-and-github.html#sec-5"&gt;一些问题&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://lengyueyang.github.io/life/blog-with-org-mode-and-github.html#sec-1"&gt;写在前面&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lengyueyang.github.io/life/blog-with-org-mode-and-github.html#sec-2"&gt;用 Hexo 搭建博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lengyueyang.github.io/life/blog-with-org-mode-and-github.html#sec-3"&gt;博客源代码托管到 Github 上&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lengyueyang.github.io/life/blog-with-org-mode-and-github.html#sec-4"&gt;用 Org-mode 写博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lengyueyang.github.io/life/blog-with-org-mode-and-github.html#sec-5"&gt;一些问题&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://lengyueyang.github.io/posts/blog-with-org-mode-and-github.html#sec-5-1"&gt;Org-mode 图片插入&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lengyueyang.github.io/life/blog-with-org-mode-and-github.html#sec-5-1"&gt;Org-mode 图片插入&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -80,4 +70,4 @@ Nikola 是用 Python 写的，恰好以后要学 Python，同时 Nikola 通过 O
 &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href="https://lengyueyang.github.io/posts/blog-with-org-mode-and-github.html"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>Blog</category><category>Emacs</category><category>Github</category><category>Org-mode</category><guid>https://lengyueyang.github.io/posts/blog-with-org-mode-and-github.html</guid><pubDate>Fri, 11 Mar 2016 11:26:52 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://lengyueyang.github.io/life/blog-with-org-mode-and-github.html"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>Blog</category><category>Emacs</category><category>Github</category><category>Org-mode</category><guid>https://lengyueyang.github.io/life/blog-with-org-mode-and-github.html</guid><pubDate>Fri, 11 Mar 2016 11:26:52 GMT</pubDate></item></channel></rss>

@@ -10,7 +10,7 @@
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://lengyueyang.github.io/index.html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="Research/survival-analysis-research.html" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -35,22 +35,31 @@
         <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
             <ul class="nav navbar-nav">
 <li>
-<a href="archive.html">Archives</a>
+<a href="posts/data-science/index.html">Data Science</a>
+                </li>
+<li>
+<a href="posts/research/index.html">Research</a>
+                </li>
+<li>
+<a href="posts/life/index.html">Life</a>
                 </li>
 <li>
 <a href="categories/index.html">Tags</a>
                 </li>
 <li>
+<a href="archive.html">Archives</a>
+                </li>
+<li>
 <a href="pages/notes.html">Notes</a>
+                </li>
+<li>
+<a href="pages/links.html">Links</a>
                 </li>
 <li>
 <a href="pages/about.html">About</a>
                 </li>
 <li>
 <a href="https://github.com/lengyueyang">Github</a>
-                </li>
-<li>
-<a href="pages/links.html">Links</a>
                 </li>
 <li>
 <a href="rss.xml">RSS feed</a>
@@ -87,15 +96,15 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html" class="u-url">数据科学-数学与统计-高等代数-矩阵运算</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="Research/survival-analysis-research.html" class="u-url">科研工作中的生存分析</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Lengyueyang
             </span></p>
-            <p class="dateline"><a href="posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html" rel="bookmark"><time class="published dt-published" datetime="2018-01-08T21:03:03+08:00" title="2018-01-08 21:03">2018-01-08 21:03</time></a></p>
+            <p class="dateline"><a href="Research/survival-analysis-research.html" rel="bookmark"><time class="published dt-published" datetime="2018-01-15T19:26:52+08:00" title="2018-01-15 19:26">2018-01-15 19:26</time></a></p>
                 <p class="commentline">
         
-    <a href="posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#disqus_thread" data-disqus-identifier="cache/posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html">Comments</a>
+    <a href="Research/survival-analysis-research.html#disqus_thread" data-disqus-identifier="cache/posts/Research/Survival analysis.html">Comments</a>
 
 
         </p>
@@ -106,14 +115,77 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#sec-1">矩阵基础运算</a></li>
-<li><a href="posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#sec-2">特殊矩阵</a></li>
-<li><a href="posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#sec-3">矩阵乘积的秩与行列式</a></li>
-<li><a href="posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#sec-4">可逆矩阵</a></li>
-<li><a href="posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#sec-5">矩阵的分块</a></li>
-<li><a href="posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#sec-6">正交矩阵 <img src="posts/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_bf9b0943e6cc090fd1bc7580acb8b5c0f6791acf.png" alt="\(⋅\)"> 欧几里得空间 <img src="posts/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_26eaef4011870bf0cd2f4f0413f0228dd2f0de37.png" alt="\(R^n\)"></a></li>
-<li><a href="posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#sec-7"><img src="posts/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_0b20f7646222454f795423e3fe83323df9e96a50.png" alt="\(K^n\)"> 到 <img src="posts/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_32c80f5f70cac53e5978524b9688f6bdc1acc851.png" alt="\(K^s\)"> 的线性映射</a></li>
-<li><a href="posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#sec-8">例题</a></li>
+<li><a href="Research/survival-analysis-research.html#sec-1">引子</a></li>
+<li>
+<a href="Research/survival-analysis-research.html#sec-2">生存分析概述</a>
+<ul>
+<li><a href="Research/survival-analysis-research.html#sec-2-1">生存分析的适用范围</a></li>
+<li><a href="Research/survival-analysis-research.html#sec-2-2">生存分析术语</a></li>
+</ul>
+</li>
+<li>
+<a href="Research/survival-analysis-research.html#sec-3">生存分析公式</a>
+<ul>
+<li><a href="Research/survival-analysis-research.html#sec-3-1">生存函数(Survival Function)</a></li>
+<li><a href="Research/survival-analysis-research.html#sec-3-2">生存分布函数(lifetime distribution function)和生存分布密度函数</a></li>
+<li><a href="Research/survival-analysis-research.html#sec-3-3">危险函数和累计危险函数(Hazard function and cumulative hazard function)</a></li>
+<li><a href="Research/survival-analysis-research.html#sec-3-4">生存函数之间的量化关系</a></li>
+</ul>
+</li>
+<li>
+<a href="Research/survival-analysis-research.html#sec-4">参数拟合</a>
+<ul>
+<li><a href="Research/survival-analysis-research.html#sec-4-1">参数检验</a></li>
+<li><a href="Research/survival-analysis-research.html#sec-4-2">非参数检验</a></li>
+<li><a href="Research/survival-analysis-research.html#sec-4-3">Kaplan-Meier 生存分析</a></li>
+<li><a href="Research/survival-analysis-research.html#sec-4-4">Cox PH 模型</a></li>
+</ul>
+</li>
+<li><a href="Research/survival-analysis-research.html#sec-5">Creative Commons licensing</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">引子</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+生存分析是在科研中占有重要位置, 它是分析随时间变化的因素和生存率之间关系的一门学科, 这篇博客主要总结科研工作中的生存分析, 并用 python<sup><a id="fnr.1" name="fnr.1" class="footref" href="Research/survival-analysis-research.html#fn.1">1</a></sup> 和 R<sup><a id="fnr.2" name="fnr.2" class="footref" href="Research/survival-analysis-research.html#fn.2">2</a></sup> 代码实现, 彻底理清科研文章中的生存分析<sup><a id="fnr.3" name="fnr.3" class="footref" href="Research/survival-analysis-research.html#fn.3">3</a></sup><sup>, </sup><sup><a id="fnr.4" name="fnr.4" class="footref" href="Research/survival-analysis-research.html#fn.4">4</a></sup> .
+</p>
+
+<p class="more"><a href="Research/survival-analysis-research.html">Read more…</a></p>
+</div>
+</div>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html" class="u-url">数据科学-数学与统计-高等代数-矩阵运算</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Lengyueyang
+            </span></p>
+            <p class="dateline"><a href="Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html" rel="bookmark"><time class="published dt-published" datetime="2018-01-08T21:03:03+08:00" title="2018-01-08 21:03">2018-01-08 21:03</time></a></p>
+                <p class="commentline">
+        
+    <a href="Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#disqus_thread" data-disqus-identifier="cache/posts/Data Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#sec-1">矩阵基础运算</a></li>
+<li><a href="Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#sec-2">特殊矩阵</a></li>
+<li><a href="Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#sec-3">矩阵乘积的秩与行列式</a></li>
+<li><a href="Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#sec-4">可逆矩阵</a></li>
+<li><a href="Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#sec-5">矩阵的分块</a></li>
+<li><a href="Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#sec-6">正交矩阵 <img src="Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_bf9b0943e6cc090fd1bc7580acb8b5c0f6791acf.png" alt="\(⋅\)"> 欧几里得空间 <img src="Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_26eaef4011870bf0cd2f4f0413f0228dd2f0de37.png" alt="\(R^n\)"></a></li>
+<li><a href="Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#sec-7"><img src="Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_0b20f7646222454f795423e3fe83323df9e96a50.png" alt="\(K^n\)"> 到 <img src="Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_32c80f5f70cac53e5978524b9688f6bdc1acc851.png" alt="\(K^s\)"> 的线性映射</a></li>
+<li><a href="Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html#sec-8">例题</a></li>
 </ul>
 </div>
 </div>
@@ -123,35 +195,35 @@
 <div class="outline-text-2" id="text-1">
 
 <div class="figure">
-<p><img src="posts/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_3abe4715730885b74ef803e53f4d0c0428622af6.png" alt="\begin{de}[矩阵加法定义]
+<p><img src="Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_3abe4715730885b74ef803e53f4d0c0428622af6.png" alt="\begin{de}[矩阵加法定义]
 \end{de}"></p>
 </div>
 <p>
-设 <img src="posts/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_7fe946cd7707ac561c4586c9cd098cd535376381.png" alt="\(A = (a_{ij}), B = (b_{ij})\)"> 都是数域 K 上 <img src="posts/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_b57e699672819afa1e82577bdb095b8501a67de0.png" alt="\(s \times n\)"> 矩阵,令 <img src="posts/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_bad0b2d10c06c8a6134166753309670f4f7a57c2.png" alt="\(C = (a_{ij} + b_{ij})_{s\times n}\)">, 则称矩阵 C 是矩阵 A 与 B 的 <b>和</b>, 记作 <img src="posts/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_3c47dc0a932e503847d4f5f37722c2655a8428ca.png" alt="\(C = A + B\)">.
+设 <img src="Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_7fe946cd7707ac561c4586c9cd098cd535376381.png" alt="\(A = (a_{ij}), B = (b_{ij})\)"> 都是数域 K 上 <img src="Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_b57e699672819afa1e82577bdb095b8501a67de0.png" alt="\(s \times n\)"> 矩阵,令 <img src="Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_bad0b2d10c06c8a6134166753309670f4f7a57c2.png" alt="\(C = (a_{ij} + b_{ij})_{s\times n}\)">, 则称矩阵 C 是矩阵 A 与 B 的 <b>和</b>, 记作 <img src="Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_3c47dc0a932e503847d4f5f37722c2655a8428ca.png" alt="\(C = A + B\)">.
 </p>
 
 
 <div class="figure">
-<p><img src="posts/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_f4b731dc695d0e597a77404353d5511ceee6fff8.png" alt="\begin{de}[矩阵数量乘法定义]
+<p><img src="Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_f4b731dc695d0e597a77404353d5511ceee6fff8.png" alt="\begin{de}[矩阵数量乘法定义]
 \end{de}"></p>
 </div>
 <p>
-设 <img src="posts/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_a3c14270b9ac4d03275f47827e490930d99b58cb.png" alt="\(A = (a_{ij})\)"> 都是数域 K 上 <img src="posts/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_b57e699672819afa1e82577bdb095b8501a67de0.png" alt="\(s \times n\)"> 矩阵, <img src="posts/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_3877c0a5edafa0d7eeb5517f21cd125a558f9bf1.png" alt="\(k \in K_{}\)">, 令 <img src="posts/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_8b19ff10ab258652fc8af8f4aa5e4a08b7a2cdb5.png" alt="\(M = (ka_{ij})_{s×n}\)">, 则称是矩阵 M 是 k 与矩阵 A 的 <b>数量乘积</b>, 记作 <img src="posts/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_2258aac0ccd78e55ebb46232e60be91fd730ccd0.png" alt="\(M = kA\)">.
+设 <img src="Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_a3c14270b9ac4d03275f47827e490930d99b58cb.png" alt="\(A = (a_{ij})\)"> 都是数域 K 上 <img src="Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_b57e699672819afa1e82577bdb095b8501a67de0.png" alt="\(s \times n\)"> 矩阵, <img src="Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_3877c0a5edafa0d7eeb5517f21cd125a558f9bf1.png" alt="\(k \in K_{}\)">, 令 <img src="Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_8b19ff10ab258652fc8af8f4aa5e4a08b7a2cdb5.png" alt="\(M = (ka_{ij})_{s×n}\)">, 则称是矩阵 M 是 k 与矩阵 A 的 <b>数量乘积</b>, 记作 <img src="Data%20Science/ltxpng/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan_2258aac0ccd78e55ebb46232e60be91fd730ccd0.png" alt="\(M = kA\)">.
 </p>
-<p class="more"><a href="posts/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html">Read more…</a></p>
+<p class="more"><a href="Data%20Science/shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan.html">Read more…</a></p>
 </div>
 </div>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html" class="u-url">博客迁移杂记-从 Hexo 到 Nikola</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html" class="u-url">博客迁移杂记-从 Hexo 到 Nikola</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Lengyueyang
             </span></p>
-            <p class="dateline"><a href="posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html" rel="bookmark"><time class="published dt-published" datetime="2018-01-07T21:12:15+08:00" title="2018-01-07 21:12">2018-01-07 21:12</time></a></p>
+            <p class="dateline"><a href="life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html" rel="bookmark"><time class="published dt-published" datetime="2018-01-07T21:12:15+08:00" title="2018-01-07 21:12">2018-01-07 21:12</time></a></p>
                 <p class="commentline">
         
-    <a href="posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#disqus_thread" data-disqus-identifier="cache/posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html">Comments</a>
+    <a href="life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#disqus_thread" data-disqus-identifier="cache/posts/Life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html">Comments</a>
 
 
         </p>
@@ -162,40 +234,30 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-1">迁移原因</a></li>
+<li><a href="life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-1">迁移原因</a></li>
 <li>
-<a href="posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2">Nikola 安装和配置</a>
+<a href="life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2">Nikola 安装和配置</a>
 <ul>
-<li><a href="posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-1">安装</a></li>
-<li>
-<a href="posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2">配置</a>
-<ul>
-<li><a href="posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-1">修改自定义位置</a></li>
-<li><a href="posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-2">Archive 按照时间排序，去掉年份，首页显示缩略版</a></li>
-<li><a href="posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-3">增加 google 搜索</a></li>
-<li><a href="posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-4">增加评论</a></li>
-<li><a href="posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-5">主题</a></li>
-<li><a href="posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-6">语法高亮</a></li>
-<li><a href="posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-7">发布时，复制特定文件夹到 output</a></li>
-</ul>
-</li>
+<li><a href="life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-1">安装</a></li>
+<li><a href="life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2">配置</a></li>
 </ul>
 </li>
 <li>
-<a href="posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-3">Org-mode 配置</a>
+<a href="life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-3">Org-mode 配置</a>
 <ul>
-<li><a href="posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-3-1">Org-mode 和 tags 支持</a></li>
+<li><a href="life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-3-1">Org-mode 和 tags 支持</a></li>
+<li><a href="life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-3-2">Math 支持</a></li>
+</ul>
+</li>
 <li>
-<a href="posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-3-2">Math 支持</a>
+<a href="life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-4">Emacs 管理 blog</a>
 <ul>
-<li><a href="posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-3-2-1">Mathjax</a></li>
-<li><a href="posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-3-2-2">Latex preview</a></li>
+<li><a href="life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-4-1">用 blog-admin 做前端</a></li>
+<li><a href="life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-4-2">配置-增加阅读更多和 commit</a></li>
+<li><a href="life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-4-3">快速插入知识产权</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-4">Emacs 管理 blog</a></li>
-<li><a href="posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-5"><span class="todo TODO">TODO</span> 后期实现</a></li>
+<li><a href="life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-5">Creative Commons licensing</a></li>
 </ul>
 </div>
 </div>
@@ -209,22 +271,22 @@
 </p>
 
 <p>
-Nikola 是用 Python 写的，恰好以后要学 Python，同时 Nikola 通过 Org-mode 插件支持 Org-mode，于是选择 Nikola 作为博客框架，目前一切还好，就是主题比较难看。博客迁移过程用，参考<sup><a id="fnr.1" name="fnr.1" class="footref" href="posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#fn.1">1</a></sup><sup>, </sup><sup><a id="fnr.2" name="fnr.2" class="footref" href="posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#fn.2">2</a></sup><sup>, </sup><sup><a id="fnr.3" name="fnr.3" class="footref" href="posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#fn.3">3</a></sup><sup>, </sup><sup><a id="fnr.4" name="fnr.4" class="footref" href="posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#fn.4">4</a></sup></p>
+Nikola 是用 Python 写的，恰好以后要学 Python，同时 Nikola 通过 Org-mode 插件支持 Org-mode，于是选择 Nikola 作为博客框架，目前一切还好，就是主题比较难看。博客迁移过程用，参考<sup><a id="fnr.1" name="fnr.1" class="footref" href="life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#fn.1">1</a></sup><sup>, </sup><sup><a id="fnr.2" name="fnr.2" class="footref" href="life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#fn.2">2</a></sup><sup>, </sup><sup><a id="fnr.3" name="fnr.3" class="footref" href="life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#fn.3">3</a></sup><sup>, </sup><sup><a id="fnr.4" name="fnr.4" class="footref" href="life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#fn.4">4</a></sup></p>
 
-<p class="more"><a href="posts/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html">Read more…</a></p>
+<p class="more"><a href="life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html">Read more…</a></p>
 </div>
 </div>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/archlinux-shadowsocks.html" class="u-url">Archlinux Shadowsocks Configuration [Archlinux Shadowsocks 配置]</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="life/archlinux-shadowsocks.html" class="u-url">Archlinux Shadowsocks Configuration [Archlinux Shadowsocks 配置]</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Lengyueyang
             </span></p>
-            <p class="dateline"><a href="posts/archlinux-shadowsocks.html" rel="bookmark"><time class="published dt-published" datetime="2017-12-11T19:26:52+08:00" title="2017-12-11 19:26">2017-12-11 19:26</time></a></p>
+            <p class="dateline"><a href="life/archlinux-shadowsocks.html" rel="bookmark"><time class="published dt-published" datetime="2017-12-11T19:26:52+08:00" title="2017-12-11 19:26">2017-12-11 19:26</time></a></p>
                 <p class="commentline">
         
-    <a href="posts/archlinux-shadowsocks.html#disqus_thread" data-disqus-identifier="cache/posts/Archlinux Shadowsocks configuration.html">Comments</a>
+    <a href="life/archlinux-shadowsocks.html#disqus_thread" data-disqus-identifier="cache/posts/Life/Archlinux Shadowsocks configuration.html">Comments</a>
 
 
         </p>
@@ -235,13 +297,13 @@ Nikola 是用 Python 写的，恰好以后要学 Python，同时 Nikola 通过 O
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="posts/archlinux-shadowsocks.html#sec-1">购买 socks5 帐号</a></li>
-<li><a href="posts/archlinux-shadowsocks.html#sec-2">在 Archlinux 安装 shadsocks</a></li>
-<li><a href="posts/archlinux-shadowsocks.html#sec-3">在 Documents 下建立 shadowsocks.json, 加入帐号配置</a></li>
-<li><a href="posts/archlinux-shadowsocks.html#sec-4">SS 启动及开机启动</a></li>
-<li><a href="posts/archlinux-shadowsocks.html#sec-5">使用 privoxy 使 http 走 socks5</a></li>
-<li><a href="posts/archlinux-shadowsocks.html#sec-6">emacs 代理，见 lengyueyang.org proxy 配置部分.</a></li>
-<li><a href="posts/archlinux-shadowsocks.html#sec-7">使用 proxychains 代理程序</a></li>
+<li><a href="life/archlinux-shadowsocks.html#sec-1">购买 socks5 帐号</a></li>
+<li><a href="life/archlinux-shadowsocks.html#sec-2">在 Archlinux 安装 shadsocks</a></li>
+<li><a href="life/archlinux-shadowsocks.html#sec-3">在 Documents 下建立 shadowsocks.json, 加入帐号配置</a></li>
+<li><a href="life/archlinux-shadowsocks.html#sec-4">SS 启动及开机启动</a></li>
+<li><a href="life/archlinux-shadowsocks.html#sec-5">使用 privoxy 使 http 走 socks5</a></li>
+<li><a href="life/archlinux-shadowsocks.html#sec-6">emacs 代理，见 lengyueyang.org proxy 配置部分.</a></li>
+<li><a href="life/archlinux-shadowsocks.html#sec-7">使用 proxychains 代理程序</a></li>
 </ul>
 </div>
 </div>
@@ -255,20 +317,20 @@ Nikola 是用 Python 写的，恰好以后要学 Python，同时 Nikola 通过 O
 <a href="https://a.aiguobit.com/users/ucenter">https://a.aiguobit.com/users/ucenter</a>
 </p>
 
-<p class="more"><a href="posts/archlinux-shadowsocks.html">Read more…</a></p>
+<p class="more"><a href="life/archlinux-shadowsocks.html">Read more…</a></p>
 </div>
 </div>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/DS-MS-AG-nweixiangliangkongjian.html" class="u-url">数据科学-数学与统计-高等代数- n 维向量空间 n 维向量空间 \(k^n\)</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="Data%20Science/DS-MS-AG-nweixiangliangkongjian.html" class="u-url">数据科学-数学与统计-高等代数- n 维向量空间 n 维向量空间 \(k^n\)</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Lengyueyang
             </span></p>
-            <p class="dateline"><a href="posts/DS-MS-AG-nweixiangliangkongjian.html" rel="bookmark"><time class="published dt-published" datetime="2017-10-09T19:26:52+08:00" title="2017-10-09 19:26">2017-10-09 19:26</time></a></p>
+            <p class="dateline"><a href="Data%20Science/DS-MS-AG-nweixiangliangkongjian.html" rel="bookmark"><time class="published dt-published" datetime="2017-10-09T19:26:52+08:00" title="2017-10-09 19:26">2017-10-09 19:26</time></a></p>
                 <p class="commentline">
         
-    <a href="posts/DS-MS-AG-nweixiangliangkongjian.html#disqus_thread" data-disqus-identifier="cache/posts/数据科学-数学与统计-高等代数-n维向量空间K^n.html">Comments</a>
+    <a href="Data%20Science/DS-MS-AG-nweixiangliangkongjian.html#disqus_thread" data-disqus-identifier="cache/posts/Data Science/数据科学-数学与统计-高等代数-n维向量空间K^n.html">Comments</a>
 
 
         </p>
@@ -279,45 +341,45 @@ Nikola 是用 Python 写的，恰好以后要学 Python，同时 Nikola 通过 O
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="posts/DS-MS-AG-nweixiangliangkongjian.html#sec-1">n 维向量空间 <img src="posts/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-n%E7%BB%B4%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4K%5En_0b20f7646222454f795423e3fe83323df9e96a50.png" alt="\(K^n\)"> 及其子空间</a></li>
-<li><a href="posts/DS-MS-AG-nweixiangliangkongjian.html#sec-2">线性相关与线性无关的向量组</a></li>
-<li><a href="posts/DS-MS-AG-nweixiangliangkongjian.html#sec-3">向量组的秩</a></li>
-<li><a href="posts/DS-MS-AG-nweixiangliangkongjian.html#sec-4">子空间的基与维数</a></li>
-<li><a href="posts/DS-MS-AG-nweixiangliangkongjian.html#sec-5">矩阵的秩</a></li>
-<li><a href="posts/DS-MS-AG-nweixiangliangkongjian.html#sec-6">线性方程组有解的充分必要条件</a></li>
-<li><a href="posts/DS-MS-AG-nweixiangliangkongjian.html#sec-7">齐次线性方程组的解集的结构</a></li>
-<li><a href="posts/DS-MS-AG-nweixiangliangkongjian.html#sec-8">非齐次线性方程组的解集的结构</a></li>
-<li><a href="posts/DS-MS-AG-nweixiangliangkongjian.html#sec-9">例题</a></li>
+<li><a href="Data%20Science/DS-MS-AG-nweixiangliangkongjian.html#sec-1">n 维向量空间 <img src="Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-n%E7%BB%B4%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4K%5En_0b20f7646222454f795423e3fe83323df9e96a50.png" alt="\(K^n\)"> 及其子空间</a></li>
+<li><a href="Data%20Science/DS-MS-AG-nweixiangliangkongjian.html#sec-2">线性相关与线性无关的向量组</a></li>
+<li><a href="Data%20Science/DS-MS-AG-nweixiangliangkongjian.html#sec-3">向量组的秩</a></li>
+<li><a href="Data%20Science/DS-MS-AG-nweixiangliangkongjian.html#sec-4">子空间的基与维数</a></li>
+<li><a href="Data%20Science/DS-MS-AG-nweixiangliangkongjian.html#sec-5">矩阵的秩</a></li>
+<li><a href="Data%20Science/DS-MS-AG-nweixiangliangkongjian.html#sec-6">线性方程组有解的充分必要条件</a></li>
+<li><a href="Data%20Science/DS-MS-AG-nweixiangliangkongjian.html#sec-7">齐次线性方程组的解集的结构</a></li>
+<li><a href="Data%20Science/DS-MS-AG-nweixiangliangkongjian.html#sec-8">非齐次线性方程组的解集的结构</a></li>
+<li><a href="Data%20Science/DS-MS-AG-nweixiangliangkongjian.html#sec-9">例题</a></li>
 </ul>
 </div>
 </div>
 
 <div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">n 维向量空间 <img src="posts/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-n%E7%BB%B4%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4K%5En_0b20f7646222454f795423e3fe83323df9e96a50.png" alt="\(K^n\)"> 及其子空间</h2>
+<h2 id="sec-1">n 维向量空间 <img src="Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-n%E7%BB%B4%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4K%5En_0b20f7646222454f795423e3fe83323df9e96a50.png" alt="\(K^n\)"> 及其子空间</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-取定一个数域 K, 设 n 是任意给定的一个正整数. 令 <img src="posts/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-n%E7%BB%B4%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4K%5En_e3f457c84a3de926cfc2243dc377745e52e9ea6a.png" alt="\[K^n = {(a_1, a_2, ⋯, a_n) | a_i \in K, i = 1,2,⋯,n}\]"></p>
+取定一个数域 K, 设 n 是任意给定的一个正整数. 令 <img src="Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-n%E7%BB%B4%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4K%5En_e3f457c84a3de926cfc2243dc377745e52e9ea6a.png" alt="\[K^n = {(a_1, a_2, ⋯, a_n) | a_i \in K, i = 1,2,⋯,n}\]"></p>
 
 <p>
-在 <img src="posts/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-n%E7%BB%B4%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4K%5En_0b20f7646222454f795423e3fe83323df9e96a50.png" alt="\(K^n\)"> 中规定加法运算如下:
-<img src="posts/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-n%E7%BB%B4%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4K%5En_8cc5af13fce9abe246c8571d7175071dc9de2a1e.png" alt="\[
+在 <img src="Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-n%E7%BB%B4%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4K%5En_0b20f7646222454f795423e3fe83323df9e96a50.png" alt="\(K^n\)"> 中规定加法运算如下:
+<img src="Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-n%E7%BB%B4%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4K%5En_8cc5af13fce9abe246c8571d7175071dc9de2a1e.png" alt="\[
 (a_1, a_2, \cdots, a_n) + (b_1, b_2, ⋯, b_n) \xlongequal{def} (a_1+b_1, a_2+b_2, \cdots, a_n+b_n)
 \]"></p>
 
-<p class="more"><a href="posts/DS-MS-AG-nweixiangliangkongjian.html">Read more…</a></p>
+<p class="more"><a href="Data%20Science/DS-MS-AG-nweixiangliangkongjian.html">Read more…</a></p>
 </div>
 </div>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/python-pyenv-methods.html" class="u-url">Python-Pyenv 使用方法总结</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="Data%20Science/python-pyenv-methods.html" class="u-url">Python-Pyenv 使用方法总结</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Lengyueyang
             </span></p>
-            <p class="dateline"><a href="posts/python-pyenv-methods.html" rel="bookmark"><time class="published dt-published" datetime="2017-09-19T19:26:52+08:00" title="2017-09-19 19:26">2017-09-19 19:26</time></a></p>
+            <p class="dateline"><a href="Data%20Science/python-pyenv-methods.html" rel="bookmark"><time class="published dt-published" datetime="2017-09-19T19:26:52+08:00" title="2017-09-19 19:26">2017-09-19 19:26</time></a></p>
                 <p class="commentline">
         
-    <a href="posts/python-pyenv-methods.html#disqus_thread" data-disqus-identifier="cache/posts/Python-Pyenv methods.html">Comments</a>
+    <a href="Data%20Science/python-pyenv-methods.html#disqus_thread" data-disqus-identifier="cache/posts/Data Science/Python-Pyenv methods.html">Comments</a>
 
 
         </p>
@@ -328,13 +390,13 @@ Nikola 是用 Python 写的，恰好以后要学 Python，同时 Nikola 通过 O
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="posts/python-pyenv-methods.html#sec-1">Pyenv 简介</a></li>
-<li><a href="posts/python-pyenv-methods.html#sec-2">安装</a></li>
-<li><a href="posts/python-pyenv-methods.html#sec-3">Pyenv 基本操作</a></li>
-<li><a href="posts/python-pyenv-methods.html#sec-4">安装不同版本 python</a></li>
-<li><a href="posts/python-pyenv-methods.html#sec-5">Pyenv-virtualenv python 不同项目虚拟环境的搭建</a></li>
-<li><a href="posts/python-pyenv-methods.html#sec-6">项目实践举例</a></li>
-<li><a href="posts/python-pyenv-methods.html#sec-7">参考资料</a></li>
+<li><a href="Data%20Science/python-pyenv-methods.html#sec-1">Pyenv 简介</a></li>
+<li><a href="Data%20Science/python-pyenv-methods.html#sec-2">安装</a></li>
+<li><a href="Data%20Science/python-pyenv-methods.html#sec-3">Pyenv 基本操作</a></li>
+<li><a href="Data%20Science/python-pyenv-methods.html#sec-4">安装不同版本 python</a></li>
+<li><a href="Data%20Science/python-pyenv-methods.html#sec-5">Pyenv-virtualenv python 不同项目虚拟环境的搭建</a></li>
+<li><a href="Data%20Science/python-pyenv-methods.html#sec-6">项目实践举例</a></li>
+<li><a href="Data%20Science/python-pyenv-methods.html#sec-7">参考资料</a></li>
 </ul>
 </div>
 </div>
@@ -346,20 +408,20 @@ Nikola 是用 Python 写的，恰好以后要学 Python，同时 Nikola 通过 O
 在使用 python 进行编程时, 经常遇到多个编程环境共存问题. pyenv 可以很好的解决这个问题, 本教程根据是学习使用 pyenv 的记录.
 </p>
 
-<p class="more"><a href="posts/python-pyenv-methods.html">Read more…</a></p>
+<p class="more"><a href="Data%20Science/python-pyenv-methods.html">Read more…</a></p>
 </div>
 </div>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/DS-MS-AG-hanglieshi.html" class="u-url">数据科学-数学与统计-高等代数-行列式</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="Data%20Science/DS-MS-AG-hanglieshi.html" class="u-url">数据科学-数学与统计-高等代数-行列式</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Lengyueyang
             </span></p>
-            <p class="dateline"><a href="posts/DS-MS-AG-hanglieshi.html" rel="bookmark"><time class="published dt-published" datetime="2017-09-05T19:26:52+08:00" title="2017-09-05 19:26">2017-09-05 19:26</time></a></p>
+            <p class="dateline"><a href="Data%20Science/DS-MS-AG-hanglieshi.html" rel="bookmark"><time class="published dt-published" datetime="2017-09-05T19:26:52+08:00" title="2017-09-05 19:26">2017-09-05 19:26</time></a></p>
                 <p class="commentline">
         
-    <a href="posts/DS-MS-AG-hanglieshi.html#disqus_thread" data-disqus-identifier="cache/posts/数据科学-数学与统计-高等代数-行列式.html">Comments</a>
+    <a href="Data%20Science/DS-MS-AG-hanglieshi.html#disqus_thread" data-disqus-identifier="cache/posts/Data Science/数据科学-数学与统计-高等代数-行列式.html">Comments</a>
 
 
         </p>
@@ -370,12 +432,12 @@ Nikola 是用 Python 写的，恰好以后要学 Python，同时 Nikola 通过 O
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="posts/DS-MS-AG-hanglieshi.html#sec-1">n 元排列</a></li>
-<li><a href="posts/DS-MS-AG-hanglieshi.html#sec-2">n 阶行列式的定义</a></li>
-<li><a href="posts/DS-MS-AG-hanglieshi.html#sec-3">行列式的性质</a></li>
-<li><a href="posts/DS-MS-AG-hanglieshi.html#sec-4">行列式按一行(列)展开</a></li>
-<li><a href="posts/DS-MS-AG-hanglieshi.html#sec-5">克莱姆法则(Cramer)</a></li>
-<li><a href="posts/DS-MS-AG-hanglieshi.html#sec-6">行列式按 k 行(列)展开</a></li>
+<li><a href="Data%20Science/DS-MS-AG-hanglieshi.html#sec-1">n 元排列</a></li>
+<li><a href="Data%20Science/DS-MS-AG-hanglieshi.html#sec-2">n 阶行列式的定义</a></li>
+<li><a href="Data%20Science/DS-MS-AG-hanglieshi.html#sec-3">行列式的性质</a></li>
+<li><a href="Data%20Science/DS-MS-AG-hanglieshi.html#sec-4">行列式按一行(列)展开</a></li>
+<li><a href="Data%20Science/DS-MS-AG-hanglieshi.html#sec-5">克莱姆法则(Cramer)</a></li>
+<li><a href="Data%20Science/DS-MS-AG-hanglieshi.html#sec-6">行列式按 k 行(列)展开</a></li>
 </ul>
 </div>
 </div>
@@ -388,27 +450,27 @@ n 个不同正整数的一个全排列称为 <b>n 元排列</b>.
 </p>
 
 <p>
-在 n 元排列 <img src="posts/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-%E8%A1%8C%E5%88%97%E5%BC%8F_c278c0aa2d441f9ca5396f685989ce448ed52529.png" alt="\(a_1, a_2, ⋯, a_n\)"> 中, 任取一对数 <img src="posts/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-%E8%A1%8C%E5%88%97%E5%BC%8F_3ac59a3b42e8d109ca4e51a2130dcd4148c51803.png" alt="\(a_i,a_j(i &amp;lt; j)\)">, 如果 <img src="posts/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-%E8%A1%8C%E5%88%97%E5%BC%8F_d057dd6597d94426a1d1c892285ca1a36a980ea8.png" alt="\(a_i &amp;lt; a_j\)">, 那么这一对数构成一个 <b>顺序</b>, 否则, 这对数构成一个 <b>逆序</b>. 一个 n 元排列中逆序的总数称为 <b>逆序数</b>, 记作 <img src="posts/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-%E8%A1%8C%E5%88%97%E5%BC%8F_fa6ab9f1201c17a5f7ba0d485b077c82728c2449.png" alt="\(τ(a_1a_2⋯a_n)\)">.
+在 n 元排列 <img src="Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-%E8%A1%8C%E5%88%97%E5%BC%8F_c278c0aa2d441f9ca5396f685989ce448ed52529.png" alt="\(a_1, a_2, ⋯, a_n\)"> 中, 任取一对数 <img src="Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-%E8%A1%8C%E5%88%97%E5%BC%8F_3ac59a3b42e8d109ca4e51a2130dcd4148c51803.png" alt="\(a_i,a_j(i &amp;lt; j)\)">, 如果 <img src="Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-%E8%A1%8C%E5%88%97%E5%BC%8F_d057dd6597d94426a1d1c892285ca1a36a980ea8.png" alt="\(a_i &amp;lt; a_j\)">, 那么这一对数构成一个 <b>顺序</b>, 否则, 这对数构成一个 <b>逆序</b>. 一个 n 元排列中逆序的总数称为 <b>逆序数</b>, 记作 <img src="Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-%E8%A1%8C%E5%88%97%E5%BC%8F_fa6ab9f1201c17a5f7ba0d485b077c82728c2449.png" alt="\(τ(a_1a_2⋯a_n)\)">.
 </p>
 
 <p>
 逆序数为奇数的排列称为 <b>奇排列</b>, 逆序数为偶数的排列称为 <b>偶排列</b>. 将一个排列中的两个数字互换, 其余数字位置不变的变换称为一个 <b>对换</b>.
 </p>
 
-<p class="more"><a href="posts/DS-MS-AG-hanglieshi.html">Read more…</a></p>
+<p class="more"><a href="Data%20Science/DS-MS-AG-hanglieshi.html">Read more…</a></p>
 </div>
 </div>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/DS-MS-AG-xianxingfangchengzudejiefa.html" class="u-url">数据科学-数学与统计-高等代数-线性方程组的解法</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="Data%20Science/DS-MS-AG-xianxingfangchengzudejiefa.html" class="u-url">数据科学-数学与统计-高等代数-线性方程组的解法</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Lengyueyang
             </span></p>
-            <p class="dateline"><a href="posts/DS-MS-AG-xianxingfangchengzudejiefa.html" rel="bookmark"><time class="published dt-published" datetime="2017-08-07T19:26:52+08:00" title="2017-08-07 19:26">2017-08-07 19:26</time></a></p>
+            <p class="dateline"><a href="Data%20Science/DS-MS-AG-xianxingfangchengzudejiefa.html" rel="bookmark"><time class="published dt-published" datetime="2017-08-07T19:26:52+08:00" title="2017-08-07 19:26">2017-08-07 19:26</time></a></p>
                 <p class="commentline">
         
-    <a href="posts/DS-MS-AG-xianxingfangchengzudejiefa.html#disqus_thread" data-disqus-identifier="cache/posts/数据科学-数学与统计-高等代数-线性方程组的解法.html">Comments</a>
+    <a href="Data%20Science/DS-MS-AG-xianxingfangchengzudejiefa.html#disqus_thread" data-disqus-identifier="cache/posts/Data Science/数据科学-数学与统计-高等代数-线性方程组的解法.html">Comments</a>
 
 
         </p>
@@ -419,13 +481,13 @@ n 个不同正整数的一个全排列称为 <b>n 元排列</b>.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="posts/DS-MS-AG-xianxingfangchengzudejiefa.html#sec-1">概述</a></li>
+<li><a href="Data%20Science/DS-MS-AG-xianxingfangchengzudejiefa.html#sec-1">概述</a></li>
 <li>
-<a href="posts/DS-MS-AG-xianxingfangchengzudejiefa.html#sec-2">线性方程组的解法</a>
+<a href="Data%20Science/DS-MS-AG-xianxingfangchengzudejiefa.html#sec-2">线性方程组的解法</a>
 <ul>
-<li><a href="posts/DS-MS-AG-xianxingfangchengzudejiefa.html#sec-2-1">解线性方差组的矩阵消元法</a></li>
-<li><a href="posts/DS-MS-AG-xianxingfangchengzudejiefa.html#sec-2-2">线性方程组的解的情况及其判别准则</a></li>
-<li><a href="posts/DS-MS-AG-xianxingfangchengzudejiefa.html#sec-2-3">数域</a></li>
+<li><a href="Data%20Science/DS-MS-AG-xianxingfangchengzudejiefa.html#sec-2-1">解线性方差组的矩阵消元法</a></li>
+<li><a href="Data%20Science/DS-MS-AG-xianxingfangchengzudejiefa.html#sec-2-2">线性方程组的解的情况及其判别准则</a></li>
+<li><a href="Data%20Science/DS-MS-AG-xianxingfangchengzudejiefa.html#sec-2-3">数域</a></li>
 </ul>
 </li>
 </ul>
@@ -444,20 +506,20 @@ n 个不同正整数的一个全排列称为 <b>n 元排列</b>.
 Hom, R. A. (2014). 矩阵分析. : 机械工业出版社. 
 张贤达, (2013). 矩阵分析与应用. : 清华大学出版社.
 </p>
-<p class="more"><a href="posts/DS-MS-AG-xianxingfangchengzudejiefa.html">Read more…</a></p>
+<p class="more"><a href="Data%20Science/DS-MS-AG-xianxingfangchengzudejiefa.html">Read more…</a></p>
 </div>
 </div>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/DS-MS-Statistics-suijibianliangjiqifengbu.html" class="u-url">数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html" class="u-url">数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Lengyueyang
             </span></p>
-            <p class="dateline"><a href="posts/DS-MS-Statistics-suijibianliangjiqifengbu.html" rel="bookmark"><time class="published dt-published" datetime="2017-05-29T19:26:52+08:00" title="2017-05-29 19:26">2017-05-29 19:26</time></a></p>
+            <p class="dateline"><a href="Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html" rel="bookmark"><time class="published dt-published" datetime="2017-05-29T19:26:52+08:00" title="2017-05-29 19:26">2017-05-29 19:26</time></a></p>
                 <p class="commentline">
         
-    <a href="posts/DS-MS-Statistics-suijibianliangjiqifengbu.html#disqus_thread" data-disqus-identifier="cache/posts/数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布.html">Comments</a>
+    <a href="Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#disqus_thread" data-disqus-identifier="cache/posts/Data Science/数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布.html">Comments</a>
 
 
         </p>
@@ -469,44 +531,14 @@ Hom, R. A. (2014). 矩阵分析. : 机械工业出版社.
 <div id="text-table-of-contents">
 <ul>
 <li>
-<a href="posts/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1">随机变量及其概率分布</a>
+<a href="Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1">随机变量及其概率分布</a>
 <ul>
-<li>
-<a href="posts/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-1">一维随机变量</a>
-<ul>
-<li><a href="posts/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-1-1">随机变量的概念</a></li>
-<li><a href="posts/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-1-2">离散型随机变量的分布及其例子</a></li>
-<li><a href="posts/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-1-3">连续性随机变量的分布及其例子</a></li>
-</ul>
-</li>
-<li>
-<a href="posts/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-2">多维随机变量（随机向量）</a>
-<ul>
-<li><a href="posts/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-2-1">离散型随机向量的分布</a></li>
-<li><a href="posts/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-2-2">连续型随机向量的分布</a></li>
-<li><a href="posts/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-2-3">边缘分布</a></li>
-</ul>
-</li>
-<li>
-<a href="posts/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-3">条件概率分布与随机变量的独立性</a>
-<ul>
-<li><a href="posts/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-3-1">条件概率分布的概念</a></li>
-<li><a href="posts/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-3-2">离散型随机变量的条件概率分布</a></li>
-<li><a href="posts/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-3-3">连续型随机变量的条件分布</a></li>
-<li><a href="posts/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-3-4">随机变量的独立性</a></li>
-</ul>
-</li>
-<li>
-<a href="posts/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-4">随机变量的函数的概率分布</a>
-<ul>
-<li><a href="posts/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-4-1">离散型分布的情况</a></li>
-<li><a href="posts/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-4-2">连续型分布的情况：一般讨论</a></li>
-<li><a href="posts/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-4-3">随机变量和的密度函数</a></li>
-<li><a href="posts/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-4-4">随机变量商的密度函数</a></li>
-</ul>
-</li>
-<li><a href="posts/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-5">例题</a></li>
-<li><a href="posts/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-6">参考网页</a></li>
+<li><a href="Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-1">一维随机变量</a></li>
+<li><a href="Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-2">多维随机变量（随机向量）</a></li>
+<li><a href="Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-3">条件概率分布与随机变量的独立性</a></li>
+<li><a href="Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-4">随机变量的函数的概率分布</a></li>
+<li><a href="Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-5">例题</a></li>
+<li><a href="Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-6">参考网页</a></li>
 </ul>
 </li>
 </ul>
@@ -521,9 +553,8 @@ Hom, R. A. (2014). 矩阵分析. : 机械工业出版社.
 <h3 id="sec-1-1">一维随机变量</h3>
 <div class="outline-text-3" id="text-1-1">
 </div>
-<div id="outline-container-sec-1-1-1" class="outline-4">
-<h4 id="sec-1-1-1">随机变量的概念</h4>
-<div class="outline-text-4" id="text-1-1-1">
+<ul class="org-ul"><li>
+<a id="sec-1-1-1" name="sec-1-1-1"></a>随机变量的概念<br><div class="outline-text-4" id="text-1-1-1">
 <p>
 随机变量的定义：“其值随机会而定”的变量，是试验结果的函数
 </p>
@@ -532,22 +563,22 @@ Hom, R. A. (2014). 矩阵分析. : 机械工业出版社.
 随机变量的反面为确定性变量，其取值遵循某种严格的规律的变量；
 </p>
 
-<p class="more"><a href="posts/DS-MS-Statistics-suijibianliangjiqifengbu.html">Read more…</a></p>
+<p class="more"><a href="Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html">Read more…</a></p>
 </div>
-</div>
+</li></ul>
 </div>
 </div>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/DS-MS-Statistics-suijibianliangdeshuzitezheng.html" class="u-url">数据科学-数学和统计-概率论与数理统计-随机变量的数字特征</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html" class="u-url">数据科学-数学和统计-概率论与数理统计-随机变量的数字特征</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Lengyueyang
             </span></p>
-            <p class="dateline"><a href="posts/DS-MS-Statistics-suijibianliangdeshuzitezheng.html" rel="bookmark"><time class="published dt-published" datetime="2017-05-29T19:26:52+08:00" title="2017-05-29 19:26">2017-05-29 19:26</time></a></p>
+            <p class="dateline"><a href="Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html" rel="bookmark"><time class="published dt-published" datetime="2017-05-29T19:26:52+08:00" title="2017-05-29 19:26">2017-05-29 19:26</time></a></p>
                 <p class="commentline">
         
-    <a href="posts/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#disqus_thread" data-disqus-identifier="cache/posts/数据科学-数学和统计-概率论与数理统计-随机变量的数字特征.html">Comments</a>
+    <a href="Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#disqus_thread" data-disqus-identifier="cache/posts/Data Science/数据科学-数学和统计-概率论与数理统计-随机变量的数字特征.html">Comments</a>
 
 
         </p>
@@ -559,34 +590,14 @@ Hom, R. A. (2014). 矩阵分析. : 机械工业出版社.
 <div id="text-table-of-contents">
 <ul>
 <li>
-<a href="posts/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1">随机变量的数字特征</a>
+<a href="Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1">随机变量的数字特征</a>
 <ul>
-<li>
-<a href="posts/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-1">数学期望（均值）与中位数</a>
-<ul>
-<li><a href="posts/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-1-1">数学期望的定义</a></li>
-<li><a href="posts/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-1-2">数学期望的性质</a></li>
-<li><a href="posts/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-1-3">条件数学期望（条件均值）</a></li>
-<li><a href="posts/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-1-4">中位数</a></li>
-</ul>
-</li>
-<li>
-<a href="posts/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-2">方差与钜</a>
-<ul>
-<li><a href="posts/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-2-1">方差和标准差</a></li>
-<li><a href="posts/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-2-2">钜</a></li>
-</ul>
-</li>
-<li><a href="posts/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-3">协方差与相关系数</a></li>
-<li>
-<a href="posts/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-4">大数定理和中心极限定理</a>
-<ul>
-<li><a href="posts/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-4-1">大数定理</a></li>
-<li><a href="posts/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-4-2">中心极限定理</a></li>
-</ul>
-</li>
-<li><a href="posts/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-5">例题</a></li>
-<li><a href="posts/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-6">参考网页</a></li>
+<li><a href="Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-1">数学期望（均值）与中位数</a></li>
+<li><a href="Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-2">方差与钜</a></li>
+<li><a href="Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-3">协方差与相关系数</a></li>
+<li><a href="Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-4">大数定理和中心极限定理</a></li>
+<li><a href="Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-5">例题</a></li>
+<li><a href="Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-6">参考网页</a></li>
 </ul>
 </li>
 </ul>
@@ -601,34 +612,33 @@ Hom, R. A. (2014). 矩阵分析. : 机械工业出版社.
 <h3 id="sec-1-1">数学期望（均值）与中位数</h3>
 <div class="outline-text-3" id="text-1-1">
 </div>
-<div id="outline-container-sec-1-1-1" class="outline-4">
-<h4 id="sec-1-1-1">数学期望的定义</h4>
-<div class="outline-text-4" id="text-1-1-1">
+<ul class="org-ul"><li>
+<a id="sec-1-1-1" name="sec-1-1-1"></a>数学期望的定义<br><div class="outline-text-4" id="text-1-1-1">
 
 <div class="figure">
-<p><img src="posts/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81_78359b7819e2e3ae0f07b76cf5aab0dc487d3077.png" alt="\begin{de}[离散型随机变量数学期望]
+<p><img src="Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81_78359b7819e2e3ae0f07b76cf5aab0dc487d3077.png" alt="\begin{de}[离散型随机变量数学期望]
 \end{de}"></p>
 </div>
 <p>
-设离散型随机变量 X 只取有限个可能值 <img src="posts/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81_37f39ef1524b7897aa4769286edda926e728b5d4.png" alt="\(a_1, \dots , a_n\)"> , 其概率分布 <img src="posts/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81_11b5610f77248a0352a2c706595c03a568dd1127.png" alt="\(P(X = a_i) = p_i \, (i = 1, \dots ,m)\)"> ,则 X 的数学期望记作 <img src="posts/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81_6a23c06e64043c70d9a7057a89d458508ba035b8.png" alt="\(E(X) or EX\)"> 定义为 <img src="posts/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81_0f73ecda68e472e34531314c6deb2ee797e5ccb2.png" alt="\[E(X) = a_1p_1 + \dots + a_np_n\]"> ,若 n 取无限个值，若下式收敛，则称其为 X 的数学期望，数学期望也常称为平均，这里平均是加权平均
+设离散型随机变量 X 只取有限个可能值 <img src="Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81_37f39ef1524b7897aa4769286edda926e728b5d4.png" alt="\(a_1, \dots , a_n\)"> , 其概率分布 <img src="Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81_11b5610f77248a0352a2c706595c03a568dd1127.png" alt="\(P(X = a_i) = p_i \, (i = 1, \dots ,m)\)"> ,则 X 的数学期望记作 <img src="Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81_6a23c06e64043c70d9a7057a89d458508ba035b8.png" alt="\(E(X) or EX\)"> 定义为 <img src="Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81_0f73ecda68e472e34531314c6deb2ee797e5ccb2.png" alt="\[E(X) = a_1p_1 + \dots + a_np_n\]"> ,若 n 取无限个值，若下式收敛，则称其为 X 的数学期望，数学期望也常称为平均，这里平均是加权平均
 </p>
 
-<p class="more"><a href="posts/DS-MS-Statistics-suijibianliangdeshuzitezheng.html">Read more…</a></p>
+<p class="more"><a href="Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html">Read more…</a></p>
 </div>
-</div>
+</li></ul>
 </div>
 </div>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/DS-MS-Statistics-shijiandegailv.html" class="u-url">数据科学-数学和统计-概率论与数理统计-事件的概率</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="Data%20Science/DS-MS-Statistics-shijiandegailv.html" class="u-url">数据科学-数学和统计-概率论与数理统计-事件的概率</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Lengyueyang
             </span></p>
-            <p class="dateline"><a href="posts/DS-MS-Statistics-shijiandegailv.html" rel="bookmark"><time class="published dt-published" datetime="2017-04-08T19:26:52+08:00" title="2017-04-08 19:26">2017-04-08 19:26</time></a></p>
+            <p class="dateline"><a href="Data%20Science/DS-MS-Statistics-shijiandegailv.html" rel="bookmark"><time class="published dt-published" datetime="2017-04-08T19:26:52+08:00" title="2017-04-08 19:26">2017-04-08 19:26</time></a></p>
                 <p class="commentline">
         
-    <a href="posts/DS-MS-Statistics-shijiandegailv.html#disqus_thread" data-disqus-identifier="cache/posts/数据科学-数学和统计-概率论与数理统计-事件的概率.html">Comments</a>
+    <a href="Data%20Science/DS-MS-Statistics-shijiandegailv.html#disqus_thread" data-disqus-identifier="cache/posts/Data Science/数据科学-数学和统计-概率论与数理统计-事件的概率.html">Comments</a>
 
 
         </p>
@@ -639,42 +649,15 @@ Hom, R. A. (2014). 矩阵分析. : 机械工业出版社.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="posts/DS-MS-Statistics-shijiandegailv.html#sec-1">概述</a></li>
+<li><a href="Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-1">概述</a></li>
 <li>
-<a href="posts/DS-MS-Statistics-shijiandegailv.html#sec-2">事件的概率</a>
+<a href="Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2">事件的概率</a>
 <ul>
-<li>
-<a href="posts/DS-MS-Statistics-shijiandegailv.html#sec-2-1">概率是什么</a>
-<ul>
-<li><a href="posts/DS-MS-Statistics-shijiandegailv.html#sec-2-1-1">主观概率</a></li>
-<li><a href="posts/DS-MS-Statistics-shijiandegailv.html#sec-2-1-2">试验与事件</a></li>
-<li><a href="posts/DS-MS-Statistics-shijiandegailv.html#sec-2-1-3">古典概率</a></li>
-<li><a href="posts/DS-MS-Statistics-shijiandegailv.html#sec-2-1-4">概率的统计学定义</a></li>
-<li><a href="posts/DS-MS-Statistics-shijiandegailv.html#sec-2-1-5">概率的公理化定义</a></li>
-</ul>
-</li>
-<li>
-<a href="posts/DS-MS-Statistics-shijiandegailv.html#sec-2-2">古典概率的计算</a>
-<ul>
-<li><a href="posts/DS-MS-Statistics-shijiandegailv.html#sec-2-2-1">排列组合的几个简单公式</a></li>
-<li><a href="posts/DS-MS-Statistics-shijiandegailv.html#sec-2-2-2">古典概率计算举例</a></li>
-</ul>
-</li>
-<li>
-<a href="posts/DS-MS-Statistics-shijiandegailv.html#sec-2-3">事件的运算、条件概率与独立性</a>
-<ul>
-<li><a href="posts/DS-MS-Statistics-shijiandegailv.html#sec-2-3-1">事件的蕴含、包含和相等</a></li>
-<li><a href="posts/DS-MS-Statistics-shijiandegailv.html#sec-2-3-2">事件的互斥和对立</a></li>
-<li><a href="posts/DS-MS-Statistics-shijiandegailv.html#sec-2-3-3">事件的和（并）</a></li>
-<li><a href="posts/DS-MS-Statistics-shijiandegailv.html#sec-2-3-4">概率的加法定理</a></li>
-<li><a href="posts/DS-MS-Statistics-shijiandegailv.html#sec-2-3-5">事件的积（交）、事件的差</a></li>
-<li><a href="posts/DS-MS-Statistics-shijiandegailv.html#sec-2-3-6">条件概率</a></li>
-<li><a href="posts/DS-MS-Statistics-shijiandegailv.html#sec-2-3-7">事件的独立性，概率乘法定理</a></li>
-<li><a href="posts/DS-MS-Statistics-shijiandegailv.html#sec-2-3-8">全概率公式与贝叶斯公式</a></li>
-</ul>
-</li>
-<li><a href="posts/DS-MS-Statistics-shijiandegailv.html#sec-2-4">例题</a></li>
-<li><a href="posts/DS-MS-Statistics-shijiandegailv.html#sec-2-5">参考网页</a></li>
+<li><a href="Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-1">概率是什么</a></li>
+<li><a href="Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-2">古典概率的计算</a></li>
+<li><a href="Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-3">事件的运算、条件概率与独立性</a></li>
+<li><a href="Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-4">例题</a></li>
+<li><a href="Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-5">参考网页</a></li>
 </ul>
 </li>
 </ul>
@@ -696,20 +679,20 @@ Hom, R. A. (2014). 矩阵分析. : 机械工业出版社.
 <li>高惠璇, (2005). 应用多元统计分析. : 北京大学出版社.
 </li>
 </ul>
-<p class="more"><a href="posts/DS-MS-Statistics-shijiandegailv.html">Read more…</a></p>
+<p class="more"><a href="Data%20Science/DS-MS-Statistics-shijiandegailv.html">Read more…</a></p>
 </div>
 </div>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html" class="u-url">A simple introduction of lengyueyang's spacemacs configration[个人 spacemacs 配置简介]</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html" class="u-url">A simple introduction of lengyueyang's spacemacs configration[个人 spacemacs 配置简介]</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Lengyueyang
             </span></p>
-            <p class="dateline"><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html" rel="bookmark"><time class="published dt-published" datetime="2017-03-26T19:26:52+08:00" title="2017-03-26 19:26">2017-03-26 19:26</time></a></p>
+            <p class="dateline"><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html" rel="bookmark"><time class="published dt-published" datetime="2017-03-26T19:26:52+08:00" title="2017-03-26 19:26">2017-03-26 19:26</time></a></p>
                 <p class="commentline">
         
-    <a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#disqus_thread" data-disqus-identifier="cache/posts/A simple introduction of lengyueyang's spacemacs configration.html">Comments</a>
+    <a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#disqus_thread" data-disqus-identifier="cache/posts/Life/A simple introduction of lengyueyang's spacemacs configration.html">Comments</a>
 
 
         </p>
@@ -721,162 +704,109 @@ Hom, R. A. (2014). 矩阵分析. : 机械工业出版社.
 <div id="text-table-of-contents">
 <ul>
 <li>
-<a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-1">Introduction: Emacs Configuration in an Org File</a>
+<a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-1">Introduction: Emacs Configuration in an Org File</a>
 <ul>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-1-1">Custom.el setup</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-1-2">Org-mode to customize emacs configuration</a></li>
-<li>
-<a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-1-3">Req-package</a>
-<ul>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-1-3-1">Initialize req-package</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-1-3-2">Start loading packages in right order</a></li>
-</ul>
-</li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-1-1">Custom.el setup</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-1-2">Org-mode to customize emacs configuration</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-1-3">Req-package</a></li>
 </ul>
 </li>
 <li>
-<a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-2">Keybinding</a>
+<a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-2">Keybinding</a>
 <ul>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-2-1">F2 to open my init file</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-2-2">F3 to open stardict</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-2-3">F8 to checkout the spelling of words</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-2-4">Org-iswitch</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-2-5">Bookmark keybindings reconfiguration</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-2-1">F2 to open my init file</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-2-2">F3 to open stardict</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-2-3">F8 to checkout the spelling of words</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-2-4">Org-iswitch</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-2-5">Bookmark keybindings reconfiguration</a></li>
 </ul>
 </li>
 <li>
-<a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-3">Spacemacs better defaults</a>
+<a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-3">Spacemacs better defaults</a>
 <ul>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-3-1">Markdown mode</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-3-2">Spacemacs-layout</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-3-3">Deft</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-3-4">Elfeed</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-3-5">Gnus</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-3-6">Mu4e</a></li>
-<li>
-<a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-3-7">Magit</a>
-<ul>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-3-7-1">Magit auto complete</a></li>
-</ul>
-</li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-3-1">Markdown mode</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-3-2">Spacemacs-layout</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-3-3">Deft</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-3-4">Elfeed</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-3-5">Gnus</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-3-6">Mu4e</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-3-7">Magit</a></li>
 </ul>
 </li>
 <li>
-<a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4">Basic setup</a>
+<a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4">Basic setup</a>
 <ul>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-1">Personal information setup</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-2">Don't ask me when kill process buffer</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-3">Set the chinese font alignment</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-4">Add auto format paste code</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-5">Simple better defaults</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-6">Large file handle</a></li>
-<li>
-<a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-7">Buffers   <span class="tag"><span class="buffer">buffer</span></span></a>
-<ul>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-7-1">Indent whole buffer</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-7-2">Quick folding source block</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-1">Personal information setup</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-2">Don't ask me when kill process buffer</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-3">Set the chinese font alignment</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-4">Add auto format paste code</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-5">Simple better defaults</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-6">Large file handle</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-7">Buffers   <span class="tag"><span class="buffer">buffer</span></span></a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-8">Edit (Insert/Remove)</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-9">File Handle</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-10">Keeping files in sync</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-11">Snippet handle by yasnippet</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-12">Debug</a></li>
 </ul>
 </li>
 <li>
-<a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-8">Edit (Insert/Remove)</a>
+<a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5">Org-mode configuration</a>
 <ul>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-8-1">Insert U200B char</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-8-2">Insert empty line after current line</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-1">Better defaults to org</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-2">Org-mode auto complete</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-3">Org-agenda font size</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-4">Extend org-mode's easy templates</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-5">Org columns and properties</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-6">Org-ispell</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-7">Org bullets customization</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-8">Org-notify</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-9">Org-pomodoro</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-10">Org-agenda and capture</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-11">Add bookmark to orgmode</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-12">Org-babel customizaton</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-13">Ob-ipython and Jupter notebook</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-14">Setup link abbreviations</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-15">Org-subtask and org-checklist</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-16">Org-archive-all-tasks</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-17">Org-ref customize</a></li>
 </ul>
 </li>
 <li>
-<a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-9">File Handle</a>
+<a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-6">Programming Languages</a>
 <ul>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-9-1">Reopen file as root</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-9-2">Delete current buffer file</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-9-3">Rename current Buffer and file</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-9-4">Add executable attribute to file</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-9-5">Clone current file to new one</a></li>
-</ul>
-</li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-10">Keeping files in sync</a></li>
-<li>
-<a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-11">Snippet handle by yasnippet</a>
-<ul>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-11-1">Implement org-mode's easy-template like function</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-6-1">Yasnippet</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-6-2">Add support for editorconfig</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-6-3">Ess and R</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-6-4">Python</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-6-5">JS-2 mode</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-6-6">Elisp enhanced</a></li>
 </ul>
 </li>
 <li>
-<a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-12">Debug</a>
+<a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-7">External package besides spacemacs</a>
 <ul>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-4-12-1">Eval emacs buffer until error</a></li>
-</ul>
-</li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-7-1">Use emmet-mode to add Zen Coding support</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-7-2">Hungry-delete</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-7-3">Pangu-spacing</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-7-4">Bold-admin</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-7-5">Hexo configuration</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-7-6">Use emms to play music</a></li>
 </ul>
 </li>
 <li>
-<a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5">Org-mode configuration</a>
+<a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-8">Other customization</a>
 <ul>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-1">Better defaults to org</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-2">Org-mode auto complete</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-3">Org-agenda font size</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-4">Extend org-mode's easy templates</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-5">Org columns and properties</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-6">Org-ispell</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-7">Org bullets customization</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-8">Org-notify</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-9">Org-pomodoro</a></li>
-<li>
-<a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-10">Org-agenda and capture</a>
-<ul>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-10-1">Org-agenda</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-10-2">Org-capture</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-8-1">Column indicator</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-8-2">Disable auto paste from clipboard</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-8-3">Truncate lines automatically</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-8-4">Hotspots</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-8-5">Count chinese word</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-8-6">Display Calendar numbers in calendar-mode</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-8-7">End of configuration</a></li>
 </ul>
 </li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-11">Add bookmark to orgmode</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-12">Org-babel customizaton</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-13">Ob-ipython and Jupter notebook</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-14">Setup link abbreviations</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-15">Org-subtask and org-checklist</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-16">Org-archive-all-tasks</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-5-17">Org-ref customize</a></li>
-</ul>
-</li>
-<li>
-<a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-6">Programming Languages</a>
-<ul>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-6-1">Yasnippet</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-6-2">Add support for editorconfig</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-6-3">Ess and R</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-6-4">Python</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-6-5">JS-2 mode</a></li>
-<li>
-<a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-6-6">Elisp enhanced</a>
-<ul>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-6-6-1">Emacs Lisp 自动配对问题</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-7">External package besides spacemacs</a>
-<ul>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-7-1">Use emmet-mode to add Zen Coding support</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-7-2">Hungry-delete</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-7-3">Pangu-spacing</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-7-4">Bold-admin</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-7-5">Hexo configuration</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-7-6">Use emms to play music</a></li>
-</ul>
-</li>
-<li>
-<a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-8">Other customization</a>
-<ul>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-8-1">Column indicator</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-8-2">Disable auto paste from clipboard</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-8-3">Truncate lines automatically</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-8-4">Hotspots</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-8-5">Count chinese word</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-8-6">Display Calendar numbers in calendar-mode</a></li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-8-7">End of configuration</a></li>
-</ul>
-</li>
-<li><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-9">Reference</a></li>
+<li><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-9">Reference</a></li>
 </ul>
 </div>
 </div>
@@ -889,20 +819,20 @@ I used spacemacs recently, org-mode is my favourite package of emacs,
 I use org-mode to GTD, write slide and documents, so I want to use org-mode to 
 manager may own configuration of emacs beyond spacemacs.
 </p>
-<p class="more"><a href="posts/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html">Read more…</a></p>
+<p class="more"><a href="life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html">Read more…</a></p>
 </div>
 </div>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/house-beijing-2017-03-15.html" class="u-url">房子，北京</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="life/house-beijing-2017-03-15.html" class="u-url">房子，北京</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Lengyueyang
             </span></p>
-            <p class="dateline"><a href="posts/house-beijing-2017-03-15.html" rel="bookmark"><time class="published dt-published" datetime="2017-03-15T19:26:52+08:00" title="2017-03-15 19:26">2017-03-15 19:26</time></a></p>
+            <p class="dateline"><a href="life/house-beijing-2017-03-15.html" rel="bookmark"><time class="published dt-published" datetime="2017-03-15T19:26:52+08:00" title="2017-03-15 19:26">2017-03-15 19:26</time></a></p>
                 <p class="commentline">
         
-    <a href="posts/house-beijing-2017-03-15.html#disqus_thread" data-disqus-identifier="cache/posts/个人-房子-北京.html">Comments</a>
+    <a href="life/house-beijing-2017-03-15.html#disqus_thread" data-disqus-identifier="cache/posts/Life/个人-房子-北京.html">Comments</a>
 
 
         </p>
@@ -913,9 +843,9 @@ manager may own configuration of emacs beyond spacemacs.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="posts/house-beijing-2017-03-15.html#sec-1">缘起</a></li>
-<li><a href="posts/house-beijing-2017-03-15.html#sec-2">男怕入错行</a></li>
-<li><a href="posts/house-beijing-2017-03-15.html#sec-3">努力前行</a></li>
+<li><a href="life/house-beijing-2017-03-15.html#sec-1">缘起</a></li>
+<li><a href="life/house-beijing-2017-03-15.html#sec-2">男怕入错行</a></li>
+<li><a href="life/house-beijing-2017-03-15.html#sec-3">努力前行</a></li>
 </ul>
 </div>
 </div>
@@ -932,20 +862,20 @@ manager may own configuration of emacs beyond spacemacs.
 又一次被现实刺痛，思绪满天飞，于是写下这篇博客
 </p>
 
-<p class="more"><a href="posts/house-beijing-2017-03-15.html">Read more…</a></p>
+<p class="more"><a href="life/house-beijing-2017-03-15.html">Read more…</a></p>
 </div>
 </div>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/use-Mu4e-to-manage-email.html" class="u-url">Use Mu4e to manage email [用 mu4e 管理邮件]</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="life/use-Mu4e-to-manage-email.html" class="u-url">Use Mu4e to manage email [用 mu4e 管理邮件]</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Lengyueyang
             </span></p>
-            <p class="dateline"><a href="posts/use-Mu4e-to-manage-email.html" rel="bookmark"><time class="published dt-published" datetime="2017-02-26T19:26:52+08:00" title="2017-02-26 19:26">2017-02-26 19:26</time></a></p>
+            <p class="dateline"><a href="life/use-Mu4e-to-manage-email.html" rel="bookmark"><time class="published dt-published" datetime="2017-02-26T19:26:52+08:00" title="2017-02-26 19:26">2017-02-26 19:26</time></a></p>
                 <p class="commentline">
         
-    <a href="posts/use-Mu4e-to-manage-email.html#disqus_thread" data-disqus-identifier="cache/posts/Use Mu4e to manage email.html">Comments</a>
+    <a href="life/use-Mu4e-to-manage-email.html#disqus_thread" data-disqus-identifier="cache/posts/Life/Use Mu4e to manage email.html">Comments</a>
 
 
         </p>
@@ -956,40 +886,29 @@ manager may own configuration of emacs beyond spacemacs.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="posts/use-Mu4e-to-manage-email.html#sec-1">概述</a></li>
+<li><a href="life/use-Mu4e-to-manage-email.html#sec-1">概述</a></li>
 <li>
-<a href="posts/use-Mu4e-to-manage-email.html#sec-2">offlineimap 设置</a>
+<a href="life/use-Mu4e-to-manage-email.html#sec-2">offlineimap 设置</a>
 <ul>
-<li><a href="posts/use-Mu4e-to-manage-email.html#sec-2-1">安装 offlineimap</a></li>
-<li><a href="posts/use-Mu4e-to-manage-email.html#sec-2-2">配置 offlineimap</a></li>
-<li><a href="posts/use-Mu4e-to-manage-email.html#sec-2-3">用 offlineimap 下载邮件</a></li>
+<li><a href="life/use-Mu4e-to-manage-email.html#sec-2-1">安装 offlineimap</a></li>
+<li><a href="life/use-Mu4e-to-manage-email.html#sec-2-2">配置 offlineimap</a></li>
+<li><a href="life/use-Mu4e-to-manage-email.html#sec-2-3">用 offlineimap 下载邮件</a></li>
 </ul>
 </li>
 <li>
-<a href="posts/use-Mu4e-to-manage-email.html#sec-3">Mu4e 设置</a>
+<a href="life/use-Mu4e-to-manage-email.html#sec-3">Mu4e 设置</a>
 <ul>
-<li><a href="posts/use-Mu4e-to-manage-email.html#sec-3-1">几点说明：</a></li>
+<li><a href="life/use-Mu4e-to-manage-email.html#sec-3-1">几点说明：</a></li>
 </ul>
 </li>
 <li>
-<a href="posts/use-Mu4e-to-manage-email.html#sec-4">Mu4e 简单使用小结</a>
+<a href="life/use-Mu4e-to-manage-email.html#sec-4">Mu4e 简单使用小结</a>
 <ul>
-<li>
-<a href="posts/use-Mu4e-to-manage-email.html#sec-4-1">Keybindings to remember of Mu4e</a>
-<ul>
-<li><a href="posts/use-Mu4e-to-manage-email.html#sec-4-1-1"><code>offlineimap</code> and <code>mu index --maildir=~/Documents/Mu4e</code></a></li>
-<li><a href="posts/use-Mu4e-to-manage-email.html#sec-4-1-2">Main view-Default bindings</a></li>
-<li><a href="posts/use-Mu4e-to-manage-email.html#sec-4-1-3">Headers menu in the emacs menu bar</a></li>
-<li><a href="posts/use-Mu4e-to-manage-email.html#sec-4-1-4">Message View</a></li>
-<li><a href="posts/use-Mu4e-to-manage-email.html#sec-4-1-5">Attachment actions</a></li>
-<li><a href="posts/use-Mu4e-to-manage-email.html#sec-4-1-6">Editor view</a></li>
-<li><a href="posts/use-Mu4e-to-manage-email.html#sec-4-1-7">What to mark for</a></li>
+<li><a href="life/use-Mu4e-to-manage-email.html#sec-4-1">Keybindings to remember of Mu4e</a></li>
+<li><a href="life/use-Mu4e-to-manage-email.html#sec-4-2">其他</a></li>
 </ul>
 </li>
-<li><a href="posts/use-Mu4e-to-manage-email.html#sec-4-2">其他</a></li>
-</ul>
-</li>
-<li><a href="posts/use-Mu4e-to-manage-email.html#sec-5">参考资料</a></li>
+<li><a href="life/use-Mu4e-to-manage-email.html#sec-5">参考资料</a></li>
 </ul>
 </div>
 </div>
@@ -1001,20 +920,20 @@ manager may own configuration of emacs beyond spacemacs.
 用 offlineimap 收取邮件，用 mu4e 在 emacs 中管理邮件，本教程配置多账户。
 </p>
 
-<p class="more"><a href="posts/use-Mu4e-to-manage-email.html">Read more…</a></p>
+<p class="more"><a href="life/use-Mu4e-to-manage-email.html">Read more…</a></p>
 </div>
 </div>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/statistics-in-research-article-univariate-analysis.html" class="u-url">Statistics in research article-Univariate analysis [科研文章中的统计-单因素分析]</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="Research/statistics-in-research-article-univariate-analysis.html" class="u-url">Statistics in research article-Univariate analysis [科研文章中的统计-单因素分析]</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Lengyueyang
             </span></p>
-            <p class="dateline"><a href="posts/statistics-in-research-article-univariate-analysis.html" rel="bookmark"><time class="published dt-published" datetime="2016-04-23T19:26:52+08:00" title="2016-04-23 19:26">2016-04-23 19:26</time></a></p>
+            <p class="dateline"><a href="Research/statistics-in-research-article-univariate-analysis.html" rel="bookmark"><time class="published dt-published" datetime="2016-04-23T19:26:52+08:00" title="2016-04-23 19:26">2016-04-23 19:26</time></a></p>
                 <p class="commentline">
         
-    <a href="posts/statistics-in-research-article-univariate-analysis.html#disqus_thread" data-disqus-identifier="cache/posts/Statistics in research article-Univariate analysis.html">Comments</a>
+    <a href="Research/statistics-in-research-article-univariate-analysis.html#disqus_thread" data-disqus-identifier="cache/posts/Research/Statistics in research article-Univariate analysis.html">Comments</a>
 
 
         </p>
@@ -1025,25 +944,25 @@ manager may own configuration of emacs beyond spacemacs.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="posts/statistics-in-research-article-univariate-analysis.html#sec-1">写作原因</a></li>
+<li><a href="Research/statistics-in-research-article-univariate-analysis.html#sec-1">写作原因</a></li>
 <li>
-<a href="posts/statistics-in-research-article-univariate-analysis.html#sec-2">R 分析基本流程</a>
+<a href="Research/statistics-in-research-article-univariate-analysis.html#sec-2">R 分析基本流程</a>
 <ul>
-<li><a href="posts/statistics-in-research-article-univariate-analysis.html#sec-2-1">数据导入，在 R 语言中导入数据框用 read.table，再显示数据</a></li>
-<li><a href="posts/statistics-in-research-article-univariate-analysis.html#sec-2-2">检测数据是否有离群点及数据正态性判断</a></li>
-<li><a href="posts/statistics-in-research-article-univariate-analysis.html#sec-2-3">接下来应该进行方差齐性检验，常用方差齐性检验有 leveneTest 和 bartlett.test 两种</a></li>
-<li><a href="posts/statistics-in-research-article-univariate-analysis.html#sec-2-4">由于我上面数据非正态，所以用非参数检验方法检验各组差异，分两部分，一是各组之间的差异，用 kruskal.test，二是两两比较，用 posthoc.kruskal.nemenyi.test，由下面结果知道，IR 组和 Sham 组相比，有统计学意义(P &lt; 0.01)，用“**”表示差异，THP 10 + IR 组与 Sham 组，THP 40 + IR 与 IR 组相比，有统计学意义(P &lt; 0.05)，用“*”表示差异</a></li>
-<li><a href="posts/statistics-in-research-article-univariate-analysis.html#sec-2-5">做图</a></li>
+<li><a href="Research/statistics-in-research-article-univariate-analysis.html#sec-2-1">数据导入，在 R 语言中导入数据框用 read.table，再显示数据</a></li>
+<li><a href="Research/statistics-in-research-article-univariate-analysis.html#sec-2-2">检测数据是否有离群点及数据正态性判断</a></li>
+<li><a href="Research/statistics-in-research-article-univariate-analysis.html#sec-2-3">接下来应该进行方差齐性检验，常用方差齐性检验有 leveneTest 和 bartlett.test 两种</a></li>
+<li><a href="Research/statistics-in-research-article-univariate-analysis.html#sec-2-4">由于我上面数据非正态，所以用非参数检验方法检验各组差异，分两部分，一是各组之间的差异，用 kruskal.test，二是两两比较，用 posthoc.kruskal.nemenyi.test，由下面结果知道，IR 组和 Sham 组相比，有统计学意义(P &lt; 0.01)，用“**”表示差异，THP 10 + IR 组与 Sham 组，THP 40 + IR 与 IR 组相比，有统计学意义(P &lt; 0.05)，用“*”表示差异</a></li>
+<li><a href="Research/statistics-in-research-article-univariate-analysis.html#sec-2-5">做图</a></li>
 </ul>
 </li>
 <li>
-<a href="posts/statistics-in-research-article-univariate-analysis.html#sec-3">另外两个例子</a>
+<a href="Research/statistics-in-research-article-univariate-analysis.html#sec-3">另外两个例子</a>
 <ul>
-<li><a href="posts/statistics-in-research-article-univariate-analysis.html#sec-3-1">非参数检验，多组作图</a></li>
-<li><a href="posts/statistics-in-research-article-univariate-analysis.html#sec-3-2">参数检验，一组作图</a></li>
+<li><a href="Research/statistics-in-research-article-univariate-analysis.html#sec-3-1">非参数检验，多组作图</a></li>
+<li><a href="Research/statistics-in-research-article-univariate-analysis.html#sec-3-2">参数检验，一组作图</a></li>
 </ul>
 </li>
-<li><a href="posts/statistics-in-research-article-univariate-analysis.html#sec-4">注意事项</a></li>
+<li><a href="Research/statistics-in-research-article-univariate-analysis.html#sec-4">注意事项</a></li>
 </ul>
 </div>
 </div>
@@ -1058,23 +977,23 @@ manager may own configuration of emacs beyond spacemacs.
 </li>
 <li>本文以 R 语言为切入点，以我自己文章中的数据为原型，简单阐述单因素分析的方法原理及过程
 </li>
-<li>有关 R 语言介绍及安装方法，请移步 R 语言官方网<sup><a id="fnr.1" name="fnr.1" class="footref" href="posts/statistics-in-research-article-univariate-analysis.html#fn.1">1</a></sup>站
+<li>有关 R 语言介绍及安装方法，请移步 R 语言官方网<sup><a id="fnr.1" name="fnr.1" class="footref" href="Research/statistics-in-research-article-univariate-analysis.html#fn.1">1</a></sup>站
 </li>
 </ul>
-<p class="more"><a href="posts/statistics-in-research-article-univariate-analysis.html">Read more…</a></p>
+<p class="more"><a href="Research/statistics-in-research-article-univariate-analysis.html">Read more…</a></p>
 </div>
 </div>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/blog-with-org-mode-and-github.html" class="u-url">Blog with org-mode and github [用 Org-mdoe 和 github 搭建博客]</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="life/blog-with-org-mode-and-github.html" class="u-url">Blog with org-mode and github [用 Org-mdoe 和 github 搭建博客]</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Lengyueyang
             </span></p>
-            <p class="dateline"><a href="posts/blog-with-org-mode-and-github.html" rel="bookmark"><time class="published dt-published" datetime="2016-03-11T19:26:52+08:00" title="2016-03-11 19:26">2016-03-11 19:26</time></a></p>
+            <p class="dateline"><a href="life/blog-with-org-mode-and-github.html" rel="bookmark"><time class="published dt-published" datetime="2016-03-11T19:26:52+08:00" title="2016-03-11 19:26">2016-03-11 19:26</time></a></p>
                 <p class="commentline">
         
-    <a href="posts/blog-with-org-mode-and-github.html#disqus_thread" data-disqus-identifier="cache/posts/Blog with org-mode and github.html">Comments</a>
+    <a href="life/blog-with-org-mode-and-github.html#disqus_thread" data-disqus-identifier="cache/posts/Life/Blog with org-mode and github.html">Comments</a>
 
 
         </p>
@@ -1085,14 +1004,14 @@ manager may own configuration of emacs beyond spacemacs.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="posts/blog-with-org-mode-and-github.html#sec-1">写在前面</a></li>
-<li><a href="posts/blog-with-org-mode-and-github.html#sec-2">用 Hexo 搭建博客</a></li>
-<li><a href="posts/blog-with-org-mode-and-github.html#sec-3">博客源代码托管到 Github 上</a></li>
-<li><a href="posts/blog-with-org-mode-and-github.html#sec-4">用 Org-mode 写博客</a></li>
+<li><a href="life/blog-with-org-mode-and-github.html#sec-1">写在前面</a></li>
+<li><a href="life/blog-with-org-mode-and-github.html#sec-2">用 Hexo 搭建博客</a></li>
+<li><a href="life/blog-with-org-mode-and-github.html#sec-3">博客源代码托管到 Github 上</a></li>
+<li><a href="life/blog-with-org-mode-and-github.html#sec-4">用 Org-mode 写博客</a></li>
 <li>
-<a href="posts/blog-with-org-mode-and-github.html#sec-5">一些问题</a>
+<a href="life/blog-with-org-mode-and-github.html#sec-5">一些问题</a>
 <ul>
-<li><a href="posts/blog-with-org-mode-and-github.html#sec-5-1">Org-mode 图片插入</a></li>
+<li><a href="life/blog-with-org-mode-and-github.html#sec-5-1">Org-mode 图片插入</a></li>
 </ul>
 </li>
 </ul>
@@ -1108,20 +1027,20 @@ manager may own configuration of emacs beyond spacemacs.
 <li>本文简述用 Org-mode 写博客，通过 Hexo 搭建博客的过程，我的博客见<a href="http://lengyueyang.github.io/">一家之言</a>
 </li>
 </ul>
-<p class="more"><a href="posts/blog-with-org-mode-and-github.html">Read more…</a></p>
+<p class="more"><a href="life/blog-with-org-mode-and-github.html">Read more…</a></p>
 </div>
 </div>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/use-org-mode-to-make-slide.html" class="u-url">Use org-mode to make slide [用 org-mode 做幻灯]</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="life/use-org-mode-to-make-slide.html" class="u-url">Use org-mode to make slide [用 org-mode 做幻灯]</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Lengyueyang
             </span></p>
-            <p class="dateline"><a href="posts/use-org-mode-to-make-slide.html" rel="bookmark"><time class="published dt-published" datetime="2016-03-04T19:26:52+08:00" title="2016-03-04 19:26">2016-03-04 19:26</time></a></p>
+            <p class="dateline"><a href="life/use-org-mode-to-make-slide.html" rel="bookmark"><time class="published dt-published" datetime="2016-03-04T19:26:52+08:00" title="2016-03-04 19:26">2016-03-04 19:26</time></a></p>
                 <p class="commentline">
         
-    <a href="posts/use-org-mode-to-make-slide.html#disqus_thread" data-disqus-identifier="cache/posts/Use org-mode to make presentation.html">Comments</a>
+    <a href="life/use-org-mode-to-make-slide.html#disqus_thread" data-disqus-identifier="cache/posts/Life/Use org-mode to make presentation.html">Comments</a>
 
 
         </p>
@@ -1132,23 +1051,23 @@ manager may own configuration of emacs beyond spacemacs.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="posts/use-org-mode-to-make-slide.html#sec-1">缘由：</a></li>
-<li><a href="posts/use-org-mode-to-make-slide.html#sec-2">配置</a></li>
+<li><a href="life/use-org-mode-to-make-slide.html#sec-1">缘由：</a></li>
+<li><a href="life/use-org-mode-to-make-slide.html#sec-2">配置</a></li>
 <li>
-<a href="posts/use-org-mode-to-make-slide.html#sec-3">Org-mode 做幻灯过程简介</a>
+<a href="life/use-org-mode-to-make-slide.html#sec-3">Org-mode 做幻灯过程简介</a>
 <ul>
-<li><a href="posts/use-org-mode-to-make-slide.html#sec-3-1">Org-mode Beamer 模式设置</a></li>
-<li><a href="posts/use-org-mode-to-make-slide.html#sec-3-2">插入小标题及分页</a></li>
-<li><a href="posts/use-org-mode-to-make-slide.html#sec-3-3">插入多张图片</a></li>
-<li><a href="posts/use-org-mode-to-make-slide.html#sec-3-4">插入 block</a></li>
-<li><a href="posts/use-org-mode-to-make-slide.html#sec-3-5">插入参考文献</a></li>
+<li><a href="life/use-org-mode-to-make-slide.html#sec-3-1">Org-mode Beamer 模式设置</a></li>
+<li><a href="life/use-org-mode-to-make-slide.html#sec-3-2">插入小标题及分页</a></li>
+<li><a href="life/use-org-mode-to-make-slide.html#sec-3-3">插入多张图片</a></li>
+<li><a href="life/use-org-mode-to-make-slide.html#sec-3-4">插入 block</a></li>
+<li><a href="life/use-org-mode-to-make-slide.html#sec-3-5">插入参考文献</a></li>
 </ul>
 </li>
 <li>
-<a href="posts/use-org-mode-to-make-slide.html#sec-4">一些问题</a>
+<a href="life/use-org-mode-to-make-slide.html#sec-4">一些问题</a>
 <ul>
-<li><a href="posts/use-org-mode-to-make-slide.html#sec-4-1">参考文献</a></li>
-<li><a href="posts/use-org-mode-to-make-slide.html#sec-4-2">脚注</a></li>
+<li><a href="life/use-org-mode-to-make-slide.html#sec-4-1">参考文献</a></li>
+<li><a href="life/use-org-mode-to-make-slide.html#sec-4-2">脚注</a></li>
 </ul>
 </li>
 </ul>
@@ -1163,20 +1082,20 @@ manager may own configuration of emacs beyond spacemacs.
 <li>最近迷恋上了 Reproducible Research，用 org-mode 进行时间管理、写 blog，恰巧最近需要做幻灯，本文记录用 org-mode 进行写做幻灯的过程以及注意事项,本文示例见<a href="https://github.com/lengyueyang/org-beamer">org-beamer</a>
 </li>
 </ul>
-<p class="more"><a href="posts/use-org-mode-to-make-slide.html">Read more…</a></p>
+<p class="more"><a href="life/use-org-mode-to-make-slide.html">Read more…</a></p>
 </div>
 </div>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/use-org-mode-to-GTD.html" class="u-url">Use org-mode to GTD [用 org-mode 做时间管理]</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="life/use-org-mode-to-GTD.html" class="u-url">Use org-mode to GTD [用 org-mode 做时间管理]</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Lengyueyang
             </span></p>
-            <p class="dateline"><a href="posts/use-org-mode-to-GTD.html" rel="bookmark"><time class="published dt-published" datetime="2016-02-28T19:26:52+08:00" title="2016-02-28 19:26">2016-02-28 19:26</time></a></p>
+            <p class="dateline"><a href="life/use-org-mode-to-GTD.html" rel="bookmark"><time class="published dt-published" datetime="2016-02-28T19:26:52+08:00" title="2016-02-28 19:26">2016-02-28 19:26</time></a></p>
                 <p class="commentline">
         
-    <a href="posts/use-org-mode-to-GTD.html#disqus_thread" data-disqus-identifier="cache/posts/Use org-mode to GTD.html">Comments</a>
+    <a href="life/use-org-mode-to-GTD.html#disqus_thread" data-disqus-identifier="cache/posts/Life/Use org-mode to GTD.html">Comments</a>
 
 
         </p>
@@ -1187,20 +1106,15 @@ manager may own configuration of emacs beyond spacemacs.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="posts/use-org-mode-to-GTD.html#sec-1">写在前面</a></li>
+<li><a href="life/use-org-mode-to-GTD.html#sec-1">写在前面</a></li>
 <li>
-<a href="posts/use-org-mode-to-GTD.html#sec-2">我的 org-mode 工作流程</a>
+<a href="life/use-org-mode-to-GTD.html#sec-2">我的 org-mode 工作流程</a>
 <ul>
-<li><a href="posts/use-org-mode-to-GTD.html#sec-2-1">建立自己的 GTD 文件</a></li>
-<li>
-<a href="posts/use-org-mode-to-GTD.html#sec-2-2">设置每个任务的状态，tags 和 priorities</a>
-<ul>
-<li><a href="posts/use-org-mode-to-GTD.html#sec-2-2-1">设置任务状态，我用以下 todo tiems，参考</a></li>
-</ul>
-</li>
-<li><a href="posts/use-org-mode-to-GTD.html#sec-2-3">设置任务时间，计划和截止时间</a></li>
-<li><a href="posts/use-org-mode-to-GTD.html#sec-2-4">执行计划，必要时记录每个任务的时间</a></li>
-<li><a href="posts/use-org-mode-to-GTD.html#sec-2-5">周回顾</a></li>
+<li><a href="life/use-org-mode-to-GTD.html#sec-2-1">建立自己的 GTD 文件</a></li>
+<li><a href="life/use-org-mode-to-GTD.html#sec-2-2">设置每个任务的状态，tags 和 priorities</a></li>
+<li><a href="life/use-org-mode-to-GTD.html#sec-2-3">设置任务时间，计划和截止时间</a></li>
+<li><a href="life/use-org-mode-to-GTD.html#sec-2-4">执行计划，必要时记录每个任务的时间</a></li>
+<li><a href="life/use-org-mode-to-GTD.html#sec-2-5">周回顾</a></li>
 </ul>
 </li>
 </ul>
@@ -1218,20 +1132,20 @@ manager may own configuration of emacs beyond spacemacs.
 <li>在用 org-mode 之前，应该有一些 Spacemacs 及 Org-mode 的使用经验（参见<a href="https://github.com/syl20bnr/spacemacs/blob/master/layers/org/README.org#element-insertion">pacemacs Keybinding</a>和<a href="http://www.gnu.org/software/emacs/manual/html_mono/org.html#Outlines">Org Mode Manual</a>)。
 </li>
 </ul>
-<p class="more"><a href="posts/use-org-mode-to-GTD.html">Read more…</a></p>
+<p class="more"><a href="life/use-org-mode-to-GTD.html">Read more…</a></p>
 </div>
 </div>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/spacemacs-learning.html" class="u-url">Spacemacs Learning [Spacemacs 学习]</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="life/spacemacs-learning.html" class="u-url">Spacemacs Learning [Spacemacs 学习]</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Lengyueyang
             </span></p>
-            <p class="dateline"><a href="posts/spacemacs-learning.html" rel="bookmark"><time class="published dt-published" datetime="2016-02-14T19:26:52+08:00" title="2016-02-14 19:26">2016-02-14 19:26</time></a></p>
+            <p class="dateline"><a href="life/spacemacs-learning.html" rel="bookmark"><time class="published dt-published" datetime="2016-02-14T19:26:52+08:00" title="2016-02-14 19:26">2016-02-14 19:26</time></a></p>
                 <p class="commentline">
         
-    <a href="posts/spacemacs-learning.html#disqus_thread" data-disqus-identifier="cache/posts/Spacemacs Learning.html">Comments</a>
+    <a href="life/spacemacs-learning.html#disqus_thread" data-disqus-identifier="cache/posts/Life/Spacemacs Learning.html">Comments</a>
 
 
         </p>
@@ -1243,27 +1157,27 @@ manager may own configuration of emacs beyond spacemacs.
 <div id="text-table-of-contents">
 <ul>
 <li>
-<a href="posts/spacemacs-learning.html#sec-1">Useful keybinding</a>
+<a href="life/spacemacs-learning.html#sec-1">Useful keybinding</a>
 <ul>
-<li><a href="posts/spacemacs-learning.html#sec-1-1">Memory</a></li>
+<li><a href="life/spacemacs-learning.html#sec-1-1">Memory</a></li>
 </ul>
 </li>
 <li>
-<a href="posts/spacemacs-learning.html#sec-2">The Emacs Evil Tutor</a>
+<a href="life/spacemacs-learning.html#sec-2">The Emacs Evil Tutor</a>
 <ul>
-<li><a href="posts/spacemacs-learning.html#sec-2-1">LESSON 1</a></li>
-<li><a href="posts/spacemacs-learning.html#sec-2-2">LESSON 2</a></li>
-<li><a href="posts/spacemacs-learning.html#sec-2-3">LESSON 3</a></li>
-<li><a href="posts/spacemacs-learning.html#sec-2-4">LESSON 4</a></li>
-<li><a href="posts/spacemacs-learning.html#sec-2-5">LESSON 5</a></li>
-<li><a href="posts/spacemacs-learning.html#sec-2-6">LESSON 6</a></li>
+<li><a href="life/spacemacs-learning.html#sec-2-1">LESSON 1</a></li>
+<li><a href="life/spacemacs-learning.html#sec-2-2">LESSON 2</a></li>
+<li><a href="life/spacemacs-learning.html#sec-2-3">LESSON 3</a></li>
+<li><a href="life/spacemacs-learning.html#sec-2-4">LESSON 4</a></li>
+<li><a href="life/spacemacs-learning.html#sec-2-5">LESSON 5</a></li>
+<li><a href="life/spacemacs-learning.html#sec-2-6">LESSON 6</a></li>
 </ul>
 </li>
 <li>
-<a href="posts/spacemacs-learning.html#sec-3">Python and R programming environment configuration</a>
+<a href="life/spacemacs-learning.html#sec-3">Python and R programming environment configuration</a>
 <ul>
-<li><a href="posts/spacemacs-learning.html#sec-3-1">Python</a></li>
-<li><a href="posts/spacemacs-learning.html#sec-3-2">R</a></li>
+<li><a href="life/spacemacs-learning.html#sec-3-1">Python</a></li>
+<li><a href="life/spacemacs-learning.html#sec-3-2">R</a></li>
 </ul>
 </li>
 </ul>
@@ -1297,21 +1211,21 @@ manager may own configuration of emacs beyond spacemacs.
 <li>F3 In a helm buffer, convert a helm search buffer into a regular buffer
 </li>
 </ul>
-<p class="more"><a href="posts/spacemacs-learning.html">Read more…</a></p>
+<p class="more"><a href="life/spacemacs-learning.html">Read more…</a></p>
 </div>
 </div>
 </div>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/archlinux-install-and-configuration.html" class="u-url">Archlinux install and configuration [Archlinux 安装和配置]</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="life/archlinux-install-and-configuration.html" class="u-url">Archlinux install and configuration [Archlinux 安装和配置]</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Lengyueyang
             </span></p>
-            <p class="dateline"><a href="posts/archlinux-install-and-configuration.html" rel="bookmark"><time class="published dt-published" datetime="2016-02-05T19:26:52+08:00" title="2016-02-05 19:26">2016-02-05 19:26</time></a></p>
+            <p class="dateline"><a href="life/archlinux-install-and-configuration.html" rel="bookmark"><time class="published dt-published" datetime="2016-02-05T19:26:52+08:00" title="2016-02-05 19:26">2016-02-05 19:26</time></a></p>
                 <p class="commentline">
         
-    <a href="posts/archlinux-install-and-configuration.html#disqus_thread" data-disqus-identifier="cache/posts/Archlinux install and configuration.html">Comments</a>
+    <a href="life/archlinux-install-and-configuration.html#disqus_thread" data-disqus-identifier="cache/posts/Life/Archlinux install and configuration.html">Comments</a>
 
 
         </p>
@@ -1323,32 +1237,32 @@ manager may own configuration of emacs beyond spacemacs.
 <div id="text-table-of-contents">
 <ul>
 <li>
-<a href="posts/archlinux-install-and-configuration.html#sec-1">Archlinux install [安装篇]</a>
+<a href="life/archlinux-install-and-configuration.html#sec-1">Archlinux install [安装篇]</a>
 <ul>
-<li><a href="posts/archlinux-install-and-configuration.html#sec-1-1">Prepare for the installation</a></li>
-<li><a href="posts/archlinux-install-and-configuration.html#sec-1-2">Basic install</a></li>
-<li><a href="posts/archlinux-install-and-configuration.html#sec-1-3">Software install</a></li>
+<li><a href="life/archlinux-install-and-configuration.html#sec-1-1">Prepare for the installation</a></li>
+<li><a href="life/archlinux-install-and-configuration.html#sec-1-2">Basic install</a></li>
+<li><a href="life/archlinux-install-and-configuration.html#sec-1-3">Software install</a></li>
 </ul>
 </li>
 <li>
-<a href="posts/archlinux-install-and-configuration.html#sec-2">Configuration [配置篇]</a>
+<a href="life/archlinux-install-and-configuration.html#sec-2">Configuration [配置篇]</a>
 <ul>
-<li><a href="posts/archlinux-install-and-configuration.html#sec-2-1">Fcitx</a></li>
-<li><a href="posts/archlinux-install-and-configuration.html#sec-2-2">Web to hidden</a></li>
-<li><a href="posts/archlinux-install-and-configuration.html#sec-2-3">Startdict</a></li>
-<li><a href="posts/archlinux-install-and-configuration.html#sec-2-4">Samba</a></li>
-<li><a href="posts/archlinux-install-and-configuration.html#sec-2-5">Bumblebee</a></li>
-<li><a href="posts/archlinux-install-and-configuration.html#sec-2-6">Firefox</a></li>
-<li><a href="posts/archlinux-install-and-configuration.html#sec-2-7">Dnsmasq: maybe out of data</a></li>
+<li><a href="life/archlinux-install-and-configuration.html#sec-2-1">Fcitx</a></li>
+<li><a href="life/archlinux-install-and-configuration.html#sec-2-2">Web to hidden</a></li>
+<li><a href="life/archlinux-install-and-configuration.html#sec-2-3">Startdict</a></li>
+<li><a href="life/archlinux-install-and-configuration.html#sec-2-4">Samba</a></li>
+<li><a href="life/archlinux-install-and-configuration.html#sec-2-5">Bumblebee</a></li>
+<li><a href="life/archlinux-install-and-configuration.html#sec-2-6">Firefox</a></li>
+<li><a href="life/archlinux-install-and-configuration.html#sec-2-7">Dnsmasq: maybe out of data</a></li>
 </ul>
 </li>
 <li>
-<a href="posts/archlinux-install-and-configuration.html#sec-3">Questions [问题篇]</a>
+<a href="life/archlinux-install-and-configuration.html#sec-3">Questions [问题篇]</a>
 <ul>
-<li><a href="posts/archlinux-install-and-configuration.html#sec-3-1">GNOME3.6 文件夹默认打开方式关联问题</a></li>
-<li><a href="posts/archlinux-install-and-configuration.html#sec-3-2">Add module auto</a></li>
-<li><a href="posts/archlinux-install-and-configuration.html#sec-3-3">LIWORD start fonts problem</a></li>
-<li><a href="posts/archlinux-install-and-configuration.html#sec-3-4">Emacs fcitx</a></li>
+<li><a href="life/archlinux-install-and-configuration.html#sec-3-1">GNOME3.6 文件夹默认打开方式关联问题</a></li>
+<li><a href="life/archlinux-install-and-configuration.html#sec-3-2">Add module auto</a></li>
+<li><a href="life/archlinux-install-and-configuration.html#sec-3-3">LIWORD start fonts problem</a></li>
+<li><a href="life/archlinux-install-and-configuration.html#sec-3-4">Emacs fcitx</a></li>
 </ul>
 </li>
 </ul>
@@ -1375,7 +1289,7 @@ mkfs.fat -F32 /dev/sda1
 mkfs.ext4 /dev/sda2
 </pre></div>
 
-<p class="more"><a href="posts/archlinux-install-and-configuration.html">Read more…</a></p>
+<p class="more"><a href="life/archlinux-install-and-configuration.html">Read more…</a></p>
 </div>
 </div>
 </div>
@@ -1394,9 +1308,9 @@ mkfs.ext4 /dev/sda2
         <!--End of body content-->
 
         <footer id="footer">
-            Contents © 2018         <a href="mailto:maoxiaowei1988@qq.com">Lengyueyang</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a> and <a href="#" https: rel="nofollow">Org-mode</a>   <a href="http://spacemacs.org"><img src="https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg"></a>    
+            Contents © 2018         <a href="mailto:maoxiaowei1988@qq.com">Lengyueyang</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a> and <a href="#" https: rel="nofollow">Org-mode</a>       
 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a>
+<img alt="Creative Commons License BY-NC-SA" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a>
             
         </footer>
 </div>
