@@ -134,12 +134,15 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/archive.html", "Archives"),
+        ("/posts/data-science/index.html", "Data Science"),
+        ("/posts/research/index.html", "Research"),
+        ("/posts/life/index.html", "Life"),
         ("/categories/index.html", "Tags"),
+        ("/archive.html", "Archives"),
         ("/pages/notes.html", "Notes"),
+        ("/pages/links.html", "Links"),
         ("/pages/about.html", "About"),
         ("https://github.com/lengyueyang", "Github"),
-        ("/pages/links.html", "Links"),
         ("/rss.xml", "RSS feed"),
     ),
 }
@@ -152,7 +155,8 @@ THEME = "custom_theme"
 # THEME = "custum-4_theme"
 # THEME = "bootstrap3-jinja"
 # THEME = "bootswarch-darkly"
-
+# THEME = "lanyon"
+# THEME = "yesplease"
 
 # Primary color of your theme. This will be used to customize your theme and
 # auto-generate related colors in POSTS_SECTION_COLORS. Must be a HEX value.
@@ -193,11 +197,14 @@ THEME_COLOR = '#5670d4'
 #     )
 
 POSTS = (
-    ("posts/*.org", "posts", "post.tmpl"),
-    ("posts/*.rst", "posts", "post.tmpl"),
-    ("posts/*.md", "posts", "post.tmpl"),
-    ("posts/*.txt", "posts", "post.tmpl"),
-    ("posts/*.html", "posts", "post.tmpl"),
+    ("posts/Life/*.org", "life", "post.tmpl"),
+    ("posts/Research/*.org", "Research", "post.tmpl"),
+    ("posts/Data Science/*.org", "Data Science", "post.tmpl"),
+    ("posts/Learning/*.org", "Learning", "post.tmpl"),
+    ("posts/Life/*.ipnb", "life", "post.tmpl"),
+    ("posts/Research/*.ipnb", "Research", "post.tmpl"),
+    ("posts/Data Science/*.ipnb", "Data Science", "post.tmpl"),
+    ("posts/Learning/*.ipnb", "Learning", "post.tmpl"),
 )
 PAGES = (
     ("pages/*.org", "pages", "page.tmpl"),
@@ -262,7 +269,7 @@ TIMEZONE = "Asia/Shanghai"
 # FILES_FOLDERS = {'files': ''}
 # Which means copy 'files' into 'output'
 # FILES_FOLDERS = {'posts/ltxpng': 'posts/ltxpng'}
-FILES_FOLDERS = {'posts/ltxpng': 'posts/ltxpng', 'posts/MSimg': 'posts/MSimg', 'posts/file':'posts/file'}
+FILES_FOLDERS = {'posts/Data Science/ltxpng': 'Data Science/ltxpng', 'posts/Data Science/MSimg': 'Data Science/MSimg', 'posts/Data Science/Mlimg': 'Data Science/Mlimg', 'posts/Data Science/Dsimg': 'Data Science/Dsimg', 'posts/Life/Lifeimg': 'Life/Lifeimg', 'posts/Research/img': 'Research/img'}
 
 # One or more folders containing code listings to be processed and published on
 # the site. The format is a dictionary of {source: relative destination}.
@@ -343,33 +350,38 @@ POSTS_SECTIONS = True
 
 # Setting this to False generates a list page instead of an index. Indexes
 # are the default and will apply GENERATE_ATOM if set.
-# POSTS_SECTIONS_ARE_INDEXES = True
+POSTS_SECTIONS_ARE_INDEXES = True
 
 # Final locations are:
 # output / TRANSLATION[lang] / SECTION_PATH / SECTION_NAME / index.html (list of posts for a section)
 # output / TRANSLATION[lang] / SECTION_PATH / SECTION_NAME / rss.xml (RSS feed for a section)
 # (translatable)
-# SECTION_PATH = ""
+SECTION_PATH = "posts"
 
 # Each post and section page will have an associated color that can be used
 # to style them with a recognizable color detail across your site. A color
 # is assigned to  each section based on shifting the hue of your THEME_COLOR
 # at least 7.5 % while leaving the lightness and saturation untouched in the
 # HUSL colorspace. You can overwrite colors by assigning them colors in HEX.
-# POSTS_SECTION_COLORS = {
-#     DEFAULT_LANG: {
-#         'posts':  '#49b11bf',
-#         'reviews':   '#ffe200',
-#     },
-# }
+POSTS_SECTION_COLORS = {
+    DEFAULT_LANG: {
+        'Data Science':   '#ffe200',
+        'Research':   '#ffe200',
+        # 'Learning':  '#49b11bf',
+        'Life':  '#49b11bf',
+    },
+}
 
 # Associate a description with a section. For use in meta description on
 # section index pages or elsewhere in themes.
-# POSTS_SECTION_DESCRIPTIONS = {
-#     DEFAULT_LANG: {
-#         'how-to': 'Learn how-to things properly with these amazing tutorials.',
-#     },
-# }
+POSTS_SECTION_DESCRIPTIONS = {
+    DEFAULT_LANG: {
+        'Data Science':   'Data Science: Collection of Machine learning, Math and statistics and Data analysis',
+        'Research':   'Research: A collection of article results reproduce',
+        # 'Learning':  'Learning: Some configuration and methods emacs, linux and software',
+        'Life':  'Life: Some tips of my life',
+    },
+}
 
 # Sections are determined by their output directory as set in POSTS by default,
 # but can alternatively be determined from file metadata instead.
@@ -378,21 +390,26 @@ POSTS_SECTIONS = True
 # Names are determined from the output directory name automatically or the
 # metadata label. Unless overwritten below, names will use title cased and
 # hyphens replaced by spaces.
-# POSTS_SECTION_NAME = {
-#    DEFAULT_LANG: {
-#        'posts': 'Blog Posts',
-#        'uncategorized': 'Odds and Ends',
-#    },
-# }
+POSTS_SECTION_NAME = {
+   DEFAULT_LANG: {
+        'Data Science':   'Data Science: Collection of Machine learning, Math and statistics and Data analysis',
+        'Research':   'Research: A collection of article results reproduce',
+        # 'Learning':  'Learning: Some configuration and methods emacs, linux and software',
+        'Life':  'Life: Some tips of my life',
+   },
+}
 
 # Titles for per-section index pages. Can be either one string where "{name}"
 # is substituted or the POSTS_SECTION_NAME, or a dict of sections. Note
 # that the INDEX_PAGES option is also applied to section page titles.
-# POSTS_SECTION_TITLE = {
-#     DEFAULT_LANG: {
-#         'how-to': 'How-to and Tutorials',
-#     },
-# }
+POSTS_SECTION_TITLE = {
+    DEFAULT_LANG: {
+        'Data Science':   'Data Science: Collection of Machine learning, Math and statistics and Data analysis',
+        'Research':   'Research: A collection of article results reproduce',
+        # 'Learning':  'Learning: Some configuration and methods emacs, linux and software',
+        'Life':  'Life: Some tips of my life',
+    },
+}
 
 # A list of dictionaries specifying sections which translate to each other.
 # For example:
@@ -489,7 +506,7 @@ HIDDEN_TAGS = ['mathjax']
 # using a forward slash ('/') to separate paths. Use a backslash ('\') to escape
 # a forward slash or a backslash (i.e. '\//\\' is a path specifying the
 # subcategory called '\' of the top-level category called '/').
-CATEGORY_ALLOW_HIERARCHIES = False
+CATEGORY_ALLOW_HIERARCHIES = True
 # If CATEGORY_OUTPUT_FLAT_HIERARCHY is set to True, the output written to output
 # contains only the name of the leaf category and not the whole path.
 CATEGORY_OUTPUT_FLAT_HIERARCHY = False
@@ -950,15 +967,19 @@ FEED_LINKS_APPEND_QUERY = False
 # LICENSE = ""
 # I recommend using the Creative Commons' wizard:
 # https://creativecommons.org/choose/
+# LICENSE = """
+# <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+# <img alt="Creative Commons License BY-NC-SA"
+# style="border-width:0; margin-bottom:12px;"
+# src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a>"""
 LICENSE = """
 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
 <img alt="Creative Commons License BY-NC-SA"
-style="border-width:0; margin-bottom:12px;"
-src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a>"""
+src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a>"""
 
 # A small copyright notice for the page footer (in HTML).
 # (translatable)
-CONTENT_FOOTER = 'Contents &copy; {date}         <a href="mailto:{email}">{author}</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a> and <a href=""https://orgmode.org/ rel="nofollow">Org-mode</a>   <a href="http://spacemacs.org"><img src="https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg" /></a>    {license}'
+CONTENT_FOOTER = 'Contents &copy; {date}         <a href="mailto:{email}">{author}</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a> and <a href=""https://orgmode.org/ rel="nofollow">Org-mode</a>       {license}'
 
 # Things that will be passed to CONTENT_FOOTER.format().  This is done
 # for translatability, as dicts are not formattable.  Nikola will
