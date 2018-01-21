@@ -197,14 +197,12 @@ THEME_COLOR = '#5670d4'
 #     )
 
 POSTS = (
-    ("posts/Life/*.org", "life", "post.tmpl"),
+    ("posts/Life/*.org", "Life", "post.tmpl"),
     ("posts/Research/*.org", "Research", "post.tmpl"),
     ("posts/Data Science/*.org", "Data Science", "post.tmpl"),
-    ("posts/Learning/*.org", "Learning", "post.tmpl"),
-    ("posts/Life/*.ipnb", "life", "post.tmpl"),
+    ("posts/Life/*.ipnb", "Life", "post.tmpl"),
     ("posts/Research/*.ipnb", "Research", "post.tmpl"),
     ("posts/Data Science/*.ipnb", "Data Science", "post.tmpl"),
-    ("posts/Learning/*.ipnb", "Learning", "post.tmpl"),
 )
 PAGES = (
     ("pages/*.org", "pages", "page.tmpl"),
@@ -269,7 +267,7 @@ TIMEZONE = "Asia/Shanghai"
 # FILES_FOLDERS = {'files': ''}
 # Which means copy 'files' into 'output'
 # FILES_FOLDERS = {'posts/ltxpng': 'posts/ltxpng'}
-FILES_FOLDERS = {'posts/Data Science/ltxpng': 'Data Science/ltxpng', 'posts/Data Science/MSimg': 'Data Science/MSimg', 'posts/Data Science/Mlimg': 'Data Science/Mlimg', 'posts/Data Science/Dsimg': 'Data Science/Dsimg', 'posts/Life/Lifeimg': 'Life/Lifeimg', 'posts/Research/img': 'Research/img'}
+FILES_FOLDERS = {'posts/Data Science/ltxpng': 'Data Science/ltxpng', 'posts/Data Science/MSimg': 'Data Science/MSimg', 'posts/Data Science/Mlimg': 'Data Science/Mlimg', 'posts/Data Science/Dsimg': 'Data Science/Dsimg', 'posts/Life/Lifeimg': 'Life/Lifeimg', 'posts/Life/ltximg': 'Life/ltximg', 'posts/Research/img': 'Research/img', 'posts/Research/ltximg': 'Research/ltximg'}
 
 # One or more folders containing code listings to be processed and published on
 # the site. The format is a dictionary of {source: relative destination}.
