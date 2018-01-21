@@ -267,7 +267,7 @@ TIMEZONE = "Asia/Shanghai"
 # FILES_FOLDERS = {'files': ''}
 # Which means copy 'files' into 'output'
 # FILES_FOLDERS = {'posts/ltxpng': 'posts/ltxpng'}
-FILES_FOLDERS = {'posts/Data Science/ltxpng': 'Data Science/ltxpng', 'posts/Data Science/MSimg': 'Data Science/MSimg', 'posts/Data Science/Mlimg': 'Data Science/Mlimg', 'posts/Data Science/Dsimg': 'Data Science/Dsimg', 'posts/Life/Lifeimg': 'Life/Lifeimg', 'posts/Life/ltximg': 'Life/ltximg', 'posts/Research/img': 'Research/img', 'posts/Research/ltximg': 'Research/ltximg'}
+FILES_FOLDERS = {'posts/Data Science/ltxpng': 'Data Science/ltxpng', 'posts/Data Science/MSimg': 'Data Science/MSimg', 'posts/Data Science/Mlimg': 'Data Science/Mlimg', 'posts/Data Science/Dsimg': 'Data Science/Dsimg', 'posts/Life/Lifeimg': 'Life/Lifeimg', 'posts/Life/ltxpng': 'Life/ltxpng', 'posts/Research/img': 'Research/img', 'posts/Research/ltxpng': 'Research/ltxpng'}
 
 # One or more folders containing code listings to be processed and published on
 # the site. The format is a dictionary of {source: relative destination}.
