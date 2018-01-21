@@ -21,36 +21,28 @@
 随机变量及其概率分布
 
 一维随机变量
-多维随机变量（随机向量）
-条件概率分布与随机变量的独立性
-随机变量的函数的概率分布
-例题
-参考网页
-
-
-
-
-
-
-
-随机变量及其概率分布
-
-
-一维随机变量
 
 随机变量的概念
-
-随机变量的定义：“其值随机会而定”的变量，是试验结果的函数
-
-
-
-随机变量的反面为确定性变量，其取值遵循某种严格的规律的变量；
+离散型随机变量的分布及其例子
+连续性随机变量的分布及其例子
 
 
+多维随机变量（随机向量）
+
+离散型随机向量的分布
+连续型随机向量的分布
+边缘分布
 
 
+条件概率分布与随机变量的独立性
 
-随机事件与">
+条件概率分布的概念
+离散型随机变量的条件概率分布
+连续型随机变量的条件分布
+随机变量的独立性
+
+
+随机变量的函数的概率分">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2017-05-29T19:26:52+08:00">
 <meta property="article:tag" content="mathjax">
@@ -160,10 +152,40 @@
 <li>
 <a href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1">随机变量及其概率分布</a>
 <ul>
-<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-1">一维随机变量</a></li>
-<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-2">多维随机变量（随机向量）</a></li>
-<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-3">条件概率分布与随机变量的独立性</a></li>
-<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-4">随机变量的函数的概率分布</a></li>
+<li>
+<a href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-1">一维随机变量</a>
+<ul>
+<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-1-1">随机变量的概念</a></li>
+<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-1-2">离散型随机变量的分布及其例子</a></li>
+<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-1-3">连续性随机变量的分布及其例子</a></li>
+</ul>
+</li>
+<li>
+<a href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-2">多维随机变量（随机向量）</a>
+<ul>
+<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-2-1">离散型随机向量的分布</a></li>
+<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-2-2">连续型随机向量的分布</a></li>
+<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-2-3">边缘分布</a></li>
+</ul>
+</li>
+<li>
+<a href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-3">条件概率分布与随机变量的独立性</a>
+<ul>
+<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-3-1">条件概率分布的概念</a></li>
+<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-3-2">离散型随机变量的条件概率分布</a></li>
+<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-3-3">连续型随机变量的条件分布</a></li>
+<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-3-4">随机变量的独立性</a></li>
+</ul>
+</li>
+<li>
+<a href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-4">随机变量的函数的概率分布</a>
+<ul>
+<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-4-1">离散型分布的情况</a></li>
+<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-4-2">连续型分布的情况：一般讨论</a></li>
+<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-4-3">随机变量和的密度函数</a></li>
+<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-4-4">随机变量商的密度函数</a></li>
+</ul>
+</li>
 <li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-5">例题</a></li>
 <li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html#sec-1-6">参考网页</a></li>
 </ul>
@@ -180,9 +202,9 @@
 <h3 id="sec-1-1">一维随机变量</h3>
 <div class="outline-text-3" id="text-1-1">
 </div>
-<ul class="org-ul">
-<li>
-<a id="sec-1-1-1" name="sec-1-1-1"></a>随机变量的概念<br><div class="outline-text-4" id="text-1-1-1">
+<div id="outline-container-sec-1-1-1" class="outline-4">
+<h4 id="sec-1-1-1">随机变量的概念</h4>
+<div class="outline-text-4" id="text-1-1-1">
 <p>
 随机变量的定义：“其值随机会而定”的变量，是试验结果的函数
 </p>
@@ -205,10 +227,11 @@
 随机变量的研究：取值、取各种值的概率
 </p>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-1-1-2" name="sec-1-1-2"></a>离散型随机变量的分布及其例子<br><div class="outline-text-4" id="text-1-1-2">
+<div id="outline-container-sec-1-1-2" class="outline-4">
+<h4 id="sec-1-1-2">离散型随机变量的分布及其例子</h4>
+<div class="outline-text-4" id="text-1-1-2">
 
 <div class="figure">
 <p><img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83_5ea9bf7698f88265c9b0bfaa405cf88f383d682a.png" alt="\begin{de}[离散型随机变量概率函数的定义]
@@ -351,10 +374,11 @@ P(X = i) = e^{-λ}λ^i \divslash i!
 </div>
 </li>
 </ul>
-</li>
+</div>
 
-<li>
-<a id="sec-1-1-3" name="sec-1-1-3"></a>连续性随机变量的分布及其例子<br><div class="outline-text-4" id="text-1-1-3">
+<div id="outline-container-sec-1-1-3" class="outline-4">
+<h4 id="sec-1-1-3">连续性随机变量的分布及其例子</h4>
+<div class="outline-text-4" id="text-1-1-3">
 
 <div class="figure">
 <p><img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83_3133b035c7deb8bbf96bc9fd1c60b2070d841b4f.png" alt="\begin{de}[连续性随机变量概率密度函数定义]
@@ -532,17 +556,16 @@ F(x) = P(X ⩽ x) = \int_{-∞}^xf(t)dt = \left\{\begin{array}{ll}
 </div>
 </li>
 </ul>
-</li>
-</ul>
+</div>
 </div>
 
 <div id="outline-container-sec-1-2" class="outline-3">
 <h3 id="sec-1-2">多维随机变量（随机向量）</h3>
 <div class="outline-text-3" id="text-1-2">
 </div>
-<ul class="org-ul">
-<li>
-<a id="sec-1-2-1" name="sec-1-2-1"></a>离散型随机向量的分布<br><div class="outline-text-4" id="text-1-2-1">
+<div id="outline-container-sec-1-2-1" class="outline-4">
+<h4 id="sec-1-2-1">离散型随机向量的分布</h4>
+<div class="outline-text-4" id="text-1-2-1">
 
 <div class="figure">
 <p><img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83_ae82982ffef2f1d43684d627857be57ae9d46d94.png" alt="\begin{de}[多维离散型随机向量概率函数定义]
@@ -595,10 +618,11 @@ P(X_1 = k_1_{}, X_2 = k_2&amp;amp;, \dots , X_n = k_n_{}_{}) = \frac{N!}{k_1!k_2
 </p>
 </div>
 </li></ul>
-</li>
+</div>
 
-<li>
-<a id="sec-1-2-2" name="sec-1-2-2"></a>连续型随机向量的分布<br><div class="outline-text-4" id="text-1-2-2">
+<div id="outline-container-sec-1-2-2" class="outline-4">
+<h4 id="sec-1-2-2">连续型随机向量的分布</h4>
+<div class="outline-text-4" id="text-1-2-2">
 
 <div class="figure">
 <p><img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83_be1ef243bc887c87973b7d438cb69ec108aa144b.png" alt="\begin{de}[多维连续随机向量密度函数定义]
@@ -663,10 +687,11 @@ f(x_1, x_2) = (2\pi σ_1σ_2\sqrt{1-\rho^2})^{-1} exp\left[-\frac{1}{2(1-\rho^2)
 </div>
 </li>
 </ul>
-</li>
+</div>
 
-<li>
-<a id="sec-1-2-3" name="sec-1-2-3"></a>边缘分布<br><div class="outline-text-4" id="text-1-2-3">
+<div id="outline-container-sec-1-2-3" class="outline-4">
+<h4 id="sec-1-2-3">边缘分布</h4>
+<div class="outline-text-4" id="text-1-2-3">
 
 <div class="figure">
 <p><img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83_757a81d645d7da7166dc8e551bc885addf5f253a.png" alt="\begin{de}[边缘分布定义]
@@ -713,25 +738,25 @@ f(x_1, x_2) = (2\pi σ_1σ_2\sqrt{1-\rho^2})^{-1} exp\left[-\frac{1}{2(1-\rho^2)
 </li>
 </ul>
 </div>
-</li>
-</ul>
+</div>
 </div>
 
 <div id="outline-container-sec-1-3" class="outline-3">
 <h3 id="sec-1-3">条件概率分布与随机变量的独立性</h3>
 <div class="outline-text-3" id="text-1-3">
 </div>
-<ul class="org-ul">
-<li>
-<a id="sec-1-3-1" name="sec-1-3-1"></a>条件概率分布的概念<br><div class="outline-text-4" id="text-1-3-1">
+<div id="outline-container-sec-1-3-1" class="outline-4">
+<h4 id="sec-1-3-1">条件概率分布的概念</h4>
+<div class="outline-text-4" id="text-1-3-1">
 <p>
 一般形式：设有两个随机变量（向量）X，Y，在给定了 Y 取某个或某些值的条件下，去求 X 的条件分布
 </p>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-1-3-2" name="sec-1-3-2"></a>离散型随机变量的条件概率分布<br><div class="outline-text-4" id="text-1-3-2">
+<div id="outline-container-sec-1-3-2" class="outline-4">
+<h4 id="sec-1-3-2">离散型随机变量的条件概率分布</h4>
+<div class="outline-text-4" id="text-1-3-2">
 
 <div class="figure">
 <p><img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83_7cf341d30040019c73ed63e2e8b953bc938af1b2.png" alt="\begin{equation}
@@ -742,10 +767,11 @@ P(X_1 = a_i | X_2 = b_j) = p_{ij}\sum_kp_{kj} \quad (i = 1, 2, \dots)
 <p>
 多项分布 <img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83_4f98ee3cec1a00ea34946b8cb8c48614f728503f.png" alt="\(M(N; p_1, p_2, \dots , p_n)\)"> 在 <img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83_09cb76fd26a536b630d446251a733d11c6c87581.png" alt="\(X_2 = k_2\)"> 条件下， <img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83_51e40e7ada779451d00905d169e460e3a9cbb5f0.png" alt="\(X_1\)"> 的条件分布就是二项分布 <img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83_b4edb2ad4361acdb998ea5e9e791c263f8709ccb.png" alt="\(B(N-k_2, p_1(1-p_2))\)"></p>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-1-3-3" name="sec-1-3-3"></a>连续型随机变量的条件分布<br><div class="outline-text-4" id="text-1-3-3">
+<div id="outline-container-sec-1-3-3" class="outline-4">
+<h4 id="sec-1-3-3">连续型随机变量的条件分布</h4>
+<div class="outline-text-4" id="text-1-3-3">
 
 <div class="figure">
 <p><img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83_e4878526d69bd436d702d2bd311dfcbcd072fe76.png" alt="\begin{equation}
@@ -778,10 +804,11 @@ f(x_2, x_1) = (2\pi σ_2\sqrt{1-\rho^2})^{-1} exp\left[-\frac{(x_2 - (b + \rho \
 \end{equation}"></p>
 </div>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-1-3-4" name="sec-1-3-4"></a>随机变量的独立性<br><div class="outline-text-4" id="text-1-3-4">
+<div id="outline-container-sec-1-3-4" class="outline-4">
+<h4 id="sec-1-3-4">随机变量的独立性</h4>
+<div class="outline-text-4" id="text-1-3-4">
 
 <div class="figure">
 <p><img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83_4f0f9888a5e665ca063bc957499eb54230018617.png" alt="\begin{de}[随机变量独立性定义]
@@ -843,17 +870,16 @@ P(X_1 = a, \dots ,X_n = a_n) = P(X_1 = a_1) \dots P(X_n = a_n)
 连续性随机变量的三条定理适用于离散数学随机变量
 </p>
 </div>
-</li>
-</ul>
+</div>
 </div>
 
 <div id="outline-container-sec-1-4" class="outline-3">
 <h3 id="sec-1-4">随机变量的函数的概率分布</h3>
 <div class="outline-text-3" id="text-1-4">
 </div>
-<ul class="org-ul">
-<li>
-<a id="sec-1-4-1" name="sec-1-4-1"></a>离散型分布的情况<br><div class="outline-text-4" id="text-1-4-1">
+<div id="outline-container-sec-1-4-1" class="outline-4">
+<h4 id="sec-1-4-1">离散型分布的情况</h4>
+<div class="outline-text-4" id="text-1-4-1">
 <p>
 用概率概率思维解决问题：
 </p>
@@ -866,10 +892,11 @@ P(X_1 = a, \dots ,X_n = a_n) = P(X_1 = a_1) \dots P(X_n = a_n)
 </li>
 </ul>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-1-4-2" name="sec-1-4-2"></a>连续型分布的情况：一般讨论<br><div class="outline-text-4" id="text-1-4-2">
+<div id="outline-container-sec-1-4-2" class="outline-4">
+<h4 id="sec-1-4-2">连续型分布的情况：一般讨论</h4>
+<div class="outline-text-4" id="text-1-4-2">
 
 <div class="figure">
 <p><img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83_c1cc660fc67b17f0f88bd8fe5875d76cab9e6d25.png" alt="\begin{de}[单变量函数的密度函数]
@@ -934,10 +961,11 @@ l(y_1, y_2, \dots , y_n) = f(h_1(y_1, y_2, \dots ,y_n), \dots , h_n(y_1, y_2, \d
 \end{equation}"></p>
 </div>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-1-4-3" name="sec-1-4-3"></a>随机变量和的密度函数<br><div class="outline-text-4" id="text-1-4-3">
+<div id="outline-container-sec-1-4-3" class="outline-4">
+<h4 id="sec-1-4-3">随机变量和的密度函数</h4>
+<div class="outline-text-4" id="text-1-4-3">
 
 <div class="figure">
 <p><img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83_296738182f0170995540a3587675902b65f4660a.png" alt="\begin{de}[二维随机变量和密度函数]
@@ -1050,10 +1078,11 @@ k_n (x) = \left\{\begin{array}{ll}
 </ul>
 </div>
 </li></ul>
-</li>
+</div>
 
-<li>
-<a id="sec-1-4-4" name="sec-1-4-4"></a>随机变量商的密度函数<br><div class="outline-text-4" id="text-1-4-4">
+<div id="outline-container-sec-1-4-4" class="outline-4">
+<h4 id="sec-1-4-4">随机变量商的密度函数</h4>
+<div class="outline-text-4" id="text-1-4-4">
 
 <div class="figure">
 <p><img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83_95efe8e6acbfa2c23e52f9909e85809b4cfcb6da.png" alt="\begin{de}[随机变量商密度函数]
@@ -1136,8 +1165,7 @@ k_n (x) = \left\{\begin{array}{ll}
 </div>
 </li>
 </ul>
-</li>
-</ul>
+</div>
 </div>
 
 <div id="outline-container-sec-1-5" class="outline-3">

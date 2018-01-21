@@ -22,29 +22,30 @@
 事件的概率
 
 概率是什么
+
+主观概率
+试验与事件
+古典概率
+概率的统计学定义
+概率的公理化定义
+
+
 古典概率的计算
+
+排列组合的几个简单公式
+古典概率计算举例
+
+
 事件的运算、条件概率与独立性
-例题
-参考网页
 
-
-
-
-
-
-
-概述
-
-
-概率论与数理统计的学习部分用以下书籍
-
-
-
-陈希儒, (2009). 概率论与数理统计. : 中国科技大学出版社.
-
-陈希儒, 倪. (2009). 数理统计学教程. : 中国科技大学出版社.
-
-高惠璇, (2005). 应用多元统计分析. ">
+事件的蕴含、包含和相等
+事件的互斥和对立
+事件的和（并）
+概率的加法定理
+事件的积（交）、事件的差
+条件概率
+事件的独立性，概率乘法定理
+全概率公式与贝叶斯公">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2017-04-08T19:26:52+08:00">
 <meta property="article:tag" content="mathjax">
@@ -155,9 +156,36 @@
 <li>
 <a href="../Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2">事件的概率</a>
 <ul>
-<li><a href="../Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-1">概率是什么</a></li>
-<li><a href="../Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-2">古典概率的计算</a></li>
-<li><a href="../Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-3">事件的运算、条件概率与独立性</a></li>
+<li>
+<a href="../Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-1">概率是什么</a>
+<ul>
+<li><a href="../Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-1-1">主观概率</a></li>
+<li><a href="../Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-1-2">试验与事件</a></li>
+<li><a href="../Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-1-3">古典概率</a></li>
+<li><a href="../Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-1-4">概率的统计学定义</a></li>
+<li><a href="../Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-1-5">概率的公理化定义</a></li>
+</ul>
+</li>
+<li>
+<a href="../Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-2">古典概率的计算</a>
+<ul>
+<li><a href="../Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-2-1">排列组合的几个简单公式</a></li>
+<li><a href="../Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-2-2">古典概率计算举例</a></li>
+</ul>
+</li>
+<li>
+<a href="../Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-3">事件的运算、条件概率与独立性</a>
+<ul>
+<li><a href="../Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-3-1">事件的蕴含、包含和相等</a></li>
+<li><a href="../Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-3-2">事件的互斥和对立</a></li>
+<li><a href="../Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-3-3">事件的和（并）</a></li>
+<li><a href="../Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-3-4">概率的加法定理</a></li>
+<li><a href="../Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-3-5">事件的积（交）、事件的差</a></li>
+<li><a href="../Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-3-6">条件概率</a></li>
+<li><a href="../Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-3-7">事件的独立性，概率乘法定理</a></li>
+<li><a href="../Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-3-8">全概率公式与贝叶斯公式</a></li>
+</ul>
+</li>
 <li><a href="../Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-4">例题</a></li>
 <li><a href="../Data%20Science/DS-MS-Statistics-shijiandegailv.html#sec-2-5">参考网页</a></li>
 </ul>
@@ -193,9 +221,9 @@
 <h3 id="sec-2-1">概率是什么</h3>
 <div class="outline-text-3" id="text-2-1">
 </div>
-<ul class="org-ul">
-<li>
-<a id="sec-2-1-1" name="sec-2-1-1"></a>主观概率<br><div class="outline-text-4" id="text-2-1-1">
+<div id="outline-container-sec-2-1-1" class="outline-4">
+<h4 id="sec-2-1-1">主观概率</h4>
+<div class="outline-text-4" id="text-2-1-1">
 <p>
 主观概率含义：为根据其经验和知识及利害关系的一种心态或倾向性，许多决策都包含个人判断成分，即主观概率
 </p>
@@ -204,10 +232,11 @@
 主观概率特点：不是在坚实的客观理由基础上为人们所公认；但不能从科学角度简单的全盘否定，（a）该概念有广泛的生活基础；（b）可能反映认识主体的一种倾向性，而有其社会意义；（c）在涉及利益得失的决策中，处于不同地位和掌握情报多少不同的人，对某事件可能性大小要参照这些情况及可能的后果去做衡量
 </p>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-2-1-2" name="sec-2-1-2"></a>试验与事件<br><div class="outline-text-4" id="text-2-1-2">
+<div id="outline-container-sec-2-1-2" class="outline-4">
+<h4 id="sec-2-1-2">试验与事件</h4>
+<div class="outline-text-4" id="text-2-1-2">
 <p>
 试验：人为主动
 </p>
@@ -224,10 +253,11 @@
 在概率论中，单一的试验结果称为“基本事件”，一个或一些基本事件并在一起，构成一个事件。
 </p>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-2-1-3" name="sec-2-1-3"></a>古典概率<br><div class="outline-text-4" id="text-2-1-3">
+<div id="outline-container-sec-2-1-3" class="outline-4">
+<h4 id="sec-2-1-3">古典概率</h4>
+<div class="outline-text-4" id="text-2-1-3">
 
 <div class="figure">
 <p><img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%A6%82%E7%8E%87_138e72829fb0a2d89775d2f086ec72a42175f7cc.png" alt="\begin{de}[古典概率的定义]
@@ -251,10 +281,11 @@ P(E) = M/N
 古典概率的局限性：古典概率只能用于全部试验结果为有限个，且等可能成立的情况。
 </p>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-2-1-4" name="sec-2-1-4"></a>概率的统计学定义<br><div class="outline-text-4" id="text-2-1-4">
+<div id="outline-container-sec-2-1-4" class="outline-4">
+<h4 id="sec-2-1-4">概率的统计学定义</h4>
+<div class="outline-text-4" id="text-2-1-4">
 <p>
 实用角度：通过实验去估计事件概率的方法
 </p>
@@ -272,10 +303,11 @@ P(E) = M/N
 概率统计学定义的意义：1) 提供了估计概率的方法；2) 提供了一种检验理论正确与否的准则，这类问题属于假设检验的范畴。
 </p>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-2-1-5" name="sec-2-1-5"></a>概率的公理化定义<br><div class="outline-text-4" id="text-2-1-5">
+<div id="outline-container-sec-2-1-5" class="outline-4">
+<h4 id="sec-2-1-5">概率的公理化定义</h4>
+<div class="outline-text-4" id="text-2-1-5">
 <p>
 1993 年前苏联大数学家柯尔莫哥洛夫实现概率论的公理化，柯氏公理体系：
 </p>
@@ -295,17 +327,16 @@ P(E) = M/N
 柯氏公理的意义：为一种普遍而严格的数学化概率理论奠定了基础
 </p>
 </div>
-</li>
-</ul>
+</div>
 </div>
 
 <div id="outline-container-sec-2-2" class="outline-3">
 <h3 id="sec-2-2">古典概率的计算</h3>
 <div class="outline-text-3" id="text-2-2">
 </div>
-<ul class="org-ul">
-<li>
-<a id="sec-2-2-1" name="sec-2-2-1"></a>排列组合的几个简单公式<br><div class="outline-text-4" id="text-2-2-1">
+<div id="outline-container-sec-2-2-1" class="outline-4">
+<h4 id="sec-2-2-1">排列组合的几个简单公式</h4>
+<div class="outline-text-4" id="text-2-2-1">
 <p>
 古典概率归结为计算两个数 M 和 N，这种计算大多涉及排列组合
 </p>
@@ -324,31 +355,32 @@ P(E) = M/N
 </li>
 </ul>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-2-2-2" name="sec-2-2-2"></a>古典概率计算举例<br><div class="outline-text-4" id="text-2-2-2">
+<div id="outline-container-sec-2-2-2" class="outline-4">
+<h4 id="sec-2-2-2">古典概率计算举例</h4>
+<div class="outline-text-4" id="text-2-2-2">
 <p>
 古典概率的计算需要根据具体题目，利用捆绑法、插孔法等，这里强调一点，n 个人排成一列的排列数时 <img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%A6%82%E7%8E%87_a6ff44aa2abbe0065427755bec02c989c4b41d2f.png" alt="\(n!\)"> 个，而排成一个圆圈则时 <img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%A6%82%E7%8E%87_768c28afd498ffcbb04db51268bd537cc35adb5b.png" alt="\((n-1)!\)"></p>
 </div>
-</li>
-</ul>
+</div>
 </div>
 
 <div id="outline-container-sec-2-3" class="outline-3">
 <h3 id="sec-2-3">事件的运算、条件概率与独立性</h3>
 <div class="outline-text-3" id="text-2-3">
 </div>
-<ul class="org-ul">
-<li>
-<a id="sec-2-3-1" name="sec-2-3-1"></a>事件的蕴含、包含和相等<br><div class="outline-text-4" id="text-2-3-1">
+<div id="outline-container-sec-2-3-1" class="outline-4">
+<h4 id="sec-2-3-1">事件的蕴含、包含和相等</h4>
+<div class="outline-text-4" id="text-2-3-1">
 <p>
 在同一试验下的两事件 A 和 B，如果当 A 发生时 B 必发生，则称 A 蕴含 B，或者说 B 包含 A，记作 <img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%A6%82%E7%8E%87_616af8635b7702cb66221ba5a16788eba739e4a7.png" alt="\(A ⊂ B\)"> ；若 A，B 互相蕴含，则称 A，B 两事件相等，记为 <img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%A6%82%E7%8E%87_f9ed4ccdbbc3bd481dec61598ab03b5da9bcb9f8.png" alt="\(A = B\)"></p>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-2-3-2" name="sec-2-3-2"></a>事件的互斥和对立<br><div class="outline-text-4" id="text-2-3-2">
+<div id="outline-container-sec-2-3-2" class="outline-4">
+<h4 id="sec-2-3-2">事件的互斥和对立</h4>
+<div class="outline-text-4" id="text-2-3-2">
 <p>
 互斥：两事件不在同一次试验中发生，则称它们是互斥的。如果一些事件中的任意两个都互斥，则称这些事件是两两互斥的，简称互斥
 </p>
@@ -356,10 +388,11 @@ P(E) = M/N
 <p>
 对立：是互斥事件的一种重要情况，若 A 为一事件，则 B={A 不发生}，为 A 的对立事件，记为 <img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%A6%82%E7%8E%87_de5a30955982cea30a0eb5ce051de12b283ff962.png" alt="\(\bar{A}\)"></p>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-2-3-3" name="sec-2-3-3"></a>事件的和（并）<br><div class="outline-text-4" id="text-2-3-3">
+<div id="outline-container-sec-2-3-3" class="outline-4">
+<h4 id="sec-2-3-3">事件的和（并）</h4>
+<div class="outline-text-4" id="text-2-3-3">
 <p>
 定义一个事件：指出它何时发生，何时不发生
 </p>
@@ -372,10 +405,11 @@ P(E) = M/N
 事件和推广到多个事件的情形同上
 </p>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-2-3-4" name="sec-2-3-4"></a>概率的加法定理<br><div class="outline-text-4" id="text-2-3-4">
+<div id="outline-container-sec-2-3-4" class="outline-4">
+<h4 id="sec-2-3-4">概率的加法定理</h4>
+<div class="outline-text-4" id="text-2-3-4">
 
 <div class="figure">
 <p><img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%A6%82%E7%8E%87_37f7f20d0da94d140b5d55ed4c88db67b7566d7c.png" alt="\begin{thm}[概率的加法定理]
@@ -394,10 +428,11 @@ P(A_1 + A_2 + \dots + A_n) = P(A_1) + P(A_2) + \dots + P(A_n)
 <p>
 推广：若 <img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%A6%82%E7%8E%87_de5a30955982cea30a0eb5ce051de12b283ff962.png" alt="\(\bar{A}\)"> 表示 A 的对立事件，则 <img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%A6%82%E7%8E%87_695d33fb3f4739325cd0266cf997f75ccc235bbb.png" alt="\(P(\bar{A}) = 1 - P(A)\)"></p>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-2-3-5" name="sec-2-3-5"></a>事件的积（交）、事件的差<br><div class="outline-text-4" id="text-2-3-5">
+<div id="outline-container-sec-2-3-5" class="outline-4">
+<h4 id="sec-2-3-5">事件的积（交）、事件的差</h4>
+<div class="outline-text-4" id="text-2-3-5">
 <p>
 事件的积：设有两事件 A，B，则定义事件 C={A，B 都发生}为两事件之积
 </p>
@@ -413,10 +448,11 @@ P(A_1 + A_2 + \dots + A_n) = P(A_1) + P(A_2) + \dots + P(A_n)
 <p>
 事件的和、差和积的运算需要用逻辑思维方式验证，与纯数学运算不同，例如对与事件 A， <img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%A6%82%E7%8E%87_053be6aa00cb9cddfbb8ef5b4f1aafd68353d3fb.png" alt="\(A + A = A\)"><img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%A6%82%E7%8E%87_ac2a4f094eeafcb36fee2361a91715032a6e301a.png" alt="\(AA = A\)"></p>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-2-3-6" name="sec-2-3-6"></a>条件概率<br><div class="outline-text-4" id="text-2-3-6">
+<div id="outline-container-sec-2-3-6" class="outline-4">
+<h4 id="sec-2-3-6">条件概率</h4>
+<div class="outline-text-4" id="text-2-3-6">
 <p>
 无条件概率定义：不加入其他条件或假定所计算出的概率
 </p>
@@ -440,10 +476,11 @@ P(A|B) = P(AB)/P(B)
 条件概率的计算：利用定义(<a href="../Data%20Science/DS-MS-Statistics-shijiandegailv.html">1</a>)；直接从加入条件后改变了的情况计算
 </p>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-2-3-7" name="sec-2-3-7"></a>事件的独立性，概率乘法定理<br><div class="outline-text-4" id="text-2-3-7">
+<div id="outline-container-sec-2-3-7" class="outline-4">
+<h4 id="sec-2-3-7">事件的独立性，概率乘法定理</h4>
+<div class="outline-text-4" id="text-2-3-7">
 
 <div class="figure">
 <p><img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%A6%82%E7%8E%87_624cb3b90265922c38d353b3cd317828077e585e.png" alt="\begin{de}[两事件独立性定义]
@@ -518,10 +555,11 @@ P(A_1A_2\dots A_n) = P(A_1)P(A_2)\dots P(A_n)
 相互独立必推出两两独立，反之不一定对
 </p>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-2-3-8" name="sec-2-3-8"></a>全概率公式与贝叶斯公式<br><div class="outline-text-4" id="text-2-3-8">
+<div id="outline-container-sec-2-3-8" class="outline-4">
+<h4 id="sec-2-3-8">全概率公式与贝叶斯公式</h4>
+<div class="outline-text-4" id="text-2-3-8">
 
 <div class="figure">
 <p><img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%A6%82%E7%8E%87_a960f23b6f01c697ad941ec5f6fa626538c7b531.png" alt="\begin{de}[完备时间群定义]
@@ -575,8 +613,7 @@ P(B_i|A) &amp;amp;= P(B_iA)/P(A) = P(AB_i)/P(AB) \\ &amp;amp;= P(B_i)P(A|B_i)/\s
 贝叶斯公式的意义：1) 由结果推导原因；2) 在统计学上，依靠收集收集推断答案，正是贝叶斯公式的用武之地。
 </p>
 </div>
-</li>
-</ul>
+</div>
 </div>
 
 <div id="outline-container-sec-2-4" class="outline-3">

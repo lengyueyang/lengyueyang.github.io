@@ -24,31 +24,29 @@ Nikola 安装和配置
 安装
 配置
 
+修改自定义位置
+Archive 按照时间排序，去掉年份，首页显示缩略版
+增加 google 搜索
+增加评论
+主题
+语法高亮
+发布时，复制特定文件夹到 output
+
+
+
 
 Org-mode 配置
 
 Org-mode 和 tags 支持
 Math 支持
 
-
-Emacs 管理 blog
-
-用 blog-admin 做前端
-配置-增加阅读更多和 commit
-快速插入知识产权
-
-
-Creative Commons licensing
+Mathjax
+Latex preview
 
 
 
 
-
-
-迁移原因
-
-
-16 年年初，开始搭">
+E">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2018-01-07T21:12:15+08:00">
 <meta property="article:tag" content="Blog">
@@ -161,14 +159,31 @@ Creative Commons licensing
 <a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2">Nikola 安装和配置</a>
 <ul>
 <li><a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-1">安装</a></li>
-<li><a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2">配置</a></li>
+<li>
+<a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2">配置</a>
+<ul>
+<li><a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-1">修改自定义位置</a></li>
+<li><a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-2">Archive 按照时间排序，去掉年份，首页显示缩略版</a></li>
+<li><a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-3">增加 google 搜索</a></li>
+<li><a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-4">增加评论</a></li>
+<li><a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-5">主题</a></li>
+<li><a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-6">语法高亮</a></li>
+<li><a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-2-2-7">发布时，复制特定文件夹到 output</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
 <a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-3">Org-mode 配置</a>
 <ul>
 <li><a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-3-1">Org-mode 和 tags 支持</a></li>
-<li><a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-3-2">Math 支持</a></li>
+<li>
+<a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-3-2">Math 支持</a>
+<ul>
+<li><a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-3-2-1">Mathjax</a></li>
+<li><a href="bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html#sec-3-2-2">Latex preview</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
@@ -268,9 +283,9 @@ nikola serve --browser
 </p>
 </div>
 
-<ul class="org-ul">
-<li>
-<a id="sec-2-2-1" name="sec-2-2-1"></a>修改自定义位置<br><div class="outline-text-4" id="text-2-2-1">
+<div id="outline-container-sec-2-2-1" class="outline-4">
+<h4 id="sec-2-2-1">修改自定义位置</h4>
+<div class="outline-text-4" id="text-2-2-1">
 <p>
 下面是我的自定义，可以参照修改
 </p>
@@ -300,10 +315,11 @@ nikola serve --browser
 <span class="o">}</span>
 </pre></div>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-2-2-2" name="sec-2-2-2"></a>Archive 按照时间排序，去掉年份，首页显示缩略版<br><div class="outline-text-4" id="text-2-2-2">
+<div id="outline-container-sec-2-2-2" class="outline-4">
+<h4 id="sec-2-2-2">Archive 按照时间排序，去掉年份，首页显示缩略版</h4>
+<div class="outline-text-4" id="text-2-2-2">
 <div class="highlight"><pre><span></span>I# Create per-month archives instead of per-year
 <span class="c1"># CREATE_MONTHLY_ARCHIVE = False</span>
 <span class="c1"># Create one large archive instead of per-year</span>
@@ -334,10 +350,11 @@ nikola serve --browser
 <span class="nv">GITHUB_DEPLOY_BRANCH</span> <span class="o">=</span> <span class="s1">'master'</span>
 </pre></div>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-2-2-3" name="sec-2-2-3"></a>增加 google 搜索<br><div class="outline-text-4" id="text-2-2-3">
+<div id="outline-container-sec-2-2-3" class="outline-4">
+<h4 id="sec-2-2-3">增加 google 搜索</h4>
+<div class="outline-text-4" id="text-2-2-3">
 <div class="highlight"><pre><span></span><span class="c1"># If you prefer a Google search form, here's an example that should just work:</span>
 <span class="nv">SEARCH_FORM</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">&lt;!-- Google custom search --&gt;</span>
@@ -354,10 +371,11 @@ nikola serve --browser
 <span class="s2">"""</span> % SITE_URL
 </pre></div>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-2-2-4" name="sec-2-2-4"></a>增加评论<br><div class="outline-text-4" id="text-2-2-4">
+<div id="outline-container-sec-2-2-4" class="outline-4">
+<h4 id="sec-2-2-4">增加评论</h4>
+<div class="outline-text-4" id="text-2-2-4">
 <div class="highlight"><pre><span></span><span class="nv">COMMENT_SYSTEM</span> <span class="o">=</span> <span class="s2">"disqus"</span>
 <span class="c1"># And you also need to add your COMMENT_SYSTEM_ID which</span>
 <span class="c1"># depends on what comment system you use. The default is</span>
@@ -366,10 +384,11 @@ nikola serve --browser
 <span class="nv">COMMENT_SYSTEM_ID</span> <span class="o">=</span> <span class="s2">"your-ID"</span>
 </pre></div>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-2-2-5" name="sec-2-2-5"></a>主题<br><div class="outline-text-4" id="text-2-2-5">
+<div id="outline-container-sec-2-2-5" class="outline-4">
+<h4 id="sec-2-2-5">主题</h4>
+<div class="outline-text-4" id="text-2-2-5">
 <div class="highlight"><pre><span></span>nikola install_theme bootstrap3
 
 nikola bootswatch_theme -n custom_theme -s darkly -p bootstrap3 
@@ -379,10 +398,11 @@ nikola bootswatch_theme -n custom_theme -s darkly -p bootstrap3
 可以在 <a href="https://bootswatch.com/3/">https://bootswatch.com/3/</a> 查找合适的主题，下载
 </p>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-2-2-6" name="sec-2-2-6"></a>语法高亮<br><div class="outline-text-4" id="text-2-2-6">
+<div id="outline-container-sec-2-2-6" class="outline-4">
+<h4 id="sec-2-2-6">语法高亮</h4>
+<div class="outline-text-4" id="text-2-2-6">
 <div class="highlight"><pre><span></span>mkdir -p files/assets/css/
 pygmentize -S friendly -a .highlight -f html &gt;&gt; files/assets/css/custom.css
 </pre></div>
@@ -395,10 +415,11 @@ pygmentize -S friendly -a .highlight -f html &gt;&gt; files/assets/css/custom.cs
 为了正常显示语法高亮，需要增加相应的 custom.css，并确保 custom.css 被 theme 使用了用 pygmentize 生成相应的 css 文件， &lt;PYGMENTSSTYLE&gt; 可以用 pygmentize -L style 查看，比如 colorful,friendly 
 </p>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-2-2-7" name="sec-2-2-7"></a>发布时，复制特定文件夹到 output<br><div class="outline-text-4" id="text-2-2-7">
+<div id="outline-container-sec-2-2-7" class="outline-4">
+<h4 id="sec-2-2-7">发布时，复制特定文件夹到 output</h4>
+<div class="outline-text-4" id="text-2-2-7">
 <div class="highlight"><pre><span></span><span class="nv">FILES_FOLDERS</span> <span class="o">=</span> <span class="o">{</span><span class="s1">'posts/ltxpng'</span>: <span class="s1">'posts/ltxpng'</span>, <span class="s1">'posts/MSimg'</span>: <span class="s1">'posts/MSimg'</span>, <span class="s1">'posts/file'</span>:<span class="s1">'posts/file'</span><span class="o">}</span>
 </pre></div>
 
@@ -406,8 +427,7 @@ pygmentize -S friendly -a .highlight -f html &gt;&gt; files/assets/css/custom.cs
 运行 <code>nikola build</code> , 可以复制 posts 下的三个文件夹到 output/posts 下面
 </p>
 </div>
-</li>
-</ul>
+</div>
 </div>
 </div>
 
@@ -473,17 +493,18 @@ nikola plugin -i tags
 </p>
 </div>
 
-<ul class="org-ul">
-<li>
-<a id="sec-3-2-1" name="sec-3-2-1"></a>Mathjax<br><div class="outline-text-4" id="text-3-2-1">
+<div id="outline-container-sec-3-2-1" class="outline-4">
+<h4 id="sec-3-2-1">Mathjax</h4>
+<div class="outline-text-4" id="text-3-2-1">
 <p>
 用 mathjax，通过在 metedata tags 加入 mathjax，但是 一些自定义的定理环境不能显示
 </p>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-3-2-2" name="sec-3-2-2"></a>Latex preview<br><div class="outline-text-4" id="text-3-2-2">
+<div id="outline-container-sec-3-2-2" class="outline-4">
+<h4 id="sec-3-2-2">Latex preview</h4>
+<div class="outline-text-4" id="text-3-2-2">
 <p>
 通过 Org-mode 的 latex preview 功能，在到处 html 时，将数学公式变成图片，可以通过以下配置
 在 plugins org-mode 文件夹中建立 conf.el 文件，加入以下配置
@@ -853,8 +874,7 @@ nikola plugin -i tags
 用 imagemagick 编译的图片，比较小，尝试用 dvisvgm 进行编译，在 emacs 中可以成功，但是在博客目录下配置不起作用，待以后学习 lisp 之后再处理
 </p>
 </div>
-</li>
-</ul>
+</div>
 </div>
 </div>
 

@@ -21,9 +21,26 @@
 随机变量的数字特征
 
 数学期望（均值）与中位数
+
+数学期望的定义
+数学期望的性质
+条件数学期望（条件均值）
+中位数
+
+
 方差与钜
+
+方差和标准差
+钜
+
+
 协方差与相关系数
 大数定理和中心极限定理
+
+大数定理
+中心极限定理
+
+
 例题
 参考网页
 
@@ -38,13 +55,15 @@
 
 数学期望（均值）与中位数
 
+
 数学期望的定义
 
 
 
 
 
-设离散型随机变量 X 只取有限个可能值  , 其概率分布  ,则 X 的数学期望记作  定义为  ,若 n 取无限个值，若下式收敛，则称其为 X 的数学">
+
+设离散型随机变量 X ">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2017-05-29T19:26:52+08:00">
 <meta property="article:tag" content="mathjax">
@@ -154,10 +173,30 @@
 <li>
 <a href="../Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1">随机变量的数字特征</a>
 <ul>
-<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-1">数学期望（均值）与中位数</a></li>
-<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-2">方差与钜</a></li>
+<li>
+<a href="../Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-1">数学期望（均值）与中位数</a>
+<ul>
+<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-1-1">数学期望的定义</a></li>
+<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-1-2">数学期望的性质</a></li>
+<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-1-3">条件数学期望（条件均值）</a></li>
+<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-1-4">中位数</a></li>
+</ul>
+</li>
+<li>
+<a href="../Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-2">方差与钜</a>
+<ul>
+<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-2-1">方差和标准差</a></li>
+<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-2-2">钜</a></li>
+</ul>
+</li>
 <li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-3">协方差与相关系数</a></li>
-<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-4">大数定理和中心极限定理</a></li>
+<li>
+<a href="../Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-4">大数定理和中心极限定理</a>
+<ul>
+<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-4-1">大数定理</a></li>
+<li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-4-2">中心极限定理</a></li>
+</ul>
+</li>
 <li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-5">例题</a></li>
 <li><a href="../Data%20Science/DS-MS-Statistics-suijibianliangdeshuzitezheng.html#sec-1-6">参考网页</a></li>
 </ul>
@@ -174,9 +213,9 @@
 <h3 id="sec-1-1">数学期望（均值）与中位数</h3>
 <div class="outline-text-3" id="text-1-1">
 </div>
-<ul class="org-ul">
-<li>
-<a id="sec-1-1-1" name="sec-1-1-1"></a>数学期望的定义<br><div class="outline-text-4" id="text-1-1-1">
+<div id="outline-container-sec-1-1-1" class="outline-4">
+<h4 id="sec-1-1-1">数学期望的定义</h4>
+<div class="outline-text-4" id="text-1-1-1">
 
 <div class="figure">
 <p><img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81_78359b7819e2e3ae0f07b76cf5aab0dc487d3077.png" alt="\begin{de}[离散型随机变量数学期望]
@@ -235,10 +274,11 @@ E(X) = \sum_{i = 1}^\infty a_ip_i
 在理论和应用中重要原因：本身含义；具备的良好性质，如工人的工资，容易知道其均值，单分布未知
 </p>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-1-1-2" name="sec-1-1-2"></a>数学期望的性质<br><div class="outline-text-4" id="text-1-1-2">
+<div id="outline-container-sec-1-1-2" class="outline-4">
+<h4 id="sec-1-1-2">数学期望的性质</h4>
+<div class="outline-text-4" id="text-1-1-2">
 
 <div class="figure">
 <p><img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81_b1d1003653aeb3ced1affa64874c230aaa6c2121.png" alt="\begin{thm}[数学期望性质-1]
@@ -299,10 +339,11 @@ E(g(X)) = \sum_ig(a_i)p_i \quad (if \sum_ig(a_i)p_i &amp;lt; ∞)
 <li><img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81_4414c64f091525e6333728951a131aa615cb380a.png" alt="\(X \sim F_{m,n}, \, E(X) = n(n-2) \quad (n &amp;gt;2)\)"></li>
 </ul>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-1-1-3" name="sec-1-1-3"></a>条件数学期望（条件均值）<br><div class="outline-text-4" id="text-1-1-3">
+<div id="outline-container-sec-1-1-3" class="outline-4">
+<h4 id="sec-1-1-3">条件数学期望（条件均值）</h4>
+<div class="outline-text-4" id="text-1-1-3">
 <p>
 条件数学期望公式
 </p>
@@ -342,10 +383,11 @@ E(Y) = E[E(Y|x)]
 变量 Y 的（无条件）期望 = Y 的无条件期望 <img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81_4531837edfcc8ba148bc1c841800e49020b856b9.png" alt="\(E(Y|x)\)"> 对 x 取加权平均，x 的权与变量 X 在 x 点的概率密度称比例
 </p>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-1-1-4" name="sec-1-1-4"></a>中位数<br><div class="outline-text-4" id="text-1-1-4">
+<div id="outline-container-sec-1-1-4" class="outline-4">
+<h4 id="sec-1-1-4">中位数</h4>
+<div class="outline-text-4" id="text-1-1-4">
 
 <div class="figure">
 <p><img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81_3574bcdca6f8885853ac808d1e7c56ea9a27dc63.png" alt="\begin{de}[中位数定义]
@@ -373,17 +415,16 @@ P(X ⩽ m) = F(m) = 1/2
 在理论和应用中数学期望重要性超过中位数的原因：均值有很多优良的性质；中位数不唯一且离散型变量中位数不完全符合“中位”含义
 </p>
 </div>
-</li>
-</ul>
+</div>
 </div>
 
 <div id="outline-container-sec-1-2" class="outline-3">
 <h3 id="sec-1-2">方差与钜</h3>
 <div class="outline-text-3" id="text-1-2">
 </div>
-<ul class="org-ul">
-<li>
-<a id="sec-1-2-1" name="sec-1-2-1"></a>方差和标准差<br><div class="outline-text-4" id="text-1-2-1">
+<div id="outline-container-sec-1-2-1" class="outline-4">
+<h4 id="sec-1-2-1">方差和标准差</h4>
+<div class="outline-text-4" id="text-1-2-1">
 
 <div class="figure">
 <p><img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81_e3379bbc1f8d565e466d06e490796cc192c33d3a.png" alt="\begin{de}[方差定义]
@@ -461,10 +502,11 @@ Var(X_1 + \dots + X_n) = Var(X_1) + \dots + Var(X_n)
 <li><img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81_d995640ca7a628399326b035eb60ba340a3e54d3.png" alt="\(X \sim F_{m,n}, \, Var(X) = 2n^2(m+n-2) ∕ [m(n-2)^2(n-4)] \quad (n &amp;gt; 4)\)"></li>
 </ul>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-1-2-2" name="sec-1-2-2"></a>钜<br><div class="outline-text-4" id="text-1-2-2">
+<div id="outline-container-sec-1-2-2" class="outline-4">
+<h4 id="sec-1-2-2">钜</h4>
+<div class="outline-text-4" id="text-1-2-2">
 
 <div class="figure">
 <p><img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81_083bb183bd13ddeac1608722bae473b77161e88f.png" alt="\begin{de}[矩定义]
@@ -517,8 +559,7 @@ Var(X_1 + \dots + X_n) = Var(X_1) + \dots + Var(X_n)
 \end{equation}"></p>
 </div>
 </div>
-</li>
-</ul>
+</div>
 </div>
 
 <div id="outline-container-sec-1-3" class="outline-3">
@@ -599,9 +640,9 @@ Var(X_1 + \dots + X_n) = Var(X_1) + \dots + Var(X_n)
 <h3 id="sec-1-4">大数定理和中心极限定理</h3>
 <div class="outline-text-3" id="text-1-4">
 </div>
-<ul class="org-ul">
-<li>
-<a id="sec-1-4-1" name="sec-1-4-1"></a>大数定理<br><div class="outline-text-4" id="text-1-4-1">
+<div id="outline-container-sec-1-4-1" class="outline-4">
+<h4 id="sec-1-4-1">大数定理</h4>
+<div class="outline-text-4" id="text-1-4-1">
 
 <div class="figure">
 <p><img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81_36bffc7cf0e84771198e8fcb90d4bd7c5c99346a.png" alt="\begin{thm}[大数定理定义]
@@ -650,10 +691,11 @@ P(|Y-EY| ⩾ ε) ⩽ Var(Y) ∕ ε^2
 \end{equation}"></p>
 </div>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-1-4-2" name="sec-1-4-2"></a>中心极限定理<br><div class="outline-text-4" id="text-1-4-2">
+<div id="outline-container-sec-1-4-2" class="outline-4">
+<h4 id="sec-1-4-2">中心极限定理</h4>
+<div class="outline-text-4" id="text-1-4-2">
 
 <div class="figure">
 <p><img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E5%92%8C%E7%BB%9F%E8%AE%A1-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81_41f793e5f46aed55a28e9da3f7f76d8196a41c8f.png" alt="\begin{thm}[林徳伯格定理]
@@ -697,8 +739,7 @@ P(|Y-EY| ⩾ ε) ⩽ Var(Y) ∕ ε^2
 中心极限定理的推广方向：独立不同分布情形；非独立情形；由中心极限定理引起的误差；大偏差问题
 </p>
 </div>
-</li>
-</ul>
+</div>
 </div>
 
 <div id="outline-container-sec-1-5" class="outline-3">

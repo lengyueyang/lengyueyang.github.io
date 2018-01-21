@@ -159,8 +159,27 @@
 <ul>
 <li><a href="survival-analysis-research.html#sec-4-1">参数检验</a></li>
 <li><a href="survival-analysis-research.html#sec-4-2">非参数检验</a></li>
-<li><a href="survival-analysis-research.html#sec-4-3">Kaplan-Meier 生存分析</a></li>
-<li><a href="survival-analysis-research.html#sec-4-4">Cox PH 模型</a></li>
+<li>
+<a href="survival-analysis-research.html#sec-4-3">Kaplan-Meier 生存分析</a>
+<ul>
+<li><a href="survival-analysis-research.html#sec-4-3-1">加载数据</a></li>
+<li><a href="survival-analysis-research.html#sec-4-3-2">计算生存曲线</a></li>
+<li><a href="survival-analysis-research.html#sec-4-3-3">可视化生存曲线</a></li>
+<li><a href="survival-analysis-research.html#sec-4-3-4">K-M 生存表</a></li>
+<li><a href="survival-analysis-research.html#sec-4-3-5">Log-rank 检验</a></li>
+<li><a href="survival-analysis-research.html#sec-4-3-6">多因素生存分析</a></li>
+</ul>
+</li>
+<li>
+<a href="survival-analysis-research.html#sec-4-4">Cox PH 模型</a>
+<ul>
+<li><a href="survival-analysis-research.html#sec-4-4-1">Cox 分析概述</a></li>
+<li><a href="survival-analysis-research.html#sec-4-4-2">单因素 Cox 模型建立</a></li>
+<li><a href="survival-analysis-research.html#sec-4-4-3">多因素 Cox 回归分析</a></li>
+<li><a href="survival-analysis-research.html#sec-4-4-4">Cox 回归可视化</a></li>
+<li><a href="survival-analysis-research.html#sec-4-4-5">Cox 模型假设检验</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="survival-analysis-research.html#sec-5">Creative Commons licensing</a></li>
@@ -403,9 +422,9 @@ The Kaplan-Meier estimator can be used to estimate the survival function. The Ne
 <h3 id="sec-4-3">Kaplan-Meier 生存分析</h3>
 <div class="outline-text-3" id="text-4-3">
 </div>
-<ul class="org-ul">
-<li>
-<a id="sec-4-3-1" name="sec-4-3-1"></a>加载数据<br><div class="outline-text-4" id="text-4-3-1">
+<div id="outline-container-sec-4-3-1" class="outline-4">
+<h4 id="sec-4-3-1">加载数据</h4>
+<div class="outline-text-4" id="text-4-3-1">
 <p>
 用 <code>survival</code> 中的 <code>lung</code> 数据进行 K-M 分析
 </p>
@@ -443,10 +462,11 @@ meal.cal: Calories consumed at meals
 wt.loss: Weight loss in last six months
 </p>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-4-3-2" name="sec-4-3-2"></a>计算生存曲线<br><div class="outline-text-4" id="text-4-3-2">
+<div id="outline-container-sec-4-3-2" class="outline-4">
+<h4 id="sec-4-3-2">计算生存曲线</h4>
+<div class="outline-text-4" id="text-4-3-2">
 <div class="highlight"><pre><span></span>fit <span class="o">&lt;-</span> survfit<span class="p">(</span>Surv<span class="p">(</span>time<span class="p">,</span> status<span class="p">)</span> <span class="o">~</span> sex<span class="p">,</span> data <span class="o">=</span> lung<span class="p">)</span>
 <span class="kp">print</span><span class="p">(</span>fit<span class="p">)</span>
 </pre></div>
@@ -634,10 +654,11 @@ sex=1     138   138     138    112 325.0663   22.59845    270     212     310
 sex=2      90    90      90     53 458.2757   33.78530    426     348     550
 </pre>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-4-3-3" name="sec-4-3-3"></a>可视化生存曲线<br><div class="outline-text-4" id="text-4-3-3">
+<div id="outline-container-sec-4-3-3" class="outline-4">
+<h4 id="sec-4-3-3">可视化生存曲线</h4>
+<div class="outline-text-4" id="text-4-3-3">
 <p>
 可以用 <code>ggsurvplot</code> 进行生存曲线可视化，即画 K-M 曲线
 </p>
@@ -736,10 +757,11 @@ X 轴截断
 <p><img src="img/survival-analysis-KM-5.png" alt="survival-analysis-KM-5.png"></p>
 </div>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-4-3-4" name="sec-4-3-4"></a>K-M 生存表<br><div class="outline-text-4" id="text-4-3-4">
+<div id="outline-container-sec-4-3-4" class="outline-4">
+<h4 id="sec-4-3-4">K-M 生存表</h4>
+<div class="outline-text-4" id="text-4-3-4">
 <p>
 可以用 <code>summary</code> 函数去看生存表格, 或者更强大的 <code>surv_summary</code> 去看
 </p>
@@ -763,10 +785,11 @@ In .get_data(x, data = data) :
   The `data` argument is not provided. Data will be extracted from model fit.
 </pre>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-4-3-5" name="sec-4-3-5"></a>Log-rank 检验<br><div class="outline-text-4" id="text-4-3-5">
+<div id="outline-container-sec-4-3-5" class="outline-4">
+<h4 id="sec-4-3-5">Log-rank 检验</h4>
+<div class="outline-text-4" id="text-4-3-5">
 <p>
 可以用 <code>survdiff()</code> 函数检验组间差异 
 </p>
@@ -789,10 +812,11 @@ sex=2  90       53     73.4      5.68      10.3
 明显, <code>p &lt; 0.01</code>, 说明两组生存率有差异.
 </p>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-4-3-6" name="sec-4-3-6"></a>多因素生存分析<br><div class="outline-text-4" id="text-4-3-6">
+<div id="outline-container-sec-4-3-6" class="outline-4">
+<h4 id="sec-4-3-6">多因素生存分析</h4>
+<div class="outline-text-4" id="text-4-3-6">
 <p>
 用 <code>colon</code> 数据集进行多因素分析拟合
 </p>
@@ -831,17 +855,16 @@ ggsurv<span class="o">$</span>plot <span class="o">+</span>theme_bw<span class="
 <p><img src="img/survival-analysis-KM-6.png" alt="survival-analysis-KM-6.png"></p>
 </div>
 </div>
-</li>
-</ul>
+</div>
 </div>
 
 <div id="outline-container-sec-4-4" class="outline-3">
 <h3 id="sec-4-4">Cox PH 模型</h3>
 <div class="outline-text-3" id="text-4-4">
 </div>
-<ul class="org-ul">
-<li>
-<a id="sec-4-4-1" name="sec-4-4-1"></a>Cox 分析概述<br><div class="outline-text-4" id="text-4-4-1">
+<div id="outline-container-sec-4-4-1" class="outline-4">
+<h4 id="sec-4-4-1">Cox 分析概述</h4>
+<div class="outline-text-4" id="text-4-4-1">
 <p>
 利用 Cox 回归分析，可以对多变量进行分析，而且可以对时间有关的变量进行分析
 </p>
@@ -857,10 +880,11 @@ ggsurv<span class="o">$</span>plot <span class="o">+</span>theme_bw<span class="
 <p><img src="img/Statistic%20analysis/screenshot_2018-01-18_21-21-52.png" alt="screenshot_2018-01-18_21-21-52.png"></p>
 </div>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-4-4-2" name="sec-4-4-2"></a>单因素 Cox 模型建立<br><div class="outline-text-4" id="text-4-4-2">
+<div id="outline-container-sec-4-4-2" class="outline-4">
+<h4 id="sec-4-4-2">单因素 Cox 模型建立</h4>
+<div class="outline-text-4" id="text-4-4-2">
 <p>
 可以用 <code>coxph()</code> 函数来建立模型
 </p>
@@ -962,10 +986,11 @@ From the output above,
 </li>
 </ul>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-4-4-3" name="sec-4-4-3"></a>多因素 Cox 回归分析<br><div class="outline-text-4" id="text-4-4-3">
+<div id="outline-container-sec-4-4-3" class="outline-4">
+<h4 id="sec-4-4-3">多因素 Cox 回归分析</h4>
+<div class="outline-text-4" id="text-4-4-3">
 <div class="highlight"><pre><span></span>res.cox2 <span class="o">&lt;-</span> coxph<span class="p">(</span>Surv<span class="p">(</span>time<span class="p">,</span> status<span class="p">)</span> <span class="o">~</span> age <span class="o">+</span> sex <span class="o">+</span> ph.ecog<span class="p">,</span> data <span class="o">=</span> lung<span class="p">)</span>
 <span class="kp">summary</span><span class="p">(</span>res.cox2<span class="p">)</span>
 </pre></div>
@@ -1000,10 +1025,11 @@ Score (logrank) test = 30.5  on 3 df,   p=1.083e-06
 <p><img src="img/Statistic%20analysis/screenshot_2018-01-18_22-09-09.png" alt="screenshot_2018-01-18_22-09-09.png"></p>
 </div>
 </div>
-</li>
+</div>
 
-<li>
-<a id="sec-4-4-4" name="sec-4-4-4"></a>Cox 回归可视化<br><div class="outline-text-4" id="text-4-4-4">
+<div id="outline-container-sec-4-4-4" class="outline-4">
+<h4 id="sec-4-4-4">Cox 回归可视化</h4>
+<div class="outline-text-4" id="text-4-4-4">
 <p>
 简单可视化
 </p>
@@ -1038,11 +1064,12 @@ ggsurvplot<span class="p">(</span>fit.cox2<span class="p">,</span> conf.int <spa
 <p><img src="img/survival-analysis-Cox-2.png" alt="survival-analysis-Cox-2.png"></p>
 </div>
 </div>
-</li>
+</div>
 
 
-<li>
-<a id="sec-4-4-5" name="sec-4-4-5"></a>Cox 模型假设检验<br><div class="outline-text-4" id="text-4-4-5">
+<div id="outline-container-sec-4-4-5" class="outline-4">
+<h4 id="sec-4-4-5">Cox 模型假设检验</h4>
+<div class="outline-text-4" id="text-4-4-5">
 <p>
 用 <code>cox.zph()</code> 函数检验比例危险的假设
 </p>
@@ -1168,8 +1195,7 @@ The function ggcoxfunctional() displays graphs of continuous covariates against 
 根据上图所示, 显然是非线性的
 </p>
 </div>
-</li>
-</ul>
+</div>
 </div>
 </div>
 
