@@ -3,29 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>数据科学-数学与统计-高等代数-线性方程组的解法 | 深度识医</title>
+<title>高等代数-线性方程组的解法 | 深度识医</title>
 <link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
 <link rel="canonical" href="https://lengyueyang.github.io/Data%20Science/DS-MS-AG-xianxingfangchengzudejiefa.html">
 <!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><meta name="author" content="Lengyueyang">
-<link rel="prev" href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html" title="数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布" type="text/html">
-<link rel="next" href="../Data%20Science/DS-MS-AG-hanglieshi.html" title="数据科学-数学与统计-高等代数-行列式" type="text/html">
+<link rel="prev" href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html" title="概率论与数理统计-随机变量及其概率分布" type="text/html">
+<link rel="next" href="../Data%20Science/DS-MS-AG-hanglieshi.html" title="高等代数-行列式" type="text/html">
 <meta property="og:site_name" content="深度识医">
-<meta property="og:title" content="数据科学-数学与统计-高等代数-线性方程组的解法">
+<meta property="og:title" content="高等代数-线性方程组的解法">
 <meta property="og:url" content="https://lengyueyang.github.io/Data%20Science/DS-MS-AG-xianxingfangchengzudejiefa.html">
 <meta property="og:description" content="Table of Contents
 
 
 概述
-线性方程组的解法
-
 解线性方差组的矩阵消元法
 线性方程组的解的情况及其判别准则
 数域
-
-
+Creative Commons licensing
 
 
 
@@ -40,12 +37,7 @@
 
 邱维声, (2010). 高等代数. : 清华大学出版社.
 Hom, R. A. (2014). 矩阵分析. : 机械工业出版社. 
-张贤达, (2013). 矩阵分析与应用. : 清华大学出版社.
-
-
-
-
-">
+张贤达, (2013). 矩阵分析与应用. ">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2017-08-07T19:26:52+08:00">
 <meta property="article:tag" content="Linear algebra">
@@ -129,7 +121,7 @@ Hom, R. A. (2014). 矩阵分析. : 机械工业出版社.
         <div class="row">
             
             
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="../Data%20Science/DS-MS-AG-xianxingfangchengzudejiefa.html" class="u-url">数据科学-数学与统计-高等代数-线性方程组的解法</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="../Data%20Science/DS-MS-AG-xianxingfangchengzudejiefa.html" class="u-url">高等代数-线性方程组的解法</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
@@ -153,14 +145,10 @@ Hom, R. A. (2014). 矩阵分析. : 机械工业出版社.
 <div id="text-table-of-contents">
 <ul>
 <li><a href="../Data%20Science/DS-MS-AG-xianxingfangchengzudejiefa.html#sec-1">概述</a></li>
-<li>
-<a href="../Data%20Science/DS-MS-AG-xianxingfangchengzudejiefa.html#sec-2">线性方程组的解法</a>
-<ul>
-<li><a href="../Data%20Science/DS-MS-AG-xianxingfangchengzudejiefa.html#sec-2-1">解线性方差组的矩阵消元法</a></li>
-<li><a href="../Data%20Science/DS-MS-AG-xianxingfangchengzudejiefa.html#sec-2-2">线性方程组的解的情况及其判别准则</a></li>
-<li><a href="../Data%20Science/DS-MS-AG-xianxingfangchengzudejiefa.html#sec-2-3">数域</a></li>
-</ul>
-</li>
+<li><a href="../Data%20Science/DS-MS-AG-xianxingfangchengzudejiefa.html#sec-2">解线性方差组的矩阵消元法</a></li>
+<li><a href="../Data%20Science/DS-MS-AG-xianxingfangchengzudejiefa.html#sec-3">线性方程组的解的情况及其判别准则</a></li>
+<li><a href="../Data%20Science/DS-MS-AG-xianxingfangchengzudejiefa.html#sec-4">数域</a></li>
+<li><a href="../Data%20Science/DS-MS-AG-xianxingfangchengzudejiefa.html#sec-5">Creative Commons licensing</a></li>
 </ul>
 </div>
 </div>
@@ -181,12 +169,8 @@ Hom, R. A. (2014). 矩阵分析. : 机械工业出版社.
 </div>
 </div>
 <div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2">线性方程组的解法</h2>
+<h2 id="sec-2">解线性方差组的矩阵消元法</h2>
 <div class="outline-text-2" id="text-2">
-</div>
-<div id="outline-container-sec-2-1" class="outline-3">
-<h3 id="sec-2-1">解线性方差组的矩阵消元法</h3>
-<div class="outline-text-3" id="text-2-1">
 <p>
 左端都是未知量 <img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E7%9A%84%E8%A7%A3%E6%B3%95_20d1376e4127b5fd8792eb59e12e7ed110bf55d5.png" alt="\(x_1, x_2, \dots , x_n\)"> 的一次其次式，右端是常数的方程组称为线性方程组，每个未知量前面的数称为系数，右端的项称为常数项。为了书写简便，对于一个线性方程组，可以只写出它的系数和常数项，并且把它们按照原来的次序排成一张表，这张表称为线性方程组的 <b>增广矩阵</b> ，只列出系数的的表称为方程组的系数矩阵。
 </p>
@@ -277,9 +261,9 @@ Hom, R. A. (2014). 矩阵分析. : 机械工业出版社.
 </div>
 </div>
 
-<div id="outline-container-sec-2-2" class="outline-3">
-<h3 id="sec-2-2">线性方程组的解的情况及其判别准则</h3>
-<div class="outline-text-3" id="text-2-2">
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">线性方程组的解的情况及其判别准则</h2>
+<div class="outline-text-2" id="text-3">
 
 <div class="figure">
 <p><img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E7%9A%84%E8%A7%A3%E6%B3%95_0bcbddb86691d981f7fdc401b7d2af49514e1146.png" alt="\begin{thm}[高斯(Gauss)-约当(Jordan)算法定理]
@@ -341,9 +325,9 @@ n 元齐次线性方程组如果方程的数目 s 小于未知量的个数 n, �
 </div>
 </div>
 
-<div id="outline-container-sec-2-3" class="outline-3">
-<h3 id="sec-2-3">数域</h3>
-<div class="outline-text-3" id="text-2-3">
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">数域</h2>
+<div class="outline-text-2" id="text-4">
 
 <div class="figure">
 <p><img src="../Data%20Science/ltxpng/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E7%9A%84%E8%A7%A3%E6%B3%95_e2d631776421aedcafd4ef6147dddf7fe2dd8fc0.png" alt="\begin{de}[数域定义]
@@ -369,6 +353,20 @@ n 元齐次线性方程组如果方程的数目 s 小于未知量的个数 n, �
 </p>
 </div>
 </div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">Creative Commons licensing</h2>
+<div class="outline-text-2" id="text-5">
+<blockquote>
+<p>
+TITLE: 高等代数-线性方程组的解法<br>
+AUTHOR: lengyueyang <br>
+DATE: 2017-08-07 19:26:52 UTC+08:00<br>
+UPDATED: <br>
+LICENSE: The blog is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>, commercial use is not allowed, for any reprint, please indicate address and signature.
+<img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="88x31.png"></p>
+</blockquote>
+</div>
 </div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
@@ -376,10 +374,10 @@ n 元齐次线性方程组如果方程的数目 s 小于未知量的个数 n, �
         </ul>
 <ul class="pager hidden-print">
 <li class="previous">
-                <a href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html" rel="prev" title="数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布">Previous post</a>
+                <a href="../Data%20Science/DS-MS-Statistics-suijibianliangjiqifengbu.html" rel="prev" title="概率论与数理统计-随机变量及其概率分布">Previous post</a>
             </li>
             <li class="next">
-                <a href="../Data%20Science/DS-MS-AG-hanglieshi.html" rel="next" title="数据科学-数学与统计-高等代数-行列式">Next post</a>
+                <a href="../Data%20Science/DS-MS-AG-hanglieshi.html" rel="next" title="高等代数-行列式">Next post</a>
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
         
@@ -388,7 +386,7 @@ n 元齐次线性方程组如果方程的数目 s 小于未知量的个数 n, �
         <script>
         var disqus_shortname ="lengyueyang",
             disqus_url="https://lengyueyang.github.io/Data%20Science/DS-MS-AG-xianxingfangchengzudejiefa.html",
-        disqus_title="\u6570\u636e\u79d1\u5b66-\u6570\u5b66\u4e0e\u7edf\u8ba1-\u9ad8\u7b49\u4ee3\u6570-\u7ebf\u6027\u65b9\u7a0b\u7ec4\u7684\u89e3\u6cd5",
+        disqus_title="\u9ad8\u7b49\u4ee3\u6570-\u7ebf\u6027\u65b9\u7a0b\u7ec4\u7684\u89e3\u6cd5",
         disqus_identifier="cache/posts/Data Science/数据科学-数学与统计-高等代数-线性方程组的解法.html",
         disqus_config = function () {
             this.language = "en";

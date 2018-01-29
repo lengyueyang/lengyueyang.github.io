@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>深度识医 (Posts about EMACS)</title><link>https://lengyueyang.github.io/</link><description></description><atom:link href="https://lengyueyang.github.io/categories/cat_emacs.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:maoxiaowei1988@qq.com"&gt;Lengyueyang&lt;/a&gt; 
 &lt;a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;
 &lt;img alt="Creative Commons License BY-NC-SA"
-src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Sun, 21 Jan 2018 08:02:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>博客迁移杂记-从 Hexo 到 Nikola</title><link>https://lengyueyang.github.io/Life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html</link><dc:creator>Lengyueyang</dc:creator><description>&lt;div&gt;&lt;div id="table-of-contents"&gt;
+src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Mon, 29 Jan 2018 14:52:26 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>博客迁移杂记-从 Hexo 到 Nikola</title><link>https://lengyueyang.github.io/Life/bo-ke-qian-yi-za-ji-cong-hexodao-nikola.html</link><dc:creator>Lengyueyang</dc:creator><description>&lt;div&gt;&lt;div id="table-of-contents"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents"&gt;
 &lt;ul&gt;
@@ -202,6 +202,7 @@ Nikola 是用 Python 写的，恰好以后要学 Python，同时 Nikola 通过 O
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="https://lengyueyang.github.io/Life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-9"&gt;Reference&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lengyueyang.github.io/Life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html#sec-10"&gt;Creative Commons licensing&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -214,7 +215,7 @@ I used spacemacs recently, org-mode is my favourite package of emacs,
 I use org-mode to GTD, write slide and documents, so I want to use org-mode to 
 manager may own configuration of emacs beyond spacemacs.
 &lt;/p&gt;
-&lt;p&gt;&lt;a href="https://lengyueyang.github.io/Life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html"&gt;Read more…&lt;/a&gt; (27 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>Configuration</category><category>Spacemacs</category><guid>https://lengyueyang.github.io/Life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html</guid><pubDate>Sun, 26 Mar 2017 11:26:52 GMT</pubDate></item><item><title>Use Mu4e to manage email [用 mu4e 管理邮件]</title><link>https://lengyueyang.github.io/Life/use-Mu4e-to-manage-email.html</link><dc:creator>Lengyueyang</dc:creator><description>&lt;div&gt;&lt;div id="table-of-contents"&gt;
+&lt;p&gt;&lt;a href="https://lengyueyang.github.io/Life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html"&gt;Read more…&lt;/a&gt; (28 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>Configuration</category><category>Spacemacs</category><guid>https://lengyueyang.github.io/Life/a-simple-introduction-lengyueyang%27s-spacemacs-configration.html</guid><pubDate>Sun, 26 Mar 2017 11:26:52 GMT</pubDate></item><item><title>Use Mu4e to manage email [用 mu4e 管理邮件]</title><link>https://lengyueyang.github.io/Life/use-Mu4e-to-manage-email.html</link><dc:creator>Lengyueyang</dc:creator><description>&lt;div&gt;&lt;div id="table-of-contents"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents"&gt;
 &lt;ul&gt;
@@ -248,6 +249,7 @@ manager may own configuration of emacs beyond spacemacs.
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="https://lengyueyang.github.io/Life/use-Mu4e-to-manage-email.html#sec-5"&gt;参考资料&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lengyueyang.github.io/Life/use-Mu4e-to-manage-email.html#sec-6"&gt;Creative Commons licensing&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -259,7 +261,7 @@ manager may own configuration of emacs beyond spacemacs.
 用 offlineimap 收取邮件，用 mu4e 在 emacs 中管理邮件，本教程配置多账户。
 &lt;/p&gt;
 
-&lt;p&gt;&lt;a href="https://lengyueyang.github.io/Life/use-Mu4e-to-manage-email.html"&gt;Read more…&lt;/a&gt; (7 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>Emacs</category><category>Mu4e</category><category>Offlineimap</category><guid>https://lengyueyang.github.io/Life/use-Mu4e-to-manage-email.html</guid><pubDate>Sun, 26 Feb 2017 11:26:52 GMT</pubDate></item><item><title>Blog with org-mode and github [用 Org-mdoe 和 github 搭建博客]</title><link>https://lengyueyang.github.io/Life/blog-with-org-mode-and-github.html</link><dc:creator>Lengyueyang</dc:creator><description>&lt;div&gt;&lt;div id="table-of-contents"&gt;
+&lt;p&gt;&lt;a href="https://lengyueyang.github.io/Life/use-Mu4e-to-manage-email.html"&gt;Read more…&lt;/a&gt; (8 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>Emacs</category><category>Mu4e</category><category>Offlineimap</category><guid>https://lengyueyang.github.io/Life/use-Mu4e-to-manage-email.html</guid><pubDate>Sun, 26 Feb 2017 11:26:52 GMT</pubDate></item><item><title>Blog with org-mode and github with Hexo [用 Org-mdoe、Hexo 和 github 搭建博客]</title><link>https://lengyueyang.github.io/Life/blog-with-org-mode-and-github.html</link><dc:creator>Lengyueyang</dc:creator><description>&lt;div&gt;&lt;div id="table-of-contents"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents"&gt;
 &lt;ul&gt;
@@ -272,6 +274,7 @@ manager may own configuration of emacs beyond spacemacs.
 &lt;li&gt;&lt;a href="https://lengyueyang.github.io/Life/blog-with-org-mode-and-github.html#sec-5-1"&gt;Org-mode 图片插入&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lengyueyang.github.io/Life/blog-with-org-mode-and-github.html#sec-6"&gt;Creative Commons licensing&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -307,6 +310,7 @@ manager may own configuration of emacs beyond spacemacs.
 &lt;li&gt;&lt;a href="https://lengyueyang.github.io/Life/use-org-mode-to-make-slide.html#sec-4-2"&gt;脚注&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lengyueyang.github.io/Life/use-org-mode-to-make-slide.html#sec-5"&gt;Creative Commons licensing&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -320,7 +324,7 @@ manager may own configuration of emacs beyond spacemacs.
 &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href="https://lengyueyang.github.io/Life/use-org-mode-to-make-slide.html"&gt;Read more…&lt;/a&gt; (2 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>Beamer</category><category>Emacs</category><category>Org-mode</category><guid>https://lengyueyang.github.io/Life/use-org-mode-to-make-slide.html</guid><pubDate>Fri, 04 Mar 2016 11:26:52 GMT</pubDate></item><item><title>Use org-mode to GTD [用 org-mode 做时间管理]</title><link>https://lengyueyang.github.io/Life/use-org-mode-to-GTD.html</link><dc:creator>Lengyueyang</dc:creator><description>&lt;div&gt;&lt;div id="table-of-contents"&gt;
+&lt;p&gt;&lt;a href="https://lengyueyang.github.io/Life/use-org-mode-to-make-slide.html"&gt;Read more…&lt;/a&gt; (3 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>Beamer</category><category>Emacs</category><category>Org-mode</category><guid>https://lengyueyang.github.io/Life/use-org-mode-to-make-slide.html</guid><pubDate>Fri, 04 Mar 2016 11:26:52 GMT</pubDate></item><item><title>Use org-mode to GTD [用 org-mode 做时间管理]</title><link>https://lengyueyang.github.io/Life/use-org-mode-to-GTD.html</link><dc:creator>Lengyueyang</dc:creator><description>&lt;div&gt;&lt;div id="table-of-contents"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents"&gt;
 &lt;ul&gt;
@@ -338,6 +342,7 @@ manager may own configuration of emacs beyond spacemacs.
 &lt;li&gt;&lt;a href="https://lengyueyang.github.io/Life/use-org-mode-to-GTD.html#sec-2-5"&gt;周回顾&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lengyueyang.github.io/Life/use-org-mode-to-GTD.html#sec-3"&gt;Creative Commons licensing&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -379,6 +384,7 @@ manager may own configuration of emacs beyond spacemacs.
 &lt;li&gt;&lt;a href="https://lengyueyang.github.io/Life/spacemacs-learning.html#sec-3-2"&gt;R&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lengyueyang.github.io/Life/spacemacs-learning.html#sec-4"&gt;Creative Commons licensing&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -410,4 +416,4 @@ manager may own configuration of emacs beyond spacemacs.
 &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href="https://lengyueyang.github.io/Life/spacemacs-learning.html"&gt;Read more…&lt;/a&gt; (3 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>Emacs</category><category>Spacemacs</category><guid>https://lengyueyang.github.io/Life/spacemacs-learning.html</guid><pubDate>Sun, 14 Feb 2016 11:26:52 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://lengyueyang.github.io/Life/spacemacs-learning.html"&gt;Read more…&lt;/a&gt; (4 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>Emacs</category><category>Spacemacs</category><guid>https://lengyueyang.github.io/Life/spacemacs-learning.html</guid><pubDate>Sun, 14 Feb 2016 11:26:52 GMT</pubDate></item></channel></rss>

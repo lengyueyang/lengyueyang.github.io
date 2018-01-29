@@ -1,9 +1,9 @@
 #+BEGIN_COMMENT
-.. title: 数据科学-数学和统计-概率论与数理统计-随机变量及其概率分布
+.. title: 概率论与数理统计-随机变量及其概率分布
 .. slug: DS-MS-Statistics-suijibianliangjiqifengbu
 .. date: 2017-05-29 19:26:52 UTC+08:00
 .. tags: Statistics, mathjax
-.. category: DATA SCIENTIST
+.. category: STATISTICS
 .. link: 
 .. description: 
 .. type: text
@@ -46,11 +46,10 @@
 #+LaTeX_HEADER: \newtheorem*{jd}{\emph{\hskip 2em 解答}}
 #+LaTeX_HEADER: \numberwithin{equation}{section}
 
-* 随机变量及其概率分布
 
-** 一维随机变量
+* 一维随机变量
 
-*** 随机变量的概念
+** 随机变量的概念
 
 随机变量的定义：“其值随机会而定”的变量，是试验结果的函数
 
@@ -64,7 +63,7 @@
 
 随机变量的研究：取值、取各种值的概率
 
-*** 离散型随机变量的分布及其例子
+** 离散型随机变量的分布及其例子
 
 #+name: 离散型随机变量概率函数的定义
 \begin{de}[离散型随机变量概率函数的定义]
@@ -91,7 +90,7 @@ F(x) = P(X \leqslant x) = F(x) (-\infty < x < ∞) = \sum_{\lbrace i|a_i ⩽ x \
 - \(F(x)\) 是单调非降: 当 \(x_1 ⩽ x_2\) 时，有 \(F(x_1) ⩽ F(x_2)\)
 - 当 \(x → \infty\)时， \(F(x) → 1\) ; \(x → - \infty\)时， \(F(x) → 0\)
 
-**** 离散性随机变量分布-二项分布
+*** 离散性随机变量分布-二项分布
 
 #+name: 二项分布定义
 \begin{de}[二项分布定义]
@@ -104,7 +103,7 @@ p_i = P(X = i) = b(i; n; p) = \binom{n}{i}p_i(1-p)^{n-p}
 
 二项分布的条件：各次试验的条件是稳定的；各次试验的独立性
 
-**** 离散性随机变量分布-泊松分布
+*** 离散性随机变量分布-泊松分布
 
 #+name: 泊松分布定义
 \begin{de}[泊松分布定义]
@@ -119,7 +118,7 @@ P(X = i) = e^{-λ}λ^i \divslash i!
 
 二项分布和波瓦松分布的关系：波瓦松分布可作为二项分布的极限而得到，若 X 服从 \(B(n, p)\) ，其中 n 很大，p 很小而 np 不太大时，则 X 的分布接近于参数为 np 的波瓦松分布
 
-**** 离散性随机变量分布-超几何分布
+*** 离散性随机变量分布-超几何分布
 
 #+name: 超几何分布定义
 \begin{de}[超几何分布定义]
@@ -132,7 +131,7 @@ P(X = i) = e^{-λ}λ^i \divslash i!
 
 在本例中，当 n 固定时, \(M \devslash N = p\) 固定，当 \(N → ∞\) 时，X 近似服从二项分布 \(B(n, p)\)
 
-**** 离散性随机变量分布-负二项分布
+*** 离散性随机变量分布-负二项分布
 
 #+name: 负二项分布定义
 \begin{de}[负二项分布定义]
@@ -145,7 +144,7 @@ P(X = i) = e^{-λ}λ^i \divslash i!
 
 当 \(r = 1\) 时，[[负二项分布概率函数公式]] 概率 \(p, p(1-p), p(1-p)^2, \dots\) 呈公比为 1-p 的几何级数，因此，称之为几何分布
 
-*** 连续性随机变量的分布及其例子
+** 连续性随机变量的分布及其例子
 
 #+name: 连续性随机变量概率密度函数定义
 \begin{de}[连续性随机变量概率密度函数定义]
@@ -157,7 +156,7 @@ P(X = i) = e^{-λ}λ^i \divslash i!
 - \(\int_{-\infty}^\infty dx = 1\)
 - 对任何常数 \(a < b\) , 有 \[P(a ⩽ X ⩽ b) = F(b) - F(a) = ∫_a^bf(x)\] 微积分基本定理
 
-**** 连续性随机变量分布-正态分布
+*** 连续性随机变量分布-正态分布
 #+name: 正态分布定义
 \begin{de}[正态分布定义]
 \end{de}
@@ -182,7 +181,7 @@ f(x) = \frac{1}{\sqrt{2\pi}}exp(-\frac{x^2}{2})
 
 一般在概率论中，正太分布的密度函数和分布函数分别记为 \(\phi(x)\) (或 手写的 \(\varphi(x)\)), \(Φ(x)\)
 
-**** 连续性随机变量分布-指数分布
+*** 连续性随机变量分布-指数分布
 #+name: 指数分布定义
 \begin{de}[指数分布定义]
 \end{de}
@@ -204,7 +203,7 @@ F(x) = P(X ⩽ x) = \int_{-∞}^xf(t)dt = \left\{\begin{array}{ll}
                                       \end{array}\right
 \end{equation}
 
-**** 连续性随机变量分布-威布尔分布
+*** 连续性随机变量分布-威布尔分布
 #+name: 威布尔分布定义
 \begin{de}[威布尔分布]
 \end{de}
@@ -228,7 +227,7 @@ F(x) = P(X ⩽ x) = \int_{-∞}^xf(t)dt = \left\{\begin{array}{ll}
 
 指数分布是威布尔分布当 \(α = 1\) 时的特例，威布尔分布考虑 λ 随事件变化而变化
 
-**** 连续性随机变量分布-均匀分布
+*** 连续性随机变量分布-均匀分布
 #+name: 均匀分布定义
 \begin{de}[均匀分布定义]
 \end{de}
@@ -251,9 +250,9 @@ F(x) = P(X ⩽ x) = \int_{-∞}^xf(t)dt = \left\{\begin{array}{ll}
                                       \end{array}\right
 \end{equation}
 
-** 多维随机变量（随机向量）
+* 多维随机变量（随机向量）
 
-*** 离散型随机向量的分布
+** 离散型随机向量的分布
 #+name: 多维离散型随机向量定义
 \begin{de}[多维离散型随机向量概率函数定义]
 \end{de}
@@ -270,7 +269,7 @@ p(j_1, j_2, \dots ,j_n) &= P(X_1 = a_{1j_1}, X_2 = a_{2j_2}, \dots , X_n = a_{}_
 - \(p(j_1, j_2, \dots ,j_n) \geqslant 0 \)
 - \(\sum_{j_n }\sum_{j_2} \dots \sum_{j_1} p(j_1, j_2, \dots ,j_n) = 1\)
 
-**** 多项分布
+*** 多项分布
 #+name: 多项分布定义
 \begin{de}[多项分布定义]
 \end{de}
@@ -285,7 +284,7 @@ P(X_1 = k_1_{}, X_2 = k_2&, \dots , X_n = k_n_{}_{}) = \frac{N!}{k_1!k_2! \dots 
 
 多项分布是最重要的离散性多项分布，当一个总体按照某种属性分成几类时，就会涉及多项分布，如一种疾病可以按照严重程度分级，一种产品可以分成一等、二等、三等品等
 
-*** 连续型随机向量的分布
+** 连续型随机向量的分布
 #+name: 多维连续随机向量密度函数定义
 \begin{de}[多维连续随机向量密度函数定义]
 \end{de}
@@ -296,7 +295,7 @@ P(X_1 = k_1_{}, X_2 = k_2&, \dots , X_n = k_n_{}_{}) = \frac{N!}{k_1!k_2! \dots 
 \end{equation}
 如果把 A 取成全空间 \(\BbbR^n\) ,则 \(\lbrace X \in A \rbrace \) 是必然事件，其概率为 1，因此有 \[\underbrace{\int \dots \int}_A f(x_1, x_2, \dots , x_n)dx_1 \dots dx_n = 1\]
 
-**** 二维均匀分布
+*** 二维均匀分布
 #+name: 二维均匀分布定义
 \begin{de}[二维均匀分布定义]
 \end{de}
@@ -309,7 +308,7 @@ f(x_1, x_2) = \left\{\begin{array}{ll}
               \end{array} \right.
 \end{equation}
 
-**** 二维正太分布
+*** 二维正太分布
 \begin{de}[二维正态分布定义]
 \end{de}
 如果一个随机变量具有下式的概率密度函数，称 X 为二维正态随机变量，并记为 \(X \sim N(a, b, σ_1^2, σ_2^2, \rho)\) , \(a, b, σ_1, σ_2\) 是这个分布的参数，其取值范围为：
@@ -321,7 +320,7 @@ f(x_1, x_2) = (2\pi σ_1σ_2\sqrt{1-\rho^2})^{-1} exp\left[-\frac{1}{2(1-\rho^2)
 
 注意项：（a）连续型随机变量是有密度函数的随机变量；（b）各分量为一维连续型随机变量的随机向量并不一定是连续型随机变量；（c）可用概率分布函数去描述多维随机向量的概率分布
 
-*** 边缘分布
+** 边缘分布
 #+name: 边缘分布定义
 \begin{de}[边缘分布定义]
 \end{de}
@@ -345,13 +344,13 @@ f(x_1, x_2) = (2\pi σ_1σ_2\sqrt{1-\rho^2})^{-1} exp\left[-\frac{1}{2(1-\rho^2)
 - 已知某随机向量的各分量的分布，也推导不出该随机向量的分布，因为边缘分布只考虑随机向量的某一分量的情况，未涉及他们之间的关系，而该关系包含的该随机向量的分布中
 - 边缘分布也可以不只是单个的
 
-** 条件概率分布与随机变量的独立性
+* 条件概率分布与随机变量的独立性
 
-*** 条件概率分布的概念
+** 条件概率分布的概念
 
 一般形式：设有两个随机变量（向量）X，Y，在给定了 Y 取某个或某些值的条件下，去求 X 的条件分布
 
-*** 离散型随机变量的条件概率分布
+** 离散型随机变量的条件概率分布
 #+name: 离散型随机变量条件概率分布公式
 \begin{equation}
 P(X_1 = a_i | X_2 = b_j) = p_{ij}\sum_kp_{kj} \quad (i = 1, 2, \dots)
@@ -359,7 +358,7 @@ P(X_1 = a_i | X_2 = b_j) = p_{ij}\sum_kp_{kj} \quad (i = 1, 2, \dots)
 
 多项分布 \(M(N; p_1, p_2, \dots , p_n)\) 在 \(X_2 = k_2\) 条件下， \(X_1\) 的条件分布就是二项分布 \(B(N-k_2, p_1(1-p_2))\)
  
-*** 连续型随机变量的条件分布
+** 连续型随机变量的条件分布
 #+name: 连续型随机变量条件密度函数公式
 \begin{equation}
 \begin{split}
@@ -382,7 +381,7 @@ f(x_2, x_1) = (2\pi σ_2\sqrt{1-\rho^2})^{-1} exp\left[-\frac{(x_2 - (b + \rho \
   f_1(x_1) = \int_{-\infty}^{\infty}f(x_1, x_2)dx_2 = \int_{-\infty}^{\infty}f(x_1 | x_2)f_2(x_2)dx_2
 \end{equation}
 
-*** 随机变量的独立性
+** 随机变量的独立性
 #+name: 随机变量独立性定义
 \begin{de}[随机变量独立性定义]
 \end{de}
@@ -418,15 +417,15 @@ P(X_1 = a, \dots ,X_n = a_n) = P(X_1 = a_1) \dots P(X_n = a_n)
 
 连续性随机变量的三条定理适用于离散数学随机变量
 
-** 随机变量的函数的概率分布
+* 随机变量的函数的概率分布
 
-*** 离散型分布的情况
+** 离散型分布的情况
 用概率概率思维解决问题：
 - 多项分布： 设 \((X_1, X_2, \dots , X_n)\) 服从多项分布 \(M(N; p_1, \dots , p_n) \quad (n ⩾ 3)\) ,则 \(Y = X_1 + X_2\) 服从二项分布 \(B(N, p_1 + p_2)\) ，可以从公式去计算，也可以从概率角度去理解，多项分布定义 n 个事件 \(A_1, A_2, \dots , A_n\) , \(X_1, X_2, \dots , X_n\) 分别是他们在 N 次试验中发生的次数，先记  \(A = A_1 + A_2\) ,则事件 \(A, A_3, \dots , A_n\) 仍然构成一个万别事件群，其概率分别为 \(p_1 + p_2, p_3, \dots , p_n\) ，记 \(Y = X_1 + X_2\) ，则  \((Y, X_3, \dots , X_n)\) 构成多项分布 \(B(N, p_1 + p_2, p_3, \dots , p_n)\) ，而 Y 成为这个多项分布的一个边缘分布，可得上述结论
 - 二项分布: 设 \(X_1\) 和 \(X_2\) ，分别服从二项分布 \(B(n_1, p)\) 和 \(B(n_2, p)\) ，则 \(Y = X_1 + X_2\) 服从二项分布 \(B(n_1 + p_2, p)\)
 - 波松分布: 设 \(X_1\) 和 \(X_2\) ，分别服从泊松分布 \(P(λ_1)\) 和 \(P(λ_2)\) ，则 \(Y = X_1 + X_2\) 服从泊松分布 \(P(λ_1 + λ_2)\)
 
-*** 连续型分布的情况：一般讨论
+** 连续型分布的情况：一般讨论
 #+name: 单变量函数的密度函数
 \begin{de}[单变量函数的密度函数]
 \end{de}
@@ -467,7 +466,7 @@ l(y_1, y_2) = f(h_1(y_1, y_2), h_2(y_1, y_2))|\symbf{J}(y_1, y_2)|
 l(y_1, y_2, \dots , y_n) = f(h_1(y_1, y_2, \dots ,y_n), \dots , h_n(y_1, y_2, \dots , y_n))|\symbf{J}(y_1, y_2, \dots ,y_n)|
 \end{equation}
 
-*** 随机变量和的密度函数
+** 随机变量和的密度函数
 #+name: 二维随机变量和密度函数
 \begin{de}[二维随机变量和密度函数]
 \end{de}
@@ -515,7 +514,7 @@ l(y) = \frac{1}{\sqrt{2\pi(σ_1^2 + σ_2^2 + 2\rho\sigma_1\sigma_2)}}exp\left[-\
 \end{split}
 \end{equation}
 
-**** 卡方分布
+*** 卡方分布
 #+name: 卡方分布定义
 \begin{de}[卡方分布定义]
 \end{de}
@@ -534,7 +533,7 @@ k_n (x) = \left\{\begin{array}{ll}
 - 设 \(X_1, X_2\) 独立， \(X_1 \sim \chi_m^2, \, X_2 \sim \chi_n^2\) ,则  \(X_1 + X_2 \sim \chi_{m+n}^2\)
 - 若 \(X_1, \dots , X_n\) 独立，且都服从指数分布([[指数分布密度函数公式]]) ,则 \[X = 2λ(X_1 + X_2 + \dots + X_n) \sim \chi_{2n}^n\]
 
-*** 随机变量商的密度函数
+** 随机变量商的密度函数
 #+name: 随机变量商密度函数
 \begin{de}[随机变量商密度函数]
 \end{de}
@@ -548,7 +547,7 @@ k_n (x) = \left\{\begin{array}{ll}
   l(y) = \int_0^\infty x_1f_1(x_1)f_2(x_1y)dx_1
 \end{equation*}
 
-**** t 分布
+*** t 分布
 #+name: t 分布定义
 \begin{de}[t 分布定义]
 \end{de}
@@ -560,7 +559,7 @@ k_n (x) = \left\{\begin{array}{ll}
 
 当自由度 n 很大时，t 分布接近于正态分布
 
-**** F 分布
+*** F 分布
 #+name: F 分布定义
 \begin{de}[F 分布定义]
 \end{de}
@@ -570,13 +569,23 @@ k_n (x) = \left\{\begin{array}{ll}
   f_{mn}(y) =  m^{m/2}n^{n/2} \frac{Γ((m + n)/2)}{Γ(m/2)Γ(n/2)} y^{m/2-1} (my + n)^{-(m+n)/2} 
 \end{equation}
 
-**** 统计上的三大分布应用性质
+*** 统计上的三大分布应用性质
 #+name: 统计上的三大分布应用性质
 - 设 \(X_1, \dots , X_n\) 独立同分布，有公共的正态分布 \(N(\mu, σ^2)\) ,记 \(\overbar{X} = (X_1 + \dots + X_n)/n, \, S^2 = \sum_{i=1}^n (X_i - \overbar{X})^2/(n-1)\) ，则 \[(n-1)S^2 ∕σ^2 = \sum_{i=1}^n (X_i - \overbar{X})^2 ∕σ^2 \sim \chi_{n-1}^2\]
 - \(X_1, \dots , X_n\) 假定同上，则 \[\sqrt{n}(\overbar{X} - \mu) ∕S \sim t_{n-1}\]
 - 设 \(X_1, \dots , X_n\) , \(Y_1, \dots , Y_m\) 独立，\(X_i\) 有公共的正态分布 \(N(\mu_1, σ_1^2)\) , \(Y_i\) 有公共的正态分布 \(N(\mu_2, σ_2^2)\) ,则 \[ \left[\sum_{j=1}^n (Y_j - \overbar{Y})^2 ∕(σ_2^2(m-1))\right] \xsol \left[\sum_{i=1}^n (X_i - \overbar{X})^2 ∕(σ_1^2(n-1))\right] \sim F_{m-1, n-1} \] 若 \(σ_1^2 = σ_2^2\) 则 \(N(\mu_2, σ_2^2)\) ,则 \[\left\sqrt{\frac{nm(n+m-2)}{n+m}}[(\overbar{X} \minus \overbar{Y}) - (\mu_1 \minus \mu_2)] ∕\left[\sum_{i=1}^n (X_i - \overbar{X})^2 \minus \sum_{j=1}^n (Y_j - \overbar{Y})^2\right] \sim t_{n+m-2} \]
 
-** 例题
-** 参考网页
+* 例题
+* 参考网页
 
 http://blog.csdn.net/zhang22huan/article/details/8546822
+
+* Creative Commons licensing
+#+BEGIN_QUOTE
+TITLE: 概率论与数理统计-随机变量及其概率分布\\
+AUTHOR: lengyueyang \\
+DATE: 2017-05-29 19:26:52 UTC+08:00\\
+UPDATED: \\
+LICENSE: The blog is licensed under a [[http://creativecommons.org/licenses/by-sa/4.0/][Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License]], commercial use is not allowed, for any reprint, please indicate address and signature.
+https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
+#+END_QUOTE

@@ -1,9 +1,9 @@
 #+BEGIN_COMMENT
-.. title: 数据科学-数学与统计-高等代数-行列式
+.. title: 高等代数-行列式
 .. slug: DS-MS-AG-hanglieshi
 .. date: 2017-09-05 19:26:52 UTC+08:00
 .. tags: Linear algebra, mathjax
-.. category: DATA SCIENTIST
+.. category: HIGHER ALGEBRA
 .. link: 
 .. description: 
 .. type: text
@@ -379,3 +379,12 @@ j_1^{'}, j_2^{'},  ⋯ , j_k^{'} \\
 
 
 
+* Creative Commons licensing
+#+BEGIN_QUOTE
+TITLE: 高等代数-行列式\\
+AUTHOR: lengyueyang \\
+DATE: 2017-09-05 19:26:52 UTC+08:00\\
+UPDATED: \\
+LICENSE: The blog is licensed under a [[http://creativecommons.org/licenses/by-sa/4.0/][Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License]], commercial use is not allowed, for any reprint, please indicate address and signature.
+https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
+#+END_QUOTE

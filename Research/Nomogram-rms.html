@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nomograph 图制作 (一) - 用 rms 绘制 nomogram | 深度识医</title>
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+<link rel="canonical" href="https://lengyueyang.github.io/Research/Nomogram-rms.html">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><meta name="author" content="Lengyueyang">
+<link rel="prev" href="survival-analysis-research.html" title="科研工作中的生存分析" type="text/html">
+<meta property="og:site_name" content="深度识医">
+<meta property="og:title" content="Nomograph 图制作 (一) - 用 rms 绘制 nomogram">
+<meta property="og:url" content="https://lengyueyang.github.io/Research/Nomogram-rms.html">
+<meta property="og:description" content="Table of Contents
+
+
+Nomogram 概述
+官方文档中的例子 
+以 lung 数据为例绘制 Nomogram
+
+绘制逻辑回归 Nomogram
+绘制 Cox 回归 Nomogram
+评价 Cox 回归的预测效果
+
+
+重现文章中的例子 cite:zhang-2017-drawin-nomog
+
+Worked example
+
+
+Creative Commons licensing">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2018-01-28T19:26:52+08:00">
+<meta property="article:tag" content="Nomogram">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://lengyueyang.github.io/">
+
+                <span id="blog-title">深度识医</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../posts/data-science/index.html">Data Science</a>
+                </li>
+<li>
+<a href="../posts/research/index.html">Research</a>
+                </li>
+<li>
+<a href="../posts/life/index.html">Life</a>
+                </li>
+<li>
+<a href="../categories/index.html">Tags</a>
+                </li>
+<li>
+<a href="../archive.html">Archives</a>
+                </li>
+<li>
+<a href="../pages/notes.html">Notes</a>
+                </li>
+<li>
+<a href="../pages/links.html">Links</a>
+                </li>
+<li>
+<a href="../pages/about.html">About</a>
+                </li>
+<li>
+<a href="https://github.com/lengyueyang">Github</a>
+                </li>
+<li>
+<a href="../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<!-- Google custom search --><form method="get" action="https://www.google.com/search" class="navbar-form navbar-right" role="search">
+<div class="form-group">
+<input type="text" name="q" class="form-control" placeholder="Search">
+</div>
+<button type="submit" class="btn btn-primary">
+	<span class="glyphicon glyphicon-search"></span>
+</button>
+<input type="hidden" name="sitesearch" value="https://lengyueyang.github.io/">
+</form>
+<!-- End of custom search -->
+
+
+            <ul class="nav navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Nomograph 图制作 (一) - 用 rms 绘制 nomogram</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                    Lengyueyang
+            </span></p>
+            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2018-01-28T19:26:52+08:00" itemprop="datePublished" title="2018-01-28 19:26">2018-01-28 19:26</time></a></p>
+                <p class="commentline">
+        
+    <a href="Nomogram-rms.html#disqus_thread" data-disqus-identifier="cache/posts/Research/Nomograph-rms.html">Comments</a>
+
+
+            
+
+        </p>
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="Nomogram-rms.html#sec-1">Nomogram 概述</a></li>
+<li><a href="Nomogram-rms.html#sec-2">官方文档中的例子 </a></li>
+<li>
+<a href="Nomogram-rms.html#sec-3">以 <code>lung</code> 数据为例绘制 Nomogram</a>
+<ul>
+<li><a href="Nomogram-rms.html#sec-3-1">绘制逻辑回归 Nomogram</a></li>
+<li><a href="Nomogram-rms.html#sec-3-2">绘制 Cox 回归 Nomogram</a></li>
+<li><a href="Nomogram-rms.html#sec-3-3">评价 Cox 回归的预测效果</a></li>
+</ul>
+</li>
+<li>
+<a href="Nomogram-rms.html#sec-4">重现文章中的例子 cite:zhang-2017-drawin-nomog</a>
+<ul>
+<li><a href="Nomogram-rms.html#sec-4-1">Worked example</a></li>
+</ul>
+</li>
+<li><a href="Nomogram-rms.html#sec-5">Creative Commons licensing</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">Nomogram 概述</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Nomogram，中文常称为诺莫图或者列线图，简单的说是将 Logistic 回归或 Cox 回归的结果进行可视化呈现。它根据所有自变量回归系数的大小来制定评分标准，给每个自变量的每种取值水平一个评分，对每个患者，就可计算得到一个总分，再通过得分与结局发生概率之间的转换函数来计算每个患者的结局时间发生的概率。
+</p>
+
+<p>
+R 中用于画 Nomogram 包有 <code>rms</code> 中的 <code>nomogram</code> 函数、 <code>hdnom</code> 和 <code>hdnom</code> 软件包，这篇博客 Nomogram 系列博客的第一篇，主要讲述用 rms 包绘制 Nomograph 的过程。
+</p>
+<!-- TEASER_END -->
+
+<p>
+<code>rms</code> 中的 <code>nomogram</code> 函数画 Nomogram 是最常见的
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">官方文档中的例子 <sup><a id="fnr.1" name="fnr.1" class="footref" href="Nomogram-rms.html#fn.1">1</a></sup>
+</h2>
+<div class="outline-text-2" id="text-2">
+<div class="highlight"><pre><span></span><span class="c1"># From Andy Bush &lt;andy@kb4lsn.net&gt;</span>
+<span class="kn">require</span><span class="p">(</span>rms<span class="p">)</span>
+<span class="kp">set.seed</span><span class="p">(</span><span class="m">20</span><span class="p">)</span>
+x1<span class="o">&lt;-</span><span class="m">10</span><span class="o">*</span>runif<span class="p">(</span><span class="m">20</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">)</span>
+y1<span class="o">&lt;-</span><span class="kt">c</span><span class="p">(</span><span class="kp">rep</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">10</span><span class="p">),</span><span class="kp">rep</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">10</span><span class="p">))</span>
+y2<span class="o">&lt;-</span><span class="m">5</span><span class="o">*</span>rnorm<span class="p">(</span><span class="m">20</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">)</span>
+
+d<span class="o">&lt;-</span><span class="kt">data.frame</span><span class="p">(</span><span class="kp">cbind</span><span class="p">(</span>y1<span class="p">,</span>y2<span class="p">,</span>x1<span class="p">))</span>
+dd<span class="o">&lt;-</span>datadist<span class="p">(</span>d<span class="p">)</span>
+<span class="kp">options</span><span class="p">(</span>datadist<span class="o">=</span><span class="s">'dd'</span><span class="p">)</span>
+flrm<span class="o">&lt;-</span>lrm<span class="p">(</span>y1<span class="o">~</span>x1<span class="p">,</span>x<span class="o">=</span><span class="bp">T</span><span class="p">,</span>y<span class="o">=</span><span class="bp">T</span><span class="p">,</span>model<span class="o">=</span><span class="bp">T</span><span class="p">)</span>
+nomlrm<span class="o">&lt;-</span>nomogram<span class="p">(</span>flrm<span class="p">)</span>
+plot<span class="p">(</span>nomlrm<span class="p">,</span>xfac<span class="o">=</span><span class="m">.45</span><span class="p">)</span>
+fols<span class="o">&lt;-</span>ols<span class="p">(</span>y2<span class="o">~</span>x1<span class="p">,</span>x<span class="o">=</span><span class="bp">T</span><span class="p">,</span>y<span class="o">=</span><span class="bp">T</span><span class="p">,</span>model<span class="o">=</span><span class="bp">T</span><span class="p">)</span>
+nomols<span class="o">&lt;-</span>nomogram<span class="p">(</span>fols<span class="p">)</span>
+plot<span class="p">(</span>nomols<span class="p">,</span>xfac<span class="o">=</span><span class="m">.45</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="figure">
+<p><img src="img/Nomograph-rms-1.png" alt="Nomograph-rms-1.png"></p>
+</div>
+
+<div class="highlight"><pre><span></span><span class="c1">## From Zongheng Zhang zh_zhang1984@hotmail.com</span>
+
+n <span class="o">&lt;-</span> <span class="m">1000</span>    <span class="c1"># sample size</span>
+<span class="kp">set.seed</span><span class="p">(</span><span class="m">88</span><span class="p">)</span> <span class="c1"># set seed for replication</span>
+age<span class="o">&lt;-</span> rnorm<span class="p">(</span>n<span class="p">,</span> <span class="m">65</span><span class="p">,</span> <span class="m">11</span><span class="p">)</span>
+lac<span class="o">&lt;-</span> <span class="kp">round</span><span class="p">(</span><span class="kp">abs</span><span class="p">(</span>rnorm<span class="p">(</span>n<span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">1</span><span class="p">)),</span><span class="m">1</span><span class="p">)</span>
+sex<span class="o">&lt;-</span> <span class="kp">factor</span><span class="p">(</span><span class="kp">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">2</span><span class="p">,</span>n<span class="p">,</span>prob<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0.6</span><span class="p">,</span><span class="m">0.4</span><span class="p">),</span><span class="kc">TRUE</span><span class="p">),</span>
+		      labels<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="s">'male'</span><span class="p">,</span><span class="s">'female'</span><span class="p">))</span>
+shock<span class="o">&lt;-</span><span class="kp">factor</span><span class="p">(</span><span class="kp">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span>n<span class="p">,</span>prob<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0.3</span><span class="p">,</span><span class="m">0.3</span><span class="p">,</span><span class="m">0.25</span><span class="p">,</span><span class="m">0.15</span><span class="p">),</span><span class="kc">TRUE</span><span class="p">),</span>
+		labels<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="s">'no'</span><span class="p">,</span><span class="s">'mild'</span><span class="p">,</span><span class="s">'moderate'</span><span class="p">,</span><span class="s">'severe'</span><span class="p">))</span>
+z<span class="o">&lt;-</span> <span class="m">0.2</span><span class="o">*</span>age <span class="o">+</span> <span class="m">3</span><span class="o">*</span>lac<span class="o">*</span> <span class="kp">as.numeric</span><span class="p">(</span>sex<span class="p">)</span><span class="o">+</span> <span class="m">5</span><span class="o">*</span><span class="kp">as.numeric</span><span class="p">(</span>shock<span class="p">)</span> <span class="o">-</span>rnorm<span class="p">(</span>n<span class="p">,</span><span class="m">36</span><span class="p">,</span><span class="m">15</span><span class="p">)</span>
+<span class="c1">## linear combination with a bias</span>
+
+y <span class="o">&lt;-</span> <span class="kp">ifelse</span><span class="p">(</span>runif<span class="p">(</span>n<span class="p">)</span> <span class="o">&lt;=</span> plogis<span class="p">(</span>z<span class="p">),</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>rms<span class="p">)</span>
+ddist <span class="o">&lt;-</span> datadist<span class="p">(</span>age<span class="p">,</span> lac<span class="p">,</span> shock<span class="p">,</span> sex<span class="p">)</span>
+<span class="kp">options</span><span class="p">(</span>datadist<span class="o">=</span><span class="s">'ddist'</span><span class="p">)</span>
+mod <span class="o">&lt;-</span> lrm<span class="p">(</span>y <span class="o">~</span> shock<span class="o">+</span>lac<span class="o">*</span>sex<span class="o">+</span>age<span class="p">)</span>
+nom <span class="o">&lt;-</span> nomogram<span class="p">(</span>mod<span class="p">,</span>
+	lp.at<span class="o">=</span><span class="kp">seq</span><span class="p">(</span><span class="m">-3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span>by<span class="o">=</span><span class="m">0.5</span><span class="p">),</span>
+	fun<span class="o">=</span>plogis<span class="p">,</span>
+	fun.at<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">.001</span><span class="p">,</span><span class="m">.01</span><span class="p">,</span><span class="m">.05</span><span class="p">,</span><span class="kp">seq</span><span class="p">(</span><span class="m">.1</span><span class="p">,</span><span class="m">.9</span><span class="p">,</span>by<span class="o">=</span><span class="m">.1</span><span class="p">),</span><span class="m">.95</span><span class="p">,</span><span class="m">.99</span><span class="p">,</span><span class="m">.999</span><span class="p">),</span>
+	funlabel<span class="o">=</span><span class="s">"Risk of Death"</span><span class="p">,</span>
+	conf.int<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0.1</span><span class="p">,</span> <span class="m">0.7</span><span class="p">),</span>
+	abbrev<span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="c1">#had not been working for shock</span>
+	minlength<span class="o">=</span><span class="m">1</span><span class="p">)</span>
+
+plot<span class="p">(</span>nom<span class="p">,</span> lplabel<span class="o">=</span><span class="s">"Linear Predictor"</span><span class="p">,</span>
+	  fun.side<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">),</span>
+	  col.conf<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="s">'red'</span><span class="p">,</span><span class="s">'green'</span><span class="p">),</span>
+	  conf.space<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0.1</span><span class="p">,</span><span class="m">0.5</span><span class="p">),</span>
+	  label.every<span class="o">=</span><span class="m">3</span><span class="p">,</span>
+	  col.grid <span class="o">=</span> gray<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">0.8</span><span class="p">,</span> <span class="m">0.95</span><span class="p">)),</span>
+	  which<span class="o">=</span><span class="s">"shock"</span><span class="p">)</span>
+legend.nomabbrev<span class="p">(</span>nom<span class="p">,</span> which<span class="o">=</span><span class="s">'shock'</span><span class="p">,</span> x<span class="o">=</span><span class="m">.5</span><span class="p">,</span> y<span class="o">=</span><span class="m">.5</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="figure">
+<p><img src="img/Nomograph-rms-2.png" alt="Nomograph-rms-2.png"></p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">以 <code>lung</code> 数据为例绘制 Nomogram<sup><a id="fnr.2" name="fnr.2" class="footref" href="Nomogram-rms.html#fn.2">2</a></sup>
+</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1">绘制逻辑回归 Nomogram</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+加载软件包，预览 <code>lung</code> 数据
+</p>
+<div class="highlight"><pre><span></span><span class="kn">library</span><span class="p">(</span>Hmisc<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>grid<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>lattice<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>Formula<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>ggplot2<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>rms<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>survival<span class="p">)</span>
+data<span class="p">(</span>lung<span class="p">)</span>
+<span class="kp">head</span><span class="p">(</span>lung<span class="p">)</span>
+</pre></div>
+
+<pre class="example">
+  inst time status age sex ph.ecog ph.karno pat.karno meal.cal wt.loss
+1    3  306      2  74   1       1       90       100     1175      NA
+2    3  455      2  68   1       0       90        90     1225      15
+3    3 1010      1  56   1       0       90        90       NA      15
+4    5  210      2  57   1       1       90        60     1150      11
+5    1  883      2  60   1       0      100        90       NA       0
+6   12 1022      1  74   1       1       50        80      513       0
+</pre>
+
+<p>
+添加标签，按照 nomogram 要求打包数据，用逻辑回归构建模型
+</p>
+<div class="highlight"><pre><span></span><span class="c1">## 添加变量标签以便后续说明</span>
+lung<span class="o">$</span>sex <span class="o">&lt;-</span> 
+  <span class="kp">factor</span><span class="p">(</span>lung<span class="o">$</span>sex<span class="p">,</span>
+	 levels <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">),</span>
+	 labels <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">"male"</span><span class="p">,</span> <span class="s">"female"</span><span class="p">))</span>
+
+<span class="c1">## 第三步 按照 nomogram 要求“打包”数据，绘制 nomogram 的关键步骤,??datadist 查看详细说明</span>
+dd<span class="o">=</span>datadist<span class="p">(</span>lung<span class="p">)</span>
+<span class="kp">options</span><span class="p">(</span>datadist<span class="o">=</span><span class="s">"dd"</span><span class="p">)</span> 
+
+<span class="c1">## 第四步 构建模型</span>
+<span class="c1">## 构建 logisitc 回归模型</span>
+f1 <span class="o">&lt;-</span> lrm<span class="p">(</span>status <span class="o">~</span> age <span class="o">+</span> sex<span class="p">,</span> data <span class="o">=</span> lung<span class="p">)</span> 
+f1
+</pre></div>
+
+<pre class="example">
+Logistic Regression Model
+ 
+ lrm(formula = status ~ age + sex, data = lung)
+ 
+                      Model Likelihood     Discrimination    Rank Discrim.    
+                         Ratio Test           Indexes           Indexes       
+ Obs           228    LR chi2     16.85    R2       0.103    C       0.666    
+  1             63    d.f.            2    g        0.708    Dxy     0.331    
+  2            165    Pr(&gt; chi2) 0.0002    gr       2.030    gamma   0.336    
+ max |deriv| 2e-09                         gp       0.138    tau-a   0.133    
+                                           Brier    0.185                     
+ 
+            Coef    S.E.   Wald Z Pr(&gt;|Z|)
+ Intercept  -0.5333 1.0726 -0.50  0.6190  
+ age         0.0319 0.0170  1.87  0.0609  
+ sex=female -1.0484 0.3084 -3.40  0.0007
+</pre>
+
+<p>
+绘制逻辑回归 nomogram 图
+</p>
+<div class="highlight"><pre><span></span> <span class="c1">## 绘制 logisitc 回归的风险预测值的 nomogram 图</span>
+nom <span class="o">&lt;-</span> nomogram<span class="p">(</span>f1<span class="p">,</span> fun<span class="o">=</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span><span class="m">1</span><span class="o">/</span><span class="p">(</span><span class="m">1</span><span class="o">+</span><span class="kp">exp</span><span class="p">(</span><span class="o">-</span>x<span class="p">)),</span> <span class="c1"># or fun=plogis</span>
+		lp<span class="o">=</span><span class="bp">F</span><span class="p">,</span> funlabel<span class="o">=</span><span class="s">"Risk"</span><span class="p">)</span>
+plot<span class="p">(</span>nom<span class="p">)</span>
+</pre></div>
+
+
+<div class="figure">
+<p><img src="img/Nomograph-rms-3.png" alt="Nomograph-rms-3.png"></p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2">绘制 Cox 回归 Nomogram</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+构建 Cox 风险模型
+</p>
+<div class="highlight"><pre><span></span> <span class="c1">## 构建 COX 比例风险模型</span>
+f2 <span class="o">&lt;-</span> psm<span class="p">(</span>Surv<span class="p">(</span>time<span class="p">,</span>status<span class="p">)</span> <span class="o">~</span> age<span class="o">+</span>sex<span class="p">,</span> data <span class="o">=</span>  lung<span class="p">,</span> dist<span class="o">=</span><span class="s">'lognormal'</span><span class="p">)</span>
+f2
+</pre></div>
+
+<pre class="example">
+Parametric Survival Model: Log Normal Distribution
+ 
+ psm(formula = Surv(time, status) ~ age + sex, data = lung, dist = "lognormal")
+ 
+                    Model Likelihood     Discrimination    
+                       Ratio Test           Indexes        
+ Obs        228    LR chi2      21.04    R2       0.088    
+ Events     165    d.f.             2    Dxy      0.203    
+ sigma 1.052676    Pr(&gt; chi2) &lt;0.0001    g        0.403    
+                                         gr       1.496    
+ 
+             Coef    S.E.   Wald Z Pr(&gt;|Z|)
+ (Intercept)  6.9272 0.5417 12.79  &lt;0.0001 
+ age         -0.0234 0.0084 -2.78  0.0054  
+ sex=female   0.5193 0.1552  3.35  0.0008  
+ Log(scale)   0.0513 0.0560  0.92  0.3594
+</pre>
+
+<p>
+绘制 COX 回归中位生存时间的 Nomogram 图
+</p>
+<div class="highlight"><pre><span></span>med <span class="o">&lt;-</span> Quantile<span class="p">(</span>f2<span class="p">)</span> <span class="c1"># 计算中位生存时间</span>
+surv <span class="o">&lt;-</span> Survival<span class="p">(</span>f2<span class="p">)</span> <span class="c1"># 构建生存概率函数</span>
+
+<span class="c1">## 绘制 COX 回归中位生存时间的 Nomogram 图</span>
+nom <span class="o">&lt;-</span> nomogram<span class="p">(</span>f2<span class="p">,</span> fun<span class="o">=</span><span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> med<span class="p">(</span>lp<span class="o">=</span>x<span class="p">),</span>
+	 funlabel<span class="o">=</span><span class="s">"Median Survival Time"</span><span class="p">)</span>
+plot<span class="p">(</span>nom<span class="p">)</span>
+</pre></div>
+
+
+<div class="figure">
+<p><img src="img/Nomograph-rms-4.png" alt="Nomograph-rms-4.png"></p>
+</div>
+
+
+<p>
+绘制 COX 回归生存概率的 Nomogram 图
+</p>
+<div class="highlight"><pre><span></span><span class="c1">## 绘制 COX 回归生存概率的 Nomogram 图</span>
+<span class="c1">## 注意 lung 数据的 time 是以”天“为单位</span>
+nom <span class="o">&lt;-</span> nomogram<span class="p">(</span>f2<span class="p">,</span> fun<span class="o">=</span><span class="kt">list</span><span class="p">(</span><span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> surv<span class="p">(</span><span class="m">365</span><span class="p">,</span> x<span class="p">),</span>
+			     <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> surv<span class="p">(</span><span class="m">730</span><span class="p">,</span> x<span class="p">)),</span>
+		funlabel<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="s">"1-year Survival Probability"</span><span class="p">,</span>
+			   <span class="s">"2-year Survival Probability"</span><span class="p">))</span>
+plot<span class="p">(</span>nom<span class="p">,</span> xfrac<span class="o">=</span><span class="m">.6</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="figure">
+<p><img src="img/Nomograph-rms-5.png" alt="Nomograph-rms-5.png"></p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3">评价 Cox 回归的预测效果</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+计算 c-index
+</p>
+<div class="highlight"><pre><span></span><span class="c1">## 第一步 计算 c-index</span>
+rcorrcens<span class="p">(</span>Surv<span class="p">(</span>time<span class="p">,</span>status<span class="p">)</span> <span class="o">~</span> predict<span class="p">(</span>f2<span class="p">),</span> data <span class="o">=</span>  lung<span class="p">)</span>
+</pre></div>
+
+<pre class="example">
+Somers' Rank Correlation for Censored Data    Response variable:Surv(time, status)
+
+                C   Dxy  aDxy    SD    Z     P   n
+predict(f2) 0.601 0.203 0.203 0.051 3.98 1e-04 228
+</pre>
+
+<p>
+构建校正曲线
+</p>
+<div class="highlight"><pre><span></span><span class="c1">## 第二步 绘制校正曲线</span>
+<span class="c1">## 参数说明：</span>
+<span class="c1">## 1、绘制校正曲线前需要在模型函数中添加参数 x=T, y=T，详细参考帮助</span>
+<span class="c1">## 2、u 需要与之前模型中定义好的 time.inc 一致，即 365 或 730；</span>
+<span class="c1">## 3、m 要根据样本量来确定，由于标准曲线一般将所有样本分为 3 组（在图中显示 3 个点）</span>
+<span class="c1">## 而 m 代表每组的样本量数，因此 m*3 应该等于或近似等于样本量；</span>
+<span class="c1">## 4、b 代表最大再抽样的样本量</span>
+
+<span class="c1">## 重新调整模型函数 f2，也即添加 x=T, y=T</span>
+f2 <span class="o">&lt;-</span> psm<span class="p">(</span>Surv<span class="p">(</span>time<span class="p">,</span>status<span class="p">)</span> <span class="o">~</span> age<span class="o">+</span>sex<span class="p">,</span> data <span class="o">=</span>  lung<span class="p">,</span> x<span class="o">=</span><span class="bp">T</span><span class="p">,</span> y<span class="o">=</span><span class="bp">T</span><span class="p">,</span> dist<span class="o">=</span><span class="s">'lognormal'</span><span class="p">)</span>
+<span class="c1">## 构建校正曲线</span>
+cal1 <span class="o">&lt;-</span> calibrate<span class="p">(</span>f2<span class="p">,</span> cmethod<span class="o">=</span><span class="s">'KM'</span><span class="p">,</span> method<span class="o">=</span><span class="s">"boot"</span><span class="p">,</span> u<span class="o">=</span><span class="m">365</span><span class="p">,</span> m<span class="o">=</span><span class="m">76</span><span class="p">,</span> B<span class="o">=</span><span class="m">228</span><span class="p">)</span>
+cal1
+</pre></div>
+
+<pre class="example">
+There were 14 warnings (use warnings() to see them)
+calibrate.psm(fit = f2, cmethod = "KM", method = "boot", u = 365, 
+    m = 76, B = 228)
+
+
+n=228  B=230  u=365 Day
+
+        index.orig    training         test mean.optimism mean.corrected   n mean.predicted        KM KM.corrected   std.err
+[1,] -0.0003975368  0.02480262  0.005876961  -0.004676736    0.004279200 223      0.2806609 0.2802634    0.2849401 0.2091345
+[2,]  0.0075760977  0.01144562  0.015194039  -0.001853945    0.009430043 230      0.3984090 0.4059851    0.4078390 0.1451376
+[3,] -0.0362339300 -0.05339624 -0.073752212  -0.003190928   -0.033043002 230      0.5658098 0.5295759    0.5327668 0.1218555
+</pre>
+
+<div class="highlight"><pre><span></span>par<span class="p">(</span>mar<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">8</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">2</span><span class="p">),</span>cex <span class="o">=</span> <span class="m">1.0</span><span class="p">)</span>
+plot<span class="p">(</span>cal1<span class="p">,</span>lwd<span class="o">=</span><span class="m">2</span><span class="p">,</span>lty<span class="o">=</span><span class="m">1</span><span class="p">,</span>
+     errbar.col<span class="o">=</span><span class="kt">c</span><span class="p">(</span>rgb<span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">118</span><span class="p">,</span><span class="m">192</span><span class="p">,</span>maxColorValue<span class="o">=</span><span class="m">255</span><span class="p">)),</span>
+     xlim<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0.25</span><span class="p">,</span><span class="m">0.6</span><span class="p">),</span>ylim<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0.15</span><span class="p">,</span><span class="m">0.70</span><span class="p">),</span>
+     xlab<span class="o">=</span><span class="s">"Nomogram-Predicted Probability of 1-Year DFS"</span><span class="p">,</span>
+     ylab<span class="o">=</span><span class="s">"Actual 1-Year DFS (proportion)"</span><span class="p">,</span>
+     col<span class="o">=</span><span class="kt">c</span><span class="p">(</span>rgb<span class="p">(</span><span class="m">192</span><span class="p">,</span><span class="m">98</span><span class="p">,</span><span class="m">83</span><span class="p">,</span>maxColorValue<span class="o">=</span><span class="m">255</span><span class="p">)))</span>
+</pre></div>
+
+
+<div class="figure">
+<p><img src="img/Nomograph-rms-6.png" alt="Nomograph-rms-6.png"></p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">重现文章中的例子 cite:zhang-2017-drawin-nomog</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1">Worked example</h3>
+</div>
+</div>
+
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">Creative Commons licensing</h2>
+<div class="outline-text-2" id="text-5">
+<blockquote>
+<p>
+TITLE: Nomograph 图制作（一）- g 用 rms 绘制 nomogram <br>
+AUTHOR: lengyueyang <br>
+DATE: 2018-01-15 19:26:52 UTC+08:00<br>
+UPDATED: <br>
+LICENSE: The blog is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>, commercial use is not allowed, for any reprint, please indicate address and signature.
+<img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="88x31.png"></p>
+</blockquote>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef">
+<sup><a id="fn.1" name="fn.1" class="footnum" href="Nomogram-rms.html#fnr.1">1</a></sup><p class="footpara">
+<a href="https://github.com/harrelfe/rms/blob/master/inst/tests/nomogram.r">https://github.com/harrelfe/rms/blob/master/inst/tests/nomogram.r</a>
+</p>
+</div>
+
+<div class="footdef">
+<sup><a id="fn.2" name="fn.2" class="footnum" href="Nomogram-rms.html#fnr.2">2</a></sup><p class="footpara">
+<a href="http://blog.csdn.net/anshiquanshu/article/details/53444289">http://blog.csdn.net/anshiquanshu/article/details/53444289</a>
+</p>
+</div>
+
+
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../categories/nomogram.html" rel="tag">Nomogram</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="survival-analysis-research.html" rel="prev" title="科研工作中的生存分析">Previous post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="lengyueyang",
+            disqus_url="https://lengyueyang.github.io/Research/Nomogram-rms.html",
+        disqus_title="Nomograph \u56fe\u5236\u4f5c (\u4e00) - \u7528 rms \u7ed8\u5236 nomogram",
+        disqus_identifier="cache/posts/Research/Nomograph-rms.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="lengyueyang";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2018         <a href="mailto:maoxiaowei1988@qq.com">Lengyueyang</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a> and <a href="#" https: rel="nofollow">Org-mode</a>       
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+<img alt="Creative Commons License BY-NC-SA" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a>
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

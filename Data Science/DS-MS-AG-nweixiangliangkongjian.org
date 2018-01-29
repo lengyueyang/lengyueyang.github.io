@@ -1,9 +1,9 @@
 #+BEGIN_COMMENT
-.. title: 数据科学-数学与统计-高等代数- n 维向量空间 n 维向量空间 \(k^n\)
+.. title: 高等代数- n 维向量空间 n 维向量空间 \(k^n\)
 .. slug: DS-MS-AG-nweixiangliangkongjian
 .. date: 2017-10-09 19:26:52 UTC+08:00
 .. tags: Linear algebra, mathjax
-.. category: DATA SCIENTIST
+.. category: HIGHER ALGEBRA
 .. link: 
 .. description: 
 .. type: text
@@ -502,3 +502,12 @@ U = \{\symbf{γ_0} + k_1 \symbf{\eta_1} + ⋯ + k_t \symbf{\eta_t} \, | \, k_1, 
 
 #+DOWNLOADED: file:///home/lengyue/Emacs-lengyue/Data%20scientist/Math%20and%20Statistics%20Skills/MSimg/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/8_2017-09-15_14-15-32.png @ 2017-09-15 14:18:59
 [[file:MSimg/高等代数/8_2017-09-15_14-15-32_2017-09-15_14-18-59.png]]
+* Creative Commons licensing
+#+BEGIN_QUOTE
+TITLE: 高等代数- n 维向量空间 n 维向量空间 \(k^n\)\\
+AUTHOR: lengyueyang \\
+DATE: 2017-10-09 19:26:52 UTC+08:00\\
+UPDATED: \\
+LICENSE: The blog is licensed under a [[http://creativecommons.org/licenses/by-sa/4.0/][Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License]], commercial use is not allowed, for any reprint, please indicate address and signature.
+https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
+#+END_QUOTE

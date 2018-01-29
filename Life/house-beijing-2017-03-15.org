@@ -34,3 +34,12 @@
 在北京生活，房子是一个绕不开的话题，像我这种家在农村比较贫穷的情况，很难买的起房，学区房，算了吧，能在北京周边买一个小房子已经谢天谢地了，不过，还好，我有爱人陪伴，不离不弃，这是我来北京最大的收获。
 
 为了未来的生活，为了未来有一套我们的爱巢，我要努力前行。
+* Creative Commons licensing
+#+BEGIN_QUOTE
+TITLE: 房子，北京\\
+AUTHOR: lengyueyang \\
+DATE: 2017-03-15 19:26:52 UTC+08:00\\
+UPDATED: \\
+LICENSE: The blog is licensed under a [[http://creativecommons.org/licenses/by-sa/4.0/][Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License]], commercial use is not allowed, for any reprint, please indicate address and signature.
+https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
+#+END_QUOTE

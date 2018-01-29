@@ -214,6 +214,16 @@
 \renewcommand{\footnotesize}{\tiny}
   #+END_SRC
 
+* Creative Commons licensing
+#+BEGIN_QUOTE
+TITLE: Use org-mode to make slide [用 org-mode 做幻灯]\\
+AUTHOR: lengyueyang \\
+DATE: 2016-03-04 19:26:52 UTC+08:00\\
+UPDATED: \\
+LICENSE: The blog is licensed under a [[http://creativecommons.org/licenses/by-sa/4.0/][Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License]], commercial use is not allowed, for any reprint, please indicate address and signature.
+https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
+#+END_QUOTE
+
 * Footnotes
 
 [fn:3] http://tex.stackexchange.com/questions/35673/biblatex-is-there-a-command-analogous-to-ifciteseen-but-within-one-page

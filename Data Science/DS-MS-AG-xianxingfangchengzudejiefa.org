@@ -1,9 +1,9 @@
 #+BEGIN_COMMENT
-.. title: 数据科学-数学与统计-高等代数-线性方程组的解法
+.. title: 高等代数-线性方程组的解法
 .. slug: DS-MS-AG-xianxingfangchengzudejiefa
 .. date: 2017-08-07 19:26:52 UTC+08:00
 .. tags: Linear algebra, mathjax
-.. category: DATA SCIENTIST
+.. category: HIGHER ALGEBRA
 .. link: 
 .. description: 
 .. type: text
@@ -54,8 +54,7 @@
 Hom, R. A. (2014). 矩阵分析. : 机械工业出版社. 
 张贤达, (2013). 矩阵分析与应用. : 清华大学出版社.
 {{{TEASER_END}}}
-* 线性方程组的解法
-** 解线性方差组的矩阵消元法
+* 解线性方差组的矩阵消元法
 
 左端都是未知量 \(x_1, x_2, \dots , x_n\) 的一次其次式，右端是常数的方程组称为线性方程组，每个未知量前面的数称为系数，右端的项称为常数项。为了书写简便，对于一个线性方程组，可以只写出它的系数和常数项，并且把它们按照原来的次序排成一张表，这张表称为线性方程组的 *增广矩阵* ，只列出系数的的表称为方程组的系数矩阵。
 
@@ -123,7 +122,7 @@ Hom, R. A. (2014). 矩阵分析. : 机械工业出版社.
 #+RESULTS:
 [[file:MSimg/MS-3-2-1-1.png]]
 
-** 线性方程组的解的情况及其判别准则
+* 线性方程组的解的情况及其判别准则
 
 #+name: 高斯(Gauss)-约当(Jordan)算法定理
 \begin{thm}[高斯(Gauss)-约当(Jordan)算法定理]
@@ -176,7 +175,7 @@ n 元齐次线性方程组如果方程的数目 s 小于未知量的个数 n, �
 #+RESULTS:
 [[file:MSimg/MS-3-2-2-1.png]]
 
-** 数域
+* 数域
 #+name: 数域定义
 \begin{de}[数域定义]
 \end{de}
@@ -192,3 +191,12 @@ n 元齐次线性方程组如果方程的数目 s 小于未知量的个数 n, �
 
 有理数集 Q, 实数集 R 和复数集 C 都是术语, 整数集 Z 不是数域, 有理数域是最小的数域.
 
+* Creative Commons licensing
+#+BEGIN_QUOTE
+TITLE: 高等代数-线性方程组的解法\\
+AUTHOR: lengyueyang \\
+DATE: 2017-08-07 19:26:52 UTC+08:00\\
+UPDATED: \\
+LICENSE: The blog is licensed under a [[http://creativecommons.org/licenses/by-sa/4.0/][Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License]], commercial use is not allowed, for any reprint, please indicate address and signature.
+https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
+#+END_QUOTE

@@ -1,9 +1,9 @@
 #+BEGIN_COMMENT
-.. title: 数据科学-数学和统计-概率论与数理统计-随机变量的数字特征
+.. title: 概率论与数理统计-随机变量的数字特征
 .. slug: DS-MS-Statistics-suijibianliangdeshuzitezheng
 .. date: 2017-05-29 19:26:52 UTC+08:00
 .. tags: Statistics, mathjax
-.. category: DATA SCIENTIST
+.. category: STATISTICS
 .. link: 
 .. description: 
 .. type: text
@@ -46,10 +46,9 @@
 #+LaTeX_HEADER: \newtheorem*{jd}{\emph{\hskip 2em 解答}}
 #+LaTeX_HEADER: \numberwithin{equation}{section}
 
-* 随机变量的数字特征
-** 数学期望（均值）与中位数
+* 数学期望（均值）与中位数
 
-*** 数学期望的定义
+** 数学期望的定义
 #+name: 离散型随机变量数学期望
 \begin{de}[离散型随机变量数学期望]
 \end{de}
@@ -83,7 +82,7 @@ E(X) = \sum_{i = 1}^\infty a_ip_i
 
 在理论和应用中重要原因：本身含义；具备的良好性质，如工人的工资，容易知道其均值，单分布未知
 
-*** 数学期望的性质
+** 数学期望的性质
 #+name: 数学期望性质-1
 \begin{thm}[数学期望性质-1]
 \end{thm}
@@ -120,7 +119,7 @@ E(g(X)) = \sum_ig(a_i)p_i \quad (if \sum_ig(a_i)p_i < ∞)
 - \(X \sim t_n, \, E(X) = 0 \quad (n > 1)\) 
 - \(X \sim F_{m,n}, \, E(X) = n(n-2) \quad (n >2)\) 
 
-*** 条件数学期望（条件均值）
+** 条件数学期望（条件均值）
 条件数学期望公式
 #+name: 条件数学期望公式
 \begin{equation}
@@ -145,7 +144,7 @@ E(Y) = E[E(Y|x)]
 
 变量 Y 的（无条件）期望 = Y 的无条件期望 \(E(Y|x)\) 对 x 取加权平均，x 的权与变量 X 在 x 点的概率密度称比例
 
-*** 中位数
+** 中位数
 #+name: 中位数定义
 \begin{de}[中位数定义]
 \end{de}
@@ -161,9 +160,9 @@ P(X ⩽ m) = F(m) = 1/2
 
 在理论和应用中数学期望重要性超过中位数的原因：均值有很多优良的性质；中位数不唯一且离散型变量中位数不完全符合“中位”含义
 
-** 方差与钜
+* 方差与钜
 
-*** 方差和标准差
+** 方差和标准差
 #+name: 方差定义
 \begin{de}[方差定义]
 \end{de}
@@ -205,7 +204,7 @@ Var(X_1 + \dots + X_n) = Var(X_1) + \dots + Var(X_n)
 - \(X \sim t_n, \, Var(X) = n ∕ (n-2) \quad (n > 2)\) 
 - \(X \sim F_{m,n}, \, Var(X) = 2n^2(m+n-2) ∕ [m(n-2)^2(n-4)] \quad (n > 4)\) 
 
-*** 钜
+** 钜
 #+name: 矩定义
 \begin{de}[矩定义]
 \end{de}
@@ -235,7 +234,7 @@ Var(X_1 + \dots + X_n) = Var(X_1) + \dots + Var(X_n)
 \beta_2 = u_4 ∕ u_2^2
 \end{equation}
 
-** 协方差与相关系数
+* 协方差与相关系数
 #+name: 协方差定义
 \begin{de}[协方差定义]
 \end{de}
@@ -272,9 +271,9 @@ Var(X_1 + \dots + X_n) = Var(X_1) + \dots + Var(X_n)
 - 若 \((X, Y)\) 为二维正态分布，则允许用任何函数 M(X) 去逼近 Y，所得到的结果与线性逼近结果类似，而线性逼近的程度完全取决于相关系数
 - 若 \((X, Y)\) 为二维正态分布，由  \(Corr(X, Y) = 0\) 可以推出 X，Y 独立，即在这种情况下，独立与相关等同
 
-** 大数定理和中心极限定理
+* 大数定理和中心极限定理
     
-*** 大数定理
+** 大数定理
 #+name: 大数定理定义
 \begin{thm}[大数定理定义]
 \end{thm}
@@ -303,7 +302,7 @@ P(Y ⩾ ε) ⩽ E(Y) ∕ ε
 P(|Y-EY| ⩾ ε) ⩽ Var(Y) ∕ ε^2
 \end{equation}
 
-*** 中心极限定理
+** 中心极限定理
 #+name: 林徳伯格定理
 \begin{thm}[林徳伯格定理]
 \end{thm}
@@ -330,6 +329,16 @@ P(|Y-EY| ⩾ ε) ⩽ Var(Y) ∕ ε^2
 
 中心极限定理的推广方向：独立不同分布情形；非独立情形；由中心极限定理引起的误差；大偏差问题
 
-** 例题
-** 参考网页
+* 例题
+* 参考网页
 http://blog.csdn.net/zhang22huan/article/details/8631101
+
+* Creative Commons licensing
+#+BEGIN_QUOTE
+TITLE: 概率论与数理统计-随机变量的数字特征\\
+AUTHOR: lengyueyang \\
+DATE: 2017-05-29 19:26:52 UTC+08:00\\
+UPDATED: \\
+LICENSE: The blog is licensed under a [[http://creativecommons.org/licenses/by-sa/4.0/][Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License]], commercial use is not allowed, for any reprint, please indicate address and signature.
+https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
+#+END_QUOTE
