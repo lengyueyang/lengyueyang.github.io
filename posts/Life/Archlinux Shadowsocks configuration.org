@@ -100,3 +100,12 @@ https://github.com/itrump/ssfree/blob/master/cn/%E5%80%9A%E5%A4%A9%E5%89%91ss%E6
 
   socks5 127.0.0.1 1080
 #+END_SRC
+* Creative Commons licensing
+#+BEGIN_QUOTE
+TITLE:  Archlinux Shadowsocks Configuration [Archlinux Shadowsocks 配置]\\
+AUTHOR: lengyueyang \\
+DATE: 2017-12-11 19:26:52 UTC+08:00\\
+UPDATED: \\
+LICENSE: The blog is licensed under a [[http://creativecommons.org/licenses/by-sa/4.0/][Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License]], commercial use is not allowed, for any reprint, please indicate address and signature.
+https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
+#+END_QUOTE

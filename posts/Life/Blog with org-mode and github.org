@@ -1,5 +1,5 @@
 #+BEGIN_COMMENT
-.. title: Blog with org-mode and github [用 Org-mdoe 和 github 搭建博客]
+.. title: Blog with org-mode and github with Hexo [用 Org-mdoe、Hexo 和 github 搭建博客]
 .. slug: blog-with-org-mode-and-github
 .. date: 2016-03-11 19:26:52 UTC+08:00
 .. tags: Blog, Github, Org-mode, Emacs
@@ -96,6 +96,16 @@
 #+CAPTION: title with figure number
 #+ATTR_HTML: :width 200px :align left :title The tile of picture without figure number
 #+END_SRC
+* Creative Commons licensing
+#+BEGIN_QUOTE
+TITLE:  Blog with org-mode and github [用 Org-mdoe 和 github 搭建博客]\\
+AUTHOR: lengyueyang \\
+DATE: 2016-03-11 19:26:52 UTC+08:00\\
+UPDATED: [2018-01-29 Mon] \\
+LICENSE: The blog is licensed under a [[http://creativecommons.org/licenses/by-sa/4.0/][Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License]], commercial use is not allowed, for any reprint, please indicate address and signature.
+https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
+#+END_QUOTE
+
 * Footnotes
 
 [fn:5] https://github.com/zilongshanren

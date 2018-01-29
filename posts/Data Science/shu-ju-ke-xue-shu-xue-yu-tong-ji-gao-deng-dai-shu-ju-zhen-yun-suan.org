@@ -1,9 +1,9 @@
 #+BEGIN_COMMENT
-.. title: 数据科学-数学与统计-高等代数-矩阵运算
+.. title: 高等代数-矩阵运算
 .. slug: shu-ju-ke-xue-shu-xue-yu-tong-ji-gao-deng-dai-shu-ju-zhen-yun-suan
 .. date: 2018-01-08 21:03:03 UTC+08:00
 .. tags: Linear algebra, mathjax, Matrix computation
-.. category: DATA SCIENTIST
+.. category: HIGHER ALGEBRA
 .. link: 
 .. description: 
 .. type: text
@@ -768,3 +768,12 @@ dim \, Ker \symbf{A} + dim \, Im \symbf{A} = dim \, K^n
 [[file:MSimg/高等代数/screenshot_2017-09-20_23-44-30.png]]
 
 
+* Creative Commons licensing
+#+BEGIN_QUOTE
+TITLE: 高等代数-矩阵运算\\
+AUTHOR: lengyueyang \\
+DATE: 2018-01-08 21:03:03 UTC+08:00\\
+UPDATED: \\
+LICENSE: The blog is licensed under a [[http://creativecommons.org/licenses/by-sa/4.0/][Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License]], commercial use is not allowed, for any reprint, please indicate address and signature.
+https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
+#+END_QUOTE

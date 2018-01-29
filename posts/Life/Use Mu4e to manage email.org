@@ -630,3 +630,12 @@ action        a           | apply some action
 - [[http://www.bagualu.net/wordpress/archives/6555][emacs 中的 email 客户端 mu4e | 猎数博客]]
 - [[https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Bemail/gnus#org-mime-in-org-layer][spacemacs/layers/+email/gnus at master · syl20bnr/spacemacs]]
 
+* Creative Commons licensing
+#+BEGIN_QUOTE
+TITLE: Use Mu4e to manage email [用 mu4e 管理邮件] \\
+AUTHOR: lengyueyang \\
+DATE: 2017-02-26 19:26:52 UTC+08:00\\
+UPDATED: \\
+LICENSE: The blog is licensed under a [[http://creativecommons.org/licenses/by-sa/4.0/][Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License]], commercial use is not allowed, for any reprint, please indicate address and signature.
+https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
+#+END_QUOTE

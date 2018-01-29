@@ -354,6 +354,16 @@ dev.off()
 [[http://7xrrxa.com1.z0.glb.clouddn.com/blogF3Evans%20Blue.png]]
 
 * 注意事项
+* Creative Commons licensing
+#+BEGIN_QUOTE
+TITLE:  Statistics in research article-Univariate analysis [科研文章中的统计-单因素分析] \\
+AUTHOR: lengyueyang \\
+DATE: 2016-04-23 19:26:52 UTC+08:00 \\
+UPDATED: \\
+LICENSE: The blog is licensed under a [[http://creativecommons.org/licenses/by-sa/4.0/][Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License]], commercial use is not allowed, for any reprint, please indicate address and signature.
+https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
+#+END_QUOTE
+
 * Footnotes
 
 [fn:1] https://www.r-project.org/

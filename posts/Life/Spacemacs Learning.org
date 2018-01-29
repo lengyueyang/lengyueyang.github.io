@@ -15,8 +15,8 @@
 #+TAGS: Spacemacs, Emacs
 #+CATEGORIES: EMACS
 
-** Useful keybinding
-*** Memory
+* Useful keybinding
+** Memory
 - SPC f s Save a buffer
 - SPC f S Save all opened buffers
 - SPC b b Open or switch a buffer with helm
@@ -29,9 +29,9 @@
 
 {{{TEASER_END}}}
 
-** The Emacs Evil Tutor
+* The Emacs Evil Tutor
 
-*** LESSON 1 
+** LESSON 1 
 1. The cursor is moved using either the arrow keys or the hjkl keys.
          h (left)        j (down)       k (up)            l (right)
 
@@ -54,7 +54,7 @@ NOTE: Pressing <ESC> will place you in normal state or will cancel
       an unwanted and partially completed command.
 
 
-*** LESSON 2
+** LESSON 2
 
 1. x/X To delete a character under/before the cursor in normal state type
 
@@ -83,7 +83,7 @@ NOTE: Pressing <ESC> will place you in normal state or will cancel
    Repeat the last opeartion: .
 
 
-*** LESSON 3
+** LESSON 3
 
 1. To replace text that has already been deleted, type  p  this puts the
    deleted text AFTER the cursor (if a line was deleted it will go on the
@@ -100,7 +100,7 @@ NOTE: Pressing <ESC> will place you in normal state or will cancel
           [number]  c  object    OR    c  [number]  object
 
 
-*** LESSON 4
+** LESSON 4
 
   1. Typing  /  followed by a phrase searches FORWARD for the phrase.
      Typing  ?  followed by a phrase searches BACKWARD for the phrase.
@@ -117,7 +117,7 @@ NOTE: Pressing <ESC> will place you in normal state or will cancel
      To ask for confirmation each time add 'c'           :%s/old/new/gc
 
 
-*** LESSON 5
+** LESSON 5
 
 1. :!command  executes an external command.
 
@@ -133,7 +133,7 @@ NOTE: Pressing <ESC> will place you in normal state or will cancel
       current buffer following the cursor position.
 
 
-*** LESSON 6
+** LESSON 6
 
 1. Typing  o   opens a line BELOW the cursor and places the cursor on the open
    line in insert state.
@@ -143,8 +143,8 @@ NOTE: Pressing <ESC> will place you in normal state or will cancel
    Typing a capital  A  automatically appends text to the end of the line.
 
 3. i/I Insert text at the character/Not blank
-** Python and R programming environment configuration
-*** Python
+* Python and R programming environment configuration
+** Python
 - Configure the auto-complete mode as the spacemacs layer: auto-complete
 - Replace the keybinding SPC m s i to 'run python' in file package.el within python layer
 - Add the following confirmation to .spacemacs
@@ -152,7 +152,7 @@ NOTE: Pressing <ESC> will place you in normal state or will cancel
     (add-hook 'inferior-python-mode-hook 'flycheck-mode)
     (add-hook 'inferior-python-mode-hook 'flyspell-mode)
   #+END_SRC
-*** R
+** R
 - Add the following confirmation to .spacemacs
 #+BEGIN_SRC emacs-lisp
   (add-hook 'R-mode-hook 'smartparens-mode)
@@ -166,3 +166,12 @@ NOTE: Pressing <ESC> will place you in normal state or will cancel
 #+END_SRC
 - For the R auto complete: after open the R file, then C-c C-c, reopen the R file 
 - When insert src-block with org heading, add a , before the heading, to avoid mistake
+* Creative Commons licensing
+#+BEGIN_QUOTE
+TITLE:  Spacemacs Learning [Spacemacs 学习]\\
+AUTHOR: lengyueyang \\
+DATE: 2016-02-14 19:26:52 UTC+08:00\\
+UPDATED: \\
+LICENSE: The blog is licensed under a [[http://creativecommons.org/licenses/by-sa/4.0/][Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License]], commercial use is not allowed, for any reprint, please indicate address and signature.
+https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
+#+END_QUOTE
