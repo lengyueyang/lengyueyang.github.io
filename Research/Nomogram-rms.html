@@ -29,9 +29,8 @@ Nomogram 概述
 重现文章中的例子 cite:zhang-2017-drawin-nomog
 
 Worked example
-
-
-Creative Commons licensing">
+Nomogram for binary outcome
+">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2018-01-28T19:26:52+08:00">
 <meta property="article:tag" content="Nomogram">
@@ -151,6 +150,10 @@ Creative Commons licensing">
 <a href="Nomogram-rms.html#sec-4">重现文章中的例子 cite:zhang-2017-drawin-nomog</a>
 <ul>
 <li><a href="Nomogram-rms.html#sec-4-1">Worked example</a></li>
+<li><a href="Nomogram-rms.html#sec-4-2">Nomogram for binary outcome</a></li>
+<li><a href="Nomogram-rms.html#sec-4-3">Nomogram for ordinal outcome variable</a></li>
+<li><a href="Nomogram-rms.html#sec-4-4">Nomogram for survival data</a></li>
+<li><a href="Nomogram-rms.html#sec-4-5">Nomogram for semiparametric survival models</a></li>
 </ul>
 </li>
 <li><a href="Nomogram-rms.html#sec-5">Creative Commons licensing</a></li>
@@ -465,12 +468,196 @@ plot<span class="p">(</span>cal1<span class="p">,</span>lwd<span class="o">=</sp
 </div>
 </div>
 
+
 <div id="outline-container-sec-4" class="outline-2">
 <h2 id="sec-4">重现文章中的例子 cite:zhang-2017-drawin-nomog</h2>
 <div class="outline-text-2" id="text-4">
 </div>
 <div id="outline-container-sec-4-1" class="outline-3">
 <h3 id="sec-4-1">Worked example</h3>
+<div class="outline-text-3" id="text-4-1">
+<div class="highlight"><pre><span></span>n <span class="o">&lt;-</span> <span class="m">1000</span>
+<span class="kp">set.seed</span><span class="p">(</span><span class="m">88</span><span class="p">)</span> <span class="c1"># set seed for replication</span>
+age <span class="o">&lt;-</span> rnorm<span class="p">(</span>n<span class="p">,</span> <span class="m">65</span><span class="p">,</span> <span class="m">11</span><span class="p">)</span>
+lac <span class="o">&lt;-</span> <span class="kp">round</span><span class="p">(</span><span class="kp">abs</span><span class="p">(</span>rnorm<span class="p">(</span>n<span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">1</span><span class="p">)),</span><span class="m">1</span><span class="p">)</span>
+sex <span class="o">&lt;-</span> <span class="kp">factor</span><span class="p">(</span><span class="kp">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">2</span><span class="p">,</span>n<span class="p">,</span>prob<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0.6</span><span class="p">,</span><span class="m">0.4</span><span class="p">),</span><span class="kc">TRUE</span><span class="p">),</span> labels<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="s">'male'</span><span class="p">,</span><span class="s">'female'</span><span class="p">))</span>
+shock <span class="o">&lt;-</span> <span class="kp">factor</span><span class="p">(</span><span class="kp">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span>n<span class="p">,</span>prob<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0.3</span><span class="p">,</span><span class="m">0.3</span><span class="p">,</span><span class="m">0.25</span><span class="p">,</span><span class="m">0.15</span><span class="p">),</span> <span class="kc">TRUE</span><span class="p">),</span> labels<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="s">'no'</span><span class="p">,</span><span class="s">'mild'</span><span class="p">,</span><span class="s">'moderate'</span><span class="p">,</span><span class="s">'severe'</span><span class="p">))</span>
+
+<span class="c1"># linear combination with a bias</span>
+z <span class="o">&lt;-</span> <span class="m">0.2</span><span class="o">*</span>age <span class="o">+</span> <span class="m">3</span><span class="o">*</span>lac<span class="o">*</span> <span class="kp">as.numeric</span><span class="p">(</span>sex<span class="p">)</span><span class="o">+</span> <span class="m">5</span><span class="o">*</span><span class="kp">as.numeric</span><span class="p">(</span>shock<span class="p">)</span> <span class="o">-</span> rnorm<span class="p">(</span>n<span class="p">,</span><span class="m">36</span><span class="p">,</span><span class="m">15</span><span class="p">)</span>
+
+y <span class="o">&lt;-</span> <span class="kp">ifelse</span><span class="p">(</span>runif<span class="p">(</span>n<span class="p">)</span> <span class="o">&lt;=</span> plogis<span class="p">(</span>z<span class="p">),</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">)</span>
+
+Y <span class="o">&lt;-</span> <span class="kp">ifelse</span><span class="p">(</span>y<span class="o">==</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="kp">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">,</span> <span class="kp">length</span><span class="p">(</span>y<span class="p">),</span> <span class="kc">TRUE</span><span class="p">))</span>
+
+data <span class="o">&lt;-</span> <span class="kt">data.frame</span><span class="p">(</span>age<span class="o">=</span>age<span class="p">,</span>lac<span class="o">=</span>lac<span class="p">,</span>sex<span class="o">=</span>sex<span class="p">,</span>shock<span class="o">=</span>shock<span class="p">,</span>y<span class="o">=</span>y<span class="p">,</span>Y<span class="o">=</span>Y<span class="p">)</span>
+
+var.labels <span class="o">=</span> <span class="kt">c</span><span class="p">(</span>age<span class="o">=</span><span class="s">"Age in Years"</span><span class="p">,</span>
+	       lac<span class="o">=</span><span class="s">"lactate"</span><span class="p">,</span>
+	       sex<span class="o">=</span><span class="s">"Sex of the participant"</span><span class="p">,</span>
+	       shock<span class="o">=</span><span class="s">"shock"</span><span class="p">,</span>
+	       y<span class="o">=</span><span class="s">"outcome"</span><span class="p">,</span>
+	       Y<span class="o">=</span><span class="s">"ordinal"</span><span class="p">)</span>
+
+label<span class="p">(</span>data<span class="p">)</span> <span class="o">=</span> <span class="kp">lapply</span><span class="p">(</span><span class="kp">names</span><span class="p">(</span>var.labels<span class="p">),</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> label<span class="p">(</span>data<span class="p">[,</span>x<span class="p">])</span> <span class="o">=</span> var.labels<span class="p">[</span>x<span class="p">])</span>
+<span class="kp">head</span><span class="p">(</span>data<span class="p">)</span>
+</pre></div>
+
+<pre class="example">
+Error in label(data[, x]) = var.labels[x] (from #1) : 
+  could not find function "label&lt;-"
+       age lac    sex  shock y Y
+1 62.51119 2.4   male     no 0 0
+2 72.11227 2.9   male     no 0 0
+3 90.80664 1.8 female     no 1 1
+4 44.69819 3.8   male   mild 0 0
+5 70.05660 2.1   male severe 0 0
+6 66.36159 3.6 female     no 1 2
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2">Nomogram for binary outcome</h3>
+<div class="outline-text-3" id="text-4-2">
+<div class="highlight"><pre><span></span><span class="kn">library</span><span class="p">(</span>rms<span class="p">)</span>
+ddist <span class="o">&lt;-</span> datadist<span class="p">(</span>data<span class="p">)</span>
+<span class="kp">options</span><span class="p">(</span>datadist<span class="o">=</span><span class="s">'ddist'</span><span class="p">)</span>
+mod.bi1 <span class="o">&lt;-</span> lrm<span class="p">(</span>y<span class="o">~</span>shock<span class="o">+</span>lac<span class="o">*</span>sex<span class="o">+</span>age<span class="p">,</span>data<span class="p">)</span>
+nom.bi <span class="o">&lt;-</span> nomogram<span class="p">(</span>mod.bi1<span class="p">,</span> lp.at<span class="o">=</span><span class="kp">seq</span><span class="p">(</span><span class="m">-3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span>by<span class="o">=</span><span class="m">0.5</span><span class="p">),</span>
+		   fun<span class="o">=</span><span class="kr">function</span><span class="p">(</span>x<span class="p">)</span><span class="m">1</span><span class="o">/</span><span class="p">(</span><span class="m">1</span><span class="o">+</span><span class="kp">exp</span><span class="p">(</span><span class="o">-</span>x<span class="p">)),</span>
+		   fun.at<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">.001</span><span class="p">,</span><span class="m">.01</span><span class="p">,</span><span class="m">.05</span><span class="p">,</span><span class="kp">seq</span><span class="p">(</span><span class="m">.1</span><span class="p">,</span><span class="m">.9</span><span class="p">,</span>by<span class="o">=</span><span class="m">.1</span><span class="p">),</span><span class="m">.95</span><span class="p">,</span><span class="m">.99</span><span class="p">,</span><span class="m">.999</span><span class="p">),</span>
+		   funlabel<span class="o">=</span><span class="s">"Risk of Death"</span><span class="p">,</span>
+		   conf.int<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0.1</span><span class="p">,</span><span class="m">0.7</span><span class="p">),</span>
+		   abbrev<span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span>
+		   minlength<span class="o">=</span><span class="m">1</span><span class="p">,</span>lp<span class="o">=</span><span class="bp">F</span><span class="p">)</span>
+
+plot<span class="p">(</span>nom.bi<span class="p">,</span>lplabel<span class="o">=</span><span class="s">"Linear Predictor"</span><span class="p">,</span>
+     fun.side<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">),</span>
+     col.conf<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="s">'red'</span><span class="p">,</span><span class="s">'green'</span><span class="p">),</span>
+     conf.space<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0.1</span><span class="p">,</span><span class="m">0.5</span><span class="p">),</span>
+     label.every<span class="o">=</span><span class="m">3</span><span class="p">,</span>
+     col.grid <span class="o">=</span> gray<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">0.8</span><span class="p">,</span> <span class="m">0.95</span><span class="p">)),</span>
+     which<span class="o">=</span><span class="s">"shock"</span><span class="p">)</span>
+
+legend.nomabbrev<span class="p">(</span>nom.bi<span class="p">,</span> which<span class="o">=</span><span class="s">'shock'</span><span class="p">,</span> x<span class="o">=</span><span class="m">.5</span><span class="p">,</span> y<span class="o">=</span><span class="m">.5</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="figure">
+<p><img src="img/Nomograph-rms-7.png" alt="Nomograph-rms-7.png"></p>
+</div>
+
+
+<div class="figure">
+<p><img src="img/Statistic%20analysis/screenshot_2018-01-30_23-07-03.png" alt="screenshot_2018-01-30_23-07-03.png"></p>
+</div>
+
+<div class="figure">
+<p><img src="img/Statistic%20analysis/screenshot_2018-01-30_23-07-24.png" alt="screenshot_2018-01-30_23-07-24.png"></p>
+</div>
+
+<div class="figure">
+<p><img src="img/Statistic%20analysis/screenshot_2018-01-30_23-09-13.png" alt="screenshot_2018-01-30_23-09-13.png"></p>
+</div>
+
+
+<div class="figure">
+<p><img src="img/Statistic%20analysis/screenshot_2018-01-30_23-09-26.png" alt="screenshot_2018-01-30_23-09-26.png"></p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-3" class="outline-3">
+<h3 id="sec-4-3">Nomogram for ordinal outcome variable</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+Ordinal logistic regression is a type of logistic regression that deals with dependent variables that are ordinal—that is, there are multiple response levels and they have a specific order, but no exact spacing between the levels. In the example, the variable Y contains four levels. Similarly to the binary logistic regression model, ordinal model can be fit with lrm() function. In the model, an interaction between sex and lac is included. Furthermore, the variable lac takes a linear tail-restricted cubic spline function by using rcs() function.
+</p>
+
+<div class="highlight"><pre><span></span>mod.ord <span class="o">&lt;-</span> lrm<span class="p">(</span>Y <span class="o">~</span> age<span class="o">+</span>rcs<span class="p">(</span>lac<span class="p">,</span><span class="m">4</span><span class="p">)</span><span class="o">*</span>sex<span class="p">)</span>
+fun2 <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> plogis<span class="p">(</span>x<span class="o">-</span>mod.ord<span class="o">$</span>coef<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">+</span>mod.ord<span class="o">$</span>coef<span class="p">[</span><span class="m">2</span><span class="p">])</span>
+fun3 <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> plogis<span class="p">(</span>x<span class="o">-</span>mod.ord<span class="o">$</span>coef<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">+</span>mod.ord<span class="o">$</span>coef<span class="p">[</span><span class="m">3</span><span class="p">])</span>
+f <span class="o">&lt;-</span> Newlabels<span class="p">(</span>mod.ord<span class="p">,</span> <span class="kt">c</span><span class="p">(</span>age<span class="o">=</span><span class="s">'Age in Years'</span><span class="p">))</span>
+nom.ord <span class="o">&lt;-</span> nomogram<span class="p">(</span>f<span class="p">,</span> fun<span class="o">=</span><span class="kt">list</span><span class="p">(</span><span class="s">'Prob Y&gt;=1'</span><span class="o">=</span>plogis<span class="p">,</span>
+			       <span class="s">'Prob Y&gt;=2'</span><span class="o">=</span>fun2<span class="p">,</span>
+			       <span class="s">'Prob Y=3'</span><span class="o">=</span>fun3<span class="p">),</span>
+		   lp<span class="o">=</span><span class="bp">F</span><span class="p">,</span>
+		   fun.at<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">.01</span><span class="p">,</span><span class="m">.05</span><span class="p">,</span><span class="kp">seq</span><span class="p">(</span><span class="m">.1</span><span class="p">,</span><span class="m">.9</span><span class="p">,</span>by<span class="o">=</span><span class="m">.1</span><span class="p">),</span><span class="m">.95</span><span class="p">,</span><span class="m">.99</span><span class="p">))</span>
+plot<span class="p">(</span>nom.ord<span class="p">,</span> lmgp<span class="o">=</span><span class="m">.2</span><span class="p">,</span> cex.axis<span class="o">=</span><span class="m">.6</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="figure">
+<p><img src="img/Nomograph-rms-8.png" alt="Nomograph-rms-8.png"></p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-4" class="outline-3">
+<h3 id="sec-4-4">Nomogram for survival data</h3>
+<div class="outline-text-3" id="text-4-4">
+<div class="highlight"><pre><span></span><span class="kn">library</span><span class="p">(</span>survival<span class="p">)</span>
+lung<span class="o">$</span>sex<span class="o">&lt;-</span><span class="kp">factor</span><span class="p">(</span>lung<span class="o">$</span>sex<span class="p">,</span>labels<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="s">'male'</span><span class="p">,</span><span class="s">'female'</span><span class="p">))</span>
+mod.sur <span class="o">&lt;-</span> psm<span class="p">(</span>Surv<span class="p">(</span>time<span class="p">,</span>status<span class="p">)</span> <span class="o">~</span> ph.ecog<span class="o">+</span>sex<span class="o">+</span>age<span class="p">,</span> lung<span class="p">,</span> dist<span class="o">=</span><span class="s">'weibull'</span><span class="p">)</span>
+med <span class="o">&lt;-</span> Quantile<span class="p">(</span>mod.sur<span class="p">)</span>
+surv <span class="o">&lt;-</span> Survival<span class="p">(</span>mod.sur<span class="p">)</span>
+ddist <span class="o">&lt;-</span> datadist<span class="p">(</span>lung<span class="p">)</span>
+<span class="kp">options</span><span class="p">(</span>datadist<span class="o">=</span><span class="s">'ddist'</span><span class="p">)</span>
+nom.sur1<span class="o">&lt;-</span>nomogram<span class="p">(</span>mod.sur<span class="p">,</span> fun<span class="o">=</span><span class="kt">list</span><span class="p">(</span><span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> med<span class="p">(</span>lp<span class="o">=</span>x<span class="p">,</span> q<span class="o">=</span><span class="m">0.5</span><span class="p">),</span>
+				    <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> med<span class="p">(</span>lp<span class="o">=</span>x<span class="p">,</span>q<span class="o">=</span><span class="m">0.25</span><span class="p">)),</span>
+		  funlabel<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="s">"Median Survival Time"</span><span class="p">,</span> <span class="s">"1Q Survival Time"</span><span class="p">),</span>
+		  lp<span class="o">=</span><span class="bp">F</span><span class="p">)</span>
+plot<span class="p">(</span>nom.sur1<span class="p">,</span> fun.side<span class="o">=</span><span class="kt">list</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="kp">rep</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">7</span><span class="p">),</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">),</span><span class="kp">rep</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">7</span><span class="p">)),</span> col.grid <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">"red"</span><span class="p">,</span><span class="s">"green"</span><span class="p">))</span>
+</pre></div>
+
+
+<div class="figure">
+<p><img src="img/Nomograph-rms-9.png" alt="Nomograph-rms-9.png"></p>
+</div>
+
+<div class="highlight"><pre><span></span><span class="kn">library</span><span class="p">(</span>survival<span class="p">)</span>
+lung<span class="o">$</span>sex<span class="o">&lt;-</span><span class="kp">factor</span><span class="p">(</span>lung<span class="o">$</span>sex<span class="p">,</span>labels<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="s">'male'</span><span class="p">,</span><span class="s">'female'</span><span class="p">))</span>
+mod.sur <span class="o">&lt;-</span> psm<span class="p">(</span>Surv<span class="p">(</span>time<span class="p">,</span>status<span class="p">)</span> <span class="o">~</span> ph.ecog<span class="o">+</span>sex<span class="o">+</span>age<span class="p">,</span> lung<span class="p">,</span> dist<span class="o">=</span><span class="s">'weibull'</span><span class="p">)</span>
+med <span class="o">&lt;-</span> Quantile<span class="p">(</span>mod.sur<span class="p">)</span>
+surv <span class="o">&lt;-</span> Survival<span class="p">(</span>mod.sur<span class="p">)</span>
+ddist <span class="o">&lt;-</span> datadist<span class="p">(</span>lung<span class="p">)</span>
+<span class="kp">options</span><span class="p">(</span>datadist<span class="o">=</span><span class="s">'ddist'</span><span class="p">)</span>
+nom.sur2 <span class="o">&lt;-</span> nomogram<span class="p">(</span>mod.sur<span class="p">,</span> fun<span class="o">=</span><span class="kt">list</span><span class="p">(</span><span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> surv<span class="p">(</span><span class="m">200</span><span class="p">,</span> x<span class="p">),</span>
+				      <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> surv<span class="p">(</span><span class="m">400</span><span class="p">,</span> x<span class="p">)),</span>
+		    funlabel<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="s">"200-Day Survival Probability"</span><span class="p">,</span> <span class="s">"400-Day Survival Probability"</span><span class="p">),</span>
+		    lp<span class="o">=</span><span class="bp">F</span><span class="p">)</span>
+plot<span class="p">(</span>nom.sur2<span class="p">,</span>
+     fun.side<span class="o">=</span><span class="kt">list</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="kp">rep</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">),</span><span class="m">5</span><span class="p">),</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">),</span>
+		   <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="kp">rep</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="m">6</span><span class="p">))),</span> xfrac<span class="o">=</span><span class="m">.7</span><span class="p">,</span> col.grid <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">"red"</span><span class="p">,</span><span class="s">"green"</span><span class="p">))</span>
+</pre></div>
+
+
+<div class="figure">
+<p><img src="img/Nomograph-rms-10.png" alt="Nomograph-rms-10.png"></p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-5" class="outline-3">
+<h3 id="sec-4-5">Nomogram for semiparametric survival models</h3>
+<div class="outline-text-3" id="text-4-5">
+<div class="highlight"><pre><span></span>mod.cox <span class="o">&lt;-</span> cph<span class="p">(</span>Surv<span class="p">(</span>time<span class="p">,</span>status<span class="p">)</span> <span class="o">~</span> ph.ecog<span class="o">+</span>sex<span class="o">+</span>age<span class="p">,</span> lung<span class="p">,</span> surv<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+surv.cox <span class="o">&lt;-</span> Survival<span class="p">(</span>mod.cox<span class="p">)</span>
+nom.cox <span class="o">&lt;-</span> nomogram<span class="p">(</span>mod.cox<span class="p">,</span> fun<span class="o">=</span><span class="kt">list</span><span class="p">(</span><span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> surv.cox<span class="p">(</span><span class="m">200</span><span class="p">,</span> x<span class="p">),</span>
+				     <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> surv.cox<span class="p">(</span><span class="m">400</span><span class="p">,</span> x<span class="p">)),</span>
+		   funlabel<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="s">"200-Day Sur. Prob."</span><span class="p">,</span> <span class="s">"400-Day Sur. Prob."</span><span class="p">),</span>
+		   lp<span class="o">=</span><span class="bp">F</span><span class="p">)</span>
+plot<span class="p">(</span>nom.cox<span class="p">,</span>
+fun.side<span class="o">=</span><span class="kt">list</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="kp">rep</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">),</span><span class="m">5</span><span class="p">),</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">),</span>
+	      <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="kp">rep</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="m">6</span><span class="p">))))</span>
+</pre></div>
+
+
+<div class="figure">
+<p><img src="img/Nomograph-rms-11.png" alt="Nomograph-rms-11.png"></p>
+</div>
+</div>
 </div>
 </div>
 

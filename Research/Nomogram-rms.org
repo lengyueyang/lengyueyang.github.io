@@ -287,9 +287,173 @@ n=228  B=230  u=365 Day
 #+RESULTS: Nomograph-rms-6
 [[file:img/Nomograph-rms-6.png]]
 
+
 * 重现文章中的例子 cite:zhang-2017-drawin-nomog 
 
 ** Worked example
+
+#+BEGIN_SRC R :session rms :results output :exports both
+
+  n <- 1000
+  set.seed(88) # set seed for replication
+  age <- rnorm(n, 65, 11)
+  lac <- round(abs(rnorm(n, 3, 1)),1)
+  sex <- factor(sample(1:2,n,prob=c(0.6,0.4),TRUE), labels=c('male','female'))
+  shock <- factor(sample(1:4,n,prob=c(0.3,0.3,0.25,0.15), TRUE), labels=c('no','mild','moderate','severe'))
+
+  # linear combination with a bias
+  z <- 0.2*age + 3*lac* as.numeric(sex)+ 5*as.numeric(shock) - rnorm(n,36,15)
+
+  y <- ifelse(runif(n) <= plogis(z), 1, 0)
+
+  Y <- ifelse(y==0, 0, sample(1:3, length(y), TRUE))
+
+  data <- data.frame(age=age,lac=lac,sex=sex,shock=shock,y=y,Y=Y)
+
+  var.labels = c(age="Age in Years",
+                 lac="lactate",
+                 sex="Sex of the participant",
+                 shock="shock",
+                 y="outcome",
+                 Y="ordinal")
+
+  label(data) = lapply(names(var.labels), function(x) label(data[,x]) = var.labels[x])
+  head(data)
+#+END_SRC
+
+#+RESULTS:
+: Error in label(data[, x]) = var.labels[x] (from #1) : 
+:   could not find function "label<-"
+:        age lac    sex  shock y Y
+: 1 62.51119 2.4   male     no 0 0
+: 2 72.11227 2.9   male     no 0 0
+: 3 90.80664 1.8 female     no 1 1
+: 4 44.69819 3.8   male   mild 0 0
+: 5 70.05660 2.1   male severe 0 0
+: 6 66.36159 3.6 female     no 1 2
+
+** Nomogram for binary outcome
+
+#+NAME: Nomograph-rms-7
+#+BEGIN_SRC R :session rms :exports both :results output graphics :file img/Nomograph-rms-7.png
+  library(rms)
+  ddist <- datadist(data)
+  options(datadist='ddist')
+  mod.bi1 <- lrm(y~shock+lac*sex+age,data)
+  nom.bi <- nomogram(mod.bi1, lp.at=seq(-3,4,by=0.5),
+                     fun=function(x)1/(1+exp(-x)),
+                     fun.at=c(.001,.01,.05,seq(.1,.9,by=.1),.95,.99,.999),
+                     funlabel="Risk of Death",
+                     conf.int=c(0.1,0.7),
+                     abbrev=TRUE,
+                     minlength=1,lp=F)
+
+  plot(nom.bi,lplabel="Linear Predictor",
+       fun.side=c(3,3,1,1,3,1,3,1,1,1,1,1,3),
+       col.conf=c('red','green'),
+       conf.space=c(0.1,0.5),
+       label.every=3,
+       col.grid = gray(c(0.8, 0.95)),
+       which="shock")
+
+  legend.nomabbrev(nom.bi, which='shock', x=.5, y=.5)
+#+END_SRC
+
+#+RESULTS: Nomograph-rms-7
+[[file:img/Nomograph-rms-7.png]]
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-01-30 23:07:03
+[[file:img/Statistic analysis/screenshot_2018-01-30_23-07-03.png]]
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-01-30 23:07:24
+[[file:img/Statistic analysis/screenshot_2018-01-30_23-07-24.png]]
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-01-30 23:09:13
+[[file:img/Statistic analysis/screenshot_2018-01-30_23-09-13.png]]
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-01-30 23:09:26
+[[file:img/Statistic analysis/screenshot_2018-01-30_23-09-26.png]]
+
+** Nomogram for ordinal outcome variable
+
+Ordinal logistic regression is a type of logistic regression that deals with dependent variables that are ordinal—that is, there are multiple response levels and they have a specific order, but no exact spacing between the levels. In the example, the variable Y contains four levels. Similarly to the binary logistic regression model, ordinal model can be fit with lrm() function. In the model, an interaction between sex and lac is included. Furthermore, the variable lac takes a linear tail-restricted cubic spline function by using rcs() function.
+
+#+NAME: Nomograph-rms-8
+#+BEGIN_SRC R :session rms :exports both :results output graphics :file img/Nomograph-rms-8.png
+  mod.ord <- lrm(Y ~ age+rcs(lac,4)*sex)
+  fun2 <- function(x) plogis(x-mod.ord$coef[1]+mod.ord$coef[2])
+  fun3 <- function(x) plogis(x-mod.ord$coef[1]+mod.ord$coef[3])
+  f <- Newlabels(mod.ord, c(age='Age in Years'))
+  nom.ord <- nomogram(f, fun=list('Prob Y>=1'=plogis,
+                                 'Prob Y>=2'=fun2,
+                                 'Prob Y=3'=fun3),
+                     lp=F,
+                     fun.at=c(.01,.05,seq(.1,.9,by=.1),.95,.99))
+  plot(nom.ord, lmgp=.2, cex.axis=.6)
+#+END_SRC
+
+#+RESULTS: Nomograph-rms-8
+[[file:img/Nomograph-rms-8.png]]
+
+** Nomogram for survival data
+
+#+NAME: Nomograph-rms-9
+#+BEGIN_SRC R :session rms :exports both :results output graphics :file img/Nomograph-rms-9.png
+  library(survival)
+  lung$sex<-factor(lung$sex,labels=c('male','female'))
+  mod.sur <- psm(Surv(time,status) ~ ph.ecog+sex+age, lung, dist='weibull')
+  med <- Quantile(mod.sur)
+  surv <- Survival(mod.sur)
+  ddist <- datadist(lung)
+  options(datadist='ddist')
+  nom.sur1<-nomogram(mod.sur, fun=list(function(x) med(lp=x, q=0.5),
+                                      function(x) med(lp=x,q=0.25)),
+                    funlabel=c("Median Survival Time", "1Q Survival Time"),
+                    lp=F)
+  plot(nom.sur1, fun.side=list(c(rep(1,7),3,1,3,1,3),rep(1,7)), col.grid = c("red","green"))
+#+END_SRC
+
+#+RESULTS: Nomograph-rms-9
+[[file:img/Nomograph-rms-9.png]]
+
+#+NAME: Nomograph-rms-10
+#+BEGIN_SRC R :session rms :exports both :results output graphics :file img/Nomograph-rms-10.png
+  library(survival)
+  lung$sex<-factor(lung$sex,labels=c('male','female'))
+  mod.sur <- psm(Surv(time,status) ~ ph.ecog+sex+age, lung, dist='weibull')
+  med <- Quantile(mod.sur)
+  surv <- Survival(mod.sur)
+  ddist <- datadist(lung)
+  options(datadist='ddist')
+  nom.sur2 <- nomogram(mod.sur, fun=list(function(x) surv(200, x),
+                                        function(x) surv(400, x)),
+                      funlabel=c("200-Day Survival Probability", "400-Day Survival Probability"),
+                      lp=F)
+  plot(nom.sur2,
+       fun.side=list(c(rep(c(1,3),5),1,1,1,1),
+                     c(1,1,1,rep(c(3,1),6))), xfrac=.7, col.grid = c("red","green"))
+
+#+END_SRC
+
+#+RESULTS: Nomograph-rms-10
+[[file:img/Nomograph-rms-10.png]]
+
+** Nomogram for semiparametric survival models
+
+#+NAME: Nomograph-rms-11
+#+BEGIN_SRC R :session rms :exports both :results output graphics :file img/Nomograph-rms-11.png
+  mod.cox <- cph(Surv(time,status) ~ ph.ecog+sex+age, lung, surv=TRUE)
+  surv.cox <- Survival(mod.cox)
+  nom.cox <- nomogram(mod.cox, fun=list(function(x) surv.cox(200, x),
+                                       function(x) surv.cox(400, x)),
+                     funlabel=c("200-Day Sur. Prob.", "400-Day Sur. Prob."),
+                     lp=F)
+  plot(nom.cox,
+  fun.side=list(c(rep(c(1,3),5),1,1,1,1),
+                c(1,1,1,rep(c(3,1),6))))
+
+#+END_SRC
+
+#+RESULTS: Nomograph-rms-11
+[[file:img/Nomograph-rms-11.png]]
 
 
 * Creative Commons licensing
