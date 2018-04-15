@@ -1,5 +1,5 @@
 #+BEGIN_COMMENT
-.. title: Gentoo-software
+.. title: Gentoo 系统 - (二) 软件配置及系统更新
 .. slug: gentoo-software
 .. date: 2018-04-15 18:09:58 UTC+08:00
 .. tags: draft
@@ -9,5 +9,5 @@
 .. type: text
 #+END_COMMENT
 
+* github ssh 配置
 
-Write your post here.
