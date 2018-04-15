@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gentoo 系统 - (一)系统配置与安装 | 深度识医</title>
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+<link rel="canonical" href="https://lengyueyang.github.io/Life/gentoo-install.html">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><meta name="author" content="Lengyueyang">
+<link rel="prev" href="../Research/decision-curve-anaysis.html" title="Decision curve anaysis (决策曲线分析)" type="text/html">
+<meta property="og:site_name" content="深度识医">
+<meta property="og:title" content="Gentoo 系统 - (一)系统配置与安装">
+<meta property="og:url" content="https://lengyueyang.github.io/Life/gentoo-install.html">
+<meta property="og:description" content="Table of Contents
+
+
+写在前面
+制作安装媒介
+磁盘分区
+安装 stage3
+安装基础系统
+配置内核与系统
+配置引导工具和添加账户
+Gnome 安装与配置
+重启系统
+Creative Commons licensing
+
+
+
+
+
+
+写在前面
+
+
+细细算来, 使用 linux 已经 7,8 年了, 从最早的 ubuntu, deepin 开始, 到最后的 archlinux, 算是打">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2018-04-15T11:15:14+08:00">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://lengyueyang.github.io/">
+
+                <span id="blog-title">深度识医</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../posts/data-science/index.html">Data Science</a>
+                </li>
+<li>
+<a href="../posts/research/index.html">Research</a>
+                </li>
+<li>
+<a href="../posts/life/index.html">Life</a>
+                </li>
+<li>
+<a href="../categories/index.html">Tags</a>
+                </li>
+<li>
+<a href="../archive.html">Archives</a>
+                </li>
+<li>
+<a href="../pages/notes.html">Notes</a>
+                </li>
+<li>
+<a href="../pages/links.html">Links</a>
+                </li>
+<li>
+<a href="../pages/about.html">About</a>
+                </li>
+<li>
+<a href="https://github.com/lengyueyang">Github</a>
+                </li>
+<li>
+<a href="../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<!-- Google custom search --><form method="get" action="https://www.google.com/search" class="navbar-form navbar-right" role="search">
+<div class="form-group">
+<input type="text" name="q" class="form-control" placeholder="Search">
+</div>
+<button type="submit" class="btn btn-primary">
+	<span class="glyphicon glyphicon-search"></span>
+</button>
+<input type="hidden" name="sitesearch" value="https://lengyueyang.github.io/">
+</form>
+<!-- End of custom search -->
+
+
+            <ul class="nav navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Gentoo 系统 - (一)系统配置与安装</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                    Lengyueyang
+            </span></p>
+            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2018-04-15T11:15:14+08:00" itemprop="datePublished" title="2018-04-15 11:15">2018-04-15 11:15</time></a></p>
+                <p class="commentline">
+        
+    <a href="gentoo-install.html#disqus_thread" data-disqus-identifier="cache/posts/Life/gentoo-install.html">Comments</a>
+
+
+            
+
+        </p>
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="gentoo-install.html#sec-1">写在前面</a></li>
+<li><a href="gentoo-install.html#sec-2">制作安装媒介</a></li>
+<li><a href="gentoo-install.html#sec-3">磁盘分区</a></li>
+<li><a href="gentoo-install.html#sec-4">安装 stage3</a></li>
+<li><a href="gentoo-install.html#sec-5">安装基础系统</a></li>
+<li><a href="gentoo-install.html#sec-6">配置内核与系统</a></li>
+<li><a href="gentoo-install.html#sec-7">配置引导工具和添加账户</a></li>
+<li><a href="gentoo-install.html#sec-8">Gnome 安装与配置</a></li>
+<li><a href="gentoo-install.html#sec-9">重启系统</a></li>
+<li><a href="gentoo-install.html#sec-10">Creative Commons licensing</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">写在前面</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+细细算来, 使用 linux 已经 7,8 年了, 从最早的 ubuntu, deepin 开始, 到最后的 archlinux, 算是打造了自己的系统. 但是 ubuntu, deepin 可定制性比较差, archlinux 更新大量包时容易挂掉, 都不算是心目中最理想的系统.
+</p>
+
+<p>
+gentoo 在最开始用 linux 系统的时候就知道了, 当时有一段时间也尝试给笔记本安装 gentoo, 但是由于当时时间有限, 折腾了一周没有安装好, 就放弃了, 之后一直用 archlinux. 以后准备从事 NPL 和知识图谱方面的工作, 最近配了一台深度学习机, 从头开始安装 gentoo 系统, 进行个人配置, 共撰写三篇博客记录 gentoo 折腾过程, 这篇博客主要记录 gentoo 系统安装和配置过程, 后续还有软件安装配置和 gentoo 学习体会.
+</p>
+
+<!-- TEASER_END -->
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">制作安装媒介</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+启用使用 UEFI 安装, 因此下载 liveDVD, 参照选择正确的安装媒介<sup><a id="fnr.1" name="fnr.1" class="footref" href="gentoo-install.html#fn.1">1</a></sup>, 这里需要注意两点:
+</p>
+<ol class="org-ol">
+<li>在 windows 下制作 linux UEFI, 用 Rufus U 盘工具<sup><a id="fnr.2" name="fnr.2" class="footref" href="gentoo-install.html#fn.2">2</a></sup>
+</li>
+<li>gentoo liveDVD 默认登录密码是: <code>gentoo</code>, 登录后, 在终端调输入 <code>sudo su -</code> 或者 <code>sudo -i</code> 来获取所需权限.
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">磁盘分区</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+选用 parted 进行分区, 默认选用 GPT 分区表
+</p>
+
+<p>
+按照下表格进行分区
+</p>
+
+<table id="tab:disk-parted-table" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above">
+<span class="table-number">Table 1:</span> 磁盘分区表</caption>
+
+<colgroup>
+<col class="left">
+<col class="left">
+<col class="left">
+</colgroup>
+<tbody>
+<tr>
+<td class="left">分区</td>
+<td class="left">文件系统</td>
+<td class="left">大小</td>
+</tr>
+<tr>
+<td class="left">/dev/sdb1</td>
+<td class="left">(bootloader)</td>
+<td class="left">200M</td>
+</tr>
+<tr>
+<td class="left">/dev/sdb2</td>
+<td class="left">fat32</td>
+<td class="left">1024M</td>
+</tr>
+<tr>
+<td class="left">/dev/sdb3</td>
+<td class="left">swap</td>
+<td class="left">32G</td>
+</tr>
+<tr>
+<td class="left">/dev/sdb4</td>
+<td class="left">ext4</td>
+<td class="left">200G</td>
+</tr>
+<tr>
+<td class="left">/deb/sda1</td>
+<td class="left">ext4</td>
+<td class="left">2T</td>
+</tr>
+</tbody>
+</table>
+<p>
+这里注意:
+</p>
+<ol class="org-ol">
+<li>使用 UEFI 进行引导的分区, 需格式化成 fat32.
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">安装 stage3</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+使用有线网进行安装, liveDVD 进入后, 网络可以直接连接
+</p>
+
+<p>
+用 USB 2.0 端口启动 U 盘进行安装, 3.0 不能进入
+</p>
+
+
+<div class="highlight"><pre><span></span># 获取管理员权限
+sudo -i
+
+# 挂载 root 分区
+mount /dev/sdb4 /mnt/gentoo
+
+# 切换到 gentoo 目录
+cd /mnt/gentoo
+
+# 选择合适的 stage3 镜像, 获取地址并下载 https://www.gentoo.org/downloads/
+wget &lt;URL&gt;
+
+# 解压下载文件
+tar xpf stage3-*.tar.{bz2,xz} --xattrs-include='*.*' --numeric-owner
+
+# 修改编译选项, 为后续安装 gnome, 修改 USE 选项如下
+nano -w /etc/portage/make.conf
+USE="-qt4 -qt5 -kde X gtk gnome systemd cjk gnome-keyring ipv6 libnotify \
+     networkmanager zsh-completion wifi alsa pulseaudio"
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">安装基础系统</h2>
+<div class="outline-text-2" id="text-5">
+<div class="highlight"><pre><span></span># 选择镜像, 选择中国 163 源
+cd
+mirrorselect -i -o &gt;&gt; /mnt/gentoo/etc/portage/make.conf
+
+# 创建 Gentoo ebuild 仓库, 复制 DNS 信息
+mkdir /mnt/gentoo/etc/portage/repos.conf
+cp /mnt/gentoo/usr/share/portage/config/repos.conf /mnt/gentoo/etc/portage/repos.conf/gentoo.conf
+cp -L /etc/resolv.conf /mnt/gentoo/etc/
+
+# 挂载必要的文件系统
+mount -t proc /proc /mnt/gentoo/proc
+mount --rbind /sys /mnt/gentoo/sys
+mount --make-rslave /mnt/gentoo/sys
+mount --rbind /dev /mnt/gentoo/dev
+mount --make-rslave /mnt/gentoo/dev 
+
+# 进入新环境, 并关在 boot 分区
+chroot /mnt/gentoo /bin/bash &amp;&amp; source /etc/profile &amp;&amp; export PS1="(chroot) $PS1"
+mkdir /boot
+mount /dev/sdb2 /boot
+
+# 更新 Portage ebuild 数据库, emerge-webrsync 更新最近 24 小时的, 节省带宽, emrege-sync 更新 1h 的
+emrege-webrsync
+emerge --sync
+
+# 可以通过 eselect news list/read 查看 rsync 的消息
+
+# 通过 eselect profile list/set 选择 profile,选择最近稳定版的 linux-gnome-system
+eselect profile list
+eselect profile set 18
+
+# 更新@world
+emerge --ask --update --deep --newuse @world
+
+# 更新时区
+ls /usr/share/zoneinfo
+echo "Asia/Shanghai" &gt; /etc/timezone
+emerge --config sys-libs/timezone-data
+
+# 配置地区
+nano -w /etc/locale.gen
+en_US ISO-8859-1
+en_US.UTF-8 UTF-8
+#ja_JP.EUC-JP EUC-JP
+#ja_JP.UTF-8 UTF-8
+#ja_JP EUC-JP
+#en_HK ISO-8859-1
+#en_PH ISO-8859-1
+#de_DE ISO-8859-1
+#de_DE@euro ISO-8859-15
+#es_MX ISO-8859-1
+#fa_IR UTF-8
+#fr_FR ISO-8859-1
+#fr_FR@euro ISO-8859-15
+#it_IT ISO-8859-1
+zh_CN.GB18030 GB18030
+zh_CN.GBK GBK
+zh_CN.UTF-8 UTF-8
+zh_CN GB2312
+zh_TW.UTF-8 UTF-8
+
+locale-gen
+eselect locale list
+eselect locale set 2
+
+# 重现加载环境
+env-update &amp;&amp; source /etc/profile &amp;&amp; export PS1="(chroot) $PS1"
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6">配置内核与系统</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+选用自动配置方法
+</p>
+
+
+<div class="highlight"><pre><span></span># 配置内核
+emerge --ask sys-kernel/gentoo-sources
+emerge --ask sys-kernel/genkernel
+nano -w /etc/fstab
+/dev/sdb2     /boot   vfat    defaults        0 2
+
+genkernel all
+ls /boot/kernel* /boot/initramfs*
+
+# 安装固件
+emerge --ask sys-kernel/linux-firmware
+
+# 配置文件系统信息
+nano -w /etc/fstab
+/dev/sdb2     /boot   vfat    defaults,noatime        0 2
+/dev/sdb3     none    swap    sw              0 0
+/dev/sdb4     /       ext4    noatime,defaults,discard        0 1
+/dev/sda1     /media/data     ext4    noatime,rw      0 2
+
+/dev/cdrom  /mnt/cdrom   auto    noauto,user          0 0
+
+# 配置主机名
+nano -w /etc/conf.d/hostname
+hostname="tux"
+
+# 安装日志工具, 文件系统工具, 网络工具
+emerge --ask app-admin/sysklogd
+emerge --ask sys-fs/dosfstools
+emerge --ask net-misc/dhcpcd
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7">配置引导工具和添加账户</h2>
+<div class="outline-text-2" id="text-7">
+<div class="highlight"><pre><span></span># 安装 grub2 引导工具
+echo 'GRUB_PLATFORMS="efi-64"' &gt;&gt; /etc/portage/make.conf
+emerge --ask sys-boot/grub:2
+grub-install --target=x86_64-efi --efi-directory=/boot
+
+# 配置 grub2
+grub-mkconfig -o /boot/grub/grub.cfg
+
+# 设置管理员账户密码, 添加账户 lengyue 并设置密码
+passwd
+useradd -m -G users,wheel,audio,video,cdrom,portage -s /bin/bash lengyue
+passwd lengyue
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8">Gnome 安装与配置</h2>
+<div class="outline-text-2" id="text-8">
+<div class="highlight"><pre><span></span># 安装 startx
+emerge --ask --verbose x11-base/xorg-drivers
+emerge --ask x11-base/xorg-server
+echo "exec gnome-session" &gt; ~/.xinitrc
+
+# Gnome 启动画面加入 gentoo 图标
+echo "gnome-base/gnome-session branding" &gt;&gt; /etc/portage/package.use
+
+# 安装 gnome
+emerge --ask gnome-base/gnome
+
+# 更新环境
+env-update &amp;&amp; source /etc/profile
+
+# GDM 服务开机启动
+systemctl enable gdm.service
+
+# 安装网卡管理程序
+emerge --ask net-misc/networkmanager
+systemctl enable NetworkManager
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-sec-9" class="outline-2">
+<h2 id="sec-9">重启系统</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+按照上述配置, 没有问题可以登录新系统了, 并且有 <code>lengyue</code> 账户
+</p>
+
+<div class="highlight"><pre><span></span># 退出系统并重现登录
+exit
+cd
+umount -l /mnt/gentoo/dev{/shm,/pts,}
+umount -R /mnt/gentoo
+reboot
+</pre></div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-10" class="outline-2">
+<h2 id="sec-10">Creative Commons licensing</h2>
+<div class="outline-text-2" id="text-10">
+<blockquote>
+<p>
+TITLE:  Gentoo 系统 - (一) 系统配置与安装<br>
+AUTHOR: lengyueyang <br>
+DATE: 2018-04-15 11:15:14 UTC+08:00<br>
+UPDATED: <br>
+LICENSE: The blog is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>, commercial use is not allowed, for any reprint, please indicate address and signature.
+</p>
+</blockquote>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef">
+<sup><a id="fn.1" name="fn.1" class="footnum" href="gentoo-install.html#fnr.1">1</a></sup><p class="footpara">
+<a href="https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Media/zh-cn">https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Media/zh-cn</a>
+</p>
+</div>
+
+<div class="footdef">
+<sup><a id="fn.2" name="fn.2" class="footnum" href="gentoo-install.html#fnr.2">2</a></sup><p class="footpara">
+<a href="https://rufus.akeo.ie/">https://rufus.akeo.ie/</a>
+</p>
+</div>
+
+
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../Research/decision-curve-anaysis.html" rel="prev" title="Decision curve anaysis (决策曲线分析)">Previous post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="lengyueyang",
+            disqus_url="https://lengyueyang.github.io/Life/gentoo-install.html",
+        disqus_title="Gentoo \u7cfb\u7edf - (\u4e00)\u7cfb\u7edf\u914d\u7f6e\u4e0e\u5b89\u88c5",
+        disqus_identifier="cache/posts/Life/gentoo-install.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="lengyueyang";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2018         <a href="mailto:maoxiaowei1988@qq.com">Lengyueyang</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a> and <a href="#" https: rel="nofollow">Org-mode</a>       
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+<img alt="Creative Commons License BY-NC-SA" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a>
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>
