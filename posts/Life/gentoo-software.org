@@ -1,0 +1,13 @@
+#+BEGIN_COMMENT
+.. title: Gentoo-software
+.. slug: gentoo-software
+.. date: 2018-04-15 18:09:58 UTC+08:00
+.. tags: draft
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+
+Write your post here.
