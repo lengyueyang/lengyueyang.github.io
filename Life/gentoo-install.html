@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gentoo 系统 - (一)系统配置与安装 | 深度识医</title>
+<title>Gentoo 系统 - (一) 系统配置与安装 | 深度识医</title>
 <link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
@@ -11,8 +11,9 @@
 <link rel="canonical" href="https://lengyueyang.github.io/Life/gentoo-install.html">
 <!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><meta name="author" content="Lengyueyang">
 <link rel="prev" href="../Research/decision-curve-anaysis.html" title="Decision curve anaysis (决策曲线分析)" type="text/html">
+<link rel="next" href="gentoo-software.html" title="Gentoo 系统 - (二) 软件设置及常用配置" type="text/html">
 <meta property="og:site_name" content="深度识医">
-<meta property="og:title" content="Gentoo 系统 - (一)系统配置与安装">
+<meta property="og:title" content="Gentoo 系统 - (一) 系统配置与安装">
 <meta property="og:url" content="https://lengyueyang.github.io/Life/gentoo-install.html">
 <meta property="og:description" content="Table of Contents
 
@@ -39,6 +40,8 @@ Creative Commons licensing
 细细算来, 使用 linux 已经 7,8 年了, 从最早的 ubuntu, deepin 开始, 到最后的 archlinux, 算是打">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2018-04-15T11:15:14+08:00">
+<meta property="article:tag" content="Gentoo">
+<meta property="article:tag" content="Install">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -118,7 +121,7 @@ Creative Commons licensing
         <div class="row">
             
             
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Gentoo 系统 - (一)系统配置与安装</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Gentoo 系统 - (一) 系统配置与安装</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
@@ -352,7 +355,7 @@ locale-gen
 eselect locale list
 eselect locale set 2
 
-# 重现加载环境
+# 重新加载环境
 env-update &amp;&amp; source /etc/profile &amp;&amp; export PS1="(chroot) $PS1"
 </pre></div>
 </div>
@@ -497,9 +500,16 @@ LICENSE: The blog is licensed under a <a href="http://creativecommons.org/licens
 </div>
 </div>
     </div>
-    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../categories/gentoo.html" rel="tag">Gentoo</a></li>
+            <li><a class="tag p-category" href="../categories/install.html" rel="tag">Install</a></li>
+        </ul>
+<ul class="pager hidden-print">
 <li class="previous">
                 <a href="../Research/decision-curve-anaysis.html" rel="prev" title="Decision curve anaysis (决策曲线分析)">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="gentoo-software.html" rel="next" title="Gentoo 系统 - (二) 软件设置及常用配置">Next post</a>
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
         
@@ -508,7 +518,7 @@ LICENSE: The blog is licensed under a <a href="http://creativecommons.org/licens
         <script>
         var disqus_shortname ="lengyueyang",
             disqus_url="https://lengyueyang.github.io/Life/gentoo-install.html",
-        disqus_title="Gentoo \u7cfb\u7edf - (\u4e00)\u7cfb\u7edf\u914d\u7f6e\u4e0e\u5b89\u88c5",
+        disqus_title="Gentoo \u7cfb\u7edf - (\u4e00) \u7cfb\u7edf\u914d\u7f6e\u4e0e\u5b89\u88c5",
         disqus_identifier="cache/posts/Life/gentoo-install.html",
         disqus_config = function () {
             this.language = "en";
