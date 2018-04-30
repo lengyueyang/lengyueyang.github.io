@@ -1,9 +1,9 @@
 #+BEGIN_COMMENT
-.. title: Gentoo 系统 - (一)系统配置与安装
+.. title: Gentoo 系统 - (一) 系统配置与安装
 .. slug: gentoo-install
 .. date: 2018-04-15 11:15:14 UTC+08:00
-.. tags: 
-.. category: 
+.. tags: Gentoo, Install
+.. category: GENTOO
 .. link: 
 .. description: 
 .. type: text
@@ -141,8 +141,9 @@ gentoo 在最开始用 linux 系统的时候就知道了, 当时有一段时间�
   eselect locale list
   eselect locale set 2
 
-  # 重现加载环境
+  # 重新加载环境
   env-update && source /etc/profile && export PS1="(chroot) $PS1"
+
 #+END_SRC
 
 * 配置内核与系统
@@ -202,7 +203,6 @@ gentoo 在最开始用 linux 系统的时候就知道了, 当时有一段时间�
 #+END_SRC
 
 * Gnome 安装与配置
-
 
 #+BEGIN_SRC screen
   # 安装 startx

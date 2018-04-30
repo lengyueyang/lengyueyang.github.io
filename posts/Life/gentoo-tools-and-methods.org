@@ -1,5 +1,5 @@
 #+BEGIN_COMMENT
-.. title: Gentoo 系统 - (一) 系统使用方法
+.. title: Gentoo 系统 - (三) 系统使用方法
 .. slug: gentoo-tools-and-methods
 .. date: 2018-04-15 18:10:42 UTC+08:00
 .. tags: draft
