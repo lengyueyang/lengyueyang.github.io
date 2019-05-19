@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Academic</title>
+    <link>/</link>
+    <description>Recent content on Academic</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 19 May 2019 22:05:22 +0800</lastBuildDate>
+    
+	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Test</title>
+      <link>/post/test/</link>
+      <pubDate>Sun, 19 May 2019 22:05:22 +0800</pubDate>
+      
+      <guid>/post/test/</guid>
+      <description>
+
+&lt;h1 id=&#34;tesxt&#34;&gt;tesxt&lt;/h1&gt;
+
+&lt;p&gt;xxx&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
