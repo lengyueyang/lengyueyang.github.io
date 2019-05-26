@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Author on lengyueyang’s blog</title>
+    <link>http://localhost:1313/author/</link>
+    <description>Recent content in Author on lengyueyang’s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>lengyueyang @ 2015-2019, emacs orgmode</copyright>
+    <lastBuildDate>Thu, 01 Mar 2018 16:01:23 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/author/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>xianmin</title>
+      <link>http://localhost:1313/author/xianmin/</link>
+      <pubDate>Thu, 01 Mar 2018 16:01:23 +0800</pubDate>
+      
+      <guid>http://localhost:1313/author/xianmin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Michael Henderson</title>
+      <link>http://localhost:1313/author/michael-henderson/</link>
+      <pubDate>Thu, 31 Aug 2017 15:43:48 +0800</pubDate>
+      
+      <guid>http://localhost:1313/author/michael-henderson/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ted</title>
+      <link>http://localhost:1313/author/ted/</link>
+      <pubDate>Wed, 30 Aug 2017 15:43:48 +0800</pubDate>
+      
+      <guid>http://localhost:1313/author/ted/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
