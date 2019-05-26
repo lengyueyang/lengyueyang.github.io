@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://lengyueyang.github.io/zh-cn/sitemap.xml
+Sitemap: https://lengyueyang.github.io/sitemap.xml

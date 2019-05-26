@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>xianmin on lengyueyang’s blog</title>
-    <link>https://lengyueyang.github.io/zh-cn/author/xianmin/</link>
+    <link>https://lengyueyang.github.io/author/xianmin/</link>
     <description>Recent content in xianmin on lengyueyang’s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>lengyueyang @ 2015-2019, emacs orgmode</copyright>
     <lastBuildDate>Thu, 01 Mar 2018 16:01:23 +0800</lastBuildDate>
     
-	<atom:link href="https://lengyueyang.github.io/zh-cn/author/xianmin/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://lengyueyang.github.io/author/xianmin/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Jane-Theme Footnote Preview</title>
-      <link>https://lengyueyang.github.io/zh-cn/post/doc-footnote-preview/</link>
+      <link>https://lengyueyang.github.io/post/doc-footnote-preview/</link>
       <pubDate>Thu, 01 Mar 2018 16:01:23 +0800</pubDate>
       
-      <guid>https://lengyueyang.github.io/zh-cn/post/doc-footnote-preview/</guid>
+      <guid>https://lengyueyang.github.io/post/doc-footnote-preview/</guid>
       <description>&lt;p&gt;Hugo-theme-jane optimized for footnote. When you mouse hover the footnote&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:example&#34;&gt;&lt;a href=&#34;#fn:example&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; , footnote content will be displayed.&lt;/p&gt;</description>
     </item>
     

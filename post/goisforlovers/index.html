@@ -35,15 +35,11 @@ This document is a brief primer on using go templates." />
 <meta name="generator" content="Hugo 0.55.6" />
 
 
-<link rel="canonical" href="https://lengyueyang.github.io/zh-cn/post/goisforlovers/" />
+<link rel="canonical" href="https://lengyueyang.github.io/post/goisforlovers/" />
 
 
 
-<link rel="icon" href="/zh-cn/favicon.ico" />
-
-
-
-
+<link rel="icon" href="/favicon.ico" />
 
 
 
@@ -51,7 +47,11 @@ This document is a brief primer on using go templates." />
 
 
 
-<link rel="stylesheet" href="/zh-cn/sass/jane.min.ec807d8b802a40889537c26e014f733206312ea440d42e1f0dabed80918de1ac.css" integrity="sha256-7IB9i4AqQIiVN8JuAU9zMgYxLqRA1C4fDavtgJGN4aw=" media="screen" crossorigin="anonymous">
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.ec807d8b802a40889537c26e014f733206312ea440d42e1f0dabed80918de1ac.css" integrity="sha256-7IB9i4AqQIiVN8JuAU9zMgYxLqRA1C4fDavtgJGN4aw=" media="screen" crossorigin="anonymous">
 
 
 
@@ -61,7 +61,7 @@ This document is a brief primer on using go templates." />
 <meta property="og:description" content="Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
 This document is a brief primer on using go templates." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://lengyueyang.github.io/zh-cn/post/goisforlovers/" />
+<meta property="og:url" content="https://lengyueyang.github.io/post/goisforlovers/" />
 <meta property="article:published_time" content="2014-04-02T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2014-04-02T00:00:00&#43;00:00"/><meta property="og:site_name" content="lengyueyang’s blog" />
 
@@ -98,7 +98,7 @@ This document is a brief primer on using go templates."/>
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/zh-cn/" class="logo">lengyueyang’s blog</a>
+    <a href="/" class="logo">lengyueyang’s blog</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -112,7 +112,7 @@ This document is a brief primer on using go templates."/>
         
           
           
-            <a class="menu-item-link" href="https://lengyueyang.github.io/zh-cn/">Home</a>
+            <a class="menu-item-link" href="https://lengyueyang.github.io/">Home</a>
           
         
       </li><li class="mobile-menu-item">
@@ -120,22 +120,22 @@ This document is a brief primer on using go templates."/>
           
           <div class="mobile-menu-parent">
             <span class="mobile-submenu-open"></span>
-            <a href="https://lengyueyang.github.io/zh-cn/categories/docs/">
+            <a href="https://lengyueyang.github.io/categories/docs/">
               Docs
             </a>
           </div>
           <ul class="mobile-submenu-list">
             
               <li>
-                <a href="https://lengyueyang.github.io/zh-cn/post/shortcodes-preview/">Shortcodes Preview</a>
+                <a href="https://lengyueyang.github.io/post/shortcodes-preview/">Shortcodes Preview</a>
               </li>
             
               <li>
-                <a href="https://lengyueyang.github.io/zh-cn/post/image-preview/">Image Preview</a>
+                <a href="https://lengyueyang.github.io/post/image-preview/">Image Preview</a>
               </li>
             
               <li>
-                <a href="https://lengyueyang.github.io/zh-cn/post/syntax-highlighting/">Syntax Highlighting</a>
+                <a href="https://lengyueyang.github.io/post/syntax-highlighting/">Syntax Highlighting</a>
               </li>
             
           </ul>
@@ -144,28 +144,28 @@ This document is a brief primer on using go templates."/>
         
           
           
-            <a class="menu-item-link" href="https://lengyueyang.github.io/zh-cn/post/">Archives</a>
+            <a class="menu-item-link" href="https://lengyueyang.github.io/post/">Archives</a>
           
         
       </li><li class="mobile-menu-item">
         
           
           
-            <a class="menu-item-link" href="https://lengyueyang.github.io/zh-cn/tags/">Tags</a>
+            <a class="menu-item-link" href="https://lengyueyang.github.io/tags/">Tags</a>
           
         
       </li><li class="mobile-menu-item">
         
           
           
-            <a class="menu-item-link" href="https://lengyueyang.github.io/zh-cn/categories/">Categories</a>
+            <a class="menu-item-link" href="https://lengyueyang.github.io/categories/">Categories</a>
           
         
       </li><li class="mobile-menu-item">
         
           
           
-            <a class="menu-item-link" href="https://lengyueyang.github.io/zh-cn/about/">About</a>
+            <a class="menu-item-link" href="https://lengyueyang.github.io/about/">About</a>
           
         
       </li>
@@ -188,13 +188,13 @@ This document is a brief primer on using go templates."/>
           
             <li>
               
-                <a href="https://lengyueyang.github.io/zh-cn/"><strong>English</strong></a>
+                <a href="https://lengyueyang.github.io/"><strong>English</strong></a>
               
             </li>
           
             <li>
               
-                <a href="https://lengyueyang.github.io/zh-cn/zh-cn/">中文</a>
+                <a href="https://lengyueyang.github.io/zh-cn/">中文</a>
               
             </li>
           
@@ -212,8 +212,8 @@ This document is a brief primer on using go templates."/>
 
 
 
-  <link rel="stylesheet" href="/zh-cn/lib/photoswipe/photoswipe.min.css" />
-  <link rel="stylesheet" href="/zh-cn/lib/photoswipe/default-skin/default-skin.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
 
 
 
@@ -268,7 +268,7 @@ This document is a brief primer on using go templates."/>
 
   <header id="header" class="header container">
     <div class="logo-wrapper">
-  <a href="/zh-cn/" class="logo">
+  <a href="/" class="logo">
     
       lengyueyang’s blog
     
@@ -283,7 +283,7 @@ This document is a brief primer on using go templates."/>
         
           
           
-            <a class="menu-item-link" href="https://lengyueyang.github.io/zh-cn/">Home</a>
+            <a class="menu-item-link" href="https://lengyueyang.github.io/">Home</a>
           
 
         
@@ -293,19 +293,19 @@ This document is a brief primer on using go templates."/>
         <li class="menu-item">
         
           
-          <a class="menu-item-link menu-parent" href="https://lengyueyang.github.io/zh-cn/categories/docs/">Docs</a>
+          <a class="menu-item-link menu-parent" href="https://lengyueyang.github.io/categories/docs/">Docs</a>
           <ul class="submenu">
             
               <li>
-                <a href="https://lengyueyang.github.io/zh-cn/post/shortcodes-preview/">Shortcodes Preview</a>
+                <a href="https://lengyueyang.github.io/post/shortcodes-preview/">Shortcodes Preview</a>
               </li>
             
               <li>
-                <a href="https://lengyueyang.github.io/zh-cn/post/image-preview/">Image Preview</a>
+                <a href="https://lengyueyang.github.io/post/image-preview/">Image Preview</a>
               </li>
             
               <li>
-                <a href="https://lengyueyang.github.io/zh-cn/post/syntax-highlighting/">Syntax Highlighting</a>
+                <a href="https://lengyueyang.github.io/post/syntax-highlighting/">Syntax Highlighting</a>
               </li>
             
           </ul>
@@ -318,7 +318,7 @@ This document is a brief primer on using go templates."/>
         
           
           
-            <a class="menu-item-link" href="https://lengyueyang.github.io/zh-cn/post/">Archives</a>
+            <a class="menu-item-link" href="https://lengyueyang.github.io/post/">Archives</a>
           
 
         
@@ -329,7 +329,7 @@ This document is a brief primer on using go templates."/>
         
           
           
-            <a class="menu-item-link" href="https://lengyueyang.github.io/zh-cn/tags/">Tags</a>
+            <a class="menu-item-link" href="https://lengyueyang.github.io/tags/">Tags</a>
           
 
         
@@ -340,7 +340,7 @@ This document is a brief primer on using go templates."/>
         
           
           
-            <a class="menu-item-link" href="https://lengyueyang.github.io/zh-cn/categories/">Categories</a>
+            <a class="menu-item-link" href="https://lengyueyang.github.io/categories/">Categories</a>
           
 
         
@@ -351,7 +351,7 @@ This document is a brief primer on using go templates."/>
         
           
           
-            <a class="menu-item-link" href="https://lengyueyang.github.io/zh-cn/about/">About</a>
+            <a class="menu-item-link" href="https://lengyueyang.github.io/about/">About</a>
           
 
         
@@ -376,7 +376,7 @@ This document is a brief primer on using go templates."/>
           
             
               <li>
-                <a href="https://lengyueyang.github.io/zh-cn/zh-cn/">中文</a>
+                <a href="https://lengyueyang.github.io/zh-cn/">中文</a>
               </li>
             
           
@@ -402,9 +402,9 @@ This document is a brief primer on using go templates."/>
           2014-04-02
         </time>
         <div class="post-category">
-            <a href="https://lengyueyang.github.io/zh-cn/categories/development/"> Development </a>
-            <a href="https://lengyueyang.github.io/zh-cn/categories/golang/"> golang </a>
-            <a href="https://lengyueyang.github.io/zh-cn/categories/index/"> index </a>
+            <a href="https://lengyueyang.github.io/categories/development/"> Development </a>
+            <a href="https://lengyueyang.github.io/categories/golang/"> golang </a>
+            <a href="https://lengyueyang.github.io/categories/index/"> index </a>
             
           </div>
         <span class="more-meta"> 1559 words </span>
@@ -977,18 +977,18 @@ so, such as in this example:</p>
 
     <footer class="post-footer">
       <div class="post-tags">
-          <a href="https://lengyueyang.github.io/zh-cn/tags/go/">go</a>
-          <a href="https://lengyueyang.github.io/zh-cn/tags/golang/">golang</a>
-          <a href="https://lengyueyang.github.io/zh-cn/tags/templates/">templates</a>
-          <a href="https://lengyueyang.github.io/zh-cn/tags/themes/">themes</a>
-          <a href="https://lengyueyang.github.io/zh-cn/tags/development/">development</a>
+          <a href="https://lengyueyang.github.io/tags/go/">go</a>
+          <a href="https://lengyueyang.github.io/tags/golang/">golang</a>
+          <a href="https://lengyueyang.github.io/tags/templates/">templates</a>
+          <a href="https://lengyueyang.github.io/tags/themes/">themes</a>
+          <a href="https://lengyueyang.github.io/tags/development/">development</a>
           
         </div>
 
       
       <nav class="post-nav">
         
-          <a class="prev" href="/zh-cn/post/creating-a-new-theme/">
+          <a class="prev" href="/post/creating-a-new-theme/">
             
             <i class="iconfont">
               <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
@@ -1002,7 +1002,7 @@ so, such as in this example:</p>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         
-          <a class="next" href="/zh-cn/post/hugoisforlovers/">
+          <a class="next" href="/post/hugoisforlovers/">
             <span class="next-text nav-default">Getting Started with Hugo</span>
             <span class="prev-text nav-mobile">Next</span>
             
@@ -1043,7 +1043,7 @@ so, such as in this example:</p>
   <div id="disqus_thread"></div>
   <script type="text/javascript">
     var disqus_config = function () {
-      this.page.url = "https://lengyueyang.github.io/zh-cn/post/goisforlovers/";
+      this.page.url = "https://lengyueyang.github.io/post/goisforlovers/";
     };
     function load_disqus() {
       
@@ -1268,7 +1268,7 @@ so, such as in this example:</p>
     </a>
 
 
-<a href="https://lengyueyang.github.io/zh-cn/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+<a href="https://lengyueyang.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
     class="iconfont" title="rss" target="_blank">
     <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -1331,13 +1331,13 @@ so, such as in this example:</p>
     </div>
   </div>
   
-<script type="text/javascript" src="/zh-cn/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/zh-cn/lib/slideout/slideout-1.0.1.min.js"></script>
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
 
 
 
 
-<script type="text/javascript" src="/zh-cn/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
 
 
 
@@ -1345,9 +1345,9 @@ so, such as in this example:</p>
 
 
   
-    <script type="text/javascript" src="/zh-cn/js/load-photoswipe.js"></script>
-    <script type="text/javascript" src="/zh-cn/lib/photoswipe/photoswipe.min.js"></script>
-    <script type="text/javascript" src="/zh-cn/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
   
 
 

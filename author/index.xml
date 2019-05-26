@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Author on lengyueyang’s blog</title>
-    <link>https://lengyueyang.github.io/zh-cn/author/</link>
+    <link>https://lengyueyang.github.io/author/</link>
     <description>Recent content in Author on lengyueyang’s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>lengyueyang @ 2015-2019, emacs orgmode</copyright>
     <lastBuildDate>Thu, 01 Mar 2018 16:01:23 +0800</lastBuildDate>
     
-	<atom:link href="https://lengyueyang.github.io/zh-cn/author/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://lengyueyang.github.io/author/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>xianmin</title>
-      <link>https://lengyueyang.github.io/zh-cn/author/xianmin/</link>
+      <link>https://lengyueyang.github.io/author/xianmin/</link>
       <pubDate>Thu, 01 Mar 2018 16:01:23 +0800</pubDate>
       
-      <guid>https://lengyueyang.github.io/zh-cn/author/xianmin/</guid>
+      <guid>https://lengyueyang.github.io/author/xianmin/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Michael Henderson</title>
-      <link>https://lengyueyang.github.io/zh-cn/author/michael-henderson/</link>
+      <link>https://lengyueyang.github.io/author/michael-henderson/</link>
       <pubDate>Thu, 31 Aug 2017 15:43:48 +0800</pubDate>
       
-      <guid>https://lengyueyang.github.io/zh-cn/author/michael-henderson/</guid>
+      <guid>https://lengyueyang.github.io/author/michael-henderson/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ted</title>
-      <link>https://lengyueyang.github.io/zh-cn/author/ted/</link>
+      <link>https://lengyueyang.github.io/author/ted/</link>
       <pubDate>Wed, 30 Aug 2017 15:43:48 +0800</pubDate>
       
-      <guid>https://lengyueyang.github.io/zh-cn/author/ted/</guid>
+      <guid>https://lengyueyang.github.io/author/ted/</guid>
       <description></description>
     </item>
     
