@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>shortcodes on lengyueyang’s blog</title>
-    <link>http://localhost:1313/tags/shortcodes/</link>
+    <link>https://lengyueyang.github.io/zh-cn/tags/shortcodes/</link>
     <description>Recent content in shortcodes on lengyueyang’s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>lengyueyang @ 2015-2019, emacs orgmode</copyright>
     <lastBuildDate>Sun, 04 Mar 2018 16:01:23 +0800</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/shortcodes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://lengyueyang.github.io/zh-cn/tags/shortcodes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Shortcodes Preview</title>
-      <link>http://localhost:1313/post/shortcodes-preview/</link>
+      <link>https://lengyueyang.github.io/zh-cn/post/shortcodes-preview/</link>
       <pubDate>Sun, 04 Mar 2018 16:01:23 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/shortcodes-preview/</guid>
+      <guid>https://lengyueyang.github.io/zh-cn/post/shortcodes-preview/</guid>
       <description>&lt;h2 id=&#34;what-a-shortcode-is&#34;&gt;What a Shortcode is&lt;/h2&gt;
 
 &lt;p&gt;Hugo loves Markdown because of its simple content format, but there are times when Markdown falls short. Often, content authors are forced to add raw HTML (e.g., video &lt;code&gt;&amp;lt;iframes&amp;gt;&lt;/code&gt;) to Markdown content. We think this contradicts the beautiful simplicity of Markdown&amp;rsquo;s syntax.&lt;/p&gt;
@@ -32,10 +32,10 @@
     
     <item>
       <title>Image Preview</title>
-      <link>http://localhost:1313/post/image-preview/</link>
+      <link>https://lengyueyang.github.io/zh-cn/post/image-preview/</link>
       <pubDate>Sat, 03 Mar 2018 16:01:23 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/image-preview/</guid>
+      <guid>https://lengyueyang.github.io/zh-cn/post/image-preview/</guid>
       <description>&lt;p&gt;Thanks for &lt;a href=&#34;https://github.com/liwenyip/hugo-easy-gallery&#34;&gt;liwenyip/hugo-easy-gallery&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://github.com/xianmin/hugo-theme-jane/pull/48&#34;&gt;Zebradil · Pull Request #48&lt;/a&gt; .&lt;/p&gt;
 
 &lt;p&gt;Now, we could use &lt;code&gt;{{&amp;lt; gallery &amp;gt;}}&lt;/code&gt; shortcode in hugo-theme-jane.&lt;/p&gt;
@@ -55,10 +55,10 @@
     
     <item>
       <title>Shortcodes Notice Preview</title>
-      <link>http://localhost:1313/post/shortcode-notice/</link>
+      <link>https://lengyueyang.github.io/zh-cn/post/shortcode-notice/</link>
       <pubDate>Sat, 03 Mar 2018 16:01:23 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/shortcode-notice/</guid>
+      <guid>https://lengyueyang.github.io/zh-cn/post/shortcode-notice/</guid>
       <description>normal use Note example: 1 2 3 {{% notice note %}} A notice disclaimer {{% /notice %}} Result: 1 note A notice disclaimer You could custom title : 1 2 3 {{% notice note 笔记 %}} A notice disclaimer {{% /notice %}} 笔记 A notice disclaimer tip 1 2 3 {{% notice tip %}} A tip disclaimer {{% /tip %}} tip A tip disclaimer info 1 2 3</description>
     </item>
     
