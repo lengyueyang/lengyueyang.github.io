@@ -1,95 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<?xml-stylesheet type="text/xsl" href="https://lengyueyang.github.io/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
     <loc>https://lengyueyang.github.io/about/</loc>
     <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://lengyueyang.github.io/zh-cn/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lengyueyang.github.io/about/"
-                />
   </url>
   
   <url>
     <loc>https://lengyueyang.github.io/links/</loc>
     <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://lengyueyang.github.io/zh-cn/links/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lengyueyang.github.io/links/"
-                />
   </url>
   
   <url>
     <loc>https://lengyueyang.github.io/categories/</loc>
     <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://lengyueyang.github.io/zh-cn/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lengyueyang.github.io/categories/"
-                />
   </url>
   
   <url>
     <loc>https://lengyueyang.github.io/</loc>
     <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://lengyueyang.github.io/zh-cn/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lengyueyang.github.io/"
-                />
   </url>
   
   <url>
     <loc>https://lengyueyang.github.io/tags/</loc>
     <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://lengyueyang.github.io/zh-cn/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lengyueyang.github.io/tags/"
-                />
   </url>
   
   <url>
     <loc>https://lengyueyang.github.io/zh-cn/</loc>
     <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://lengyueyang.github.io/zh-cn/zh-cn/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lengyueyang.github.io/zh-cn/"
-                />
   </url>
   
 </urlset>
