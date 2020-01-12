@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>En on 深度识医</title>
+    <link>https://lengyueyang.github.io/zh-cn/en/</link>
+    <description>Recent content in En on 深度识医</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>use ox-hugo and org-mode for blog</copyright>
+    
+	<atom:link href="https://lengyueyang.github.io/zh-cn/en/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

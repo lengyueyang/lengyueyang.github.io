@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>shadowsocks on 深度识医</title>
+    <link>https://lengyueyang.github.io/zh-cn/tags/shadowsocks/</link>
+    <description>Recent content in shadowsocks on 深度识医</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>use ox-hugo and org-mode for blog</copyright>
+    <lastBuildDate>Mon, 11 Dec 2017 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://lengyueyang.github.io/zh-cn/tags/shadowsocks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Shadowsocks科学上网</title>
+      <link>https://lengyueyang.github.io/zh-cn/post/tools/shadowsocks%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</link>
+      <pubDate>Mon, 11 Dec 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/zh-cn/post/tools/shadowsocks%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</guid>
+      <description>&lt;h2 id=&#34;vultr搭建或倚天剑购买帐号&#34;&gt;vultr搭建或倚天剑购买帐号&lt;/h2&gt;
+
+&lt;h3 id=&#34;购买倚天剑-socks5-帐号&#34;&gt;购买倚天剑 socks5 帐号&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://a.aiguobit.com/users/ucenter&#34;&gt;https://a.aiguobit.com/users/ucenter&lt;/a&gt;
+或者从 github 进入
+&lt;a href=&#34;https://github.com/itrump/ssfree/blob/master/cn/%E5%80%9A%E5%A4%A9%E5%89%91ss%E6%96%B0%E7%BD%91%E7%AB%99.md&#34;&gt;https://github.com/itrump/ssfree/blob/master/cn/%E5%80%9A%E5%A4%A9%E5%89%91ss%E6%96%B0%E7%BD%91%E7%AB%99.md&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;vultr搭建sock5&#34;&gt;vultr搭建sock5&lt;/h3&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

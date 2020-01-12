@@ -5,10 +5,56 @@
     <link>https://lengyueyang.github.io/tags/</link>
     <description>Recent content in Tags on DR Medical</description>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>2015-2019, use ox-hugo and orgmode for blog</copyright>
+    <copyright>use ox-hugo and org-mode for blog</copyright>
+    <lastBuildDate>Sun, 26 Mar 2017 00:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://lengyueyang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>configuration</title>
+      <link>https://lengyueyang.github.io/tags/configuration/</link>
+      <pubDate>Sun, 26 Mar 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/tags/configuration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spacemacs</title>
+      <link>https://lengyueyang.github.io/tags/spacemacs/</link>
+      <pubDate>Sun, 26 Mar 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/tags/spacemacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Archlinux</title>
+      <link>https://lengyueyang.github.io/tags/archlinux/</link>
+      <pubDate>Fri, 05 Feb 2016 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/tags/archlinux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wiki</title>
+      <link>https://lengyueyang.github.io/tags/wiki/</link>
+      <pubDate>Fri, 05 Feb 2016 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/tags/wiki/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://lengyueyang.github.io/tags/linux/</link>
+      <pubDate>Fri, 05 Feb 2016 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

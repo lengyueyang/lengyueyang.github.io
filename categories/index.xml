@@ -5,10 +5,38 @@
     <link>https://lengyueyang.github.io/categories/</link>
     <description>Recent content in Categories on DR Medical</description>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>2015-2019, use ox-hugo and orgmode for blog</copyright>
+    <copyright>use ox-hugo and org-mode for blog</copyright>
+    <lastBuildDate>Sun, 26 Mar 2017 00:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://lengyueyang.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Spacemacs</title>
+      <link>https://lengyueyang.github.io/categories/spacemacs/</link>
+      <pubDate>Sun, 26 Mar 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/categories/spacemacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>https://lengyueyang.github.io/categories/tools/</link>
+      <pubDate>Sun, 26 Mar 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/categories/tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://lengyueyang.github.io/categories/linux/</link>
+      <pubDate>Fri, 05 Feb 2016 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

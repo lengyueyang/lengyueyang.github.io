@@ -1,0 +1,1925 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>高等代数-矩阵的运算 - 深度识医</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="lengyueyang" />
+  <meta name="description" content="矩阵基础运算 \begin{de}[矩阵加法定义] \end{de} 设 \(A = (a_{ij}), B = (b_{ij})\) 都是数域 K 上 \(s \times n\) 矩阵,令 \(C = (a_{ij} &#43; b_{ij})_{s\times n}\), 则称矩阵 C 是矩阵 A 与 B 的 和, 记作 \(C = A" />
+
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.55.6" />
+
+
+<link rel="canonical" href="https://lengyueyang.github.io/zh-cn/post/data-science/math/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-%E7%9F%A9%E9%98%B5%E7%9A%84%E8%BF%90%E7%AE%97/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.af20b78e95c84de86b00a0242a4a77bd2601700e1b250edf27537d957ac0041d.css" integrity="sha256-ryC3jpXITehrAKAkKkp3vSYBcA4bJQ7fJ1N9lXrABB0=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="高等代数-矩阵的运算" />
+<meta property="og:description" content="矩阵基础运算 \begin{de}[矩阵加法定义] \end{de} 设 \(A = (a_{ij}), B = (b_{ij})\) 都是数域 K 上 \(s \times n\) 矩阵,令 \(C = (a_{ij} &#43; b_{ij})_{s\times n}\), 则称矩阵 C 是矩阵 A 与 B 的 和, 记作 \(C = A" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lengyueyang.github.io/zh-cn/post/data-science/math/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-%E7%9F%A9%E9%98%B5%E7%9A%84%E8%BF%90%E7%AE%97/" />
+<meta property="article:published_time" content="2018-01-08T00:00:00&#43;08:00"/>
+<meta property="article:modified_time" content="2019-08-10T12:08:12&#43;08:00"/><meta property="og:site_name" content="深度识医" />
+
+<meta itemprop="name" content="高等代数-矩阵的运算">
+<meta itemprop="description" content="矩阵基础运算 \begin{de}[矩阵加法定义] \end{de} 设 \(A = (a_{ij}), B = (b_{ij})\) 都是数域 K 上 \(s \times n\) 矩阵,令 \(C = (a_{ij} &#43; b_{ij})_{s\times n}\), 则称矩阵 C 是矩阵 A 与 B 的 和, 记作 \(C = A">
+
+
+<meta itemprop="datePublished" content="2018-01-08T00:00:00&#43;08:00" />
+<meta itemprop="dateModified" content="2019-08-10T12:08:12&#43;08:00" />
+<meta itemprop="wordCount" content="7829">
+
+
+
+<meta itemprop="keywords" content="线性代数," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="高等代数-矩阵的运算"/>
+<meta name="twitter:description" content="矩阵基础运算 \begin{de}[矩阵加法定义] \end{de} 设 \(A = (a_{ij}), B = (b_{ij})\) 都是数域 K 上 \(s \times n\) 矩阵,令 \(C = (a_{ij} &#43; b_{ij})_{s\times n}\), 则称矩阵 C 是矩阵 A 与 B 的 和, 记作 \(C = A"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/zh-cn/" class="logo">深度识医</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          <div class="mobile-menu-parent">
+            <span class="mobile-submenu-open"></span>
+            <a href="https://lengyueyang.github.io/zh-cn/categories/%E5%8C%BB%E5%AD%A6%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">
+              医学数据科学
+            </a>
+          </div>
+          <ul class="mobile-submenu-list">
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">数学基础</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/%E7%BB%9F%E8%AE%A1%E5%9F%BA%E7%A1%80/">统计基础</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/%E7%AE%97%E6%B3%95/">算法</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/nlp-kg/">NLP-KG</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">数据分析</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/%E5%8C%BB%E5%AD%A6%E7%9F%A5%E8%AF%86/">医学知识</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/cdss/">CDSS</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/%E6%96%87%E7%AB%A0%E5%A4%8D%E7%8E%B0/">文章复现</a>
+              </li>
+            
+          </ul>
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          <div class="mobile-menu-parent">
+            <span class="mobile-submenu-open"></span>
+            <a href="https://lengyueyang.github.io/zh-cn/categories/%E5%B7%A5%E5%85%B7%E9%93%BE/">
+              工具链
+            </a>
+          </div>
+          <ul class="mobile-submenu-list">
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/linux/">Linux</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/gentoo/">Gentoo</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/spacemacs/">Spacemacs</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/org-mode/">Org-mode</a>
+              </li>
+            
+          </ul>
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/zh-cn/categories/%E7%94%9F%E6%B4%BB">生活</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/zh-cn/post/">归档</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/zh-cn/tags/">标签</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/zh-cn/categories/">分类</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/zh-cn/links">链接</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/zh-cn/about">关于</a>
+          
+        
+      </li>
+    <li class="mobile-menu-item">
+        
+        <div class="mobile-menu-parent mobile-menu-item-lang">
+          <span class="mobile-submenu-open"></span>
+          <a href="#">
+            
+            <i class="iconfont">
+              <svg height="16" width="16" version="1.1" viewBox="0 0 128 128">
+  <path d="m 64.719501,1.4279814 c -34.694029,0 -62.8192028,28.1251726 -62.8192028,62.8192016 0,34.694036 28.1251738,62.819207 62.8192028,62.819207 4.245691,0 8.392744,-0.42239 12.402214,-1.2253 -1.616124,-0.77296 -1.792473,-6.57213 -0.194346,-9.87848 1.779059,-3.68082 7.361625,-13.00555 1.840404,-16.134231 -5.521221,-3.12869 -3.98755,-4.53968 -7.361625,-8.15914 -3.374083,-3.61947 -1.994181,-4.16357 -2.208492,-5.09179 -0.736158,-3.19004 3.251385,-7.975096 3.435429,-8.465866 0.184043,-0.490781 0.184043,-2.331182 0.122689,-2.883308 -0.06131,-0.552125 -2.515051,-2.024446 -3.12852,-2.085791 -0.613469,-0.06133 -0.920209,0.98154 -1.77906,1.042896 -0.858856,0.06133 -4.601018,-2.269838 -5.39853,-2.883308 -0.797504,-0.61346 -1.165591,-2.085792 -2.269828,-3.190033 -1.104247,-1.104252 -1.226945,-0.24539 -2.944651,-0.920206 -1.717714,-0.674812 -7.238935,-2.69926 -11.471867,-4.416975 -4.23294,-1.717714 -4.601019,-4.125615 -4.662365,-5.827954 -0.06131,-1.702333 -2.57657,-4.171587 -3.756227,-5.950646 -1.179335,-1.77906 -1.396914,-4.232932 -1.826339,-3.680809 -0.429425,0.552114 2.208484,6.993538 1.77906,7.177582 -0.429425,0.184043 -1.349635,-1.77906 -2.576572,-3.374083 -1.226936,-1.595016 1.28829,-0.736159 -2.637915,-8.465864 -3.926198,-7.729705 1.226944,-11.671284 1.472324,-15.704806 0.24539,-4.033514 3.312738,1.472325 1.717715,-1.104238 -1.595016,-2.576571 0.122697,-7.975094 -1.104246,-9.938197 -1.226936,-1.963102 -8.220475,2.208492 -8.220475,2.208492 0.184036,-1.901758 6.134682,-5.153142 10.428966,-8.1591366 4.294277,-3.005996 6.91682,-0.674813 10.367621,0.4294236 3.450803,1.104246 3.680817,0.736167 2.515226,-0.368079 -1.165591,-1.1042446 0.49077,-1.6563686 3.190031,-1.2269356 2.699269,0.429425 3.435428,3.6808086 7.545669,3.3740746 4.110242,-0.306735 0.429425,0.797511 0.981548,1.840412 0.552123,1.042892 -0.613468,0.920202 -3.312729,2.760607 -2.699262,1.840403 0.06131,1.840403 4.846407,5.337177 4.785055,3.496773 3.312729,-2.331183 2.821952,-4.907753 -0.490777,-2.576563 3.496773,-0.552115 3.496773,-0.552115 2.944651,1.963094 2.400546,0.107972 4.547684,0.782784 2.147139,0.674814 7.967076,5.597286 7.967076,5.597286 -7.300273,3.98755 -2.699261,4.416975 -1.472325,5.337178 1.226937,0.920202 -2.515218,2.699261 -2.515218,2.699261 -1.53367,-1.53367 -1.779059,0.06131 -2.760614,0.613476 -0.981548,0.552115 -0.06131,1.963095 -0.06131,1.963095 -5.076415,0.797512 -3.926198,6.13469 -3.864852,7.422971 0.06131,1.288289 -3.251385,3.251384 -4.110242,5.091796 -0.858857,1.840405 2.208491,5.827948 0.613468,6.073336 -1.595016,0.24539 -3.190031,-6.011991 -11.778601,-3.680808 -2.589322,0.702954 -8.343174,3.680808 -5.275824,9.754153 3.06734,6.073336 8.15913,-1.717714 9.876843,-0.858857 1.717714,0.858857 -0.490778,4.72371 -0.122691,4.785055 0.368079,0.06131 4.8464,0.168662 5.09179,5.398522 0.245388,5.229868 6.809502,4.785065 8.220482,4.907755 1.410972,0.12269 6.134682,-3.864859 6.809502,-4.048894 0.674815,-0.184034 3.374076,-2.453876 9.263377,0.920195 5.889301,3.374089 8.895296,2.883308 10.919743,4.294285 2.02445,1.410987 0.61347,4.232939 2.51523,5.153134 1.90175,0.920217 9.50876,-0.306736 11.41051,2.821966 1.90176,3.1287 -7.8524,18.833491 -10.91974,20.551201 -3.06734,1.71772 -4.478321,5.64392 -7.545665,8.15913 -3.067349,2.51523 -7.361625,5.62854 -11.410522,8.03646 -3.583968,2.1311 -4.228845,5.949 -5.825333,7.15419 28.11404,-6.24545 49.13623,-31.328971 49.13623,-61.323497 0,-34.694029 -28.125171,-62.8192016 -62.819206,-62.8192016 z M 79.442753,60.382331 c -0.858857,0.245389 -2.637917,1.840405 -6.993547,-0.736166 -4.35563,-2.576564 -7.361625,-2.085794 -7.729705,-2.515218 0,0 -0.368079,-1.0429 1.533671,-1.226937 3.905098,-0.378065 8.833951,3.619464 9.938196,3.680809 1.104246,0.06131 1.656361,-1.104245 3.619464,-0.471631 1.963103,0.631953 0.490777,1.023755 -0.368079,1.269143 z M 58.891546,7.6853614 c -0.427786,-0.311152 0.354344,-0.669418 0.82058,-1.288281 0.269103,-0.357613 0.0695,-0.951289 0.406356,-1.28829 0.92021,-0.920203 5.459876,-2.208485 4.572225,0.306734 -0.887321,2.515226 -5.12434,2.760614 -5.799161,2.269837 z m 10.98109,7.9750936 c -1.533672,-0.06131 -5.14381,-0.442837 -4.478321,-1.104246 2.591952,-2.576563 -0.981548,-3.312729 -3.190039,-3.496766 -2.208485,-0.184043 -3.128687,-1.4109786 -2.02444,-1.5336776 1.104237,-0.12269 5.521213,0.06139 6.257379,0.6748206 0.736158,0.613469 4.723709,2.208485 4.969099,3.374076 0.24538,1.16559 0,2.147138 -1.533678,2.085793 z M 83.184914,15.23103 c -1.226943,0.981547 -7.400887,-3.521968 -8.588569,-4.539674 -5.153134,-4.4169746 -7.913742,-2.9446486 -8.995903,-3.6808086 -1.082485,-0.736166 -0.696897,-1.717713 0.959464,-3.190039 1.656369,-1.472325 6.318732,0.490778 9.017994,0.797512 2.699262,0.306734 5.827955,2.392527 5.889301,4.871925 0.06131,2.4792256 2.944649,4.7595296 1.717713,5.7410846 z" />
+</svg>
+
+            </i>
+            语言
+          </a>
+        </div>
+        <ul class="mobile-submenu-list">
+          
+            <li>
+              
+                <a href="https://lengyueyang.github.io/zh-cn/"><strong>中文</strong></a>
+              
+            </li>
+          
+            <li>
+              
+                <a href="https://lengyueyang.github.io/">English</a>
+              
+            </li>
+          
+        </ul>
+      </li>
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/zh-cn/" class="logo">
+    
+      深度识医
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          <a class="menu-item-link menu-parent" href="https://lengyueyang.github.io/zh-cn/categories/%E5%8C%BB%E5%AD%A6%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">医学数据科学</a>
+          <ul class="submenu">
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">数学基础</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/%E7%BB%9F%E8%AE%A1%E5%9F%BA%E7%A1%80/">统计基础</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/%E7%AE%97%E6%B3%95/">算法</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/nlp-kg/">NLP-KG</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">数据分析</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/%E5%8C%BB%E5%AD%A6%E7%9F%A5%E8%AF%86/">医学知识</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/cdss/">CDSS</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/%E6%96%87%E7%AB%A0%E5%A4%8D%E7%8E%B0/">文章复现</a>
+              </li>
+            
+          </ul>
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          <a class="menu-item-link menu-parent" href="https://lengyueyang.github.io/zh-cn/categories/%E5%B7%A5%E5%85%B7%E9%93%BE/">工具链</a>
+          <ul class="submenu">
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/linux/">Linux</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/gentoo/">Gentoo</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/spacemacs/">Spacemacs</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/zh-cn/categories/org-mode/">Org-mode</a>
+              </li>
+            
+          </ul>
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/zh-cn/categories/%E7%94%9F%E6%B4%BB">生活</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/zh-cn/post/">归档</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/zh-cn/tags/">标签</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/zh-cn/categories/">分类</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/zh-cn/links">链接</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/zh-cn/about">关于</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    <li class="menu-item">
+        
+        <a class="menu-item-link menu-parent menu-item-lang" href="#">
+          
+          <i class="iconfont">
+            <svg height="16" width="16" version="1.1" viewBox="0 0 128 128">
+  <path d="m 64.719501,1.4279814 c -34.694029,0 -62.8192028,28.1251726 -62.8192028,62.8192016 0,34.694036 28.1251738,62.819207 62.8192028,62.819207 4.245691,0 8.392744,-0.42239 12.402214,-1.2253 -1.616124,-0.77296 -1.792473,-6.57213 -0.194346,-9.87848 1.779059,-3.68082 7.361625,-13.00555 1.840404,-16.134231 -5.521221,-3.12869 -3.98755,-4.53968 -7.361625,-8.15914 -3.374083,-3.61947 -1.994181,-4.16357 -2.208492,-5.09179 -0.736158,-3.19004 3.251385,-7.975096 3.435429,-8.465866 0.184043,-0.490781 0.184043,-2.331182 0.122689,-2.883308 -0.06131,-0.552125 -2.515051,-2.024446 -3.12852,-2.085791 -0.613469,-0.06133 -0.920209,0.98154 -1.77906,1.042896 -0.858856,0.06133 -4.601018,-2.269838 -5.39853,-2.883308 -0.797504,-0.61346 -1.165591,-2.085792 -2.269828,-3.190033 -1.104247,-1.104252 -1.226945,-0.24539 -2.944651,-0.920206 -1.717714,-0.674812 -7.238935,-2.69926 -11.471867,-4.416975 -4.23294,-1.717714 -4.601019,-4.125615 -4.662365,-5.827954 -0.06131,-1.702333 -2.57657,-4.171587 -3.756227,-5.950646 -1.179335,-1.77906 -1.396914,-4.232932 -1.826339,-3.680809 -0.429425,0.552114 2.208484,6.993538 1.77906,7.177582 -0.429425,0.184043 -1.349635,-1.77906 -2.576572,-3.374083 -1.226936,-1.595016 1.28829,-0.736159 -2.637915,-8.465864 -3.926198,-7.729705 1.226944,-11.671284 1.472324,-15.704806 0.24539,-4.033514 3.312738,1.472325 1.717715,-1.104238 -1.595016,-2.576571 0.122697,-7.975094 -1.104246,-9.938197 -1.226936,-1.963102 -8.220475,2.208492 -8.220475,2.208492 0.184036,-1.901758 6.134682,-5.153142 10.428966,-8.1591366 4.294277,-3.005996 6.91682,-0.674813 10.367621,0.4294236 3.450803,1.104246 3.680817,0.736167 2.515226,-0.368079 -1.165591,-1.1042446 0.49077,-1.6563686 3.190031,-1.2269356 2.699269,0.429425 3.435428,3.6808086 7.545669,3.3740746 4.110242,-0.306735 0.429425,0.797511 0.981548,1.840412 0.552123,1.042892 -0.613468,0.920202 -3.312729,2.760607 -2.699262,1.840403 0.06131,1.840403 4.846407,5.337177 4.785055,3.496773 3.312729,-2.331183 2.821952,-4.907753 -0.490777,-2.576563 3.496773,-0.552115 3.496773,-0.552115 2.944651,1.963094 2.400546,0.107972 4.547684,0.782784 2.147139,0.674814 7.967076,5.597286 7.967076,5.597286 -7.300273,3.98755 -2.699261,4.416975 -1.472325,5.337178 1.226937,0.920202 -2.515218,2.699261 -2.515218,2.699261 -1.53367,-1.53367 -1.779059,0.06131 -2.760614,0.613476 -0.981548,0.552115 -0.06131,1.963095 -0.06131,1.963095 -5.076415,0.797512 -3.926198,6.13469 -3.864852,7.422971 0.06131,1.288289 -3.251385,3.251384 -4.110242,5.091796 -0.858857,1.840405 2.208491,5.827948 0.613468,6.073336 -1.595016,0.24539 -3.190031,-6.011991 -11.778601,-3.680808 -2.589322,0.702954 -8.343174,3.680808 -5.275824,9.754153 3.06734,6.073336 8.15913,-1.717714 9.876843,-0.858857 1.717714,0.858857 -0.490778,4.72371 -0.122691,4.785055 0.368079,0.06131 4.8464,0.168662 5.09179,5.398522 0.245388,5.229868 6.809502,4.785065 8.220482,4.907755 1.410972,0.12269 6.134682,-3.864859 6.809502,-4.048894 0.674815,-0.184034 3.374076,-2.453876 9.263377,0.920195 5.889301,3.374089 8.895296,2.883308 10.919743,4.294285 2.02445,1.410987 0.61347,4.232939 2.51523,5.153134 1.90175,0.920217 9.50876,-0.306736 11.41051,2.821966 1.90176,3.1287 -7.8524,18.833491 -10.91974,20.551201 -3.06734,1.71772 -4.478321,5.64392 -7.545665,8.15913 -3.067349,2.51523 -7.361625,5.62854 -11.410522,8.03646 -3.583968,2.1311 -4.228845,5.949 -5.825333,7.15419 28.11404,-6.24545 49.13623,-31.328971 49.13623,-61.323497 0,-34.694029 -28.125171,-62.8192016 -62.819206,-62.8192016 z M 79.442753,60.382331 c -0.858857,0.245389 -2.637917,1.840405 -6.993547,-0.736166 -4.35563,-2.576564 -7.361625,-2.085794 -7.729705,-2.515218 0,0 -0.368079,-1.0429 1.533671,-1.226937 3.905098,-0.378065 8.833951,3.619464 9.938196,3.680809 1.104246,0.06131 1.656361,-1.104245 3.619464,-0.471631 1.963103,0.631953 0.490777,1.023755 -0.368079,1.269143 z M 58.891546,7.6853614 c -0.427786,-0.311152 0.354344,-0.669418 0.82058,-1.288281 0.269103,-0.357613 0.0695,-0.951289 0.406356,-1.28829 0.92021,-0.920203 5.459876,-2.208485 4.572225,0.306734 -0.887321,2.515226 -5.12434,2.760614 -5.799161,2.269837 z m 10.98109,7.9750936 c -1.533672,-0.06131 -5.14381,-0.442837 -4.478321,-1.104246 2.591952,-2.576563 -0.981548,-3.312729 -3.190039,-3.496766 -2.208485,-0.184043 -3.128687,-1.4109786 -2.02444,-1.5336776 1.104237,-0.12269 5.521213,0.06139 6.257379,0.6748206 0.736158,0.613469 4.723709,2.208485 4.969099,3.374076 0.24538,1.16559 0,2.147138 -1.533678,2.085793 z M 83.184914,15.23103 c -1.226943,0.981547 -7.400887,-3.521968 -8.588569,-4.539674 -5.153134,-4.4169746 -7.913742,-2.9446486 -8.995903,-3.6808086 -1.082485,-0.736166 -0.696897,-1.717713 0.959464,-3.190039 1.656369,-1.472325 6.318732,0.490778 9.017994,0.797512 2.699262,0.306734 5.827955,2.392527 5.889301,4.871925 0.06131,2.4792256 2.944649,4.7595296 1.717713,5.7410846 z" />
+</svg>
+
+          </i>
+          中文
+        </a>
+        <ul class="submenu">
+          
+            
+          
+            
+              <li>
+                <a href="https://lengyueyang.github.io/">English</a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">高等代数-矩阵的运算</h1>
+      
+      <div class="post-meta">
+        <time datetime="2018-01-08" class="post-time">
+          2018-01-08
+        </time>
+        <div class="post-category">
+            <a href="https://lengyueyang.github.io/zh-cn/categories/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/"> 数学基础 </a>
+            <a href="https://lengyueyang.github.io/zh-cn/categories/%E5%8C%BB%E5%AD%A6%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/"> 医学数据科学 </a>
+            
+          </div>
+        <span class="more-meta"> 约 7829 字 </span>
+          <span class="more-meta"> 预计阅读 16 分钟 </span>
+
+        
+        
+
+        
+        
+          <span id="/zh-cn/post/data-science/math/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-%E7%9F%A9%E9%98%B5%E7%9A%84%E8%BF%90%E7%AE%97/" class="leancloud_visitors" data-flag-title="高等代数-矩阵的运算">
+            <span class="post-meta-item-text"> | 阅读 </span>
+            <span class="leancloud-visitors-count"></span>
+          </span>
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#矩阵基础运算">矩阵基础运算</a></li>
+<li><a href="#特殊矩阵">特殊矩阵</a></li>
+<li><a href="#矩阵乘积的秩与行列式">矩阵乘积的秩与行列式</a></li>
+<li><a href="#可逆矩阵">可逆矩阵</a></li>
+<li><a href="#矩阵的分块">矩阵的分块</a></li>
+<li><a href="#正交矩阵-----欧几里得空间--r-n">正交矩阵 \(⋅\) 欧几里得空间 \(R^n\)</a></li>
+<li><a href="#k-n--到--k-s--的线性映射">\(K^n\) 到 \(K^s\) 的线性映射</a></li>
+<li><a href="#例题">例题</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<h2 id="矩阵基础运算">矩阵基础运算</h2>
+
+<p>\begin{de}[矩阵加法定义]
+\end{de}</p>
+
+<p>设 \(A = (a_{ij}), B = (b_{ij})\) 都是数域 K 上 \(s \times n\) 矩阵,令 \(C = (a_{ij} + b_{ij})_{s\times n}\), 则称矩阵 C 是矩阵 A 与 B 的 <strong>和</strong>, 记作 \(C = A + B\).</p>
+
+<p>\begin{de}[矩阵数量乘法定义]
+\end{de}</p>
+
+<p>设 \(A = (a_{ij})\) 都是数域 K 上 \(s \times n\) 矩阵, \(k \in K_{}\), 令 \(M = (ka_{ij})_{s×n}\), 则称是矩阵 M 是 k 与矩阵 A 的 <strong>数量乘积</strong>, 记作 \(M = kA\).</p>
+
+<p>矩阵的加法和数量乘法满足类似于 n 维向量的加法与数量乘法所满足的 8 条运算法则: 设 A, B, C 都是 K 上的 \(s \times n\) 矩阵, \(k, l \in K\), 有</p>
+
+<p>\begin{align*}
+&amp;1. A+B=B+A;  &amp;2. (A+B)+C=A+(B+C); \\<br />
+&amp;3. A+0=0+A; &amp;4. A+(-A)=(-A+0)=A; \\<br />
+&amp;5. 1A=A; &amp;6. (kl)A=k(lA); \\<br />
+&amp;7. (k+l)A=kA+lA; &amp;8.k(A+B)=kA+kB. \\<br />
+\end{align*}</p>
+
+<p>\begin{de}[矩阵乘法定义]
+\end{de}</p>
+
+<p>设 \(A=(a_{ij})_{s×n}\), \(B=(b_{ij})_{n\times m}\), 令 \(C=(c_{ij})_{s\times m}\), 其中
+\[
+c_{ij}= a_{i1}b_{1j}+a_{i2}b_{2j}+ \cdots + a_{in}b_{nj} = \sum_{k=1}^na_{ik}b_{kj}
+\]
+\(i=1,2,⋯,s; j=1,2,⋯,m\). 则矩阵 C 称为矩阵 A 与矩阵 B 的 <strong>乘积</strong>, 记作 \(C=AB\).</p>
+
+<p>矩阵乘法有以下性质:</p>
+
+<ol>
+<li>只有左边矩阵的列数与右边矩阵的行数相同的两个矩阵才能相乘;</li>
+<li>乘积矩阵的 \((i,j)\) 元等于左边矩阵的第 i 行与右边矩阵的第 j 列的对应元素乘积之和;</li>
+<li>乘积矩阵的行数等于左矩阵的行数, 乘积矩阵的列数等于右矩阵的列数.</li>
+</ol>
+
+<p>矩阵的性质:
+1). 矩阵的乘法适合 <strong>结合律</strong>: 设 \(A=(a_{ij})_{s×n}\), \(B=(b_{ij})_{n\times m}\), 令 \(C=(c_{m\times r}_{})_{s\times m}\), 则 \((AB)C = A(BC)\), 但矩阵的乘法不适合交换律. 注意从 \(BA=0\), 不能得到 \(B=0 \, or \, A=0\).</p>
+
+<p>对于矩阵 A, 如果存在一个矩阵 \(B\ne0\) 使得 \(AB=0\), 那么称 A 是一个 <strong>左零因子</strong>; 如果存在一个矩阵 \(C\ne0\), 使得 \(CA=0\), 那么称 A 是一个 <strong>右零因子</strong>, 左零因子和右零因子统称为 <strong>零因子</strong>. 零矩阵是零因子, 称它为 <strong>平凡零因子</strong>.</p>
+
+<p>2). 矩阵的乘法适合 <strong>左分配率</strong> 和 <strong>右分配率</strong>. 即
+\[
+A(B+C) = AB + AC
+\]</p>
+
+<p>3). 主对角线上元素都是 1, 其余元素都是 0 的 n 级矩阵称为 n 级 <strong>单位矩阵</strong>, 记作 \(I_{n}\), 或者简记作 I, 容易直接计算得
+\[
+  I_{s}A_{s\times n}= A_{s \times n}, \qquad A_{s \times n} I_n = A_{s \times n}
+\]
+特别是, 如果 A 是 n 级矩阵, 则 \(IA = AI =A\).</p>
+
+<p>4). 矩阵的乘法与数量乘法满足下述关系式: \(k(AB)=(kA)B=A(kB)\).</p>
+
+<p>主对角线上元素是同一个数 k, 其余元素全为 0 的 n 级矩阵称为 <strong>数量矩阵</strong>, 可以记作 \(kI\).</p>
+
+<p>矩阵的加法, 数量乘法, 乘法与矩阵的转置的关系如下</p>
+
+<ol>
+<li>\((A+B)&rsquo; = A&rsquo; + B&rsquo;\);</li>
+<li>\((kA)&rsquo; = kA&rsquo;\);</li>
+<li>\((AB)&lsquo;=B&rsquo;A&rsquo;\).</li>
+</ol>
+
+<p>\begin{equation}
+\left(
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; a_{1n} \\<br />
+&amp; a_{21} \quad &amp; a_{22} \quad &amp; \cdots \quad &amp; a_{2n} \\<br />
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\<br />
+&amp; a_{s1} \quad &amp; a_{s2} \quad &amp; \cdots \quad &amp;a_{sn} \\<br />
+\end{split}
+\right)
+\left(
+\begin{split}
+&amp; x_1 \\<br />
+&amp; x_2 \\<br />
+&amp; ⋮ \\<br />
+&amp; x_n \\<br />
+\end{split}
+\right) =
+\left(
+\begin{split}
+&amp; b_1 \\<br />
+&amp; b_2 \\<br />
+&amp; ⋮ \\<br />
+&amp; b_n \\<br />
+\end{split}
+\right)
+\end{equation}</p>
+
+<p>即 \(A \symbf{X} = \symbf{β}\).</p>
+
+<p>相应的齐线性方程组可以简洁地写成 \(A \symbf{X} = \symbf{0}\).
+于是列向量 \(\symbf{\eta}\) 是齐次线性方程组的解, 当且仅当 \(A \symbf{\eta} = \symbf{0}\).</p>
+
+<p>如果 A 的列向量组为 \(\symbf{α_1, α_2, ⋯, α_n}\), 那么可以把 A 记作 \(A = (\symbf{α_1, α_2, ⋯, α_n})\).</p>
+
+<p>设 \(A=(a_{ij})_{s×n}\), \(B=(b_{ij})_{n\times m}\), A 的列向量组为 \(\symbf{α_1, α_2, ⋯, α_n}\), 按照矩阵乘法的定义, AB 的 j 列为</p>
+
+<p>\begin{equation*}
+\left(
+\begin{split}
+&amp; a_{11}b_{1j} + a_{12}b_{2j} + \cdots + a_{1n}b_{nj} \\<br />
+&amp; a_{21}b_{2j} + a_{22}b_{2j} + \cdots + a_{2n}b_{nj} \\<br />
+&amp; ⋮ \\<br />
+&amp; a_{s1}b_{1j} + a_{s2}b_{2j} + \cdots + a_{sn}b_{nj} \\<br />
+\end{split}
+\right)
+= b_{1j}\symbf{\alpha_1} + b_{2j}\symbf{\alpha_2} + \cdots + b_{nj}\symbf{\alpha_n}
+\end{equation*}</p>
+
+<p>于是</p>
+
+<p>\begin{equation}
+\begin{aligned}
+AB &amp;= (\symbf{α_1, α_2, ⋯, α_n}) \left(
+\begin{split}
+&amp; b_{11} \quad &amp; b_{12} \quad &amp; \cdots \quad &amp; b_{1m} \\<br />
+&amp; b_{21} \quad &amp; b_{22} \quad &amp; \cdots \quad &amp; b_{2m} \\<br />
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\<br />
+&amp; b_{s1} \quad &amp; b_{s2} \quad &amp; \cdots \quad &amp;b_{nm} \\<br />
+\end{split}
+\right) \\<br />
+&amp;= (b_{11}\symbf{\alpha_1} + b_{21}\symbf{\alpha_2} + \cdots + b_{n1}\symbf{\alpha_n}, ⋯, b_{1m}\symbf{\alpha_1} + b_{2m}\symbf{\alpha_2} + \cdots + b_{nm}\symbf{\alpha_n})
+\end{aligned}
+\end{equation}</p>
+
+<p>由上式可以才看出, A 乘以 B 可以把 A 的列向量组与 B 的每一列对应元素的乘积之和作为 AB 的相应的列向量, 这是矩阵乘法的第二种表述方式.</p>
+
+<p>类似, 设矩阵 B 的行向量组为 \(\symbf{γ_1,γ_2,⋯,γ_n}\), 则</p>
+
+<p>\begin{equation}
+AB &amp;= \left(
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; a_{1n} \\<br />
+&amp; a_{21} \quad &amp; a_{22} \quad &amp; \cdots \quad &amp; a_{2n} \\<br />
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\<br />
+&amp; a_{s1} \quad &amp; a_{s2} \quad &amp; \cdots \quad &amp;a_{sn} \\<br />
+\end{split}
+\right)
+\left(
+\begin{split}
+&amp; \symbf{γ_1} \\<br />
+&amp; \symbf{γ_2} \\<br />
+&amp; ⋮ \\<br />
+&amp; \symbf{γ_n} \\<br />
+\end{split}
+\right)
+= \left(
+\begin{split}
+&amp;a_{11}\symbf{γ_1} + a_{12}_{}\symbf{γ_2} + \cdots + &amp;a_{1n}\symbf{γ_n} \\<br />
+&amp;a_{21}\symbf{γ_1} + a_{22}_{}\symbf{γ_2} + \cdots + &amp;a_{2n}\symbf{γ_n} \\<br />
+&amp;⋮ &amp;⋮ \\<br />
+&amp;a_{s1}\symbf{γ_1} + a_{s2}_{}\symbf{γ_2} + \cdots + &amp;a_{sn}\symbf{γ_n}
+\end{split}
+\right)
+\end{equation}</p>
+
+<p>由上式可以才看出, A 乘以 B 可以把 A 的每一行元素与 B 的行向量组的对应向量乘积之和作为 AB 的相应行向量, 这是矩阵乘法的第三种表述方式.</p>
+
+<h2 id="特殊矩阵">特殊矩阵</h2>
+
+<p><strong>对角矩阵</strong></p>
+
+<p>\begin{de}[对角矩阵定义]
+\end{de}</p>
+
+<p>主对角线以外的元素全为 0 的方阵称为 <strong>对角矩阵</strong>, 间记作 \(diag\{d_1, d_2, ⋯, d_n\}\).</p>
+
+<p>\begin{mingti}[对角矩阵命题]
+\end{mingti}</p>
+
+<p>用一个对角矩阵左(右)乘一个矩阵 \(\symbf{A}\), 相当于用对角矩阵的主对角元分别去乘 \(\symbf{A}\) 相应的行(列).</p>
+
+<p>两个对角矩阵的乘积还是 n 级对角矩阵, 并且把相应对角元素相乘.</p>
+
+<p><strong>基本矩阵</strong></p>
+
+<p>\begin{de}[基本矩阵定义]
+\end{de}</p>
+
+<p>只有一个元素是 1, 其余元素全为 0 的矩阵称为 <strong>基本矩阵</strong>, \((i,j)\) 元为 1 的矩阵记作 \(E_{ij}\).</p>
+
+<p>\begin{mingti}[基本矩阵命题]
+\end{mingti}</p>
+
+<p>用 \(E_{ij}\) 左乘一个矩阵 A, 就相当于把 A 的第 j 行搬到第 i 行的位置, 而乘积矩阵的其余行全为零; 用  \(E_{ij}\) 右乘一个矩阵 A, 相当于把 A 的第 i 列搬到第 j 列的位置.</p>
+
+<p><strong>上(下)三角矩阵</strong></p>
+
+<p>\begin{de}[上(下)三角矩阵定义]
+\end{de}</p>
+
+<p>主对角线下(上)方的元素全为 0 的方阵称为上(下)三角矩阵.</p>
+
+<p>\begin{mingti}[三角矩阵命题]
+\end{mingti}</p>
+
+<p>两个 n 级上三角矩阵 A 和 B 的乘积仍为上三角矩阵, 并且 AB 的主对角元等于 A 与 B 的相应主对角元的乘积.</p>
+
+<p><strong>初等矩阵</strong></p>
+
+<p>\begin{de}[初等矩阵定义]
+\end{de}</p>
+
+<p>由单位矩阵经过一次初等行(列)变换得到的矩阵称为 <strong>初等矩阵</strong>.</p>
+
+<p>\begin{thm}[初等矩阵定理]
+\end{thm}</p>
+
+<p>用初等矩阵左(右)乘一个矩阵 A, 就相当于 A 作了一次初等行(列)变换.</p>
+
+<p><strong>对称矩阵</strong></p>
+
+<p>\begin{de}[对称矩阵定义]
+\end{de}</p>
+
+<p>一个矩阵如果满足 \(A = A&rsquo;\), 那么称 A 是 <strong>对称矩阵</strong>.</p>
+
+<p>\begin{mingti}[对称矩阵命题-1]
+\end{mingti}</p>
+
+<p>设 A, B 都是 n 级对称矩阵, 则 \(A+B, kA (k \in K)\) 都是对称矩阵.</p>
+
+<p>\begin{mingti}[对称矩阵命题-2]
+\end{mingti}</p>
+
+<p>设 A, B 都是 n 级对称矩阵, 则 AB 是对称矩阵的充分必要条件是 A 与 B 可以交换.</p>
+
+<p><strong>斜对称矩阵</strong></p>
+
+<p>\begin{de}[斜对称矩阵定义]
+\end{de}</p>
+
+<p>一个矩阵如果满足 \(A = -A&rsquo;\), 那么称 A 是 <strong>斜对称矩阵</strong>.</p>
+
+<p>\begin{mingti}[斜对称矩阵命题]
+\end{mingti}</p>
+
+<p>数域 K 上的奇数级斜对称矩阵的行列式等于 0.</p>
+
+<h2 id="矩阵乘积的秩与行列式">矩阵乘积的秩与行列式</h2>
+
+<p>\begin{thm}[矩阵乘积秩定理]
+\end{thm}</p>
+
+<p>设 \(A=(a_{ij})_{s \times n}, B=(b_{ij})_{n \times m}\), 则 \[ rank(AB) ⩽ min\{rank(A) + rank(B)\}.\]</p>
+
+<p>\begin{thm}[矩阵乘积行列式定理]
+\end{thm}</p>
+
+<p>设 \(A=(a_{ij})_{n \times n}, B=(b_{ij})_{n \times n}\), 则 \[|AB| = |A||B|\]. 可以推广到 n 级矩阵相乘的情形,</p>
+
+<p>\begin{thm}[Binet-Cauchy 公式]
+\end{thm}</p>
+
+<p>设 \(A=(a_{ij})_{s \times n}, B=(b_{ij})_{n \times s}\),
+(1) 如果 \(s &gt; n\), 那么 \(|AB|=0\);
+(2) 如果 \(s \le n\), 那么 |AB| 等于 A 的所有 s 阶子式与 B 的 s 阶子式的乘积之和.</p>
+
+<h2 id="可逆矩阵">可逆矩阵</h2>
+
+<p>\begin{de}[可逆矩阵定义]
+\end{de}</p>
+
+<p>对于数域 K 上的矩阵 A, 如果存在数域 K 上的矩阵 B, 使得</p>
+
+<p>\begin{equation}
+AB = BA = I
+\end{equation}</p>
+
+<p>那么称 A 是 <strong>可逆矩阵(或非奇异矩阵)</strong>.</p>
+
+<p>可逆矩阵一定是方阵, 并且逆矩阵是唯一的.</p>
+
+<p>\begin{de}[逆矩阵定义]
+\end{de}</p>
+
+<p>如果 A 是可逆矩阵, 那么适合 (<a href="#org398bb0b">1</a>) 的矩阵 B 称为 A 的 <strong>逆矩阵</strong>, 记作 \(A^{-1}\).</p>
+
+<p>如果 A 是可逆矩阵, 那么 \(AA^{-1}=A^{-1}A=I\), 于是 \(A^{-1}\) 也是可逆矩阵, 并且 \((A^{-1})^{-1}=A\), 可以看出 n 级矩阵 A 可逆的必要条件是 \[|A| ≠ 0.\]</p>
+
+<p>令</p>
+
+<p>\begin{equation*}
+A^* = \left\{
+\begin{split}
+&amp; A_{11} \quad &amp; A_{21} \quad &amp; \cdots \quad &amp; A_{n1} \\<br />
+&amp; A_{12}_{} \quad &amp; A_{22} \quad &amp; \cdots \quad &amp; A_{n2} \\<br />
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\<br />
+&amp; A_{1n} \quad &amp; A_{2n} \quad &amp; \cdots \quad &amp;A_{nn} \\<br />
+\end{split}
+\right\}
+\end{equation*}</p>
+
+<p>称 \(A^*\) 是 A 的 <strong>伴随矩阵</strong>. 有</p>
+
+<p>\begin{equation*}
+\left\{
+\begin{split}
+&amp; a_{11} \quad &amp; a_{12} \quad &amp; \cdots \quad &amp; a_{1n} \\<br />
+&amp; a_{21} \quad &amp; a_{22} \quad &amp; \cdots \quad &amp; a_{2n} \\<br />
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\<br />
+&amp; a_{n1} \quad &amp; a_{n2} \quad &amp; \cdots \quad &amp;a_{nn} \\<br />
+\end{split}
+\right\}
+\left\{
+\begin{split}
+&amp; A_{11} \quad &amp; A_{21} \quad &amp; \cdots \quad &amp; A_{n1} \\<br />
+&amp; A_{12}_{} \quad &amp; A_{22} \quad &amp; \cdots \quad &amp; A_{n2} \\<br />
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\<br />
+&amp; A_{1n} \quad &amp; A_{2n} \quad &amp; \cdots \quad &amp;A_{nn} \\<br />
+\end{split}
+\right\} \ \left\{
+\begin{split}
+&amp; |A| \quad &amp; 0 \quad &amp; \cdots \quad &amp; 0_{} \\<br />
+&amp; 0_{} \quad &amp; |A| \quad &amp; \cdots \quad &amp; 0_{} \\<br />
+&amp; \vdots \quad &amp; \vdots \quad &amp; \quad &amp; \vdots \\<br />
+&amp; 0_{} \quad &amp; 0_{} \quad &amp; \cdots \quad &amp;|A| \\<br />
+\end{split}
+\right\} = |A|I
+\end{equation*}</p>
+
+<p>即 \[AA^*=I.\] 同理可得 \[A^*A=I.\]</p>
+
+<p>\begin{thm}[可逆矩阵定理]
+\end{thm}</p>
+
+<p>数域 K 上的 n 级矩阵 A 可逆的充分必要条件是 \(|A| \neq 0\). 当 A 可逆时,</p>
+
+<p>\begin{equation}
+  A^{-1} = \frac{1}{|A|}A^*
+\end{equation}</p>
+
+<p>数域 K 上的 n 级矩阵 A 可逆还可以推出一些充分必要条件:</p>
+
+<p>数域 K 上的 n 级矩阵 A 可逆 <br />
+\(⟺\) A 为满秩矩阵 <br />
+\(⟺\) A 的行(列)向量组线性无关 <br />
+\(⟺\) A 的行(列)向量组为 \(K^n\) 的一个基 <br />
+\(⟺\) A 的行(列)空间等于 \(K^n\)</p>
+
+<p>\begin{mingti}[可逆矩阵命题]
+\end{mingti}</p>
+
+<p>设 A 与 B 都是数域 K 上的 n 级矩阵, 如果 \(AB=I\), 那么 A 与 B 都是可逆矩阵, 并且 \(A^{-1}=B, B^{-1}=A\).</p>
+
+<p>\begin{proposition}[可逆矩阵性质-1]
+\end{proposition}</p>
+
+<p>单位矩阵 I 可逆, 并且 \(I^{-1} =I\)</p>
+
+<p>\begin{proposition}[可逆矩阵性质-2]
+\end{proposition}</p>
+
+<p>如果 A 可逆, 那么 \(A^{-1}^{}\) 也可逆, 且 \((A^{-1})^{-1}=A\)</p>
+
+<p>\begin{proposition}[可逆矩阵性质-3]
+\end{proposition}</p>
+
+<p>如果 n 级矩阵 A, B 都可逆, 那么 AB 也可逆, 并且 \((AB)^{-1}=B^{-1}A^{-1}\).</p>
+
+<p>\begin{proposition}[可逆矩阵性质-4]
+\end{proposition}</p>
+
+<p>如果 A 可逆, 那么 \(A&rsquo;\) 也可逆, 并且 \((A&rsquo;)^{-1}=(A^{-1})&rsquo;\).</p>
+
+<p>\begin{proposition}[可逆矩阵性质-5]
+\end{proposition}</p>
+
+<p>可逆矩阵经过初等行变换化成的简化阶梯型矩阵一定是单位矩阵.</p>
+
+<p>\begin{proposition}[可逆矩阵性质-6]
+\end{proposition}</p>
+
+<p>矩阵 A 可逆的充分必要条件是它可以表示成一些初等矩阵的乘积.</p>
+
+<p>\begin{proposition}[可逆矩阵性质-7]
+\end{proposition}</p>
+
+<p>用一个可逆矩阵左(右)乘一个矩阵 A, 不改变矩阵的秩.</p>
+
+<p>设 A 是 n 级可逆矩阵, 则存在初等矩阵 \(P_1, P_2, ⋯, P_t\), 使得 \(P_t \cdots P_2 P_1 = I\), 根据 <a href="#orgc3aeb1d">1</a> 可以得到 \(P_t \cdots \P_2 P_1 I = A^{-1}\), 可以得出
+\[A ⟶ I, I ⟶ A^{-1}\] 于是有 \[(A, I) = (I, A^{-1}),\] 这给出了求逆矩阵的另一种方法, 称它为 <strong>初等行变化法</strong>.</p>
+
+<p>设矩阵 A 可逆, 解矩阵方程 \(AX=B\) 时, 可以在两边左乘 \(A^{-1}\), 得到 \(A^{-1}AB=A^{-1}B\), 由此得出 \(X=A^{-1}B\).</p>
+
+<p>设矩阵 A 可逆, 解矩阵方程 \(XA=C\) 时, 可以在两边右乘 \(A^{-1}\), 得到 \(XA^{-1}A=CA^{-1}\), 由此得出 \(X=CA^{-1}\).</p>
+
+<h2 id="矩阵的分块">矩阵的分块</h2>
+
+<p>由矩阵 A 的若干行, 若干列的交叉位置的元素按原来的顺序排成的矩阵称为 A 的一个 <strong>子矩阵</strong>.</p>
+
+<p>把一个矩阵 A 的行分成若干组, 列也分成若干组, 从而 A 被分成若干个子矩阵, 把 A 看成是由这些子矩阵组成的, 这称为 <strong>矩阵的分块</strong>, 这种由子矩阵组成的矩阵称为 <strong>分块矩阵</strong>.</p>
+
+<p>\begin{mingti}[分块矩阵命题-1]
+\end{mingti}</p>
+
+<p>设 A 是 \(s \times n\) 矩阵, B 是 \(n \times m\) 矩阵, B 的列向量组为 \(\symbf{β_1, β_2, ⋯, \beta_m}\). 则 \[AB = A(\symbf{β_1, β_2, ⋯, \beta_m})=(A\symbf{\beta_1}, A\symbf{β_2}, ⋯, A\symbf{β_m})\].</p>
+
+<p>\begin{cor}[分块矩阵推论-1]
+\end{cor}</p>
+
+<p>设 \(A_{s \times n} \neq 0, B_{n×m}\) 的列向量组是 \(\symbf{β_1, β_2, ⋯, \beta_m}\). 则
+\(AB = 0 \quad ⟺ \quad \symbf{β_1, β_2, ⋯, \beta_m}\) 都是齐次线性方程组 \(AX=0\) 的解.</p>
+
+<p>\begin{cor}[分块矩阵推论-2]
+\end{cor}</p>
+
+<p>设 \(A_{s \times n} \neq 0, B_{n×m}\) 的列向量组是 \(\symbf{β_1, β_2, ⋯, \beta_m}\); \(C_{s×m}\) 的列向量组是 \(\symbf{δ_1, δ_2, ⋯, δ_m}\). 则
+\(AB = C \quad ⟺ \quad \symbf{β_j}\) 是齐次线性方程组 \(A \symbf{X}=\symbf{δ_j}, \, j = 1,2,⋯,m\) 的一个解.</p>
+
+
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+<div class="box">
+<figure  itemprop="associatedMedia"
+  itemscope itemtype="http://schema.org/ImageObject" >
+    <div class="img">
+      <img itemprop="thumbnail" src="/ox-hugo/screenshot_2017-09-16_11-08-22.png" />
+    </div>
+    <a href="/ox-hugo/screenshot_2017-09-16_11-08-22.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<p><img src="/ox-hugo/screenshot_2017-09-16_11-11-03.png" alt="" />
+上图中, 进行初等行变换即利用线性方程组的正常解法.</p>
+
+<p>主对角线上的所有子矩阵都是方阵, 而位于主对角线下(上)的所有子矩阵都为 0 的分块矩阵称为 <strong>分块上(下)三角矩阵</strong>, 容易得到</p>
+
+
+
+<div class="box">
+<figure  itemprop="associatedMedia"
+  itemscope itemtype="http://schema.org/ImageObject" >
+    <div class="img">
+      <img itemprop="thumbnail" src="/ox-hugo/screenshot_2017-09-16_11-18-21.png" />
+    </div>
+    <a href="/ox-hugo/screenshot_2017-09-16_11-18-21.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<p>\begin{mingti}[分块矩阵命题-2]
+\end{mingti}</p>
+
+<p>设 A, B 分别是 \(s\times n, n×s\) 矩阵, 则
+1).</p>
+
+<p>\begin{equation*}
+\left|
+\begin{split}
+I_n \quad &amp; B \\<br />
+A \quad &amp; I_s \\<br />
+\end{split}
+\right| = |I_s - AB|
+\end{equation*}</p>
+
+<p>2).</p>
+
+<p>\begin{equation*}
+\left|
+\begin{split}
+I_n \quad &amp; B \\<br />
+A \quad &amp; I_s \\<br />
+\end{split}
+\right| = |I_n - BA|
+\end{equation*}</p>
+
+<p>3). \(|I_s - AB| = |I_n| - BA\)</p>
+
+<p>\begin{mingti}[分块矩阵命题-3]
+\end{mingti}</p>
+
+<p>设</p>
+
+<p>\begin{equation*}
+A = \left\{
+\begin{split}
+A_1 \quad &amp; A_3 \\<br />
+0 \quad &amp; A_2 \\<br />
+\end{split}
+\right\}
+\end{equation*}</p>
+
+<p>其中, \(A_1, A_2\) 都是方阵. 则 A 可逆当且仅当 \(A_1, A_2\) 都可逆, 此时</p>
+
+<p>\begin{equation*}
+A^{-1} = \left\{
+\begin{split}
+A_1^{-1} \quad &amp; -A_1^{-1}A_3A_2^{-1} \\<br />
+0 \quad &amp; A_2^{-1} \\<br />
+\end{split}
+\right\}
+\end{equation*}</p>
+
+<h2 id="正交矩阵-----欧几里得空间--r-n">正交矩阵 \(⋅\) 欧几里得空间 \(R^n\)</h2>
+
+<p>\begin{de}[正交矩阵定义]
+\end{de}</p>
+
+<p>实数域上的 n 级矩阵 A 如果满足 \(AA&rsquo;=I\), 那么称 A 是 <strong>正交矩阵</strong>.</p>
+
+<p>\begin{mingti}[正交矩阵命题-1]
+\end{mingti}</p>
+
+<p>实数域上的 n 级矩阵 A 是正交矩阵 <br />
+\(⟺ \quad AA&rsquo; = I\) <br />
+\(⟺\) A 可逆, 且 \(A^{-1}=A&rsquo;\) <br />
+\(⟺\) \(A&rsquo;A=I\)</p>
+
+<p>正交矩阵具有如下性质:</p>
+
+<ol>
+<li>I 是正交矩阵;</li>
+<li>如 A 与 B 都是 n 级正交矩阵, 则 AB 也是正交矩阵;</li>
+<li>若 A 是正交矩阵, 则 \(A^{-1}_{} or A&rsquo;\) 也是正交矩阵;</li>
+<li>若 A 是正交矩阵, 则 |A|=1 或 -1.</li>
+</ol>
+
+<p>\begin{mingti}[正交矩阵命题-2]
+\end{mingti}</p>
+
+<p>设实数域上的 n 级矩阵 A 的行向量为 \(\symbf{γ_1, γ_2, ⋯, γ_n}\); 列向量为 \(\symbf{α_1, α_2, ⋯, α_m}\), 则
+1). A 为正交矩正当且仅当 A 的行向量组满足</p>
+
+<p>\begin{equation*}
+\symbf{γ_iγ_j&rsquo;} = \left\{
+\begin{split}
+&amp;1, \quad if \quad i=j, \\<br />
+&amp;0, \quad if \quad i ≠ j.
+\end{split}
+\right
+\end{equation*}</p>
+
+<p>2). A 为正交矩正当且仅当 A 的列向量组满足</p>
+
+<p>\begin{equation*}
+\symbf{α_i&rsquo;α_j} = \left\{
+\begin{split}
+&amp;1, \quad if \quad i=j, \\<br />
+&amp;0, \quad if \quad i ≠ j.
+\end{split}
+\right
+\end{equation*}</p>
+
+<p>\begin{de}[内积定义]
+\end{de}</p>
+
+<p>在 \(\symbf{R^n}\) 中, 任给 \(\symbf{α}=(a_1, a_2,⋯,a_n), \, \symbf{β}=(b_1,b_2,⋯,b_n)\), 规定</p>
+
+<p>\begin{equation}
+(\symbf{α,β}) \xlongequal{def} a_1b_1+a_2b_2+⋯+a_nb_n
+\end{equation}</p>
+
+<p>这个二元函数值 \((\symbf{α,β})\) 称为 \(\symbf{R^n}\) 的一个 <strong>内积</strong> (通常称它为 <strong>标准内积</strong>). (<a href="#orgab0c5f8">1</a>)也可以写成</p>
+
+<p>\begin{equation}
+(\symbf{α,β}) = \symbf{αβ&rsquo;}
+\end{equation}</p>
+
+<p>根据定义 (<a href="#org3d1ebd4">1</a>) 可以得到内积有如下性质:</p>
+
+<ol>
+<li>\((\symbf{α,β}) = (\symbf{β,α})\) (<strong>对称性</strong>)</li>
+<li>\((\symbf{α+γ,β}) = (\symbf{α+β}) + (\symbf{γ+β})\) (线性之一)</li>
+<li>\((k\symbf{α}\symbf{β}) = k(\symbf{β,α})\) (线性之二)</li>
+<li>\((\symbf{α,α}) ⩾ 0\), 等号成立当且仅当 \(\symbf{α=0}\). (正定性)</li>
+</ol>
+
+<p>如果 \(\symbf{α,β}\) 是列向量, 那么标准内积可写成 \((\symbf{α,β})=\symbf{α&rsquo;β}\)</p>
+
+<p>n 维向量空间 \(\symbf{R^n}\) 有了标准内积以后, 就称 \(\symbf{R^n}\) 为一个 <strong>欧几里得空间</strong>.</p>
+
+<p>在欧几里得空间  \(\symbf{R^n}\) 中, 向量 \(\symbf{α}\) 的长度规定为
+\[|\symbf{α}| \xlongequal{def} \sqrt{(\symbf{α,α})}\]</p>
+
+<p>长度为 1 的向量称为 <strong>单位向量</strong>, 显然, \(\symbf{α}\) 为单位向量的充要条件是 \(\symbf{(α, α)}=1\), 对于 \(\symbf{α}≠0\), 有 \(\frac{1}{|\symbf{α}|}\symbf{α}\) 一定是单位向量, 称向量的 \(\symbf{α}\) <strong>单位化</strong>.</p>
+
+<p>在欧几里得空间 \(\symbf{R^n}\) 中, 如果 \((\symbf{α, β})=0\), 那么称 \(\symbf{α}\) 与 \(\symbf{β}\) 是 <strong>正交</strong> 的, 记作 \(\symbf{α} \bot \symbf{β}\), 显然, 零向量与任何向量正交.</p>
+
+<p>在欧几里得空间 \(\symbf{R^n}\) 中, 由非零向量组成的向量组如果其中每两个不同的向量都正交, 那么称它们为 <strong>正交向量组</strong>, 仅由一个非零向量组成的向量组也是正交向量组, 如果正交向量组的每个向量都是单位向量, 那么称它为 <strong>正交单位向量组</strong>.</p>
+
+<p>\begin{mingti}[欧几里得空间命题-1]
+\end{mingti}</p>
+
+<p>在欧几里得空间 \(\symbf{R^n}\) 中, 正交向量组一定是线性无关的.</p>
+
+<p>根据命题(<a href="#orgcf091e8">1</a>)可以得到, 在欧几里得空间 \(\symbf{R^n}\) 中, n 个向量组成的正交向量组一定是 \(\symbf{R^n}\) 的一个基, 称它为 <strong>正交基</strong>, n 个单位向量组成的正交向量组称为 \(\symbf{R^n}\) 的一个 <strong>标准正交基</strong>, 显然 \(\symbf{ε_1, ε_2, ⋯, ε_n}\) 是 \(\symbf{R^n}\) 的一个 <strong>标准正交基</strong>.</p>
+
+<p>\begin{mingti}[欧几里得空间命题-2]
+\end{mingti}</p>
+
+<p>实数域上的 n 级矩阵 A 是正交矩阵的充要条件是: A 的行(列)向量组是欧几里得空间 \(\symbf{R^n}\) 的一个标准正交基.</p>
+
+<p>\begin{thm}[构造标准正交基定理]
+\end{thm}</p>
+
+<p>设 \(\symbf{α_1,α_2,⋯,α_s}\) 是欧几里得空间 \(\symbf{R^n}\) 中一个线性无关的向量组, 令</p>
+
+<p>\begin{equation}
+\begin{split}
+  \symbf{β_1} \, &amp;= \, \symbf{\alpha_1} \\<br />
+  \symbf{β_2} \, &amp;= \, \symbf{\alpha_2} - \frac{(\symbf{\alpha_2,\beta_1})}{(\symbf{\beta_1,\beta_1})}\symbf{\beta_1} \\<br />
+  \cdots \,&amp;= \quad\, \cdots \\<br />
+  \symbf{β_s} \, &amp;= \, \symbf{\alpha_s} - \sum_{j=1}^{s-1} \frac{(\symbf{\alpha_s,\beta_j})}{(\symbf{\beta_j,\beta_j})}\symbf{\beta_j}
+\end{split}
+\end{equation}</p>
+
+<p>定理(<a href="#org1af6f30">1</a>)给出了从一个线性无关的向量组 \(\symbf{α_1,α_2,⋯,α_s}\) 构造正交向量组的方法, 称为 <strong>施密特(Schmidt)正交化过程</strong>, 再将每个正交向量标准化, 即可得到单位正交向量组, 且与 \(\symbf{α_1,α_2,⋯,α_s}\) 等价.</p>
+
+<h2 id="k-n--到--k-s--的线性映射">\(K^n\) 到 \(K^s\) 的线性映射</h2>
+
+<p>\begin{de}[映射定义]
+\end{de}</p>
+
+<p>设 S 和 S&rsquo; 是两个集合, 如果存在一个对于法则 f, 使得集合 S 中的每一个元素 a, 都有集合 S&rsquo; 中唯一确定的元素 b 与它对应, 那么称 f 是 S 到 S&rsquo; 的一个 <strong>映射</strong>, 记作</p>
+
+<p>\begin{equation*}
+\begin{split}
+f: \, &amp;S ⟶ S&rsquo; \\<br />
+ &amp;a ⟼ b
+\end{split}
+\end{equation*}</p>
+
+<p>其中, b 称为 a 在 f 下的 <strong>象</strong>, a 称为 b 在 f 下的 <strong>原象</strong>. a 在 f 下的象用符号 f(a) 或 fa 表示, 于是映射 f 也可以记成 \[f(a)=b, \, a\in S.\]</p>
+
+<p>设 f 是集合 S 到 S&rsquo; 的一个映射, 则把 S 叫做映射 f 的 <strong>定义域</strong>, 把 S&rsquo; 叫做 f 的 <strong>陪域</strong>, S 的所有元素在 f 下的象组成的集合叫做 f 的 <strong>值域</strong> 或 f 的 <strong>象</strong>. 记作 f(S) 或 Imf. 即
+\[f(S) \xlongequal{def} \{f(a) | a \in S\}={b \in S&rsquo; | ∃ a \in S \, to\, f(a)=b} \], 容易看出 f 的值域是 f 的陪域的子集.</p>
+
+<p>设 f 是集合 S 到集合 S&rsquo; 的一个映射, 如果 \(f(S)=S&rsquo;\), 那么称 f 是 <strong>满射</strong>, 显然, f 是满射当且仅当 f 的陪域中的每一个元素都有至少一个原象.</p>
+
+<p>如果映射 f 的定义域 S 中不同元素的象也不同, 那么称 f 是 <strong>单射</strong> (或 f 是一一对应). 如果映射 f 既是单射也是满射, 那么称 f 是 <strong>双射</strong> (或称 f 是 S 到 S&rsquo; 的 <strong>一一对应</strong>), 显然, f 是双射当且仅当陪域中每一个元素都有唯一的原象.</p>
+
+<p>映射 f 与映射 g <strong>相当</strong>, 当且仅当它们的定义域相等, 陪域相等, 并且对应法则相同 (\(∀ x \in S, f(x)=g(x)\)), 集合 S 到自身的一个映射, 通常称为 S 上的一个 <strong>变换</strong>, 集合 S 到数集(数域 K 上的任一非空子集)的一个映射, 通常称为 S 上的一个 <strong>函数</strong>, 陪域 S&rsquo; 中的元素 b 在映射 f 下的所有原象组成的集合称为 b 在 f 下的 <strong>原象集</strong>, 记作 \(f^{-1}(b)\).</p>
+
+<p>\begin{de}[恒定映射定义]
+\end{de}</p>
+
+<p>映射 \(f: S ⟶ S\), 如果把 S 中的每一个元素对应到它自身, 即 \(∀x \in S\), 有 \(f(x)=x\), 那么称 f 是 <strong>恒等变映射</strong> (或 S 上的 <strong>恒等变换</strong>), 记作 \(1_S\).</p>
+
+<p>\begin{de}[映射乘积定义]
+\end{de}</p>
+
+<p>相继施行映射 \(g: S ⟶ S&rsquo;\) 和 \(f: S&rsquo; ⟶ S&rdquo;\), 得到 S 到 \(S&rdquo;\) 的一个映射, 称为 f 与 g 的 <strong>乘积</strong> (或 <strong>合成</strong>), 记作 fg, 即
+\[(fg)(a) \xlongequal{def} f(g(a)), \quad ∀ a \in S\]</p>
+
+<p>\begin{thm}[映射乘法结合律]
+\end{thm}</p>
+
+<p>映射乘法适合集合律, 即如果 \(h: S ⟶ S&rsquo;, \, g: S&rsquo; ⟶ S&rdquo;, \, f: S&rdquo; ⟶ S&rdquo;&rsquo;\), 那么 \(f(gh)=(fg)h\).</p>
+
+<p>\begin{de}[逆映射定义]
+\end{de}</p>
+
+<p>设 \(f: S ⟶ S&rsquo;\), 如果存在一个映射, \(g: S&rsquo; ⟶ S\), 使得
+\[fg = 1_{S&rsquo;} \quad \quad gf=1_S\]
+那么称映射 f 是 <strong>可逆</strong> 的, 此时称 g 是 f 的一个 <strong>逆映射</strong>.</p>
+
+<p>\begin{thm}[映射可逆定理]
+\end{thm}</p>
+
+<p>映射 \(f: S ⟶ S&rsquo;\) 是可逆的充要条件为 f 是双射.</p>
+
+<p>\begin{de}[线性映射定义]
+\end{de}</p>
+
+<p>数域 K 上的向量空间 \(K^n\) 到 \(K^s\) 的一个映射 \(σ\) 如果保持加法和数量乘法, 即 \(∀ \symbf{α,β} \in K^n, k \in K\), 有</p>
+
+<p>\begin{equation*}
+\begin{split}
+σ(\symbf{α+β}) &amp;= σ(\symbf{α})+σ(β) \\<br />
+σ(k\symbf{α}) &amp;= kσ(\symbf{α}) \\<br />
+\end{split}
+\end{equation*}</p>
+
+<p>那么称 σ 是 \(K^n\) 到 \(K^s\) 的一个 <strong>线性映射</strong>.</p>
+
+<p>设 A 是数域 K 上的 \(s \times n\) 矩阵, 令</p>
+
+<p>\begin{equation}
+\begin{split}
+\symbf{A}: \, &amp;K^n ⟶ K^s \\<br />
+ &amp;\symbf{α} ⟼ A\symbf{α}
+\end{split}
+\end{equation}</p>
+
+<p>容易验证, \(\symbf{A}\) 是  \(K^n\) 到 \(K^s\) 的一个线性映射.</p>
+
+<p>根据定义(<a href="#org493193d">1</a>), 可以得出一下几个事实:</p>
+
+
+
+<div class="box">
+<figure  itemprop="associatedMedia"
+  itemscope itemtype="http://schema.org/ImageObject" >
+    <div class="img">
+      <img itemprop="thumbnail" src="/ox-hugo/screenshot_2017-09-20_22-35-21.png" />
+    </div>
+    <a href="/ox-hugo/screenshot_2017-09-20_22-35-21.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+
+
+<div class="box">
+<figure  itemprop="associatedMedia"
+  itemscope itemtype="http://schema.org/ImageObject" >
+    <div class="img">
+      <img itemprop="thumbnail" src="/ox-hugo/screenshot_2017-09-20_22-35-54.png" />
+    </div>
+    <a href="/ox-hugo/screenshot_2017-09-20_22-35-54.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+
+
+<div class="box">
+<figure  itemprop="associatedMedia"
+  itemscope itemtype="http://schema.org/ImageObject" >
+    <div class="img">
+      <img itemprop="thumbnail" src="/ox-hugo/screenshot_2017-09-20_22-36-55.png" />
+    </div>
+    <a href="/ox-hugo/screenshot_2017-09-20_22-36-55.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<p>\begin{de}[线性映射核定义]
+\end{de}</p>
+
+<p>设 σ 是 \(K^n\) 到 \(K^s\) 的一个映射, \(K^n\) 的一个子集
+\[\{\symbf{α} \in K^n \, | \, σ(\symbf{α})=\symbf{0}\}\]
+称为映射 σ 的核, 记作 Ker σ.</p>
+
+<p>容易验证, 如果 σ 是 \(K^n\) 到 \(K^s\) 的一个线性映射, 那么 Ker σ 是 \(K^n\) 的一个子空间. 由(<a href="#org9f2c868">1</a>)定义的线性映射 \(\symbf{A}\), 根据上面事实 3 可以得到
+\[Ker \symbf{A} = W\]
+即, 由(<a href="#org9f2c868">1</a>)定义的线性映射 \(\symbf{A}\) 的核等于齐次线性方程组 \(A\symbf{X}=\symbf{0}\) 的解空间.</p>
+
+<p>线性映射的象与核之间的关系可以由下式来刻画:</p>
+
+<p>\begin{equation}
+dim \, Ker \symbf{A} + dim \, Im \symbf{A} = dim \, K^n
+\end{equation}</p>
+
+
+
+<div class="box">
+<figure  itemprop="associatedMedia"
+  itemscope itemtype="http://schema.org/ImageObject" >
+    <div class="img">
+      <img itemprop="thumbnail" src="/ox-hugo/screenshot_2017-09-20_22-55-12.png" />
+    </div>
+    <a href="/ox-hugo/screenshot_2017-09-20_22-55-12.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<h2 id="例题">例题</h2>
+
+<p><strong>逆矩阵的解法</strong></p>
+
+<ol>
+<li>根据定义(<a href="#orgb344115">1</a>), 可以用伴随矩阵去求解</li>
+<li>根据初等行变换法, 如</li>
+</ol>
+
+
+
+<div class="box">
+<figure  itemprop="associatedMedia"
+  itemscope itemtype="http://schema.org/ImageObject" >
+    <div class="img">
+      <img itemprop="thumbnail" src="/ox-hugo/juz_2017-09-20_23-22-44.png" />
+    </div>
+    <a href="/ox-hugo/juz_2017-09-20_23-22-44.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<ol>
+<li>根据(<a href="#org15ce908">1</a>), 可以得出解线性方程组的第三种方法</li>
+</ol>
+
+
+
+<div class="box">
+<figure  itemprop="associatedMedia"
+  itemscope itemtype="http://schema.org/ImageObject" >
+    <div class="img">
+      <img itemprop="thumbnail" src="/ox-hugo/nijuzhen-3_2017-09-20_23-30-39.png" />
+    </div>
+    <a href="/ox-hugo/nijuzhen-3_2017-09-20_23-30-39.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<p><strong>矩阵 QR 分解及最小二乘解</strong></p>
+
+<ol>
+<li>n 级矩阵 TB 分解</li>
+</ol>
+
+
+
+<div class="box">
+<figure  itemprop="associatedMedia"
+  itemscope itemtype="http://schema.org/ImageObject" >
+    <div class="img">
+      <img itemprop="thumbnail" src="/ox-hugo/screenshot_2017-09-20_23-36-29.png" />
+    </div>
+    <a href="/ox-hugo/screenshot_2017-09-20_23-36-29.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+
+
+<div class="box">
+<figure  itemprop="associatedMedia"
+  itemscope itemtype="http://schema.org/ImageObject" >
+    <div class="img">
+      <img itemprop="thumbnail" src="/ox-hugo/screenshot_2017-09-20_23-37-05.png" />
+    </div>
+    <a href="/ox-hugo/screenshot_2017-09-20_23-37-05.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+
+
+<div class="box">
+<figure  itemprop="associatedMedia"
+  itemscope itemtype="http://schema.org/ImageObject" >
+    <div class="img">
+      <img itemprop="thumbnail" src="/ox-hugo/screenshot_2017-09-20_23-37-34.png" />
+    </div>
+    <a href="/ox-hugo/screenshot_2017-09-20_23-37-34.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<ol>
+<li>\(m × n\) 矩阵 QR 分解</li>
+</ol>
+
+
+
+<div class="box">
+<figure  itemprop="associatedMedia"
+  itemscope itemtype="http://schema.org/ImageObject" >
+    <div class="img">
+      <img itemprop="thumbnail" src="/ox-hugo/screenshot_2017-09-20_23-39-37.png" />
+    </div>
+    <a href="/ox-hugo/screenshot_2017-09-20_23-39-37.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+
+
+<div class="box">
+<figure  itemprop="associatedMedia"
+  itemscope itemtype="http://schema.org/ImageObject" >
+    <div class="img">
+      <img itemprop="thumbnail" src="/ox-hugo/screenshot_2017-09-20_23-41-04.png" />
+    </div>
+    <a href="/ox-hugo/screenshot_2017-09-20_23-41-04.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+
+
+<div class="box">
+<figure  itemprop="associatedMedia"
+  itemscope itemtype="http://schema.org/ImageObject" >
+    <div class="img">
+      <img itemprop="thumbnail" src="/ox-hugo/screenshot_2017-09-20_23-41-25.png" />
+    </div>
+    <a href="/ox-hugo/screenshot_2017-09-20_23-41-25.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+
+
+<div class="box">
+<figure  itemprop="associatedMedia"
+  itemscope itemtype="http://schema.org/ImageObject" >
+    <div class="img">
+      <img itemprop="thumbnail" src="/ox-hugo/screenshot_2017-09-20_23-41-46.png" />
+    </div>
+    <a href="/ox-hugo/screenshot_2017-09-20_23-41-46.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<ol>
+<li>最小二乘法</li>
+</ol>
+
+
+
+<div class="box">
+<figure  itemprop="associatedMedia"
+  itemscope itemtype="http://schema.org/ImageObject" >
+    <div class="img">
+      <img itemprop="thumbnail" src="/ox-hugo/screenshot_2017-09-20_23-43-47.png" />
+    </div>
+    <a href="/ox-hugo/screenshot_2017-09-20_23-43-47.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+
+
+<div class="box">
+<figure  itemprop="associatedMedia"
+  itemscope itemtype="http://schema.org/ImageObject" >
+    <div class="img">
+      <img itemprop="thumbnail" src="/ox-hugo/screenshot_2017-09-20_23-44-30.png" />
+    </div>
+    <a href="/ox-hugo/screenshot_2017-09-20_23-44-30.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">lengyueyang</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+      2019-08-10
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    
+      <label class="qr-code-image" for="reward">
+        <img class="image" src="/path/to/your/wechat-qr-code.png">
+        <span>微信打赏</span>
+      </label>
+    
+      <label class="qr-code-image" for="reward">
+        <img class="image" src="/path/to/your/alipay-qr-code.png">
+        <span>支付宝打赏</span>
+      </label>
+  </div>
+</div>
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="https://lengyueyang.github.io/zh-cn/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">线性代数</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/zh-cn/post/data-science/math/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-n-%E7%BB%B4%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4-%5Ckn%5C/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">高等代数-n 维向量空间 \(k^n\)</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/zh-cn/post/tools/gentoo/gentoo%E7%B3%BB%E7%BB%9F-%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E7%AF%87/">
+            <span class="next-text nav-default">Gentoo系统-系统安装篇</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "lengyueyang/blog_comment"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+  
+
+  
+
+  
+
+  <div class="disqus-comment">
+  <div class="disqus-button" id="load_disqus" onclick="load_disqus()">
+    显示 Disqus 评论
+  </div>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_config = function () {
+      this.page.url = "https://lengyueyang.github.io/zh-cn/post/data-science/math/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-%E7%9F%A9%E9%98%B5%E7%9A%84%E8%BF%90%E7%AE%97/";
+    };
+    function load_disqus() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'lengyueyang';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+
+      $('#load_disqus').remove();
+    };
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+  
+  </div>
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:maoxiaowei1988@foxmail.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="linkedin"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="https://lengyueyang.github.io/zh-cn/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2015 -
+    2020
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        use ox-hugo and org-mode for blog
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script type="text/javascript">
+    AV.initialize("pNCzoJ8bHsF9aNglc4RfYcfo-gzGzoHsz", "Bvxlb5rmnSeOJkrVais6uRwr");
+  </script>
+
+  <script>
+    function showHitCount(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push($(this).attr("id").trim());
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var hits = item.get('hits');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(hits);
+          }
+          for (var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if (countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function (results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("hits");
+            counter.save(null, {
+              success: function (counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('hits'));
+              },
+              error: function (counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+             
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+             
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("hits", 1);
+            newcounter.save(null, {
+              success: function (newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('hits'));
+              },
+              error: function (newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function (error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function () {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        
+        addCount(Counter);
+      } else if ($('.post-link').length > 1) {
+        
+        showHitCount(Counter);
+      }
+    });
+  </script>
+
+
+
+  <script id="dsq-count-scr" src="//lengyueyang.disqus.com/count.js" async></script>
+
+
+
+
+
+
+
+</body>
+</html>

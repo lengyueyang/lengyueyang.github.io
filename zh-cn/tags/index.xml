@@ -5,10 +5,191 @@
     <link>https://lengyueyang.github.io/zh-cn/tags/</link>
     <description>Recent content in Tags on 深度识医</description>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>2015-2019, use ox-hugo and orgmode for blog</copyright>
+    <copyright>use ox-hugo and org-mode for blog</copyright>
+    <lastBuildDate>Mon, 29 Jul 2019 00:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://lengyueyang.github.io/zh-cn/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Notes</title>
+      <link>https://lengyueyang.github.io/zh-cn/tags/notes/</link>
+      <pubDate>Mon, 29 Jul 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/zh-cn/tags/notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wiki</title>
+      <link>https://lengyueyang.github.io/zh-cn/tags/wiki/</link>
+      <pubDate>Mon, 29 Jul 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/zh-cn/tags/wiki/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blog</title>
+      <link>https://lengyueyang.github.io/zh-cn/tags/blog/</link>
+      <pubDate>Mon, 29 Jul 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/zh-cn/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://lengyueyang.github.io/zh-cn/tags/hugo/</link>
+      <pubDate>Mon, 29 Jul 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/zh-cn/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>configuration</title>
+      <link>https://lengyueyang.github.io/zh-cn/tags/configuration/</link>
+      <pubDate>Sun, 09 Jun 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/zh-cn/tags/configuration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://lengyueyang.github.io/zh-cn/tags/linux/</link>
+      <pubDate>Sun, 09 Jun 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/zh-cn/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>system</title>
+      <link>https://lengyueyang.github.io/zh-cn/tags/system/</link>
+      <pubDate>Sun, 09 Jun 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/zh-cn/tags/system/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>线性代数</title>
+      <link>https://lengyueyang.github.io/zh-cn/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</link>
+      <pubDate>Mon, 08 Jan 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/zh-cn/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nikola</title>
+      <link>https://lengyueyang.github.io/zh-cn/tags/nikola/</link>
+      <pubDate>Sun, 07 Jan 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/zh-cn/tags/nikola/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shadowsocks</title>
+      <link>https://lengyueyang.github.io/zh-cn/tags/shadowsocks/</link>
+      <pubDate>Mon, 11 Dec 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/zh-cn/tags/shadowsocks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming</title>
+      <link>https://lengyueyang.github.io/zh-cn/tags/programming/</link>
+      <pubDate>Tue, 19 Sep 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/zh-cn/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pyenv</title>
+      <link>https://lengyueyang.github.io/zh-cn/tags/pyenv/</link>
+      <pubDate>Tue, 19 Sep 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/zh-cn/tags/pyenv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://lengyueyang.github.io/zh-cn/tags/python/</link>
+      <pubDate>Tue, 19 Sep 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/zh-cn/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spacemacs</title>
+      <link>https://lengyueyang.github.io/zh-cn/tags/spacemacs/</link>
+      <pubDate>Sun, 26 Mar 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/zh-cn/tags/spacemacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Life</title>
+      <link>https://lengyueyang.github.io/zh-cn/tags/life/</link>
+      <pubDate>Wed, 15 Mar 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/zh-cn/tags/life/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Private</title>
+      <link>https://lengyueyang.github.io/zh-cn/tags/private/</link>
+      <pubDate>Wed, 15 Mar 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/zh-cn/tags/private/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>房子</title>
+      <link>https://lengyueyang.github.io/zh-cn/tags/%E6%88%BF%E5%AD%90/</link>
+      <pubDate>Wed, 15 Mar 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/zh-cn/tags/%E6%88%BF%E5%AD%90/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Emacs</title>
+      <link>https://lengyueyang.github.io/zh-cn/tags/emacs/</link>
+      <pubDate>Sun, 26 Feb 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/zh-cn/tags/emacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mu4e</title>
+      <link>https://lengyueyang.github.io/zh-cn/tags/mu4e/</link>
+      <pubDate>Sun, 26 Feb 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/zh-cn/tags/mu4e/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>email</title>
+      <link>https://lengyueyang.github.io/zh-cn/tags/email/</link>
+      <pubDate>Sun, 26 Feb 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/zh-cn/tags/email/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
