@@ -2,103 +2,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://lengyueyang.github.io/categories/</loc>
+    <loc>https://lengyueyang.github.io/en/categories/</loc>
     <lastmod>2019-07-07T21:56:31+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lengyueyang.github.io/</loc>
+    <loc>https://lengyueyang.github.io/en/</loc>
     <lastmod>2019-07-07T21:56:31+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lengyueyang.github.io/post/tools/spacemacs/lengyueyang/</loc>
+    <loc>https://lengyueyang.github.io/en/post/tools/spacemacs/lengyueyang/</loc>
     <lastmod>2019-07-07T21:38:07+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://lengyueyang.github.io/post/</loc>
+    <loc>https://lengyueyang.github.io/en/post/</loc>
     <lastmod>2019-07-07T21:56:31+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lengyueyang.github.io/categories/spacemacs/</loc>
+    <loc>https://lengyueyang.github.io/en/categories/spacemacs/</loc>
     <lastmod>2019-07-07T21:38:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lengyueyang.github.io/tags/</loc>
+    <loc>https://lengyueyang.github.io/en/tags/</loc>
     <lastmod>2019-07-07T21:56:31+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lengyueyang.github.io/categories/tools/</loc>
+    <loc>https://lengyueyang.github.io/en/categories/tools/</loc>
     <lastmod>2019-07-07T21:56:31+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lengyueyang.github.io/tags/configuration/</loc>
+    <loc>https://lengyueyang.github.io/en/tags/configuration/</loc>
     <lastmod>2019-07-07T21:38:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lengyueyang.github.io/tags/spacemacs/</loc>
+    <loc>https://lengyueyang.github.io/en/tags/spacemacs/</loc>
     <lastmod>2019-07-07T21:38:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lengyueyang.github.io/tags/archlinux/</loc>
+    <loc>https://lengyueyang.github.io/en/tags/archlinux/</loc>
     <lastmod>2019-07-07T21:56:31+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lengyueyang.github.io/post/tools/linux/archlinux-install-and-configuration/</loc>
+    <loc>https://lengyueyang.github.io/en/post/tools/linux/archlinux-install-and-configuration/</loc>
     <lastmod>2019-07-07T21:56:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://lengyueyang.github.io/categories/linux/</loc>
+    <loc>https://lengyueyang.github.io/en/categories/linux/</loc>
     <lastmod>2019-07-07T21:56:31+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lengyueyang.github.io/tags/wiki/</loc>
+    <loc>https://lengyueyang.github.io/en/tags/wiki/</loc>
     <lastmod>2019-07-07T21:56:31+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lengyueyang.github.io/tags/linux/</loc>
+    <loc>https://lengyueyang.github.io/en/tags/linux/</loc>
     <lastmod>2019-07-07T21:56:31+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lengyueyang.github.io/about/</loc>
+    <loc>https://lengyueyang.github.io/en/about/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lengyueyang.github.io/links/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lengyueyang.github.io/zh-cn/</loc>
+    <loc>https://lengyueyang.github.io/en/links/</loc>
     <priority>0</priority>
   </url>
   

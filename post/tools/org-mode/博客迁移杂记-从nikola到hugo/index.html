@@ -1,0 +1,1941 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>博客迁移杂记-从Nikola到Hugo - 深度识医</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="lengyueyang" />
+  <meta name="description" content="迁移原因 继上一次将博客迁移到Nikola之后，发现博客主题偏少，博客更新比较麻烦，之后寻找替代这，看到ox-hugo之后，发现这是我以后的终极博客了，可以全文或者org标题发布博客；
+" />
+
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.55.6" />
+
+
+<link rel="canonical" href="https://lengyueyang.github.io/post/tools/org-mode/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E6%9D%82%E8%AE%B0-%E4%BB%8Enikola%E5%88%B0hugo/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.af20b78e95c84de86b00a0242a4a77bd2601700e1b250edf27537d957ac0041d.css" integrity="sha256-ryC3jpXITehrAKAkKkp3vSYBcA4bJQ7fJ1N9lXrABB0=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="博客迁移杂记-从Nikola到Hugo" />
+<meta property="og:description" content="迁移原因
+
+继上一次将博客迁移到Nikola之后，发现博客主题偏少，博客更新比较麻烦，之后寻找替代这，看到ox-hugo之后，发现这是我以后的终极博客了，可以全文或者org标题发布博客；" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lengyueyang.github.io/post/tools/org-mode/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E6%9D%82%E8%AE%B0-%E4%BB%8Enikola%E5%88%B0hugo/" />
+<meta property="article:published_time" content="2019-07-29T00:00:00&#43;08:00"/>
+<meta property="article:modified_time" content="2019-08-04T21:04:08&#43;08:00"/><meta property="og:site_name" content="深度识医" />
+
+<meta itemprop="name" content="博客迁移杂记-从Nikola到Hugo">
+<meta itemprop="description" content="迁移原因
+
+继上一次将博客迁移到Nikola之后，发现博客主题偏少，博客更新比较麻烦，之后寻找替代这，看到ox-hugo之后，发现这是我以后的终极博客了，可以全文或者org标题发布博客；">
+
+
+<meta itemprop="datePublished" content="2019-07-29T00:00:00&#43;08:00" />
+<meta itemprop="dateModified" content="2019-08-04T21:04:08&#43;08:00" />
+<meta itemprop="wordCount" content="2888">
+
+
+
+<meta itemprop="keywords" content="Wiki,Notes,blog,hugo," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="博客迁移杂记-从Nikola到Hugo"/>
+<meta name="twitter:description" content="迁移原因
+
+继上一次将博客迁移到Nikola之后，发现博客主题偏少，博客更新比较麻烦，之后寻找替代这，看到ox-hugo之后，发现这是我以后的终极博客了，可以全文或者org标题发布博客；"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">深度识医</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          <div class="mobile-menu-parent">
+            <span class="mobile-submenu-open"></span>
+            <a href="https://lengyueyang.github.io/categories/data-science/">
+              医学数据科学
+            </a>
+          </div>
+          <ul class="mobile-submenu-list">
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/math/">数学基础</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/statistics/">统计基础</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/algorithms/">算法</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/programming/">编程</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/machine-learning/">机器学习</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/nlp-kg/">NLP-KG</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/data-analysis/">数据分析</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/medical/">医学知识</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/cdss/">CDSS</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/article-learning/">文章复现</a>
+              </li>
+            
+          </ul>
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          <div class="mobile-menu-parent">
+            <span class="mobile-submenu-open"></span>
+            <a href="https://lengyueyang.github.io/categories/%E5%B7%A5%E5%85%B7%E9%93%BE/">
+              工具链
+            </a>
+          </div>
+          <ul class="mobile-submenu-list">
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/linux/">Linux</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/gentoo/">Gentoo</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/spacemacs/">Spacemacs</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/org-mode/">Org-mode</a>
+              </li>
+            
+          </ul>
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/categories/life">生活</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/post/">归档</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/tags/">标签</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/categories/">分类</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/links">链接</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/about">关于</a>
+          
+        
+      </li>
+    <li class="mobile-menu-item">
+        
+        <div class="mobile-menu-parent mobile-menu-item-lang">
+          <span class="mobile-submenu-open"></span>
+          <a href="#">
+            
+            <i class="iconfont">
+              <svg height="16" width="16" version="1.1" viewBox="0 0 128 128">
+  <path d="m 64.719501,1.4279814 c -34.694029,0 -62.8192028,28.1251726 -62.8192028,62.8192016 0,34.694036 28.1251738,62.819207 62.8192028,62.819207 4.245691,0 8.392744,-0.42239 12.402214,-1.2253 -1.616124,-0.77296 -1.792473,-6.57213 -0.194346,-9.87848 1.779059,-3.68082 7.361625,-13.00555 1.840404,-16.134231 -5.521221,-3.12869 -3.98755,-4.53968 -7.361625,-8.15914 -3.374083,-3.61947 -1.994181,-4.16357 -2.208492,-5.09179 -0.736158,-3.19004 3.251385,-7.975096 3.435429,-8.465866 0.184043,-0.490781 0.184043,-2.331182 0.122689,-2.883308 -0.06131,-0.552125 -2.515051,-2.024446 -3.12852,-2.085791 -0.613469,-0.06133 -0.920209,0.98154 -1.77906,1.042896 -0.858856,0.06133 -4.601018,-2.269838 -5.39853,-2.883308 -0.797504,-0.61346 -1.165591,-2.085792 -2.269828,-3.190033 -1.104247,-1.104252 -1.226945,-0.24539 -2.944651,-0.920206 -1.717714,-0.674812 -7.238935,-2.69926 -11.471867,-4.416975 -4.23294,-1.717714 -4.601019,-4.125615 -4.662365,-5.827954 -0.06131,-1.702333 -2.57657,-4.171587 -3.756227,-5.950646 -1.179335,-1.77906 -1.396914,-4.232932 -1.826339,-3.680809 -0.429425,0.552114 2.208484,6.993538 1.77906,7.177582 -0.429425,0.184043 -1.349635,-1.77906 -2.576572,-3.374083 -1.226936,-1.595016 1.28829,-0.736159 -2.637915,-8.465864 -3.926198,-7.729705 1.226944,-11.671284 1.472324,-15.704806 0.24539,-4.033514 3.312738,1.472325 1.717715,-1.104238 -1.595016,-2.576571 0.122697,-7.975094 -1.104246,-9.938197 -1.226936,-1.963102 -8.220475,2.208492 -8.220475,2.208492 0.184036,-1.901758 6.134682,-5.153142 10.428966,-8.1591366 4.294277,-3.005996 6.91682,-0.674813 10.367621,0.4294236 3.450803,1.104246 3.680817,0.736167 2.515226,-0.368079 -1.165591,-1.1042446 0.49077,-1.6563686 3.190031,-1.2269356 2.699269,0.429425 3.435428,3.6808086 7.545669,3.3740746 4.110242,-0.306735 0.429425,0.797511 0.981548,1.840412 0.552123,1.042892 -0.613468,0.920202 -3.312729,2.760607 -2.699262,1.840403 0.06131,1.840403 4.846407,5.337177 4.785055,3.496773 3.312729,-2.331183 2.821952,-4.907753 -0.490777,-2.576563 3.496773,-0.552115 3.496773,-0.552115 2.944651,1.963094 2.400546,0.107972 4.547684,0.782784 2.147139,0.674814 7.967076,5.597286 7.967076,5.597286 -7.300273,3.98755 -2.699261,4.416975 -1.472325,5.337178 1.226937,0.920202 -2.515218,2.699261 -2.515218,2.699261 -1.53367,-1.53367 -1.779059,0.06131 -2.760614,0.613476 -0.981548,0.552115 -0.06131,1.963095 -0.06131,1.963095 -5.076415,0.797512 -3.926198,6.13469 -3.864852,7.422971 0.06131,1.288289 -3.251385,3.251384 -4.110242,5.091796 -0.858857,1.840405 2.208491,5.827948 0.613468,6.073336 -1.595016,0.24539 -3.190031,-6.011991 -11.778601,-3.680808 -2.589322,0.702954 -8.343174,3.680808 -5.275824,9.754153 3.06734,6.073336 8.15913,-1.717714 9.876843,-0.858857 1.717714,0.858857 -0.490778,4.72371 -0.122691,4.785055 0.368079,0.06131 4.8464,0.168662 5.09179,5.398522 0.245388,5.229868 6.809502,4.785065 8.220482,4.907755 1.410972,0.12269 6.134682,-3.864859 6.809502,-4.048894 0.674815,-0.184034 3.374076,-2.453876 9.263377,0.920195 5.889301,3.374089 8.895296,2.883308 10.919743,4.294285 2.02445,1.410987 0.61347,4.232939 2.51523,5.153134 1.90175,0.920217 9.50876,-0.306736 11.41051,2.821966 1.90176,3.1287 -7.8524,18.833491 -10.91974,20.551201 -3.06734,1.71772 -4.478321,5.64392 -7.545665,8.15913 -3.067349,2.51523 -7.361625,5.62854 -11.410522,8.03646 -3.583968,2.1311 -4.228845,5.949 -5.825333,7.15419 28.11404,-6.24545 49.13623,-31.328971 49.13623,-61.323497 0,-34.694029 -28.125171,-62.8192016 -62.819206,-62.8192016 z M 79.442753,60.382331 c -0.858857,0.245389 -2.637917,1.840405 -6.993547,-0.736166 -4.35563,-2.576564 -7.361625,-2.085794 -7.729705,-2.515218 0,0 -0.368079,-1.0429 1.533671,-1.226937 3.905098,-0.378065 8.833951,3.619464 9.938196,3.680809 1.104246,0.06131 1.656361,-1.104245 3.619464,-0.471631 1.963103,0.631953 0.490777,1.023755 -0.368079,1.269143 z M 58.891546,7.6853614 c -0.427786,-0.311152 0.354344,-0.669418 0.82058,-1.288281 0.269103,-0.357613 0.0695,-0.951289 0.406356,-1.28829 0.92021,-0.920203 5.459876,-2.208485 4.572225,0.306734 -0.887321,2.515226 -5.12434,2.760614 -5.799161,2.269837 z m 10.98109,7.9750936 c -1.533672,-0.06131 -5.14381,-0.442837 -4.478321,-1.104246 2.591952,-2.576563 -0.981548,-3.312729 -3.190039,-3.496766 -2.208485,-0.184043 -3.128687,-1.4109786 -2.02444,-1.5336776 1.104237,-0.12269 5.521213,0.06139 6.257379,0.6748206 0.736158,0.613469 4.723709,2.208485 4.969099,3.374076 0.24538,1.16559 0,2.147138 -1.533678,2.085793 z M 83.184914,15.23103 c -1.226943,0.981547 -7.400887,-3.521968 -8.588569,-4.539674 -5.153134,-4.4169746 -7.913742,-2.9446486 -8.995903,-3.6808086 -1.082485,-0.736166 -0.696897,-1.717713 0.959464,-3.190039 1.656369,-1.472325 6.318732,0.490778 9.017994,0.797512 2.699262,0.306734 5.827955,2.392527 5.889301,4.871925 0.06131,2.4792256 2.944649,4.7595296 1.717713,5.7410846 z" />
+</svg>
+
+            </i>
+            语言
+          </a>
+        </div>
+        <ul class="mobile-submenu-list">
+          
+            <li>
+              
+                <a href="https://lengyueyang.github.io/en/">English</a>
+              
+            </li>
+          
+            <li>
+              
+                <a href="https://lengyueyang.github.io/"><strong>中文</strong></a>
+              
+            </li>
+          
+        </ul>
+      </li>
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      深度识医
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          <a class="menu-item-link menu-parent" href="https://lengyueyang.github.io/categories/data-science/">医学数据科学</a>
+          <ul class="submenu">
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/math/">数学基础</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/statistics/">统计基础</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/algorithms/">算法</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/programming/">编程</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/machine-learning/">机器学习</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/nlp-kg/">NLP-KG</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/data-analysis/">数据分析</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/medical/">医学知识</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/cdss/">CDSS</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/article-learning/">文章复现</a>
+              </li>
+            
+          </ul>
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          <a class="menu-item-link menu-parent" href="https://lengyueyang.github.io/categories/%E5%B7%A5%E5%85%B7%E9%93%BE/">工具链</a>
+          <ul class="submenu">
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/linux/">Linux</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/gentoo/">Gentoo</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/spacemacs/">Spacemacs</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/org-mode/">Org-mode</a>
+              </li>
+            
+          </ul>
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/categories/life">生活</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/post/">归档</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/tags/">标签</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/categories/">分类</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/links">链接</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/about">关于</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    <li class="menu-item">
+        
+        <a class="menu-item-link menu-parent menu-item-lang" href="#">
+          
+          <i class="iconfont">
+            <svg height="16" width="16" version="1.1" viewBox="0 0 128 128">
+  <path d="m 64.719501,1.4279814 c -34.694029,0 -62.8192028,28.1251726 -62.8192028,62.8192016 0,34.694036 28.1251738,62.819207 62.8192028,62.819207 4.245691,0 8.392744,-0.42239 12.402214,-1.2253 -1.616124,-0.77296 -1.792473,-6.57213 -0.194346,-9.87848 1.779059,-3.68082 7.361625,-13.00555 1.840404,-16.134231 -5.521221,-3.12869 -3.98755,-4.53968 -7.361625,-8.15914 -3.374083,-3.61947 -1.994181,-4.16357 -2.208492,-5.09179 -0.736158,-3.19004 3.251385,-7.975096 3.435429,-8.465866 0.184043,-0.490781 0.184043,-2.331182 0.122689,-2.883308 -0.06131,-0.552125 -2.515051,-2.024446 -3.12852,-2.085791 -0.613469,-0.06133 -0.920209,0.98154 -1.77906,1.042896 -0.858856,0.06133 -4.601018,-2.269838 -5.39853,-2.883308 -0.797504,-0.61346 -1.165591,-2.085792 -2.269828,-3.190033 -1.104247,-1.104252 -1.226945,-0.24539 -2.944651,-0.920206 -1.717714,-0.674812 -7.238935,-2.69926 -11.471867,-4.416975 -4.23294,-1.717714 -4.601019,-4.125615 -4.662365,-5.827954 -0.06131,-1.702333 -2.57657,-4.171587 -3.756227,-5.950646 -1.179335,-1.77906 -1.396914,-4.232932 -1.826339,-3.680809 -0.429425,0.552114 2.208484,6.993538 1.77906,7.177582 -0.429425,0.184043 -1.349635,-1.77906 -2.576572,-3.374083 -1.226936,-1.595016 1.28829,-0.736159 -2.637915,-8.465864 -3.926198,-7.729705 1.226944,-11.671284 1.472324,-15.704806 0.24539,-4.033514 3.312738,1.472325 1.717715,-1.104238 -1.595016,-2.576571 0.122697,-7.975094 -1.104246,-9.938197 -1.226936,-1.963102 -8.220475,2.208492 -8.220475,2.208492 0.184036,-1.901758 6.134682,-5.153142 10.428966,-8.1591366 4.294277,-3.005996 6.91682,-0.674813 10.367621,0.4294236 3.450803,1.104246 3.680817,0.736167 2.515226,-0.368079 -1.165591,-1.1042446 0.49077,-1.6563686 3.190031,-1.2269356 2.699269,0.429425 3.435428,3.6808086 7.545669,3.3740746 4.110242,-0.306735 0.429425,0.797511 0.981548,1.840412 0.552123,1.042892 -0.613468,0.920202 -3.312729,2.760607 -2.699262,1.840403 0.06131,1.840403 4.846407,5.337177 4.785055,3.496773 3.312729,-2.331183 2.821952,-4.907753 -0.490777,-2.576563 3.496773,-0.552115 3.496773,-0.552115 2.944651,1.963094 2.400546,0.107972 4.547684,0.782784 2.147139,0.674814 7.967076,5.597286 7.967076,5.597286 -7.300273,3.98755 -2.699261,4.416975 -1.472325,5.337178 1.226937,0.920202 -2.515218,2.699261 -2.515218,2.699261 -1.53367,-1.53367 -1.779059,0.06131 -2.760614,0.613476 -0.981548,0.552115 -0.06131,1.963095 -0.06131,1.963095 -5.076415,0.797512 -3.926198,6.13469 -3.864852,7.422971 0.06131,1.288289 -3.251385,3.251384 -4.110242,5.091796 -0.858857,1.840405 2.208491,5.827948 0.613468,6.073336 -1.595016,0.24539 -3.190031,-6.011991 -11.778601,-3.680808 -2.589322,0.702954 -8.343174,3.680808 -5.275824,9.754153 3.06734,6.073336 8.15913,-1.717714 9.876843,-0.858857 1.717714,0.858857 -0.490778,4.72371 -0.122691,4.785055 0.368079,0.06131 4.8464,0.168662 5.09179,5.398522 0.245388,5.229868 6.809502,4.785065 8.220482,4.907755 1.410972,0.12269 6.134682,-3.864859 6.809502,-4.048894 0.674815,-0.184034 3.374076,-2.453876 9.263377,0.920195 5.889301,3.374089 8.895296,2.883308 10.919743,4.294285 2.02445,1.410987 0.61347,4.232939 2.51523,5.153134 1.90175,0.920217 9.50876,-0.306736 11.41051,2.821966 1.90176,3.1287 -7.8524,18.833491 -10.91974,20.551201 -3.06734,1.71772 -4.478321,5.64392 -7.545665,8.15913 -3.067349,2.51523 -7.361625,5.62854 -11.410522,8.03646 -3.583968,2.1311 -4.228845,5.949 -5.825333,7.15419 28.11404,-6.24545 49.13623,-31.328971 49.13623,-61.323497 0,-34.694029 -28.125171,-62.8192016 -62.819206,-62.8192016 z M 79.442753,60.382331 c -0.858857,0.245389 -2.637917,1.840405 -6.993547,-0.736166 -4.35563,-2.576564 -7.361625,-2.085794 -7.729705,-2.515218 0,0 -0.368079,-1.0429 1.533671,-1.226937 3.905098,-0.378065 8.833951,3.619464 9.938196,3.680809 1.104246,0.06131 1.656361,-1.104245 3.619464,-0.471631 1.963103,0.631953 0.490777,1.023755 -0.368079,1.269143 z M 58.891546,7.6853614 c -0.427786,-0.311152 0.354344,-0.669418 0.82058,-1.288281 0.269103,-0.357613 0.0695,-0.951289 0.406356,-1.28829 0.92021,-0.920203 5.459876,-2.208485 4.572225,0.306734 -0.887321,2.515226 -5.12434,2.760614 -5.799161,2.269837 z m 10.98109,7.9750936 c -1.533672,-0.06131 -5.14381,-0.442837 -4.478321,-1.104246 2.591952,-2.576563 -0.981548,-3.312729 -3.190039,-3.496766 -2.208485,-0.184043 -3.128687,-1.4109786 -2.02444,-1.5336776 1.104237,-0.12269 5.521213,0.06139 6.257379,0.6748206 0.736158,0.613469 4.723709,2.208485 4.969099,3.374076 0.24538,1.16559 0,2.147138 -1.533678,2.085793 z M 83.184914,15.23103 c -1.226943,0.981547 -7.400887,-3.521968 -8.588569,-4.539674 -5.153134,-4.4169746 -7.913742,-2.9446486 -8.995903,-3.6808086 -1.082485,-0.736166 -0.696897,-1.717713 0.959464,-3.190039 1.656369,-1.472325 6.318732,0.490778 9.017994,0.797512 2.699262,0.306734 5.827955,2.392527 5.889301,4.871925 0.06131,2.4792256 2.944649,4.7595296 1.717713,5.7410846 z" />
+</svg>
+
+          </i>
+          中文
+        </a>
+        <ul class="submenu">
+          
+            
+              <li>
+                <a href="https://lengyueyang.github.io/en/">English</a>
+              </li>
+            
+          
+            
+          
+        </ul>
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">博客迁移杂记-从Nikola到Hugo</h1>
+      
+      <div class="post-meta">
+        <time datetime="2019-07-29" class="post-time">
+          2019-07-29
+        </time>
+        <div class="post-category">
+            <a href="https://lengyueyang.github.io/categories/org-mode/"> Org-mode </a>
+            <a href="https://lengyueyang.github.io/categories/%E5%B7%A5%E5%85%B7%E9%93%BE/"> 工具链 </a>
+            
+          </div>
+        <span class="more-meta"> 约 2888 字 </span>
+          <span class="more-meta"> 预计阅读 6 分钟 </span>
+
+        
+        
+
+        
+        
+          <span id="/post/tools/org-mode/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E6%9D%82%E8%AE%B0-%E4%BB%8Enikola%E5%88%B0hugo/" class="leancloud_visitors" data-flag-title="博客迁移杂记-从Nikola到Hugo">
+            <span class="post-meta-item-text"> | 阅读 </span>
+            <span class="leancloud-visitors-count"></span>
+          </span>
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#迁移原因">迁移原因</a></li>
+<li><a href="#hugo-安装和配置">Hugo 安装和配置</a>
+<ul>
+<li><a href="#安装">安装</a></li>
+<li><a href="#配置">配置</a></li>
+</ul></li>
+<li><a href="#org-mode-写文章">Org-mode 写文章</a></li>
+<li><a href="#emacs-管理-blog">Emacs 管理 blog</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <h2 id="迁移原因">迁移原因</h2>
+
+<p>继上一次将博客迁移到Nikola之后，发现博客主题偏少，博客更新比较麻烦，之后寻找替代这，看到ox-hugo之后，发现这是我以后的终极博客了，可以全文或者org标题发布博客；</p>
+
+<h2 id="hugo-安装和配置">Hugo 安装和配置</h2>
+
+<h3 id="安装">安装</h3>
+
+<p>按照官方文档案长即可</p>
+
+<h3 id="配置">配置</h3>
+
+<p>配置文件是主目录下 <code>config.toml</code> 文件, 用 <code>jane</code> 主题</p>
+
+<p>下面是我的自定义，可以参照修改</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span><span class="lnt">212
+</span><span class="lnt">213
+</span><span class="lnt">214
+</span><span class="lnt">215
+</span><span class="lnt">216
+</span><span class="lnt">217
+</span><span class="lnt">218
+</span><span class="lnt">219
+</span><span class="lnt">220
+</span><span class="lnt">221
+</span><span class="lnt">222
+</span><span class="lnt">223
+</span><span class="lnt">224
+</span><span class="lnt">225
+</span><span class="lnt">226
+</span><span class="lnt">227
+</span><span class="lnt">228
+</span><span class="lnt">229
+</span><span class="lnt">230
+</span><span class="lnt">231
+</span><span class="lnt">232
+</span><span class="lnt">233
+</span><span class="lnt">234
+</span><span class="lnt">235
+</span><span class="lnt">236
+</span><span class="lnt">237
+</span><span class="lnt">238
+</span><span class="lnt">239
+</span><span class="lnt">240
+</span><span class="lnt">241
+</span><span class="lnt">242
+</span><span class="lnt">243
+</span><span class="lnt">244
+</span><span class="lnt">245
+</span><span class="lnt">246
+</span><span class="lnt">247
+</span><span class="lnt">248
+</span><span class="lnt">249
+</span><span class="lnt">250
+</span><span class="lnt">251
+</span><span class="lnt">252
+</span><span class="lnt">253
+</span><span class="lnt">254
+</span><span class="lnt">255
+</span><span class="lnt">256
+</span><span class="lnt">257
+</span><span class="lnt">258
+</span><span class="lnt">259
+</span><span class="lnt">260
+</span><span class="lnt">261
+</span><span class="lnt">262
+</span><span class="lnt">263
+</span><span class="lnt">264
+</span><span class="lnt">265
+</span><span class="lnt">266
+</span><span class="lnt">267
+</span><span class="lnt">268
+</span><span class="lnt">269
+</span><span class="lnt">270
+</span><span class="lnt">271
+</span><span class="lnt">272
+</span><span class="lnt">273
+</span><span class="lnt">274
+</span><span class="lnt">275
+</span><span class="lnt">276
+</span><span class="lnt">277
+</span><span class="lnt">278
+</span><span class="lnt">279
+</span><span class="lnt">280
+</span><span class="lnt">281
+</span><span class="lnt">282
+</span><span class="lnt">283
+</span><span class="lnt">284
+</span><span class="lnt">285
+</span><span class="lnt">286
+</span><span class="lnt">287
+</span><span class="lnt">288
+</span><span class="lnt">289
+</span><span class="lnt">290
+</span><span class="lnt">291
+</span><span class="lnt">292
+</span><span class="lnt">293
+</span><span class="lnt">294
+</span><span class="lnt">295
+</span><span class="lnt">296
+</span><span class="lnt">297
+</span><span class="lnt">298
+</span><span class="lnt">299
+</span><span class="lnt">300
+</span><span class="lnt">301
+</span><span class="lnt">302
+</span><span class="lnt">303
+</span><span class="lnt">304
+</span><span class="lnt">305
+</span><span class="lnt">306
+</span><span class="lnt">307
+</span><span class="lnt">308
+</span><span class="lnt">309
+</span><span class="lnt">310
+</span><span class="lnt">311
+</span><span class="lnt">312
+</span><span class="lnt">313
+</span><span class="lnt">314
+</span><span class="lnt">315
+</span><span class="lnt">316
+</span><span class="lnt">317
+</span><span class="lnt">318
+</span><span class="lnt">319
+</span><span class="lnt">320
+</span><span class="lnt">321
+</span><span class="lnt">322
+</span><span class="lnt">323
+</span><span class="lnt">324
+</span><span class="lnt">325
+</span><span class="lnt">326
+</span><span class="lnt">327
+</span><span class="lnt">328
+</span><span class="lnt">329
+</span><span class="lnt">330
+</span><span class="lnt">331
+</span><span class="lnt">332
+</span><span class="lnt">333
+</span><span class="lnt">334
+</span><span class="lnt">335
+</span><span class="lnt">336
+</span><span class="lnt">337
+</span><span class="lnt">338
+</span><span class="lnt">339
+</span><span class="lnt">340
+</span><span class="lnt">341
+</span><span class="lnt">342
+</span><span class="lnt">343
+</span><span class="lnt">344
+</span><span class="lnt">345
+</span><span class="lnt">346
+</span><span class="lnt">347
+</span><span class="lnt">348
+</span><span class="lnt">349
+</span><span class="lnt">350
+</span><span class="lnt">351
+</span><span class="lnt">352
+</span><span class="lnt">353
+</span><span class="lnt">354
+</span><span class="lnt">355
+</span><span class="lnt">356
+</span><span class="lnt">357
+</span><span class="lnt">358
+</span><span class="lnt">359
+</span><span class="lnt">360
+</span><span class="lnt">361
+</span><span class="lnt">362
+</span><span class="lnt">363
+</span><span class="lnt">364
+</span><span class="lnt">365
+</span><span class="lnt">366
+</span><span class="lnt">367
+</span><span class="lnt">368
+</span><span class="lnt">369
+</span><span class="lnt">370
+</span><span class="lnt">371
+</span><span class="lnt">372
+</span><span class="lnt">373
+</span><span class="lnt">374
+</span><span class="lnt">375
+</span><span class="lnt">376
+</span><span class="lnt">377
+</span><span class="lnt">378
+</span><span class="lnt">379
+</span><span class="lnt">380
+</span><span class="lnt">381
+</span><span class="lnt">382
+</span><span class="lnt">383
+</span><span class="lnt">384
+</span><span class="lnt">385
+</span><span class="lnt">386
+</span><span class="lnt">387
+</span><span class="lnt">388
+</span><span class="lnt">389
+</span><span class="lnt">390
+</span><span class="lnt">391
+</span><span class="lnt">392
+</span><span class="lnt">393
+</span><span class="lnt">394
+</span><span class="lnt">395
+</span><span class="lnt">396
+</span><span class="lnt">397
+</span><span class="lnt">398
+</span><span class="lnt">399
+</span><span class="lnt">400
+</span><span class="lnt">401
+</span><span class="lnt">402
+</span><span class="lnt">403
+</span><span class="lnt">404
+</span><span class="lnt">405
+</span><span class="lnt">406
+</span><span class="lnt">407
+</span><span class="lnt">408
+</span><span class="lnt">409
+</span><span class="lnt">410
+</span><span class="lnt">411
+</span><span class="lnt">412
+</span><span class="lnt">413
+</span><span class="lnt">414
+</span><span class="lnt">415
+</span><span class="lnt">416
+</span><span class="lnt">417
+</span><span class="lnt">418
+</span><span class="lnt">419
+</span><span class="lnt">420
+</span><span class="lnt">421
+</span><span class="lnt">422
+</span><span class="lnt">423
+</span><span class="lnt">424
+</span><span class="lnt">425
+</span><span class="lnt">426
+</span><span class="lnt">427
+</span><span class="lnt">428
+</span><span class="lnt">429
+</span><span class="lnt">430
+</span><span class="lnt">431
+</span><span class="lnt">432
+</span><span class="lnt">433
+</span><span class="lnt">434
+</span><span class="lnt">435
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nv">baseURL</span> <span class="o">=</span> <span class="s2">&#34;https://lengyueyang.github.io&#34;</span>
+<span class="nv">title</span> <span class="o">=</span> <span class="s2">&#34;lengyueyang’s blog for data science and AI of medical&#34;</span>
+<span class="nv">enableRobotsTXT</span> <span class="o">=</span> <span class="nb">true</span>
+<span class="nv">enableEmoji</span> <span class="o">=</span> <span class="nb">true</span>
+<span class="nv">theme</span> <span class="o">=</span> <span class="s2">&#34;jane&#34;</span>
+
+<span class="nv">hasCJKLanguage</span> <span class="o">=</span> <span class="nb">true</span>     <span class="c1"># has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文</span>
+<span class="nv">paginate</span> <span class="o">=</span> <span class="m">20</span>              <span class="c1"># Number of articles displayed on the homepage # 首页每页显示的文章数</span>
+<span class="nv">rssLimit</span> <span class="o">=</span> <span class="m">20</span>             <span class="c1"># Limit Entry Count to Rss file # 限制 Rss 文章输出数量</span>
+<span class="nv">disqusShortname</span> <span class="o">=</span> <span class="s2">&#34;lengyueyang&#34;</span>      <span class="c1"># disqus_shortname</span>
+<span class="nv">googleAnalytics</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>      <span class="c1"># UA-XXXXXXXX-X</span>
+<span class="nv">copyright</span> <span class="o">=</span> <span class="s2">&#34;use ox-hugo and org-mode for blog&#34;</span>            <span class="c1"># default: author.name ↓        # 默认为下面配置的author.name ↓</span>
+<span class="c1"># uglyURLs = true         # more info: https://gohugo.io/content-management/urls/#ugly-urls</span>
+
+<span class="c1"># Highlight options.</span>
+<span class="c1"># See https://gohugo.io/content-management/syntax-highlighting/</span>
+<span class="nv">PygmentsCodeFences</span> <span class="o">=</span> <span class="nb">true</span> <span class="c1"># Enable syntax highlighting with GitHub flavoured code fences</span>
+<span class="nv">PygmentsUseClasses</span> <span class="o">=</span> <span class="nb">true</span> <span class="c1"># Use CSS classes to format highlighted code</span>
+<span class="nv">PygmentsCodefencesGuessSyntax</span> <span class="o">=</span> <span class="nb">true</span>
+<span class="nv">PygmentsOptions</span> <span class="o">=</span> <span class="s2">&#34;linenos=table&#34;</span>
+
+<span class="c1"># Enable author pages</span>
+<span class="o">[</span>taxonomies<span class="o">]</span>
+  <span class="c1"># author = &#34;author&#34;</span>
+  <span class="nv">tag</span> <span class="o">=</span> <span class="s2">&#34;tags&#34;</span>
+  <span class="nv">category</span> <span class="o">=</span> <span class="s2">&#34;categories&#34;</span>
+
+<span class="c1"># language support # en / zh-cn / other... translations present in i18n/</span>
+<span class="nv">defaultContentLanguage</span> <span class="o">=</span> <span class="s2">&#34;en&#34;</span>           <span class="c1"># Default language to use</span>
+
+<span class="o">[</span>langusges<span class="o">]</span>
+<span class="o">[</span>languages.en<span class="o">]</span>
+  <span class="nv">title</span> <span class="o">=</span> <span class="s2">&#34;DR Medical&#34;</span>
+  <span class="nv">languageName</span> <span class="o">=</span> <span class="s2">&#34;English&#34;</span>
+  <span class="nv">contentDir</span> <span class="o">=</span> <span class="s2">&#34;content/en&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">1</span>
+
+<span class="o">[</span>languages.zh-cn<span class="o">]</span>
+  <span class="nv">title</span> <span class="o">=</span> <span class="s2">&#34;深度识医&#34;</span>
+  <span class="nv">languageName</span> <span class="o">=</span> <span class="s2">&#34;中文&#34;</span>
+  <span class="nv">contentDir</span> <span class="o">=</span> <span class="s2">&#34;content/zh-cn&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">2</span>
+
+<span class="c1"># [[languages.en.menu.main]]</span>
+<span class="c1">#   name = &#34;Home&#34;</span>
+<span class="c1">#   weight = 10</span>
+<span class="c1">#   identifier = &#34;home&#34;</span>
+<span class="c1">#   url = &#34;/&#34;</span>
+<span class="o">[[</span>languages.en.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;Medical-DS&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">15</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Data-Science&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;/categories/medical-ds/&#34;</span>
+<span class="o">[[</span>languages.en.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;Math&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">1</span>
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;Data-Science&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Math&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;/categories/math/&#34;</span>
+<span class="o">[[</span>languages.en.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;Statistics&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">1</span>.5
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;Data-Science&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Statistics&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;/categories/statistics/&#34;</span>
+<span class="o">[[</span>languages.en.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;Algorithms&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">2</span>
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;Data-Science&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Algorithms&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;/categories/algorithms/&#34;</span>
+<span class="o">[[</span>languages.en.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;Programming&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">3</span>
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;Data-Science&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Programming&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;/categories/programming/&#34;</span>
+<span class="o">[[</span>languages.en.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;Machine-earning&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">4</span>
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;Data-Science&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Machine-Learning&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;/categories/machine-learning/&#34;</span>
+<span class="o">[[</span>languages.en.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;NLP-KG&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">5</span>
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;Data-Science&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;NLP-KG&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;/categories/nlp-kg/&#34;</span>
+<span class="o">[[</span>languages.en.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;Data-Analysis&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">6</span>
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;Data-Science&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Data-Analysis&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;/categories/data-analysis/&#34;</span>
+<span class="o">[[</span>languages.en.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;Medical&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">7</span>
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;Data-Science&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Medical&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;/categories/medical/&#34;</span>
+<span class="o">[[</span>languages.en.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;CDSS&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">8</span>
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;Data-Science&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;CDSS&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;/categories/cdss/&#34;</span>
+<span class="o">[[</span>languages.en.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;Article-Learning&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">10</span>
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;Data-Science&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Article-Learning&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;/categories/article-learning/&#34;</span>
+
+<span class="o">[[</span>languages.en.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;Tools&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">25</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Tools&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;/categories/tools/&#34;</span>
+<span class="o">[[</span>languages.en.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;Linux&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">1</span>
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;Tools&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Linux&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;/categories/linux/&#34;</span>
+<span class="o">[[</span>languages.en.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;Gentoo&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">2</span>
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;Tools&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Gentoo&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;/categories/gentoo/&#34;</span>
+<span class="o">[[</span>languages.en.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;Spacemacs&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">5</span>
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;Tools&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Spacemacs&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;/categories/spacemacs/&#34;</span>
+<span class="o">[[</span>languages.en.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;Org-mode&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">6</span>
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;Tools&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Org-mode&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;/categories/org-mode/&#34;</span>
+<span class="o">[[</span>languages.en.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;Archives&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">30</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;archives&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;/post/&#34;</span>
+<span class="o">[[</span>languages.en.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;Tags&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">35</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;tags&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;/tags/&#34;</span>
+<span class="o">[[</span>languages.en.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;Categories&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">40</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;categories&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;/categories/&#34;</span>
+<span class="o">[[</span>languages.en.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;Links&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">50</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;/links&#34;</span>
+<span class="o">[[</span>languages.en.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;About&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">60</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;/about&#34;</span>
+
+
+<span class="c1"># [[languages.zh-cn.menu.main]]</span>
+<span class="c1">#   name = &#34;主页&#34;</span>
+<span class="c1">#   weight = 10</span>
+<span class="c1">#   identifier = &#34;home&#34;</span>
+<span class="c1">#   url = &#34;zh-cn/&#34;</span>
+<span class="o">[[</span>languages.zh-cn.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;医学数据科学&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">15</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Data-Science&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;zh-cn/categories/data-science/&#34;</span>
+<span class="o">[[</span>languages.zh-cn.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;数学基础&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">1</span>
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;Data-Science&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Math&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;zh-cn/categories/math/&#34;</span>
+<span class="o">[[</span>languages.zh-cn.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;统计基础&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">1</span>
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;Data-Science&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Statistics&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;zh-cn/categories/statistics/&#34;</span>
+<span class="o">[[</span>languages.zh-cn.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;算法&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">2</span>
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;Data-Science&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Algorithms&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;zh-cn/categories/algorithms/&#34;</span>
+<span class="o">[[</span>languages.zh-cn.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;编程&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">3</span>
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;Data-Science&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Programming&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;zh-cn/categories/programming/&#34;</span>
+<span class="o">[[</span>languages.zh-cn.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;机器学习&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">4</span>
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;Data-Science&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Machine-Learning&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;zh-cn/categories/machine-learning/&#34;</span>
+<span class="o">[[</span>languages.zh-cn.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;NLP-KG&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">5</span>
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;Data-Science&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;NLP-KG&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;zh-cn/categories/nlp-kg/&#34;</span>
+<span class="o">[[</span>languages.zh-cn.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;数据分析&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">6</span>
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;Data-Science&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Data-Analysis&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;zh-cn/categories/data-analysis/&#34;</span>
+<span class="o">[[</span>languages.zh-cn.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;医学知识&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">7</span>
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;Data-Science&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Medical&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;zh-cn/categories/medical/&#34;</span>
+<span class="o">[[</span>languages.zh-cn.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;CDSS&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">8</span>
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;Data-Science&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;CDSS&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;zh-cn/categories/cdss/&#34;</span>
+<span class="o">[[</span>languages.zh-cn.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;文章复现&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">10</span>
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;Data-Science&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Articl-Learning&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;zh-cn/categories/article-learning/&#34;</span>
+
+<span class="o">[[</span>languages.zh-cn.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;工具链&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">25</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;工具链&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;zh-cn/categories/工具链/&#34;</span>
+<span class="o">[[</span>languages.zh-cn.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;Linux&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">1</span>
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;工具链&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Linux&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;zh-cn/categories/linux/&#34;</span>
+<span class="o">[[</span>languages.zh-cn.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;Gentoo&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">2</span>
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;工具链&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Gentoo&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;zh-cn/categories/gentoo/&#34;</span>
+<span class="o">[[</span>languages.zh-cn.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;Spacemacs&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">5</span>
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;工具链&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Spacemacs&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;zh-cn/categories/spacemacs/&#34;</span>
+<span class="o">[[</span>languages.zh-cn.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;Org-mode&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">6</span>
+  <span class="nv">parent</span> <span class="o">=</span> <span class="s2">&#34;工具链&#34;</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Org-mode&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;zh-cn/categories/org-mode/&#34;</span>
+<span class="o">[[</span>languages.zh-cn.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;生活&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">26</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;Life&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;zh-cn/categories/life&#34;</span>
+<span class="o">[[</span>languages.zh-cn.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;归档&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">30</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;archives&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;zh-cn/post/&#34;</span>
+<span class="o">[[</span>languages.zh-cn.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;标签&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">35</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;tags&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;zh-cn/tags/&#34;</span>
+<span class="o">[[</span>languages.zh-cn.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;分类&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">40</span>
+  <span class="nv">identifier</span> <span class="o">=</span> <span class="s2">&#34;categories&#34;</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;zh-cn/categories/&#34;</span>
+<span class="o">[[</span>languages.zh-cn.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;链接&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">50</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;zh-cn/links&#34;</span>
+<span class="o">[[</span>languages.zh-cn.menu.main<span class="o">]]</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;关于&#34;</span>
+  <span class="nv">weight</span> <span class="o">=</span> <span class="m">60</span>
+  <span class="nv">url</span> <span class="o">=</span> <span class="s2">&#34;zh-cn/about&#34;</span>
+
+
+
+<span class="o">[</span>author<span class="o">]</span>                  <span class="c1"># essential                     # 必需</span>
+  <span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;lengyueyang&#34;</span>
+
+<span class="o">[</span>sitemap<span class="o">]</span>                 <span class="c1"># essential                     # 必需</span>
+  <span class="nv">changefreq</span> <span class="o">=</span> <span class="s2">&#34;weekly&#34;</span>
+  <span class="nv">priority</span> <span class="o">=</span> <span class="m">0</span>.5
+  <span class="nv">filename</span> <span class="o">=</span> <span class="s2">&#34;sitemap.xml&#34;</span>
+
+<span class="o">[</span>params<span class="o">]</span>
+  <span class="nv">debug</span> <span class="o">=</span> <span class="nb">false</span>             <span class="c1"># If true, load `eruda.min.js`. See https://github.com/liriliri/eruda</span>
+  <span class="nv">since</span> <span class="o">=</span> <span class="s2">&#34;2015&#34;</span>            <span class="c1"># Site creation time          # 站点建立时间</span>
+  <span class="nv">homeFullContent</span> <span class="o">=</span> <span class="nb">false</span>   <span class="c1"># if false, show post summaries on home page. Othewise show full content.</span>
+  <span class="nv">rssFullContent</span> <span class="o">=</span> <span class="nb">true</span>     <span class="c1"># if false, Rss feed instead of the summary</span>
+
+  <span class="c1"># site info (optional)                                  # 站点信息（可选，不需要的可以直接注释掉）</span>
+  <span class="c1"># logoTitle = &#34;lengyueyang&#34;        # default: the title value    # 默认值: 上面设置的title值</span>
+  <span class="c1"># keywords = [&#34;Orgmode&#34;, &#34;Blog&#34;,&#34;Personal&#34;, &#34;Data Science&#34;]</span>
+  <span class="c1"># description = &#34;lengyueyang’s personal blog.&#34;</span>
+
+  <span class="c1"># paginate of archives, tags and categories             # 归档、标签、分类每页显示的文章数目，建议修改为一个较大的值</span>
+  archive-paginate <span class="o">=</span> <span class="m">10</span>
+
+  <span class="c1"># paginate style, default use numbered pagination links</span>
+  <span class="c1"># if true, use original &#34;Previous&#34; and &#34;Next&#34; links.</span>
+  <span class="nv">paginateOriginalStyle</span> <span class="o">=</span> <span class="nb">true</span>
+
+  <span class="c1"># The date format to use; for a list of valid formats, see https://gohugo.io/functions/format/</span>
+  <span class="nv">dateFormatToUse</span> <span class="o">=</span> <span class="s2">&#34;2006-01-02&#34;</span>
+
+  <span class="c1"># show word count and read time ?                       # 是否显示字数统计与阅读时间</span>
+  <span class="nv">moreMeta</span> <span class="o">=</span> <span class="nb">true</span>
+
+  <span class="c1"># show language chooser in menu</span>
+  <span class="nv">showMenuLanguageChooser</span> <span class="o">=</span> <span class="nb">true</span>
+
+  <span class="nv">showAuthorInfo</span> <span class="o">=</span> <span class="nb">false</span> <span class="c1"># show author info below the article</span>
+
+  <span class="c1"># 一些全局开关，你也可以在每一篇内容的 front matter 中针对单篇内容关闭或开启某些功能，在 archetypes/default.md 查看更多信息。</span>
+  <span class="c1"># Some global options, you can also close or open something in front matter for a single post, see more information from `archetypes/default.md`.</span>
+  <span class="nv">toc</span> <span class="o">=</span> <span class="nb">true</span>                                                                            <span class="c1"># 是否开启目录</span>
+  <span class="nv">photoswipe</span> <span class="o">=</span> <span class="nb">true</span>         <span class="c1"># see https://github.com/dimsemenov/PhotoSwipe            # 是否启用PhotoSwipe（图片可点击）</span>
+  <span class="nv">bootcdn</span> <span class="o">=</span> <span class="nb">false</span>           <span class="c1"># In china. @Deprecated: use [params.publicCDN]             # 是否使用bootcdn(@Deprecated: 请使用[params.publicCDN])</span>
+  <span class="nv">mathjax</span> <span class="o">=</span> <span class="nb">false</span>           <span class="c1"># see https://www.mathjax.org/                              # 是否使用mathjax（数学公式）</span>
+  <span class="nv">contentCopyright</span> <span class="o">=</span> <span class="s1">&#39;&lt;a rel=&#34;license noopener&#34; href=&#34;https://creativecommons.org/licenses/by-nc-nd/4.0/&#34; target=&#34;_blank&#34;&gt;CC BY-NC-ND 4.0&lt;/a&gt;&#39;</span>
+
+  <span class="nv">changyanAppid</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>        <span class="c1"># Changyan app id             # 畅言</span>
+  <span class="nv">changyanAppkey</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>       <span class="c1"># Changyan app key</span>
+  <span class="nv">tencent_analytics</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>    <span class="c1"># Tencent Analytics</span>
+  <span class="nv">baidu_push</span> <span class="o">=</span> <span class="nb">false</span>        <span class="c1"># baidu push                  # 百度</span>
+  <span class="nv">baidu_analytics</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>      <span class="c1"># Baidu Analytics</span>
+  <span class="nv">baidu_verification</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>   <span class="c1"># Baidu Verification</span>
+  <span class="nv">google_verification</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>  <span class="c1"># Google_Verification         # 谷歌</span>
+
+  <span class="c1"># Link custom CSS and JS assets</span>
+  <span class="c1">#   (relative to /static/css and /static/js respectively)</span>
+  <span class="nv">customCSS</span> <span class="o">=</span> <span class="o">[]</span>            <span class="c1"># if [&#39;custom.css&#39;], load &#39;/static/css/custom.css&#39; file</span>
+  <span class="nv">customJS</span> <span class="o">=</span> <span class="o">[]</span>             <span class="c1"># if [&#39;custom.js&#39;], load &#39;/static/js/custom.js&#39; file</span>
+
+  <span class="c1"># enable &#39;fork me on github&#39;, see https://blog.github.com/2008-12-19-github-ribbons/</span>
+  <span class="c1"># forkMeOnGithub = &#34;https://github.com/xianmin/hugo-theme-jane&#34;</span>
+
+  <span class="c1"># add custom info on the footer.   # 添加备案信息</span>
+  <span class="c1"># customFooter = &#34;京ICP备10000000号-1&#34;</span>
+
+  <span class="o">[</span>params.publicCDN<span class="o">]</span>        <span class="c1"># load these files from public cdn                          # 启用公共CDN，需自行定义</span>
+    <span class="nb">enable</span> <span class="o">=</span> <span class="nb">false</span>
+    <span class="nv">jquery</span> <span class="o">=</span> <span class="s1">&#39;&lt;script src=&#34;https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js&#34; integrity=&#34;sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;&#39;</span>
+    <span class="nv">slideout</span> <span class="o">=</span> <span class="s1">&#39;&lt;script src=&#34;https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js&#34; integrity=&#34;sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;&#39;</span>
+    <span class="nv">gitmentJS</span> <span class="o">=</span> <span class="s1">&#39;&lt;script src=&#34;https://cdn.jsdelivr.net/npm/gitment@0.0.3/dist/gitment.browser.min.js&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;&#39;</span>
+    <span class="nv">gitmentCSS</span> <span class="o">=</span> <span class="s1">&#39;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/gitment@0.0.3/style/default.min.css&#34; crossorigin=&#34;anonymous&#34;&gt;&#39;</span>
+    <span class="nv">photoswipe</span> <span class="o">=</span> <span class="s1">&#39;&lt;script src=&#34;https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.js&#34; integrity=&#34;sha256-AC9ChpELidrhGHX23ZU53vmRdz3FhKaN9E28+BbcWBw=&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;&#39;</span>
+    <span class="nv">photoswipeUI</span> <span class="o">=</span> <span class="s1">&#39;&lt;script src=&#34;https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js&#34; integrity=&#34;sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;&#39;</span>
+    <span class="nv">photoswipeCSS</span> <span class="o">=</span> <span class="s1">&#39;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css&#34; integrity=&#34;sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=&#34; crossorigin=&#34;anonymous&#34;&gt;&#39;</span>
+    <span class="nv">photoswipeSKIN</span> <span class="o">=</span> <span class="s1">&#39;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css&#34; integrity=&#34;sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=&#34; crossorigin=&#34;anonymous&#34;&gt;&#39;</span>
+
+  <span class="o">[</span>params.utteranc<span class="o">]</span>         <span class="c1"># utteranc is a comment system based on GitHub issues. see https://utteranc.es</span>
+    <span class="nb">enable</span> <span class="o">=</span> <span class="nb">true</span>
+    <span class="nv">repo</span> <span class="o">=</span> <span class="s2">&#34;lengyueyang/blog_comment&#34;</span>    <span class="c1"># The repo to store comments</span>
+    <span class="nv">issueTerm</span> <span class="o">=</span> <span class="s2">&#34;pathname&#34;</span>
+
+  <span class="o">[</span>params.gitment<span class="o">]</span>          <span class="c1"># Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment</span>
+    <span class="nv">owner</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>              <span class="c1"># Your GitHub ID</span>
+    <span class="nv">repo</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>               <span class="c1"># The repo to store comments</span>
+    <span class="nv">clientId</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>           <span class="c1"># Your client ID</span>
+    <span class="nv">clientSecret</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>       <span class="c1"># Your client secret</span>
+
+  <span class="o">[</span>params.livere<span class="o">]</span>          	<span class="c1">#LiveRe comment. see https://www.livere.com/</span>
+    <span class="nv">uid</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>
+
+  <span class="o">[</span>params.reward<span class="o">]</span>                                         <span class="c1"># 文章打赏</span>
+    <span class="nb">enable</span> <span class="o">=</span><span class="nb">true</span>
+    <span class="nv">wechat</span> <span class="o">=</span> <span class="s2">&#34;/path/to/your/wechat-qr-code.png&#34;</span>           <span class="c1"># 微信二维码</span>
+    <span class="nv">alipay</span> <span class="o">=</span> <span class="s2">&#34;/path/to/your/alipay-qr-code.png&#34;</span>           <span class="c1"># 支付宝二维码</span>
+
+  <span class="o">[</span>params.counter.busuanzi<span class="o">]</span>  <span class="c1"># a Chinese visitor counter  # 不蒜子计数器</span>
+    <span class="nb">enable</span> <span class="o">=</span> <span class="nb">false</span>
+
+  <span class="o">[</span>params.counter.leancloud<span class="o">]</span>  <span class="c1"># Chinese leancloud visitor counter  # leancloud 计数器</span>
+    <span class="nb">enable</span> <span class="o">=</span> <span class="nb">true</span>
+    <span class="nv">appId</span> <span class="o">=</span> <span class="s2">&#34;pNCzoJ8bHsF9aNglc4RfYcfo-gzGzoHsz&#34;</span>
+    <span class="nv">appKey</span> <span class="o">=</span> <span class="s2">&#34;Bvxlb5rmnSeOJkrVais6uRwr&#34;</span>
+
+  <span class="o">[</span>params.commentCount.disqus<span class="o">]</span> <span class="c1"># show counts of comments for Disqus</span>
+    <span class="nb">enable</span> <span class="o">=</span> <span class="nb">true</span>
+
+  <span class="o">[</span>params.social<span class="o">]</span>                                         <span class="c1"># 社交链接</span>
+    a-email <span class="o">=</span> <span class="s2">&#34;mailto:maoxiaowei1988@foxmail.com&#34;</span>
+    <span class="c1"># b-stack-overflow = &#34;http://localhost:1313&#34;</span>
+    <span class="c1"># c-twitter = &#34;http://localhost:1313&#34;</span>
+    <span class="c1"># d-facebook = &#34;http://localhost:1313&#34;</span>
+    e-linkedin <span class="o">=</span> <span class="s2">&#34;http://localhost:1313&#34;</span>
+    <span class="c1"># f-google = &#34;http://localhost:1313&#34;</span>
+    g-github <span class="o">=</span> <span class="s2">&#34;http://localhost:1313&#34;</span>
+    <span class="c1"># h-weibo = &#34;http://localhost:1313&#34;</span>
+    <span class="c1"># i-zhihu = &#34;http://localhost:1313&#34;</span>
+    <span class="c1"># j-douban = &#34;http://localhost:1313&#34;</span>
+    <span class="c1"># k-pocket = &#34;http://localhost:1313&#34;</span>
+    <span class="c1"># l-tumblr = &#34;http://localhost:1313&#34;</span>
+    <span class="c1"># m-instagram = &#34;http://localhost:1313&#34;</span>
+    <span class="c1"># n-gitlab = &#34;http://localhost:1313&#34;</span>
+    <span class="c1"># o-goodreads = &#34;http://localhost:1313&#34;</span>
+    <span class="c1"># p-coding = &#34;http://localhost:1313&#34;</span>
+    <span class="c1"># q-bilibili = &#34;http://localhost:1313&#34;</span>
+
+<span class="c1"># jsonfeed support</span>
+<span class="c1"># more information: https://github.com/xianmin/hugo-theme-jane/issues/23</span>
+<span class="c1"># to have json output it&#39;s necessary to uncomment this block of code and create a index.jsonfeed.json template, using hugo template specs</span>
+<span class="c1"># [outputs]</span>
+<span class="c1">#   home = [&#34;html&#34;, &#34;jsonfeed&#34;,&#34;rss&#34;]</span>
+<span class="c1">#   page = [&#34;html&#34;]</span>
+#
+<span class="c1"># [outputFormats]</span>
+<span class="c1"># [outputFormats.jsonfeed]</span>
+<span class="c1">#   mediaType = &#34;application/json&#34;</span>
+<span class="c1">#   baseName = &#34;feed&#34;</span>
+<span class="c1">#   isPlainText = true</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="org-mode-写文章">Org-mode 写文章</h2>
+
+<p>Org-mode全文增加</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1">#+HUGO_BASE_DIR: ~/MEGA/Emacs-lengyue/Blog-lengyue</span>
+<span class="c1">#+HUGO_SECTION: zh-cn/post/tools/spacemacs</span>
+<span class="c1">#+TITLE:</span>
+<span class="c1">#+DATE: 2019-07-29</span>
+<span class="c1">#+HUGO_WEIGHT: auto</span>
+<span class="c1">#+HUGO_AUTO_SET_LASTMOD: t</span>
+<span class="c1">#+HUGO_TAGS:</span>
+<span class="c1">#+HUGO_CATEGORIES:</span>
+<span class="c1">#+HUGO_DRAFT: false</span>
+<span class="c1">#+OPTIONS: author:nil</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Org-mode部分增加</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">:PROPERTIES:
+:EXPORT_HUGO_SECTION: zh-cn/post/
+:EXPORT_FILE_NAME:
+:EXPORT_DATE: <span class="m">2019</span>-07-29
+:EXPORT_HUGO_WEIGHT: auto
+:EXPORT_HUGO_AUTO_SET_LASTMOD: t
+:EXPORT_DRAFT: <span class="nb">false</span>
+:EXPORT_OPTIONS: author:nil
+:END:</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="emacs-管理-blog">Emacs 管理 blog</h2>
+
+<p>用 <code>easy-hugo</code> 做前端, 配置见github项目</p>
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">lengyueyang</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+      2019-08-04
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    
+      <label class="qr-code-image" for="reward">
+        <img class="image" src="/path/to/your/wechat-qr-code.png">
+        <span>微信打赏</span>
+      </label>
+    
+      <label class="qr-code-image" for="reward">
+        <img class="image" src="/path/to/your/alipay-qr-code.png">
+        <span>支付宝打赏</span>
+      </label>
+  </div>
+</div>
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="https://lengyueyang.github.io/tags/wiki/">Wiki</a>
+          <a href="https://lengyueyang.github.io/tags/notes/">Notes</a>
+          <a href="https://lengyueyang.github.io/tags/blog/">blog</a>
+          <a href="https://lengyueyang.github.io/tags/hugo/">hugo</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/tools/org-mode/%E4%BD%BF%E7%94%A8org-mode%E5%81%9A%E5%B9%BB%E7%81%AF%E7%89%87/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">使用Org-mode做幻灯片</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/data-science/math/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-n-%E7%BB%B4%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4-%5Ckn%5C/">
+            <span class="next-text nav-default">高等代数-n 维向量空间 \(k^n\)</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "lengyueyang/blog_comment"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+  
+
+  
+
+  
+
+  <div class="disqus-comment">
+  <div class="disqus-button" id="load_disqus" onclick="load_disqus()">
+    显示 Disqus 评论
+  </div>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_config = function () {
+      this.page.url = "https://lengyueyang.github.io/post/tools/org-mode/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E6%9D%82%E8%AE%B0-%E4%BB%8Enikola%E5%88%B0hugo/";
+    };
+    function load_disqus() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'lengyueyang';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+
+      $('#load_disqus').remove();
+    };
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+  
+  </div>
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:maoxiaowei1988@foxmail.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="linkedin"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="https://lengyueyang.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2015 -
+    2020
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        use ox-hugo and org-mode for blog
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script type="text/javascript">
+    AV.initialize("pNCzoJ8bHsF9aNglc4RfYcfo-gzGzoHsz", "Bvxlb5rmnSeOJkrVais6uRwr");
+  </script>
+
+  <script>
+    function showHitCount(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push($(this).attr("id").trim());
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var hits = item.get('hits');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(hits);
+          }
+          for (var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if (countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function (results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("hits");
+            counter.save(null, {
+              success: function (counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('hits'));
+              },
+              error: function (counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+             
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+             
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("hits", 1);
+            newcounter.save(null, {
+              success: function (newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('hits'));
+              },
+              error: function (newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function (error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function () {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        
+        addCount(Counter);
+      } else if ($('.post-link').length > 1) {
+        
+        showHitCount(Counter);
+      }
+    });
+  </script>
+
+
+
+  <script id="dsq-count-scr" src="//lengyueyang.disqus.com/count.js" async></script>
+
+
+
+
+
+
+
+</body>
+</html>
