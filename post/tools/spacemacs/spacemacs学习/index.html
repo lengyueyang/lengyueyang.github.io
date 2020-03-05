@@ -1,0 +1,2705 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Spacemacs学习 - 深度识医</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="lengyueyang" />
+  <meta name="description" content="Useful keybinding Buffer and window  SPC f s Save a buffer SPC f S Save all opened buffers SPC f f Open the buffer in now directory SPC f r Open the buffer and search in recently files SPC b b Open or switch a buffer with helm SPC b d Delete a buffer SPC b K Delete other buffer but this SPC w v/s split v or s SPC h/l/j/k switch window " />
+
+  <meta name="keywords" content="Orgmode, Blog, Personal, Data Science" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.55.6" />
+
+
+<link rel="canonical" href="https://lengyueyang.github.io/post/tools/spacemacs/spacemacs%E5%AD%A6%E4%B9%A0/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.af20b78e95c84de86b00a0242a4a77bd2601700e1b250edf27537d957ac0041d.css" integrity="sha256-ryC3jpXITehrAKAkKkp3vSYBcA4bJQ7fJ1N9lXrABB0=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="Spacemacs学习" />
+<meta property="og:description" content="Useful keybinding
+
+Buffer and window
+
+
+SPC f s Save a buffer
+SPC f S Save all opened buffers
+SPC f f Open the buffer in now directory
+SPC f r Open the buffer and search in recently files
+SPC b b Open or switch a buffer with helm
+SPC b d Delete a buffer
+SPC b K Delete other buffer but this
+SPC w v/s split v or s
+SPC h/l/j/k switch window
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lengyueyang.github.io/post/tools/spacemacs/spacemacs%E5%AD%A6%E4%B9%A0/" />
+<meta property="article:published_time" content="2016-02-14T00:00:00&#43;08:00"/>
+<meta property="article:modified_time" content="2019-08-10T11:48:06&#43;08:00"/><meta property="og:site_name" content="深度识医" />
+
+<meta itemprop="name" content="Spacemacs学习">
+<meta itemprop="description" content="Useful keybinding
+
+Buffer and window
+
+
+SPC f s Save a buffer
+SPC f S Save all opened buffers
+SPC f f Open the buffer in now directory
+SPC f r Open the buffer and search in recently files
+SPC b b Open or switch a buffer with helm
+SPC b d Delete a buffer
+SPC b K Delete other buffer but this
+SPC w v/s split v or s
+SPC h/l/j/k switch window
+">
+
+
+<meta itemprop="datePublished" content="2016-02-14T00:00:00&#43;08:00" />
+<meta itemprop="dateModified" content="2019-08-10T11:48:06&#43;08:00" />
+<meta itemprop="wordCount" content="3630">
+
+
+
+<meta itemprop="keywords" content="Wiki,Emacs,learning,spacemacs," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Spacemacs学习"/>
+<meta name="twitter:description" content="Useful keybinding
+
+Buffer and window
+
+
+SPC f s Save a buffer
+SPC f S Save all opened buffers
+SPC f f Open the buffer in now directory
+SPC f r Open the buffer and search in recently files
+SPC b b Open or switch a buffer with helm
+SPC b d Delete a buffer
+SPC b K Delete other buffer but this
+SPC w v/s split v or s
+SPC h/l/j/k switch window
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">深度识医</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          <div class="mobile-menu-parent">
+            <span class="mobile-submenu-open"></span>
+            <a href="https://lengyueyang.github.io/categories/%E5%8C%BB%E5%AD%A6%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">
+              医学数据科学
+            </a>
+          </div>
+          <ul class="mobile-submenu-list">
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">数学基础</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E7%BB%9F%E8%AE%A1%E5%9F%BA%E7%A1%80/">统计基础</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E7%AE%97%E6%B3%95/">算法</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/nlp-kg/">NLP-KG</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">数据分析</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E5%8C%BB%E5%AD%A6%E7%9F%A5%E8%AF%86/">医学知识</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/cdss/">CDSS</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E6%96%87%E7%AB%A0%E5%A4%8D%E7%8E%B0/">文章复现</a>
+              </li>
+            
+          </ul>
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          <div class="mobile-menu-parent">
+            <span class="mobile-submenu-open"></span>
+            <a href="https://lengyueyang.github.io/categories/%E5%B7%A5%E5%85%B7%E9%93%BE/">
+              工具链
+            </a>
+          </div>
+          <ul class="mobile-submenu-list">
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/linux/">Linux</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/gentoo/">Gentoo</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/spacemacs/">Spacemacs</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/org-mode/">Org-mode</a>
+              </li>
+            
+          </ul>
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/categories/%E7%94%9F%E6%B4%BB/">生活</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/post/">归档</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/tags/">标签</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/categories/">分类</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/links">链接</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/about">关于</a>
+          
+        
+      </li>
+    <li class="mobile-menu-item">
+        
+        <div class="mobile-menu-parent mobile-menu-item-lang">
+          <span class="mobile-submenu-open"></span>
+          <a href="#">
+            
+            <i class="iconfont">
+              <svg height="16" width="16" version="1.1" viewBox="0 0 128 128">
+  <path d="m 64.719501,1.4279814 c -34.694029,0 -62.8192028,28.1251726 -62.8192028,62.8192016 0,34.694036 28.1251738,62.819207 62.8192028,62.819207 4.245691,0 8.392744,-0.42239 12.402214,-1.2253 -1.616124,-0.77296 -1.792473,-6.57213 -0.194346,-9.87848 1.779059,-3.68082 7.361625,-13.00555 1.840404,-16.134231 -5.521221,-3.12869 -3.98755,-4.53968 -7.361625,-8.15914 -3.374083,-3.61947 -1.994181,-4.16357 -2.208492,-5.09179 -0.736158,-3.19004 3.251385,-7.975096 3.435429,-8.465866 0.184043,-0.490781 0.184043,-2.331182 0.122689,-2.883308 -0.06131,-0.552125 -2.515051,-2.024446 -3.12852,-2.085791 -0.613469,-0.06133 -0.920209,0.98154 -1.77906,1.042896 -0.858856,0.06133 -4.601018,-2.269838 -5.39853,-2.883308 -0.797504,-0.61346 -1.165591,-2.085792 -2.269828,-3.190033 -1.104247,-1.104252 -1.226945,-0.24539 -2.944651,-0.920206 -1.717714,-0.674812 -7.238935,-2.69926 -11.471867,-4.416975 -4.23294,-1.717714 -4.601019,-4.125615 -4.662365,-5.827954 -0.06131,-1.702333 -2.57657,-4.171587 -3.756227,-5.950646 -1.179335,-1.77906 -1.396914,-4.232932 -1.826339,-3.680809 -0.429425,0.552114 2.208484,6.993538 1.77906,7.177582 -0.429425,0.184043 -1.349635,-1.77906 -2.576572,-3.374083 -1.226936,-1.595016 1.28829,-0.736159 -2.637915,-8.465864 -3.926198,-7.729705 1.226944,-11.671284 1.472324,-15.704806 0.24539,-4.033514 3.312738,1.472325 1.717715,-1.104238 -1.595016,-2.576571 0.122697,-7.975094 -1.104246,-9.938197 -1.226936,-1.963102 -8.220475,2.208492 -8.220475,2.208492 0.184036,-1.901758 6.134682,-5.153142 10.428966,-8.1591366 4.294277,-3.005996 6.91682,-0.674813 10.367621,0.4294236 3.450803,1.104246 3.680817,0.736167 2.515226,-0.368079 -1.165591,-1.1042446 0.49077,-1.6563686 3.190031,-1.2269356 2.699269,0.429425 3.435428,3.6808086 7.545669,3.3740746 4.110242,-0.306735 0.429425,0.797511 0.981548,1.840412 0.552123,1.042892 -0.613468,0.920202 -3.312729,2.760607 -2.699262,1.840403 0.06131,1.840403 4.846407,5.337177 4.785055,3.496773 3.312729,-2.331183 2.821952,-4.907753 -0.490777,-2.576563 3.496773,-0.552115 3.496773,-0.552115 2.944651,1.963094 2.400546,0.107972 4.547684,0.782784 2.147139,0.674814 7.967076,5.597286 7.967076,5.597286 -7.300273,3.98755 -2.699261,4.416975 -1.472325,5.337178 1.226937,0.920202 -2.515218,2.699261 -2.515218,2.699261 -1.53367,-1.53367 -1.779059,0.06131 -2.760614,0.613476 -0.981548,0.552115 -0.06131,1.963095 -0.06131,1.963095 -5.076415,0.797512 -3.926198,6.13469 -3.864852,7.422971 0.06131,1.288289 -3.251385,3.251384 -4.110242,5.091796 -0.858857,1.840405 2.208491,5.827948 0.613468,6.073336 -1.595016,0.24539 -3.190031,-6.011991 -11.778601,-3.680808 -2.589322,0.702954 -8.343174,3.680808 -5.275824,9.754153 3.06734,6.073336 8.15913,-1.717714 9.876843,-0.858857 1.717714,0.858857 -0.490778,4.72371 -0.122691,4.785055 0.368079,0.06131 4.8464,0.168662 5.09179,5.398522 0.245388,5.229868 6.809502,4.785065 8.220482,4.907755 1.410972,0.12269 6.134682,-3.864859 6.809502,-4.048894 0.674815,-0.184034 3.374076,-2.453876 9.263377,0.920195 5.889301,3.374089 8.895296,2.883308 10.919743,4.294285 2.02445,1.410987 0.61347,4.232939 2.51523,5.153134 1.90175,0.920217 9.50876,-0.306736 11.41051,2.821966 1.90176,3.1287 -7.8524,18.833491 -10.91974,20.551201 -3.06734,1.71772 -4.478321,5.64392 -7.545665,8.15913 -3.067349,2.51523 -7.361625,5.62854 -11.410522,8.03646 -3.583968,2.1311 -4.228845,5.949 -5.825333,7.15419 28.11404,-6.24545 49.13623,-31.328971 49.13623,-61.323497 0,-34.694029 -28.125171,-62.8192016 -62.819206,-62.8192016 z M 79.442753,60.382331 c -0.858857,0.245389 -2.637917,1.840405 -6.993547,-0.736166 -4.35563,-2.576564 -7.361625,-2.085794 -7.729705,-2.515218 0,0 -0.368079,-1.0429 1.533671,-1.226937 3.905098,-0.378065 8.833951,3.619464 9.938196,3.680809 1.104246,0.06131 1.656361,-1.104245 3.619464,-0.471631 1.963103,0.631953 0.490777,1.023755 -0.368079,1.269143 z M 58.891546,7.6853614 c -0.427786,-0.311152 0.354344,-0.669418 0.82058,-1.288281 0.269103,-0.357613 0.0695,-0.951289 0.406356,-1.28829 0.92021,-0.920203 5.459876,-2.208485 4.572225,0.306734 -0.887321,2.515226 -5.12434,2.760614 -5.799161,2.269837 z m 10.98109,7.9750936 c -1.533672,-0.06131 -5.14381,-0.442837 -4.478321,-1.104246 2.591952,-2.576563 -0.981548,-3.312729 -3.190039,-3.496766 -2.208485,-0.184043 -3.128687,-1.4109786 -2.02444,-1.5336776 1.104237,-0.12269 5.521213,0.06139 6.257379,0.6748206 0.736158,0.613469 4.723709,2.208485 4.969099,3.374076 0.24538,1.16559 0,2.147138 -1.533678,2.085793 z M 83.184914,15.23103 c -1.226943,0.981547 -7.400887,-3.521968 -8.588569,-4.539674 -5.153134,-4.4169746 -7.913742,-2.9446486 -8.995903,-3.6808086 -1.082485,-0.736166 -0.696897,-1.717713 0.959464,-3.190039 1.656369,-1.472325 6.318732,0.490778 9.017994,0.797512 2.699262,0.306734 5.827955,2.392527 5.889301,4.871925 0.06131,2.4792256 2.944649,4.7595296 1.717713,5.7410846 z" />
+</svg>
+
+            </i>
+            语言
+          </a>
+        </div>
+        <ul class="mobile-submenu-list">
+          
+            <li>
+              
+                <a href="https://lengyueyang.github.io/en/">English</a>
+              
+            </li>
+          
+            <li>
+              
+                <a href="https://lengyueyang.github.io/"><strong>中文</strong></a>
+              
+            </li>
+          
+        </ul>
+      </li>
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      深度识医
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          <a class="menu-item-link menu-parent" href="https://lengyueyang.github.io/categories/%E5%8C%BB%E5%AD%A6%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">医学数据科学</a>
+          <ul class="submenu">
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">数学基础</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E7%BB%9F%E8%AE%A1%E5%9F%BA%E7%A1%80/">统计基础</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E7%AE%97%E6%B3%95/">算法</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/nlp-kg/">NLP-KG</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">数据分析</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E5%8C%BB%E5%AD%A6%E7%9F%A5%E8%AF%86/">医学知识</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/cdss/">CDSS</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E6%96%87%E7%AB%A0%E5%A4%8D%E7%8E%B0/">文章复现</a>
+              </li>
+            
+          </ul>
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          <a class="menu-item-link menu-parent" href="https://lengyueyang.github.io/categories/%E5%B7%A5%E5%85%B7%E9%93%BE/">工具链</a>
+          <ul class="submenu">
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/linux/">Linux</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/gentoo/">Gentoo</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/spacemacs/">Spacemacs</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/org-mode/">Org-mode</a>
+              </li>
+            
+          </ul>
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/categories/%E7%94%9F%E6%B4%BB/">生活</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/post/">归档</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/tags/">标签</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/categories/">分类</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/links">链接</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/about">关于</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    <li class="menu-item">
+        
+        <a class="menu-item-link menu-parent menu-item-lang" href="#">
+          
+          <i class="iconfont">
+            <svg height="16" width="16" version="1.1" viewBox="0 0 128 128">
+  <path d="m 64.719501,1.4279814 c -34.694029,0 -62.8192028,28.1251726 -62.8192028,62.8192016 0,34.694036 28.1251738,62.819207 62.8192028,62.819207 4.245691,0 8.392744,-0.42239 12.402214,-1.2253 -1.616124,-0.77296 -1.792473,-6.57213 -0.194346,-9.87848 1.779059,-3.68082 7.361625,-13.00555 1.840404,-16.134231 -5.521221,-3.12869 -3.98755,-4.53968 -7.361625,-8.15914 -3.374083,-3.61947 -1.994181,-4.16357 -2.208492,-5.09179 -0.736158,-3.19004 3.251385,-7.975096 3.435429,-8.465866 0.184043,-0.490781 0.184043,-2.331182 0.122689,-2.883308 -0.06131,-0.552125 -2.515051,-2.024446 -3.12852,-2.085791 -0.613469,-0.06133 -0.920209,0.98154 -1.77906,1.042896 -0.858856,0.06133 -4.601018,-2.269838 -5.39853,-2.883308 -0.797504,-0.61346 -1.165591,-2.085792 -2.269828,-3.190033 -1.104247,-1.104252 -1.226945,-0.24539 -2.944651,-0.920206 -1.717714,-0.674812 -7.238935,-2.69926 -11.471867,-4.416975 -4.23294,-1.717714 -4.601019,-4.125615 -4.662365,-5.827954 -0.06131,-1.702333 -2.57657,-4.171587 -3.756227,-5.950646 -1.179335,-1.77906 -1.396914,-4.232932 -1.826339,-3.680809 -0.429425,0.552114 2.208484,6.993538 1.77906,7.177582 -0.429425,0.184043 -1.349635,-1.77906 -2.576572,-3.374083 -1.226936,-1.595016 1.28829,-0.736159 -2.637915,-8.465864 -3.926198,-7.729705 1.226944,-11.671284 1.472324,-15.704806 0.24539,-4.033514 3.312738,1.472325 1.717715,-1.104238 -1.595016,-2.576571 0.122697,-7.975094 -1.104246,-9.938197 -1.226936,-1.963102 -8.220475,2.208492 -8.220475,2.208492 0.184036,-1.901758 6.134682,-5.153142 10.428966,-8.1591366 4.294277,-3.005996 6.91682,-0.674813 10.367621,0.4294236 3.450803,1.104246 3.680817,0.736167 2.515226,-0.368079 -1.165591,-1.1042446 0.49077,-1.6563686 3.190031,-1.2269356 2.699269,0.429425 3.435428,3.6808086 7.545669,3.3740746 4.110242,-0.306735 0.429425,0.797511 0.981548,1.840412 0.552123,1.042892 -0.613468,0.920202 -3.312729,2.760607 -2.699262,1.840403 0.06131,1.840403 4.846407,5.337177 4.785055,3.496773 3.312729,-2.331183 2.821952,-4.907753 -0.490777,-2.576563 3.496773,-0.552115 3.496773,-0.552115 2.944651,1.963094 2.400546,0.107972 4.547684,0.782784 2.147139,0.674814 7.967076,5.597286 7.967076,5.597286 -7.300273,3.98755 -2.699261,4.416975 -1.472325,5.337178 1.226937,0.920202 -2.515218,2.699261 -2.515218,2.699261 -1.53367,-1.53367 -1.779059,0.06131 -2.760614,0.613476 -0.981548,0.552115 -0.06131,1.963095 -0.06131,1.963095 -5.076415,0.797512 -3.926198,6.13469 -3.864852,7.422971 0.06131,1.288289 -3.251385,3.251384 -4.110242,5.091796 -0.858857,1.840405 2.208491,5.827948 0.613468,6.073336 -1.595016,0.24539 -3.190031,-6.011991 -11.778601,-3.680808 -2.589322,0.702954 -8.343174,3.680808 -5.275824,9.754153 3.06734,6.073336 8.15913,-1.717714 9.876843,-0.858857 1.717714,0.858857 -0.490778,4.72371 -0.122691,4.785055 0.368079,0.06131 4.8464,0.168662 5.09179,5.398522 0.245388,5.229868 6.809502,4.785065 8.220482,4.907755 1.410972,0.12269 6.134682,-3.864859 6.809502,-4.048894 0.674815,-0.184034 3.374076,-2.453876 9.263377,0.920195 5.889301,3.374089 8.895296,2.883308 10.919743,4.294285 2.02445,1.410987 0.61347,4.232939 2.51523,5.153134 1.90175,0.920217 9.50876,-0.306736 11.41051,2.821966 1.90176,3.1287 -7.8524,18.833491 -10.91974,20.551201 -3.06734,1.71772 -4.478321,5.64392 -7.545665,8.15913 -3.067349,2.51523 -7.361625,5.62854 -11.410522,8.03646 -3.583968,2.1311 -4.228845,5.949 -5.825333,7.15419 28.11404,-6.24545 49.13623,-31.328971 49.13623,-61.323497 0,-34.694029 -28.125171,-62.8192016 -62.819206,-62.8192016 z M 79.442753,60.382331 c -0.858857,0.245389 -2.637917,1.840405 -6.993547,-0.736166 -4.35563,-2.576564 -7.361625,-2.085794 -7.729705,-2.515218 0,0 -0.368079,-1.0429 1.533671,-1.226937 3.905098,-0.378065 8.833951,3.619464 9.938196,3.680809 1.104246,0.06131 1.656361,-1.104245 3.619464,-0.471631 1.963103,0.631953 0.490777,1.023755 -0.368079,1.269143 z M 58.891546,7.6853614 c -0.427786,-0.311152 0.354344,-0.669418 0.82058,-1.288281 0.269103,-0.357613 0.0695,-0.951289 0.406356,-1.28829 0.92021,-0.920203 5.459876,-2.208485 4.572225,0.306734 -0.887321,2.515226 -5.12434,2.760614 -5.799161,2.269837 z m 10.98109,7.9750936 c -1.533672,-0.06131 -5.14381,-0.442837 -4.478321,-1.104246 2.591952,-2.576563 -0.981548,-3.312729 -3.190039,-3.496766 -2.208485,-0.184043 -3.128687,-1.4109786 -2.02444,-1.5336776 1.104237,-0.12269 5.521213,0.06139 6.257379,0.6748206 0.736158,0.613469 4.723709,2.208485 4.969099,3.374076 0.24538,1.16559 0,2.147138 -1.533678,2.085793 z M 83.184914,15.23103 c -1.226943,0.981547 -7.400887,-3.521968 -8.588569,-4.539674 -5.153134,-4.4169746 -7.913742,-2.9446486 -8.995903,-3.6808086 -1.082485,-0.736166 -0.696897,-1.717713 0.959464,-3.190039 1.656369,-1.472325 6.318732,0.490778 9.017994,0.797512 2.699262,0.306734 5.827955,2.392527 5.889301,4.871925 0.06131,2.4792256 2.944649,4.7595296 1.717713,5.7410846 z" />
+</svg>
+
+          </i>
+          中文
+        </a>
+        <ul class="submenu">
+          
+            
+              <li>
+                <a href="https://lengyueyang.github.io/en/">English</a>
+              </li>
+            
+          
+            
+          
+        </ul>
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">Spacemacs学习</h1>
+      
+      <div class="post-meta">
+        <time datetime="2016-02-14" class="post-time">
+          2016-02-14
+        </time>
+        <div class="post-category">
+            <a href="https://lengyueyang.github.io/categories/spacemacs/"> Spacemacs </a>
+            <a href="https://lengyueyang.github.io/categories/%E5%B7%A5%E5%85%B7%E9%93%BE/"> 工具链 </a>
+            
+          </div>
+        <span class="more-meta"> 约 3630 字 </span>
+          <span class="more-meta"> 预计阅读 8 分钟 </span>
+
+        
+        
+
+        
+        
+          <span id="/post/tools/spacemacs/spacemacs%E5%AD%A6%E4%B9%A0/" class="leancloud_visitors" data-flag-title="Spacemacs学习">
+            <span class="post-meta-item-text"> | 阅读 </span>
+            <span class="leancloud-visitors-count"></span>
+          </span>
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#useful-keybinding">Useful keybinding</a>
+<ul>
+<li><a href="#buffer-and-window">Buffer and window</a></li>
+<li><a href="#help-and-search">Help and search</a></li>
+<li><a href="#others">Others</a></li>
+</ul></li>
+<li><a href="#the-emacs-evil-tutor">The Emacs Evil Tutor</a>
+<ul>
+<li><a href="#lesson-1">LESSON 1</a></li>
+<li><a href="#lesson-2">LESSON 2</a></li>
+<li><a href="#lesson-3">LESSON 3</a></li>
+<li><a href="#lesson-4">LESSON 4</a></li>
+<li><a href="#lesson-5">LESSON 5</a></li>
+<li><a href="#lesson-6">LESSON 6</a></li>
+</ul></li>
+<li><a href="#tips">Tips</a></li>
+<li><a href="#spacemacs-rocks">Spacemacs Rocks</a>
+<ul>
+<li><a href="#spacemacs-rocks-season-2--day-one">Spacemacs Rocks Season 2 ( Day one)</a>
+<ul>
+<li><a href="#install-emacs">Install Emacs</a></li>
+<li><a href="#go-over-the-emacs-tutorial-at-least-once">Go over the Emacs tutorial at least once</a></li>
+<li><a href="#learn-to-active-some-built-in-functionality--org-mode">Learn to active some built-in functionality (org-mode)</a></li>
+<li><a href="#learn-some-elisp--emacs-lisp">Learn some elisp(emacs lisp)</a></li>
+<li><a href="#start-to-hacking-emacs-from-the-day-one">Start to hacking Emacs from the day one!</a></li>
+<li><a href="#emacs-package-system-in-the-first-glance-dot">Emacs package system in the first glance.</a></li>
+<li><a href="#bonus--org-mode-basics">Bonus(org-mode basics)</a>
+<ul>
+<li><a href="#3rd-level">3rd level</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#spacemacs-rocks-season-2--day-two">Spacemacs Rocks Season 2 ( Day two )</a>
+<ul>
+<li><a href="#fixes-some-annoying-stuff">Fixes some annoying stuff</a></li>
+<li><a href="#make-emacs-more-fancy">Make Emacs more fancy</a></li>
+<li><a href="#improve-built-in-package-system">Improve built-in package system</a></li>
+<li><a href="#setup-a-javascript-ide">Setup a javascript IDE</a></li>
+<li><a href="#learn-more-from-emacs-itself">Learn more from Emacs itself</a></li>
+<li><a href="#org-mode--bonus-time">Org-mode(Bonus Time)</a>
+<ul>
+<li><a href="#agenda-files-and-agenda-view">Agenda files and agenda view</a></li>
+<li><a href="#learn-how-to-schedule-items-and-set-deadline">Learn how to schedule items and set deadline</a></li>
+</ul></li>
+<li><a href="#excercise">Excercise</a>
+<ul>
+<li><a href="#the-difference-between-dot-emacs-and-dot-emacs-dot-d-init-dot-el-file">the difference between .emacs and .emacs.d/init.el file</a></li>
+<li><a href="#try-to-configure-company-mode-via-customize-group">try to configure company mode via customize-group</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#spacemacs-rocks-season-2--day-three">Spacemacs Rocks Season 2 ( Day three )</a>
+<ul>
+<li><a href="#split-your-configs-into-multiple-files">Split your configs into multiple files</a></li>
+<li><a href="#major-mode-and-minor-mode-in-details">Major mode and minor mode in details</a></li>
+<li><a href="#better-defaults">Better Defaults</a></li>
+<li><a href="#exercise">Exercise</a></li>
+</ul></li>
+<li><a href="#spacemacs-rocks-season-2--day-4">Spacemacs Rocks Season 2 (Day 4)</a>
+<ul>
+<li><a href="#talk-more-about-load-load-file-require-provide-and-auto-load">Talk more about load, load-file, require, provide and auto-load</a></li>
+<li><a href="#better-defaults-1">Better defaults</a></li>
+<li><a href="#dired-mode-and-file-related-operations">Dired mode and file related operations</a></li>
+<li><a href="#bonus-time-dot-use-org-mode-literate-programming-to-organize-your-emacs-configurations-dot">Bonus Time. Use Org-mode literate programming to organize your Emacs configurations.</a></li>
+<li><a href="#exercise-1">Exercise</a></li>
+</ul></li>
+<li><a href="#spacemacs-rocks-season-2--day-5">Spacemacs Rocks Season 2 (Day 5)</a>
+<ul>
+<li><a href="#fix-smartparen-quote-issue">Fix smartparen quote issue</a></li>
+<li><a href="#editing-large-web-page">Editing large web page</a></li>
+<li><a href="#add-more-useful-packages-for-web-development">Add more useful packages for web development</a>
+<ul>
+<li><a href="#web-mode">web-mode</a></li>
+<li><a href="#js2-refactor">js2-refactor</a></li>
+</ul></li>
+<li><a href="#occur-and-imenu">occur and imenu</a></li>
+<li><a href="#expand-region-and-iedit-mode">expand-region and iedit mode</a></li>
+<li><a href="#bonus-time-dot-org-export">Bonus Time. Org export</a></li>
+<li><a href="#exercises">Exercises</a></li>
+</ul></li>
+<li><a href="#spacemacs-rocks-season-2--day-6">Spacemacs Rocks Season 2 (Day 6)</a>
+<ul>
+<li><a href="#bonus-time-org-mdoe">Bonus Time: Org-mdoe</a>
+<ul>
+<li><a href="#install-org-pomodoro-to-track-my-time">Install Org pomodoro to track my time</a></li>
+</ul></li>
+<li><a href="#clean-up-configs">clean up configs</a></li>
+<li><a href="#batch-rename-files">Batch rename files</a></li>
+<li><a href="#search-and-replace">search and replace</a>
+<ul>
+<li><a href="#install-helm-ag">install helm-ag</a></li>
+</ul></li>
+<li><a href="#show-javascript-errors-with-flycheck">Show  javascript errors with flycheck</a></li>
+<li><a href="#snippets-and-auto-snippet">Snippets and auto snippet</a></li>
+<li><a href="#exercises-1">exercises</a></li>
+</ul></li>
+<li><a href="#spacemacs-rocks-season-2--day-7">Spacemacs Rocks Season 2 (Day 7)</a>
+<ul>
+<li><a href="#tweak-c-w-to-delete-backward">Tweak C-w to delete backward</a></li>
+<li><a href="#evil--it-s-not-baidu--turn-emacs-into-vim-in-one-second">Evil (It&rsquo;s not Baidu!)   Turn Emacs into Vim in one second</a></li>
+<li><a href="#which-key">Which key</a></li>
+<li><a href="#design-your-own-key-bindings">Design your own key bindings</a></li>
+<li><a href="#bonus-time-search-org-notes">Bonus Time:  Search  Org notes</a></li>
+<li><a href="#references">References</a></li>
+<li><a href="#exercises-2">Exercises</a></li>
+</ul></li>
+<li><a href="#spacemacs-rocks-season-2--day-8">Spacemacs Rocks Season 2 (Day 8)</a>
+<ul>
+<li><a href="#elpa-mirros">elpa mirros</a></li>
+<li><a href="#cask-and-pallet">Cask and pallet</a>
+<ul>
+<li><a href="#you-can-t-start-different-versions-of-emacs-with-the-single-config">You can&rsquo;t start different versions of Emacs with the single config</a></li>
+<li><a href="#troubleshootings">Troubleshootings</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#spacemacs-rocks-season-2--day-9">Spacemacs Rocks Season 2 (Day 9)</a>
+<ul>
+<li><a href="#what-is-macro">What is macro?</a></li>
+<li><a href="#what-s-the-different-betwwen-function-and-macro">What&rsquo;s the different betwwen function and macro?</a>
+<ul>
+<li><a href="#evaluation-the-macro-arguments-are-the-actual-expressions-appearing-in-the-macro-call-dot">Evaluation:  the macro arguments are the actual expressions appearing in the macro call.</a></li>
+<li><a href="#expansion-the-value-returned-by-the-macro-body-is-an-alternate-lisp-expression-also-known-as-the-expansion-of-the-macro">Expansion: the value returned by the macro body is an alternate Lisp expression, also known as the expansion of the macro</a></li>
+<li><a href="#examples">examples:</a></li>
+</ul></li>
+<li><a href="#why-macro">Why Macro?</a>
+<ul>
+<li><a href="#a-more-useful-example-of-elisp-macro">A more useful example of Elisp macro</a></li>
+<li><a href="#use-package-and-basic-usage">Use-package and basic usage</a></li>
+</ul></li>
+<li><a href="#bonus-time">Bonus Time</a></li>
+<li><a href="#reference">Reference</a></li>
+</ul></li>
+<li><a href="#spacemacs-rocks-season-2--day-10">Spacemacs Rocks Season 2 (Day 10)</a>
+<ul>
+<li><a href="#fix-previous-issues">Fix previous issues</a></li>
+<li><a href="#how-company-mode-works">How company-mode works?</a></li>
+<li><a href="#why-my-company-sucks">Why my company sucks?</a></li>
+<li><a href="#group-backend">Group backend</a></li>
+<li><a href="#write-a-simple-company-backend">Write a Simple company backend</a></li>
+<li><a href="#reference-1">reference</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#acutex-编译-path-配置">ACUTEX 编译 PATH 配置</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <h2 id="useful-keybinding">Useful keybinding</h2>
+
+<h3 id="buffer-and-window">Buffer and window</h3>
+
+<ul>
+<li>SPC f s Save a buffer</li>
+<li>SPC f S Save all opened buffers</li>
+<li>SPC f f Open the buffer in now directory</li>
+<li>SPC f r Open the buffer and search in recently files</li>
+<li>SPC b b Open or switch a buffer with helm</li>
+<li>SPC b d Delete a buffer</li>
+<li>SPC b K Delete other buffer but this</li>
+<li>SPC w v/s split v or s</li>
+<li>SPC h/l/j/k switch window</li>
+</ul>
+
+<h3 id="help-and-search">Help and search</h3>
+
+<ul>
+<li>SPC h d f   对一个功能提示并显示其文档。</li>
+<li>SPC h d k   对一个快捷键提示并显示其绑定的内容。</li>
+<li>SPC h d v   对一个变量提示并显示其文档和当前值。</li>
+<li>SPC h SPC   搜索一个命令，功能，变量或接口，并显示其文档</li>
+<li>SPC f e *   Search configuration</li>
+<li>SPC ?       列出所有快捷键。</li>
+<li>SPC :       M-x 列出可执行的所有命令</li>
+</ul>
+
+<h3 id="others">Others</h3>
+
+<ul>
+<li>SPC f e R Reload the init.el</li>
+<li>SPC T h Select a theme using a helm buffer</li>
+<li>SPC f/p t To toggle the Neotree buffer press (project)</li>
+<li>SPC h b Open the bookmark</li>
+<li>SPC h T evil-tutor-start</li>
+<li>SPC h l Resume the last helm buffers</li>
+<li>SPC s L Focus the last converted search buffer</li>
+<li>F3 In a helm buffer, convert a helm search buffer into a regular buffer</li>
+</ul>
+
+<h2 id="the-emacs-evil-tutor">The Emacs Evil Tutor</h2>
+
+<h3 id="lesson-1">LESSON 1</h3>
+
+<ol>
+<li><p>The cursor is moved using either the arrow keys or the hjkl keys.
+h (left)        j (down)       k (up)            l (right)</p></li>
+
+<li><p>To exit Emacs type:  <ESC> :qa! <ENTER>  to trash all changes.
+OR type:  <ESC> :wqa <ENTER>  to save the changes.</p></li>
+
+<li><p>Ctrl + f Page Down
+Ctrl + b Page Up</p></li>
+
+<li><p>0 Cursor to the beginging of the line
+$ Cursor to the end of the line</p></li>
+
+<li><p>G Cursor to the last of the file
+nG Cursor to the n line of the file
+gg Cursor to the begin of the file, like 1G
+:[Enter] followed by a line number and moves to that line number.
+N[Enter] Curosr to the N line</p></li>
+</ol>
+
+<p>NOTE: Pressing <ESC> will place you in normal state or will cancel
+      an unwanted and partially completed command.</p>
+
+<h3 id="lesson-2">LESSON 2</h3>
+
+<ol>
+<li><p>x/X To delete a character under/before the cursor in normal state type</p></li>
+
+<li><p>To delete a whole line type:  dd</p></li>
+
+<li><p>The format for a command in normal state is:</p>
+
+<p>[number]  command  object    OR    command  [number]  object
+where:
+  number - is how many times to repeat the command
+  command - is what to do, such as  d  for delete
+  object - is what the command should act upon, such as  w  for word,
+           $  for &ldquo;to the end of line&rdquo;, etc.</p></li>
+
+<li><p>d1G, dG, d0, d$</p></li>
+
+<li><p>yy Copy the line of cursokr
+nyy Copy the n line data</p></li>
+
+<li><p>y1G, yG, y0, y$</p></li>
+
+<li><p>p/P Paste the data from the next/before line</p></li>
+
+<li><p>To undo previous actions, type:  u
+To undo the undo&rsquo;s type:  CTRL-R
+Repeat the last opeartion: .</p></li>
+</ol>
+
+<h3 id="lesson-3">LESSON 3</h3>
+
+<ol>
+<li><p>To replace text that has already been deleted, type  p  this puts the
+deleted text AFTER the cursor (if a line was deleted it will go on the
+line below the cursor).</p></li>
+
+<li><p>To replace the character under the cursor, type  r  and then the
+character which will replace the original.</p></li>
+
+<li><p>The change command allows you to change the specified object from the
+cursor to the end of the object.  eg. Type  cw  to change from the
+cursor to the end of the word,  c$  to change to the end of a line.</p></li>
+
+<li><p>The format for change is:
+[number]  c  object    OR    c  [number]  object</p></li>
+</ol>
+
+<h3 id="lesson-4">LESSON 4</h3>
+
+<ol>
+<li><p>Typing  /  followed by a phrase searches FORWARD for the phrase.
+Typing  ?  followed by a phrase searches BACKWARD for the phrase.
+After a search type  n  to find the next occurrence in the same direction
+or  N  to search in the opposite direction.</p></li>
+
+<li><p>Typing  %  while the cursor is on a  (,),[,],{, or }  locates its
+matching pair.</p></li>
+
+<li><p>To substitute new for the first old on a line type  :s/old/new
+To substitute new for all &lsquo;old&rsquo;s on a line type     :s/old/new/g
+To substitute phrases between two line #&rsquo;s type     :#,#s/old/new/g
+To substitute all occurrences in the file type      :%s/old/new/g
+To ask for confirmation each time add &lsquo;c&rsquo;           :%s/old/new/gc</p></li>
+</ol>
+
+<h3 id="lesson-5">LESSON 5</h3>
+
+<ol>
+<li><p>:!command  executes an external command.</p>
+
+<p>Some useful examples are:
+    :!ls  or  :!dir                 -  shows a directory listing.
+    :!rm  or  :!del FILENAME        -  removes file FILENAME.</p></li>
+
+<li><p>:w FILENAME  writes the current buffer to disk with file name FILENAME.</p></li>
+
+<li><p>:#,#w FILENAME  saves the lines # through # in file FILENAME.</p></li>
+
+<li><p>:r FILENAME  retrieves disk file FILENAME and inserts it into the
+current buffer following the cursor position.</p></li>
+</ol>
+
+<h3 id="lesson-6">LESSON 6</h3>
+
+<ol>
+<li><p>Typing  o   opens a line BELOW the cursor and places the cursor on the open
+line in insert state.
+Typing a capital  O  opens the line ABOVE the line the cursor is on.</p></li>
+
+<li><p>Type an  a  to insert text AFTER the character the cursor is on.
+Typing a capital  A  automatically appends text to the end of the line.</p></li>
+
+<li><p>i/I Insert text at the character/Not blank</p></li>
+</ol>
+
+<h2 id="tips">Tips</h2>
+
+<p>Not understand:
+12.1.4 Additional text objects
+12.3.3 Helm micro-state
+12.7 Searching</p>
+
+<h2 id="spacemacs-rocks">Spacemacs Rocks</h2>
+
+<h3 id="spacemacs-rocks-season-2--day-one">Spacemacs Rocks Season 2 ( Day one)</h3>
+
+<h4 id="install-emacs">Install Emacs</h4>
+
+<ul>
+<li>Mac</li>
+<li>Windows</li>
+<li>Linux(apt get install emacs)</li>
+</ul>
+
+<h4 id="go-over-the-emacs-tutorial-at-least-once">Go over the Emacs tutorial at least once</h4>
+
+<ul>
+<li>C-h t to open the tutorial.</li>
+<li>You need be familiar with cursor movement(C-f/C-b/C-n/C-p/C-a/C-e) and basic editing (C-k)</li>
+<li>You should be familiar with M(eta), s(uper, command key), S(hift), C(trl)  M-x s-p S-p C-p</li>
+<li>Prefix key(c-h is a prefix key) and C-g  (C-x c-f)</li>
+</ul>
+
+<h4 id="learn-to-active-some-built-in-functionality--org-mode">Learn to active some built-in functionality (org-mode)</h4>
+
+<ul>
+<li>linum-mode to display line numbers (M-x linum-mode)</li>
+<li>C-x C-f(find/file) to open files, C-x C-s(ave) to save files. (You could also use your mouse to do all the file operations.)</li>
+<li>you should always ask Emacs the right question</li>
+<li>C-h k/ C-h v / C-h f (Emacs is a self document, extensiable editor.)</li>
+<li>The key bindings are actually a quick way to command Emacs.</li>
+</ul>
+
+<h4 id="learn-some-elisp--emacs-lisp">Learn some elisp(emacs lisp)</h4>
+
+<ul>
+<li>use learnxinyminutes website to learn emacs lisp.</li>
+<li>at least you know how to define variable, functions</li>
+<li>You should know how to make a function callable and how to set a key binding for the function.</li>
+</ul>
+
+<h4 id="start-to-hacking-emacs-from-the-day-one">Start to hacking Emacs from the day one!</h4>
+
+<ul>
+<li>turn off tool-bar</li>
+<li>turn off scroll-bar</li>
+<li>show linum-mode</li>
+<li>turn off splash screen</li>
+<li>save your config</li>
+<li>define a function to quickly open your config file.</li>
+</ul>
+
+<h4 id="emacs-package-system-in-the-first-glance-dot">Emacs package system in the first glance.</h4>
+
+<ul>
+<li>How to use the built-in Package system of Emacs.</li>
+<li>Install company mode and active it.</li>
+<li>Major mode and minor mode (C-h m)</li>
+<li>Happy hacking. :)</li>
+</ul>
+
+<h4 id="bonus--org-mode-basics">Bonus(org-mode basics)</h4>
+
+<h5 id="3rd-level">3rd level</h5>
+
+<ul>
+<li>use * to define headings</li>
+<li>C-c C-t to toggle TODO states</li>
+</ul>
+
+<p>GTD(getting things done)* Day1
+C-h t help model</p>
+
+<h3 id="spacemacs-rocks-season-2--day-two">Spacemacs Rocks Season 2 ( Day two )</h3>
+
+<h4 id="fixes-some-annoying-stuff">Fixes some annoying stuff</h4>
+
+<ol>
+<li><p>make cursor style to bar</p></li>
+
+<li><p>disable backup file</p></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">setq</span> <span class="nv">make-backup-files</span> <span class="no">nil</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>use C-&rsquo; to open another buffer to edit source code.
+Make source code fancy in the org file.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;org</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">org-src-fontify-natively</span> <span class="no">t</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>enable recentf-mode</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;recentf</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">recentf-mode</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">recentf-max-menu-items</span> <span class="mi">25</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">global-set-key</span> <span class="s">&#34;\C-x\ \C-r&#34;</span> <span class="ss">&#39;recentf-open-files</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li><p>bring electric-indent-mode back</p></li>
+
+<li><p>add delete selection mode</p></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nv">delete-selection-mode</span> <span class="no">t</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="make-emacs-more-fancy">Make Emacs more fancy</h4>
+
+<ol>
+<li>Open with full screen</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">setq</span>  <span class="nv">initial-frame-alist</span> <span class="p">(</span><span class="nb">quote</span> <span class="p">((</span><span class="nv">fullscreen</span> <span class="o">.</span> <span class="nv">maximized</span><span class="p">))))</span></code></pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>show match parents</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;emacs-lisp-mode-hook</span> <span class="ss">&#39;show-paren-mode</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>It has a flaw, we will use more powerful package in the future.</p>
+
+<ol>
+<li>Highlight current line (global-hl-line-mode)</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nv">global-hl-line-mode</span> <span class="no">t</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="improve-built-in-package-system">Improve built-in package system</h4>
+
+<ol>
+<li>make package system more powerful with Melpa</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nf">&gt;=</span> <span class="nv">emacs-major-version</span> <span class="mi">24</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;package</span><span class="p">)</span>
+  <span class="p">(</span><span class="nv">package-initialize</span><span class="p">)</span>
+  <span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;package-archives</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;melpa&#34;</span> <span class="o">.</span> <span class="s">&#34;http://melpa.org/packages/&#34;</span><span class="p">)</span> <span class="no">t</span><span class="p">)</span>
+  <span class="p">)</span>
+<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;cl</span><span class="p">)</span>
+
+<span class="c1">;;add whatever packages you want here</span>
+<span class="p">(</span><span class="nb">defvar</span> <span class="nv">zilongshanren/packages</span> <span class="o">&#39;</span><span class="p">(</span>
+                          <span class="nv">company</span>
+
+              <span class="p">)</span>  <span class="s">&#34;Default packages&#34;</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nb">defun</span> <span class="nv">zilongshanren/packages-installed-p</span> <span class="p">()</span>
+  <span class="p">(</span><span class="nb">loop</span> <span class="nv">for</span> <span class="nv">pkg</span> <span class="nv">in</span> <span class="nv">zilongshanren/packages</span>
+        <span class="nb">when</span> <span class="p">(</span><span class="nv">not</span> <span class="p">(</span><span class="nv">package-installed-p</span> <span class="nv">pkg</span><span class="p">))</span> <span class="nb">do</span> <span class="p">(</span><span class="nb">return</span> <span class="no">nil</span><span class="p">)</span>
+        <span class="nv">finally</span> <span class="p">(</span><span class="nb">return</span> <span class="no">t</span><span class="p">)))</span>
+
+<span class="p">(</span><span class="nb">unless</span> <span class="p">(</span><span class="nv">zilongshanren/packages-installed-p</span><span class="p">)</span>
+  <span class="p">(</span><span class="nf">message</span> <span class="s">&#34;%s&#34;</span> <span class="s">&#34;Refreshing package database...&#34;</span><span class="p">)</span>
+  <span class="p">(</span><span class="nv">package-refresh-contents</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb">dolist</span> <span class="p">(</span><span class="nv">pkg</span> <span class="nv">zilongshanren/packages</span><span class="p">)</span>
+    <span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nv">not</span> <span class="p">(</span><span class="nv">package-installed-p</span> <span class="nv">pkg</span><span class="p">))</span>
+      <span class="p">(</span><span class="nv">package-install</span> <span class="nv">pkg</span><span class="p">))))</span></code></pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>install a theme (monokai)</li>
+<li>install hungry delete mode</li>
+<li>package-list-packages (add/delete/update packages)</li>
+<li>install and configure smex and ivy mode</li>
+<li>use customize-group to customize the package settings</li>
+<li>install and configure smartparens mode</li>
+<li>Don&rsquo;t try to update the package daily, the updating process might failed.</li>
+</ol>
+
+<p>(tips: press M-RET to fix the order, you could also use M-RET to add new headings, cheers!)</p>
+
+<h4 id="setup-a-javascript-ide">Setup a javascript IDE</h4>
+
+<ol>
+<li>Install js2-mode and start to write javascript</li>
+<li>Install nodejs-repl to execute code inside Emacs</li>
+</ol>
+
+<h4 id="learn-more-from-emacs-itself">Learn more from Emacs itself</h4>
+
+<ol>
+<li>c-h c-f(find-function), c-h c-v(find-variable), c-h c-k(find-function-on-key)</li>
+<li>Tell users to learn more about elisp(M-x info)</li>
+</ol>
+
+<h4 id="org-mode--bonus-time">Org-mode(Bonus Time)</h4>
+
+<h5 id="agenda-files-and-agenda-view">Agenda files and agenda view</h5>
+
+<ol>
+<li>one gtd.org file</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">setq</span> <span class="nv">org-agenda-files</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;~/org&#34;</span><span class="p">))</span>
+<span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;C-c a&#34;</span><span class="p">)</span> <span class="ss">&#39;org-agenda</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<h5 id="learn-how-to-schedule-items-and-set-deadline">Learn how to schedule items and set deadline</h5>
+
+<ol>
+<li>c-c c-s to schedule item</li>
+<li>c-c c-d to set deadline of item.</li>
+</ol>
+
+<h4 id="excercise">Excercise</h4>
+
+<h5 id="the-difference-between-dot-emacs-and-dot-emacs-dot-d-init-dot-el-file">the difference between .emacs and .emacs.d/init.el file</h5>
+
+<h5 id="try-to-configure-company-mode-via-customize-group">try to configure company mode via customize-group</h5>
+
+<h3 id="spacemacs-rocks-season-2--day-three">Spacemacs Rocks Season 2 ( Day three )</h3>
+
+<h4 id="split-your-configs-into-multiple-files">Split your configs into multiple files</h4>
+
+<ol>
+<li><p>use Git to management your init file</p></li>
+
+<li><p>help window is anoyying..</p></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="c1">;; add popwin mode</span>
+<span class="c1">;; why this line is needed</span>
+<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;popwin</span><span class="p">)</span> <span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;init-packages</span><span class="p">)</span>
+   <span class="c1">;;when require, wh(setq company-minimum-prefix-length 1)en not require</span>
+<span class="p">(</span><span class="nv">popwin-mode</span> <span class="no">t</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>load-file, load-path and load</li>
+<li>features, provide and require, autoload</li>
+<li>naming conventions</li>
+</ol>
+
+<p>zilongshanren/xxxx
+minor mode or major mode.
+niubi-mode
+niubi-xxx</p>
+
+<p>all of the names should have a prefix, such that the naming conflicts could be minimal.</p>
+
+<ol>
+<li>define your abbrevs</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp">  <span class="p">(</span><span class="nv">abbrev-mode</span> <span class="no">t</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nv">define-abbrev-table</span> <span class="ss">&#39;global-abbrev-table</span> <span class="o">&#39;</span><span class="p">(</span>
+                                            <span class="c1">;; signature</span>
+                                            <span class="p">(</span><span class="s">&#34;8zl&#34;</span> <span class="s">&#34;zilongshanren&#34;</span><span class="p">)</span>
+                                            <span class="c1">;; emacs regex</span>
+
+                                            <span class="p">))</span></code></pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>how to organize your configs</li>
+<li>init-packages.el</li>
+<li>init-ui.el</li>
+<li>init-better-defaults.el</li>
+<li>init-keybindings.el</li>
+<li>custom.el</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">setq</span> <span class="nv">custom-file</span> <span class="p">(</span><span class="nf">expand-file-name</span> <span class="s">&#34;custom.el&#34;</span> <span class="nv">user-emacs-directory</span><span class="p">))</span></code></pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>use `counsel-git` to find file in git managed project.</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;C-c p f&#34;</span><span class="p">)</span> <span class="ss">&#39;counsel-git</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="major-mode-and-minor-mode-in-details">Major mode and minor mode in details</h4>
+
+<ol>
+<li>conventions</li>
+</ol>
+
+<p>text-mode/special-mode/prog-mode
+naming:  xxx-mode,  xxx-mode-key-map  xxx-mode-hook</p>
+
+<ol>
+<li><p>mode key map and mode hook</p></li>
+
+<li><p>let&rsquo;s take a look at a pacakge in elpa (company)</p></li>
+</ol>
+
+<h4 id="better-defaults">Better Defaults</h4>
+
+<ol>
+<li>disable audio bell</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">setq</span> <span class="nv">ring-bell-function</span> <span class="ss">&#39;ignore</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>auto revert file when they are changed outside the editor</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nv">global-auto-revert-mode</span> <span class="no">t</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="exercise">Exercise</h4>
+
+<ol>
+<li>Only turn on Linum-mode when doing programming (tips: use prog-mode-hook)</li>
+</ol>
+
+<h3 id="spacemacs-rocks-season-2--day-4">Spacemacs Rocks Season 2 (Day 4)</h3>
+
+<h4 id="talk-more-about-load-load-file-require-provide-and-auto-load">Talk more about load, load-file, require, provide and auto-load</h4>
+
+<h4 id="better-defaults-1">Better defaults</h4>
+
+<ol>
+<li>Indent-region or buffer</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp">  <span class="p">(</span><span class="nb">defun</span> <span class="nv">indent-buffer</span> <span class="p">()</span>
+    <span class="s">&#34;Indent the currently visited buffer.&#34;</span>
+    <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
+ <span class="nv">reveal-in-osx-finder</span>   <span class="nv">It</span> <span class="nv">is</span> <span class="nv">bound</span> <span class="nv">to</span> <span class="nv">RET,</span> <span class="nv">a.</span>
+<span class="p">(</span><span class="nv">indent-rSpacemacsegion</span> <span class="p">(</span><span class="nf">point-min</span><span class="p">)</span> <span class="p">(</span><span class="nf">point-max</span><span class="p">)))</span>
+
+  <span class="p">(</span><span class="nb">defun</span> <span class="nv">indent-region-or-buffer</span> <span class="p">()</span>
+    <span class="s">&#34;Indent a region if selected, otherwise the whole buffer.&#34;</span>
+    <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
+    <span class="p">(</span><span class="nb">save-excursion</span>
+      <span class="p">(</span><span class="nb">if</span> <span class="p">(</span><span class="nv">region-active-p</span><span class="p">)</span>
+          <span class="p">(</span><span class="nb">progn</span>
+            <span class="p">(</span><span class="nv">indent-region</span> <span class="p">(</span><span class="nf">region-beginning</span><span class="p">)</span> <span class="p">(</span><span class="nf">region-end</span><span class="p">))</span>
+            <span class="p">(</span><span class="nf">message</span> <span class="s">&#34;Indented selected region.&#34;</span><span class="p">))</span>
+        <span class="p">(</span><span class="nb">progn</span>
+          <span class="p">(</span><span class="nv">indent-buffer</span><span class="p">)</span>
+          <span class="p">(</span><span class="nf">message</span> <span class="s">&#34;Indented buffer.&#34;</span><span class="p">)))))</span>
+
+  <span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;C-M-\\&#34;</span><span class="p">)</span> <span class="ss">&#39;indent-region-or-buffer</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>another way to complete things in Emacs.</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp">  <span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;s-/&#34;</span><span class="p">)</span> <span class="ss">&#39;hippie-expand</span><span class="p">)</span>
+
+<span class="c1">;; hippie expand is dabbrev expand on steroids</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">hippie-expand-try-functions-list</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">try-expand-dabbrev</span>
+                                         <span class="nv">try-expand-dabbrev-all-buffers</span>
+                                         <span class="nv">try-expand-dabbrev-from-kill</span>
+                                         <span class="nv">try-complete-file-name-partially</span>
+                                         <span class="nv">try-complete-file-name</span>
+                                         <span class="nv">try-expand-all-abbrevs</span>
+                                         <span class="nv">try-expand-list</span>
+                                         <span class="nv">try-expand-line</span>
+                                         <span class="nv">try-complete-lisp-symbol-partially</span>
+                                         <span class="nv">try-complete-lisp-symbol</span><span class="p">))</span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="dired-mode-and-file-related-operations">Dired mode and file related operations</h4>
+
+<ol>
+<li>copy, delete and rename file</li>
+</ol>
+
+<p>Copy/Delete/Rname files and folders</p>
+
+<p>+:  to create directory
+C-x C-f: to create file
+g:  to refersh dired buffer
+C: copy file
+d: delete file
+D: delete after confirm
+R: rename files</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp">  <span class="c1">;; dired - reuse current buffer by pressing &#39;a&#39;</span>
+  <span class="p">(</span><span class="nf">put</span> <span class="ss">&#39;dired-find-alternate-file</span> <span class="ss">&#39;disabled</span> <span class="no">nil</span><span class="p">)</span>
+
+  <span class="c1">;; always delete and copy recursively</span>
+  <span class="p">(</span><span class="nb">setq</span> <span class="nv">dired-recursive-deletes</span> <span class="ss">&#39;always</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb">setq</span> <span class="nv">dired-recursive-copies</span> <span class="ss">&#39;always</span><span class="p">)</span>
+
+  <span class="c1">;; if there is a dired buffer displayed in the next window, use its</span>
+  <span class="c1">;; current subdir, instead of the current subdir of this dired buffer</span>
+  <span class="p">(</span><span class="nb">setq</span> <span class="nv">dired-dwim-target</span> <span class="no">t</span><span class="p">)</span>
+
+  <span class="p">(</span><span class="nf">put</span> <span class="ss">&#39;dired-find-alternate-file</span> <span class="ss">&#39;disabled</span> <span class="no">nil</span><span class="p">)</span>
+
+  <span class="p">(</span><span class="nf">define-key</span> <span class="nv">dired-mode-map</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;RET&#34;</span><span class="p">)</span> <span class="ss">&#39;dired-find-alternate-file</span><span class="p">)</span>
+
+<span class="c1">;; less typing when Emacs ask you yes or no</span>
+  <span class="p">(</span><span class="nf">fset</span> <span class="ss">&#39;yes-or-no-p</span> <span class="ss">&#39;y-or-n-p</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li><p>add new file and folder</p></li>
+
+<li><p>for adding new folders,</p></li>
+</ol>
+
+<p>C-x C-f to create a new file.</p>
+
+<ol>
+<li>open dired of current buffer</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;dired-x</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>after applying this setting, we could press `C-x C-j` to jump to the dired buffer of current file.</p>
+
+<ol>
+<li>open finder on Mac. (optional)</li>
+</ol>
+
+<p>Packages:</p>
+
+<p>reveal-in-osx-finder for openning the finder of the current file.</p>
+
+<h4 id="bonus-time-dot-use-org-mode-literate-programming-to-organize-your-emacs-configurations-dot">Bonus Time. Use Org-mode literate programming to organize your Emacs configurations.</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;org-install</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;ob-tangle</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">org-babel-load-file</span> <span class="p">(</span><span class="nf">expand-file-name</span> <span class="s">&#34;zilongshanren.org&#34;</span> <span class="nv">user-emacs-directory</span><span class="p">))</span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="exercise-1">Exercise</h4>
+
+<ol>
+<li>define C-x C-e in Js2-mode to eval js expression after node-repl mode is actived.</li>
+</ol>
+
+<h3 id="spacemacs-rocks-season-2--day-5">Spacemacs Rocks Season 2 (Day 5)</h3>
+
+<h4 id="fix-smartparen-quote-issue">Fix smartparen quote issue</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">define-advice</span> <span class="nv">show-paren-function</span> <span class="p">(</span><span class="nb">:around</span> <span class="p">(</span><span class="nv">fn</span><span class="p">)</span> <span class="nv">fix-show-paren-function</span><span class="p">)</span>
+  <span class="s">&#34;Highlight enclosing parens.&#34;</span>
+  <span class="p">(</span><span class="nb">cond</span> <span class="p">((</span><span class="nv">looking-at-p</span> <span class="s">&#34;\\s(&#34;</span><span class="p">)</span> <span class="p">(</span><span class="nf">funcall</span> <span class="nv">fn</span><span class="p">))</span>
+        <span class="p">(</span><span class="no">t</span> <span class="p">(</span><span class="nb">save-excursion</span>
+             <span class="p">(</span><span class="nb">ignore-errors</span> <span class="p">(</span><span class="nv">backward-up-list</span><span class="p">))</span>
+             <span class="p">(</span><span class="nf">funcall</span> <span class="nv">fn</span><span class="p">)))))</span>
+
+  <span class="p">(</span><span class="nv">sp-local-pair</span> <span class="ss">&#39;emacs-lisp-mode</span> <span class="s">&#34;&#39;&#34;</span> <span class="no">nil</span> <span class="nb">:actions</span> <span class="no">nil</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="editing-large-web-page">Editing large web page</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">defun</span> <span class="nv">remove-dos-eol</span> <span class="p">()</span>
+  <span class="s">&#34;Replace DOS eolns CR LF with Unix eolns CR&#34;</span>
+  <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
+  <span class="p">(</span><span class="nf">goto-char</span> <span class="p">(</span><span class="nf">point-min</span><span class="p">))</span>
+  <span class="p">(</span><span class="nb">while</span> <span class="p">(</span><span class="nf">search-forward</span> <span class="s">&#34;\r&#34;</span> <span class="no">nil</span> <span class="no">t</span><span class="p">)</span> <span class="p">(</span><span class="nf">replace-match</span> <span class="s">&#34;&#34;</span><span class="p">)))</span>
+
+<span class="p">(</span><span class="nb">defun</span> <span class="nv">hidden-dos-eol</span> <span class="p">()</span>
+  <span class="s">&#34;Do not show ^M in files containing mixed UNIX and DOS line endings.&#34;</span>
+  <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb">setq</span> <span class="nv">buffer-display-table</span> <span class="p">(</span><span class="nv">make-display-table</span><span class="p">))</span>
+  <span class="p">(</span><span class="nf">aset</span> <span class="nv">buffer-display-table</span> <span class="sc">?\^</span><span class="nv">M</span> <span class="p">[]))</span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="add-more-useful-packages-for-web-development">Add more useful packages for web development</h4>
+
+<h5 id="web-mode">web-mode</h5>
+
+<p>toggle indent in web-mode</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">defun</span> <span class="nv">my-web-mode-indent-setup</span> <span class="p">()</span>
+  <span class="p">(</span><span class="nb">setq</span> <span class="nv">web-mode-markup-indent-offset</span> <span class="mi">2</span><span class="p">)</span> <span class="c1">; web-mode, html tag in html file</span>
+  <span class="p">(</span><span class="nb">setq</span> <span class="nv">web-mode-css-indent-offset</span> <span class="mi">2</span><span class="p">)</span>    <span class="c1">; web-mode, css in html file</span>
+  <span class="p">(</span><span class="nb">setq</span> <span class="nv">web-mode-code-indent-offset</span> <span class="mi">2</span><span class="p">)</span>   <span class="c1">; web-mode, js code in html file</span>
+  <span class="p">)</span>
+
+<span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;web-mode-hook</span> <span class="ss">&#39;my-web-mode-indent-setup</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nb">defun</span> <span class="nv">my-toggle-web-indent</span> <span class="p">()</span>
+  <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
+  <span class="c1">;; web development</span>
+  <span class="p">(</span><span class="nb">if</span> <span class="p">(</span><span class="nb">or</span> <span class="p">(</span><span class="nf">eq</span> <span class="nv">major-mode</span> <span class="ss">&#39;js-mode</span><span class="p">)</span> <span class="p">(</span><span class="nf">eq</span> <span class="nv">major-mode</span> <span class="ss">&#39;js2-mode</span><span class="p">))</span>
+      <span class="p">(</span><span class="nb">progn</span>
+        <span class="p">(</span><span class="nb">setq</span> <span class="nv">js-indent-level</span> <span class="p">(</span><span class="nb">if</span> <span class="p">(</span><span class="nf">=</span> <span class="nv">js-indent-level</span> <span class="mi">2</span><span class="p">)</span> <span class="mi">4</span> <span class="mi">2</span><span class="p">))</span>
+        <span class="p">(</span><span class="nb">setq</span> <span class="nv">js2-basic-offset</span> <span class="p">(</span><span class="nb">if</span> <span class="p">(</span><span class="nf">=</span> <span class="nv">js2-basic-offset</span> <span class="mi">2</span><span class="p">)</span> <span class="mi">4</span> <span class="mi">2</span><span class="p">))))</span>
+
+  <span class="p">(</span><span class="nb">if</span> <span class="p">(</span><span class="nf">eq</span> <span class="nv">major-mode</span> <span class="ss">&#39;web-mode</span><span class="p">)</span>
+      <span class="p">(</span><span class="nb">progn</span> <span class="p">(</span><span class="nb">setq</span> <span class="nv">web-mode-markup-indent-offset</span> <span class="p">(</span><span class="nb">if</span> <span class="p">(</span><span class="nf">=</span> <span class="nv">web-mode-markup-indent-offset</span> <span class="mi">2</span><span class="p">)</span> <span class="mi">4</span> <span class="mi">2</span><span class="p">))</span>
+             <span class="p">(</span><span class="nb">setq</span> <span class="nv">web-mode-css-indent-offset</span> <span class="p">(</span><span class="nb">if</span> <span class="p">(</span><span class="nf">=</span> <span class="nv">web-mode-css-indent-offset</span> <span class="mi">2</span><span class="p">)</span> <span class="mi">4</span> <span class="mi">2</span><span class="p">))</span>
+             <span class="p">(</span><span class="nb">setq</span> <span class="nv">web-mode-code-indent-offset</span> <span class="p">(</span><span class="nb">if</span> <span class="p">(</span><span class="nf">=</span> <span class="nv">web-mode-code-indent-offset</span> <span class="mi">2</span><span class="p">)</span> <span class="mi">4</span> <span class="mi">2</span><span class="p">))))</span>
+  <span class="p">(</span><span class="nb">if</span> <span class="p">(</span><span class="nf">eq</span> <span class="nv">major-mode</span> <span class="ss">&#39;css-mode</span><span class="p">)</span>
+      <span class="p">(</span><span class="nb">setq</span> <span class="nv">css-indent-offset</span> <span class="p">(</span><span class="nb">if</span> <span class="p">(</span><span class="nf">=</span> <span class="nv">css-indent-offset</span> <span class="mi">2</span><span class="p">)</span> <span class="mi">4</span> <span class="mi">2</span><span class="p">)))</span>
+
+  <span class="p">(</span><span class="nb">setq</span> <span class="nv">indent-tabs-mode</span> <span class="no">nil</span><span class="p">))</span>
+
+<span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;C-c t i&#34;</span><span class="p">)</span> <span class="ss">&#39;my-toggle-web-indent</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<h5 id="js2-refactor">js2-refactor</h5>
+
+<ul>
+<li>extract method</li>
+<li>extract function</li>
+</ul>
+
+<h4 id="occur-and-imenu">occur and imenu</h4>
+
+<ol>
+<li>improve occur</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">defun</span> <span class="nv">occur-dwim</span> <span class="p">()</span>
+  <span class="s">&#34;Call </span><span class="ss">`occur&#39;</span><span class="s"> with a sane default.&#34;</span>
+  <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb">push</span> <span class="p">(</span><span class="nb">if</span> <span class="p">(</span><span class="nv">region-active-p</span><span class="p">)</span>
+            <span class="p">(</span><span class="nf">buffer-substring-no-properties</span>
+             <span class="p">(</span><span class="nf">region-beginning</span><span class="p">)</span>
+             <span class="p">(</span><span class="nf">region-end</span><span class="p">))</span>
+          <span class="p">(</span><span class="nb">let</span> <span class="p">((</span><span class="nv">sym</span> <span class="p">(</span><span class="nv">thing-at-point</span> <span class="ss">&#39;symbol</span><span class="p">)))</span>
+            <span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nf">stringp</span> <span class="nv">sym</span><span class="p">)</span>
+              <span class="p">(</span><span class="nf">regexp-quote</span> <span class="nv">sym</span><span class="p">))))</span>
+        <span class="nv">regexp-history</span><span class="p">)</span>
+  <span class="p">(</span><span class="nf">call-interactively</span> <span class="ss">&#39;occur</span><span class="p">))</span>
+<span class="p">(</span><span class="nv">global-set-key</span> <span class="s">&#34;M-s o&#34;</span> <span class="ss">&#39;occur-dwim</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>improve imenu</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">defun</span> <span class="nv">js2-imenu-make-index</span> <span class="p">()</span>
+      <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
+      <span class="p">(</span><span class="nb">save-excursion</span>
+        <span class="c1">;; (setq imenu-generic-expression &#39;((nil &#34;describe\\(\&#34;\\(.+\\)\&#34;&#34; 1)))</span>
+        <span class="p">(</span><span class="nv">imenu--generic-function</span> <span class="o">&#39;</span><span class="p">((</span><span class="s">&#34;describe&#34;</span> <span class="s">&#34;\\s-*describe\\s-*(\\s-*[\&#34;&#39;]\\(.+\\)[\&#34;&#39;]\\s-*,.*&#34;</span> <span class="mi">1</span><span class="p">)</span>
+                                   <span class="p">(</span><span class="s">&#34;it&#34;</span> <span class="s">&#34;\\s-*it\\s-*(\\s-*[\&#34;&#39;]\\(.+\\)[\&#34;&#39;]\\s-*,.*&#34;</span> <span class="mi">1</span><span class="p">)</span>
+                                   <span class="p">(</span><span class="s">&#34;test&#34;</span> <span class="s">&#34;\\s-*test\\s-*(\\s-*[\&#34;&#39;]\\(.+\\)[\&#34;&#39;]\\s-*,.*&#34;</span> <span class="mi">1</span><span class="p">)</span>
+                                   <span class="p">(</span><span class="s">&#34;before&#34;</span> <span class="s">&#34;\\s-*before\\s-*(\\s-*[\&#34;&#39;]\\(.+\\)[\&#34;&#39;]\\s-*,.*&#34;</span> <span class="mi">1</span><span class="p">)</span>
+                                   <span class="p">(</span><span class="s">&#34;after&#34;</span> <span class="s">&#34;\\s-*after\\s-*(\\s-*[\&#34;&#39;]\\(.+\\)[\&#34;&#39;]\\s-*,.*&#34;</span> <span class="mi">1</span><span class="p">)</span>
+                                   <span class="p">(</span><span class="s">&#34;Function&#34;</span> <span class="s">&#34;function[ \t]+\\([a-zA-Z0-9_$.]+\\)[ \t]*(&#34;</span> <span class="mi">1</span><span class="p">)</span>
+                                   <span class="p">(</span><span class="s">&#34;Function&#34;</span> <span class="s">&#34;^[ \t]*\\([a-zA-Z0-9_$.]+\\)[ \t]*=[ \t]*function[ \t]*(&#34;</span> <span class="mi">1</span><span class="p">)</span>
+                                   <span class="p">(</span><span class="s">&#34;Function&#34;</span> <span class="s">&#34;^var[ \t]*\\([a-zA-Z0-9_$.]+\\)[ \t]*=[ \t]*function[ \t]*(&#34;</span> <span class="mi">1</span><span class="p">)</span>
+                                   <span class="p">(</span><span class="s">&#34;Function&#34;</span> <span class="s">&#34;^[ \t]*\\([a-zA-Z0-9_$.]+\\)[ \t]*()[ \t]*{&#34;</span> <span class="mi">1</span><span class="p">)</span>
+                                   <span class="p">(</span><span class="s">&#34;Function&#34;</span> <span class="s">&#34;^[ \t]*\\([a-zA-Z0-9_$.]+\\)[ \t]*:[ \t]*function[ \t]*(&#34;</span> <span class="mi">1</span><span class="p">)</span>
+                                   <span class="p">(</span><span class="s">&#34;Task&#34;</span> <span class="s">&#34;[. \t]task([ \t]*[&#39;\&#34;]\\([^&#39;\&#34;]+\\)&#34;</span> <span class="mi">1</span><span class="p">)))))</span>
+<span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;js2-mode-hook</span>
+              <span class="p">(</span><span class="nb">lambda</span> <span class="p">()</span>
+                <span class="p">(</span><span class="nb">setq</span> <span class="nv">imenu-create-index-function</span> <span class="ss">&#39;js2-imenu-make-index</span><span class="p">)))</span>
+
+<span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;M-s i&#34;</span><span class="p">)</span> <span class="ss">&#39;counsel-imenu</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="expand-region-and-iedit-mode">expand-region and iedit mode</h4>
+
+<h4 id="bonus-time-dot-org-export">Bonus Time. Org export</h4>
+
+<p>export to html,  you could also export to pdf</p>
+
+<p><code>C-x C-e</code></p>
+
+<h4 id="exercises">Exercises</h4>
+
+<ol>
+<li>Learn how to use emmet-mode to do zen coding: <a href="https://github.com/smihica/emmet-mode">https://github.com/smihica/emmet-mode</a></li>
+<li>configure your system to export org file to pdf file</li>
+<li>install multiple cursor mode and compare it with iedit mode</li>
+</ol>
+
+<h3 id="spacemacs-rocks-season-2--day-6">Spacemacs Rocks Season 2 (Day 6)</h3>
+
+<h4 id="bonus-time-org-mdoe">Bonus Time: Org-mdoe</h4>
+
+<p>Use org-capture to take notes</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">setq</span> <span class="nv">org-capture-templates</span>
+      <span class="o">&#39;</span><span class="p">((</span><span class="s">&#34;t&#34;</span> <span class="s">&#34;Todo&#34;</span> <span class="nv">entry</span> <span class="p">(</span><span class="nv">file+headline</span> <span class="s">&#34;~/.emacs.d/gtd.org&#34;</span> <span class="s">&#34;工作安排&#34;</span><span class="p">)</span>
+         <span class="s">&#34;* TODO [#B] %?\n  %i\n&#34;</span>
+         <span class="nb">:empty-lines</span> <span class="mi">1</span><span class="p">)))</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Further reading:
+<a href="http://orgmode.org/manual/Capture.html">http://orgmode.org/manual/Capture.html</a></p>
+
+<h5 id="install-org-pomodoro-to-track-my-time">Install Org pomodoro to track my time</h5>
+
+<h4 id="clean-up-configs">clean up configs</h4>
+
+<ol>
+<li>move keybindings into one place</li>
+<li>make c-n and c-p to select company condicate</li>
+</ol>
+
+<h4 id="batch-rename-files">Batch rename files</h4>
+
+<ol>
+<li>press `C-x C-q` in dired mode</li>
+<li>use expand-region and iedit to batch change files</li>
+</ol>
+
+<h4 id="search-and-replace">search and replace</h4>
+
+<h5 id="install-helm-ag">install helm-ag</h5>
+
+<ol>
+<li>at first, you should install ag</li>
+</ol>
+
+<p>search speed:  ag &gt; pt &gt; ack &gt; grep</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">brew install the_silver_searcher
+apt-get install silversearcher-ag</code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="show-javascript-errors-with-flycheck">Show  javascript errors with flycheck</h4>
+
+<ol>
+<li>flycheck-checkers</li>
+<li>eslint</li>
+</ol>
+
+<h4 id="snippets-and-auto-snippet">Snippets and auto snippet</h4>
+
+<h4 id="exercises-1">exercises</h4>
+
+<ol>
+<li>give `helm-swoop` package a try: <a href="https://github.com/ShingoFukuyama/helm-swoop">https://github.com/ShingoFukuyama/helm-swoop</a></li>
+<li>Give `org-mac-link` package a try: <a href="http://melpa.org/#/org-mac-link">http://melpa.org/#/org-mac-link</a></li>
+</ol>
+
+<h3 id="spacemacs-rocks-season-2--day-7">Spacemacs Rocks Season 2 (Day 7)</h3>
+
+<h4 id="tweak-c-w-to-delete-backward">Tweak C-w to delete backward</h4>
+
+<h4 id="evil--it-s-not-baidu--turn-emacs-into-vim-in-one-second">Evil (It&rsquo;s not Baidu!)   Turn Emacs into Vim in one second</h4>
+
+<ol>
+<li><p>install Evil plugin</p></li>
+
+<li><p>tell the different between Evil and Vim
+Universal args</p></li>
+
+<li><p>Evil state = Vim mode</p></li>
+</ol>
+
+<p>evil normal state
+evil insert state
+evil visual state
+evil motion state
+evil emacs state
+evil operator state (diw)</p>
+
+<ol>
+<li><p>configure Evil leader key</p></li>
+
+<li><p>press `C-z` to toggle between Normal and Emacs state ??</p></li>
+
+<li><p>Made some modes to use emacs-state</p></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">dolist</span> <span class="p">(</span><span class="nv">mode</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">ag-mode</span>
+                 <span class="nv">flycheck-error-list-mode</span>
+                 <span class="nv">git-rebase-mode</span><span class="p">))</span>
+   <span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;evil-emacs-state-modes</span> <span class="nv">mode</span><span class="p">))</span></code></pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>binding h/j/k/l key</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;occur-mode-hook</span>
+          <span class="p">(</span><span class="nb">lambda</span> <span class="p">()</span>
+            <span class="p">(</span><span class="nv">evil-add-hjkl-bindings</span> <span class="nv">occur-mode-map</span> <span class="ss">&#39;emacs</span>
+              <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;/&#34;</span><span class="p">)</span>       <span class="ss">&#39;evil-search-forward</span>
+              <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;n&#34;</span><span class="p">)</span>       <span class="ss">&#39;evil-search-next</span>
+              <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;N&#34;</span><span class="p">)</span>       <span class="ss">&#39;evil-search-previous</span>
+              <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;C-d&#34;</span><span class="p">)</span>     <span class="ss">&#39;evil-scroll-down</span>
+              <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;C-u&#34;</span><span class="p">)</span>     <span class="ss">&#39;evil-scroll-up</span>
+              <span class="p">))</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Add this to Dired mode, ibuffer mode?</p>
+
+<h4 id="which-key">Which key</h4>
+
+<h4 id="design-your-own-key-bindings">Design your own key bindings</h4>
+
+<ol>
+<li>Use SPC as the leader key</li>
+<li>Use comma as the major mode leader key</li>
+<li>Use SPC : to list all available commands</li>
+<li>Use which key to group key bindings</li>
+<li>Yeah! You got a minimal Spacemacs!</li>
+</ol>
+
+<h4 id="bonus-time-search-org-notes">Bonus Time:  Search  Org notes</h4>
+
+<h4 id="references">References</h4>
+
+<ul>
+<li><p><a href="https://www.emacswiki.org/emacs/Evil">https://www.emacswiki.org/emacs/Evil</a></p></li>
+
+<li><p><a href="http://juanjoalvarez.net/es/detail/2014/sep/19/vim-emacsevil-chaotic-migration-guide/">http://juanjoalvarez.net/es/detail/2014/sep/19/vim-emacsevil-chaotic-migration-guide/</a></p></li>
+
+<li><p><a href="http://nathantypanski.com/blog/2014-08-03-a-vim-like-emacs-config.html">http://nathantypanski.com/blog/2014-08-03-a-vim-like-emacs-config.html</a></p></li>
+
+<li><p><a href="http://blog.aaronbieber.com/2015/05/24/from-vim-to-emacs-in-fourteen-days.html">http://blog.aaronbieber.com/2015/05/24/from-vim-to-emacs-in-fourteen-days.html</a></p></li>
+
+<li><p><a href="http://blog.jakubarnold.cz/2014/06/23/evil-mode-how-to-switch-from-vim-to-emacs.html">http://blog.jakubarnold.cz/2014/06/23/evil-mode-how-to-switch-from-vim-to-emacs.html</a></p></li>
+</ul>
+
+<h4 id="exercises-2">Exercises</h4>
+
+<ul>
+<li>Install hydra and begin to add your own hydras!</li>
+</ul>
+
+<h3 id="spacemacs-rocks-season-2--day-8">Spacemacs Rocks Season 2 (Day 8)</h3>
+
+<h4 id="elpa-mirros">elpa mirros</h4>
+
+<h4 id="cask-and-pallet">Cask and pallet</h4>
+
+<h5 id="you-can-t-start-different-versions-of-emacs-with-the-single-config">You can&rsquo;t start different versions of Emacs with the single config</h5>
+
+<h5 id="troubleshootings">Troubleshootings</h5>
+
+<ul>
+<li>Emacs 24.5: Dependency flycheck failed to install: Package `let-alist-1.0.4&rsquo; is unavailable</li>
+<li>define-advice is not defined for Emacs 24.5</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">if</span> <span class="p">(</span><span class="nf">&gt;=</span> <span class="nv">emacs-major-version</span> <span class="mi">25</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">define-advice</span> <span class="nv">show-paren-function</span> <span class="p">(</span><span class="nb">:around</span> <span class="p">(</span><span class="nv">fn</span><span class="p">)</span> <span class="nv">fix-show-paren-function</span><span class="p">)</span>
+  <span class="s">&#34;Highlight enclosing parens.&#34;</span>
+  <span class="p">(</span><span class="nb">cond</span> <span class="p">((</span><span class="nv">looking-at-p</span> <span class="s">&#34;\\s(&#34;</span><span class="p">)</span> <span class="p">(</span><span class="nf">funcall</span> <span class="nv">fn</span><span class="p">))</span>
+  <span class="p">(</span><span class="no">t</span> <span class="p">(</span><span class="nb">save-excursion</span>
+       <span class="p">(</span><span class="nb">ignore-errors</span> <span class="p">(</span><span class="nv">backward-up-list</span><span class="p">))</span>
+       <span class="p">(</span><span class="nf">funcall</span> <span class="nv">fn</span><span class="p">))))</span>
+  <span class="p">)</span>
+<span class="p">(</span><span class="nb">defadvice</span> <span class="nv">show-paren-function</span> <span class="p">(</span><span class="nv">around</span> <span class="nv">fix-show-paren-function</span> <span class="nv">activate</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb">cond</span> <span class="p">((</span><span class="nv">looking-at-p</span> <span class="s">&#34;\\s(&#34;</span><span class="p">)</span> <span class="nv">ad-do-it</span><span class="p">)</span>
+  <span class="p">(</span><span class="no">t</span> <span class="p">(</span><span class="nb">save-excursion</span>
+       <span class="p">(</span><span class="nb">ignore-errors</span> <span class="p">(</span><span class="nv">backward-up-list</span><span class="p">))</span>
+       <span class="nv">ad-do-it</span><span class="p">)))</span>
+  <span class="p">)</span>
+<span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="spacemacs-rocks-season-2--day-9">Spacemacs Rocks Season 2 (Day 9)</h3>
+
+<p>Topic: Macro and Use-package</p>
+
+<h4 id="what-is-macro">What is macro?</h4>
+
+<p>Code which generate code?</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">setq</span> <span class="nv">my-var</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">my-var</span> <span class="p">(</span><span class="nf">+</span> <span class="mi">1</span> <span class="nv">my-var</span><span class="p">))</span>
+
+<span class="p">(</span><span class="nb">defmacro</span> <span class="nv">inc</span> <span class="p">(</span><span class="nv">var</span><span class="p">)</span>
+  <span class="p">(</span><span class="nf">list</span> <span class="ss">&#39;setq</span> <span class="nv">var</span> <span class="p">(</span><span class="nf">list</span> <span class="ss">&#39;1+</span> <span class="nv">var</span><span class="p">)))</span>
+
+<span class="p">(</span><span class="nv">inc</span> <span class="nv">my-var</span><span class="p">)</span> <span class="c1">;;add a new language</span>
+
+<span class="p">(</span><span class="nf">macroexpand</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">inc</span> <span class="nv">my-var</span><span class="p">))</span>
+
+<span class="p">(</span><span class="nb">defun</span> <span class="nv">inc-v2</span> <span class="p">(</span><span class="nv">var</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb">setq</span> <span class="nv">var</span> <span class="p">(</span><span class="nf">1+</span> <span class="nv">var</span><span class="p">)))</span>
+
+<span class="p">(</span><span class="nv">inc-v2</span> <span class="nv">my-var</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">setq</span> <span class="nv">my-var</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="nf">macroexpand</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">inc</span> <span class="nv">my-var</span><span class="p">))</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Write macro is almost the same as writing function in elisp.</p>
+
+<h4 id="what-s-the-different-betwwen-function-and-macro">What&rsquo;s the different betwwen function and macro?</h4>
+
+<h5 id="evaluation-the-macro-arguments-are-the-actual-expressions-appearing-in-the-macro-call-dot">Evaluation:  the macro arguments are the actual expressions appearing in the macro call.</h5>
+
+<h5 id="expansion-the-value-returned-by-the-macro-body-is-an-alternate-lisp-expression-also-known-as-the-expansion-of-the-macro">Expansion: the value returned by the macro body is an alternate Lisp expression, also known as the expansion of the macro</h5>
+
+<h5 id="examples">examples:</h5>
+
+<p>back quote matters.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nv">sp-local-pair</span> <span class="ss">&#39;emacs-lisp-mode</span> <span class="s">&#34;`&#34;</span> <span class="no">nil</span> <span class="nb">:actions</span> <span class="no">nil</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">defun</span> <span class="nv">my-print</span> <span class="p">(</span><span class="nv">number</span><span class="p">)</span>
+  <span class="p">(</span><span class="nf">message</span> <span class="s">&#34;This is a number: %d&#34;</span> <span class="nv">number</span><span class="p">))</span>
+
+<span class="p">(</span><span class="nv">my-print</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nv">my-print</span> <span class="p">(</span><span class="nf">+</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">))</span>
+
+<span class="p">(</span><span class="nb">quote</span> <span class="p">(</span><span class="nf">+</span> <span class="mi">1</span> <span class="mi">1</span><span class="p">))</span>
+<span class="c1">;; return a list</span>
+
+
+<span class="p">(</span><span class="nb">defmacro</span> <span class="nv">my-print-2</span> <span class="p">(</span><span class="nv">number</span><span class="p">)</span>
+  <span class="o">`</span><span class="p">(</span><span class="nf">message</span> <span class="s">&#34;This is a number; %d&#34;</span> <span class="o">,</span><span class="nv">number</span><span class="p">))</span>
+
+<span class="p">(</span><span class="nv">my-print-2</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nv">my-print-2</span> <span class="p">(</span><span class="nf">+</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">))</span>
+
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">my-var</span> <span class="mi">2</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">inc</span> <span class="nv">my-var</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nb">defmacro</span> <span class="nv">inc2</span> <span class="p">(</span><span class="nv">var1</span> <span class="nv">var2</span><span class="p">)</span>
+  <span class="p">(</span><span class="nf">list</span> <span class="ss">&#39;progn</span> <span class="p">(</span><span class="nf">list</span> <span class="ss">&#39;inc</span> <span class="nv">var1</span><span class="p">)</span> <span class="p">(</span><span class="nf">list</span> <span class="ss">&#39;inc</span> <span class="nv">var2</span><span class="p">)))</span>
+
+
+<span class="p">(</span><span class="nf">macroexpand</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">inc2</span> <span class="nv">my-var</span> <span class="nv">my-var</span><span class="p">))</span>
+<span class="p">(</span><span class="nv">macroexpand-all</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">inc2</span> <span class="nv">my-var</span> <span class="nv">my-var</span><span class="p">))</span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="why-macro">Why Macro?</h4>
+
+<h5 id="a-more-useful-example-of-elisp-macro">A more useful example of Elisp macro</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">defun</span> <span class="nv">prelude-search</span> <span class="p">(</span><span class="nv">query-url</span> <span class="nv">prompt</span><span class="p">)</span>
+  <span class="s">&#34;Open the search url constructed with the QUERY-URL.
+</span><span class="s">PROMPT sets the `read-string prompt.&#34;</span>
+  <span class="p">(</span><span class="nv">browse-url</span>
+   <span class="p">(</span><span class="nf">concat</span> <span class="nv">query-url</span>
+           <span class="p">(</span><span class="nv">url-hexify-string</span>
+            <span class="p">(</span><span class="nb">if</span> <span class="nv">mark-active</span>
+                <span class="p">(</span><span class="nf">buffer-substring</span> <span class="p">(</span><span class="nf">region-beginning</span><span class="p">)</span> <span class="p">(</span><span class="nf">region-end</span><span class="p">))</span>
+              <span class="p">(</span><span class="nf">read-string</span> <span class="nv">prompt</span><span class="p">))))))</span>
+
+<span class="p">(</span><span class="nb">defmacro</span> <span class="nv">prelude-install-search-engine</span> <span class="p">(</span><span class="nv">search-engine-name</span> <span class="nv">search-engine-url</span> <span class="nv">search-engine-prompt</span><span class="p">)</span>
+  <span class="s">&#34;Given some information regarding a search engine, install the interactive command to search through them&#34;</span>
+  <span class="o">`</span><span class="p">(</span><span class="nb">defun</span> <span class="o">,</span><span class="p">(</span><span class="nf">intern</span> <span class="p">(</span><span class="nf">format</span> <span class="s">&#34;prelude-%s&#34;</span> <span class="nv">search-engine-name</span><span class="p">))</span> <span class="p">()</span>
+       <span class="o">,</span><span class="p">(</span><span class="nf">format</span> <span class="s">&#34;Search %s with a query or region if any.&#34;</span> <span class="nv">search-engine-name</span><span class="p">)</span>
+       <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
+       <span class="p">(</span><span class="nv">prelude-search</span> <span class="o">,</span><span class="nv">search-engine-url</span> <span class="o">,</span><span class="nv">search-engine-prompt</span><span class="p">)))</span>
+
+
+
+<span class="p">(</span><span class="nv">prelude-install-search-engine</span> <span class="s">&#34;google&#34;</span>     <span class="s">&#34;http://www.google.com/search?q=&#34;</span>              <span class="s">&#34;Google: &#34;</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">prelude-install-search-engine</span> <span class="s">&#34;youtube&#34;</span>    <span class="s">&#34;http://www.youtube.com/results?search_query=&#34;</span> <span class="s">&#34;Search YouTube: &#34;</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">prelude-install-search-engine</span> <span class="s">&#34;github&#34;</span>     <span class="s">&#34;https://github.com/search?q=&#34;</span>                 <span class="s">&#34;Search GitHub: &#34;</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">prelude-install-search-engine</span> <span class="s">&#34;duckduckgo&#34;</span> <span class="s">&#34;https://duckduckgo.com/?t=lm&amp;q=&#34;</span>              <span class="s">&#34;Search DuckDuckGo: &#34;</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<h5 id="use-package-and-basic-usage">Use-package and basic usage</h5>
+
+<ul>
+<li><p>a more safe require</p></li>
+
+<li><p>group config into one place</p></li>
+
+<li><p>autoload and bind keys easily</p></li>
+
+<li><p>make your config load faster</p></li>
+
+<li><p>and more? Spacemacs use it a lot.</p></li>
+</ul>
+
+<h4 id="bonus-time">Bonus Time</h4>
+
+<ul>
+<li>pretty print the lisp Object</li>
+</ul>
+
+<p>(pp (macroexpand &lsquo;(use-package company-mode)))</p>
+
+<ul>
+<li>fuck your brain?</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">defmacro</span> <span class="nv">defsynonym</span> <span class="p">(</span><span class="nv">old-name</span> <span class="nv">new-name</span><span class="p">)</span>
+  <span class="o">`</span><span class="p">(</span><span class="nb">defmacro</span> <span class="o">,</span><span class="nv">new-name</span> <span class="p">(</span><span class="kp">&amp;rest</span> <span class="nv">args</span><span class="p">)</span>
+     <span class="o">`</span><span class="p">(</span><span class="o">,</span> <span class="ss">&#39;,old-name</span> <span class="o">,@</span><span class="nv">args</span><span class="p">)))</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>more discussion: <a href="https://emacs-china.org/t/lisp/357">https://emacs-china.org/t/lisp/357</a></p>
+
+<h4 id="reference">Reference</h4>
+
+<p>Readme more about macro: <a href="https://www.gnu.org/software/emacs/manual/html%5Fnode/elisp/Macros.html#Macros">https://www.gnu.org/software/emacs/manual/html%5Fnode/elisp/Macros.html#Macros</a></p>
+
+<h3 id="spacemacs-rocks-season-2--day-10">Spacemacs Rocks Season 2 (Day 10)</h3>
+
+<p>Topic: Company-mode and auto-completion
+Cask and macro/use-package</p>
+
+<h4 id="fix-previous-issues">Fix previous issues</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">use-package</span> <span class="nv">exec-path-from-shell</span>
+  <span class="nb">:ensure</span> <span class="no">t</span>
+  <span class="nb">:if</span> <span class="p">(</span><span class="nb">and</span> <span class="p">(</span><span class="nf">eq</span> <span class="nv">system-type</span> <span class="ss">&#39;darwin</span><span class="p">)</span> <span class="p">(</span><span class="nv">display-graphic-p</span><span class="p">))</span>
+  <span class="nb">:config</span>
+  <span class="p">(</span><span class="nb">progn</span>
+     <span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nv">string-match-p</span> <span class="s">&#34;/zsh$&#34;</span> <span class="p">(</span><span class="nv">getenv</span> <span class="s">&#34;SHELL&#34;</span><span class="p">))</span>
+      <span class="c1">;; Use a non-interactive login shell.  A login shell, because my</span>
+      <span class="c1">;; environment variables are mostly set in `.zprofile&#39;.</span>
+       <span class="p">(</span><span class="nb">setq</span> <span class="nv">exec-path-from-shell-arguments</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;-l&#34;</span><span class="p">)))</span>
+
+     <span class="p">(</span><span class="nv">exec-path-from-shell-initialize</span><span class="p">)</span>
+    <span class="p">)</span>
+  <span class="p">)</span>
+
+<span class="c1">;; (use-package monokai-theme</span>
+<span class="c1">;; :ensure t)</span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="how-company-mode-works">How company-mode works?</h4>
+
+<ol>
+<li>backend for the completion sources and front end to display the candidates</li>
+<li>C-h v company-backends</li>
+<li>try company-file and company-ispell, M-x</li>
+<li>C-h C-f to view the backend implementation</li>
+</ol>
+
+<h4 id="why-my-company-sucks">Why my company sucks?</h4>
+
+<ol>
+<li>Python anaconda-mode not works</li>
+<li>some backend require build with a server-client architecture: company-anaconda, company-jedi, company-ycmd, company-tern etc</li>
+<li>At first, you should make sure the server side is working properly and then you want to make sure you use the right backend</li>
+<li>how to fix anaconda on Mac</li>
+</ol>
+
+<h4 id="group-backend">Group backend</h4>
+
+<h4 id="write-a-simple-company-backend">Write a Simple company backend</h4>
+
+<p><a href="http://sixty-north.com/blog/writing-the-simplest-emacs-company-mode-backend">http://sixty-north.com/blog/writing-the-simplest-emacs-company-mode-backend</a></p>
+
+<h4 id="reference-1">reference</h4>
+
+<ol>
+<li><a href="http://sixty-north.com/blog/series/how-to-write-company-mode-backends">http://sixty-north.com/blog/series/how-to-write-company-mode-backends</a></li>
+<li><a href="https://www.emacswiki.org/emacs/CompanyMode">https://www.emacswiki.org/emacs/CompanyMode</a></li>
+</ol>
+
+<h2 id="acutex-编译-path-配置">ACUTEX 编译 PATH 配置</h2>
+
+<p><a href="https://github.com/syl20bnr/spacemacs/issues/2294">spacemacs does not use PATH from nix-shell · Issue #2294 · syl20bnr/spacemacs</a>
+Spacemacs 默认用 exec-path-from-shell,屏蔽了 PATH 路径，因此将其去除即可</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="nv">dotspacemacs-excluded-packages</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">exec-path-from-shell</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">lengyueyang</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+      2019-08-10
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    
+      <label class="qr-code-image" for="reward">
+        <img class="image" src="/path/to/your/wechat-qr-code.png">
+        <span>微信打赏</span>
+      </label>
+    
+      <label class="qr-code-image" for="reward">
+        <img class="image" src="/path/to/your/alipay-qr-code.png">
+        <span>支付宝打赏</span>
+      </label>
+  </div>
+</div>
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="https://lengyueyang.github.io/tags/wiki/">Wiki</a>
+          <a href="https://lengyueyang.github.io/tags/emacs/">Emacs</a>
+          <a href="https://lengyueyang.github.io/tags/learning/">learning</a>
+          <a href="https://lengyueyang.github.io/tags/spacemacs/">spacemacs</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/data_science/programming/python-pyenv-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/">
+            <span class="next-text nav-default">Python-Pyenv 使用方法总结</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+  
+  
+
+  
+  
+
+  
+
+  
+  
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "lengyueyang/blog_comment"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+  
+
+  
+
+  
+
+  <div class="disqus-comment">
+  <div class="disqus-button" id="load_disqus" onclick="load_disqus()">
+    显示 Disqus 评论
+  </div>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_config = function () {
+      this.page.url = "https://lengyueyang.github.io/post/tools/spacemacs/spacemacs%E5%AD%A6%E4%B9%A0/";
+    };
+    function load_disqus() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'lengyueyang';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+
+      $('#load_disqus').remove();
+    };
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+  
+  </div>
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:maoxiaowei1988@foxmail.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="linkedin"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="https://lengyueyang.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2015 -
+    2020
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        use ox-hugo and org-mode for blog
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script type="text/javascript">
+    AV.initialize("pNCzoJ8bHsF9aNglc4RfYcfo-gzGzoHsz", "Bvxlb5rmnSeOJkrVais6uRwr");
+  </script>
+
+  <script>
+    function showHitCount(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push($(this).attr("id").trim());
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var hits = item.get('hits');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(hits);
+          }
+          for (var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if (countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function (results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("hits");
+            counter.save(null, {
+              success: function (counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('hits'));
+              },
+              error: function (counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+             
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+             
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("hits", 1);
+            newcounter.save(null, {
+              success: function (newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('hits'));
+              },
+              error: function (newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function (error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function () {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        
+        addCount(Counter);
+      } else if ($('.post-link').length > 1) {
+        
+        showHitCount(Counter);
+      }
+    });
+  </script>
+
+
+
+  <script id="dsq-count-scr" src="//lengyueyang.disqus.com/count.js" async></script>
+
+
+
+
+
+
+
+</body>
+</html>

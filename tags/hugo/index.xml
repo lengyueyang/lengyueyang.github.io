@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on 深度识医</title>
+    <link>https://lengyueyang.github.io/tags/hugo/</link>
+    <description>Recent content in hugo on 深度识医</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>use ox-hugo and org-mode for blog</copyright>
+    <lastBuildDate>Mon, 29 Jul 2019 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://lengyueyang.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>博客迁移杂记-从Nikola到Hugo</title>
+      <link>https://lengyueyang.github.io/post/tools/org_mode/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E6%9D%82%E8%AE%B0-%E4%BB%8Enikola%E5%88%B0hugo/</link>
+      <pubDate>Mon, 29 Jul 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/post/tools/org_mode/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E6%9D%82%E8%AE%B0-%E4%BB%8Enikola%E5%88%B0hugo/</guid>
+      <description>&lt;h2 id=&#34;迁移原因&#34;&gt;迁移原因&lt;/h2&gt;
+
+&lt;p&gt;继上一次将博客迁移到Nikola之后，发现博客主题偏少，博客更新比较麻烦，之后寻找替代这，看到ox-hugo之后，发现这是我以后的终极博客了，可以全文或者org标题发布博客；&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

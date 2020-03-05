@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://lengyueyang.github.io/sitemap.xml

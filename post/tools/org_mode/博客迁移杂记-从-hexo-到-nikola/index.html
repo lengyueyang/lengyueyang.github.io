@@ -1,0 +1,2299 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>博客迁移杂记-从 Hexo 到 Nikola - 深度识医</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="lengyueyang" />
+  <meta name="description" content="迁移原因 16 年年初，开始搭建自己的个人博客，一不小心入了 spacemacs 的坑，一直用 Org-mode 写作、记笔记等，因此博客必须支持 Org-mode ，最开始的解决方案是 Hexo，用 hexo-renderer-org 将 Org-mde 格式转化，使用 Next 主题，确实比较好看，当时配置博客站点花了很长时间，在使用过程中，总是会有 hexo 插件更新问题，导致博客不能发布等，因此，最近一个月寻找 hexo 的替代者。
+Nikola 是用 Python 写的，恰好以后要学 Python，同时 Nikola 通过 Org-mode 插件支持 Org-mode，于是选择 Nikola 作为博客框架，目前一切还好，就是主题比较难看。博客迁移过程用，参考1, 2, 3, 4
+" />
+
+  <meta name="keywords" content="Orgmode, Blog, Personal, Data Science" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.55.6" />
+
+
+<link rel="canonical" href="https://lengyueyang.github.io/post/tools/org_mode/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E6%9D%82%E8%AE%B0-%E4%BB%8E-hexo-%E5%88%B0-nikola/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.af20b78e95c84de86b00a0242a4a77bd2601700e1b250edf27537d957ac0041d.css" integrity="sha256-ryC3jpXITehrAKAkKkp3vSYBcA4bJQ7fJ1N9lXrABB0=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="博客迁移杂记-从 Hexo 到 Nikola" />
+<meta property="og:description" content="迁移原因
+
+16 年年初，开始搭建自己的个人博客，一不小心入了 spacemacs 的坑，一直用 Org-mode 写作、记笔记等，因此博客必须支持 Org-mode ，最开始的解决方案是 Hexo，用 hexo-renderer-org 将 Org-mde 格式转化，使用 Next 主题，确实比较好看，当时配置博客站点花了很长时间，在使用过程中，总是会有 hexo 插件更新问题，导致博客不能发布等，因此，最近一个月寻找 hexo 的替代者。
+
+Nikola 是用 Python 写的，恰好以后要学 Python，同时 Nikola 通过 Org-mode 插件支持 Org-mode，于是选择 Nikola 作为博客框架，目前一切还好，就是主题比较难看。博客迁移过程用，参考1, 2, 3, 4" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lengyueyang.github.io/post/tools/org_mode/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E6%9D%82%E8%AE%B0-%E4%BB%8E-hexo-%E5%88%B0-nikola/" />
+<meta property="article:published_time" content="2018-01-07T00:00:00&#43;08:00"/>
+<meta property="article:modified_time" content="2019-07-29T20:53:53&#43;08:00"/><meta property="og:site_name" content="深度识医" />
+
+<meta itemprop="name" content="博客迁移杂记-从 Hexo 到 Nikola">
+<meta itemprop="description" content="迁移原因
+
+16 年年初，开始搭建自己的个人博客，一不小心入了 spacemacs 的坑，一直用 Org-mode 写作、记笔记等，因此博客必须支持 Org-mode ，最开始的解决方案是 Hexo，用 hexo-renderer-org 将 Org-mde 格式转化，使用 Next 主题，确实比较好看，当时配置博客站点花了很长时间，在使用过程中，总是会有 hexo 插件更新问题，导致博客不能发布等，因此，最近一个月寻找 hexo 的替代者。
+
+Nikola 是用 Python 写的，恰好以后要学 Python，同时 Nikola 通过 Org-mode 插件支持 Org-mode，于是选择 Nikola 作为博客框架，目前一切还好，就是主题比较难看。博客迁移过程用，参考1, 2, 3, 4">
+
+
+<meta itemprop="datePublished" content="2018-01-07T00:00:00&#43;08:00" />
+<meta itemprop="dateModified" content="2019-07-29T20:53:53&#43;08:00" />
+<meta itemprop="wordCount" content="3699">
+
+
+
+<meta itemprop="keywords" content="Wiki,Notes,blog,nikola," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="博客迁移杂记-从 Hexo 到 Nikola"/>
+<meta name="twitter:description" content="迁移原因
+
+16 年年初，开始搭建自己的个人博客，一不小心入了 spacemacs 的坑，一直用 Org-mode 写作、记笔记等，因此博客必须支持 Org-mode ，最开始的解决方案是 Hexo，用 hexo-renderer-org 将 Org-mde 格式转化，使用 Next 主题，确实比较好看，当时配置博客站点花了很长时间，在使用过程中，总是会有 hexo 插件更新问题，导致博客不能发布等，因此，最近一个月寻找 hexo 的替代者。
+
+Nikola 是用 Python 写的，恰好以后要学 Python，同时 Nikola 通过 Org-mode 插件支持 Org-mode，于是选择 Nikola 作为博客框架，目前一切还好，就是主题比较难看。博客迁移过程用，参考1, 2, 3, 4"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">深度识医</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          <div class="mobile-menu-parent">
+            <span class="mobile-submenu-open"></span>
+            <a href="https://lengyueyang.github.io/categories/%E5%8C%BB%E5%AD%A6%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">
+              医学数据科学
+            </a>
+          </div>
+          <ul class="mobile-submenu-list">
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">数学基础</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E7%BB%9F%E8%AE%A1%E5%9F%BA%E7%A1%80/">统计基础</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E7%AE%97%E6%B3%95/">算法</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/nlp-kg/">NLP-KG</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">数据分析</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E5%8C%BB%E5%AD%A6%E7%9F%A5%E8%AF%86/">医学知识</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/cdss/">CDSS</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E6%96%87%E7%AB%A0%E5%A4%8D%E7%8E%B0/">文章复现</a>
+              </li>
+            
+          </ul>
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          <div class="mobile-menu-parent">
+            <span class="mobile-submenu-open"></span>
+            <a href="https://lengyueyang.github.io/categories/%E5%B7%A5%E5%85%B7%E9%93%BE/">
+              工具链
+            </a>
+          </div>
+          <ul class="mobile-submenu-list">
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/linux/">Linux</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/gentoo/">Gentoo</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/spacemacs/">Spacemacs</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/org-mode/">Org-mode</a>
+              </li>
+            
+          </ul>
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/categories/%E7%94%9F%E6%B4%BB/">生活</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/post/">归档</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/tags/">标签</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/categories/">分类</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/links">链接</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/about">关于</a>
+          
+        
+      </li>
+    <li class="mobile-menu-item">
+        
+        <div class="mobile-menu-parent mobile-menu-item-lang">
+          <span class="mobile-submenu-open"></span>
+          <a href="#">
+            
+            <i class="iconfont">
+              <svg height="16" width="16" version="1.1" viewBox="0 0 128 128">
+  <path d="m 64.719501,1.4279814 c -34.694029,0 -62.8192028,28.1251726 -62.8192028,62.8192016 0,34.694036 28.1251738,62.819207 62.8192028,62.819207 4.245691,0 8.392744,-0.42239 12.402214,-1.2253 -1.616124,-0.77296 -1.792473,-6.57213 -0.194346,-9.87848 1.779059,-3.68082 7.361625,-13.00555 1.840404,-16.134231 -5.521221,-3.12869 -3.98755,-4.53968 -7.361625,-8.15914 -3.374083,-3.61947 -1.994181,-4.16357 -2.208492,-5.09179 -0.736158,-3.19004 3.251385,-7.975096 3.435429,-8.465866 0.184043,-0.490781 0.184043,-2.331182 0.122689,-2.883308 -0.06131,-0.552125 -2.515051,-2.024446 -3.12852,-2.085791 -0.613469,-0.06133 -0.920209,0.98154 -1.77906,1.042896 -0.858856,0.06133 -4.601018,-2.269838 -5.39853,-2.883308 -0.797504,-0.61346 -1.165591,-2.085792 -2.269828,-3.190033 -1.104247,-1.104252 -1.226945,-0.24539 -2.944651,-0.920206 -1.717714,-0.674812 -7.238935,-2.69926 -11.471867,-4.416975 -4.23294,-1.717714 -4.601019,-4.125615 -4.662365,-5.827954 -0.06131,-1.702333 -2.57657,-4.171587 -3.756227,-5.950646 -1.179335,-1.77906 -1.396914,-4.232932 -1.826339,-3.680809 -0.429425,0.552114 2.208484,6.993538 1.77906,7.177582 -0.429425,0.184043 -1.349635,-1.77906 -2.576572,-3.374083 -1.226936,-1.595016 1.28829,-0.736159 -2.637915,-8.465864 -3.926198,-7.729705 1.226944,-11.671284 1.472324,-15.704806 0.24539,-4.033514 3.312738,1.472325 1.717715,-1.104238 -1.595016,-2.576571 0.122697,-7.975094 -1.104246,-9.938197 -1.226936,-1.963102 -8.220475,2.208492 -8.220475,2.208492 0.184036,-1.901758 6.134682,-5.153142 10.428966,-8.1591366 4.294277,-3.005996 6.91682,-0.674813 10.367621,0.4294236 3.450803,1.104246 3.680817,0.736167 2.515226,-0.368079 -1.165591,-1.1042446 0.49077,-1.6563686 3.190031,-1.2269356 2.699269,0.429425 3.435428,3.6808086 7.545669,3.3740746 4.110242,-0.306735 0.429425,0.797511 0.981548,1.840412 0.552123,1.042892 -0.613468,0.920202 -3.312729,2.760607 -2.699262,1.840403 0.06131,1.840403 4.846407,5.337177 4.785055,3.496773 3.312729,-2.331183 2.821952,-4.907753 -0.490777,-2.576563 3.496773,-0.552115 3.496773,-0.552115 2.944651,1.963094 2.400546,0.107972 4.547684,0.782784 2.147139,0.674814 7.967076,5.597286 7.967076,5.597286 -7.300273,3.98755 -2.699261,4.416975 -1.472325,5.337178 1.226937,0.920202 -2.515218,2.699261 -2.515218,2.699261 -1.53367,-1.53367 -1.779059,0.06131 -2.760614,0.613476 -0.981548,0.552115 -0.06131,1.963095 -0.06131,1.963095 -5.076415,0.797512 -3.926198,6.13469 -3.864852,7.422971 0.06131,1.288289 -3.251385,3.251384 -4.110242,5.091796 -0.858857,1.840405 2.208491,5.827948 0.613468,6.073336 -1.595016,0.24539 -3.190031,-6.011991 -11.778601,-3.680808 -2.589322,0.702954 -8.343174,3.680808 -5.275824,9.754153 3.06734,6.073336 8.15913,-1.717714 9.876843,-0.858857 1.717714,0.858857 -0.490778,4.72371 -0.122691,4.785055 0.368079,0.06131 4.8464,0.168662 5.09179,5.398522 0.245388,5.229868 6.809502,4.785065 8.220482,4.907755 1.410972,0.12269 6.134682,-3.864859 6.809502,-4.048894 0.674815,-0.184034 3.374076,-2.453876 9.263377,0.920195 5.889301,3.374089 8.895296,2.883308 10.919743,4.294285 2.02445,1.410987 0.61347,4.232939 2.51523,5.153134 1.90175,0.920217 9.50876,-0.306736 11.41051,2.821966 1.90176,3.1287 -7.8524,18.833491 -10.91974,20.551201 -3.06734,1.71772 -4.478321,5.64392 -7.545665,8.15913 -3.067349,2.51523 -7.361625,5.62854 -11.410522,8.03646 -3.583968,2.1311 -4.228845,5.949 -5.825333,7.15419 28.11404,-6.24545 49.13623,-31.328971 49.13623,-61.323497 0,-34.694029 -28.125171,-62.8192016 -62.819206,-62.8192016 z M 79.442753,60.382331 c -0.858857,0.245389 -2.637917,1.840405 -6.993547,-0.736166 -4.35563,-2.576564 -7.361625,-2.085794 -7.729705,-2.515218 0,0 -0.368079,-1.0429 1.533671,-1.226937 3.905098,-0.378065 8.833951,3.619464 9.938196,3.680809 1.104246,0.06131 1.656361,-1.104245 3.619464,-0.471631 1.963103,0.631953 0.490777,1.023755 -0.368079,1.269143 z M 58.891546,7.6853614 c -0.427786,-0.311152 0.354344,-0.669418 0.82058,-1.288281 0.269103,-0.357613 0.0695,-0.951289 0.406356,-1.28829 0.92021,-0.920203 5.459876,-2.208485 4.572225,0.306734 -0.887321,2.515226 -5.12434,2.760614 -5.799161,2.269837 z m 10.98109,7.9750936 c -1.533672,-0.06131 -5.14381,-0.442837 -4.478321,-1.104246 2.591952,-2.576563 -0.981548,-3.312729 -3.190039,-3.496766 -2.208485,-0.184043 -3.128687,-1.4109786 -2.02444,-1.5336776 1.104237,-0.12269 5.521213,0.06139 6.257379,0.6748206 0.736158,0.613469 4.723709,2.208485 4.969099,3.374076 0.24538,1.16559 0,2.147138 -1.533678,2.085793 z M 83.184914,15.23103 c -1.226943,0.981547 -7.400887,-3.521968 -8.588569,-4.539674 -5.153134,-4.4169746 -7.913742,-2.9446486 -8.995903,-3.6808086 -1.082485,-0.736166 -0.696897,-1.717713 0.959464,-3.190039 1.656369,-1.472325 6.318732,0.490778 9.017994,0.797512 2.699262,0.306734 5.827955,2.392527 5.889301,4.871925 0.06131,2.4792256 2.944649,4.7595296 1.717713,5.7410846 z" />
+</svg>
+
+            </i>
+            语言
+          </a>
+        </div>
+        <ul class="mobile-submenu-list">
+          
+            <li>
+              
+                <a href="https://lengyueyang.github.io/en/">English</a>
+              
+            </li>
+          
+            <li>
+              
+                <a href="https://lengyueyang.github.io/"><strong>中文</strong></a>
+              
+            </li>
+          
+        </ul>
+      </li>
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      深度识医
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          <a class="menu-item-link menu-parent" href="https://lengyueyang.github.io/categories/%E5%8C%BB%E5%AD%A6%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">医学数据科学</a>
+          <ul class="submenu">
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">数学基础</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E7%BB%9F%E8%AE%A1%E5%9F%BA%E7%A1%80/">统计基础</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E7%AE%97%E6%B3%95/">算法</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/nlp-kg/">NLP-KG</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">数据分析</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E5%8C%BB%E5%AD%A6%E7%9F%A5%E8%AF%86/">医学知识</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/cdss/">CDSS</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/%E6%96%87%E7%AB%A0%E5%A4%8D%E7%8E%B0/">文章复现</a>
+              </li>
+            
+          </ul>
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          <a class="menu-item-link menu-parent" href="https://lengyueyang.github.io/categories/%E5%B7%A5%E5%85%B7%E9%93%BE/">工具链</a>
+          <ul class="submenu">
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/linux/">Linux</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/gentoo/">Gentoo</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/spacemacs/">Spacemacs</a>
+              </li>
+            
+              <li>
+                <a href="https://lengyueyang.github.io/categories/org-mode/">Org-mode</a>
+              </li>
+            
+          </ul>
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/categories/%E7%94%9F%E6%B4%BB/">生活</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/post/">归档</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/tags/">标签</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/categories/">分类</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/links">链接</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://lengyueyang.github.io/about">关于</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    <li class="menu-item">
+        
+        <a class="menu-item-link menu-parent menu-item-lang" href="#">
+          
+          <i class="iconfont">
+            <svg height="16" width="16" version="1.1" viewBox="0 0 128 128">
+  <path d="m 64.719501,1.4279814 c -34.694029,0 -62.8192028,28.1251726 -62.8192028,62.8192016 0,34.694036 28.1251738,62.819207 62.8192028,62.819207 4.245691,0 8.392744,-0.42239 12.402214,-1.2253 -1.616124,-0.77296 -1.792473,-6.57213 -0.194346,-9.87848 1.779059,-3.68082 7.361625,-13.00555 1.840404,-16.134231 -5.521221,-3.12869 -3.98755,-4.53968 -7.361625,-8.15914 -3.374083,-3.61947 -1.994181,-4.16357 -2.208492,-5.09179 -0.736158,-3.19004 3.251385,-7.975096 3.435429,-8.465866 0.184043,-0.490781 0.184043,-2.331182 0.122689,-2.883308 -0.06131,-0.552125 -2.515051,-2.024446 -3.12852,-2.085791 -0.613469,-0.06133 -0.920209,0.98154 -1.77906,1.042896 -0.858856,0.06133 -4.601018,-2.269838 -5.39853,-2.883308 -0.797504,-0.61346 -1.165591,-2.085792 -2.269828,-3.190033 -1.104247,-1.104252 -1.226945,-0.24539 -2.944651,-0.920206 -1.717714,-0.674812 -7.238935,-2.69926 -11.471867,-4.416975 -4.23294,-1.717714 -4.601019,-4.125615 -4.662365,-5.827954 -0.06131,-1.702333 -2.57657,-4.171587 -3.756227,-5.950646 -1.179335,-1.77906 -1.396914,-4.232932 -1.826339,-3.680809 -0.429425,0.552114 2.208484,6.993538 1.77906,7.177582 -0.429425,0.184043 -1.349635,-1.77906 -2.576572,-3.374083 -1.226936,-1.595016 1.28829,-0.736159 -2.637915,-8.465864 -3.926198,-7.729705 1.226944,-11.671284 1.472324,-15.704806 0.24539,-4.033514 3.312738,1.472325 1.717715,-1.104238 -1.595016,-2.576571 0.122697,-7.975094 -1.104246,-9.938197 -1.226936,-1.963102 -8.220475,2.208492 -8.220475,2.208492 0.184036,-1.901758 6.134682,-5.153142 10.428966,-8.1591366 4.294277,-3.005996 6.91682,-0.674813 10.367621,0.4294236 3.450803,1.104246 3.680817,0.736167 2.515226,-0.368079 -1.165591,-1.1042446 0.49077,-1.6563686 3.190031,-1.2269356 2.699269,0.429425 3.435428,3.6808086 7.545669,3.3740746 4.110242,-0.306735 0.429425,0.797511 0.981548,1.840412 0.552123,1.042892 -0.613468,0.920202 -3.312729,2.760607 -2.699262,1.840403 0.06131,1.840403 4.846407,5.337177 4.785055,3.496773 3.312729,-2.331183 2.821952,-4.907753 -0.490777,-2.576563 3.496773,-0.552115 3.496773,-0.552115 2.944651,1.963094 2.400546,0.107972 4.547684,0.782784 2.147139,0.674814 7.967076,5.597286 7.967076,5.597286 -7.300273,3.98755 -2.699261,4.416975 -1.472325,5.337178 1.226937,0.920202 -2.515218,2.699261 -2.515218,2.699261 -1.53367,-1.53367 -1.779059,0.06131 -2.760614,0.613476 -0.981548,0.552115 -0.06131,1.963095 -0.06131,1.963095 -5.076415,0.797512 -3.926198,6.13469 -3.864852,7.422971 0.06131,1.288289 -3.251385,3.251384 -4.110242,5.091796 -0.858857,1.840405 2.208491,5.827948 0.613468,6.073336 -1.595016,0.24539 -3.190031,-6.011991 -11.778601,-3.680808 -2.589322,0.702954 -8.343174,3.680808 -5.275824,9.754153 3.06734,6.073336 8.15913,-1.717714 9.876843,-0.858857 1.717714,0.858857 -0.490778,4.72371 -0.122691,4.785055 0.368079,0.06131 4.8464,0.168662 5.09179,5.398522 0.245388,5.229868 6.809502,4.785065 8.220482,4.907755 1.410972,0.12269 6.134682,-3.864859 6.809502,-4.048894 0.674815,-0.184034 3.374076,-2.453876 9.263377,0.920195 5.889301,3.374089 8.895296,2.883308 10.919743,4.294285 2.02445,1.410987 0.61347,4.232939 2.51523,5.153134 1.90175,0.920217 9.50876,-0.306736 11.41051,2.821966 1.90176,3.1287 -7.8524,18.833491 -10.91974,20.551201 -3.06734,1.71772 -4.478321,5.64392 -7.545665,8.15913 -3.067349,2.51523 -7.361625,5.62854 -11.410522,8.03646 -3.583968,2.1311 -4.228845,5.949 -5.825333,7.15419 28.11404,-6.24545 49.13623,-31.328971 49.13623,-61.323497 0,-34.694029 -28.125171,-62.8192016 -62.819206,-62.8192016 z M 79.442753,60.382331 c -0.858857,0.245389 -2.637917,1.840405 -6.993547,-0.736166 -4.35563,-2.576564 -7.361625,-2.085794 -7.729705,-2.515218 0,0 -0.368079,-1.0429 1.533671,-1.226937 3.905098,-0.378065 8.833951,3.619464 9.938196,3.680809 1.104246,0.06131 1.656361,-1.104245 3.619464,-0.471631 1.963103,0.631953 0.490777,1.023755 -0.368079,1.269143 z M 58.891546,7.6853614 c -0.427786,-0.311152 0.354344,-0.669418 0.82058,-1.288281 0.269103,-0.357613 0.0695,-0.951289 0.406356,-1.28829 0.92021,-0.920203 5.459876,-2.208485 4.572225,0.306734 -0.887321,2.515226 -5.12434,2.760614 -5.799161,2.269837 z m 10.98109,7.9750936 c -1.533672,-0.06131 -5.14381,-0.442837 -4.478321,-1.104246 2.591952,-2.576563 -0.981548,-3.312729 -3.190039,-3.496766 -2.208485,-0.184043 -3.128687,-1.4109786 -2.02444,-1.5336776 1.104237,-0.12269 5.521213,0.06139 6.257379,0.6748206 0.736158,0.613469 4.723709,2.208485 4.969099,3.374076 0.24538,1.16559 0,2.147138 -1.533678,2.085793 z M 83.184914,15.23103 c -1.226943,0.981547 -7.400887,-3.521968 -8.588569,-4.539674 -5.153134,-4.4169746 -7.913742,-2.9446486 -8.995903,-3.6808086 -1.082485,-0.736166 -0.696897,-1.717713 0.959464,-3.190039 1.656369,-1.472325 6.318732,0.490778 9.017994,0.797512 2.699262,0.306734 5.827955,2.392527 5.889301,4.871925 0.06131,2.4792256 2.944649,4.7595296 1.717713,5.7410846 z" />
+</svg>
+
+          </i>
+          中文
+        </a>
+        <ul class="submenu">
+          
+            
+              <li>
+                <a href="https://lengyueyang.github.io/en/">English</a>
+              </li>
+            
+          
+            
+          
+        </ul>
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">博客迁移杂记-从 Hexo 到 Nikola</h1>
+      
+      <div class="post-meta">
+        <time datetime="2018-01-07" class="post-time">
+          2018-01-07
+        </time>
+        <div class="post-category">
+            <a href="https://lengyueyang.github.io/categories/org-mode/"> Org-mode </a>
+            <a href="https://lengyueyang.github.io/categories/%E5%B7%A5%E5%85%B7%E9%93%BE/"> 工具链 </a>
+            
+          </div>
+        <span class="more-meta"> 约 3699 字 </span>
+          <span class="more-meta"> 预计阅读 8 分钟 </span>
+
+        
+        
+
+        
+        
+          <span id="/post/tools/org_mode/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E6%9D%82%E8%AE%B0-%E4%BB%8E-hexo-%E5%88%B0-nikola/" class="leancloud_visitors" data-flag-title="博客迁移杂记-从 Hexo 到 Nikola">
+            <span class="post-meta-item-text"> | 阅读 </span>
+            <span class="leancloud-visitors-count"></span>
+          </span>
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#迁移原因">迁移原因</a></li>
+<li><a href="#nikola-安装和配置">Nikola 安装和配置</a>
+<ul>
+<li><a href="#安装">安装</a></li>
+<li><a href="#配置">配置</a>
+<ul>
+<li><a href="#修改自定义位置">修改自定义位置</a></li>
+<li><a href="#archive-按照时间排序-去掉年份-首页显示缩略版">Archive 按照时间排序，去掉年份，首页显示缩略版</a></li>
+<li><a href="#增加-google-搜索">增加 google 搜索</a></li>
+<li><a href="#增加评论">增加评论</a></li>
+<li><a href="#主题">主题</a></li>
+<li><a href="#语法高亮">语法高亮</a></li>
+<li><a href="#发布时-复制特定文件夹到-output">发布时，复制特定文件夹到 output</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#org-mode-配置">Org-mode 配置</a>
+<ul>
+<li><a href="#org-mode-和-tags-支持">Org-mode 和 tags 支持</a></li>
+<li><a href="#math-支持">Math 支持</a>
+<ul>
+<li><a href="#mathjax">Mathjax</a></li>
+<li><a href="#latex-preview">Latex preview</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#emacs-管理-blog">Emacs 管理 blog</a>
+<ul>
+<li><a href="#用-blog-admin-做前端">用 <a href="https://github.com/CodeFalling/blog-admin">blog-admin</a> 做前端</a></li>
+<li><a href="#配置-增加阅读更多和-commit">配置-增加阅读更多和 commit</a></li>
+<li><a href="#快速插入知识产权">快速插入知识产权</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <h2 id="迁移原因">迁移原因</h2>
+
+<p>16 年年初，开始搭建自己的个人博客，一不小心入了 <code>spacemacs</code> 的坑，一直用 <code>Org-mode</code> 写作、记笔记等，因此博客必须支持 <code>Org-mode</code> ，最开始的解决方案是 Hexo，用 <code>hexo-renderer-org</code> 将 Org-mde 格式转化，使用 Next 主题，确实比较好看，当时配置博客站点花了很长时间，在使用过程中，总是会有 hexo 插件更新问题，导致博客不能发布等，因此，最近一个月寻找 hexo 的替代者。</p>
+
+<p>Nikola 是用 Python 写的，恰好以后要学 Python，同时 Nikola 通过 Org-mode 插件支持 Org-mode，于是选择 Nikola 作为博客框架，目前一切还好，就是主题比较难看。博客迁移过程用，参考<sup class="footnote-ref" id="fnref:fn-1"><a href="#fn:fn-1">1</a></sup><sup>, </sup><sup class="footnote-ref" id="fnref:fn-2"><a href="#fn:fn-2">2</a></sup><sup>, </sup><sup class="footnote-ref" id="fnref:fn-3"><a href="#fn:fn-3">3</a></sup><sup>, </sup><sup class="footnote-ref" id="fnref:fn-4"><a href="#fn:fn-4">4</a></sup></p>
+
+<h2 id="nikola-安装和配置">Nikola 安装和配置</h2>
+
+<h3 id="安装">安装</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">sudo pip install Nikola<span class="o">[</span>extras<span class="o">]</span>
+
+git clone git@github.com:&lt;username&gt;.github.io.git ~/Nikola
+
+<span class="nb">cd</span> ~/Nikola
+
+git checkout -b blog</code></pre></td></tr></table>
+</div>
+</div>
+<p>编辑 .gitignore 文件，加入内容</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">*.py<span class="o">[</span>cod<span class="o">]</span>
+__pycache__
+cache
+output
+.doit.db
+_env/</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">git add .gitignore
+git commit -m <span class="s2">&#34;Add .gitignore&#34;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>建站 blog</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">$ nikola init my_first_site
+<span class="c1"># Fill the asked information</span>
+<span class="c1"># 把子文件信息弄到根目录来</span>
+$ mv my_first_site/* .
+$ rm -r my_first_site</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">git add conf.py
+git commit -m <span class="s2">&#34;Add conf.py&#34;</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">nikola new_post -e
+nikola build
+nikola serve --browser</code></pre></td></tr></table>
+</div>
+</div>
+<p>此时应该可以在浏览器中看到网站的初始样子了</p>
+
+<h3 id="配置">配置</h3>
+
+<p>配置文件是主目录下 .conf.py 文件</p>
+
+<h4 id="修改自定义位置">修改自定义位置</h4>
+
+<p>下面是我的自定义，可以参照修改</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># Data about this site</span>
+<span class="nv">BLOG_AUTHOR</span> <span class="o">=</span> <span class="s2">&#34;Lengyueyang&#34;</span>  <span class="c1"># (translatable)</span>
+<span class="nv">BLOG_TITLE</span> <span class="o">=</span> <span class="s2">&#34;深度识医&#34;</span>  <span class="c1"># (translatable)</span>
+<span class="c1"># This is the main URL for your site. It will be used</span>
+<span class="c1"># in a prominent link. Don&#39;t forget the protocol (http/https)!</span>
+<span class="nv">SITE_URL</span> <span class="o">=</span> <span class="s2">&#34;https://lengyueyang.github.io/&#34;</span>
+<span class="c1"># This is the URL where Nikola&#39;s output will be deployed.</span>
+<span class="c1"># If not set, defaults to SITE_URL</span>
+<span class="c1"># BASE_URL = &#34;https://example.com/&#34;</span>
+<span class="nv">BLOG_EMAIL</span> <span class="o">=</span> <span class="s2">&#34;maoxiaowei1988@qq.com&#34;</span>
+<span class="nv">BLOG_DESCRIPTION</span> <span class="o">=</span> <span class="s2">&#34;Lengyueyang&#39;s personal blog.&#34;</span>  <span class="c1"># (translatable)</span>
+
+<span class="nv">NAVIGATION_LINKS</span> <span class="o">=</span> <span class="o">{</span>
+    DEFAULT_LANG: <span class="o">(</span>
+        <span class="o">(</span><span class="s2">&#34;/archive.html&#34;</span>, <span class="s2">&#34;Archives&#34;</span><span class="o">)</span>,
+        <span class="o">(</span><span class="s2">&#34;/categories/index.html&#34;</span>, <span class="s2">&#34;Tags&#34;</span><span class="o">)</span>,
+        <span class="o">(</span><span class="s2">&#34;/pages/notes.html&#34;</span>, <span class="s2">&#34;Notes&#34;</span><span class="o">)</span>,
+        <span class="o">(</span><span class="s2">&#34;/pages/about.html&#34;</span>, <span class="s2">&#34;About&#34;</span><span class="o">)</span>,
+        <span class="o">(</span><span class="s2">&#34;https://github.com/lengyueyang&#34;</span>, <span class="s2">&#34;Github&#34;</span><span class="o">)</span>,
+        <span class="o">(</span><span class="s2">&#34;/pages/links.html&#34;</span>, <span class="s2">&#34;Links&#34;</span><span class="o">)</span>,
+        <span class="o">(</span><span class="s2">&#34;/rss.xml&#34;</span>, <span class="s2">&#34;RSS feed&#34;</span><span class="o">)</span>,
+    <span class="o">)</span>,
+<span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="archive-按照时间排序-去掉年份-首页显示缩略版">Archive 按照时间排序，去掉年份，首页显示缩略版</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">I# Create per-month archives instead of per-year
+<span class="c1"># CREATE_MONTHLY_ARCHIVE = False</span>
+<span class="c1"># Create one large archive instead of per-year</span>
+<span class="c1"># CREATE_SINGLE_ARCHIVE = False</span>
+<span class="nv">CREATE_SINGLE_ARCHIVE</span> <span class="o">=</span> True
+<span class="c1"># Create year, month, and day archives each with a (long) list of posts</span>
+<span class="c1"># (overrides both CREATE_MONTHLY_ARCHIVE and CREATE_SINGLE_ARCHIVE)</span>
+<span class="c1"># CREATE_FULL_ARCHIVES = False</span>
+<span class="c1"># If monthly archives or full archives are created, adds also one archive per day</span>
+<span class="c1"># CREATE_DAILY_ARCHIVE = False</span>
+<span class="c1"># Create previous, up, next navigation links for archives</span>
+<span class="c1"># CREATE_ARCHIVE_NAVIGATION = False</span>
+<span class="c1"># Final locations for the archives are:</span>
+<span class="c1"># output / TRANSLATION[lang] / ARCHIVE_PATH / ARCHIVE_FILENAME</span>
+<span class="c1"># output / TRANSLATION[lang] / ARCHIVE_PATH / YEAR / index.html</span>
+<span class="c1"># output / TRANSLATION[lang] / ARCHIVE_PATH / YEAR / MONTH / index.html</span>
+<span class="c1"># output / TRANSLATION[lang] / ARCHIVE_PATH / YEAR / MONTH / DAY / index.html</span>
+<span class="c1"># ARCHIVE_PATH = &#34;&#34;</span>
+<span class="c1"># ARCHIVE_FILENAME = &#34;archive.html&#34;</span>
+
+<span class="nv">NDEX_TEASERS</span> <span class="o">=</span> True
+
+<span class="c1"># github_deploy configuration</span>
+<span class="c1"># For more details, read the manual:</span>
+<span class="c1"># https://getnikola.com/handbook.html#deploying-to-github</span>
+<span class="c1"># You will need to configure the deployment branch on GitHub.</span>
+<span class="nv">GITHUB_SOURCE_BRANCH</span> <span class="o">=</span> <span class="s1">&#39;blog&#39;</span>
+<span class="nv">GITHUB_DEPLOY_BRANCH</span> <span class="o">=</span> <span class="s1">&#39;master&#39;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="增加-google-搜索">增加 google 搜索</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># If you prefer a Google search form, here&#39;s an example that should just work:</span>
+<span class="nv">SEARCH_FORM</span> <span class="o">=</span> <span class="s2">&#34;&#34;&#34;
+</span><span class="s2">&lt;!-- Google custom search --&gt;
+</span><span class="s2">&lt;form method=&#34;</span>get<span class="s2">&#34; action=&#34;</span>https://www.google.com/search<span class="s2">&#34; class=&#34;</span>navbar-form navbar-right<span class="s2">&#34; role=&#34;</span>search<span class="s2">&#34;&gt;
+</span><span class="s2">&lt;div class=&#34;</span>form-group<span class="s2">&#34;&gt;
+</span><span class="s2">&lt;input type=&#34;</span>text<span class="s2">&#34; name=&#34;</span>q<span class="s2">&#34; class=&#34;</span>form-control<span class="s2">&#34; placeholder=&#34;</span>Search<span class="s2">&#34;&gt;
+</span><span class="s2">&lt;/div&gt;
+</span><span class="s2">&lt;button type=&#34;</span>submit<span class="s2">&#34; class=&#34;</span>btn btn-primary<span class="s2">&#34;&gt;
+</span><span class="s2">  &lt;span class=&#34;</span>glyphicon glyphicon-search<span class="s2">&#34;&gt;&lt;/span&gt;
+</span><span class="s2">&lt;/button&gt;
+</span><span class="s2">&lt;input type=&#34;</span>hidden<span class="s2">&#34; name=&#34;</span>sitesearch<span class="s2">&#34; value=&#34;</span>%s<span class="s2">&#34;&gt;
+</span><span class="s2">&lt;/form&gt;
+</span><span class="s2">&lt;!-- End of custom search --&gt;
+</span><span class="s2">&#34;&#34;&#34;</span> % SITE_URL</code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="增加评论">增加评论</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nv">COMMENT_SYSTEM</span> <span class="o">=</span> <span class="s2">&#34;disqus&#34;</span>
+<span class="c1"># And you also need to add your COMMENT_SYSTEM_ID which</span>
+<span class="c1"># depends on what comment system you use. The default is</span>
+<span class="c1"># &#34;nikolademo&#34; which is a test account for Disqus. More information</span>
+<span class="c1"># is in the manual.</span>
+<span class="nv">COMMENT_SYSTEM_ID</span> <span class="o">=</span> <span class="s2">&#34;your-ID&#34;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="主题">主题</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">nikola install_theme bootstrap3
+
+nikola bootswatch_theme -n custom_theme -s darkly -p bootstrap3</code></pre></td></tr></table>
+</div>
+</div>
+<p>可以在 <a href="https://bootswatch.com/3/">https://bootswatch.com/3/</a> 查找合适的主题，下载</p>
+
+<h4 id="语法高亮">语法高亮</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">mkdir -p files/assets/css/
+pygmentize -S friendly -a .highlight -f html &gt;&gt; files/assets/css/custom.css</code></pre></td></tr></table>
+</div>
+</div>
+<p>默认使用 pygments，可以在 init.el 或 conf.el 中把 nikola-use-pygments 改成 nil 来取消它。</p>
+
+<p>为了正常显示语法高亮，需要增加相应的 custom.css，并确保 custom.css 被 theme 使用了用 pygmentize 生成相应的 css 文件， <PYGMENTSSTYLE> 可以用 pygmentize -L style 查看，比如 colorful,friendly</p>
+
+<h4 id="发布时-复制特定文件夹到-output">发布时，复制特定文件夹到 output</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nv">FILES_FOLDERS</span> <span class="o">=</span> <span class="o">{</span><span class="s1">&#39;posts/ltxpng&#39;</span>: <span class="s1">&#39;posts/ltxpng&#39;</span>, <span class="s1">&#39;posts/MSimg&#39;</span>: <span class="s1">&#39;posts/MSimg&#39;</span>, <span class="s1">&#39;posts/file&#39;</span>:<span class="s1">&#39;posts/file&#39;</span><span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>运行 <code>nikola build</code> , 可以复制 posts 下的三个文件夹到 output/posts 下面</p>
+
+<h2 id="org-mode-配置">Org-mode 配置</h2>
+
+<h3 id="org-mode-和-tags-支持">Org-mode 和 tags 支持</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">nikola plugin -i orgmode
+nikola plugin -i tags</code></pre></td></tr></table>
+</div>
+</div>
+<p>在 post 和 pages 等加入 org-mode 支持</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nv">POSTS</span> <span class="o">=</span> <span class="o">(</span>
+    <span class="o">(</span><span class="s2">&#34;posts/*.org&#34;</span>, <span class="s2">&#34;posts&#34;</span>, <span class="s2">&#34;post.tmpl&#34;</span><span class="o">)</span>,
+    <span class="o">(</span><span class="s2">&#34;posts/*.rst&#34;</span>, <span class="s2">&#34;posts&#34;</span>, <span class="s2">&#34;post.tmpl&#34;</span><span class="o">)</span>,
+    <span class="o">(</span><span class="s2">&#34;posts/*.md&#34;</span>, <span class="s2">&#34;posts&#34;</span>, <span class="s2">&#34;post.tmpl&#34;</span><span class="o">)</span>,
+    <span class="o">(</span><span class="s2">&#34;posts/*.txt&#34;</span>, <span class="s2">&#34;posts&#34;</span>, <span class="s2">&#34;post.tmpl&#34;</span><span class="o">)</span>,
+    <span class="o">(</span><span class="s2">&#34;posts/*.html&#34;</span>, <span class="s2">&#34;posts&#34;</span>, <span class="s2">&#34;post.tmpl&#34;</span><span class="o">)</span>,
+<span class="o">)</span>
+<span class="nv">PAGES</span> <span class="o">=</span> <span class="o">(</span>
+    <span class="o">(</span><span class="s2">&#34;pages/*.org&#34;</span>, <span class="s2">&#34;pages&#34;</span>, <span class="s2">&#34;page.tmpl&#34;</span><span class="o">)</span>,
+    <span class="o">(</span><span class="s2">&#34;pages/*.rst&#34;</span>, <span class="s2">&#34;pages&#34;</span>, <span class="s2">&#34;page.tmpl&#34;</span><span class="o">)</span>,
+    <span class="o">(</span><span class="s2">&#34;pages/*.md&#34;</span>, <span class="s2">&#34;pages&#34;</span>, <span class="s2">&#34;page.tmpl&#34;</span><span class="o">)</span>,
+    <span class="o">(</span><span class="s2">&#34;pages/*.txt&#34;</span>, <span class="s2">&#34;pages&#34;</span>, <span class="s2">&#34;page.tmpl&#34;</span><span class="o">)</span>,
+    <span class="o">(</span><span class="s2">&#34;pages/*.html&#34;</span>, <span class="s2">&#34;pages&#34;</span>, <span class="s2">&#34;page.tmpl&#34;</span><span class="o">)</span>,
+<span class="o">)</span>
+
+<span class="nv">COMPILERS</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="s2">&#34;rest&#34;</span>: <span class="o">(</span><span class="s1">&#39;.rst&#39;</span>, <span class="s1">&#39;.txt&#39;</span><span class="o">)</span>,
+    <span class="s2">&#34;markdown&#34;</span>: <span class="o">(</span><span class="s1">&#39;.md&#39;</span>, <span class="s1">&#39;.mdown&#39;</span>, <span class="s1">&#39;.markdown&#39;</span><span class="o">)</span>,
+    <span class="s2">&#34;textile&#34;</span>: <span class="o">(</span><span class="s1">&#39;.textile&#39;</span>,<span class="o">)</span>,
+    <span class="s2">&#34;txt2tags&#34;</span>: <span class="o">(</span><span class="s1">&#39;.t2t&#39;</span>,<span class="o">)</span>,
+    <span class="s2">&#34;bbcode&#34;</span>: <span class="o">(</span><span class="s1">&#39;.bb&#39;</span>,<span class="o">)</span>,
+    <span class="s2">&#34;wiki&#34;</span>: <span class="o">(</span><span class="s1">&#39;.wiki&#39;</span>,<span class="o">)</span>,
+    <span class="s2">&#34;ipynb&#34;</span>: <span class="o">(</span><span class="s1">&#39;.ipynb&#39;</span>,<span class="o">)</span>,
+    <span class="s2">&#34;html&#34;</span>: <span class="o">(</span><span class="s1">&#39;.html&#39;</span>, <span class="s1">&#39;.htm&#39;</span><span class="o">)</span>,
+    <span class="s2">&#34;orgmode&#34;</span>: <span class="o">(</span><span class="s1">&#39;.org&#39;</span>,<span class="o">)</span>,
+    <span class="c1"># PHP files are rendered the usual way (i.e. with the full templates).</span>
+    <span class="c1"># The resulting files have .php extensions, making it possible to run</span>
+    <span class="c1"># them without reconfiguring your server to recognize them.</span>
+    <span class="s2">&#34;php&#34;</span>: <span class="o">(</span><span class="s1">&#39;.php&#39;</span>,<span class="o">)</span>,
+    <span class="c1"># Pandoc detects the input from the source filename</span>
+    <span class="c1"># but is disabled by default as it would conflict</span>
+    <span class="c1"># with many of the others.</span>
+    <span class="c1"># &#34;pandoc&#34;: (&#39;.rst&#39;, &#39;.md&#39;, &#39;.txt&#39;),</span>
+<span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="math-支持">Math 支持</h3>
+
+<p>我的博客中，有个别文章有特别多的数学公式，其中有很多自定义，这里有两种方法</p>
+
+<h4 id="mathjax">Mathjax</h4>
+
+<p>用 mathjax，通过在 metedata tags 加入 mathjax，但是 一些自定义的定理环境不能显示</p>
+
+<h4 id="latex-preview">Latex preview</h4>
+
+<p>通过 Org-mode 的 latex preview 功能，在到处 html 时，将数学公式变成图片，可以通过以下配置
+在 plugins org-mode 文件夹中建立 conf.el 文件，加入以下配置</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span><span class="lnt">212
+</span><span class="lnt">213
+</span><span class="lnt">214
+</span><span class="lnt">215
+</span><span class="lnt">216
+</span><span class="lnt">217
+</span><span class="lnt">218
+</span><span class="lnt">219
+</span><span class="lnt">220
+</span><span class="lnt">221
+</span><span class="lnt">222
+</span><span class="lnt">223
+</span><span class="lnt">224
+</span><span class="lnt">225
+</span><span class="lnt">226
+</span><span class="lnt">227
+</span><span class="lnt">228
+</span><span class="lnt">229
+</span><span class="lnt">230
+</span><span class="lnt">231
+</span><span class="lnt">232
+</span><span class="lnt">233
+</span><span class="lnt">234
+</span><span class="lnt">235
+</span><span class="lnt">236
+</span><span class="lnt">237
+</span><span class="lnt">238
+</span><span class="lnt">239
+</span><span class="lnt">240
+</span><span class="lnt">241
+</span><span class="lnt">242
+</span><span class="lnt">243
+</span><span class="lnt">244
+</span><span class="lnt">245
+</span><span class="lnt">246
+</span><span class="lnt">247
+</span><span class="lnt">248
+</span><span class="lnt">249
+</span><span class="lnt">250
+</span><span class="lnt">251
+</span><span class="lnt">252
+</span><span class="lnt">253
+</span><span class="lnt">254
+</span><span class="lnt">255
+</span><span class="lnt">256
+</span><span class="lnt">257
+</span><span class="lnt">258
+</span><span class="lnt">259
+</span><span class="lnt">260
+</span><span class="lnt">261
+</span><span class="lnt">262
+</span><span class="lnt">263
+</span><span class="lnt">264
+</span><span class="lnt">265
+</span><span class="lnt">266
+</span><span class="lnt">267
+</span><span class="lnt">268
+</span><span class="lnt">269
+</span><span class="lnt">270
+</span><span class="lnt">271
+</span><span class="lnt">272
+</span><span class="lnt">273
+</span><span class="lnt">274
+</span><span class="lnt">275
+</span><span class="lnt">276
+</span><span class="lnt">277
+</span><span class="lnt">278
+</span><span class="lnt">279
+</span><span class="lnt">280
+</span><span class="lnt">281
+</span><span class="lnt">282
+</span><span class="lnt">283
+</span><span class="lnt">284
+</span><span class="lnt">285
+</span><span class="lnt">286
+</span><span class="lnt">287
+</span><span class="lnt">288
+</span><span class="lnt">289
+</span><span class="lnt">290
+</span><span class="lnt">291
+</span><span class="lnt">292
+</span><span class="lnt">293
+</span><span class="lnt">294
+</span><span class="lnt">295
+</span><span class="lnt">296
+</span><span class="lnt">297
+</span><span class="lnt">298
+</span><span class="lnt">299
+</span><span class="lnt">300
+</span><span class="lnt">301
+</span><span class="lnt">302
+</span><span class="lnt">303
+</span><span class="lnt">304
+</span><span class="lnt">305
+</span><span class="lnt">306
+</span><span class="lnt">307
+</span><span class="lnt">308
+</span><span class="lnt">309
+</span><span class="lnt">310
+</span><span class="lnt">311
+</span><span class="lnt">312
+</span><span class="lnt">313
+</span><span class="lnt">314
+</span><span class="lnt">315
+</span><span class="lnt">316
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="p">;;</span> Init file to use with the orgmode plugin.
+
+<span class="p">;;</span> Load org-mode
+<span class="p">;;</span> Requires org-mode v8.x
+
+
+<span class="p">;;;</span> Custom configuration <span class="k">for</span> the export.
+
+<span class="p">;;;</span> Add any custom configuration that you would like to <span class="s1">&#39;conf.el&#39;</span>.
+<span class="o">(</span>setq nikola-use-pygments t
+      org-export-with-toc t
+      org-export-with-section-numbers nil
+      org-startup-folded <span class="s1">&#39;showeverything)
+</span><span class="s1">
+</span><span class="s1">
+</span><span class="s1">;;org-mode export to latex
+</span><span class="s1">(require &#39;</span>ox-latex<span class="o">)</span>
+<span class="o">(</span>setq org-export-latex-listings t<span class="o">)</span>
+
+<span class="p">;;</span>org-mode <span class="nb">source</span> code setup in exporting to latex
+<span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-listings
+</span><span class="s1">             &#39;</span><span class="o">(</span><span class="s2">&#34;&#34;</span> <span class="s2">&#34;listings&#34;</span><span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-listings
+</span><span class="s1">             &#39;</span><span class="o">(</span><span class="s2">&#34;&#34;</span> <span class="s2">&#34;color&#34;</span><span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-packages-alist
+</span><span class="s1">             &#39;</span><span class="o">(</span><span class="s2">&#34;&#34;</span> <span class="s2">&#34;xcolor&#34;</span> t<span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-packages-alist
+</span><span class="s1">             &#39;</span><span class="o">(</span><span class="s2">&#34;&#34;</span> <span class="s2">&#34;listings&#34;</span> t<span class="o">))</span>
+<span class="p">;;</span><span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-packages-alist
+</span><span class="s1">;;             &#39;</span><span class="o">(</span><span class="s2">&#34;&#34;</span> <span class="s2">&#34;fontspec&#34;</span> t<span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-packages-alist
+</span><span class="s1">             &#39;</span><span class="o">(</span><span class="s2">&#34;&#34;</span> <span class="s2">&#34;indentfirst&#34;</span> t<span class="o">))</span>
+<span class="p">;;</span><span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-packages-alist
+</span><span class="s1">;;             &#39;</span><span class="o">(</span><span class="s2">&#34;&#34;</span> <span class="s2">&#34;xunicode&#34;</span> t<span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-packages-alist
+</span><span class="s1">             &#39;</span><span class="o">(</span><span class="s2">&#34;&#34;</span> <span class="s2">&#34;geometry&#34;</span><span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-packages-alist
+</span><span class="s1">             &#39;</span><span class="o">(</span><span class="s2">&#34;&#34;</span> <span class="s2">&#34;float&#34;</span><span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-packages-alist
+</span><span class="s1">             &#39;</span><span class="o">(</span><span class="s2">&#34;&#34;</span> <span class="s2">&#34;longtable&#34;</span><span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-packages-alist
+</span><span class="s1">             &#39;</span><span class="o">(</span><span class="s2">&#34;&#34;</span> <span class="s2">&#34;tikz&#34;</span><span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-packages-alist
+</span><span class="s1">             &#39;</span><span class="o">(</span><span class="s2">&#34;&#34;</span> <span class="s2">&#34;fancyhdr&#34;</span><span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-packages-alist
+</span><span class="s1">             &#39;</span><span class="o">(</span><span class="s2">&#34;&#34;</span> <span class="s2">&#34;textcomp&#34;</span><span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-packages-alist
+</span><span class="s1">             &#39;</span><span class="o">(</span><span class="s2">&#34;&#34;</span> <span class="s2">&#34;amsmath&#34;</span><span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-packages-alist
+</span><span class="s1">             &#39;</span><span class="o">(</span><span class="s2">&#34;&#34;</span> <span class="s2">&#34;amsthm&#34;</span><span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-packages-alist
+</span><span class="s1">             &#39;</span><span class="o">(</span><span class="s2">&#34;&#34;</span> <span class="s2">&#34;tabularx&#34;</span> t<span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-packages-alist
+</span><span class="s1">             &#39;</span><span class="o">(</span><span class="s2">&#34;&#34;</span> <span class="s2">&#34;booktabs&#34;</span> t<span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-packages-alist
+</span><span class="s1">             &#39;</span><span class="o">(</span><span class="s2">&#34;&#34;</span> <span class="s2">&#34;grffile&#34;</span> t<span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-packages-alist
+</span><span class="s1">             &#39;</span><span class="o">(</span><span class="s2">&#34;&#34;</span> <span class="s2">&#34;wrapfig&#34;</span> t<span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-packages-alist
+</span><span class="s1">             &#39;</span><span class="o">(</span><span class="s2">&#34;normalem&#34;</span> <span class="s2">&#34;ulem&#34;</span> t<span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-packages-alist
+</span><span class="s1">             &#39;</span><span class="o">(</span><span class="s2">&#34;&#34;</span> <span class="s2">&#34;amssymb&#34;</span> t<span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-packages-alist
+</span><span class="s1">             &#39;</span><span class="o">(</span><span class="s2">&#34;&#34;</span> <span class="s2">&#34;extarrows&#34;</span> t<span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-packages-alist
+</span><span class="s1">             &#39;</span><span class="o">(</span><span class="s2">&#34;&#34;</span> <span class="s2">&#34;capt-of&#34;</span> t<span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-packages-alist
+</span><span class="s1">             &#39;</span><span class="o">(</span><span class="s2">&#34;figuresright&#34;</span> <span class="s2">&#34;rotating&#34;</span> t<span class="o">))</span>
+<span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-packages-alist
+</span><span class="s1">             &#39;</span><span class="o">(</span><span class="s2">&#34;Lenny&#34;</span> <span class="s2">&#34;fncychap&#34;</span> t<span class="o">))</span>
+
+<span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-classes
+</span><span class="s1">             &#39;</span><span class="o">(</span><span class="s2">&#34;lengyue-org-book&#34;</span>
+               <span class="s2">&#34;\\documentclass{book}
+</span><span class="s2">\\usepackage[slantfont, boldfont]{xeCJK}
+</span><span class="s2">% chapter set
+</span><span class="s2">\\usepackage{titlesec}
+</span><span class="s2">\\usepackage{hyperref}
+</span><span class="s2">\\hypersetup{colorlinks,linkcolor=black,filecolor=black,urlcolor=blue,citecolor=black}
+</span><span class="s2">\\usepackage{fontspec}
+</span><span class="s2">\\usepackage{xunicode}
+</span><span class="s2">\\titleformat{\\paragraph}{\\normalfont\\normalsize\\bfseries}{\\theparagraph}{1em}{}
+</span><span class="s2">[NO-DEFAULT-PACKAGES]
+</span><span class="s2">[PACKAGES]
+</span><span class="s2">
+</span><span class="s2">
+</span><span class="s2">\\setCJKmainfont{WenQuanYi Micro Hei} % 设置缺省中文字体
+</span><span class="s2">\\setCJKsansfont{WenQuanYi Micro Hei}
+</span><span class="s2">\\setCJKmonofont{WenQuanYi Micro Hei Mono}
+</span><span class="s2">
+</span><span class="s2">\\setmainfont{DejaVu Sans} % 英文衬线字体
+</span><span class="s2">\\setsansfont{DejaVu Serif} % 英文无衬线字体
+</span><span class="s2">\\setmonofont{DejaVu Sans Mono}
+</span><span class="s2">%\\setmainfont{WenQuanYi Micro Hei} % 设置缺省中文字体
+</span><span class="s2">%\\setsansfont{WenQuanYi Micro Hei}
+</span><span class="s2">%\\setmonofont{WenQuanYi Micro Hei Mono}
+</span><span class="s2">
+</span><span class="s2">%如果没有它，会有一些 tex 特殊字符无法正常使用，比如连字符。
+</span><span class="s2">\\defaultfontfeatures{Mapping=tex-text}
+</span><span class="s2">
+</span><span class="s2">% 中文断行
+</span><span class="s2">\\XeTeXlinebreaklocale \&#34;zh\&#34;
+</span><span class="s2">\\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
+</span><span class="s2">
+</span><span class="s2">% 代码设置
+</span><span class="s2">\\lstset{numbers=left,
+</span><span class="s2">numberstyle= \\tiny,
+</span><span class="s2">keywordstyle= \\color{ blue!70},commentstyle=\\color{red!50!green!50!blue!50},
+</span><span class="s2">frame=shadowbox,
+</span><span class="s2">breaklines=true,
+</span><span class="s2">rulesepcolor= \\color{ red!20!green!20!blue!20}
+</span><span class="s2">}
+</span><span class="s2">
+</span><span class="s2">[EXTRA]
+</span><span class="s2">&#34;</span>
+                 <span class="o">(</span><span class="s2">&#34;\\chapter{%s}&#34;</span> . <span class="s2">&#34;\\chapter*{%s}&#34;</span><span class="o">)</span>
+                 <span class="o">(</span><span class="s2">&#34;\\section{%s}&#34;</span> . <span class="s2">&#34;\\section*{%s}&#34;</span><span class="o">)</span>
+                 <span class="o">(</span><span class="s2">&#34;\\subsection{%s}&#34;</span> . <span class="s2">&#34;\\subsection*{%s}&#34;</span><span class="o">)</span>
+                 <span class="o">(</span><span class="s2">&#34;\\subsubsection{%s}&#34;</span> . <span class="s2">&#34;\\subsubsection*{%s}&#34;</span><span class="o">)</span>
+                 <span class="o">(</span><span class="s2">&#34;\\paragraph{%s}&#34;</span> . <span class="s2">&#34;\\paragraph*{%s}&#34;</span><span class="o">)</span>
+                 <span class="o">(</span><span class="s2">&#34;\\subparagraph{%s}&#34;</span> . <span class="s2">&#34;\\subparagraph*{%s}&#34;</span><span class="o">)))</span>
+
+<span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-classes
+</span><span class="s1">             &#39;</span><span class="o">(</span><span class="s2">&#34;lengyue-org-article&#34;</span>
+               <span class="s2">&#34;\\documentclass{article}
+</span><span class="s2">\\usepackage[slantfont, boldfont]{xeCJK}
+</span><span class="s2">\\usepackage{titlesec}
+</span><span class="s2">\\usepackage{hyperref}
+</span><span class="s2">\\hypersetup{colorlinks,linkcolor=black,filecolor=black,urlcolor=blue,citecolor=black}
+</span><span class="s2">\\usepackage{fontspec}
+</span><span class="s2">\\usepackage{xunicode}
+</span><span class="s2">\\titleformat{\\paragraph}{\\normalfont\\normalsize\\bfseries}{\\theparagraph}{1em}{}
+</span><span class="s2">
+</span><span class="s2">[NO-DEFAULT-PACKAGES]
+</span><span class="s2">[PACKAGES]
+</span><span class="s2">
+</span><span class="s2">\\parindent 2em
+</span><span class="s2">
+</span><span class="s2">\\setCJKmainfont{WenQuanYi Micro Hei} % 设置缺省中文字体
+</span><span class="s2">\\setCJKsansfont{WenQuanYi Micro Hei}
+</span><span class="s2">\\setCJKmonofont{WenQuanYi Micro Hei Mono}
+</span><span class="s2">
+</span><span class="s2">\\setmainfont{DejaVu Sans} % 英文衬线字体
+</span><span class="s2">\\setsansfont{DejaVu Serif} % 英文无衬线字体
+</span><span class="s2">\\setmonofont{DejaVu Sans Mono}
+</span><span class="s2">%\\setmainfont{WenQuanYi Micro Hei} % 设置缺省中文字体
+</span><span class="s2">%\\setsansfont{WenQuanYi Micro Hei}
+</span><span class="s2">%\\setmonofont{WenQuanYi Micro Hei Mono}
+</span><span class="s2">
+</span><span class="s2">%如果没有它，会有一些 tex 特殊字符无法正常使用，比如连字符。
+</span><span class="s2">\\defaultfontfeatures{Mapping=tex-text}
+</span><span class="s2">
+</span><span class="s2">% 中文断行
+</span><span class="s2">\\XeTeXlinebreaklocale \&#34;zh\&#34;
+</span><span class="s2">\\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
+</span><span class="s2">
+</span><span class="s2">% 代码设置
+</span><span class="s2">\\lstset{numbers=left,
+</span><span class="s2">numberstyle= \\tiny,
+</span><span class="s2">keywordstyle= \\color{ blue!70},commentstyle=\\color{red!50!green!50!blue!50},
+</span><span class="s2">frame=shadowbox,
+</span><span class="s2">breaklines=true,
+</span><span class="s2">rulesepcolor= \\color{ red!20!green!20!blue!20}
+</span><span class="s2">}
+</span><span class="s2">
+</span><span class="s2">[EXTRA]
+</span><span class="s2">&#34;</span>
+                 <span class="o">(</span><span class="s2">&#34;\\section{%s}&#34;</span> . <span class="s2">&#34;\\section*{%s}&#34;</span><span class="o">)</span>
+                 <span class="o">(</span><span class="s2">&#34;\\subsection{%s}&#34;</span> . <span class="s2">&#34;\\subsection*{%s}&#34;</span><span class="o">)</span>
+                 <span class="o">(</span><span class="s2">&#34;\\subsubsection{%s}&#34;</span> . <span class="s2">&#34;\\subsubsection*{%s}&#34;</span><span class="o">)</span>
+                 <span class="o">(</span><span class="s2">&#34;\\paragraph{%s}&#34;</span> . <span class="s2">&#34;\\paragraph*{%s}&#34;</span><span class="o">)</span>
+                 <span class="o">(</span><span class="s2">&#34;\\subparagraph{%s}&#34;</span> . <span class="s2">&#34;\\subparagraph*{%s}&#34;</span><span class="o">)))</span>
+
+<span class="o">(</span>add-to-list <span class="s1">&#39;org-latex-classes
+</span><span class="s1">             &#39;</span><span class="o">(</span><span class="s2">&#34;lengyue-org-beamer&#34;</span>
+               <span class="s2">&#34;\\documentclass{beamer}
+</span><span class="s2">\\usepackage[slantfont, boldfont]{xeCJK}
+</span><span class="s2">% beamer set
+</span><span class="s2">\\usepackage[none]{hyphenat}
+</span><span class="s2">\\usepackage[abs]{overpic}
+</span><span class="s2">\\usepackage{fontspec}
+</span><span class="s2">\\usepackage{xunicode}
+</span><span class="s2">
+</span><span class="s2">
+</span><span class="s2">[NO-DEFAULT-PACKAGES]
+</span><span class="s2">[PACKAGES]
+</span><span class="s2">
+</span><span class="s2">\\setCJKmainfont{WenQuanYi Micro Hei} % 设置缺省中文字体
+</span><span class="s2">\\setCJKsansfont{WenQuanYi Micro Hei}
+</span><span class="s2">\\setCJKmonofont{WenQuanYi Micro Hei Mono}
+</span><span class="s2">
+</span><span class="s2">\\setmainfont{DejaVu Sans} % 英文衬线字体
+</span><span class="s2">\\setsansfont{DejaVu Serif} % 英文无衬线字体
+</span><span class="s2">\\setmonofont{DejaVu Sans Mono}
+</span><span class="s2">%\\setmainfont{WenQuanYi Micro Hei} % 设置缺省中文字体
+</span><span class="s2">%\\setsansfont{WenQuanYi Micro Hei}
+</span><span class="s2">%\\setmonofont{WenQuanYi Micro Hei Mono}
+</span><span class="s2">
+</span><span class="s2">%如果没有它，会有一些 tex 特殊字符无法正常使用，比如连字符。
+</span><span class="s2">\\defaultfontfeatures{Mapping=tex-text}
+</span><span class="s2">
+</span><span class="s2">% 中文断行
+</span><span class="s2">\\XeTeXlinebreaklocale \&#34;zh\&#34;
+</span><span class="s2">\\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
+</span><span class="s2">
+</span><span class="s2">% 代码设置
+</span><span class="s2">\\lstset{numbers=left,
+</span><span class="s2">numberstyle= \\tiny,
+</span><span class="s2">keywordstyle= \\color{ blue!70},commentstyle=\\color{red!50!green!50!blue!50},
+</span><span class="s2">frame=shadowbox,
+</span><span class="s2">breaklines=true,
+</span><span class="s2">rulesepcolor= \\color{ red!20!green!20!blue!20}
+</span><span class="s2">}
+</span><span class="s2">
+</span><span class="s2">[EXTRA]
+</span><span class="s2">&#34;</span>
+                 <span class="o">(</span><span class="s2">&#34;\\section{%s}&#34;</span> . <span class="s2">&#34;\\section*{%s}&#34;</span><span class="o">)</span>
+                 <span class="o">(</span><span class="s2">&#34;\\subsection{%s}&#34;</span> . <span class="s2">&#34;\\subsection*{%s}&#34;</span><span class="o">)</span>
+                 <span class="o">(</span><span class="s2">&#34;\\subsubsection{%s}&#34;</span> . <span class="s2">&#34;\\subsubsection*{%s}&#34;</span><span class="o">)</span>
+                 <span class="o">(</span><span class="s2">&#34;\\paragraph{%s}&#34;</span> . <span class="s2">&#34;\\paragraph*{%s}&#34;</span><span class="o">)</span>
+                 <span class="o">(</span><span class="s2">&#34;\\subparagraph{%s}&#34;</span> . <span class="s2">&#34;\\subparagraph*{%s}&#34;</span><span class="o">)))</span>
+
+<span class="o">(</span>setq org-latex-pdf-process
+        <span class="s1">&#39;(&#34;xelatex -interaction nonstopmode -output-directory %o %f&#34;
+</span><span class="s1">          ;; &#34;biber %b&#34; &#34;xelatex -interaction nonstopmode -output-directory %o %f&#34;
+</span><span class="s1">          &#34;bibtex %b&#34;
+</span><span class="s1">          &#34;xelatex -interaction nonstopmode -output-directory %o %f&#34;
+</span><span class="s1">          &#34;xelatex -interaction nonstopmode -output-directory %o %f&#34;))
+</span><span class="s1">
+</span><span class="s1">;; (defcustom org-preview-latex-process-alist
+</span><span class="s1">;;    (quote
+</span><span class="s1">;;     (
+</span><span class="s1">;;      (dvipng :programs
+</span><span class="s1">;;              (&#34;latex&#34; &#34;dvipng&#34;)
+</span><span class="s1">;;              :description &#34;dvi &gt; png&#34; :message &#34;you need to install the programs: latex and dvipng.&#34; :image-input-type &#34;dvi&#34; :image-output-type &#34;png&#34; :image-size-adjust
+</span><span class="s1">;;              (1.0 . 1.0)
+</span><span class="s1">;;              :latex-compiler
+</span><span class="s1">;;              (&#34;latex -interaction nonstopmode -output-directory %o %f&#34;)
+</span><span class="s1">;;              :image-converter
+</span><span class="s1">;;              (&#34;dvipng -fg %F -bg %B -D %D -T tight -o %O %f&#34;))
+</span><span class="s1">;;      (dvisvgm :programs
+</span><span class="s1">;;               (&#34;latex&#34; &#34;dvisvgm&#34;)
+</span><span class="s1">;;               :description &#34;xdv &gt; svg&#34; :message &#34;you need to install the programs: latex and dvisvgm.&#34; :use-xcolor t :image-input-type &#34;xdv&#34; :image-output-type &#34;svg&#34; :image-size-adjust
+</span><span class="s1">;;               (1.0 . 1.0)
+</span><span class="s1">;;               :latex-compiler
+</span><span class="s1">;;               (&#34;xelatex -no-pdf -interaction nonstopmode -output-directory %o %f&#34;)
+</span><span class="s1">;;               :image-converter
+</span><span class="s1">;;               (&#34;dvisvgm %f   %O&#34;))
+</span><span class="s1">;;      (imagemagick :programs
+</span><span class="s1">;;                   (&#34;latex&#34; &#34;convert&#34;)
+</span><span class="s1">;;                   :description &#34;pdf &gt; png&#34; :message &#34;you need to install the programs: latex and imagemagick.&#34; :use-xcolor t :image-input-type &#34;pdf&#34; :image-output-type &#34;png&#34; :image-size-adjust
+</span><span class="s1">;;                   (1.0 . 1.0)
+</span><span class="s1">;;                   :latex-compiler
+</span><span class="s1">;;                   (&#34;xelatex -interaction nonstopmode -output-directory %o %f&#34;)
+</span><span class="s1">;;                   :image-converter
+</span><span class="s1">;;                   (&#34;convert -density %D -trim -antialias %f -quality 100 %O&#34;)))))
+</span><span class="s1">
+</span><span class="s1">;; lualatex preview
+</span><span class="s1">
+</span><span class="s1">;; (setq org-preview-latex-process-alist
+</span><span class="s1">;;       (plist-put (alist-get &#39;</span>dvisvgm org-preview-latex-process-alist<span class="o">)</span>
+<span class="p">;;</span>                  :description <span class="s2">&#34;xdv &gt; svg&#34;</span> :message <span class="s2">&#34;you need to install the programs: latex and dvisvgm.&#34;</span> :use-xcolor t :image-input-type <span class="s2">&#34;xdv&#34;</span> :image-output-type <span class="s2">&#34;svg&#34;</span> :image-size-adjust
+<span class="p">;;</span>                  <span class="o">))</span>
+
+<span class="p">;;</span> <span class="o">(</span>setq org-preview-latex-process-alist
+<span class="p">;;</span>       <span class="o">(</span>plist-put <span class="o">(</span>alist-get <span class="s1">&#39;dvisvgm org-preview-latex-process-alist)
+</span><span class="s1">;;                  :latex-compiler
+</span><span class="s1">;;                  (&#34;xelatex -no-pdf -interaction nonstopmode -output-directory %o %f&#34;)))
+</span><span class="s1">
+</span><span class="s1">;; (push (cons &#39;</span>dvisvgm
+<span class="p">;;</span>             <span class="o">(</span>plist-put <span class="o">(</span>alist-get dvisvgm org-preview-latex-process-alist<span class="o">)</span>
+<span class="p">;;</span>                        :description <span class="s2">&#34;xdv &gt; svg&#34;</span> :message <span class="s2">&#34;you need to install the programs: latex and dvisvgm.&#34;</span> :use-xcolor t :image-input-type <span class="s2">&#34;xdv&#34;</span> :image-output-type <span class="s2">&#34;svg&#34;</span> :image-size-adjust
+<span class="p">;;</span>                        <span class="o">))</span>
+<span class="p">;;</span>       org-preview-latex-process-alist<span class="o">)</span>
+
+<span class="p">;;</span> <span class="o">(</span>push <span class="o">(</span>cons <span class="s1">&#39;dvisvgm
+</span><span class="s1">;;             (plist-put (alist-get dvisvgm org-preview-latex-process-alist)
+</span><span class="s1">;;                        :latex-compiler
+</span><span class="s1">;;                        (&#34;xelatex -no-pdf -interaction nonstopmode -output-directory %o %f&#34;)))
+</span><span class="s1">;;       org-preview-latex-process-alist)
+</span><span class="s1">
+</span><span class="s1">
+</span><span class="s1">;; (custom-set-variables
+</span><span class="s1">;;  ;; custom-set-variables was added by Custom.
+</span><span class="s1">;;  ;; If you edit it by hand, you could mess it up, so be careful.
+</span><span class="s1">;;  ;; Your init file should contain only one such instance.
+</span><span class="s1">;;  ;; If there is more than one, they won&#39;</span>t work right.
+<span class="p">;;</span>  <span class="err">&#39;</span><span class="o">(</span>org-preview-latex-process-alist
+<span class="p">;;</span>    <span class="o">(</span>quote
+<span class="p">;;</span>     <span class="o">((</span>dvipng :programs
+<span class="p">;;</span>              <span class="o">(</span><span class="s2">&#34;latex&#34;</span> <span class="s2">&#34;dvipng&#34;</span><span class="o">)</span>
+<span class="p">;;</span>              :description <span class="s2">&#34;dvi &gt; png&#34;</span> :message <span class="s2">&#34;you need to install the programs: latex and dvipng.&#34;</span> :image-input-type <span class="s2">&#34;dvi&#34;</span> :image-output-type <span class="s2">&#34;png&#34;</span> :image-size-adjust
+<span class="p">;;</span>              <span class="o">(</span><span class="m">1</span>.0 . <span class="m">1</span>.0<span class="o">)</span>
+<span class="p">;;</span>              :latex-compiler
+<span class="p">;;</span>              <span class="o">(</span><span class="s2">&#34;latex -interaction nonstopmode -output-directory %o %f&#34;</span><span class="o">)</span>
+<span class="p">;;</span>              :image-converter
+<span class="p">;;</span>              <span class="o">(</span><span class="s2">&#34;dvipng -fg %F -bg %B -D %D -T tight -o %O %f&#34;</span><span class="o">))</span>
+<span class="p">;;</span>      <span class="o">(</span>dvisvgm :programs
+<span class="p">;;</span>               <span class="o">(</span><span class="s2">&#34;latex&#34;</span> <span class="s2">&#34;dvisvgm&#34;</span><span class="o">)</span>
+<span class="p">;;</span>               :description <span class="s2">&#34;xdv &gt; svg&#34;</span> :message <span class="s2">&#34;you need to install the programs: latex and dvisvgm.&#34;</span> :use-xcolor t :image-input-type <span class="s2">&#34;xdv&#34;</span> :image-output-type <span class="s2">&#34;svg&#34;</span> :image-size-adjust
+<span class="p">;;</span>               <span class="o">(</span><span class="m">1</span>.0 . <span class="m">1</span>.0<span class="o">)</span>
+<span class="p">;;</span>               :latex-compiler
+<span class="p">;;</span>               <span class="o">(</span><span class="s2">&#34;xelatex -no-pdf -interaction nonstopmode -output-directory %o %f&#34;</span><span class="o">)</span>
+<span class="p">;;</span>               :image-converter
+<span class="p">;;</span>               <span class="o">(</span><span class="s2">&#34;dvisvgm %f -n -b min -c %S -o %O&#34;</span><span class="o">))</span>
+<span class="p">;;</span>      <span class="o">(</span>imagemagick :programs
+<span class="p">;;</span>                   <span class="o">(</span><span class="s2">&#34;latex&#34;</span> <span class="s2">&#34;convert&#34;</span><span class="o">)</span>
+<span class="p">;;</span>                   :description <span class="s2">&#34;pdf &gt; png&#34;</span> :message <span class="s2">&#34;you need to install the programs: latex and imagemagick.&#34;</span> :use-xcolor t :image-input-type <span class="s2">&#34;pdf&#34;</span> :image-output-type <span class="s2">&#34;png&#34;</span> :image-size-adjust
+<span class="p">;;</span>                   <span class="o">(</span><span class="m">1</span>.0 . <span class="m">1</span>.0<span class="o">)</span>
+<span class="p">;;</span>                   :latex-compiler
+<span class="p">;;</span>                   <span class="o">(</span><span class="s2">&#34;xelatex -interaction nonstopmode -output-directory %o %f&#34;</span><span class="o">)</span>
+<span class="p">;;</span>                   :image-converter
+<span class="p">;;</span>                   <span class="o">(</span><span class="s2">&#34;convert -density %D -trim -antialias %f -quality 100 %O&#34;</span><span class="o">)))))</span>
+<span class="p">;;</span> <span class="o">)</span>
+
+<span class="o">(</span>setq org-format-latex-options <span class="o">(</span>plist-put org-format-latex-options :html-scale <span class="m">1</span>.2<span class="o">))</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>在有数学公式的 org 文件中加入以下配置</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1">#+LATEX_CLASS: lengyue-org-book</span>
+
+<span class="c1">#+OPTIONS: tex:imagemagick</span>
+
+<span class="c1">#+LaTeX_HEADER: \usepackage[math-style=ISO]{unicode-math}</span>
+<span class="c1">#+LaTeX_HEADER: \setmathfont{xits-math.otf}</span>
+<span class="c1">#+LaTeX_HEADER: \usepackage[slantfont, boldfont]{xeCJK}</span>
+<span class="c1">#+LaTeX_HEADER: \usepackage{fontspec}</span>
+<span class="c1">#+LaTeX_HEADER: \setCJKmainfont{WenQuanYi Micro Hei}</span>
+<span class="c1">#+LaTeX_HEADER: \setmainfont{xits-math.otf}</span>
+<span class="c1">#+LaTeX_HEADER: \usepackage{extarrows}</span>
+
+<span class="c1">#+LaTeX_HEADER: \newtheorem{axiom}{\hskip 2em 公理}[section] %公理 axiom，独立编号</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem{de}{\hskip 2em 定义}[subsection] %定义 definition，简写为 de，独立编号</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem*{deus}{\hskip 2em 定义} %定义不编号 definition，简写为 deus</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem{thm}{\hskip 2em 定理}[subsection] %定理 theroem，简写为 thm，独立编号</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem*{thmus}{\hskip 2em 定理} %定理不编号 theroem，简写为 thmus</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem{lemma}[thm]{\hskip 2em 引理} %引理，记为 lemma，与 thm 共用编号</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem*{lemmaus}{\hskip 2em 引理} %引理不编号，记为 lemmaus</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem{cor}{\hskip 2em 推论}[thm] %推论 Corollary，简写为 col，在 thm 下面编号</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem{proposition}{\hskip 2em 性质}[subsection] %性质, 独立编号</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem{mingti}{\hskip 2em 命题}[subsection] %命题, 独立编号</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem{ex}{\emph{\hskip 2em 实例}}[thm] %example 獨立編號</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem*{exus}{\emph{\hskip 2em 实例}} %example 不编号</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem*{remark}{\bf{\hskip 2em 点评}} %点评不编号</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem{dde}{\hskip 2em 定义}  %定义</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem*{ddeus}{\hskip 2em 定义}</span>
+<span class="c1">#+LaTeX_HEADER: \renewcommand\qedsymbol{$\blacksquare$}</span>
+<span class="c1">#+LaTeX_HEADER: \renewcommand{\proofname}{\bf{\hskip 2em 证明}}</span>
+<span class="c1">#+LaTeX_HEADER: \newtheorem*{jd}{\emph{\hskip 2em 解答}}</span>
+<span class="c1">#+LaTeX_HEADER: \numberwithin{equation}{section}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>再次编译博客主站的时候，会在 posts 目录下出现 ltxpng 文件夹，将次文件夹 copy 到 output 文件夹 posts 下即可。</p>
+
+<p>用 imagemagick 编译的图片，比较小，尝试用 dvisvgm 进行编译，在 emacs 中可以成功，但是在博客目录下配置不起作用，待以后学习 lisp 之后再处理</p>
+
+<h2 id="emacs-管理-blog">Emacs 管理 blog</h2>
+
+<h3 id="用-blog-admin-做前端">用 <a href="https://github.com/CodeFalling/blog-admin">blog-admin</a> 做前端</h3>
+
+<p>参照文件说明配置，主要有以下几项</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="p">;;</span> <span class="o">(</span>add-to-load-path <span class="s2">&#34;~/.spacemacs.d/package/blog-admin&#34;</span><span class="o">)</span>
+
+<span class="o">(</span>require <span class="s1">&#39;blog-admin)
+</span><span class="s1">(spacemacs/set-leader-keys &#34;ob&#34; &#39;</span>blog-admin-start<span class="o">)</span>
+
+<span class="p">;;</span>  <span class="o">(</span>setq blog-admin-backend-type <span class="s1">&#39;org-page)
+</span><span class="s1">;;  (setq blog-admin-backend-path &#34;~/MEGA/Emacs-lengyue/Blog-lengyue/source&#34;)
+</span><span class="s1">;;  (setq blog-admin-backend-new-post-in-drafts t)
+</span><span class="s1">;;  (setq blog-admin-backend-new-post-with-same-name-dir t)
+</span><span class="s1">;;  (setq blog-admin-backend-org-page-drafts &#34;_drafts&#34;)
+</span><span class="s1">
+</span><span class="s1">;;  (setq op/repository-directory &#34;~/MEGA/Emacs-lengyue/Blog-lengyue/source&#34;)
+</span><span class="s1">;;  (setq op/site-domain &#34;http://lengyueyang.github.io&#34;)
+</span><span class="s1">;;  (setq op/personal-disqus-shortname &#34;lengyueyang&#34;)
+</span><span class="s1">
+</span><span class="s1">;; (setq blog-admin-backend-type &#39;</span>hexo<span class="o">)</span>
+<span class="p">;;</span> <span class="o">(</span>setq blog-admin-backend-path <span class="s2">&#34;~/MEGA/Emacs-lengyue/Blog-lengyue/&#34;</span><span class="o">)</span>
+<span class="p">;;</span> <span class="o">(</span>setq blog-admin-backend-new-post-in-drafts t<span class="o">)</span>
+<span class="p">;;</span> <span class="o">(</span>setq blog-admin-backend-new-post-with-same-name-dir t<span class="o">)</span>
+
+<span class="o">(</span>setq blog-admin-backend-type <span class="err">&#39;</span>nikola<span class="o">)</span>
+<span class="o">(</span>setq blog-admin-backend-path <span class="s2">&#34;~/MEGA/Emacs-lengyue/Blog-lengyue/Nikola&#34;</span><span class="o">)</span>
+<span class="o">(</span>setq blog-admin-backend-new-post-in-drafts t<span class="o">)</span>
+<span class="o">(</span>setq blog-admin-backend-nikola-executable <span class="s2">&#34;/usr/bin/nikola&#34;</span><span class="o">)</span> <span class="p">;;</span> path to nikola executable
+<span class="o">(</span>setq blog-admin-backend-nikola-config-file <span class="s2">&#34;conf.py&#34;</span><span class="o">)</span> <span class="p">;;</span> conf.py is default</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="配置-增加阅读更多和-commit">配置-增加阅读更多和 commit</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">setq</span> <span class="nv">hexo-dir</span> <span class="s">&#34;~/MEGA/Emacs-lengyue/Blog-lengyue/Nikola&#34;</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nb">defun</span> <span class="nv">lengyueyang/Nikola-publish</span> <span class="p">(</span><span class="nv">commit-msg</span><span class="p">)</span>
+  <span class="s">&#34;git add . &amp; git commit &amp; git push &amp; hexo d&#34;</span>
+  <span class="p">(</span><span class="nb">interactive</span> <span class="s">&#34;sInput commit message:&#34;</span><span class="p">)</span>
+  <span class="p">(</span><span class="nv">async-shell-command</span> <span class="p">(</span><span class="nf">format</span> <span class="s">&#34;cd %s ; git add . ; git commit -m \&#34;%s\&#34; ; nikola clean; nikola build; nikola clean; nikola build; nikola github_deploy&#34;</span>
+                               <span class="nv">hexo-dir</span>
+                               <span class="nv">commit-msg</span><span class="p">)))</span>
+
+<span class="p">(</span><span class="nb">defun</span> <span class="nv">lengyueyang/Nikola-org-add-read-more</span> <span class="p">()</span>
+  <span class="s">&#34;add &lt;!--more--&gt;&#34;</span>
+  <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
+  <span class="p">(</span><span class="nf">insert</span> <span class="s">&#34;{{{TEASER_END}}}&#34;</span><span class="p">))</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="快速插入知识产权">快速插入知识产权</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">defun</span> <span class="nv">lengyueyang/Nikola-license</span> <span class="p">()</span>
+  <span class="s">&#34;add &lt;!--license--&gt;&#34;</span>
+  <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
+  <span class="p">(</span><span class="nf">insert</span> <span class="s">&#34;&#34;&#34;
+</span><span class="s">* Creative Commons licensing
+</span><span class="s">#+BEGIN_QUOTE
+</span><span class="s">TITLE:  \\\\
+</span><span class="s">AUTHOR: lengyueyang \\\\
+</span><span class="s">DATE: \\\\
+</span><span class="s">UPDATED: \\\\
+</span><span class="s">LICENSE: This work is licensed under a [[http://creativecommons.org/licenses/by-sa/4.0/][Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License]], Commercial use is not, Any reprint, please indicate the reprint address and author.
+</span><span class="s">https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
+</span><span class="s">#+END_QUOTE
+</span><span class="s">&#34;&#34;&#34;</span><span class="p">))</span></code></pre></td></tr></table>
+</div>
+</div><div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:fn-1"><a href="https://streakycobra.github.io/posts/blogging-in-org-mode-with-nikola/">https://streakycobra.github.io/posts/blogging-in-org-mode-with-nikola/</a>
+ <a class="footnote-return" href="#fnref:fn-1"><sup>[return]</sup></a></li>
+<li id="fn:fn-2"><a href="https://punchagan.muse-amuse.in/blog/blogging-with-nikola-and-org-mode/">https://punchagan.muse-amuse.in/blog/blogging-with-nikola-and-org-mode/</a>
+ <a class="footnote-return" href="#fnref:fn-2"><sup>[return]</sup></a></li>
+<li id="fn:fn-3"><a href="http://mfcabrera.com/blog/this-site-runs-on-nikola.html">http://mfcabrera.com/blog/this-site-runs-on-nikola.html</a>
+ <a class="footnote-return" href="#fnref:fn-3"><sup>[return]</sup></a></li>
+<li id="fn:fn-4"><a href="https://qiwulun.github.io/posts/%E7%94%A8%20Nikola%20%E5%86%99%E5%8D%9A%E5%AE%A2.html">https://qiwulun.github.io/posts/%E7%94%A8%20Nikola%20%E5%86%99%E5%8D%9A%E5%AE%A2.html</a>
+ <a class="footnote-return" href="#fnref:fn-4"><sup>[return]</sup></a></li>
+</ol>
+</div>
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">lengyueyang</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+      2019-07-29
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    
+      <label class="qr-code-image" for="reward">
+        <img class="image" src="/path/to/your/wechat-qr-code.png">
+        <span>微信打赏</span>
+      </label>
+    
+      <label class="qr-code-image" for="reward">
+        <img class="image" src="/path/to/your/alipay-qr-code.png">
+        <span>支付宝打赏</span>
+      </label>
+  </div>
+</div>
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="https://lengyueyang.github.io/tags/wiki/">Wiki</a>
+          <a href="https://lengyueyang.github.io/tags/notes/">Notes</a>
+          <a href="https://lengyueyang.github.io/tags/blog/">blog</a>
+          <a href="https://lengyueyang.github.io/tags/nikola/">nikola</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/tools/org_mode/%E4%BD%BF%E7%94%A8org-mode%E5%81%9A%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">使用Org-mode做时间管理</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/data_science/math/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-%E8%A1%8C%E5%88%97%E5%BC%8F/">
+            <span class="next-text nav-default">高等代数-行列式</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+  
+  
+
+  
+  
+
+  
+
+  
+  
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "lengyueyang/blog_comment"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+  
+
+  
+
+  
+
+  <div class="disqus-comment">
+  <div class="disqus-button" id="load_disqus" onclick="load_disqus()">
+    显示 Disqus 评论
+  </div>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_config = function () {
+      this.page.url = "https://lengyueyang.github.io/post/tools/org_mode/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E6%9D%82%E8%AE%B0-%E4%BB%8E-hexo-%E5%88%B0-nikola/";
+    };
+    function load_disqus() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'lengyueyang';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+
+      $('#load_disqus').remove();
+    };
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+  
+  </div>
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:maoxiaowei1988@foxmail.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="linkedin"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="https://lengyueyang.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2015 -
+    2020
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        use ox-hugo and org-mode for blog
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script type="text/javascript">
+    AV.initialize("pNCzoJ8bHsF9aNglc4RfYcfo-gzGzoHsz", "Bvxlb5rmnSeOJkrVais6uRwr");
+  </script>
+
+  <script>
+    function showHitCount(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push($(this).attr("id").trim());
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var hits = item.get('hits');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(hits);
+          }
+          for (var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if (countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function (results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("hits");
+            counter.save(null, {
+              success: function (counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('hits'));
+              },
+              error: function (counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+             
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+             
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("hits", 1);
+            newcounter.save(null, {
+              success: function (newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('hits'));
+              },
+              error: function (newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function (error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function () {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        
+        addCount(Counter);
+      } else if ($('.post-link').length > 1) {
+        
+        showHitCount(Counter);
+      }
+    });
+  </script>
+
+
+
+  <script id="dsq-count-scr" src="//lengyueyang.disqus.com/count.js" async></script>
+
+
+
+
+
+
+
+</body>
+</html>
