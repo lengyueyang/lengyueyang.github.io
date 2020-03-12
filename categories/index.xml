@@ -6,28 +6,10 @@
     <description>Recent content in Categories on 深度识医</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>use ox-hugo and org-mode for blog</copyright>
-    <lastBuildDate>Thu, 05 Mar 2020 22:51:27 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jul 2019 00:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://lengyueyang.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Spacemacs</title>
-      <link>https://lengyueyang.github.io/categories/spacemacs/</link>
-      <pubDate>Thu, 05 Mar 2020 22:51:27 +0800</pubDate>
-      
-      <guid>https://lengyueyang.github.io/categories/spacemacs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tools</title>
-      <link>https://lengyueyang.github.io/categories/tools/</link>
-      <pubDate>Thu, 05 Mar 2020 22:51:27 +0800</pubDate>
-      
-      <guid>https://lengyueyang.github.io/categories/tools/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Org-mode</title>
@@ -80,6 +62,24 @@
       <pubDate>Tue, 19 Sep 2017 00:00:00 +0800</pubDate>
       
       <guid>https://lengyueyang.github.io/categories/%E7%BC%96%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spacemacs</title>
+      <link>https://lengyueyang.github.io/categories/spacemacs/</link>
+      <pubDate>Sun, 26 Mar 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/categories/spacemacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>https://lengyueyang.github.io/categories/tools/</link>
+      <pubDate>Sun, 26 Mar 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/categories/tools/</guid>
       <description></description>
     </item>
     

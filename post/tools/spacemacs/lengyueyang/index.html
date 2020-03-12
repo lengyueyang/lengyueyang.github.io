@@ -64,15 +64,16 @@
 <meta property="og:description" content="A literate programming style exposition of my Emacs configuration beyond my spacemacs configuration" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lengyueyang.github.io/post/tools/spacemacs/lengyueyang/" />
-<meta property="article:published_time" content="2020-03-05T22:51:27&#43;08:00"/>
-<meta property="article:modified_time" content="2020-03-05T22:51:27&#43;08:00"/><meta property="og:site_name" content="深度识医" />
+<meta property="article:published_time" content="2017-03-26T00:00:00&#43;08:00"/>
+<meta property="article:modified_time" content="2020-03-10T12:50:09&#43;08:00"/><meta property="og:site_name" content="深度识医" />
 
 <meta itemprop="name" content="Lengyueyang&#39;s Emacs configuration">
 <meta itemprop="description" content="A literate programming style exposition of my Emacs configuration beyond my spacemacs configuration">
 
 
-<meta itemprop="dateModified" content="2020-03-05T22:51:27&#43;08:00" />
-<meta itemprop="wordCount" content="10488">
+<meta itemprop="datePublished" content="2017-03-26T00:00:00&#43;08:00" />
+<meta itemprop="dateModified" content="2020-03-10T12:50:09&#43;08:00" />
+<meta itemprop="wordCount" content="10506">
 
 
 
@@ -542,15 +543,15 @@
 </div>
 
       <div class="post-meta">
-        <time datetime="2020-03-05" class="post-time">
-          2020-03-05
+        <time datetime="2017-03-26" class="post-time">
+          2017-03-26
         </time>
         <div class="post-category">
             <a href="https://lengyueyang.github.io/categories/spacemacs/"> Spacemacs </a>
             <a href="https://lengyueyang.github.io/categories/tools/"> Tools </a>
             
           </div>
-        <span class="more-meta"> 约 10488 字 </span>
+        <span class="more-meta"> 约 10506 字 </span>
           <span class="more-meta"> 预计阅读 21 分钟 </span>
 
         
@@ -667,7 +668,8 @@
 <li><a href="#bolg-admin"><span class="section-num">6.5.2</span> Bolg-admin</a></li>
 </ul></li>
 <li><a href="#use-emms-to-play-music"><span class="section-num">6.6</span> Use emms to play music</a></li>
-<li><a href="#embrace-evil-embrace"><span class="section-num">6.7</span> Embrace/evil-embrace</a></li>
+<li><a href="#use-fuo-to-play-web-music"><span class="section-num">6.7</span> Use fuo to play web music</a></li>
+<li><a href="#embrace-evil-embrace"><span class="section-num">6.8</span> Embrace/evil-embrace</a></li>
 </ul></li>
 <li><a href="#other-customization"><span class="section-num">7</span> Other customization</a>
 <ul>
@@ -1112,6 +1114,42 @@ same location code to <code>custom.el</code> at the same time.</p>
 </span><span class="lnt">150
 </span><span class="lnt">151
 </span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">use-package</span> <span class="nv">mu4e</span>
@@ -1124,13 +1162,11 @@ same location code to <code>custom.el</code> at the same time.</p>
   <span class="c1">;; show full addresses in view message (instead of just names)</span>
   <span class="p">(</span><span class="nb">setq</span> <span class="nv">mu4e-view-show-addresses</span> <span class="ss">&#39;t</span><span class="p">)</span>
   <span class="c1">;; Set up some common mu4e variables</span>
-  <span class="p">(</span><span class="nb">setq</span> <span class="nv">mu4e-maildir</span> <span class="s">&#34;~/MEGA/Emacs-lengyue/Data-collection/Mu4e&#34;</span>
-        <span class="nv">mu4e-trash-folder</span> <span class="s">&#34;/Gmail/Trash&#34;</span>
-        <span class="nv">mu4e-refile-folder</span> <span class="s">&#34;/Gmail/Archive&#34;</span>
-        <span class="nv">mu4e-sent-folder</span>   <span class="s">&#34;/Foxmail/Sent Messages&#34;</span>
-        <span class="nv">mu4e-drafts-folder</span> <span class="s">&#34;/Foxmail/Drafts&#34;</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb">setq</span> <span class="nv">mu4e-maildir</span> <span class="s">&#34;~/MEGA/Lengyue_data/Private_data/Mu4e&#34;</span><span class="p">)</span>
   <span class="p">(</span><span class="nb">use-package</span> <span class="nv">smtpmail</span><span class="p">)</span>
   <span class="p">(</span><span class="nb">setq</span>
+   <span class="nv">mu4e-sent-folder</span>   <span class="s">&#34;/Foxmail/Sent Messages&#34;</span>
+   <span class="nv">mu4e-drafts-folder</span> <span class="s">&#34;/Foxmail/Drafts&#34;</span>
    <span class="nv">send-mail-function</span> <span class="ss">&#39;smtpmail-send-it</span>
    <span class="nv">message-send-mail-function</span> <span class="ss">&#39;smtpmail-send-it</span>
    <span class="nv">smtpmail-auth-credentials</span>     <span class="p">(</span><span class="nf">expand-file-name</span> <span class="s">&#34;~/.authinfo&#34;</span><span class="p">)</span>
@@ -1138,6 +1174,50 @@ same location code to <code>custom.el</code> at the same time.</p>
    <span class="nv">smtpmail-smtp-service</span> <span class="mi">465</span>
    <span class="nv">smtpmail-stream-type</span> <span class="ss">&#39;ssl</span>
    <span class="p">)</span>
+
+
+  <span class="p">(</span><span class="nb">defvar</span> <span class="nv">my-mu4e-account-alist</span>
+    <span class="o">&#39;</span><span class="p">((</span><span class="s">&#34;Foxmail&#34;</span>
+       <span class="p">(</span><span class="nv">mu4e-sent-folder</span> <span class="s">&#34;/Foxmail/Sent Messages&#34;</span><span class="p">)</span>
+       <span class="p">(</span><span class="nv">mu4e-drafts-folder</span> <span class="s">&#34;/Foxmail/Drafts&#34;</span><span class="p">)</span>
+       <span class="p">(</span><span class="nv">send-mail-function</span> <span class="nv">smtpmail-send-it</span><span class="p">)</span>
+       <span class="p">(</span><span class="nv">message-send-mail-function</span> <span class="nv">smtpmail-send-it</span><span class="p">)</span>
+       <span class="p">(</span><span class="nv">smtpmail-auth-credentials</span>     <span class="p">(</span><span class="nf">expand-file-name</span> <span class="s">&#34;~/.authinfo&#34;</span><span class="p">))</span>
+       <span class="p">(</span><span class="nv">smtpmail-default-smtp-server</span> <span class="s">&#34;smtp.qq.com&#34;</span><span class="p">)</span>
+       <span class="p">(</span><span class="nv">smtpmail-smtp-server</span> <span class="s">&#34;smtp.qq.com&#34;</span><span class="p">)</span>
+       <span class="p">(</span><span class="nv">smtpmail-stream-type</span> <span class="nv">ssl</span><span class="p">)</span>
+       <span class="p">(</span><span class="nv">smtpmail-smtp-service</span> <span class="mi">465</span><span class="p">))</span>
+      <span class="p">(</span><span class="s">&#34;Gmail&#34;</span>
+       <span class="p">(</span><span class="nv">mu4e-sent-folder</span> <span class="s">&#34;/Gmail/[Gmail].Sent Mail&#34;</span><span class="p">)</span>
+       <span class="p">(</span><span class="nv">mu4e-drafts-folder</span> <span class="s">&#34;/Gmail/[Gmail].Drafts&#34;</span><span class="p">)</span>
+       <span class="p">(</span><span class="nv">send-mail-function</span> <span class="nv">smtpmail-send-it</span><span class="p">)</span>
+       <span class="p">(</span><span class="nv">user-mail-address</span> <span class="s">&#34;maoxiaoweihl@gmail.com&#34;</span><span class="p">)</span>
+       <span class="p">(</span><span class="nv">message-send-mail-function</span> <span class="nv">smtpmail-send-it</span><span class="p">)</span>
+       <span class="p">(</span><span class="nv">smtpmail-auth-credentials</span> <span class="p">(</span><span class="nf">expand-file-name</span> <span class="s">&#34;~/.authinfo&#34;</span><span class="p">))</span>
+       <span class="p">(</span><span class="nv">smtpmail-smtp-server</span> <span class="s">&#34;smtp.gmail.com&#34;</span><span class="p">)</span>
+       <span class="p">(</span><span class="nv">smtpmail-stream-type</span> <span class="nv">starttls</span><span class="p">)</span>
+       <span class="p">(</span><span class="nv">smtpmail-smtp-service</span> <span class="mi">587</span><span class="p">))))</span>
+
+  <span class="p">(</span><span class="nb">defun</span> <span class="nv">my-mu4e-set-account</span> <span class="p">()</span>
+    <span class="s">&#34;Set the account for composing a message.&#34;</span>
+    <span class="p">(</span><span class="nb">let*</span> <span class="p">((</span><span class="nv">account</span>
+            <span class="p">(</span><span class="nb">if</span> <span class="nv">mu4e-compose-parent-message</span>
+                <span class="p">(</span><span class="nb">let</span> <span class="p">((</span><span class="nv">maildir</span> <span class="p">(</span><span class="nv">mu4e-message-field</span> <span class="nv">mu4e-compose-parent-message</span> <span class="nb">:maildir</span><span class="p">)))</span>
+                  <span class="p">(</span><span class="nf">string-match</span> <span class="s">&#34;/\\(.*?\\)/&#34;</span> <span class="nv">maildir</span><span class="p">)</span>
+                  <span class="p">(</span><span class="nv">match-string</span> <span class="mi">1</span> <span class="nv">maildir</span><span class="p">))</span>
+              <span class="p">(</span><span class="nf">completing-read</span> <span class="p">(</span><span class="nf">format</span> <span class="s">&#34;Compose with account: (%s) &#34;</span>
+                                       <span class="p">(</span><span class="nf">mapconcat</span> <span class="nf">#&#39;</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nv">var</span><span class="p">)</span> <span class="p">(</span><span class="nf">car</span> <span class="nv">var</span><span class="p">))</span>
+                                                  <span class="nv">my-mu4e-account-alist</span> <span class="s">&#34;/&#34;</span><span class="p">))</span>
+                               <span class="p">(</span><span class="nf">mapcar</span> <span class="nf">#&#39;</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nv">var</span><span class="p">)</span> <span class="p">(</span><span class="nf">car</span> <span class="nv">var</span><span class="p">))</span> <span class="nv">my-mu4e-account-alist</span><span class="p">)</span>
+                               <span class="no">nil</span> <span class="no">t</span> <span class="no">nil</span> <span class="no">nil</span> <span class="p">(</span><span class="nv">caar</span> <span class="nv">my-mu4e-account-alist</span><span class="p">))))</span>
+           <span class="p">(</span><span class="nv">account-vars</span> <span class="p">(</span><span class="nf">cdr</span> <span class="p">(</span><span class="nf">assoc</span> <span class="nv">account</span> <span class="nv">my-mu4e-account-alist</span><span class="p">))))</span>
+      <span class="p">(</span><span class="nb">if</span> <span class="nv">account-vars</span>
+          <span class="p">(</span><span class="nf">mapc</span> <span class="nf">#&#39;</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nv">var</span><span class="p">)</span>
+                    <span class="p">(</span><span class="nf">set</span> <span class="p">(</span><span class="nf">car</span> <span class="nv">var</span><span class="p">)</span> <span class="p">(</span><span class="nv">cadr</span> <span class="nv">var</span><span class="p">)))</span>
+                <span class="nv">account-vars</span><span class="p">)</span>
+        <span class="p">(</span><span class="ne">error</span> <span class="s">&#34;No email account found&#34;</span><span class="p">))))</span>
+
+  <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;mu4e-compose-pre-hook</span> <span class="ss">&#39;my-mu4e-set-account</span><span class="p">)</span>
 
   <span class="c1">;; don&#39;t keep message buffers around</span>
   <span class="p">(</span><span class="nb">setq</span> <span class="nv">message-kill-buffer-on-exit</span> <span class="no">t</span><span class="p">)</span>
@@ -1253,12 +1333,6 @@ same location code to <code>custom.el</code> at the same time.</p>
   <span class="p">(</span><span class="nb">setq</span> <span class="nv">mu4e-sent-messages-behavior</span> <span class="ss">&#39;delete</span><span class="p">)</span>
 
   <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;message-mode-hook</span> <span class="ss">&#39;turn-on-flyspell</span> <span class="ss">&#39;append</span><span class="p">)</span>
-  <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;mu4e-view-mode-hook</span>
-            <span class="p">(</span><span class="nb">lambda</span><span class="p">()</span>
-              <span class="p">(</span><span class="nv">mu4e-view-toggle-hide-cited</span><span class="p">)</span>
-              <span class="c1">;; try to emulate some of the eww key-bindings</span>
-              <span class="p">(</span><span class="nv">local-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;&lt;tab&gt;&#34;</span><span class="p">)</span> <span class="ss">&#39;shr-next-link</span><span class="p">)</span>
-              <span class="p">(</span><span class="nv">local-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;&lt;backtab&gt;&#34;</span><span class="p">)</span> <span class="ss">&#39;shr-previous-link</span><span class="p">)))</span>
   <span class="p">(</span><span class="nb">setq</span> <span class="nv">mu4e-org-contacts-file</span>  <span class="s">&#34;~/MEGA/Lengyue_data/Wiki/Contacts.org&#34;</span><span class="p">)</span>
   <span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;mu4e-headers-actions</span>
                <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;org-contact-add&#34;</span> <span class="o">.</span> <span class="nv">mu4e-action-add-org-contact</span><span class="p">)</span> <span class="no">t</span><span class="p">)</span>
@@ -2253,118 +2327,58 @@ risk editing stale buffers.</p>
 <p>A complete agenda and capture configuration</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">  1
-</span><span class="lnt">  2
-</span><span class="lnt">  3
-</span><span class="lnt">  4
-</span><span class="lnt">  5
-</span><span class="lnt">  6
-</span><span class="lnt">  7
-</span><span class="lnt">  8
-</span><span class="lnt">  9
-</span><span class="lnt"> 10
-</span><span class="lnt"> 11
-</span><span class="lnt"> 12
-</span><span class="lnt"> 13
-</span><span class="lnt"> 14
-</span><span class="lnt"> 15
-</span><span class="lnt"> 16
-</span><span class="lnt"> 17
-</span><span class="lnt"> 18
-</span><span class="lnt"> 19
-</span><span class="lnt"> 20
-</span><span class="lnt"> 21
-</span><span class="lnt"> 22
-</span><span class="lnt"> 23
-</span><span class="lnt"> 24
-</span><span class="lnt"> 25
-</span><span class="lnt"> 26
-</span><span class="lnt"> 27
-</span><span class="lnt"> 28
-</span><span class="lnt"> 29
-</span><span class="lnt"> 30
-</span><span class="lnt"> 31
-</span><span class="lnt"> 32
-</span><span class="lnt"> 33
-</span><span class="lnt"> 34
-</span><span class="lnt"> 35
-</span><span class="lnt"> 36
-</span><span class="lnt"> 37
-</span><span class="lnt"> 38
-</span><span class="lnt"> 39
-</span><span class="lnt"> 40
-</span><span class="lnt"> 41
-</span><span class="lnt"> 42
-</span><span class="lnt"> 43
-</span><span class="lnt"> 44
-</span><span class="lnt"> 45
-</span><span class="lnt"> 46
-</span><span class="lnt"> 47
-</span><span class="lnt"> 48
-</span><span class="lnt"> 49
-</span><span class="lnt"> 50
-</span><span class="lnt"> 51
-</span><span class="lnt"> 52
-</span><span class="lnt"> 53
-</span><span class="lnt"> 54
-</span><span class="lnt"> 55
-</span><span class="lnt"> 56
-</span><span class="lnt"> 57
-</span><span class="lnt"> 58
-</span><span class="lnt"> 59
-</span><span class="lnt"> 60
-</span><span class="lnt"> 61
-</span><span class="lnt"> 62
-</span><span class="lnt"> 63
-</span><span class="lnt"> 64
-</span><span class="lnt"> 65
-</span><span class="lnt"> 66
-</span><span class="lnt"> 67
-</span><span class="lnt"> 68
-</span><span class="lnt"> 69
-</span><span class="lnt"> 70
-</span><span class="lnt"> 71
-</span><span class="lnt"> 72
-</span><span class="lnt"> 73
-</span><span class="lnt"> 74
-</span><span class="lnt"> 75
-</span><span class="lnt"> 76
-</span><span class="lnt"> 77
-</span><span class="lnt"> 78
-</span><span class="lnt"> 79
-</span><span class="lnt"> 80
-</span><span class="lnt"> 81
-</span><span class="lnt"> 82
-</span><span class="lnt"> 83
-</span><span class="lnt"> 84
-</span><span class="lnt"> 85
-</span><span class="lnt"> 86
-</span><span class="lnt"> 87
-</span><span class="lnt"> 88
-</span><span class="lnt"> 89
-</span><span class="lnt"> 90
-</span><span class="lnt"> 91
-</span><span class="lnt"> 92
-</span><span class="lnt"> 93
-</span><span class="lnt"> 94
-</span><span class="lnt"> 95
-</span><span class="lnt"> 96
-</span><span class="lnt"> 97
-</span><span class="lnt"> 98
-</span><span class="lnt"> 99
-</span><span class="lnt">100
-</span><span class="lnt">101
-</span><span class="lnt">102
-</span><span class="lnt">103
-</span><span class="lnt">104
-</span><span class="lnt">105
-</span><span class="lnt">106
-</span><span class="lnt">107
-</span><span class="lnt">108
-</span><span class="lnt">109
-</span><span class="lnt">110
-</span><span class="lnt">111
-</span><span class="lnt">112
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nv">eval-after-load</span> <span class="ss">&#39;org</span>
@@ -2376,50 +2390,38 @@ risk editing stale buffers.</p>
                                     <span class="c1">;; &#34;~/MEGA/Baidu-lengyue/Personal&#34;</span>
                                    <span class="p">)))</span>
 
-     <span class="p">(</span><span class="nb">setq</span> <span class="nv">org-todo-keywords</span>
-           <span class="p">(</span><span class="nb">quote</span> <span class="p">((</span><span class="nv">sequence</span> <span class="s">&#34;TODO(t)&#34;</span> <span class="s">&#34;NEXT(n)&#34;</span> <span class="s">&#34;|&#34;</span> <span class="s">&#34;DONE(d)&#34;</span><span class="p">)</span>
-                   <span class="p">(</span><span class="nv">sequence</span> <span class="s">&#34;WAITING(w@/!)&#34;</span> <span class="s">&#34;HOLD(h@/!)&#34;</span> <span class="s">&#34;|&#34;</span> <span class="s">&#34;CANCELLED(c@/!)&#34;</span> <span class="s">&#34;PHONE&#34;</span> <span class="s">&#34;MEETING&#34;</span><span class="p">))))</span>
-
-     <span class="p">(</span><span class="nb">setq</span> <span class="nv">org-todo-keyword-faces</span>
-           <span class="p">(</span><span class="nb">quote</span> <span class="p">((</span><span class="s">&#34;TODO&#34;</span> <span class="nb">:foreground</span> <span class="s">&#34;red&#34;</span> <span class="nb">:weight</span> <span class="nv">bold</span><span class="p">)</span>
-                   <span class="p">(</span><span class="s">&#34;NEXT&#34;</span> <span class="nb">:foreground</span> <span class="s">&#34;blue&#34;</span> <span class="nb">:weight</span> <span class="nv">bold</span><span class="p">)</span>
-                   <span class="p">(</span><span class="s">&#34;DONE&#34;</span> <span class="nb">:foreground</span> <span class="s">&#34;forest green&#34;</span> <span class="nb">:weight</span> <span class="nv">bold</span><span class="p">)</span>
-                   <span class="p">(</span><span class="s">&#34;WAITING&#34;</span> <span class="nb">:foreground</span> <span class="s">&#34;orange&#34;</span> <span class="nb">:weight</span> <span class="nv">bold</span><span class="p">)</span>
-                   <span class="p">(</span><span class="s">&#34;HOLD&#34;</span> <span class="nb">:foreground</span> <span class="s">&#34;magenta&#34;</span> <span class="nb">:weight</span> <span class="nv">bold</span><span class="p">)</span>
-                   <span class="p">(</span><span class="s">&#34;CANCELLED&#34;</span> <span class="nb">:foreground</span> <span class="s">&#34;forest green&#34;</span> <span class="nb">:weight</span> <span class="nv">bold</span><span class="p">)</span>
-                   <span class="p">(</span><span class="s">&#34;MEETING&#34;</span> <span class="nb">:foreground</span> <span class="s">&#34;forest green&#34;</span> <span class="nb">:weight</span> <span class="nv">bold</span><span class="p">)</span>
-                   <span class="p">(</span><span class="s">&#34;PHONE&#34;</span> <span class="nb">:foreground</span> <span class="s">&#34;forest green&#34;</span> <span class="nb">:weight</span> <span class="nv">bold</span><span class="p">))))</span>
-
      <span class="c1">;; todo-(next/waitting)-done/cancelled</span>
      <span class="c1">;; todo-hode-todo/next/cancelled</span>
      <span class="p">(</span><span class="nb">setq</span> <span class="nv">org-todo-keywords</span>
-           <span class="p">(</span><span class="nb">quote</span> <span class="p">((</span><span class="nv">sequence</span> <span class="s">&#34;TODO(t)&#34;</span> <span class="s">&#34;NEXT(n)&#34;</span> <span class="s">&#34;|&#34;</span> <span class="s">&#34;CANCELLED(c@/!)&#34;</span> <span class="s">&#34;DONE(d!/!)&#34;</span><span class="p">)</span>
-                   <span class="p">(</span><span class="nv">sequence</span> <span class="s">&#34;SOMEDAY(s)&#34;</span> <span class="s">&#34;|&#34;</span> <span class="s">&#34;WAITING(w@/!)&#34;</span><span class="p">)</span>
-                   <span class="p">(</span><span class="nv">sequence</span> <span class="s">&#34;MEETING(m)&#34;</span> <span class="s">&#34;PHONE(p)&#34;</span><span class="p">)</span>
+           <span class="p">(</span><span class="nb">quote</span> <span class="p">(</span>
+                   <span class="p">(</span><span class="nv">sequence</span> <span class="s">&#34;TODO(t)&#34;</span> <span class="s">&#34;NEXT(n)&#34;</span> <span class="s">&#34;ONGOING(o)&#34;</span> <span class="s">&#34;|&#34;</span> <span class="s">&#34;DONE(d!/!)&#34;</span><span class="p">)</span>
+                   <span class="p">(</span><span class="nv">sequence</span> <span class="s">&#34;SOMEDAY(s)&#34;</span> <span class="s">&#34;|&#34;</span> <span class="s">&#34;WAITING(w@/!)&#34;</span> <span class="s">&#34;CANCELLED(c@/!)&#34;</span>  <span class="p">)</span>
                    <span class="p">(</span><span class="nv">sequence</span> <span class="s">&#34;REPORT(r)&#34;</span> <span class="s">&#34;BUG(b)&#34;</span> <span class="s">&#34;KNOWNCAUSE(k)&#34;</span> <span class="s">&#34;|&#34;</span> <span class="s">&#34;FIXED(f)&#34;</span><span class="p">)</span>
                    <span class="p">)))</span>
 
      <span class="p">(</span><span class="nb">setq</span> <span class="nv">org-todo-keyword-faces</span>
            <span class="p">(</span><span class="nb">quote</span> <span class="p">(</span>
-                   <span class="p">(</span><span class="s">&#34;TODO&#34;</span> <span class="nb">:foreground</span> <span class="s">&#34;red&#34;</span> <span class="nb">:weight</span> <span class="nv">bold</span><span class="p">)</span>
+                   <span class="c1">;; (&#34;TODO&#34; :foreground &#34;red&#34; :weight bold)</span>
                    <span class="p">(</span><span class="s">&#34;NEXT&#34;</span> <span class="nb">:foreground</span> <span class="s">&#34;blue&#34;</span> <span class="nb">:weight</span> <span class="nv">bold</span><span class="p">)</span>
                    <span class="p">(</span><span class="s">&#34;DONE&#34;</span> <span class="nb">:foreground</span> <span class="s">&#34;forest green&#34;</span> <span class="nb">:weight</span> <span class="nv">bold</span><span class="p">)</span>
                    <span class="p">(</span><span class="s">&#34;CANCELLED&#34;</span> <span class="nb">:foreground</span> <span class="s">&#34;forest green&#34;</span> <span class="nb">:weight</span> <span class="nv">bold</span><span class="p">)</span>
-                   <span class="p">(</span><span class="s">&#34;SOMEDAY&#34;</span> <span class="nb">:foreground</span> <span class="s">&#34;magenta&#34;</span> <span class="nb">:weight</span> <span class="nv">bold</span><span class="p">)</span>
                    <span class="p">(</span><span class="s">&#34;WAITING&#34;</span> <span class="nb">:foreground</span> <span class="s">&#34;orange&#34;</span> <span class="nb">:weight</span> <span class="nv">bold</span><span class="p">)</span>
-                   <span class="p">(</span><span class="s">&#34;MEETING&#34;</span> <span class="nb">:foreground</span> <span class="s">&#34;forest green&#34;</span> <span class="nb">:weight</span> <span class="nv">bold</span><span class="p">)</span>
-                   <span class="p">(</span><span class="s">&#34;PHONE&#34;</span> <span class="nb">:foreground</span> <span class="s">&#34;forest green&#34;</span> <span class="nb">:weight</span> <span class="nv">bold</span><span class="p">)</span>
+                   <span class="p">(</span><span class="s">&#34;SOMEDAY&#34;</span> <span class="nb">:foreground</span> <span class="s">&#34;magenta&#34;</span> <span class="nb">:weight</span> <span class="nv">bold</span><span class="p">)</span>
                    <span class="p">)))</span>
 
      <span class="p">(</span><span class="nb">setq</span> <span class="nv">org-refile-targets</span>
-           <span class="o">&#39;</span><span class="p">((</span><span class="s">&#34;~/MEGA/Lengyue_data/GTD/GTD.org&#34;</span> <span class="nb">:maxlevel</span> <span class="o">.</span> <span class="mi">1</span><span class="p">)))</span>
+           <span class="o">&#39;</span><span class="p">((</span><span class="s">&#34;~/MEGA/Lengyue_data/GTD/GTD.org&#34;</span> <span class="nb">:maxlevel</span> <span class="o">.</span> <span class="mi">2</span><span class="p">)</span>
+             <span class="p">(</span><span class="s">&#34;~/MEGA/Lengyue_data/GTD/INBOX.org&#34;</span> <span class="nb">:maxlevel</span> <span class="o">.</span> <span class="mi">1</span><span class="p">)</span>
+             <span class="p">(</span><span class="s">&#34;~/MEGA/Lengyue_data/Wiki/Elfeed.org&#34;</span> <span class="nb">:maxlevel</span> <span class="o">.</span> <span class="mi">2</span><span class="p">)</span>
+             <span class="p">))</span>
 
      <span class="p">(</span><span class="nb">setq</span> <span class="nv">org-log-into-drawer</span> <span class="no">t</span><span class="p">)</span>
      <span class="p">(</span><span class="nb">setq</span> <span class="nv">org-agenda-custom-commands</span>
         <span class="o">&#39;</span><span class="p">(</span>
           <span class="p">(</span><span class="s">&#34;b&#34;</span> <span class="s">&#34;Blog idea&#34;</span> <span class="nv">tags-todo</span> <span class="s">&#34;BLOG&#34;</span><span class="p">)</span>
           <span class="p">(</span><span class="s">&#34;s&#34;</span> <span class="s">&#34;Someday&#34;</span> <span class="nv">todo</span> <span class="s">&#34;SOMEDAY&#34;</span><span class="p">)</span>
-          <span class="p">(</span><span class="s">&#34;S&#34;</span> <span class="s">&#34;Started&#34;</span> <span class="nv">todo</span> <span class="s">&#34;STARTED&#34;</span><span class="p">)</span>
+          <span class="p">(</span><span class="s">&#34;n&#34;</span> <span class="s">&#34;Next&#34;</span> <span class="nv">todo</span> <span class="s">&#34;NEXT&#34;</span><span class="p">)</span>
+          <span class="p">(</span><span class="s">&#34;o&#34;</span> <span class="s">&#34;Ongoing&#34;</span> <span class="nv">todo</span> <span class="s">&#34;ONGOING&#34;</span><span class="p">)</span>
           <span class="p">(</span><span class="s">&#34;w&#34;</span> <span class="s">&#34;Waiting&#34;</span> <span class="nv">todo</span> <span class="s">&#34;WAITING&#34;</span><span class="p">)</span>
           <span class="p">(</span><span class="s">&#34;d&#34;</span> <span class="o">.</span> <span class="s">&#34; 任务安排 &#34;</span><span class="p">)</span>
           <span class="p">(</span><span class="s">&#34;da&#34;</span> <span class="s">&#34; 重要且紧急的任务 &#34;</span> <span class="nv">tags-todo</span> <span class="s">&#34;+PRIORITY=\&#34;A\&#34;&#34;</span><span class="p">)</span>
@@ -2427,58 +2429,10 @@ risk editing stale buffers.</p>
           <span class="p">(</span><span class="s">&#34;dc&#34;</span> <span class="s">&#34; 不重要且紧急的任务 &#34;</span> <span class="nv">tags-todo</span> <span class="s">&#34;+PRIORITY=\&#34;C\&#34;&#34;</span><span class="p">)</span>
           <span class="p">(</span><span class="s">&#34;p&#34;</span> <span class="o">.</span> <span class="s">&#34; 项目安排 &#34;</span><span class="p">)</span>
           <span class="p">(</span><span class="s">&#34;W&#34;</span> <span class="s">&#34;Weekly Review&#34;</span> <span class="nv">tags-todo</span> <span class="s">&#34;PROJECT&#34;</span><span class="p">)</span>
-            <span class="p">))</span>
+          <span class="p">))</span>
+
      <span class="p">)</span>
-  <span class="p">)</span>
-
-<span class="c1">;; (defun org-summary-todo (n-done n-not-done)</span>
-<span class="c1">;;   &#34;Switch entry to DONE when all subentries are done, to TODO otherwise.&#34;</span>
-<span class="c1">;;   (let (org-log-done org-log-states)  ; turn off logging</span>
-<span class="c1">;;     (org-todo (if (= n-not-done 0) &#34;DONE&#34; &#34;TODO&#34;))))</span>
-
-<span class="c1">;; (add-hook&#39;org-after-todo-statistics-hook &#39;org-summary-todo)</span>
-
-<span class="c1">;;   ;;used by org-clock-sum-today-by-tags</span>
-<span class="c1">;; (defun filter-by-tags ()</span>
-<span class="c1">;;     (let ((head-tags (org-get-tags-at)))</span>
-<span class="c1">;;       (member current-tag head-tags)))</span>
-
-
-<span class="c1">;; (defun org-clock-sum-today-by-tags (timerange &amp;optional tstart tend noinsert)</span>
-<span class="c1">;;     (interactive &#34;P&#34;)</span>
-<span class="c1">;;     (let* ((timerange-numeric-value (prefix-numeric-value timerange))</span>
-<span class="c1">;;            (files (org-add-archive-files (org-agenda-files)))</span>
-<span class="c1">;;            (include-tags&#39;(&#34;PROG&#34; &#34;EMACS&#34; &#34;DREAM&#34; &#34;WRITING&#34; &#34;MEETING&#34; &#34;BLOG&#34; &#34;LIFE&#34; &#34;PROJECT&#34;))</span>
-<span class="c1">;;            (tags-time-alist (mapcar (lambda (tag) `(,tag . 0)) include-tags))</span>
-<span class="c1">;;            (output-string &#34;&#34;)</span>
-<span class="c1">;;            (tstart (or tstart</span>
-<span class="c1">;;                        (and timerange (equal timerange-numeric-value 4) (- (org-time-today) 86400))</span>
-<span class="c1">;;                        (and timerange (equal timerange-numeric-value 16) (org-read-date nil nil nil &#34;Start Date/Time:&#34;))</span>
-<span class="c1">;;                        (org-time-today)))</span>
-<span class="c1">;;            (tend (or tend</span>
-<span class="c1">;;                      (and timerange (equal timerange-numeric-value 16) (org-read-date nil nil nil &#34;End Date/Time:&#34;))</span>
-<span class="c1">;;                      (+ tstart 86400)))</span>
-<span class="c1">;;            h m file item prompt donesomething)</span>
-<span class="c1">;;       (while (setq file (pop files))</span>
-<span class="c1">;;         (setq org-agenda-buffer (if (file-exists-p file)</span>
-<span class="c1">;;                                     (org-get-agenda-file-buffer file)</span>
-<span class="c1">;;                                   (error &#34;No such file %s&#34; file)))</span>
-<span class="c1">;;         (with-current-buffer org-agenda-buffer</span>
-<span class="c1">;;           (dolist (current-tag include-tags)</span>
-<span class="c1">;;             (org-clock-sum tstart tend&#39;filter-by-tags)</span>
-<span class="c1">;;             (setcdr (assoc current-tag tags-time-alist)</span>
-<span class="c1">;;                     (+ org-clock-file-total-minutes (cdr (assoc current-tag tags-time-alist)))))))</span>
-<span class="c1">;;       (while (setq item (pop tags-time-alist))</span>
-<span class="c1">;;         (unless (equal (cdr item) 0)</span>
-<span class="c1">;;           (setq donesomething t)</span>
-<span class="c1">;;           (setq h (/ (cdr item) 60)</span>
-<span class="c1">;;                 m (- (cdr item) (* 60 h)))</span>
-<span class="c1">;;           (setq output-string (concat output-string (format &#34;[-%s-] %.2d:%.2d\n&#34; (car item) h m)))))</span>
-<span class="c1">;;       (unless donesomething</span>
-<span class="c1">;;         (setq output-string (concat output-string &#34;[-Nothing-] Done nothing!!!\n&#34;)))</span>
-<span class="c1">;;       (unless noinsert</span>
-<span class="c1">;;         (insert output-string))</span>
-<span class="c1">;;       output-string))</span></code></pre></td></tr></table>
+  <span class="p">)</span></code></pre></td></tr></table>
 </div>
 </div>
 <h4 id="org-capture"><span class="section-num">4.11.2</span> Org-capture</h4>
@@ -2520,19 +2474,34 @@ risk editing stale buffers.</p>
 </span><span class="lnt">34
 </span><span class="lnt">35
 </span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="c1">;; (define-key global-map (kbd &#34;&lt;f9&gt;&#34;) &#39;org-capture)</span>
 <span class="p">(</span><span class="nv">spacemacs/set-leader-keys</span> <span class="s">&#34;oc&#34;</span> <span class="ss">&#39;org-capture</span><span class="p">)</span>
 
 <span class="p">(</span><span class="nb">setq</span> <span class="nv">org-capture-templates</span>
-      <span class="o">&#39;</span><span class="p">((</span><span class="s">&#34;b&#34;</span> <span class="s">&#34;Blog Ideas&#34;</span> <span class="nv">entry</span> <span class="p">(</span><span class="nv">file+headline</span> <span class="s">&#34;~/MEGA/Lengyue_data/Wiki/Notes.org&#34;</span> <span class="s">&#34;Blog Ideas&#34;</span><span class="p">)</span>
+      <span class="o">&#39;</span><span class="p">(</span>
+        <span class="p">(</span><span class="s">&#34;i&#34;</span> <span class="s">&#34;Inbox&#34;</span> <span class="nv">entry</span> <span class="p">(</span><span class="nv">file+headline</span> <span class="s">&#34;~/MEGA/Lengyue_data/GTD/INBOX.org&#34;</span> <span class="s">&#34;Inbox&#34;</span><span class="p">)</span>
          <span class="s">&#34;* TODO %?\n%i%U&#34;</span>
          <span class="nb">:empty-lines</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="p">(</span><span class="s">&#34;c&#34;</span> <span class="s">&#34;Contacts&#34;</span> <span class="nv">entry</span> <span class="p">(</span><span class="nv">file</span> <span class="s">&#34;~/MEGA/Lengyue_data/Wiki/Contacts.org&#34;</span><span class="p">)</span>
-         <span class="s">&#34;* %(org-contacts-template-name)
+        <span class="p">(</span><span class="s">&#34;m&#34;</span> <span class="s">&#34;Myself Tasks&#34;</span> <span class="nv">entry</span> <span class="p">(</span><span class="nv">file+headline</span> <span class="s">&#34;~/MEGA/Lengyue_data/GTD/GTD.org&#34;</span> <span class="s">&#34;Myself Tasks&#34;</span><span class="p">)</span>
+         <span class="s">&#34;* TODO %?\n%i%U&#34;</span>
+         <span class="nb">:empty-lines</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="p">(</span><span class="s">&#34;o&#34;</span> <span class="s">&#34;Work Related Tasks&#34;</span> <span class="nv">entry</span> <span class="p">(</span><span class="nv">file+headline</span> <span class="s">&#34;~/MEGA/Lengyue_data/GTD/GTD.org&#34;</span> <span class="s">&#34;Work Related Tasks&#34;</span><span class="p">)</span>
+         <span class="s">&#34;* TODO %?\n%i%U&#34;</span>
+         <span class="nb">:empty-lines</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="p">(</span><span class="s">&#34;c&#34;</span> <span class="s">&#34;Contacts&#34;</span> <span class="nv">entry</span> <span class="p">(</span><span class="nv">file+headline</span> <span class="s">&#34;~/MEGA/Lengyue_data/Wiki/Contacts.org&#34;</span> <span class="s">&#34;Temporary&#34;</span><span class="p">)</span>
+         <span class="s">&#34;* %?
 </span><span class="s">:PROPERTIES:
-</span><span class="s">:EMAIL: %(org-contacts-template-email)
+</span><span class="s">:EMAIL:
 </span><span class="s">:PHONE:
 </span><span class="s">:ALIAS:
 </span><span class="s">:NICKNAME:
@@ -2541,22 +2510,23 @@ risk editing stale buffers.</p>
 </span><span class="s">:NOTE:
 </span><span class="s">:ADDRESS:
 </span><span class="s">:BIRTHDAY:
-</span><span class="s">:END:&#34;</span><span class="p">)</span>
-        <span class="p">(</span><span class="s">&#34;s&#34;</span> <span class="s">&#34;Someday/Maybe&#34;</span> <span class="nv">entry</span> <span class="p">(</span><span class="nv">file+headline</span> <span class="s">&#34;~/MEGA/Lengyue_data/Wiki/Notes.org&#34;</span> <span class="s">&#34;Someday/Maybe&#34;</span><span class="p">)</span>
+</span><span class="s">:END:&#34;</span>
+         <span class="nb">:empty-lines</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="p">(</span><span class="s">&#34;b&#34;</span> <span class="s">&#34;Blog Ideas&#34;</span> <span class="nv">entry</span> <span class="p">(</span><span class="nv">file+headline</span> <span class="s">&#34;~/MEGA/Lengyue_data/GTD/INBOX.org&#34;</span> <span class="s">&#34;Blog Ideas&#34;</span><span class="p">)</span>
+         <span class="s">&#34;* TODO %?\n%i%U&#34;</span>
+         <span class="nb">:empty-lines</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="p">(</span><span class="s">&#34;j&#34;</span> <span class="s">&#34;Journal entry&#34;</span> <span class="nv">entry</span> <span class="p">(</span><span class="nb">function</span> <span class="nv">org-journal-find-location</span><span class="p">)</span>
+         <span class="s">&#34;** %(format-time-string org-journal-time-format)^{}\n%i%?&#34;</span>
+         <span class="nb">:empty-lines</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="p">(</span><span class="s">&#34;s&#34;</span> <span class="s">&#34;Someday&#34;</span> <span class="nv">entry</span> <span class="p">(</span><span class="nv">file+headline</span> <span class="s">&#34;~/MEGA/Lengyue_data/GTD/INBOX.org&#34;</span> <span class="s">&#34;Someday&#34;</span><span class="p">)</span>
          <span class="s">&#34;* SOMEDAY %?\n%i%U&#34;</span>
          <span class="nb">:empty-lines</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="p">(</span><span class="s">&#34;m&#34;</span> <span class="s">&#34;Myself Tasks&#34;</span> <span class="nv">entry</span> <span class="p">(</span><span class="nv">file+headline</span> <span class="s">&#34;~/MEGA/Lengyue_data/GTD-lengyue/GTD-lengyue.org&#34;</span> <span class="s">&#34;Myself Tasks&#34;</span><span class="p">)</span>
+        <span class="p">(</span><span class="s">&#34;w&#34;</span> <span class="s">&#34;Website bookmark&#34;</span> <span class="nv">entry</span> <span class="p">(</span><span class="nv">file+headline</span> <span class="s">&#34;~/MEGA/Lengyue_data/GTD/INBOX.org&#34;</span> <span class="s">&#34;Bookmark&#34;</span><span class="p">)</span>
+         <span class="s">&#34;* %a :website:\n %? \n%U \n\n%:initial&#34;</span>
+         <span class="nb">:empty-lines</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="p">(</span><span class="s">&#34;p&#34;</span> <span class="s">&#34;Projects&#34;</span> <span class="nv">entry</span> <span class="p">(</span><span class="nv">file+headline</span> <span class="s">&#34;~/MEGA/Lengyue_data/GTD/INBOX.org&#34;</span> <span class="s">&#34;Projects&#34;</span><span class="p">)</span>
          <span class="s">&#34;* TODO %?\n%i%U&#34;</span>
          <span class="nb">:empty-lines</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="p">(</span><span class="s">&#34;w&#34;</span> <span class="s">&#34;Work Related Tasks&#34;</span> <span class="nv">entry</span> <span class="p">(</span><span class="nv">file+headline</span> <span class="s">&#34;~/MEGA/Lengyue_data/GTD-lengyue/GTD-lengyue.org&#34;</span> <span class="s">&#34;Work Related Tasks&#34;</span><span class="p">)</span>
-         <span class="s">&#34;* TODO %?\n%i%U&#34;</span>
-         <span class="nb">:empty-lines</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="p">(</span><span class="s">&#34;e&#34;</span> <span class="s">&#34;Web site&#34;</span> <span class="nv">entry</span> <span class="p">(</span><span class="nv">file</span> <span class="s">&#34;~/MEGA/Lengyue_data/Wiki/Bookmark.org&#34;</span><span class="p">)</span>
-         <span class="s">&#34;* %c :website:\n%?\n%U %:initial&#34;</span>
-         <span class="nb">:empty-lines</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="c1">;; (&#34;j&#34; &#34;Journal entry&#34; entry (function org-journal-find-location)</span>
-        <span class="c1">;;  &#34;** %(format-time-string org-journal-time-format)^{}\n%i%?&#34;</span>
-        <span class="c1">;;  :empty-lines 1)</span>
         <span class="p">))</span></code></pre></td></tr></table>
 </div>
 </div>
@@ -2642,18 +2612,12 @@ risk editing stale buffers.</p>
 </span><span class="lnt">62
 </span><span class="lnt">63
 </span><span class="lnt">64
-</span><span class="lnt">65
-</span><span class="lnt">66
-</span><span class="lnt">67
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">setq</span> <span class="nv">org-confirm-babel-evaluate</span> <span class="no">nil</span><span class="p">)</span>
 
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">org-plantuml-jar-path</span>
-      <span class="p">(</span><span class="nf">expand-file-name</span> <span class="s">&#34;~/.spacemacs.d/package/plantuml.jar&#34;</span><span class="p">))</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">org-ditta-jar-path</span>
-      <span class="p">(</span><span class="nf">expand-file-name</span> <span class="s">&#34;~/.spacemacs.d/package/ditaa.jar&#34;</span><span class="p">))</span>
-
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">plantuml-default-exec-mode</span> <span class="ss">&#39;jar</span><span class="p">)</span>
+<span class="c1">;; (setq plantuml-default-exec-mode &#39;executable)</span>
 
 <span class="p">(</span><span class="nv">eval-after-load</span> <span class="ss">&#39;org</span>
   <span class="o">&#39;</span><span class="p">(</span><span class="nb">progn</span>
@@ -3372,6 +3336,45 @@ risk editing stale buffers.</p>
 </span><span class="lnt">127
 </span><span class="lnt">128
 </span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">defun</span> <span class="nv">lengyueyang//org-archive-tasks</span> <span class="p">(</span><span class="nv">prefix</span><span class="p">)</span>
@@ -3407,6 +3410,42 @@ risk editing stale buffers.</p>
 <span class="c1">;; * A</span>
 <span class="c1">;; ** AA</span>
 <span class="c1">;; *** AAA</span>
+
+
+<span class="p">(</span><span class="nb">defun</span> <span class="nv">org-get-local-archive-location</span> <span class="p">()</span>
+  <span class="s">&#34;Get the archive location applicable at point.&#34;</span>
+  <span class="p">(</span><span class="nb">let</span> <span class="p">((</span><span class="nv">re</span> <span class="s">&#34;^[ \t]*#\\+ARCHIVE:[ \t]+\\(\\S-.*\\S-\\)[ \t]*$&#34;</span><span class="p">)</span>
+    <span class="nv">prop</span><span class="p">)</span>
+    <span class="p">(</span><span class="nb">save-excursion</span>
+      <span class="p">(</span><span class="nb">save-restriction</span>
+    <span class="p">(</span><span class="nf">widen</span><span class="p">)</span>
+    <span class="p">(</span><span class="nb">setq</span> <span class="nv">prop</span> <span class="p">(</span><span class="nv">org-entry-get</span> <span class="no">nil</span> <span class="s">&#34;ARCHIVE&#34;</span> <span class="ss">&#39;inherit</span><span class="p">))</span>
+    <span class="p">(</span><span class="nb">cond</span>
+     <span class="p">((</span><span class="nb">and</span> <span class="nv">prop</span> <span class="p">(</span><span class="nf">string-match</span> <span class="s">&#34;\\S-&#34;</span> <span class="nv">prop</span><span class="p">))</span>
+      <span class="nv">prop</span><span class="p">)</span>
+     <span class="p">((</span><span class="nb">or</span> <span class="p">(</span><span class="nf">re-search-backward</span> <span class="nv">re</span> <span class="no">nil</span> <span class="no">t</span><span class="p">)</span>
+          <span class="p">(</span><span class="nf">re-search-forward</span> <span class="nv">re</span> <span class="no">nil</span> <span class="no">t</span><span class="p">))</span>
+      <span class="p">(</span><span class="nv">match-string</span> <span class="mi">1</span><span class="p">))</span>
+     <span class="p">(</span><span class="no">t</span> <span class="nv">org-archive-location</span><span class="p">))))))</span>
+<span class="p">(</span><span class="nb">defun</span> <span class="nv">org-extract-archive-file</span> <span class="p">(</span><span class="kp">&amp;optional</span> <span class="nv">location</span><span class="p">)</span>
+  <span class="s">&#34;Extract and expand the file name from archive LOCATION.
+</span><span class="s">if LOCATION is not given, the value of </span><span class="ss">`org-archive-location&#39;</span><span class="s"> is used.&#34;</span>
+  <span class="p">(</span><span class="nb">setq</span> <span class="nv">location</span> <span class="p">(</span><span class="nb">or</span> <span class="nv">location</span> <span class="nv">org-archive-location</span><span class="p">))</span>
+  <span class="p">(</span><span class="nb">if</span> <span class="p">(</span><span class="nf">string-match</span> <span class="s">&#34;\\(.*\\)::\\(.*\\)&#34;</span> <span class="nv">location</span><span class="p">)</span>
+      <span class="p">(</span><span class="nb">if</span> <span class="p">(</span><span class="nf">=</span> <span class="p">(</span><span class="nf">match-beginning</span> <span class="mi">1</span><span class="p">)</span> <span class="p">(</span><span class="nf">match-end</span> <span class="mi">1</span><span class="p">))</span>
+      <span class="p">(</span><span class="nf">buffer-file-name</span> <span class="p">(</span><span class="nf">buffer-base-buffer</span><span class="p">))</span>
+    <span class="p">(</span><span class="nf">expand-file-name</span>
+     <span class="p">(</span><span class="nf">format</span> <span class="p">(</span><span class="nv">match-string</span> <span class="mi">1</span> <span class="nv">location</span><span class="p">)</span>
+         <span class="p">(</span><span class="nf">file-name-nondirectory</span>
+          <span class="p">(</span><span class="nf">buffer-file-name</span> <span class="p">(</span><span class="nf">buffer-base-buffer</span><span class="p">))))))))</span>
+<span class="p">(</span><span class="nb">defun</span> <span class="nv">org-extract-archive-heading</span> <span class="p">(</span><span class="kp">&amp;optional</span> <span class="nv">location</span><span class="p">)</span>
+  <span class="s">&#34;Extract the heading from archive LOCATION.
+</span><span class="s">if LOCATION is not given, the value of </span><span class="ss">`org-archive-location&#39;</span><span class="s"> is used.&#34;</span>
+  <span class="p">(</span><span class="nb">setq</span> <span class="nv">location</span> <span class="p">(</span><span class="nb">or</span> <span class="nv">location</span> <span class="nv">org-archive-location</span><span class="p">))</span>
+  <span class="p">(</span><span class="nb">if</span> <span class="p">(</span><span class="nf">string-match</span> <span class="s">&#34;\\(.*\\)::\\(.*\\)&#34;</span> <span class="nv">location</span><span class="p">)</span>
+      <span class="p">(</span><span class="nf">format</span> <span class="p">(</span><span class="nv">match-string</span> <span class="mi">2</span> <span class="nv">location</span><span class="p">)</span>
+          <span class="p">(</span><span class="nf">file-name-nondirectory</span>
+           <span class="p">(</span><span class="nf">buffer-file-name</span> <span class="p">(</span><span class="nf">buffer-base-buffer</span><span class="p">))))))</span>
 
 
 <span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;org-archive</span><span class="p">)</span>
@@ -3491,6 +3530,9 @@ risk editing stale buffers.</p>
         <span class="p">(</span><span class="nv">save-buffer</span><span class="p">))</span>
       <span class="p">(</span><span class="nf">message</span> <span class="s">&#34;Subtree archived %s&#34;</span>
                <span class="p">(</span><span class="nf">concat</span> <span class="s">&#34;in file: &#34;</span> <span class="p">(</span><span class="nv">abbreviate-file-name</span> <span class="nv">afile</span><span class="p">))))))</span>
+
+
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">org-archive-default-command</span> <span class="nf">#&#39;</span><span class="nv">org-archive-subtree-hierarchically</span><span class="p">)</span>
 
 <span class="p">(</span><span class="nb">defun</span> <span class="nv">org-insert-struct</span> <span class="p">(</span><span class="nv">struct</span><span class="p">)</span>
   <span class="s">&#34;TODO&#34;</span>
@@ -3872,6 +3914,24 @@ they work nicely with version control systems.</p>
 </span><span class="lnt">10
 </span><span class="lnt">11
 </span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;python-mode-hook</span> <span class="p">(</span><span class="nb">lambda</span> <span class="p">()</span> <span class="p">(</span><span class="nb">setq</span> <span class="nv">truncate-lines</span> <span class="no">nil</span><span class="p">)))</span>
@@ -3885,7 +3945,25 @@ they work nicely with version control systems.</p>
 
 <span class="c1">;; use poetry</span>
 <span class="p">(</span><span class="nb">use-package</span> <span class="nv">poetry</span>
-  <span class="nb">:ensure</span> <span class="no">t</span><span class="p">)</span></code></pre></td></tr></table>
+  <span class="nb">:ensure</span> <span class="no">t</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nb">use-package</span> <span class="nv">lsp-ui</span>
+  <span class="nb">:requires</span> <span class="nv">lsp-mode</span> <span class="nv">flycheck</span>
+  <span class="nb">:config</span>
+
+  <span class="p">(</span><span class="nb">setq</span> <span class="nv">lsp-ui-doc-enable</span> <span class="no">t</span>
+        <span class="nv">lsp-ui-doc-use-childframe</span> <span class="no">t</span>
+        <span class="nv">lsp-ui-sideline-enable</span> <span class="no">t</span>
+        <span class="nv">lsp-ui-flycheck-enable</span> <span class="no">t</span>
+        <span class="nv">lsp-ui-flycheck-list-position</span> <span class="ss">&#39;right</span>
+        <span class="nv">lsp-ui-flycheck-live-reporting</span> <span class="no">t</span>
+        <span class="nv">lsp-ui-doc-include-signature</span> <span class="no">t</span>
+        <span class="nv">lsp-ui-peek-enable</span> <span class="no">t</span>
+        <span class="nv">lsp-ui-peek-list-width</span> <span class="mi">60</span>
+        <span class="nv">lsp-ui-peek-peek-height</span> <span class="mi">25</span>
+        <span class="p">)</span>
+
+  <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;lsp-mode-hook</span> <span class="ss">&#39;lsp-ui-mode</span><span class="p">))</span></code></pre></td></tr></table>
 </div>
 </div>
 <h3 id="c-c-plus-plus"><span class="section-num">5.5</span> C-C++</h3>
@@ -4247,7 +4325,7 @@ to delete all whitespace in the direction you are deleting.</p>
 <span class="p">(</span><span class="nb">defun</span> <span class="nv">lengyueyang/hugo-publish</span> <span class="p">(</span><span class="nv">commit-msg</span><span class="p">)</span>
   <span class="s">&#34;git add . &amp; git commit &amp; git push&#34;</span>
   <span class="p">(</span><span class="nb">interactive</span> <span class="s">&#34;sInput commit message:&#34;</span><span class="p">)</span>
-  <span class="p">(</span><span class="nv">async-shell-command</span> <span class="p">(</span><span class="nf">format</span> <span class="s">&#34;cd %s ; hugo : cd public ; git add . ; git commit -m \&#34;update\&#34; ; git push&#34;</span>
+  <span class="p">(</span><span class="nv">async-shell-command</span> <span class="p">(</span><span class="nf">format</span> <span class="s">&#34;cd %s ; hugo ; cd public ; git add . ; git commit -m \&#34;update\&#34; ; git push&#34;</span>
                                <span class="nv">hugo-dir</span>
                                <span class="nv">commit-msg</span><span class="p">)))</span></code></pre></td></tr></table>
 </div>
@@ -5024,7 +5102,18 @@ to delete all whitespace in the direction you are deleting.</p>
 <span class="p">(</span><span class="nv">spacemacs/set-leader-keys</span> <span class="s">&#34;oep&#34;</span> <span class="ss">&#39;emms-previous</span><span class="p">)</span></code></pre></td></tr></table>
 </div>
 </div>
-<h3 id="embrace-evil-embrace"><span class="section-num">6.7</span> Embrace/evil-embrace</h3>
+<h3 id="use-fuo-to-play-web-music"><span class="section-num">6.7</span> Use fuo to play web music</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">use-package</span> <span class="nv">fuo</span>
+  <span class="nb">:load-path</span> <span class="s">&#34;~/.spacemacs.d/package/fuo&#34;</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="embrace-evil-embrace"><span class="section-num">6.8</span> Embrace/evil-embrace</h3>
 
 <p><a href="https://github.com/cute-jumper/embrace.el">https://github.com/cute-jumper/embrace.el</a></p>
 <div class="highlight"><div class="chroma">
@@ -5387,7 +5476,7 @@ is from <a href="http://www.emacswiki.org/emacs/CalendarWeekNumbers">EmacsWiki</
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-      2020-03-05
+      2020-03-10
       
     </span>
   </p>
@@ -5429,7 +5518,7 @@ is from <a href="http://www.emacswiki.org/emacs/CalendarWeekNumbers">EmacsWiki</
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/data_science/math/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-%E7%9F%A9%E9%98%B5%E7%9A%84%E8%BF%90%E7%AE%97/">
+          <a class="prev" href="/post/tools/shadowsocks%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">
             
             <i class="iconfont">
               <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
@@ -5439,12 +5528,12 @@ is from <a href="http://www.emacswiki.org/emacs/CalendarWeekNumbers">EmacsWiki</
 </svg>
 
             </i>
-            <span class="prev-text nav-default">高等代数-矩阵的运算</span>
+            <span class="prev-text nav-default">Shadowsocks科学上网</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
         
-          <a class="next" href="/post/tools/gentoo/gentoo%E7%B3%BB%E7%BB%9F_%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E7%AF%87/">
-            <span class="next-text nav-default">Gentoo系统-系统安装篇</span>
+          <a class="next" href="/post/tools/org_mode/%E7%94%A8org-mode-hexo%E5%9C%A8github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
+            <span class="next-text nav-default">用Org-mode, hexo在github搭建博客</span>
             <span class="prev-text nav-mobile">下一篇</span>
             
             <i class="iconfont">

@@ -87,56 +87,7 @@
   
   <url>
     <loc>https://lengyueyang.github.io/categories/</loc>
-    <lastmod>2020-03-05T22:51:27+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lengyueyang.github.io/post/tools/spacemacs/lengyueyang/</loc>
-    <lastmod>2020-03-05T22:51:27+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://lengyueyang.github.io/post/</loc>
-    <lastmod>2020-03-05T22:51:27+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lengyueyang.github.io/categories/spacemacs/</loc>
-    <lastmod>2020-03-05T22:51:27+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lengyueyang.github.io/tags/</loc>
-    <lastmod>2020-03-05T22:51:27+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lengyueyang.github.io/categories/tools/</loc>
-    <lastmod>2020-03-05T22:51:27+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lengyueyang.github.io/tags/configuration/</loc>
-    <lastmod>2020-03-05T22:51:27+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lengyueyang.github.io/tags/spacemacs/</loc>
-    <lastmod>2020-03-05T22:51:27+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lengyueyang.github.io/</loc>
-    <lastmod>2020-03-05T22:51:27+08:00</lastmod>
+    <lastmod>2020-03-10T12:50:09+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -149,6 +100,18 @@
   <url>
     <loc>https://lengyueyang.github.io/categories/org-mode/</loc>
     <lastmod>2019-08-10T11:47:20+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lengyueyang.github.io/post/</loc>
+    <lastmod>2020-03-10T12:50:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lengyueyang.github.io/tags/</loc>
+    <lastmod>2020-03-10T12:50:09+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -177,6 +140,12 @@
   </url>
   
   <url>
+    <loc>https://lengyueyang.github.io/</loc>
+    <lastmod>2020-03-10T12:50:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://lengyueyang.github.io/categories/gentoo/</loc>
     <lastmod>2020-03-01T12:07:54+08:00</lastmod>
     <priority>0</priority>
@@ -194,6 +163,12 @@
     <lastmod>2019-07-07T21:57:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://lengyueyang.github.io/tags/configuration/</loc>
+    <lastmod>2020-03-10T12:50:09+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -266,6 +241,31 @@
   <url>
     <loc>https://lengyueyang.github.io/categories/%E7%BC%96%E7%A8%8B/</loc>
     <lastmod>2019-08-04T21:31:31+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lengyueyang.github.io/post/tools/spacemacs/lengyueyang/</loc>
+    <lastmod>2020-03-10T12:50:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://lengyueyang.github.io/categories/spacemacs/</loc>
+    <lastmod>2020-03-10T12:50:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lengyueyang.github.io/categories/tools/</loc>
+    <lastmod>2020-03-10T12:50:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lengyueyang.github.io/tags/spacemacs/</loc>
+    <lastmod>2020-03-10T12:50:09+08:00</lastmod>
     <priority>0</priority>
   </url>
   

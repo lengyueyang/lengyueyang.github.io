@@ -6,28 +6,10 @@
     <description>Recent content in Tags on 深度识医</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>use ox-hugo and org-mode for blog</copyright>
-    <lastBuildDate>Thu, 05 Mar 2020 22:51:27 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jul 2019 00:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://lengyueyang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>configuration</title>
-      <link>https://lengyueyang.github.io/tags/configuration/</link>
-      <pubDate>Thu, 05 Mar 2020 22:51:27 +0800</pubDate>
-      
-      <guid>https://lengyueyang.github.io/tags/configuration/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>spacemacs</title>
-      <link>https://lengyueyang.github.io/tags/spacemacs/</link>
-      <pubDate>Thu, 05 Mar 2020 22:51:27 +0800</pubDate>
-      
-      <guid>https://lengyueyang.github.io/tags/spacemacs/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Notes</title>
@@ -62,6 +44,15 @@
       <pubDate>Mon, 29 Jul 2019 00:00:00 +0800</pubDate>
       
       <guid>https://lengyueyang.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>configuration</title>
+      <link>https://lengyueyang.github.io/tags/configuration/</link>
+      <pubDate>Sun, 09 Jun 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/tags/configuration/</guid>
       <description></description>
     </item>
     
@@ -134,6 +125,15 @@
       <pubDate>Tue, 19 Sep 2017 00:00:00 +0800</pubDate>
       
       <guid>https://lengyueyang.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spacemacs</title>
+      <link>https://lengyueyang.github.io/tags/spacemacs/</link>
+      <pubDate>Sun, 26 Mar 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/tags/spacemacs/</guid>
       <description></description>
     </item>
     
