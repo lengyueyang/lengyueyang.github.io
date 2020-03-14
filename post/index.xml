@@ -6,7 +6,7 @@
     <description>Recent content in Posts on 深度识医</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>use ox-hugo and org-mode for blog</copyright>
-    <lastBuildDate>Mon, 29 Jul 2019 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 14 Mar 2020 00:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://lengyueyang.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
@@ -156,6 +156,17 @@
       
       <guid>https://lengyueyang.github.io/post/data_science/math/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-%E7%9F%A9%E9%98%B5%E7%9A%84%E8%BF%90%E7%AE%97/</guid>
       <description>矩阵基础运算 \begin{de}[矩阵加法定义] \end{de} 设 \(A = (a_{ij}), B = (b_{ij})\) 都是数域 K 上 \(s \times n\) 矩阵,令 \(C = (a_{ij} + b_{ij})_{s\times n}\), 则称矩阵 C 是矩阵 A 与 B 的 和, 记作 \(C = A</description>
+    </item>
+    
+    <item>
+      <title>V2ray科学上网</title>
+      <link>https://lengyueyang.github.io/post/tools/v2ray%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/post/tools/v2ray%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</guid>
+      <description>&lt;h2 id=&#34;vultr服务器搭建&#34;&gt;Vultr服务器搭建&lt;/h2&gt;
+
+&lt;p&gt;Vultr服务器搭建见 &lt;a href=&#34;https://www.hostpingce.com/vultr-vps-install-ss-ssr&#34;&gt;https://www.hostpingce.com/vultr-vps-install-ss-ssr&lt;/a&gt;, 然后通过 &lt;a href=&#34;https://tools.ipip.net/newping.php&#34;&gt;IPIP&lt;/a&gt; 查询ping的结果, 或者本机ping，查看ping的延迟和丢包率，找到最快的线路，一般东京、洛杉矶的线路比较快。&lt;/p&gt;</description>
     </item>
     
     <item>

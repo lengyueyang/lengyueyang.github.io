@@ -6,10 +6,21 @@
     <description>Recent content in linux on 深度识医</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>use ox-hugo and org-mode for blog</copyright>
-    <lastBuildDate>Sun, 09 Jun 2019 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 14 Mar 2020 00:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://lengyueyang.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>V2ray科学上网</title>
+      <link>https://lengyueyang.github.io/post/tools/v2ray%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/post/tools/v2ray%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</guid>
+      <description>&lt;h2 id=&#34;vultr服务器搭建&#34;&gt;Vultr服务器搭建&lt;/h2&gt;
+
+&lt;p&gt;Vultr服务器搭建见 &lt;a href=&#34;https://www.hostpingce.com/vultr-vps-install-ss-ssr&#34;&gt;https://www.hostpingce.com/vultr-vps-install-ss-ssr&lt;/a&gt;, 然后通过 &lt;a href=&#34;https://tools.ipip.net/newping.php&#34;&gt;IPIP&lt;/a&gt; 查询ping的结果, 或者本机ping，查看ping的延迟和丢包率，找到最快的线路，一般东京、洛杉矶的线路比较快。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Gentoo系统-系统安装篇</title>

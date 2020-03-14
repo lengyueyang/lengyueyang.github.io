@@ -6,10 +6,37 @@
     <description>Recent content in Tags on 深度识医</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>use ox-hugo and org-mode for blog</copyright>
-    <lastBuildDate>Mon, 29 Jul 2019 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 14 Mar 2020 00:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://lengyueyang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Wiki</title>
+      <link>https://lengyueyang.github.io/tags/wiki/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/tags/wiki/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://lengyueyang.github.io/tags/linux/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>v2ray</title>
+      <link>https://lengyueyang.github.io/tags/v2ray/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://lengyueyang.github.io/tags/v2ray/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Notes</title>
@@ -17,15 +44,6 @@
       <pubDate>Mon, 29 Jul 2019 00:00:00 +0800</pubDate>
       
       <guid>https://lengyueyang.github.io/tags/notes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Wiki</title>
-      <link>https://lengyueyang.github.io/tags/wiki/</link>
-      <pubDate>Mon, 29 Jul 2019 00:00:00 +0800</pubDate>
-      
-      <guid>https://lengyueyang.github.io/tags/wiki/</guid>
       <description></description>
     </item>
     
@@ -53,15 +71,6 @@
       <pubDate>Sun, 09 Jun 2019 00:00:00 +0800</pubDate>
       
       <guid>https://lengyueyang.github.io/tags/configuration/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>https://lengyueyang.github.io/tags/linux/</link>
-      <pubDate>Sun, 09 Jun 2019 00:00:00 +0800</pubDate>
-      
-      <guid>https://lengyueyang.github.io/tags/linux/</guid>
       <description></description>
     </item>
     
@@ -179,15 +188,6 @@
       <pubDate>Sun, 26 Feb 2017 00:00:00 +0800</pubDate>
       
       <guid>https://lengyueyang.github.io/tags/mu4e/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>email</title>
-      <link>https://lengyueyang.github.io/tags/email/</link>
-      <pubDate>Sun, 26 Feb 2017 00:00:00 +0800</pubDate>
-      
-      <guid>https://lengyueyang.github.io/tags/email/</guid>
       <description></description>
     </item>
     
